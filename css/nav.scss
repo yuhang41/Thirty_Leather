@@ -1,0 +1,109 @@
+@import '_style_guild.scss';
+*{
+    list-style: none;   
+    margin: 0px; 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 162px;
+    width: 100%;
+    padding-left: 142px;
+    
+    .nav-link{
+        padding: unset;
+    }
+    .logo{
+        width: 15%;
+        img{
+            width: 202px;
+        }
+    }
+    .options{
+        width: 70%;
+        align-items: flex-end;
+        justify-content: space-between;
+        .option{
+            width: 66%;
+            ul{
+                justify-content: space-around;
+                margin-bottom: 25px;
+                font-size:21px;
+                a{
+                    color:$color-Nav-font;
+                }
+                a:hover{
+                    text-decoration:none;
+                }
+                li{
+                    border-right: 1px solid;
+                    padding-right: 30px;
+                }
+            }
+        }
+        .input-cart{
+            align-items: center;
+            margin:0px 80px 20px 0px;
+
+            i{
+                font-size: 21.6px;
+                color: $color-WedgwoodBlue;
+            }
+            .search{
+                align-items: center;
+            }
+            input{
+                border: none;
+                border-bottom: 1px solid $color-WedgwoodBlue;
+                width:147px;
+                padding: 0px;
+            }
+            input::-webkit-input-placeholder { 
+                color: $color-placeholder;
+                font-size: 14px; 
+            }
+            .cart{
+                position: relative;
+               .cart-number{
+                    width: 29px;
+                    height: 20px;
+                    background-color: $color-prompt;
+                    border-radius: 8px;
+                    position: absolute;
+                    left: 32px;
+                    top: -10px;
+                    z-index: 99;
+                    text-align: center;
+                    color:$color-White ;
+                    line-height: 20px;
+                }
+            }
+        }
+        
+    }
+    .twd-lang{
+        text-align: center;
+        line-height: 162px;
+        .twd{
+            width: 118px; 
+            background-color: $color-WedgwoodBlue;
+            margin-right: 4px;
+            color: $color-WedgwoodBlue;
+            a{
+                color:$color-White;
+                font-size: 21px;
+            }
+        }
+        .lang{
+            width: 118px;
+            background-color: $color-WedgwoodBlue;
+            a{
+                color: $color-White;
+                font-size: 21px;
+            }
+            
+        }
+    }
+    
+    
+}

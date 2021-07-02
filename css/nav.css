@@ -1,0 +1,143 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  list-style: none;
+  margin: 0px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 162px;
+  width: 100%;
+  padding-left: 142px;
+}
+
+nav .nav-link {
+  padding: unset;
+}
+
+nav .logo {
+  width: 15%;
+}
+
+nav .logo img {
+  width: 202px;
+}
+
+nav .options {
+  width: 70%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .options .option {
+  width: 66%;
+}
+
+nav .options .option ul {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 25px;
+  font-size: 21px;
+}
+
+nav .options .option ul a {
+  color: #596772;
+}
+
+nav .options .option ul a:hover {
+  text-decoration: none;
+}
+
+nav .options .option ul li {
+  border-right: 1px solid;
+  padding-right: 30px;
+}
+
+nav .options .input-cart {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 80px 20px 0px;
+}
+
+nav .options .input-cart i {
+  font-size: 21.6px;
+  color: #8090a0;
+}
+
+nav .options .input-cart .search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .options .input-cart input {
+  border: none;
+  border-bottom: 1px solid #8090a0;
+  width: 147px;
+  padding: 0px;
+}
+
+nav .options .input-cart input::-webkit-input-placeholder {
+  color: #9b9b9b;
+  font-size: 14px;
+}
+
+nav .options .input-cart .cart {
+  position: relative;
+}
+
+nav .options .input-cart .cart .cart-number {
+  width: 29px;
+  height: 20px;
+  background-color: #ff5353;
+  border-radius: 8px;
+  position: absolute;
+  left: 32px;
+  top: -10px;
+  z-index: 99;
+  text-align: center;
+  color: #ffffff;
+  line-height: 20px;
+}
+
+nav .twd-lang {
+  text-align: center;
+  line-height: 162px;
+}
+
+nav .twd-lang .twd {
+  width: 118px;
+  background-color: #8090a0;
+  margin-right: 4px;
+  color: #8090a0;
+}
+
+nav .twd-lang .twd a {
+  color: #ffffff;
+  font-size: 21px;
+}
+
+nav .twd-lang .lang {
+  width: 118px;
+  background-color: #8090a0;
+}
+
+nav .twd-lang .lang a {
+  color: #ffffff;
+  font-size: 21px;
+}
+/*# sourceMappingURL=nav.css.map */
