@@ -86,6 +86,7 @@ body {
 
 footer .list {
   border-right: 0.1em solid;
+  background: #8090a0;
 }
 
 @media (max-width: 991px) {
