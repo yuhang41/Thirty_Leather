@@ -17,7 +17,7 @@ nav {
           justify-content: space-between;
   height: 162px;
   width: 100%;
-  padding-left: 142px;
+  padding-left: 7.4vw;
 }
 
 nav .nav-link {
@@ -63,7 +63,7 @@ nav .options .option ul a:hover {
 
 nav .options .option ul li {
   border-right: 1px solid;
-  padding-right: 30px;
+  padding-right: 1.7vw;
 }
 
 nav .options .input-cart {
