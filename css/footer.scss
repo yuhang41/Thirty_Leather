@@ -1,22 +1,11 @@
-* {
-    box-sizing: border-box;
-}
+@import '_style_guild.scss';
 
 body {
     margin: 0;
-    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    font-family: $font-Family;
 }
 
 .site-footer {
-    background-color: white;
-    color: black;
-
-    a {
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
     hr {
         border: none;
     }
@@ -28,17 +17,11 @@ body {
     }
 
     .social-icons {
-        padding-left: 0;
-        margin-bottom: 0;
-        text-align: center;
-
         a {
             width: 48px;
             height: 48px;
             line-height: 48px;
             border-radius: 50%;
-            color: white;
-            display: inline-block;
 
             &.line {
                 background-image: url("/img/LINE-ICON.jpg");
@@ -47,7 +30,9 @@ body {
             }
 
             &.facebook {
-                background-color: #4762a5;
+                background-image: url("/img/facebook-ICON.jpg");
+                background-position: center;
+                background-size: contain;
                 margin: 0px 20px;
             }
 
@@ -57,36 +42,29 @@ body {
                 background-size: contain;
             }
         }
-
-        &.size-sm a {
-            line-height: 34px;
-            height: 34px;
-            width: 34px;
-            font-size: 14px;
-        }
     }
 
     .footer-arrow {
         font-size: 72px;
-        color: #f7a269;
+        color: $color-Apricot;
         position: relative;
     }
 
     .footer-arrow-text {
-        font-size: 18px;
-        letter-spacing: 0.1em;
+        font-size: $H7-font-size;
+        letter-spacing: $font-letter-space-100;
         position: absolute;
         top: 40px;
-        left: 3px;
+        left: 4px;
     }
 
     .common-problems {
-        font-size: 16px;
-        letter-spacing: 0.2em;
-        color: #444444;
+        font-size: $H8-font-size;
+        letter-spacing: $font-letter-space-200;
+        color: $color-IronGray;
 
         .lists {
-            border-left: 1px solid #8090a0;
+            border-left: 1px solid $color-WedgwoodBlue;
             padding-right: 10px;
         }
 
@@ -95,7 +73,7 @@ body {
         }
 
         a {
-            color: #8090a0;
+            color: $color-WedgwoodBlue;
         }
 
         ul li {
@@ -106,22 +84,18 @@ body {
 
     .copyright {
         height: 80px;
-        background-color: #7a7573;
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        color: #ffffff;
+        background-color: $color-Footer-Background;
+        font-size: $H9-font-size;
+        letter-spacing: $font-letter-space-100;
+        color: $color-White;
     }
 }
 
 @media (max-width: 991px) {
     .site-footer {
-        .copyright,
-        .social-icons {
-            text-align: center;
-        }
-
         .common-problems {
             li {
+                width: 132px;
                 height: 32px;
             }
 
@@ -139,21 +113,11 @@ body {
 @media (max-width: 767px) {
     .site-footer {
         padding-bottom: 0;
-
-        .copyright,
-        .social-icons {
-            text-align: center;
-        }
-    }
-
-    .social-icons li.title {
-        display: block;
-        margin-right: 0;
-        font-weight: 600;
     }
 
     .common-problems {
         li {
+            width: 132px;
             height: 32px;
         }
 
