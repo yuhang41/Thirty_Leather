@@ -244,7 +244,7 @@ main .chatbot .chatbox .chat-discript p:nth-child(3) {
   font-weight: 500;
 }
 
-main .chatbot .chatbox .chat-button .fb-button {
+main .chatbot .chatbox .chat-button .facebook-button {
   width: 318px;
   height: 52px;
   background-color: #4762a5;
@@ -262,7 +262,7 @@ main .chatbot .chatbox .chat-button .fb-button {
   cursor: pointer;
 }
 
-main .chatbot .chatbox .chat-button .fb-button .fb-icon {
+main .chatbot .chatbox .chat-button .facebook-button .facebook-icon {
   width: 30px;
   height: 30px;
   background-color: #ffffff;
@@ -272,12 +272,12 @@ main .chatbot .chatbox .chat-button .fb-button .fb-icon {
   margin-right: 10px;
 }
 
-main .chatbot .chatbox .chat-button .fb-button .fb-icon i {
+main .chatbot .chatbox .chat-button .facebook-button .facebook-icon i {
   font-size: 22px;
   color: #4762a5;
 }
 
-main .chatbot .chatbox .chat-button .fb-button p {
+main .chatbot .chatbox .chat-button .facebook-button p {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
