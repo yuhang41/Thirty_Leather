@@ -336,21 +336,18 @@ main .we-story .float {
   display: flex;
 }
 
-main .we-story .float img {
+main .we-story .float img:nth-child(1) {
   width: 974px;
   height: 588px;
   position: relative;
   z-index: 1;
 }
 
-main .we-story .float .scissors {
+main .we-story .float img:nth-child(2) {
   position: absolute;
+  height: 800px;
   top: 360px;
   left: 85px;
-}
-
-main .we-story .float .scissors img {
-  height: 800px;
 }
 
 main .we-story .float .story-discript {
@@ -410,7 +407,7 @@ main .we-story .float .story-discript .content .preamble {
 
 main .we-story .float .story-discript .content .preamble:after {
   content: "";
-  width: 200px;
+  width: 300px;
   height: 1px;
   top: 171px;
   left: 340px;

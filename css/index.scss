@@ -278,20 +278,20 @@ main{
 
             display: flex;
             img{
-                width: 974px;
-                height: 588px;
-                position: relative; 
-                z-index: 1;
-            }
-            .scissors{
-                position: absolute;
-                top: 360px;
-                left: 85px;
-                img{
-                    height: 800px;
+                &:nth-child(1){
+                    width: 974px;
+                    height: 588px;
+                    position: relative; 
+                    z-index: 1;
                 }
+                &:nth-child(2){
+                    position: absolute;
+                    height: 800px;
+                    top: 360px;
+                    left: 85px;
+                }
+               
             }
-
             .story-discript{
                 margin-left: 4vw;
                 .subtitle{
@@ -338,7 +338,7 @@ main{
                         position: relative;
                         &:after{
                             content: "";
-                            width: 200px;
+                            width: 300px;
                             height: 1px;
                             top: 171px;
                             left: 340px;
