@@ -281,19 +281,7 @@ main{
                 width: 974px;
                 height: 588px;
                 position: relative; 
-                z-index: 1;
-                // &:nth-child(1){
-                //     width: 974px;
-                //     height: 588px;
-                //     position: relative; 
-                //     z-index: 1;
-                // }
-                // &:nth-child(2){
-                //     position: absolute;
-                //     height: 800px;
-                //     top: 360px;
-                //     left: 85px;
-                // }               
+                z-index: 1;             
             }
             svg{
                 position: absolute;
