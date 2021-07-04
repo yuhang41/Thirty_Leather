@@ -2,26 +2,28 @@
 *{
     list-style: none;   
     margin: 0px; 
+    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 @mixin notebook {
-    @media(max-width:1890px){
+    @media(max-width:1550px){
         @content;
     }
 }
 nav{
     display: flex;
     justify-content: space-between;
-    height: 162px;
+    height: 113px;
     width: 100%;
     padding-left: 7.4vw;
     .nav-link{
         padding: unset;
     }
     .logo{
-        width: 202px;
+        width: 160px;
         z-index: 2;
         img{
-            width: 202px;
+            width: 160px;
+            height: 148px;
         }
     }
     .options{
@@ -32,7 +34,8 @@ nav{
             width: 70%;
             ul{
                 margin-bottom: 25px;
-                font-size:16px;
+                font-size:15px;
+                letter-spacing:0.1rem;
                 a{
                     color:$color-Nav-font;
                 }
@@ -41,7 +44,7 @@ nav{
                 }
                 li{
                     padding:0px 1.7vw;
-                    border-right: 1px solid $color-Nav-Separate;
+                    border-right: 1px solid $color-pink;
                     &:nth-last-child(2){
                         border: 0px;
                     }
@@ -56,7 +59,7 @@ nav{
             align-items: center;
             margin:0px 80px 20px 0px;
             i{
-                font-size: 21.6px;
+                font-size: 20px;
                 color: $color-WedgwoodBlue;
                 cursor: pointer;
             }
@@ -76,12 +79,14 @@ nav{
             input::-webkit-input-placeholder { 
                 color: $color-placeholder;
                 font-size: 14px; 
+                letter-spacing:0.2rem;
             }
             .cart{
                 position: relative;
                .cart-number{
-                    width: 29px;
-                    height: 20px;
+                    width: 24px;
+                    height: 15px;
+                    font-size: 14px;
                     background-color: $color-prompt;
                     border-radius: 8px;
                     position: absolute;
@@ -90,7 +95,7 @@ nav{
                     z-index: 99;
                     text-align: center;
                     color:$color-White ;
-                    line-height: 20px;
+                    line-height: 15px;
                 }
             }
         }
@@ -113,23 +118,25 @@ nav{
     }
     .twd-lang{
         text-align: center;
-        line-height: 162px;
+        line-height: 113px;
         .twd{
-            width: 118px; 
+            width: 97px; 
             background-color: $color-WedgwoodBlue;
             margin-right: 4px;
             color: $color-WedgwoodBlue;
             a{
                 color:$color-White;
-                font-size: 21px;
+                font-size: 15px;
+                letter-spacing:0.1rem;
             }
         }
         .lang{
-            width: 118px;
+            width: 97px;
             background-color: $color-WedgwoodBlue;
             a{
                 color: $color-White;
-                font-size: 21px;
+                font-size: 15px;
+                letter-spacing:0.1rem;
             }
             
         }

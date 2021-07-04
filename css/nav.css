@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,6 +7,7 @@
 * {
   list-style: none;
   margin: 0px;
+  font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
 nav {
@@ -15,7 +17,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 162px;
+  height: 113px;
   width: 100%;
   padding-left: 7.4vw;
 }
@@ -25,12 +27,13 @@ nav .nav-link {
 }
 
 nav .logo {
-  width: 202px;
+  width: 160px;
   z-index: 2;
 }
 
 nav .logo img {
-  width: 202px;
+  width: 160px;
+  height: 148px;
 }
 
 nav .options {
@@ -49,7 +52,8 @@ nav .options .option {
 
 nav .options .option ul {
   margin-bottom: 25px;
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
 }
 
 nav .options .option ul a {
@@ -62,7 +66,7 @@ nav .options .option ul a:hover {
 
 nav .options .option ul li {
   padding: 0px 1.7vw;
-  border-right: 1px solid #bf7335;
+  border-right: 1px solid #e8d0c1;
 }
 
 nav .options .option ul li:nth-last-child(2) {
@@ -81,7 +85,7 @@ nav .options .input-cart {
 }
 
 nav .options .input-cart i {
-  font-size: 21.6px;
+  font-size: 20px;
   color: #8090a0;
   cursor: pointer;
 }
@@ -107,6 +111,7 @@ nav .options .input-cart input {
 nav .options .input-cart input::-webkit-input-placeholder {
   color: #9b9b9b;
   font-size: 14px;
+  letter-spacing: 0.2rem;
 }
 
 nav .options .input-cart .cart {
@@ -114,8 +119,9 @@ nav .options .input-cart .cart {
 }
 
 nav .options .input-cart .cart .cart-number {
-  width: 29px;
-  height: 20px;
+  width: 24px;
+  height: 15px;
+  font-size: 14px;
   background-color: #ff5353;
   border-radius: 8px;
   position: absolute;
@@ -124,10 +130,10 @@ nav .options .input-cart .cart .cart-number {
   z-index: 99;
   text-align: center;
   color: #ffffff;
-  line-height: 20px;
+  line-height: 15px;
 }
 
-@media (max-width: 1890px) {
+@media (max-width: 1550px) {
   nav .options ul li:nth-child(n+4) {
     display: none;
   }
@@ -141,11 +147,11 @@ nav .options .input-cart .cart .cart-number {
 
 nav .twd-lang {
   text-align: center;
-  line-height: 162px;
+  line-height: 113px;
 }
 
 nav .twd-lang .twd {
-  width: 118px;
+  width: 97px;
   background-color: #8090a0;
   margin-right: 4px;
   color: #8090a0;
@@ -153,16 +159,18 @@ nav .twd-lang .twd {
 
 nav .twd-lang .twd a {
   color: #ffffff;
-  font-size: 21px;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
 }
 
 nav .twd-lang .lang {
-  width: 118px;
+  width: 97px;
   background-color: #8090a0;
 }
 
 nav .twd-lang .lang a {
   color: #ffffff;
-  font-size: 21px;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
 }
 /*# sourceMappingURL=nav.css.map */
