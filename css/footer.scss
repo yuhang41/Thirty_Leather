@@ -1,106 +1,138 @@
-@import '_style_guild.scss';
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
 .site-footer {
     background-color: white;
-    padding: 45px 0 20px;
-    font-size: 15px;
-    line-height: 24px;
     color: black;
 
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     hr {
-        border-top-color: gray;
-        opacity: 0.5;
+        border: none;
+    }
 
-        &.small {
-            margin: 20px 0;
+    .footer-logo {
+        width: 195px;
+        height: 180px;
+        margin: auto;
+    }
+
+    .social-icons {
+        padding-left: 0;
+        margin-bottom: 0;
+        text-align: center;
+
+        a {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 50%;
+            color: white;
+            display: inline-block;
+
+            &.line {
+                background-image: url("/img/LINE-ICON.jpg");
+                background-position: center;
+                background-size: contain;
+            }
+
+            &.facebook {
+                background-color: #4762a5;
+                margin: 0px 20px;
+            }
+
+            &.instagram {
+                background-image: url("/img/Instagram.ICON.jpg");
+                background-position: center;
+                background-size: contain;
+            }
+        }
+
+        &.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px;
         }
     }
 
-    a {
-        color: black;
+    .footer-arrow {
+        font-size: 72px;
+        color: #f7a269;
+        position: relative;
+    }
 
-        &:hover {
-            color: #3366cc;
-            text-decoration: none;
+    .footer-arrow-text {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 40px;
+        left: 3px;
+    }
+
+    .common-problems {
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        color: #444444;
+
+        .lists {
+            border-left: 1px solid #8090a0;
+            padding-right: 10px;
+        }
+
+        .list {
+            cursor: default;
+        }
+
+        a {
+            color: #8090a0;
+        }
+
+        ul li {
+            padding-left: 10px;
+            cursor: pointer;
         }
     }
-}
 
-.footer-links {
-    padding-left: 0;
-    list-style: none;
-
-    li {
-        display: block;
+    .copyright {
+        height: 80px;
+        background-color: #7a7573;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        color: #ffffff;
     }
-
-    a {
-        color: #737373;
-
-        &:active,
-        &:focus,
-        &:hover {
-            color: #3366cc;
-            text-decoration: none;
-        }
-    }
-
-    &.inline li {
-        display: inline-block;
-    }
-}
-
-.site-footer .social-icons {
-    text-align: center;
-
-    a {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 20px;
-        margin-right: 0;
-        background-color: white;
-        border: 1px solid;
-        border-radius: 50%;
-    }
-}
-
-.normal-question {
-    margin-top: 10px;
-}
-
-footer .lists{
-    border-right: 1px solid;
-    padding-right: 10px;
-}
-
-footer .list {
-    padding-left: 10px;
-}
-
-.copyright-text {
-    margin: 0;
-    text-align: center;
 }
 
 @media (max-width: 991px) {
     .site-footer {
-        [class^="col-"] {
-            margin-bottom: 30px;
-        }
-
-        .copyright-text,
+        .copyright,
         .social-icons {
             text-align: center;
         }
-    }
 
-    footer .list {
-        border-right: none;
+        .common-problems {
+            li {
+                height: 32px;
+            }
+
+            .lists {
+                border: none;
+            }
+
+            .common-problem {
+                margin-left: 10px;
+            }
+        }
     }
 }
 
@@ -108,83 +140,29 @@ footer .list {
     .site-footer {
         padding-bottom: 0;
 
-        .copyright-text,
+        .copyright,
         .social-icons {
             text-align: center;
         }
     }
-}
 
-.social-icons {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-
-    li {
-        display: inline-block;
-        margin-bottom: 4px;
-
-        &.title {
-            margin-right: 15px;
-            text-transform: uppercase;
-            color: #96a2b2;
-            font-weight: 700;
-            font-size: 13px;
-        }
-    }
-
-    a {
-        background-color: #eceeef;
-        color: #818a91;
-        font-size: 16px;
-        display: inline-block;
-        line-height: 44px;
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        margin-right: 8px;
-        -webkit-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
-        transition: all 0.2s linear;
-
-        &:active,
-        &:focus,
-        &:hover {
-            color: #fff;
-            background-color: #29aafe;
-        }
-    }
-
-    &.size-sm a {
-        line-height: 34px;
-        height: 34px;
-        width: 34px;
-        font-size: 14px;
-    }
-
-    a {
-        &.facebook:hover {
-            background-color: #3b5998;
-        }
-
-        &.line:hover {
-            background-color: green;
-        }
-
-        &.linkedin:hover {
-            background-color: #ac2bac;
-        }
-    }
-}
-
-@media (max-width: 767px) {
     .social-icons li.title {
         display: block;
         margin-right: 0;
         font-weight: 600;
     }
 
-    footer .list {
-        border-right: none;
+    .common-problems {
+        li {
+            height: 32px;
+        }
+
+        .lists {
+            border: none;
+        }
+
+        .common-problem {
+            margin-left: 10px;
+        }
     }
 }
