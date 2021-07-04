@@ -132,6 +132,8 @@ main .chatbot .chatbox {
   bottom: 65px;
   right: 35px;
   display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 main .chatbot .chatbox .chat-option {
