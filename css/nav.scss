@@ -58,6 +58,7 @@ nav{
         .input-cart{
             align-items: center;
             margin:0px 80px 20px 0px;
+
             i{
                 font-size: 20px;
                 color: $color-WedgwoodBlue;
@@ -90,8 +91,8 @@ nav{
                     background-color: $color-prompt;
                     border-radius: 8px;
                     position: absolute;
-                    left: 32px;
-                    top: -10px;
+                    left: 28px;
+                    top: -6px;
                     z-index: 99;
                     text-align: center;
                     color:$color-White ;

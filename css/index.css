@@ -320,4 +320,113 @@ main .chatbot .chatbox .chat-button .line-button p {
   color: #ffffff;
   margin: 0px;
 }
+
+main .we-story {
+  height: 100vh;
+  background-color: #ebeae5;
+  position: relative;
+}
+
+main .we-story .float {
+  position: absolute;
+  top: 100px;
+  left: -8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .we-story .float img {
+  width: 974px;
+  height: 588px;
+  position: relative;
+  z-index: 1;
+}
+
+main .we-story .float .scissors {
+  position: absolute;
+  top: 360px;
+  left: 85px;
+}
+
+main .we-story .float .scissors img {
+  height: 800px;
+}
+
+main .we-story .float .story-discript {
+  margin-left: 4vw;
+}
+
+main .we-story .float .story-discript .subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e28749;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+main .we-story .float .story-discript .subtitle:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 80px;
+  height: 1px;
+  background-color: #e28749;
+}
+
+main .we-story .float .story-discript .title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #8090a0;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+main .we-story .float .story-discript .title:before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  top: 20px;
+  left: -110px;
+  background-color: #8090a0;
+  position: absolute;
+  -webkit-transform: rotate(33deg);
+          transform: rotate(33deg);
+  z-index: 0;
+}
+
+main .we-story .float .story-discript .content {
+  font-size: 18px;
+  color: #444444;
+  font-weight: normal;
+  letter-spacing: 0.2vw;
+}
+
+main .we-story .float .story-discript .content .preamble {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main .we-story .float .story-discript .content .preamble:after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  top: 171px;
+  left: 340px;
+  background-color: #8090a0;
+  position: absolute;
+  -webkit-transform: rotate(33deg);
+          transform: rotate(33deg);
+  z-index: 0;
+}
+
+main .we-story .float .story-discript .content .main-body {
+  margin-bottom: 30px;
+}
+
+main .shoemaking {
+  height: 100vh;
+  background-color: #ebeae5;
+}
 /*# sourceMappingURL=index.css.map */
