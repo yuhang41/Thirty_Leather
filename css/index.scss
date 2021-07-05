@@ -4,6 +4,12 @@
     margin: 0px; 
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
+// container RWD
+.container{
+    max-width: 1520px;
+}
+
+
 nav{
     height: 113px;
 }
@@ -438,14 +444,22 @@ main{
         .see-more-button{
             width: 100%;
             display: flex;
-            .see-more{
+            justify-content: center;
+            button{
                 width: 277px;
                 height: 79px;
                 font-size: 24px;
-                color: $color-IronGray ;
-                border-radius: 40px;
+                color: $color-IronGray;
+                border-radius: 35px;
                 border: 2px solid $color-MoreButton;
+                z-index: 1;
+                &:hover{
+                    border: 2px solid $color-MoreButton-hover;
+                    color: $color-White;
+                    background-color: $color-MoreButton-hover;
+                }
             }
+            
         }        
     }
     //縫線的 svg
@@ -493,6 +507,8 @@ main{
         height: 100vh;
         background-color:$color-LightGray;
         position: relative;
+        display: flex;
+        align-items: center;
         .product-title{
             position: absolute;
             top:-100px;
@@ -511,6 +527,125 @@ main{
                     
                 }
             }
+        }
+        @mixin shoes-content {
+            width: 275px;
+            height: 306px;
+            background-color: $color-White-opacity;
+            
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            img{
+                position: absolute;
+                width: 215px;
+                top:-70px;
+                left: 27px;
+            }
+            .content{
+                .text{
+                    p{
+                        margin: 0px;
+                        &:nth-child(1){
+                            font-size: 21px;
+                            font-weight: lighter;
+                            letter-spacing: 0.1vw;
+                            color: $color-IronGray;
+                            margin-bottom: 10px;
+                        }
+                        &:nth-child(2){
+                            font-size: 16px;
+                            font-weight: normal;
+                            letter-spacing: 0.1vw;
+                            color: $color-IronGray;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .price{
+                    span{
+                        &:nth-child(1){
+                            font-size: 15px;
+                            font-weight: lighter;
+                            color: $color-Original-Price;
+                            text-decoration:line-through;	
+                        }
+                        &:nth-child(2){
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: $color-Apricot;
+                        }
+                    }
+                }
+            }
+            button{
+                width: 235px;
+                height: 50px;
+                color: $color-IronGray;
+                border: 2px solid $color-MoreButton;
+                border-radius: 45px;
+                background-color: $color-White-opacity;
+                margin:30px 0px 10px 0px;
+            }
+        }
+        .product-item{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .product-first{
+              @include shoes-content();
+            }
+            .product-second{
+                @include shoes-content();
+                img{
+                    top: -100px;
+                }
+            }
+            .product-third{
+                @include shoes-content();
+                img{
+                    top: -50px;
+                }
+            }
+            .product-fourth{
+                @include shoes-content();
+            }
+        }
+        .see-more-button{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            button{
+                width: 277px;
+                height: 79px;
+                font-size: 24px;
+                color: $color-IronGray ;
+                border: 2px solid $color-MoreButton;
+                border-radius: 35px;
+                z-index: 2;
+                &:hover{
+                    border: 2px solid $color-MoreButton-hover;
+                    color: $color-White;
+                    background-color: $color-MoreButton-hover;
+                }
+
+            }
+            
+        }
+        .parallelogram{
+            position: absolute;
+            top: -122px;
+            right: 323px;
+            width: 465px;
+            height: 1100px;
+            background-color: $color-Parallelogram;
+            transform: skewX(-30deg);
         }
     }
     
