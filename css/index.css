@@ -355,7 +355,8 @@ main .we-story .float svg {
   left: 85px;
 }
 
-main .we-story .float svg .scissors, main .we-story .float svg .scissors-mind {
+main .we-story .float svg .scissors,
+main .we-story .float svg .scissors-mind {
   fill-opacity: 0;
   stroke: #abbac9;
   stroke-width: 2px;
@@ -1184,5 +1185,68 @@ main .photo-wall .plus-button .plus:after {
   position: absolute;
   top: 8px;
   left: 32px;
+}
+
+main .studio-information {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main .studio-information .studio-photo img {
+  width: 559px;
+  height: 838px;
+  border-left: 18px solid #f7a269;
+}
+
+main .studio-information .try-on-infor {
+  position: relative;
+}
+
+main .studio-information .try-on-infor .try-on {
+  font-size: 56px;
+  height: 72px;
+  margin-bottom: 12px;
+}
+
+main .studio-information .try-on-infor .detail {
+  font-size: 21px;
+  letter-spacing: 100;
+  position: absolute;
+  top: 65px;
+  left: 36px;
+}
+
+main .studio-information .try-on-infor .infor {
+  font-size: 56px;
+}
+
+main .studio-information .contact-head ul {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 100;
+  border-left: 1px solid #f7a269;
+}
+
+main .studio-information .contact-text ul {
+  font-size: 18px;
+}
+
+main .studio-information .contact-text ul .phone {
+  padding-top: 3px;
+}
+
+main .studio-information .contact-text ul .business-time {
+  padding-top: 11px;
+}
+
+main .studio-information .contact-text ul .address {
+  padding-top: 7px;
+}
+
+main .studio-information .contact-text ul .note {
+  padding-top: 6px;
+}
+
+main .studio-information .shop-map {
+  border-left: 18px solid #f7a269;
 }
 /*# sourceMappingURL=index.css.map */

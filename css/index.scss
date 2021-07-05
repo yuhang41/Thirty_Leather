@@ -1,28 +1,28 @@
-@import '_style_guild.scss';
-*{
-    list-style: none;   
-    margin: 0px; 
+@import "_style_guild.scss";
+* {
+    list-style: none;
+    margin: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 // container RWD
-.container{
+.container {
     max-width: 1520px;
 }
-nav{
+nav {
     height: 113px;
 }
-main{
+main {
     padding-left: 7.4vw;
     overflow: hidden;
     // 輪播圖
-    .swiper{
+    .swiper {
         .swiper-container {
             width: 100%;
             height: 100%;
             position: relative;
         }
         //swiper bullet
-        .swiper-pagination-bullets{
+        .swiper-pagination-bullets {
             position: absolute;
             left: 5vw;
             bottom: 1vw;
@@ -31,21 +31,20 @@ main{
             overflow: visible;
             z-index: 2;
             width: 34px;
-            .swiper-pagination-bullet{
+            .swiper-pagination-bullet {
                 width: 17px;
                 height: 17px;
                 border-radius: 0px;
-                margin:17px 0px 0px 0px;
+                margin: 17px 0px 0px 0px;
                 background-color: $color-WedgwoodBlue;
                 opacity: unset;
                 position: relative;
-                
             }
-            .swiper-pagination-bullet-active{
+            .swiper-pagination-bullet-active {
                 background-color: $color-Orange;
-                
-                &::before{
-                    content:"";
+
+                &::before {
+                    content: "";
                     height: 17px;
                     position: absolute;
                     top: -10px;
@@ -53,14 +52,13 @@ main{
                     border: 1px solid $color-Orange;
                     padding: 17px;
                 }
-               
             }
         }
         .swiper-slide {
             text-align: center;
             font-size: 18px;
             height: calc(100vh - 113px);
-        
+
             background-size: cover;
             background-repeat: no-repeat;
             /* Center slide text vertically */
@@ -80,13 +78,13 @@ main{
         }
     }
     // 聯絡客服
-    .chatbot{
+    .chatbot {
         position: fixed;
         bottom: 20px;
         right: 30px;
         z-index: 3;
-        
-        .chat-icon{
+
+        .chat-icon {
             width: 50px;
             height: 50px;
 
@@ -99,54 +97,54 @@ main{
 
             position: relative;
             cursor: pointer;
-            img{
+            img {
                 width: 30px;
                 height: 25px;
             }
         }
-       .chatbox{
-           width: 358px;
-           height: 338px;
-           background-color: $color-White;
-           border: 1px solid $color-Orange;
-           border-radius: 15px;
-           padding:20px 20px ;
+        .chatbox {
+            width: 358px;
+            height: 338px;
+            background-color: $color-White;
+            border: 1px solid $color-Orange;
+            border-radius: 15px;
+            padding: 20px 20px;
 
-           display: flex;
-           flex-direction: column;
-           justify-content: space-between;
-           position: absolute;
-           bottom:65px;
-           right: 35px;
-           display: none;
-           transition: 1s;
-           .chat-option{
-               display: flex;
-               justify-content: space-between;
-               
-               img{
-                   width: 46px;
-                   height: 46px;
-               }
-               .option{
-                   display: flex;
-                   .more{
-                       width: 30px;
-                       height: 30px;
-                       background-color: $color-Gray;
-                       border-radius: 50%;
-                       margin-right: 10px;
-                       cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 65px;
+            right: 35px;
+            display: none;
+            transition: 1s;
+            .chat-option {
+                display: flex;
+                justify-content: space-between;
 
-                       justify-content: center;
-                       align-items: center;
-                       
-                       .dot{
-                           width: 3px;
-                           height: 3px;
-                           background-color: $color-DeepGray;
-                           position: relative;                         
-                            &::before{
+                img {
+                    width: 46px;
+                    height: 46px;
+                }
+                .option {
+                    display: flex;
+                    .more {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $color-Gray;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        cursor: pointer;
+
+                        justify-content: center;
+                        align-items: center;
+
+                        .dot {
+                            width: 3px;
+                            height: 3px;
+                            background-color: $color-DeepGray;
+                            position: relative;
+                            &::before {
                                 position: absolute;
                                 top: 0px;
                                 left: -5px;
@@ -155,7 +153,7 @@ main{
                                 height: 3px;
                                 background-color: $color-DeepGray;
                             }
-                            &::after{
+                            &::after {
                                 position: absolute;
                                 top: 0px;
                                 left: 5px;
@@ -165,184 +163,176 @@ main{
                                 background-color: $color-DeepGray;
                             }
                         }
-                   }
-                   .close{
-                    width: 30px;
-                    height: 30px;
-                    background-color: $color-Gray;
-                    border-radius: 50%;
-                    opacity: unset;
-                    cursor: pointer;
+                    }
+                    .close {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $color-Gray;
+                        border-radius: 50%;
+                        opacity: unset;
+                        cursor: pointer;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .line {
+                            width: 13px;
+                            height: 2px;
+                            background-color: $color-DeepGray;
+                        }
+                    }
+                }
+            }
+            .chat-discript {
+                p {
+                    margin: 0px;
+                    &:nth-child(1) {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    &:nth-child(2) {
+                        font-size: 14px;
+                        color: $color-MiddleGray;
+                        margin-bottom: 18px;
+                    }
+                    &:nth-child(3) {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .chat-button {
+                .facebook-button {
+                    width: 318px;
+                    height: 52px;
+                    background-color: $color-Blue;
+                    border-radius: 10px;
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    .line{
-                        width: 13px;
-                        height: 2px;
-                        background-color: $color-DeepGray;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    .facebook-icon {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $color-White;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 35px;
+                        margin-right: 10px;
+                        i {
+                            font-size: 22px;
+                            color: $color-Blue;
+                        }
                     }
-                   }
-               }
-           }
-           .chat-discript{
-               p{
-                   margin: 0px;
-                   &:nth-child(1){
-                       font-size: 18px;
-                       font-weight: bold;
-                   }
-                   &:nth-child(2){
-                        font-size: 14px;
-                        color:$color-MiddleGray;
-                        margin-bottom: 18px;
-                    }
-                    &:nth-child(3){
-                        font-size: 14px;
-                        font-weight: 500;
-                    }
-
-               }
-           }
-           .chat-button{
-               .facebook-button{
-                   width: 318px;
-                   height: 52px;
-                   background-color:$color-Blue;
-                   border-radius: 10px;
-                   
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   margin-bottom: 10px;
-                   cursor: pointer;
-                   .facebook-icon{
-                       width: 30px;
-                       height: 30px;
-                       background-color: $color-White;
-                       border-radius: 50%;
-                       text-align: center;
-                       line-height: 35px;
-                       margin-right: 10px;
-                       i{
-                           font-size: 22px;
-                           color: $color-Blue;
-                           
-                       }
-                   }
-                   p{
-                       font-size: 18px;
-                       font-weight: bold;
-                       color:$color-White;
-                       margin: 0px;
-                   }
-               }
-               .line-button{
-                width: 318px;
-                height: 52px;
-                background-color:$color-Green;
-                border-radius: 10px;
-                padding: 0px 37px;
-                cursor: pointer;
-
-                display: flex;
-                align-items: center;
-                .line-icon{
-                    width: 30px;
-                    height: 30px;
-                    background-color: $color-White;
-                    border-radius: 50%;
-                    text-align: center;
-                    line-height: 28px;
-                    
-                    margin-right: 45px;
-                    span{
-                        font-size: 13px;
-                        color: $color-Green;
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $color-White;
+                        margin: 0px;
                     }
                 }
-                p{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color:$color-White;
-                    margin: 0px;
+                .line-button {
+                    width: 318px;
+                    height: 52px;
+                    background-color: $color-Green;
+                    border-radius: 10px;
+                    padding: 0px 37px;
+                    cursor: pointer;
+
+                    display: flex;
+                    align-items: center;
+                    .line-icon {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $color-White;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 28px;
+
+                        margin-right: 45px;
+                        span {
+                            font-size: 13px;
+                            color: $color-Green;
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $color-White;
+                        margin: 0px;
+                    }
                 }
             }
-           }
-       }
+        }
     }
     // 品牌理念
-    .we-story{
+    .we-story {
         height: 100vh;
-        background-color:$color-LightGray;
+        background-color: $color-LightGray;
         position: relative;
-        .float{
+        .float {
             position: absolute;
             top: 100px;
             left: -8vw;
 
             display: flex;
-            img{
+            img {
                 width: 974px;
                 height: 588px;
-                position: relative; 
-                z-index: 1;             
+                position: relative;
+                z-index: 1;
             }
-            svg{
+            svg {
                 position: absolute;
                 height: 800px;
                 top: 360px;
                 left: 85px;
-                .scissors,.scissors-mind{
+                .scissors,
+                .scissors-mind {
                     fill-opacity: 0;
                     stroke: $color-Background-line;
                     stroke-width: 2px;
                     stroke-dashoffset: 0;
                     stroke-dasharray: 4000;
                 }
-                .scissors{
+                .scissors {
                     animation: scissors 4s ease-in-out;
                 }
-                @keyframes scissors
-                {
-                    0%
-                    {
+                @keyframes scissors {
+                    0% {
                         stroke-dashoffset: 4000;
                     }
-                    
-                    100%
-                    {
+
+                    100% {
                         stroke-dashoffset: 0;
                     }
                 }
-                .scissors-mind{
+                .scissors-mind {
                     animation: mind 4s ease-in-out;
                 }
-                @keyframes mind
-                {
-                    0%
-                    {
+                @keyframes mind {
+                    0% {
                         stroke-dashoffset: 4000;
                     }
-                    50%
-                    {
+                    50% {
                         stroke-dashoffset: 4000;
                     }
-                    100%
-                    {
+                    100% {
                         stroke-dashoffset: 0;
                     }
                 }
             }
-            .story-discript{
+            .story-discript {
                 margin-left: 4vw;
-                .subtitle{
+                .subtitle {
                     font-size: 14px;
                     font-weight: 600;
-                    color:$color-Orange;
+                    color: $color-Orange;
                     position: relative;
                     margin-bottom: 50px;
-                    &:before{
+                    &:before {
                         content: "";
                         position: absolute;
                         top: 20px;
@@ -352,13 +342,13 @@ main{
                         background-color: $color-Orange;
                     }
                 }
-                .title{
+                .title {
                     font-size: 36px;
                     font-weight: bold;
                     color: $color-WedgwoodBlue;
                     margin-bottom: 45px;
                     position: relative;
-                    &:before{
+                    &:before {
                         content: "";
                         width: 100px;
                         height: 1px;
@@ -368,17 +358,17 @@ main{
                         position: absolute;
                         transform: rotate(33deg);
                         z-index: 0;
-                    }                    
+                    }
                 }
-                .content{
+                .content {
                     font-size: 18px;
-                        color: $color-IronGray;
-                        font-weight: normal;
-                        letter-spacing: 0.2vw;
-                    .preamble{
+                    color: $color-IronGray;
+                    font-weight: normal;
+                    letter-spacing: 0.2vw;
+                    .preamble {
                         margin-bottom: 30px;
                         position: relative;
-                        &:after{
+                        &:after {
                             content: "";
                             width: 300px;
                             height: 1px;
@@ -390,7 +380,7 @@ main{
                             z-index: 0;
                         }
                     }
-                    .main-body{
+                    .main-body {
                         margin-bottom: 30px;
                     }
                 }
@@ -398,52 +388,52 @@ main{
         }
     }
     // 製鞋 card
-    .shoemaking{
+    .shoemaking {
         height: 100vh;
-        background-color:$color-LightGray;
-        .shoes-card{
-           display: flex; 
-           justify-content: space-between;
-           text-align: center;
-           margin-bottom: 50px;
-           @mixin shoes-card-contain {
-            z-index: 2;
-            img{
-                 width: 295px;
-                 border-radius: 50%;
-                 border: 5px solid $color-Border-Gary;
-            }
-            .text{
-                 margin-top: 30px;
-                span{
-                    &:nth-child(1){
-                         font-size: 24px;
-                         font-weight: bold;
-                         color: $color-IronGray;
+        background-color: $color-LightGray;
+        .shoes-card {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 50px;
+            @mixin shoes-card-contain {
+                z-index: 2;
+                img {
+                    width: 295px;
+                    border-radius: 50%;
+                    border: 5px solid $color-Border-Gary;
+                }
+                .text {
+                    margin-top: 30px;
+                    span {
+                        &:nth-child(1) {
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: $color-IronGray;
+                        }
+                        &:nth-child(2) {
+                            font-size: 14px;
+                            font-weight: lighter;
+                            color: $color-IronGray;
+                        }
                     }
-                    &:nth-child(2){
-                         font-size: 14px;
-                         font-weight: lighter;
-                         color: $color-IronGray;
-                    } 
                 }
             }
-        }
-           .chose-shoes{
-                @include shoes-card-contain();
-           }
-           .shoes-introduction{
+            .chose-shoes {
                 @include shoes-card-contain();
             }
-            .shoemaking-story{
+            .shoes-introduction {
+                @include shoes-card-contain();
+            }
+            .shoemaking-story {
                 @include shoes-card-contain();
             }
         }
-        .see-more-button{
+        .see-more-button {
             width: 100%;
             display: flex;
             justify-content: center;
-            button{
+            button {
                 width: 277px;
                 height: 79px;
                 font-size: 24px;
@@ -451,47 +441,45 @@ main{
                 border-radius: 35px;
                 border: 2px solid $color-MoreButton;
                 z-index: 1;
-                &:hover{
+                &:hover {
                     border: 2px solid $color-MoreButton-hover;
                     color: $color-White;
                     background-color: $color-MoreButton-hover;
                 }
             }
-            
-        }        
+        }
     }
     //縫線的 svg
-    .sew-img{
+    .sew-img {
         position: relative;
-        img{
+        img {
             height: 1780px;
             position: absolute;
             top: -760px;
             right: -80px;
         }
-    } 
+    }
     //影片
-    .shoes-video{
+    .shoes-video {
         height: 100vh;
-        background-color:$color-LightGray;
-        .float{
+        background-color: $color-LightGray;
+        .float {
             position: relative;
-            img{
-                &:nth-child(1){
+            img {
+                &:nth-child(1) {
                     position: absolute;
                     top: -320px;
                     left: -8vw;
                     border-right: 18px solid $color-Apricot;
                     z-index: 2;
-                    
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     height: 800px;
                     position: absolute;
                     top: 180px;
                     left: -10vw;
                 }
-                &:nth-child(3){
+                &:nth-child(3) {
                     position: absolute;
                     top: 250px;
                     right: 0px;
@@ -501,13 +489,13 @@ main{
         }
     }
     //新品上市
-    .new-product{
+    .new-product {
         height: 100vh;
-        background-color:$color-LightGray;
+        background-color: $color-LightGray;
         position: relative;
         display: flex;
         align-items: center;
-        &:after{
+        &:after {
             content: "";
             position: absolute;
             width: 1px;
@@ -516,22 +504,21 @@ main{
             left: 190px;
             background-color: $color-Background-line;
         }
-        .product-title{
+        .product-title {
             position: absolute;
-            top:-100px;
+            top: -100px;
             left: 100px;
             text-align: center;
-            span{
-                &:nth-child(1){
+            span {
+                &:nth-child(1) {
                     font-size: 48px;
                     font-weight: bold;
                     color: $color-IronGray;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     font-size: 24px;
                     font-weight: lighter;
                     color: $color-IronGray;
-                    
                 }
             }
         }
@@ -539,7 +526,7 @@ main{
             width: 275px;
             height: 306px;
             background-color: $color-White-opacity;
-            
+
             position: relative;
             display: flex;
             flex-direction: column;
@@ -547,24 +534,24 @@ main{
             align-items: center;
             text-align: center;
             z-index: 2;
-            img{
+            img {
                 position: absolute;
                 width: 215px;
-                top:-70px;
+                top: -70px;
                 left: 27px;
             }
-            .content{
-                .text{
-                    p{
+            .content {
+                .text {
+                    p {
                         margin: 0px;
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             font-size: 21px;
                             font-weight: lighter;
                             letter-spacing: 0.1vw;
                             color: $color-IronGray;
                             margin-bottom: 10px;
                         }
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             font-size: 16px;
                             font-weight: normal;
                             letter-spacing: 0.1vw;
@@ -573,15 +560,15 @@ main{
                         }
                     }
                 }
-                .price{
-                    span{
-                        &:nth-child(1){
+                .price {
+                    span {
+                        &:nth-child(1) {
                             font-size: 15px;
                             font-weight: lighter;
                             color: $color-Original-Price;
-                            text-decoration:line-through;	
+                            text-decoration: line-through;
                         }
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             font-size: 30px;
                             font-weight: bold;
                             color: $color-Apricot;
@@ -589,63 +576,61 @@ main{
                     }
                 }
             }
-            button{
+            button {
                 width: 235px;
                 height: 50px;
                 color: $color-IronGray;
                 border: 2px solid $color-MoreButton;
                 border-radius: 45px;
                 background-color: $color-White-opacity;
-                margin:30px 0px 10px 0px;
+                margin: 30px 0px 10px 0px;
             }
         }
-        .product-item{
+        .product-item {
             width: 80%;
             margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .product-first{
-              @include shoes-content();
-            }
-            .product-second{
+            .product-first {
                 @include shoes-content();
-                img{
+            }
+            .product-second {
+                @include shoes-content();
+                img {
                     top: -100px;
                 }
             }
-            .product-third{
+            .product-third {
                 @include shoes-content();
-                img{
+                img {
                     top: -50px;
                 }
             }
-            .product-fourth{
+            .product-fourth {
                 @include shoes-content();
             }
         }
-        .see-more-button{
+        .see-more-button {
             display: flex;
             justify-content: center;
             margin-top: 100px;
-            button{
+            button {
                 width: 277px;
                 height: 79px;
                 font-size: 24px;
-                color: $color-IronGray ;
+                color: $color-IronGray;
                 border: 2px solid $color-MoreButton;
                 border-radius: 35px;
                 z-index: 2;
-                &:hover{
+                &:hover {
                     border: 2px solid $color-MoreButton-hover;
                     color: $color-White;
                     background-color: $color-MoreButton-hover;
                 }
-
             }
-            
         }
-        .parallelogram{
+        .parallelogram {
             position: absolute;
             top: -122px;
             right: 323px;
@@ -656,11 +641,11 @@ main{
         }
     }
     // 照片牆
-    .photo-wall{
+    .photo-wall {
         height: 100vh;
-        background-color:$color-LightGray;
+        background-color: $color-LightGray;
         position: relative;
-        &:after{
+        &:after {
             content: "";
             position: absolute;
             width: 1px;
@@ -669,7 +654,7 @@ main{
             left: 190px;
             background-color: $color-Background-line;
         }
-        .photo-title{
+        .photo-title {
             width: 100%;
             position: absolute;
             top: -53px;
@@ -677,22 +662,22 @@ main{
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            span{
-                &:nth-child(1){
+            span {
+                &:nth-child(1) {
                     font-size: $H2-font-size;
                     font-weight: bold;
                     color: $color-IronGray;
                     line-height: 0px;
                     margin-bottom: 10px;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     font-size: $H7-font-size;
                     font-weight: normal;
                     color: $color-IronGray;
                 }
             }
         }
-        .swiper{
+        .swiper {
             height: 70%;
             padding-top: 50px;
             padding: 50px 100px 0px 100px;
@@ -704,7 +689,7 @@ main{
                     text-align: center;
                     font-size: 18px;
                     background: #fff;
-            
+
                     /* Center slide text vertically */
                     display: -webkit-box;
                     display: -ms-flexbox;
@@ -718,37 +703,35 @@ main{
                     -ms-flex-align: center;
                     -webkit-align-items: center;
                     align-items: center;
-                    img{
+                    img {
                         background-repeat: no-repeat;
                         background-size: contain;
                     }
-                  }
-              }
-            .swiper-button-next{
+                }
+            }
+            .swiper-button-next {
                 top: 40%;
-                right:40px;
+                right: 40px;
                 color: $color-Apricot;
-                &:hover{
+                &:hover {
                     color: $color-Photo-nextBtn-hover;
                 }
             }
-            .swiper-button-prev{
+            .swiper-button-prev {
                 top: 40%;
-                left:40px;
+                left: 40px;
                 color: $color-Apricot;
-                &:hover{
+                &:hover {
                     color: $color-Photo-nextBtn-hover;
                 }
             }
-              
-        
         }
-        .plus-button{
+        .plus-button {
             width: 100%;
             display: flex;
             justify-content: center;
             margin-top: 50px;
-            .plus{
+            .plus {
                 width: 66px;
                 height: 66px;
                 background-color: $color-Plus;
@@ -757,7 +740,7 @@ main{
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                &:before{
+                &:before {
                     content: "";
                     width: 50px;
                     height: 2px;
@@ -766,7 +749,7 @@ main{
                     top: 32px;
                     left: 8px;
                 }
-                &:after{
+                &:after {
                     content: "";
                     width: 2px;
                     height: 50px;
@@ -777,12 +760,74 @@ main{
                 }
             }
         }
-        
-       
-    
-         
-        
     }
-    
-    
+    // 試穿資訊
+    .studio-information {
+        font-family: $font-Family-A;
+
+        .studio-photo {
+            & img {
+                width: 559px;
+                height: 838px;
+                border-left: 18px solid $color-Apricot;
+            }
+        }
+
+        .try-on-infor {
+            position: relative;
+
+            .try-on {
+                font-size: $H1-font-size;
+                height: 72px;
+                margin-bottom: 12px;
+            }
+
+            .detail {
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;
+                position: absolute;
+                top: 65px;
+                left: 36px;
+            }
+
+            .infor {
+                font-size: $H1-font-size;
+            }
+        }
+
+        .contact-head {
+            ul {
+                font-size: $H5-font-size;
+                font-weight: bold;
+                letter-spacing: $font-letter-space-100;
+                border-left: 1px solid $color-Apricot;
+            }
+        }
+
+        .contact-text {
+            ul {
+                font-size: $H7-font-size;
+
+                .phone {
+                    padding-top: 3px;
+                }
+
+                .business-time {
+                    padding-top: 11px;
+                }
+
+                .address {
+                    padding-top: 7px;
+                }
+
+                .note {
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        .shop-map {
+            border-left: 18px solid $color-Apricot;
+        }
+    }
 }
