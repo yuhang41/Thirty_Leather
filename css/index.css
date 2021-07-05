@@ -236,6 +236,7 @@ main .chatbot .chatbox .chat-discript p {
 main .chatbot .chatbox .chat-discript p:nth-child(1) {
   font-size: 18px;
   font-weight: bold;
+  letter-spacing: 0.8px;
 }
 
 main .chatbot .chatbox .chat-discript p:nth-child(2) {
@@ -285,6 +286,7 @@ main .chatbot .chatbox .chat-button .facebook-button .facebook-icon i {
 main .chatbot .chatbox .chat-button .facebook-button p {
   font-size: 18px;
   font-weight: bold;
+  letter-spacing: 0.8px;
   color: #ffffff;
   margin: 0px;
 }
@@ -294,7 +296,7 @@ main .chatbot .chatbox .chat-button .line-button {
   height: 52px;
   background-color: #69ce3a;
   border-radius: 10px;
-  padding: 0px 37px;
+  padding: 0px 31px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,6 +324,7 @@ main .chatbot .chatbox .chat-button .line-button .line-icon span {
 main .chatbot .chatbox .chat-button .line-button p {
   font-size: 18px;
   font-weight: bold;
+  letter-spacing: 0.8px;
   color: #ffffff;
   margin: 0px;
 }
@@ -342,8 +345,8 @@ main .we-story .float {
 }
 
 main .we-story .float img {
-  width: 974px;
-  height: 588px;
+  max-width: 53.32%;
+  max-height: 54.5%;
   position: relative;
   z-index: 1;
 }
@@ -422,7 +425,7 @@ main .we-story .float .story-discript {
 
 main .we-story .float .story-discript .subtitle {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: normal;
   color: #e28749;
   position: relative;
   margin-bottom: 50px;
@@ -441,6 +444,7 @@ main .we-story .float .story-discript .subtitle:before {
 main .we-story .float .story-discript .title {
   font-size: 36px;
   font-weight: bold;
+  letter-spacing: 1.6px;
   color: #8090a0;
   margin-bottom: 45px;
   position: relative;
@@ -463,7 +467,7 @@ main .we-story .float .story-discript .content {
   font-size: 18px;
   color: #444444;
   font-weight: normal;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.8px;
 }
 
 main .we-story .float .story-discript .content .preamble {
@@ -521,6 +525,7 @@ main .shoemaking .shoes-card .chose-shoes .text {
 main .shoemaking .shoes-card .chose-shoes .text span:nth-child(1) {
   font-size: 24px;
   font-weight: bold;
+  letter-spacing: 3.2px;
   color: #444444;
 }
 
@@ -547,6 +552,7 @@ main .shoemaking .shoes-card .shoes-introduction .text {
 main .shoemaking .shoes-card .shoes-introduction .text span:nth-child(1) {
   font-size: 24px;
   font-weight: bold;
+  letter-spacing: 3.2px;
   color: #444444;
 }
 
@@ -573,6 +579,7 @@ main .shoemaking .shoes-card .shoemaking-story .text {
 main .shoemaking .shoes-card .shoemaking-story .text span:nth-child(1) {
   font-size: 24px;
   font-weight: bold;
+  letter-spacing: 3.2px;
   color: #444444;
 }
 
@@ -605,6 +612,7 @@ main .shoemaking .see-more-button button {
 main .shoemaking .see-more-button button:hover {
   border: 2px solid #abbac9;
   color: #ffffff;
+  font-weight: bold;
   background-color: #abbac9;
 }
 
@@ -629,6 +637,7 @@ main .shoes-video .float {
 }
 
 main .shoes-video .float img:nth-child(1) {
+  max-width: 66.4%;
   position: absolute;
   top: -320px;
   left: -8vw;
@@ -644,6 +653,7 @@ main .shoes-video .float img:nth-child(2) {
 }
 
 main .shoes-video .float img:nth-child(3) {
+  max-width: 32.38%;
   position: absolute;
   top: 250px;
   right: 0px;
@@ -741,7 +751,7 @@ main .new-product .product-item .product-first .content .text p {
 main .new-product .product-item .product-first .content .text p:nth-child(1) {
   font-size: 21px;
   font-weight: lighter;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 10px;
 }
@@ -749,7 +759,7 @@ main .new-product .product-item .product-first .content .text p:nth-child(1) {
 main .new-product .product-item .product-first .content .text p:nth-child(2) {
   font-size: 16px;
   font-weight: normal;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 30px;
 }
@@ -813,7 +823,7 @@ main .new-product .product-item .product-second .content .text p {
 main .new-product .product-item .product-second .content .text p:nth-child(1) {
   font-size: 21px;
   font-weight: lighter;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 10px;
 }
@@ -821,7 +831,7 @@ main .new-product .product-item .product-second .content .text p:nth-child(1) {
 main .new-product .product-item .product-second .content .text p:nth-child(2) {
   font-size: 16px;
   font-weight: normal;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 30px;
 }
@@ -889,7 +899,7 @@ main .new-product .product-item .product-third .content .text p {
 main .new-product .product-item .product-third .content .text p:nth-child(1) {
   font-size: 21px;
   font-weight: lighter;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 10px;
 }
@@ -897,7 +907,7 @@ main .new-product .product-item .product-third .content .text p:nth-child(1) {
 main .new-product .product-item .product-third .content .text p:nth-child(2) {
   font-size: 16px;
   font-weight: normal;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 30px;
 }
@@ -965,7 +975,7 @@ main .new-product .product-item .product-fourth .content .text p {
 main .new-product .product-item .product-fourth .content .text p:nth-child(1) {
   font-size: 21px;
   font-weight: lighter;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 10px;
 }
@@ -973,7 +983,7 @@ main .new-product .product-item .product-fourth .content .text p:nth-child(1) {
 main .new-product .product-item .product-fourth .content .text p:nth-child(2) {
   font-size: 16px;
   font-weight: normal;
-  letter-spacing: 0.1vw;
+  letter-spacing: 1.6px;
   color: #444444;
   margin-bottom: 30px;
 }
@@ -1024,6 +1034,7 @@ main .new-product .see-more-button button {
 main .new-product .see-more-button button:hover {
   border: 2px solid #abbac9;
   color: #ffffff;
+  font-weight: bold;
   background-color: #abbac9;
 }
 
@@ -1209,7 +1220,7 @@ main .studio-information .try-on-infor .try-on {
 
 main .studio-information .try-on-infor .detail {
   font-size: 21px;
-  letter-spacing: 100;
+  letter-spacing: 1.6px;
   position: absolute;
   top: 65px;
   left: 36px;
@@ -1222,7 +1233,7 @@ main .studio-information .try-on-infor .infor {
 main .studio-information .contact-head ul {
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 100;
+  letter-spacing: 1.6px;
   border-left: 1px solid #f7a269;
 }
 

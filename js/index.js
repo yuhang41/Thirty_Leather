@@ -15,14 +15,32 @@ close_btn.addEventListener('click',function(){
     }
 });
 
-//swiper
-var swiper = new Swiper('.swiper-container', {
+
+//Pagination Swiper
+var myswiper1 = new Swiper('.myswiper1', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
+    },
+});
+
+// Initialize Swiper 
+var myswiper2 = new Swiper(".myswiper2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });

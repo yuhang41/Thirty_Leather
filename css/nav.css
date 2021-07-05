@@ -53,7 +53,7 @@ nav .options .option {
 nav .options .option ul {
   margin-bottom: 25px;
   font-size: 15px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.6px;
 }
 
 nav .options .option ul a {
@@ -111,7 +111,7 @@ nav .options .input-cart input {
 nav .options .input-cart input::-webkit-input-placeholder {
   color: #9b9b9b;
   font-size: 14px;
-  letter-spacing: 0.2rem;
+  letter-spacing: 3.2px;
 }
 
 nav .options .input-cart .cart {
@@ -160,7 +160,7 @@ nav .twd-lang .twd {
 nav .twd-lang .twd a {
   color: #ffffff;
   font-size: 15px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.6px;
 }
 
 nav .twd-lang .lang {
@@ -171,6 +171,6 @@ nav .twd-lang .lang {
 nav .twd-lang .lang a {
   color: #ffffff;
   font-size: 15px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1.6px;
 }
 /*# sourceMappingURL=nav.css.map */

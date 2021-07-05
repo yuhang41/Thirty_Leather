@@ -35,7 +35,7 @@ nav{
             ul{
                 margin-bottom: 25px;
                 font-size:15px;
-                letter-spacing:0.1rem;
+                letter-spacing: $font-letter-space-100;
                 a{
                     color:$color-Nav-font;
                 }
@@ -79,8 +79,8 @@ nav{
             }
             input::-webkit-input-placeholder { 
                 color: $color-placeholder;
-                font-size: 14px; 
-                letter-spacing:0.2rem;
+                font-size: $H10-font-size; 
+                letter-spacing: $font-letter-space-200;
             }
             .cart{
                 position: relative;
@@ -127,8 +127,8 @@ nav{
             color: $color-WedgwoodBlue;
             a{
                 color:$color-White;
-                font-size: 15px;
-                letter-spacing:0.1rem;
+                font-size: $H9-font-size;
+                letter-spacing: $font-letter-space-100;
             }
         }
         .lang{
@@ -136,8 +136,8 @@ nav{
             background-color: $color-WedgwoodBlue;
             a{
                 color: $color-White;
-                font-size: 15px;
-                letter-spacing:0.1rem;
+                font-size: $H9-font-size;
+                letter-spacing: $font-letter-space-100;
             }
             
         }

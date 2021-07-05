@@ -187,16 +187,17 @@ main {
                 p {
                     margin: 0px;
                     &:nth-child(1) {
-                        font-size: 18px;
+                        font-size: $H7-font-size;
                         font-weight: bold;
+                        letter-spacing: $font-letter-space-50;
                     }
                     &:nth-child(2) {
-                        font-size: 14px;
+                        font-size: $H10-font-size;
                         color: $color-MiddleGray;
                         margin-bottom: 18px;
                     }
                     &:nth-child(3) {
-                        font-size: 14px;
+                        font-size: $H10-font-size;
                         font-weight: 500;
                     }
                 }
@@ -227,8 +228,9 @@ main {
                         }
                     }
                     p {
-                        font-size: 18px;
+                        font-size: $H7-font-size;
                         font-weight: bold;
+                        letter-spacing: $font-letter-space-50;
                         color: $color-White;
                         margin: 0px;
                     }
@@ -238,7 +240,7 @@ main {
                     height: 52px;
                     background-color: $color-Green;
                     border-radius: 10px;
-                    padding: 0px 37px;
+                    padding: 0px 31px;
                     cursor: pointer;
 
                     display: flex;
@@ -250,7 +252,6 @@ main {
                         border-radius: 50%;
                         text-align: center;
                         line-height: 28px;
-
                         margin-right: 45px;
                         span {
                             font-size: 13px;
@@ -258,8 +259,9 @@ main {
                         }
                     }
                     p {
-                        font-size: 18px;
+                        font-size: $H7-font-size;
                         font-weight: bold;
+                        letter-spacing: $font-letter-space-50;
                         color: $color-White;
                         margin: 0px;
                     }
@@ -279,8 +281,8 @@ main {
 
             display: flex;
             img {
-                width: 974px;
-                height: 588px;
+                max-width: 53.32%;
+                max-height: 54.5%;
                 position: relative;
                 z-index: 1;
             }
@@ -327,8 +329,8 @@ main {
             .story-discript {
                 margin-left: 4vw;
                 .subtitle {
-                    font-size: 14px;
-                    font-weight: 600;
+                    font-size: $H10-font-size;
+                    font-weight:normal;
                     color: $color-Orange;
                     position: relative;
                     margin-bottom: 50px;
@@ -343,8 +345,9 @@ main {
                     }
                 }
                 .title {
-                    font-size: 36px;
+                    font-size: $H3-font-size;
                     font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
                     color: $color-WedgwoodBlue;
                     margin-bottom: 45px;
                     position: relative;
@@ -361,10 +364,10 @@ main {
                     }
                 }
                 .content {
-                    font-size: 18px;
+                    font-size: $H7-font-size;
                     color: $color-IronGray;
                     font-weight: normal;
-                    letter-spacing: 0.2vw;
+                    letter-spacing: $font-letter-space-50;
                     .preamble {
                         margin-bottom: 30px;
                         position: relative;
@@ -407,12 +410,13 @@ main {
                     margin-top: 30px;
                     span {
                         &:nth-child(1) {
-                            font-size: 24px;
+                            font-size: $H5-font-size;
                             font-weight: bold;
+                            letter-spacing: $font-letter-space-200;
                             color: $color-IronGray;
                         }
                         &:nth-child(2) {
-                            font-size: 14px;
+                            font-size: $H10-font-size;
                             font-weight: lighter;
                             color: $color-IronGray;
                         }
@@ -436,7 +440,7 @@ main {
             button {
                 width: 277px;
                 height: 79px;
-                font-size: 24px;
+                font-size: $H5-font-size;
                 color: $color-IronGray;
                 border-radius: 35px;
                 border: 2px solid $color-MoreButton;
@@ -444,6 +448,7 @@ main {
                 &:hover {
                     border: 2px solid $color-MoreButton-hover;
                     color: $color-White;
+                    font-weight: bold;
                     background-color: $color-MoreButton-hover;
                 }
             }
@@ -467,6 +472,7 @@ main {
             position: relative;
             img {
                 &:nth-child(1) {
+                    max-width: 66.4%;
                     position: absolute;
                     top: -320px;
                     left: -8vw;
@@ -480,6 +486,7 @@ main {
                     left: -10vw;
                 }
                 &:nth-child(3) {
+                    max-width: 32.38%;
                     position: absolute;
                     top: 250px;
                     right: 0px;
@@ -511,12 +518,12 @@ main {
             text-align: center;
             span {
                 &:nth-child(1) {
-                    font-size: 48px;
+                    font-size: $H2-font-size;
                     font-weight: bold;
                     color: $color-IronGray;
                 }
                 &:nth-child(2) {
-                    font-size: 24px;
+                    font-size: $H5-font-size;
                     font-weight: lighter;
                     color: $color-IronGray;
                 }
@@ -545,16 +552,16 @@ main {
                     p {
                         margin: 0px;
                         &:nth-child(1) {
-                            font-size: 21px;
+                            font-size: $H6-font-size;
                             font-weight: lighter;
-                            letter-spacing: 0.1vw;
+                            letter-spacing: $font-letter-space-100;
                             color: $color-IronGray;
                             margin-bottom: 10px;
                         }
                         &:nth-child(2) {
-                            font-size: 16px;
+                            font-size: $H8-font-size;
                             font-weight: normal;
-                            letter-spacing: 0.1vw;
+                            letter-spacing: $font-letter-space-100;
                             color: $color-IronGray;
                             margin-bottom: 30px;
                         }
@@ -563,13 +570,13 @@ main {
                 .price {
                     span {
                         &:nth-child(1) {
-                            font-size: 15px;
+                            font-size: $H9-font-size;
                             font-weight: lighter;
                             color: $color-Original-Price;
                             text-decoration: line-through;
                         }
                         &:nth-child(2) {
-                            font-size: 30px;
+                            font-size: $H4-font-size;
                             font-weight: bold;
                             color: $color-Apricot;
                         }
@@ -618,7 +625,7 @@ main {
             button {
                 width: 277px;
                 height: 79px;
-                font-size: 24px;
+                font-size: $H5-font-size;
                 color: $color-IronGray;
                 border: 2px solid $color-MoreButton;
                 border-radius: 35px;
@@ -626,6 +633,7 @@ main {
                 &:hover {
                     border: 2px solid $color-MoreButton-hover;
                     color: $color-White;
+                    font-weight: bold;
                     background-color: $color-MoreButton-hover;
                 }
             }

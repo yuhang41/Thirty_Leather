@@ -52,7 +52,7 @@ body {
 
 .site-footer .footer-arrow-text {
   font-size: 18px;
-  letter-spacing: 100;
+  letter-spacing: 1.6px;
   position: absolute;
   top: 40px;
   left: 4px;
@@ -60,7 +60,7 @@ body {
 
 .site-footer .common-problems {
   font-size: 16px;
-  letter-spacing: 200;
+  letter-spacing: 3.2px;
   color: #444444;
 }
 
@@ -85,8 +85,8 @@ body {
 .site-footer .copyright {
   height: 80px;
   background-color: #7a7573;
-  font-size: 14px;
-  letter-spacing: 100;
+  font-size: 15px;
+  letter-spacing: 1.6px;
   color: #ffffff;
 }
 

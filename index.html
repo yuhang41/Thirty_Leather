@@ -22,14 +22,14 @@
     <main>
         <!-- 輪播圖 -->
         <div class="swiper">
-            <div class="swiper-container">
+            <div class="swiper-container myswiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url(img/banner.jpg);"></div>
                     <div class="swiper-slide" style="background-color: rgb(128,128,128);"></div>
                     <div class="swiper-slide" style="background-color: rgb(169,169,169);"></div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination1"></div>
         </div>
         <!-- 聯絡客服 -->
         <div class="chatbot">
@@ -156,7 +156,7 @@
                     <div class="chose-shoes">
                         <img src="https://dummyimage.com/400x400" alt="">
                         <div class="text">
-                            <span>製鞋怎麼選</span><br>
+                            <span>購鞋怎麼選</span><br>
                             <span>How to choose</span>
                         </div>
                     </div>
@@ -180,6 +180,7 @@
                 </div>
             </div>
         </div>
+        <!-- 縫鞋的svg -->
         <div class="sew-img">
             <img src="img/sew.svg" alt="">
         </div>
@@ -270,7 +271,7 @@
             </div>
             <!-- Swiper -->
             <div class="swiper">
-                <div class="swiper-container mySwiper">
+                <div class="swiper-container myswiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"
                             style="background-image: url(img/model.jpg);background-repeat: no-repeat;background-size: contain;">
@@ -292,7 +293,7 @@
                 <div class="plus"></div>
             </div>
         </div>
-
+        <!-- 試穿資訊 -->
         <div class="studio-information d-flex">
             <div class="studio-photo col-md-5">
                 <img src="/img/studio-photo.jpg">
@@ -361,24 +362,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="js/index.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+    
 </body>
 
 </html>
