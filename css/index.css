@@ -451,7 +451,7 @@ main .we-story .float .story-discript .title:before {
   height: 1px;
   top: 20px;
   left: -110px;
-  background-color: #8090a0;
+  background-color: #abbac9;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -476,7 +476,7 @@ main .we-story .float .story-discript .content .preamble:after {
   height: 1px;
   top: 171px;
   left: 340px;
-  background-color: #8090a0;
+  background-color: #abbac9;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -659,6 +659,16 @@ main .new-product {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .new-product:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  top: 0px;
+  left: 190px;
+  background-color: #abbac9;
 }
 
 main .new-product .product-title {
@@ -1025,5 +1035,154 @@ main .new-product .parallelogram {
   background-color: #f0efeb;
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
+}
+
+main .photo-wall {
+  height: 100vh;
+  background-color: #ebeae5;
+  position: relative;
+}
+
+main .photo-wall:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  top: 0px;
+  left: 190px;
+  background-color: #abbac9;
+}
+
+main .photo-wall .photo-title {
+  width: 100%;
+  position: absolute;
+  top: -53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .photo-wall .photo-title span:nth-child(1) {
+  font-size: 48px;
+  font-weight: bold;
+  color: #444444;
+  line-height: 0px;
+  margin-bottom: 10px;
+}
+
+main .photo-wall .photo-title span:nth-child(2) {
+  font-size: 18px;
+  font-weight: normal;
+  color: #444444;
+}
+
+main .photo-wall .swiper {
+  height: 70%;
+  padding-top: 50px;
+  padding: 50px 100px 0px 100px;
+}
+
+main .photo-wall .swiper .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+main .photo-wall .swiper .swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main .photo-wall .swiper .swiper-container .swiper-slide img {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main .photo-wall .swiper .swiper-button-next {
+  top: 40%;
+  right: 40px;
+  color: #f7a269;
+}
+
+main .photo-wall .swiper .swiper-button-next:hover {
+  color: #6ba2f2;
+}
+
+main .photo-wall .swiper .swiper-button-prev {
+  top: 40%;
+  left: 40px;
+  color: #f7a269;
+}
+
+main .photo-wall .swiper .swiper-button-prev:hover {
+  color: #6ba2f2;
+}
+
+main .photo-wall .plus-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+main .photo-wall .plus-button .plus {
+  width: 66px;
+  height: 66px;
+  background-color: #7b8ea4;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+main .photo-wall .plus-button .plus:before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 32px;
+  left: 8px;
+}
+
+main .photo-wall .plus-button .plus:after {
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 8px;
+  left: 32px;
 }
 /*# sourceMappingURL=index.css.map */

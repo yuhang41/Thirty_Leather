@@ -8,8 +8,6 @@
 .container{
     max-width: 1520px;
 }
-
-
 nav{
     height: 113px;
 }
@@ -366,7 +364,7 @@ main{
                         height: 1px;
                         top: 20px;
                         left: -110px;
-                        background-color: $color-WedgwoodBlue;
+                        background-color: $color-Background-line;
                         position: absolute;
                         transform: rotate(33deg);
                         z-index: 0;
@@ -386,7 +384,7 @@ main{
                             height: 1px;
                             top: 171px;
                             left: 340px;
-                            background-color: $color-WedgwoodBlue;
+                            background-color: $color-Background-line;
                             position: absolute;
                             transform: rotate(33deg);
                             z-index: 0;
@@ -509,6 +507,15 @@ main{
         position: relative;
         display: flex;
         align-items: center;
+        &:after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100vh;
+            top: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+        }
         .product-title{
             position: absolute;
             top:-100px;
@@ -647,6 +654,134 @@ main{
             background-color: $color-Parallelogram;
             transform: skewX(-30deg);
         }
+    }
+    // 照片牆
+    .photo-wall{
+        height: 100vh;
+        background-color:$color-LightGray;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100vh;
+            top: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+        }
+        .photo-title{
+            width: 100%;
+            position: absolute;
+            top: -53px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            span{
+                &:nth-child(1){
+                    font-size: $H2-font-size;
+                    font-weight: bold;
+                    color: $color-IronGray;
+                    line-height: 0px;
+                    margin-bottom: 10px;
+                }
+                &:nth-child(2){
+                    font-size: $H7-font-size;
+                    font-weight: normal;
+                    color: $color-IronGray;
+                }
+            }
+        }
+        .swiper{
+            height: 70%;
+            padding-top: 50px;
+            padding: 50px 100px 0px 100px;
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+            
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    img{
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                  }
+              }
+            .swiper-button-next{
+                top: 40%;
+                right:40px;
+                color: $color-Apricot;
+                &:hover{
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+            .swiper-button-prev{
+                top: 40%;
+                left:40px;
+                color: $color-Apricot;
+                &:hover{
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+              
+        
+        }
+        .plus-button{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            .plus{
+                width: 66px;
+                height: 66px;
+                background-color: $color-Plus;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &:before{
+                    content: "";
+                    width: 50px;
+                    height: 2px;
+                    background-color: $color-White;
+                    position: absolute;
+                    top: 32px;
+                    left: 8px;
+                }
+                &:after{
+                    content: "";
+                    width: 2px;
+                    height: 50px;
+                    background-color: $color-White;
+                    position: absolute;
+                    top: 8px;
+                    left: 32px;
+                }
+            }
+        }
+        
+       
+    
+         
+        
     }
     
     
