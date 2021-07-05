@@ -16,6 +16,7 @@ nav {
 
 main {
   padding-left: 7.4vw;
+  overflow: hidden;
 }
 
 main .swiper .swiper-container {
@@ -345,9 +346,11 @@ main .we-story .float img:nth-child(1) {
 
 main .we-story .float img:nth-child(2) {
   position: absolute;
-  height: 800px;
-  top: 360px;
-  left: 85px;
+  height: 1100px;
+  top: 286px;
+  left: -35px;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
 }
 
 main .we-story .float .story-discript {
@@ -423,6 +426,130 @@ main .we-story .float .story-discript .content .main-body {
 }
 
 main .shoemaking {
+  height: 100vh;
+  background-color: #ebeae5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .shoemaking .shoes-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main .shoemaking .shoes-card .chose-shoes {
+  z-index: 2;
+}
+
+main .shoemaking .shoes-card .chose-shoes img {
+  width: 295px;
+  border-radius: 50%;
+  border: 5px solid #a3a091;
+}
+
+main .shoemaking .shoes-card .chose-shoes .text {
+  margin-top: 30px;
+}
+
+main .shoemaking .shoes-card .chose-shoes .text span:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444444;
+}
+
+main .shoemaking .shoes-card .chose-shoes .text span:nth-child(2) {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #444444;
+}
+
+main .shoemaking .shoes-card .shoes-introduction {
+  z-index: 2;
+}
+
+main .shoemaking .shoes-card .shoes-introduction img {
+  width: 295px;
+  border-radius: 50%;
+  border: 5px solid #a3a091;
+}
+
+main .shoemaking .shoes-card .shoes-introduction .text {
+  margin-top: 30px;
+}
+
+main .shoemaking .shoes-card .shoes-introduction .text span:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444444;
+}
+
+main .shoemaking .shoes-card .shoes-introduction .text span:nth-child(2) {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #444444;
+}
+
+main .shoemaking .shoes-card .shoemaking-story {
+  z-index: 2;
+}
+
+main .shoemaking .shoes-card .shoemaking-story img {
+  width: 295px;
+  border-radius: 50%;
+  border: 5px solid #a3a091;
+}
+
+main .shoemaking .shoes-card .shoemaking-story .text {
+  margin-top: 30px;
+}
+
+main .shoemaking .shoes-card .shoemaking-story .text span:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444444;
+}
+
+main .shoemaking .shoes-card .shoemaking-story .text span:nth-child(2) {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #444444;
+}
+
+main .shoemaking .see-more-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .shoemaking .see-more-button .see-more {
+  width: 277px;
+  height: 79px;
+  font-size: 24px;
+  color: #444444;
+  border-radius: 40px;
+  border: 2px solid #a0a0a0;
+}
+
+main .sew-img {
+  position: relative;
+}
+
+main .sew-img img {
+  height: 2000px;
+  position: absolute;
+  top: 0px;
+  right: -50px;
+}
+
+main .shoes-video {
   height: 100vh;
   background-color: #ebeae5;
 }

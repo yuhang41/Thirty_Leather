@@ -9,6 +9,7 @@ nav{
 }
 main{
     padding-left: 7.4vw;
+    overflow: hidden;
     // 輪播圖
     .swiper{
         .swiper-container {
@@ -286,9 +287,10 @@ main{
                 }
                 &:nth-child(2){
                     position: absolute;
-                    height: 800px;
-                    top: 360px;
-                    left: 85px;
+                    height: 1100px;
+                    top: 286px;
+                    left: -35px;
+                    transform: rotate(14deg);
                 }
                
             }
@@ -357,6 +359,72 @@ main{
     }
     // 製鞋
     .shoemaking{
+        height: 100vh;
+        background-color:$color-LightGray;
+        align-items: center;
+        // overflow: hidden;
+        .shoes-card{
+           display: flex; 
+           justify-content: space-between;
+           text-align: center;
+           margin-bottom: 50px;
+           @mixin shoes-card-contain {
+            z-index: 2;
+            img{
+                 width: 295px;
+                 border-radius: 50%;
+                 border: 5px solid $color-Border-Gary;
+            }
+            .text{
+                 margin-top: 30px;
+                span{
+                    &:nth-child(1){
+                         font-size: 24px;
+                         font-weight: bold;
+                         color: $color-IronGray;
+                    }
+                    &:nth-child(2){
+                         font-size: 14px;
+                         font-weight: lighter;
+                         color: $color-IronGray;
+                    } 
+                }
+            }
+        }
+           .chose-shoes{
+                @include shoes-card-contain();
+           }
+           .shoes-introduction{
+                @include shoes-card-contain();
+            }
+            .shoemaking-story{
+                @include shoes-card-contain();
+            }
+        }
+        .see-more-button{
+            width: 100%;
+            display: flex;
+            .see-more{
+                width: 277px;
+                height: 79px;
+                font-size: 24px;
+                color: $color-IronGray ;
+                border-radius: 40px;
+                border: 2px solid $color-MoreButton;
+            }
+        }        
+    }
+    .sew-img{
+        position: relative;
+        img{
+            height: 2000px;
+            position: absolute;
+            top: 0px;
+            right: -50px;
+        }
+    } 
+    //影片
+    .shoes-video{
         height: 100vh;
         background-color:$color-LightGray;
     }
