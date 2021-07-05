@@ -337,20 +337,80 @@ main .we-story .float {
   display: flex;
 }
 
-main .we-story .float img:nth-child(1) {
+main .we-story .float img {
   width: 974px;
   height: 588px;
   position: relative;
   z-index: 1;
 }
 
-main .we-story .float img:nth-child(2) {
+main .we-story .float svg {
   position: absolute;
   height: 1100px;
   top: 286px;
   left: -35px;
   -webkit-transform: rotate(14deg);
           transform: rotate(14deg);
+}
+
+main .we-story .float svg .scissors, main .we-story .float svg .scissors-mind {
+  fill-opacity: 0;
+  stroke: #abbac9;
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 4000;
+}
+
+main .we-story .float svg .scissors {
+  -webkit-animation: scissors 4s ease-in-out;
+          animation: scissors 4s ease-in-out;
+}
+
+@-webkit-keyframes scissors {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scissors {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+main .we-story .float svg .scissors-mind {
+  -webkit-animation: mind 4s ease-in-out;
+          animation: mind 4s ease-in-out;
+}
+
+@-webkit-keyframes mind {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mind {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 main .we-story .float .story-discript {

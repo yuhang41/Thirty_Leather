@@ -279,20 +279,56 @@ main{
 
             display: flex;
             img{
-                &:nth-child(1){
-                    width: 974px;
-                    height: 588px;
-                    position: relative; 
-                    z-index: 1;
+                width: 974px;
+                height: 588px;
+                position: relative; 
+                z-index: 1;             
+            }
+            svg{
+                position: absolute;
+                height: 800px;
+                top: 360px;
+                left: 85px;
+                .scissors,.scissors-mind{
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
                 }
-                &:nth-child(2){
-                    position: absolute;
-                    height: 1100px;
-                    top: 286px;
-                    left: -35px;
-                    transform: rotate(14deg);
+                .scissors{
+                    animation: scissors 4s ease-in-out;
                 }
-               
+                @keyframes scissors
+                {
+                    0%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    
+                    100%
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                .scissors-mind{
+                    animation: mind 4s ease-in-out;
+                }
+                @keyframes mind
+                {
+                    0%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    50%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    100%
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
             }
             .story-discript{
                 margin-left: 4vw;
