@@ -13,6 +13,8 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <!-- aos-css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
@@ -35,11 +37,11 @@
         </div>
         <!-- 聯絡客服 -->
         <div class="chatbot">
-            <div class="chat-icon d-flex">
+            <button class="more-button" aria-label="Menu Button">
                 <img src="img/chat-icon.png" alt="">
-            </div>
-            <div class="chatbox">
-                <div class="chat-option">
+              </button>
+            <ul class="more-button-list">
+                <li class="more-button-list-item">
                     <img src="img/emoji.png" alt="">
                     <div class="option">
                         <div class="more d-flex">
@@ -49,13 +51,13 @@
                             <div class="line"></div>
                         </div>
                     </div>
-                </div>
-                <div class="chat-discript">
+                </li>
+                <li class="more-button-list-item">
                     <p>與三十革手工真皮鞋客服聯絡</p>
                     <p>平均回覆時間 : 一小時內</p>
                     <p>線上客服時間 : 每週一至日下午14:00至晚間20:00</p>
-                </div>
-                <div class="chat-button">
+                </li>
+                <li class="more-button-list-item">
                     <div class="facebook-button">
                         <div class="facebook-icon">
                             <i class="fab fa-facebook-f"></i>
@@ -68,8 +70,8 @@
                         </div>
                         <p>到LINE與我們聯繫</p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
         <!-- 品牌理念 -->
         <div class="we-story">
@@ -125,14 +127,14 @@
                     </g>
                 </svg>
                 <div class="story-discript">
-                    <div class="subtitle">
+                    <div class="subtitle" data-aos="fade-up">
                         WE STORY .
                     </div>
-                    <div class="title">
+                    <div class="title" data-aos="fade-up">
                         分享自己喜歡的生活質感<br>
                         遇見眼光相似的妳(你)我.
                     </div>
-                    <div class="content">
+                    <div class="content" data-aos="fade-up">
                         <div class="preamble">
                             三十革 因鞋而生<br>
                             抱著分享好鞋的初衷<br>
@@ -155,21 +157,21 @@
         <div class="shoemaking d-flex">
             <div class="container mx-auto">
                 <div class="shoes-card">
-                    <div class="chose-shoes">
+                    <div class="chose-shoes" data-aos="fade-up" data-aos-duration="400">
                         <img src="https://dummyimage.com/400x400" alt="">
                         <div class="text">
                             <span>購鞋怎麼選</span><br>
                             <span>How to choose</span>
                         </div>
                     </div>
-                    <div class="shoes-introduction">
+                    <div class="shoes-introduction" data-aos="fade-up" data-aos-duration="800">
                         <img src="https://dummyimage.com/400x400" alt="">
                         <div class="text">
                             <span>系列鞋款介紹</span><br>
                             <span>Series Introduction</span>
                         </div>
                     </div>
-                    <div class="shoemaking-story">
+                    <div class="shoemaking-story" data-aos="fade-up" data-aos-duration="1200">
                         <img src="https://dummyimage.com/400x400" alt="">
                         <div class="text">
                             <span>製作過程</span><br>
@@ -299,58 +301,56 @@
 
         </div>
         <!-- 試穿資訊 -->
-        <div class="container">
-            <div class="studio-information row">
-                <div class="studio-photo col-md-5">
-                    <img src="/img/studio-photo.jpg">
+        <div class="studio-information d-flex">
+            <div class="studio-photo col-md-5">
+                <img src="/img/studio-photo.jpg">
+            </div>
+
+            <div class="col-md-9 mt-5">
+                <div class="col-md-12 d-flex">
+                    <div class="try-on-infor col-md-2">
+                        <ul class="list-unstyled">
+                            <li class="try-on">試穿</li>
+
+                            <li class="detail">Details</li>
+
+                            <li class="infor">資訊</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-head mt-1 col-md-3">
+                        <ul class="list-unstyled pl-4">
+                            <li>電話</li>
+
+                            <li class="mt-4">營業時間</li>
+
+                            <li class="mt-4">地址</li>
+
+                            <li class="mt-4">注意</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-text mt-1 col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="phone mt-0">02 - 27751930</li>
+
+                            <li class="business-time mt-4">週一至週六 1400 - 2000</li>
+
+                            <li>週日 1400 - 1800</li>
+
+                            <li class="address mt-2">臺北市大安區忠孝東路四段142號9樓</li>
+
+                            <li>出電梯左邊第3間904室(才是三十革工作室)</li>
+
+                            <li class="note mt-2">不是電梯對面第一間 x 不要走錯 x 不要買錯</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="try-on-infors col-md-6 mt-5">
-                    <div class="col-md-12 row mt-1">
-                        <div class="try-on-infor">
-                            <ul class="list-unstyled ml-3 mr-3">
-                                <li class="try-on">試穿</li>
-
-                                <li class="detail">Details</li>
-
-                                <li class="infor">資訊</li>
-                            </ul>
-                        </div>
-
-                        <div class="contact-head mt-1 col-md">
-                            <ul class="list-unstyled pl-4">
-                                <li>電話</li>
-
-                                <li class="mt-4">營業時間</li>
-
-                                <li class="mt-4">地址</li>
-
-                                <li class="mt-4">注意</li>
-                            </ul>
-                        </div>
-
-                        <div class="contact-text mt-1 pl-4 col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="phone mt-0">02 - 27751930</li>
-
-                                <li class="business-time mt-4">週一至週六 1400 - 2000</li>
-
-                                <li>週日 1400 - 1800</li>
-
-                                <li class="address mt-2">臺北市大安區忠孝東路四段142號9樓</li>
-
-                                <li>出電梯左邊第3間904室(才是三十革工作室)</li>
-
-                                <li class="note mt-2">不是電梯對面第一間 x 不要走錯 x 不要買錯</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="shop-map mt-4">
-                        <iframe
+                <div class="shop-map mt-4 " data-aos="fade-down">
+                    <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7867787660603!2d121.5472019150064!3d25.041309083968848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abda8f963d3f%3A0xce8d3baae8551e2b!2z5LiJ5Y2B6Z2p!5e0!3m2!1szh-TW!2stw!4v1625462398880!5m2!1szh-TW!2stw"
                         width="864" height="432" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
                 </div>
             </div>
         </div>
@@ -367,7 +367,10 @@
         crossorigin="anonymous"></script>
     <!-- swiper js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!-- aos-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/index.js"></script>
+    
 
 
 </body>

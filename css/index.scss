@@ -80,194 +80,244 @@ main {
     // 聯絡客服
     .chatbot {
         position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 3;
-
-        .chat-icon {
-            width: 50px;
-            height: 50px;
-
-            justify-content: center;
-            align-items: center;
-
-            background-color: $color-White;
-            border-radius: 50%;
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-            position: relative;
-            cursor: pointer;
-            img {
-                width: 30px;
-                height: 25px;
-            }
+        bottom: 36px;
+        right: 25px;
+        z-index: 5;
+        
+        &.active {
+          .more-button-list {
+             opacity: 1;
+             transform: scale(1);
+          }
+          
+          .more-button-list-item {
+            animation: fadeInItem .6s .2s forwards;
+            
+            &:nth-child(2) { animation-delay: .4s; }
+            &:nth-child(3) { animation-delay: .6s; }
+            &:nth-child(4) { animation-delay: .8s; }
+          }
+          
+          .more-button {
+            animation: onePulse 1s forwards linear;
+            animation-iteration-count:infinite;
+          }
         }
-        .chatbox {
-            width: 358px;
-            height: 338px;
-            background-color: $color-White;
-            border: 1px solid $color-Orange;
-            border-radius: 15px;
-            padding: 20px 20px;
-
+      }
+      
+    .more-button {
+    background-color: white;
+    box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    
+    
+    &-list {
+        background-color: $color-White;
+        border-radius: 8px;
+        list-style-type: none;
+        width: 358px;
+        height: 338px;
+        box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
+        padding: 20px 20px;
+        position: absolute;
+        right: 32px;
+        bottom: 21px;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition : all .3s ease .1s;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        li { opacity: 0; }
+    }
+    
+    &-list-item {
+        &:nth-child(1){
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
-            position: absolute;
-            bottom: 65px;
-            right: 35px;
-            display: none;
-            transition: 1s;
-            .chat-option {
+            img {
+                width: 46px;
+                height: 46px;
+            }
+            .option {
                 display: flex;
-                justify-content: space-between;
-
-                img {
-                    width: 46px;
-                    height: 46px;
-                }
-                .option {
-                    display: flex;
-                    .more {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-Gray;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                        cursor: pointer;
-
-                        justify-content: center;
-                        align-items: center;
-
-                        .dot {
+                .more {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    cursor: pointer;
+    
+                    justify-content: center;
+                    align-items: center;
+    
+                    .dot {
+                        width: 3px;
+                        height: 3px;
+                        background-color: $color-DeepGray;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 0px;
+                            left: -5px;
+                            content: "";
                             width: 3px;
                             height: 3px;
                             background-color: $color-DeepGray;
-                            position: relative;
-                            &::before {
-                                position: absolute;
-                                top: 0px;
-                                left: -5px;
-                                content: "";
-                                width: 3px;
-                                height: 3px;
-                                background-color: $color-DeepGray;
-                            }
-                            &::after {
-                                position: absolute;
-                                top: 0px;
-                                left: 5px;
-                                content: "";
-                                width: 3px;
-                                height: 3px;
-                                background-color: $color-DeepGray;
-                            }
                         }
-                    }
-                    .close {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-Gray;
-                        border-radius: 50%;
-                        opacity: unset;
-                        cursor: pointer;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .line {
-                            width: 13px;
-                            height: 2px;
+                        &::after {
+                            position: absolute;
+                            top: 0px;
+                            left: 5px;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
                             background-color: $color-DeepGray;
                         }
                     }
                 }
-            }
-            .chat-discript {
-                p {
-                    margin: 0px;
-                    &:nth-child(1) {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                    }
-                    &:nth-child(2) {
-                        font-size: $H10-font-size;
-                        color: $color-MiddleGray;
-                        margin-bottom: 18px;
-                    }
-                    &:nth-child(3) {
-                        font-size: $H10-font-size;
-                        font-weight: 500;
-                    }
-                }
-            }
-            .chat-button {
-                .facebook-button {
-                    width: 318px;
-                    height: 52px;
-                    background-color: $color-Blue;
-                    border-radius: 10px;
-
+                .close {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    opacity: unset;
+                    cursor: pointer;
+    
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 10px;
-                    cursor: pointer;
-                    .facebook-icon {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-White;
-                        border-radius: 50%;
-                        text-align: center;
-                        line-height: 35px;
-                        margin-right: 10px;
-                        i {
-                            font-size: 22px;
-                            color: $color-Blue;
-                        }
-                    }
-                    p {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                        color: $color-White;
-                        margin: 0px;
-                    }
-                }
-                .line-button {
-                    width: 318px;
-                    height: 52px;
-                    background-color: $color-Green;
-                    border-radius: 10px;
-                    padding: 0px 31px;
-                    cursor: pointer;
-
-                    display: flex;
-                    align-items: center;
-                    .line-icon {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-White;
-                        border-radius: 50%;
-                        text-align: center;
-                        line-height: 28px;
-                        margin-right: 45px;
-                        span {
-                            font-size: 13px;
-                            color: $color-Green;
-                        }
-                    }
-                    p {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                        color: $color-White;
-                        margin: 0px;
+                    .line {
+                        width: 13px;
+                        height: 2px;
+                        background-color: $color-DeepGray;
                     }
                 }
             }
         }
+        &:nth-child(2){
+            p {
+                margin: 0px;
+                &:nth-child(1) {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                }
+                &:nth-child(2) {
+                    font-size: $H10-font-size;
+                    color: $color-MiddleGray;
+                    margin-bottom: 18px;
+                }
+                &:nth-child(3) {
+                    font-size: $H10-font-size;
+                    font-weight: 500;
+                }
+            }
+        }
+        &:nth-child(3){
+            .facebook-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Blue;
+                border-radius: 10px;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+                .facebook-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-right: 10px;
+                    i {
+                        font-size: 22px;
+                        color: $color-Blue;
+                    }
+                }
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+            .line-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Green;
+                border-radius: 10px;
+                padding: 0px 31px;
+                cursor: pointer;
+    
+                display: flex;
+                align-items: center;
+                .line-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 28px;
+                    margin-right: 45px;
+                    span {
+                        font-size: 13px;
+                        color: $color-Green;
+                    }
+                }
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+    }
+    
+    @keyframes onePulse {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(150, 249, 183,0.3);
+    }
+    
+    50% {
+        box-shadow: 0px 0px 0px 12px rgba(150, 249, 183,0.1);
+    }
+    
+    100% {
+        box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    }
+    }
+    
+    @keyframes fadeInItem {
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
     }
     // 品牌理念
     .we-story {
@@ -354,7 +404,7 @@ main {
                     position: relative;
                     &:before {
                         content: "";
-                        width: 100px;
+                        width: 0px;
                         height: 1px;
                         top: 20px;
                         left: -110px;
@@ -362,8 +412,13 @@ main {
                         position: absolute;
                         transform: rotate(33deg);
                         z-index: 0;
+                        animation: short-line-grow 1s linear forwards;
+                        animation-delay: 0.5s;
                     }
                 }
+                @keyframes short-line-grow{
+                    to {width:100px;}
+                  }
                 .content {
                     font-size: $H7-font-size;
                     color: $color-IronGray;
@@ -374,7 +429,7 @@ main {
                         position: relative;
                         &:after {
                             content: "";
-                            width: 300px;
+                            width: 0px;
                             height: 1px;
                             top: 171px;
                             left: 340px;
@@ -382,8 +437,13 @@ main {
                             position: absolute;
                             transform: rotate(33deg);
                             z-index: 0;
+                            animation: long-line-grow 1s linear forwards;
+                            animation-delay: 1.5s;
                         }
                     }
+                    @keyframes long-line-grow{
+                        to {width:300px;}
+                      }
                     .main-body {
                         margin-bottom: 30px;
                     }
@@ -401,7 +461,7 @@ main {
             display: flex;
             justify-content: space-around;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
             @mixin shoes-card-contain {
                 z-index: 2;
                 img {
@@ -440,13 +500,14 @@ main {
             width: 100%;
             display: flex;
             justify-content: center;
+            margin-bottom: 234px;
             button {
                 width: 277px;
                 height: 79px;
                 font-size: $H5-font-size;
                 color: $color-IronGray;
                 border-radius: 35px;
-                background-color: $color-LightGray;
+                background-color: unset;
                 border: 2px solid $color-MoreButton;
                 z-index: 1;
                 &:hover {
@@ -487,10 +548,10 @@ main {
                     z-index: 2;
                 }
                 &:nth-child(2) {
-                    height: 825px;
+                    height: 820px;
                     position: absolute;
-                    top: 117px;
-                    left: -9vw;
+                    top: 125px;
+                    left: -8vw;
                     transform: rotate(-7deg);
                 }
                 &:nth-child(3) {
@@ -508,7 +569,7 @@ main {
             content: "";
             position: absolute;
             width: 1px;
-            height: 88vh;
+            height: 969px;
             bottom: 0px;
             left: 190px;
             background-color: $color-Background-line;
@@ -593,9 +654,9 @@ main {
                 width: 235px;
                 height: 50px;
                 color: $color-IronGray;
+                background-color: unset;
                 border: 2px solid $color-MoreButton;
                 border-radius: 45px;
-                background-color: $color-White-opacity;
                 margin: 30px 0px 10px 0px;
             }
         }
@@ -639,7 +700,7 @@ main {
                     height: 79px;
                     font-size: $H5-font-size;
                     color: $color-IronGray;
-                    background-color:  $color-White-opacity;
+                    background-color: unset;
                     border: 2px solid $color-MoreButton;
                     border-radius: 35px;
                     z-index: 2;
@@ -671,7 +732,7 @@ main {
             content: "";
             position: absolute;
             width: 1px;
-            height: 100vh;
+            height: 1078px;
             top: 0px;
             left: 190px;
             background-color: $color-Background-line;
@@ -793,7 +854,6 @@ main {
     }
     // 試穿資訊
     .studio-information {
-        height: 100vh;
         font-family: $font-Family-A;
 
         .studio-photo {
@@ -804,68 +864,61 @@ main {
             }
         }
 
-        .try-on-infors {
-            width: 100%;
-            height: 100%;
-            .try-on-infor {
-                position: relative;
-                
-    
-                .try-on {
-                    font-size: $H1-font-size;
-                    height: 72px;
-                    margin-bottom: 12px;
-                }
-    
-                .detail {
-                    font-size: $H6-font-size;
-                    letter-spacing: $font-letter-space-100;
-                    position: absolute;
-                    top: 65px;
-                    left: 42px;
-                }
-    
-                .infor {
-                    font-size: $H1-font-size;
-                }
-            }
-    
-            .contact-head {
-                ul {
-                    width: 140px;
-                    font-size: $H5-font-size;
-                    font-weight: bold;
-                    letter-spacing: $font-letter-space-100;
-                    border-left: 1px solid $color-Apricot;
-                }
-            }
-    
-            .contact-text {
-                ul {
-                    width: 344px;
-                    font-size: $H7-font-size;
-    
-                    .phone {
-                        padding-top: 3px;
-                    }
-    
-                    .business-time {
-                        padding-top: 11px;
-                    }
-    
-                    .address {
-                        padding-top: 7px;
-                    }
-    
-                    .note {
-                        padding-top: 6px;
-                    }
-                }
+        .try-on-infor {
+            position: relative;
+
+            .try-on {
+                font-size: $H1-font-size;
+                height: 72px;
+                margin-bottom: 12px;
             }
 
-            .shop-map {
-                border-left: 18px solid $color-Apricot;
+            .detail {
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;
+                position: absolute;
+                top: 65px;
+                left: 36px;
             }
+
+            .infor {
+                font-size: $H1-font-size;
+            }
+        }
+
+        .contact-head {
+            ul {
+                font-size: $H5-font-size;
+                font-weight: bold;
+                letter-spacing: $font-letter-space-100;
+                border-left: 1px solid $color-Apricot;
+            }
+        }
+
+        .contact-text {
+            ul {
+                font-size: $H7-font-size;
+
+                .phone {
+                    padding-top: 3px;
+                }
+
+                .business-time {
+                    padding-top: 11px;
+                }
+
+                .address {
+                    padding-top: 7px;
+                }
+
+                .note {
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        .shop-map {
+            border-left: 18px solid $color-Apricot;
         }
     }
 }

@@ -104,8 +104,22 @@ nav .options .input-cart .search label {
 nav .options .input-cart input {
   border: none;
   border-bottom: 1px solid #8090a0;
-  width: 147px;
+  width: 0px;
   padding: 0px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+nav .options .input-cart input:hover {
+  width: 147px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+nav .options .input-cart input:focus {
+  outline: none;
 }
 
 nav .options .input-cart input::-webkit-input-placeholder {

@@ -1,18 +1,10 @@
+AOS.init({
+  duration: 1200,
+})
+
 //聯絡客服的顯示
-let chat_button = document.querySelector('.chat-icon');
-let close_btn = document.querySelector('.close');
-let chatbox = document.querySelector('.chatbox');   
-chat_button.addEventListener('click',function(){
-    if(chatbox.style.display=="none"){
-        chatbox.style.display="flex";
-    }else{
-        chatbox.style.display="none";
-    }    
-});
-close_btn.addEventListener('click',function(){
-    if(chatbox.style.display=="flex"){
-        chatbox.style.display="none";
-    }
+document.querySelector('.more-button').addEventListener('click', function () {
+    document.querySelector('.chatbot').classList.toggle('active');
 });
 
 

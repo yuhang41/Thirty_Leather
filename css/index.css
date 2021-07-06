@@ -91,40 +91,89 @@ main .swiper1 .swiper-slide {
 
 main .chatbot {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 3;
+  bottom: 36px;
+  right: 25px;
+  z-index: 5;
 }
 
-main .chatbot .chat-icon {
+main .chatbot.active .more-button-list {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main .chatbot.active .more-button-list-item {
+  -webkit-animation: fadeInItem .6s .2s forwards;
+          animation: fadeInItem .6s .2s forwards;
+}
+
+main .chatbot.active .more-button-list-item:nth-child(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+main .chatbot.active .more-button-list-item:nth-child(3) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+main .chatbot.active .more-button-list-item:nth-child(4) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+main .chatbot.active .more-button {
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+main .more-button {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+          box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffffff;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
   position: relative;
-  cursor: pointer;
+  z-index: 2;
 }
 
-main .chatbot .chat-icon img {
-  width: 30px;
-  height: 25px;
-}
-
-main .chatbot .chatbox {
+main .more-button-list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  list-style-type: none;
   width: 358px;
   height: 338px;
-  background-color: #ffffff;
-  border: 1px solid #e28749;
-  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
+          box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
   padding: 20px 20px;
+  position: absolute;
+  right: 32px;
+  bottom: 21px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: all .3s ease .1s;
+  transition: all .3s ease .1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,35 +184,37 @@ main .chatbot .chatbox {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  bottom: 65px;
-  right: 35px;
-  display: none;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
-main .chatbot .chatbox .chat-option {
+main .more-button-list li {
+  opacity: 0;
+}
+
+main .more-button-list-item:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-main .chatbot .chatbox .chat-option img {
+main .more-button-list-item:nth-child(1) img {
   width: 46px;
   height: 46px;
 }
 
-main .chatbot .chatbox .chat-option .option {
+main .more-button-list-item:nth-child(1) .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .chatbot .chatbox .chat-option .option .more {
+main .more-button-list-item:nth-child(1) .option .more {
   width: 30px;
   height: 30px;
   background-color: #c6c6c6;
@@ -178,14 +229,14 @@ main .chatbot .chatbox .chat-option .option .more {
           align-items: center;
 }
 
-main .chatbot .chatbox .chat-option .option .more .dot {
+main .more-button-list-item:nth-child(1) .option .more .dot {
   width: 3px;
   height: 3px;
   background-color: #4c4c4c;
   position: relative;
 }
 
-main .chatbot .chatbox .chat-option .option .more .dot::before {
+main .more-button-list-item:nth-child(1) .option .more .dot::before {
   position: absolute;
   top: 0px;
   left: -5px;
@@ -195,7 +246,7 @@ main .chatbot .chatbox .chat-option .option .more .dot::before {
   background-color: #4c4c4c;
 }
 
-main .chatbot .chatbox .chat-option .option .more .dot::after {
+main .more-button-list-item:nth-child(1) .option .more .dot::after {
   position: absolute;
   top: 0px;
   left: 5px;
@@ -205,7 +256,7 @@ main .chatbot .chatbox .chat-option .option .more .dot::after {
   background-color: #4c4c4c;
 }
 
-main .chatbot .chatbox .chat-option .option .close {
+main .more-button-list-item:nth-child(1) .option .close {
   width: 30px;
   height: 30px;
   background-color: #c6c6c6;
@@ -223,34 +274,34 @@ main .chatbot .chatbox .chat-option .option .close {
           align-items: center;
 }
 
-main .chatbot .chatbox .chat-option .option .close .line {
+main .more-button-list-item:nth-child(1) .option .close .line {
   width: 13px;
   height: 2px;
   background-color: #4c4c4c;
 }
 
-main .chatbot .chatbox .chat-discript p {
+main .more-button-list-item:nth-child(2) p {
   margin: 0px;
 }
 
-main .chatbot .chatbox .chat-discript p:nth-child(1) {
+main .more-button-list-item:nth-child(2) p:nth-child(1) {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.8px;
 }
 
-main .chatbot .chatbox .chat-discript p:nth-child(2) {
+main .more-button-list-item:nth-child(2) p:nth-child(2) {
   font-size: 14px;
   color: #6d6d6d;
   margin-bottom: 18px;
 }
 
-main .chatbot .chatbox .chat-discript p:nth-child(3) {
+main .more-button-list-item:nth-child(2) p:nth-child(3) {
   font-size: 14px;
   font-weight: 500;
 }
 
-main .chatbot .chatbox .chat-button .facebook-button {
+main .more-button-list-item:nth-child(3) .facebook-button {
   width: 318px;
   height: 52px;
   background-color: #4762a5;
@@ -268,7 +319,7 @@ main .chatbot .chatbox .chat-button .facebook-button {
   cursor: pointer;
 }
 
-main .chatbot .chatbox .chat-button .facebook-button .facebook-icon {
+main .more-button-list-item:nth-child(3) .facebook-button .facebook-icon {
   width: 30px;
   height: 30px;
   background-color: #ffffff;
@@ -278,12 +329,12 @@ main .chatbot .chatbox .chat-button .facebook-button .facebook-icon {
   margin-right: 10px;
 }
 
-main .chatbot .chatbox .chat-button .facebook-button .facebook-icon i {
+main .more-button-list-item:nth-child(3) .facebook-button .facebook-icon i {
   font-size: 22px;
   color: #4762a5;
 }
 
-main .chatbot .chatbox .chat-button .facebook-button p {
+main .more-button-list-item:nth-child(3) .facebook-button p {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.8px;
@@ -291,7 +342,7 @@ main .chatbot .chatbox .chat-button .facebook-button p {
   margin: 0px;
 }
 
-main .chatbot .chatbox .chat-button .line-button {
+main .more-button-list-item:nth-child(3) .line-button {
   width: 318px;
   height: 52px;
   background-color: #69ce3a;
@@ -306,7 +357,7 @@ main .chatbot .chatbox .chat-button .line-button {
           align-items: center;
 }
 
-main .chatbot .chatbox .chat-button .line-button .line-icon {
+main .more-button-list-item:nth-child(3) .line-button .line-icon {
   width: 30px;
   height: 30px;
   background-color: #ffffff;
@@ -316,17 +367,63 @@ main .chatbot .chatbox .chat-button .line-button .line-icon {
   margin-right: 45px;
 }
 
-main .chatbot .chatbox .chat-button .line-button .line-icon span {
+main .more-button-list-item:nth-child(3) .line-button .line-icon span {
   font-size: 13px;
   color: #69ce3a;
 }
 
-main .chatbot .chatbox .chat-button .line-button p {
+main .more-button-list-item:nth-child(3) .line-button p {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.8px;
   color: #ffffff;
   margin: 0px;
+}
+
+@-webkit-keyframes onePulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
+            box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
+            box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+  }
+}
+
+@keyframes onePulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
+            box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
+            box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+  }
+}
+
+@-webkit-keyframes fadeInItem {
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItem {
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
 }
 
 main .we-story {
@@ -453,7 +550,7 @@ main .we-story .story-content .story-discript .title {
 
 main .we-story .story-content .story-discript .title:before {
   content: "";
-  width: 100px;
+  width: 0px;
   height: 1px;
   top: 20px;
   left: -110px;
@@ -462,6 +559,22 @@ main .we-story .story-content .story-discript .title:before {
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
   z-index: 0;
+  -webkit-animation: short-line-grow 1s linear forwards;
+          animation: short-line-grow 1s linear forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes short-line-grow {
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes short-line-grow {
+  to {
+    width: 100px;
+  }
 }
 
 main .we-story .story-content .story-discript .content {
@@ -478,7 +591,7 @@ main .we-story .story-content .story-discript .content .preamble {
 
 main .we-story .story-content .story-discript .content .preamble:after {
   content: "";
-  width: 300px;
+  width: 0px;
   height: 1px;
   top: 171px;
   left: 340px;
@@ -487,6 +600,22 @@ main .we-story .story-content .story-discript .content .preamble:after {
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
   z-index: 0;
+  -webkit-animation: long-line-grow 1s linear forwards;
+          animation: long-line-grow 1s linear forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes long-line-grow {
+  to {
+    width: 300px;
+  }
+}
+
+@keyframes long-line-grow {
+  to {
+    width: 300px;
+  }
 }
 
 main .we-story .story-content .story-discript .content .main-body {
@@ -505,7 +634,7 @@ main .shoemaking .shoes-card {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 main .shoemaking .shoes-card .chose-shoes {
@@ -597,6 +726,7 @@ main .shoemaking .see-more-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 234px;
 }
 
 main .shoemaking .see-more-button button {
@@ -605,7 +735,7 @@ main .shoemaking .see-more-button button {
   font-size: 24px;
   color: #444444;
   border-radius: 35px;
-  background-color: #ebeae5;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   z-index: 1;
 }
@@ -654,10 +784,10 @@ main .shoes-video img:nth-child(1) {
 }
 
 main .shoes-video img:nth-child(2) {
-  height: 825px;
+  height: 820px;
   position: absolute;
-  top: 117px;
-  left: -9vw;
+  top: 125px;
+  left: -8vw;
   -webkit-transform: rotate(-7deg);
           transform: rotate(-7deg);
 }
@@ -677,7 +807,7 @@ main .new-product:after {
   content: "";
   position: absolute;
   width: 1px;
-  height: 88vh;
+  height: 969px;
   bottom: 0px;
   left: 190px;
   background-color: #abbac9;
@@ -805,9 +935,9 @@ main .new-product .container .product-item .product-first button {
   width: 235px;
   height: 50px;
   color: #444444;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   border-radius: 45px;
-  background-color: #ffffffcc;
   margin: 30px 0px 10px 0px;
 }
 
@@ -877,9 +1007,9 @@ main .new-product .container .product-item .product-second button {
   width: 235px;
   height: 50px;
   color: #444444;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   border-radius: 45px;
-  background-color: #ffffffcc;
   margin: 30px 0px 10px 0px;
 }
 
@@ -953,9 +1083,9 @@ main .new-product .container .product-item .product-third button {
   width: 235px;
   height: 50px;
   color: #444444;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   border-radius: 45px;
-  background-color: #ffffffcc;
   margin: 30px 0px 10px 0px;
 }
 
@@ -1029,9 +1159,9 @@ main .new-product .container .product-item .product-fourth button {
   width: 235px;
   height: 50px;
   color: #444444;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   border-radius: 45px;
-  background-color: #ffffffcc;
   margin: 30px 0px 10px 0px;
 }
 
@@ -1049,7 +1179,7 @@ main .new-product .container .see-more-button button {
   height: 79px;
   font-size: 24px;
   color: #444444;
-  background-color: #ffffffcc;
+  background-color: unset;
   border: 2px solid #a0a0a0;
   border-radius: 35px;
   z-index: 2;
@@ -1082,7 +1212,7 @@ main .photo-wall:after {
   content: "";
   position: absolute;
   width: 1px;
-  height: 100vh;
+  height: 1078px;
   top: 0px;
   left: 190px;
   background-color: #abbac9;
@@ -1236,7 +1366,6 @@ main .photo-wall .swiper2 .plus-button .plus:after {
 }
 
 main .studio-information {
-  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -1246,63 +1375,56 @@ main .studio-information .studio-photo img {
   border-left: 18px solid #f7a269;
 }
 
-main .studio-information .try-on-infors {
-  width: 100%;
-  height: 100%;
-}
-
-main .studio-information .try-on-infors .try-on-infor {
+main .studio-information .try-on-infor {
   position: relative;
 }
 
-main .studio-information .try-on-infors .try-on-infor .try-on {
+main .studio-information .try-on-infor .try-on {
   font-size: 56px;
   height: 72px;
   margin-bottom: 12px;
 }
 
-main .studio-information .try-on-infors .try-on-infor .detail {
+main .studio-information .try-on-infor .detail {
   font-size: 21px;
   letter-spacing: 1.6px;
   position: absolute;
   top: 65px;
-  left: 42px;
+  left: 36px;
 }
 
-main .studio-information .try-on-infors .try-on-infor .infor {
+main .studio-information .try-on-infor .infor {
   font-size: 56px;
 }
 
-main .studio-information .try-on-infors .contact-head ul {
-  width: 140px;
+main .studio-information .contact-head ul {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.6px;
   border-left: 1px solid #f7a269;
 }
 
-main .studio-information .try-on-infors .contact-text ul {
-  width: 344px;
+main .studio-information .contact-text ul {
   font-size: 18px;
 }
 
-main .studio-information .try-on-infors .contact-text ul .phone {
+main .studio-information .contact-text ul .phone {
   padding-top: 3px;
 }
 
-main .studio-information .try-on-infors .contact-text ul .business-time {
+main .studio-information .contact-text ul .business-time {
   padding-top: 11px;
 }
 
-main .studio-information .try-on-infors .contact-text ul .address {
+main .studio-information .contact-text ul .address {
   padding-top: 7px;
 }
 
-main .studio-information .try-on-infors .contact-text ul .note {
+main .studio-information .contact-text ul .note {
   padding-top: 6px;
 }
 
-main .studio-information .try-on-infors .shop-map {
+main .studio-information .shop-map {
   border-left: 18px solid #f7a269;
 }
 /*# sourceMappingURL=index.css.map */
