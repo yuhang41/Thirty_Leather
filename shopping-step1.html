@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="./css/shopping-step1.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/30leather_logo.svg" alt="">
+        </div>
+        <div class="options d-flex">
+            <div class="option">
+                <ul class="d-flex">
+                    <li><a href="">所有商品</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">女鞋</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">小白鞋</a>
+                          <a class="dropdown-item" href="#">紳士鞋</a>
+                          <a class="dropdown-item" href="#">休閒鞋</a>
+                          <a class="dropdown-item" href="#">平底鞋</a>
+                          <a class="dropdown-item" href="#">跟鞋</a>
+                          <a class="dropdown-item" href="#">涼鞋</a>
+                          <a class="dropdown-item" href="#">娃娃鞋</a>
+                          <a class="dropdown-item" href="#">靴款</a>
+                          <a class="dropdown-item" href="#">防水系列</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">訂製雪靴</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">迷你筒(16cm-18cm)</a>
+                          <a class="dropdown-item" href="#">低筒(22cm-24cm)</a>
+                          <a class="dropdown-item" href="#">中筒(26cm-28cm)</a>
+                          <a class="dropdown-item" href="#">高筒(30cm-33cm)</a>
+                        </div>
+                    </li>
+                    <li><a href="">配件</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">製鞋文章</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                          <a class="dropdown-item" href="#">系列鞋款介紹</a>
+                          <a class="dropdown-item" href="#">製成故事</a>
+                        </div>
+                    </li>
+                    <li ><a href="">試穿服務</a></li>
+                    <li class="nav-item dropdown more-option">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">更多</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">試穿服務</a>
+                          <a class="dropdown-item" href="#">製鞋文章</a>
+                          <a class="dropdown-item" href="#">配件</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-cart d-flex">
+                <form class="search d-flex my-2 my-lg-0">
+                    <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="尋找商品...">
+                    <label for="search-input"><i class="fas fa-search mr-2"></i></label>
+                </form>
+                <i class="fas fa-user m-2"></i>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart m-2"></i>
+                    <div class="cart-number">1</div>
+                </div>
+            </div>            
+        </div>
+        <div class="twd-lang d-flex">
+            <div class="twd dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TWD</a>
+                    <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+            <div class="lang dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">繁體中文</a>
+                    <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container my-container">
+            <div class="steps">
+                <div class="step">
+                    <div class="step-content">
+                        <div class="text">
+                            <p>01</p>
+                            <div class="text-content">
+                                <p>確認清單 & 選擇付款方式</p>
+                                <p>Cart & Check out</p>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="step-right-line"></div>
+                </div>
+                <div class="step">
+                    <div class="step-left-line"></div>
+                    <div class="step-content">
+                        <div class="text">
+                            <p>02</p>
+                            <div class="text-content">
+                                <p>填寫訂購資料</p>
+                                <p>Shipping & Billing info</p>
+                            </div>                              
+                        </div>                        
+                    </div>
+                    <div class="step-right-line"></div>
+                </div>
+                <div class="step">
+                    <div class="step-left-line"></div>
+                    <div class="step-content">
+                        <div class="text">
+                            <p>03</p>
+                            <div class="text-content">
+                                <p>確認清單 & 選擇付款方式</p>
+                                <p>Order cmopleted</p>    
+                            </div>                            
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+            <div class="shopping-container">
+                <div class="shopping-order">
+                    <div class="order-title">
+                        <ul>
+                            <li class="title">商品圖</li>
+                            <li class="title">商品資訊</li>
+                            <li class="title">價格</li>
+                            <li class="title">數量</li>
+                            <li class="title">小計</li>
+                            <li class="title">刪除</li>
+                            <li class="title">放入追蹤清單</li>
+                        </ul>
+                    </div>
+                    <div class="shopping-cart">
+                        <ul>
+                            <li class="order-cart img">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </li>
+                            <li class="order-cart content">
+                                <div class="cart-content">
+                                    <div class="cart-title">
+                                        <p>{牽手一起長大}</p>
+                                        <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                    </div>
+                                    <div class="cart-text">
+                                        <p>干邑白蘭地</p>
+                                        22cm
+                                    </div>
+                                </div>                            
+                            </li>
+                            <li class="order-cart price">
+                                <div class="discount">
+                                    <p>$2480</p>
+                                    <p>$4280</p>
+                                </div>
+                            </li>
+                            <li class="order-cart count">
+                                <div class="less">-</div>
+                                <input type="number" min="1" max="1000" step="1" name="">
+                                <div class="plus">+</div>
+                            </li>
+                            <li class="order-cart subtotal"><p>$2480</p></li>
+                            <li class="order-cart delete-cart">
+                                <form action="" method="" class="delete">
+                                    <div class="delete-button"><i class="fas fa-times"></i></div>
+                                </form>
+                            </li>                        
+                            <li class="order-cart favorite">
+                                <i class="fas fa-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shopping-cart">
+                        <ul>
+                            <li class="order-cart img">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </li>
+                            <li class="order-cart content">
+                                <div class="cart-content">
+                                    <div class="cart-title">
+                                        <p>{牽手一起長大}</p>
+                                        <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                    </div>
+                                    <div class="cart-text">
+                                        <p>干邑白蘭地</p>
+                                        22cm
+                                    </div>
+                                </div>                            
+                            </li>
+                            <li class="order-cart price">
+                                <div class="discount">
+                                    <p>$2480</p>
+                                    <p>$4280</p>
+                                </div>
+                            </li>
+                            <li class="order-cart count">
+                                <div class="less">-</div>
+                                <input type="number" min="1" max="1000" step="1" name="">
+                                <div class="plus">+</div>
+                            </li>
+                            <li class="order-cart subtotal"><p>$2480</p></li>
+                            <li class="order-cart delete-cart">
+                                <form action="" method="" class="delete">
+                                    <div class="delete-button"><i class="fas fa-times"></i></div>
+                                </form>
+                            </li>                        
+                            <li class="order-cart favorite">
+                                <i class="fas fa-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shopping-cart">
+                        <ul>
+                            <li class="order-cart img">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </li>
+                            <li class="order-cart content">
+                                <div class="cart-content">
+                                    <div class="cart-title">
+                                        <p>{牽手一起長大}</p>
+                                        <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                    </div>
+                                    <div class="cart-text">
+                                        <p>干邑白蘭地</p>
+                                        22cm
+                                    </div>
+                                </div>                            
+                            </li>
+                            <li class="order-cart price">
+                                <div class="discount">
+                                    <p>$2480</p>
+                                    <p>$4280</p>
+                                </div>
+                            </li>
+                            <li class="order-cart count">
+                                <div class="less">-</div>
+                                <input type="number" min="1" max="1000" step="1" name="">
+                                <div class="plus">+</div>
+                            </li>
+                            <li class="order-cart subtotal"><p>$2480</p></li>
+                            <li class="order-cart delete-cart">
+                                <form action="" method="" class="delete">
+                                    <div class="delete-button"><i class="fas fa-times"></i></div>
+                                </form>
+                            </li>                        
+                            <li class="order-cart favorite">
+                                <i class="fas fa-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-shipping">
+                    <h3>付款方式 & 配送方式</h3>
+                    <div class="shipping">
+                        <div class="shipping-select county">
+                            <h5>配送區域</h5>
+                            <select name="">
+                                <option value="">台灣及離島</option>
+                            </select>
+                        </div>
+                        <div class="shipping-select payment">
+                            <h5>付款方式</h5>
+                            <select name="">
+                                <option value="">信用卡線上刷卡</option>
+                            </select>
+                        </div>
+                        <div class="shipping-select transport">
+                            <h5>送貨方式</h5>
+                            <select name="">
+                                <option value="">7-11超商取貨付款</option>
+                            </select>
+                        </div>
+                        <div class="business">
+                            尚未選擇門市
+                        </div>
+                        <div class="choose">
+                            <button class="choose-button">選擇門市</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="other-amount">
+                <div class="other-discount">
+                    <div class="other-tital">
+                        <p>+</p>以優惠價加購商品
+                    </div>
+                    <div class="other-card">
+                        <div class="commodity">
+                            <div class="photo">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </div>
+                            <div class="commodity-content">
+                                <div class="title">
+                                    {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
+                                </div>                            
+                                <div class="content-buttone">
+                                    <p>$180</p>
+                                    <button class="push-cart">加入購物車</button>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="commodity">
+                            <div class="photo">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </div>
+                            <div class="commodity-content">
+                                <div class="title">
+                                    {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
+                                </div>                            
+                                <div class="content-buttone">
+                                    <p>$180</p>
+                                    <button class="push-cart">加入購物車</button>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="commodity">
+                            <div class="photo">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </div>
+                            <div class="commodity-content">
+                                <div class="title">
+                                    {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
+                                </div>                            
+                                <div class="content-buttone">
+                                    <p>$180</p>
+                                    <button class="push-cart">加入購物車</button>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="commodity">
+                            <div class="photo">
+                                <img src="https://placeholder.pics/svg/100x100">
+                            </div>
+                            <div class="commodity-content">
+                                <div class="title">
+                                    {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
+                                </div>                            
+                                <div class="content-buttone">
+                                    <p>$180</p>
+                                    <button class="push-cart">加入購物車</button>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="amount">
+                    <div class="free-ship">
+                        <p>免運費</p>
+                        只差$xxx可享滿$1000免運
+                    </div>
+                    <div class="total">                        
+                        <div class="price-total">
+                            <p>小計</p>
+                            <p class="subtotal-total">$9920</p>
+                        </div>
+                        <div class="price-total">
+                            <p>運費</p>
+                            <p class="shipping-total">$0</p>
+                        </div>
+                        <div class="order-total-button">
+                            <div class="order-total">
+                                <p>總額</p>
+                                <p class="order-total-price">$9920</p>
+                            </div>
+                            <button type="submit" class="next-button">前往結帳<i class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
+                    </div>                    
+                </div>
+            </div> 
+        </div>
+    </main>
+    <footer>
+        <div class="site-footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="./img/30leather_logo.svg">
+                </div>
+
+                <hr>
+
+                <div class="col-md-12">
+                    <ul class="social-icons mb-0 row list-unstyled justify-content-center">
+                        <li><a class="line d-inline-block" href=""></a></li>
+
+                        <li><a class="facebook d-inline-block" href="https://www.facebook.com/30leather" target="_blank"></a></li>
+
+                        <li><a class="instagram d-inline-block" href="https://www.instagram.com/30leather/" target="_blank"></a></li>
+                    </ul>
+
+                    <div class="return-nav d-flex justify-content-end">
+                        <a href=""><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
+                                <div class="footer-arrow-text">TOP</div>
+                            </i></a>
+                    </div>
+
+                    <div class="common-problems row col-lg-12 col-md-3 col-sm-4 col-5">
+                        <ul class="row m-auto list-unstyled">
+                            <li class="list common-problem">常見問題</li>
+
+                            <li><a href="#" class="lists"></a>售前與售後服務</li>
+
+                            <li><a href="#" class="lists"></a>付款方式</li>
+
+                            <li><a href="#" class="lists"></a>寄送方式</li>
+
+                            <li><a href="#" class="lists"></a>退款流程</li>
+
+                            <li><a href="#" class="lists"></a>發票折讓</li>
+
+                            <li class="list"><a href="#" class="lists"></a>隱私權保護</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="copyright-space d-inline-block"></div>
+
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy; 三十革-臺灣手工鞋 All
+                Rights Reserved</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
