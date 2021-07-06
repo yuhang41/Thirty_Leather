@@ -15,7 +15,7 @@ main {
     padding-left: 7.4vw;
     overflow: hidden;
     // 輪播圖
-    .swiper {
+    .swiper1 {
         .swiper-container {
             width: 100%;
             height: 100%;
@@ -271,26 +271,27 @@ main {
     }
     // 品牌理念
     .we-story {
-        height: 100vh;
+        min-height: 969px;
         background-color: $color-LightGray;
-        position: relative;
-        .float {
-            position: absolute;
-            top: 100px;
-            left: -8vw;
-
+        padding: 100px 0px 0px 0px;
+        .story-content{
             display: flex;
+            position: relative;
+            
             img {
-                max-width: 53.32%;
-                max-height: 54.5%;
-                position: relative;
+                position: absolute;
+                left: -8vw;
+                width: 974px;
+                height: 588px;
+                
                 z-index: 1;
             }
             svg {
                 position: absolute;
                 height: 800px;
-                top: 360px;
-                left: 85px;
+                top: 305px;
+                left: -2px;
+                transform: rotate(-1deg);
                 .scissors,
                 .scissors-mind {
                     fill-opacity: 0;
@@ -327,7 +328,7 @@ main {
                 }
             }
             .story-discript {
-                margin-left: 4vw;
+                margin-left: 900px;
                 .subtitle {
                     font-size: $H10-font-size;
                     font-weight:normal;
@@ -388,15 +389,17 @@ main {
                     }
                 }
             }
+        
         }
+          
     }
     // 製鞋 card
     .shoemaking {
-        height: 100vh;
+        min-height: 969px;
         background-color: $color-LightGray;
         .shoes-card {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             text-align: center;
             margin-bottom: 50px;
             @mixin shoes-card-contain {
@@ -443,6 +446,7 @@ main {
                 font-size: $H5-font-size;
                 color: $color-IronGray;
                 border-radius: 35px;
+                background-color: $color-LightGray;
                 border: 2px solid $color-MoreButton;
                 z-index: 1;
                 &:hover {
@@ -453,23 +457,26 @@ main {
                 }
             }
         }
-    }
-    //縫線的 svg
-    .sew-img {
-        position: relative;
-        img {
-            height: 1780px;
-            position: absolute;
-            top: -760px;
-            right: -80px;
+        //縫線的 svg
+        .sew-img {
+            position: relative;
+            img {
+                height: 1597px;
+                position: absolute;
+                top: 325px;
+                right: -20px;
+                z-index: 2;
+            }
         }
     }
     //影片
     .shoes-video {
-        height: 100vh;
+        min-height: 969px;
         background-color: $color-LightGray;
-        .float {
-            position: relative;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
             img {
                 &:nth-child(1) {
                     max-width: 66.4%;
@@ -480,54 +487,53 @@ main {
                     z-index: 2;
                 }
                 &:nth-child(2) {
-                    height: 800px;
+                    height: 825px;
                     position: absolute;
-                    top: 180px;
-                    left: -10vw;
+                    top: 117px;
+                    left: -9vw;
+                    transform: rotate(-7deg);
                 }
                 &:nth-child(3) {
-                    max-width: 32.38%;
-                    position: absolute;
-                    top: 250px;
-                    right: 0px;
+                    height: 707px;
                     border-left: 18px solid $color-Apricot;
+                    z-index: 3;
                 }
             }
-        }
     }
     //新品上市
     .new-product {
-        height: 100vh;
         background-color: $color-LightGray;
         position: relative;
-        display: flex;
-        align-items: center;
         &:after {
             content: "";
             position: absolute;
             width: 1px;
-            height: 100vh;
-            top: 0px;
+            height: 88vh;
+            bottom: 0px;
             left: 190px;
             background-color: $color-Background-line;
         }
         .product-title {
-            position: absolute;
-            top: -100px;
-            left: 100px;
-            text-align: center;
-            span {
-                &:nth-child(1) {
-                    font-size: $H2-font-size;
-                    font-weight: bold;
-                    color: $color-IronGray;
-                }
-                &:nth-child(2) {
-                    font-size: $H5-font-size;
-                    font-weight: lighter;
-                    color: $color-IronGray;
+            padding-left:95px ;
+            text-align:justify;
+            display: flex;
+            .text{
+                width: 192px;
+                text-align: center;
+                span {
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        color: $color-IronGray;
+                    }
+                    &:nth-child(2) {
+                        font-size: $H5-font-size;
+                        font-weight: lighter;
+                        color: $color-IronGray;                    
+                    }
                 }
             }
+            
         }
         @mixin shoes-content {
             width: 275px;
@@ -593,64 +599,72 @@ main {
                 margin: 30px 0px 10px 0px;
             }
         }
-        .product-item {
-            width: 80%;
-            margin: auto;
+        .container{
+            min-height: 969px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .product-first {
-                @include shoes-content();
-            }
-            .product-second {
-                @include shoes-content();
-                img {
-                    top: -100px;
-                }
-            }
-            .product-third {
-                @include shoes-content();
-                img {
-                    top: -50px;
-                }
-            }
-            .product-fourth {
-                @include shoes-content();
-            }
-        }
-        .see-more-button {
-            display: flex;
+            flex-direction: column;
             justify-content: center;
-            margin-top: 100px;
-            button {
-                width: 277px;
-                height: 79px;
-                font-size: $H5-font-size;
-                color: $color-IronGray;
-                border: 2px solid $color-MoreButton;
-                border-radius: 35px;
-                z-index: 2;
-                &:hover {
-                    border: 2px solid $color-MoreButton-hover;
-                    color: $color-White;
-                    font-weight: bold;
-                    background-color: $color-MoreButton-hover;
+            align-items: center;
+
+            .product-item {
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 80px;
+                .product-first {
+                    @include shoes-content();
+                }
+                .product-second {
+                    @include shoes-content();
+                    img {
+                        top: -100px;
+                    }
+                }
+                .product-third {
+                    @include shoes-content();
+                    img {
+                        top: -50px;
+                    }
+                }
+                .product-fourth {
+                    @include shoes-content();
                 }
             }
+            .see-more-button {
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 277px;
+                    height: 79px;
+                    font-size: $H5-font-size;
+                    color: $color-IronGray;
+                    background-color:  $color-White-opacity;
+                    border: 2px solid $color-MoreButton;
+                    border-radius: 35px;
+                    z-index: 2;
+                    &:hover {
+                        border: 2px solid $color-MoreButton-hover;
+                        color: $color-White;
+                        font-weight: bold;
+                        background-color: $color-MoreButton-hover;
+                    }
+                }
+            }
+           
         }
         .parallelogram {
             position: absolute;
-            top: -122px;
+            top: 0px;
             right: 323px;
             width: 465px;
-            height: 1100px;
+            height: 900px;
             background-color: $color-Parallelogram;
             transform: skewX(-30deg);
-        }
+        }  
     }
     // 照片牆
     .photo-wall {
-        height: 100vh;
         background-color: $color-LightGray;
         position: relative;
         &:after {
@@ -663,40 +677,41 @@ main {
             background-color: $color-Background-line;
         }
         .photo-title {
-            width: 100%;
-            position: absolute;
-            top: -53px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            span {
-                &:nth-child(1) {
-                    font-size: $H2-font-size;
-                    font-weight: bold;
-                    color: $color-IronGray;
-                    line-height: 0px;
-                    margin-bottom: 10px;
-                }
-                &:nth-child(2) {
-                    font-size: $H7-font-size;
-                    font-weight: normal;
-                    color: $color-IronGray;
+            // justify-content: flex-start;
+            .text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                span{
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        color: $color-IronGray;
+                        margin-bottom: 10px;
+                    }
+                    &:nth-child(2) {
+                        font-size: $H7-font-size;
+                        font-weight: normal;
+                        color: $color-IronGray;
+                    }
                 }
             }
         }
-        .swiper {
-            height: 70%;
+        .swiper2 {
+            min-height: 969px;
             padding-top: 50px;
             padding: 50px 100px 0px 100px;
             .swiper-container {
                 width: 100%;
-                height: 100%;
+                height: 600px;
 
                 .swiper-slide {
                     text-align: center;
                     font-size: 18px;
-                    background: #fff;
+                    background: $color-WedgwoodBlue;
 
                     /* Center slide text vertically */
                     display: -webkit-box;
@@ -716,6 +731,12 @@ main {
                         background-size: contain;
                     }
                 }
+                .swiper-pagination-bullet {
+                    background-color: $color-White-opacity;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: $color-White;
+                }
             }
             .swiper-button-next {
                 top: 40%;
@@ -733,44 +754,46 @@ main {
                     color: $color-Photo-nextBtn-hover;
                 }
             }
-        }
-        .plus-button {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-            .plus {
-                width: 66px;
-                height: 66px;
-                background-color: $color-Plus;
-                border-radius: 50%;
+            .plus-button {
+                width: 100%;
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                position: relative;
-                &:before {
-                    content: "";
-                    width: 50px;
-                    height: 2px;
-                    background-color: $color-White;
-                    position: absolute;
-                    top: 32px;
-                    left: 8px;
-                }
-                &:after {
-                    content: "";
-                    width: 2px;
-                    height: 50px;
-                    background-color: $color-White;
-                    position: absolute;
-                    top: 8px;
-                    left: 32px;
+                margin-top: 50px;
+                .plus {
+                    width: 66px;
+                    height: 66px;
+                    background-color: $color-Plus;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        width: 50px;
+                        height: 2px;
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 32px;
+                        left: 8px;
+                    }
+                    &:after {
+                        content: "";
+                        width: 2px;
+                        height: 50px;
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 8px;
+                        left: 32px;
+                    }
                 }
             }
         }
+        
     }
     // 試穿資訊
     .studio-information {
+        height: 100vh;
         font-family: $font-Family-A;
 
         .studio-photo {
@@ -781,61 +804,68 @@ main {
             }
         }
 
-        .try-on-infor {
-            position: relative;
-
-            .try-on {
-                font-size: $H1-font-size;
-                height: 72px;
-                margin-bottom: 12px;
-            }
-
-            .detail {
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;
-                position: absolute;
-                top: 65px;
-                left: 36px;
-            }
-
-            .infor {
-                font-size: $H1-font-size;
-            }
-        }
-
-        .contact-head {
-            ul {
-                font-size: $H5-font-size;
-                font-weight: bold;
-                letter-spacing: $font-letter-space-100;
-                border-left: 1px solid $color-Apricot;
-            }
-        }
-
-        .contact-text {
-            ul {
-                font-size: $H7-font-size;
-
-                .phone {
-                    padding-top: 3px;
+        .try-on-infors {
+            width: 100%;
+            height: 100%;
+            .try-on-infor {
+                position: relative;
+                
+    
+                .try-on {
+                    font-size: $H1-font-size;
+                    height: 72px;
+                    margin-bottom: 12px;
                 }
-
-                .business-time {
-                    padding-top: 11px;
+    
+                .detail {
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    position: absolute;
+                    top: 65px;
+                    left: 42px;
                 }
-
-                .address {
-                    padding-top: 7px;
-                }
-
-                .note {
-                    padding-top: 6px;
+    
+                .infor {
+                    font-size: $H1-font-size;
                 }
             }
-        }
+    
+            .contact-head {
+                ul {
+                    width: 140px;
+                    font-size: $H5-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
+                    border-left: 1px solid $color-Apricot;
+                }
+            }
+    
+            .contact-text {
+                ul {
+                    width: 344px;
+                    font-size: $H7-font-size;
+    
+                    .phone {
+                        padding-top: 3px;
+                    }
+    
+                    .business-time {
+                        padding-top: 11px;
+                    }
+    
+                    .address {
+                        padding-top: 7px;
+                    }
+    
+                    .note {
+                        padding-top: 6px;
+                    }
+                }
+            }
 
-        .shop-map {
-            border-left: 18px solid $color-Apricot;
+            .shop-map {
+                border-left: 18px solid $color-Apricot;
+            }
         }
     }
 }
