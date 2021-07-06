@@ -74,8 +74,17 @@ nav{
             input{
                 border: none;
                 border-bottom: 1px solid $color-WedgwoodBlue;
-                width:147px;
+                width:0px;
                 padding: 0px;
+                transition: 0.7s;
+                transition-delay: 1s;
+                &:hover{
+                    width:147px;
+                    transition: 0.7s;  
+                }
+                &:focus {
+                   outline: none;
+                  }
             }
             input::-webkit-input-placeholder { 
                 color: $color-placeholder;
