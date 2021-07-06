@@ -805,7 +805,8 @@ main {
         }
 
         .try-on-infors {
-            width: 100%; 
+            width: 100%;
+            height: 100%;
             .try-on-infor {
                 position: relative;
                 
@@ -861,12 +862,10 @@ main {
                     }
                 }
             }
-    
+
             .shop-map {
                 border-left: 18px solid $color-Apricot;
             }
         }
-
-        
     }
 }
