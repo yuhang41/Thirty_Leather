@@ -1199,6 +1199,7 @@ main .photo-wall .plus-button .plus:after {
 }
 
 main .studio-information {
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -1208,56 +1209,62 @@ main .studio-information .studio-photo img {
   border-left: 18px solid #f7a269;
 }
 
-main .studio-information .try-on-infor {
+main .studio-information .try-on-infors {
+  width: 100%;
+}
+
+main .studio-information .try-on-infors .try-on-infor {
   position: relative;
 }
 
-main .studio-information .try-on-infor .try-on {
+main .studio-information .try-on-infors .try-on-infor .try-on {
   font-size: 56px;
   height: 72px;
   margin-bottom: 12px;
 }
 
-main .studio-information .try-on-infor .detail {
+main .studio-information .try-on-infors .try-on-infor .detail {
   font-size: 21px;
   letter-spacing: 1.6px;
   position: absolute;
   top: 65px;
-  left: 36px;
+  left: 42px;
 }
 
-main .studio-information .try-on-infor .infor {
+main .studio-information .try-on-infors .try-on-infor .infor {
   font-size: 56px;
 }
 
-main .studio-information .contact-head ul {
+main .studio-information .try-on-infors .contact-head ul {
+  width: 140px;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.6px;
   border-left: 1px solid #f7a269;
 }
 
-main .studio-information .contact-text ul {
+main .studio-information .try-on-infors .contact-text ul {
+  width: 344px;
   font-size: 18px;
 }
 
-main .studio-information .contact-text ul .phone {
+main .studio-information .try-on-infors .contact-text ul .phone {
   padding-top: 3px;
 }
 
-main .studio-information .contact-text ul .business-time {
+main .studio-information .try-on-infors .contact-text ul .business-time {
   padding-top: 11px;
 }
 
-main .studio-information .contact-text ul .address {
+main .studio-information .try-on-infors .contact-text ul .address {
   padding-top: 7px;
 }
 
-main .studio-information .contact-text ul .note {
+main .studio-information .try-on-infors .contact-text ul .note {
   padding-top: 6px;
 }
 
-main .studio-information .shop-map {
+main .studio-information .try-on-infors .shop-map {
   border-left: 18px solid #f7a269;
 }
 /*# sourceMappingURL=index.css.map */

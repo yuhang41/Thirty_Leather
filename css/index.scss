@@ -771,6 +771,7 @@ main {
     }
     // 試穿資訊
     .studio-information {
+        height: 100vh;
         font-family: $font-Family-A;
 
         .studio-photo {
@@ -781,61 +782,69 @@ main {
             }
         }
 
-        .try-on-infor {
-            position: relative;
-
-            .try-on {
-                font-size: $H1-font-size;
-                height: 72px;
-                margin-bottom: 12px;
+        .try-on-infors {
+            width: 100%; 
+            .try-on-infor {
+                position: relative;
+                
+    
+                .try-on {
+                    font-size: $H1-font-size;
+                    height: 72px;
+                    margin-bottom: 12px;
+                }
+    
+                .detail {
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    position: absolute;
+                    top: 65px;
+                    left: 42px;
+                }
+    
+                .infor {
+                    font-size: $H1-font-size;
+                }
             }
-
-            .detail {
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;
-                position: absolute;
-                top: 65px;
-                left: 36px;
+    
+            .contact-head {
+                ul {
+                    width: 140px;
+                    font-size: $H5-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
+                    border-left: 1px solid $color-Apricot;
+                }
             }
-
-            .infor {
-                font-size: $H1-font-size;
+    
+            .contact-text {
+                ul {
+                    width: 344px;
+                    font-size: $H7-font-size;
+    
+                    .phone {
+                        padding-top: 3px;
+                    }
+    
+                    .business-time {
+                        padding-top: 11px;
+                    }
+    
+                    .address {
+                        padding-top: 7px;
+                    }
+    
+                    .note {
+                        padding-top: 6px;
+                    }
+                }
+            }
+    
+            .shop-map {
+                border-left: 18px solid $color-Apricot;
             }
         }
 
-        .contact-head {
-            ul {
-                font-size: $H5-font-size;
-                font-weight: bold;
-                letter-spacing: $font-letter-space-100;
-                border-left: 1px solid $color-Apricot;
-            }
-        }
-
-        .contact-text {
-            ul {
-                font-size: $H7-font-size;
-
-                .phone {
-                    padding-top: 3px;
-                }
-
-                .business-time {
-                    padding-top: 11px;
-                }
-
-                .address {
-                    padding-top: 7px;
-                }
-
-                .note {
-                    padding-top: 6px;
-                }
-            }
-        }
-
-        .shop-map {
-            border-left: 18px solid $color-Apricot;
-        }
+        
     }
 }
