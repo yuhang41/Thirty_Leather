@@ -1,0 +1,234 @@
+@import "_style_guild.scss";
+
+* {
+    list-style: none;
+    margin: 0px;
+    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+.member-center {
+    width: 100%;
+    height: 1011px;
+    background-color: #ebeae5;
+
+    .m-center-index {
+        font-size: 72px;
+        color: #ffffff;
+    }
+
+    .list-Group {
+        position: absolute;
+        left: 4vw;
+
+        .list-group-item {
+            width: 170px;
+            height: 60px;
+            background-color: #7a7573;
+            color: #ebeae5;
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid black;
+            z-index: 2;
+
+            &:hover {
+                background-color: #7a7573;
+                color: #ebeae5;
+            }
+
+            &.active {
+                width: 205px;
+                background-color: #ffffff;
+                color: #8090a0;
+                font-weight: bold;
+                border-color: #86b2c4;
+                border-right: 18px solid #86b2c4;
+                margin-left: -18px;
+                z-index: 2;
+            }
+
+            &:first-child {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+
+    .tab-contents {
+        margin-left: -17px;
+
+        .member-data {
+            width: 1140px;
+            height: 100%;
+            background-color: #ffffff;
+            border: 1px solid #f7a269;
+            position: relative;
+
+            .fa-user {
+                font-size: 16px;
+                color: #8090a0;
+            }
+
+            .user-id {
+                font-size: 14px;
+                font-weight: bold;
+                color: #8090a0;
+                margin: 0px 16px;
+            }
+
+            .general-member {
+                width: 80px;
+                background-color: #f7a269;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+
+            .User-edit {
+                color: #abbac9;
+
+                .fa-pen {
+                    font-size: 18px;
+                }
+
+                .user-edit {
+                    font-size: 15px;
+                }
+            }
+
+            .member-container {
+                width: 95%;
+
+                .input-data {
+                    height: 300px;
+                    border-bottom: 1px solid #abbac9;
+
+                    .label1 {
+                        font-size: 14px;
+                        color: #8090a0;
+                        margin-left: 3px;
+                    }
+
+                    .input {
+                        width: 278px;
+                        font-size: 22.75px;
+                        border: none;
+                        border-bottom: 1px solid #8090a0;
+                    }
+
+                    .label2 {
+                        font-size: 14px;
+                        color: #8090a0;
+                        margin-left: 2px;
+                    }
+
+                    .label3 {
+                        font-size: 14px;
+                        color: #8090a0;
+                    }
+
+                    .county,
+                    .zipcode {
+                        width: 65px;
+                        height: 32px;
+                        font-size: 14px;
+                        color: #8090a0;
+                        border: 1px solid #8090a0;
+                    }
+
+                    .district {
+                        width: 65px;
+                        height: 32px;
+                        font-size: 14px;
+                        color: #8090a0;
+                        border: 1px solid #8090a0;
+                        margin: 0px 20px;
+                    }
+
+                    .input1 {
+                        width: 235px;
+                        height: 32px;
+                        font-size: 14px;
+                        color: #8090a0;
+                        border: 1px solid #8090a0;
+                    }
+
+                    .member-btn button {
+                        height: 41px;
+                        border: 1px solid #a0a0a0;
+                        font-size: 14px;
+                        color: #444444;
+                    }
+
+                    .member-btn button:hover {
+                        background-color: #abbac9;
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .order-five {
+                font-size: 29.25px;
+                color: #8090a0;
+            }
+
+            .table-container {
+                width: 90%;
+
+                .table {
+                    height: 400px;
+                    font-size: 14px;
+    
+                    thead {
+                        background-color: #7a7573;
+                        color: #ebeae5;
+                    }
+    
+                    td,
+                    th {
+                        border-top: none;
+                    }
+    
+                    .order-number {
+                        width: 128px;
+                        height: 25px;
+                        background-color: #a0a0a0;
+                        color: #ffffff;
+                        margin-top: 16px;
+                    }
+    
+                    .check {
+                        padding-top: 12px;
+    
+                        .checkInvoice {
+                            height: 30px;
+                            background-color: #a0a0a0;
+                            color: #ffffff;
+                        }
+                    }
+    
+                    .return {
+                        padding-top: 12px;
+    
+                        .return-infor {
+                            height: 30px;
+                            background-color: #a0a0a0;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                .table-icon a {
+                    color: #a0a0a0;
+    
+                    &:hover {
+                        color: #f7a269;
+                    }
+                }
+            }
+        }
+    }
+}

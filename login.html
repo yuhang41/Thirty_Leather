@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/nav.css">
+
+    <link rel="stylesheet" href="/css/login.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/30leather_logo.svg" alt="">
+        </div>
+        <div class="options d-flex">
+            <div class="option">
+                <ul class="d-flex">
+                    <li><a href="">所有商品</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">女鞋</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">小白鞋</a>
+                            <a class="dropdown-item" href="#">紳士鞋</a>
+                            <a class="dropdown-item" href="#">休閒鞋</a>
+                            <a class="dropdown-item" href="#">平底鞋</a>
+                            <a class="dropdown-item" href="#">跟鞋</a>
+                            <a class="dropdown-item" href="#">涼鞋</a>
+                            <a class="dropdown-item" href="#">娃娃鞋</a>
+                            <a class="dropdown-item" href="#">靴款</a>
+                            <a class="dropdown-item" href="#">防水系列</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">訂製雪靴</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">迷你筒(16cm-18cm)</a>
+                            <a class="dropdown-item" href="#">低筒(22cm-24cm)</a>
+                            <a class="dropdown-item" href="#">中筒(26cm-28cm)</a>
+                            <a class="dropdown-item" href="#">高筒(30cm-33cm)</a>
+                        </div>
+                    </li>
+                    <li><a href="">配件</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">製鞋文章</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                            <a class="dropdown-item" href="#">系列鞋款介紹</a>
+                            <a class="dropdown-item" href="#">製成故事</a>
+                        </div>
+                    </li>
+                    <li><a href="">試穿服務</a></li>
+                    <li class="nav-item dropdown more-option">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">更多</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">試穿服務</a>
+                            <a class="dropdown-item" href="#">製鞋文章</a>
+                            <a class="dropdown-item" href="#">配件</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-cart d-flex">
+                <form class="search d-flex my-2 my-lg-0">
+                    <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
+                    <label for="search-input"><i class="fas fa-search mr-2"></i></label>
+                </form>
+                <i class="fas fa-user m-2"></i>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart m-2"></i>
+                    <div class="cart-number">1</div>
+                </div>
+            </div>
+        </div>
+        <div class="twd-lang d-flex">
+            <div class="twd dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">TWD</a>
+                <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+            <div class="lang dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">繁體中文</a>
+                <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="member-center text-center">
+            <div class="m-center-index">會員中心首頁</div>
+
+            <div class="row list-Group">
+                <div class="list-groups p-0">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-memberCenter-list"
+                            data-toggle="list" href="#list-memberCenter" role="tab"
+                            aria-controls="memberCenter">會員中心</a>
+
+                        <a class="list-group-item list-group-item-action" id="list-modifyPassword-list"
+                            data-toggle="list" href="#list-modifyPassword" role="tab"
+                            aria-controls="modifyPassword">密碼修改</a>
+
+                        <a class="list-group-item list-group-item-action" id="list-memberLogout-list" data-toggle="list"
+                            href="#list-memberLogout" role="tab" aria-controls="memberLogout">會員登出</a>
+                    </div>
+                </div>
+
+                <div class="tab-contents">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-memberCenter" role="tabpanel"
+                            aria-labelledby="list-memberCenter-list">
+                            <div class="member-data">
+                                <div class="row align-items-start">
+                                    <div class="col mt-4 d-flex justify-content-center">
+                                        <i class="fas fa-user"></i>
+
+                                        <div class="user-id">abcdefg</div>
+
+                                        <div class="general-member">一般會員</div>
+                                    </div>
+                                </div>
+
+                                <div class="User-edit mt-2 d-flex justify-content-center">
+                                    <i class="fas fa-pen mr-1"></i>
+
+                                    <div class="user-edit ml-1">編輯會員資料</div>
+                                </div>
+
+                                <div class="member-container mx-auto">
+                                    <div class="input-data col-md-12 ml-0 mt-2 row">
+                                        <div class="col-md-6 pl-0">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <label
+                                                            class="label1 font-weight-bold col-2 pl-3 mt-2">姓名</label>
+
+                                                        <input type="text"
+                                                            class="input font-weight-normal pt-1 ml-4 pl-1"
+                                                            placeholder="林土木">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <label
+                                                            class="label2 font-weight-bold col-2 pl-3 mt-2 pt-1">信箱</label>
+
+                                                        <input type="text" class="input font-weight-normal pt-1 ml-4"
+                                                            placeholder=" test123@gmail.com">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <label
+                                                            class="label3 font-weight-bold col-3 mt-2 pt-1">行動電話</label>
+
+                                                        <input type="text" class="input font-weight-normal pt-1"
+                                                            placeholder="0900 - 123456">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12 d-flex">
+                                                        <label
+                                                            class="label3 font-weight-bold col-3 mt-2 pt-1">出生日期</label>
+
+                                                        <input type="text" class="input font-weight-normal pt-1"
+                                                            placeholder="1995 / 01 / 24">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col-12 p-1 mt-1 mb-3 d-flex">
+                                                        <label class="label3 font-weight-bold col-6 mt-1">聯絡地址</label>
+
+                                                        <div class="address row">
+                                                            <a class="county dropdown-toggle mt-1 text-decoration-none d-flex align-items-center justify-content-center"
+                                                                href="#" id="navbarDropdown" role="button"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">臺中市
+                                                            </a>
+
+                                                            <a class="district dropdown-toggle mt-1 text-decoration-none d-flex align-items-center justify-content-center"
+                                                                href="#" id="navbarDropdown" role="button"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">中區
+                                                            </a>
+
+                                                            <a class="zipcode mt-1 text-decoration-none d-flex align-items-center justify-content-center"
+                                                                href="#" id="navbarDropdown" role="button"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">402
+                                                            </a>
+
+                                                            <input class="input1 mt-2" type="text" placeholder="詳細的地址">
+                                                        </div>
+                                                    </div>
+
+                                                    <label
+                                                        class="label3 font-weight-bold col-6 ml-2 pl-3 mt-4 pt-2">訂閱電子報
+                                                        <i class="fas fa-check-square"></i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="member-btn mx-auto">
+                                            <button type="button" class="btn">取消</button>
+
+                                            <button type="button" class="btn">儲存變更</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-five mt-2">訂單前5筆</div>
+
+                                <div class="table-container mx-auto mt-1">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="table-active pl-4">訂單編號</th>
+                                                <th class="table-active">訂購日期</th>
+                                                <th class="table-active">訂單狀態</th>
+                                                <th class="table-active">付款狀態</th>
+                                                <th class="table-active">收件方式</th>
+                                                <th class="table-active">處理進度</th>
+                                                <th class="table-active">應付金額</th>
+                                                <th class="table-active">發票</th>
+                                                <th class="table-active">退貨服務</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td
+                                                    class="order-number row ml-3 p-0 align-items-center justify-content-center">
+                                                    000000000123</td>
+                                                <td>2021-07-05</td>
+                                                <td>已出貨</td>
+                                                <td>全家超商取貨</td>
+                                                <td>全家店配</td>
+                                                <td>處理中</td>
+                                                <td>2,999</td>
+                                                <td class="check">
+                                                    <div
+                                                        class="checkInvoice d-flex align-items-center justify-content-center">
+                                                        檢視發票</div>
+                                                </td>
+                                                <td class="return">
+                                                    <div
+                                                        class="return-infor d-flex align-items-center justify-content-center">
+                                                        退貨資訊</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="order-number row ml-3 p-0 align-items-center justify-content-center">
+                                                    000000000123</td>
+                                                <td>2021-07-05</td>
+                                                <td>已出貨</td>
+                                                <td>全家超商取貨</td>
+                                                <td>全家店配</td>
+                                                <td>已完成</td>
+                                                <td>2,999</td>
+                                                <td class="check">
+                                                    <div
+                                                        class="checkInvoice d-flex align-items-center justify-content-center">
+                                                        檢視發票</div>
+                                                </td>
+                                                <td class="return">
+                                                    <div
+                                                        class="return-infor d-flex align-items-center justify-content-center">
+                                                        退貨資訊</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="order-number row ml-3 p-0 align-items-center justify-content-center">
+                                                    000000000123</td>
+                                                <td>2021-07-05</td>
+                                                <td>已出貨</td>
+                                                <td>全家超商取貨</td>
+                                                <td>全家店配</td>
+                                                <td>已完成</td>
+                                                <td>2,999</td>
+                                                <td class="check">
+                                                    <div
+                                                        class="checkInvoice d-flex align-items-center justify-content-center">
+                                                        檢視發票</div>
+                                                </td>
+                                                <td class="return">
+                                                    <div
+                                                        class="return-infor d-flex align-items-center justify-content-center">
+                                                        退貨資訊</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="order-number row ml-3 p-0 align-items-center justify-content-center">
+                                                    000000000123</td>
+                                                <td>2021-07-05</td>
+                                                <td>已出貨</td>
+                                                <td>全家超商取貨</td>
+                                                <td>全家店配</td>
+                                                <td>已完成</td>
+                                                <td>2,999</td>
+                                                <td class="check">
+                                                    <div
+                                                        class="checkInvoice d-flex align-items-center justify-content-center">
+                                                        檢視發票</div>
+                                                </td>
+                                                <td class="return">
+                                                    <div
+                                                        class="return-infor d-flex align-items-center justify-content-center">
+                                                        退貨資訊</div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="order-number row ml-3 p-0 align-items-center justify-content-center">
+                                                    000000000123</td>
+                                                <td>2021-07-05</td>
+                                                <td>已出貨</td>
+                                                <td>全家超商取貨</td>
+                                                <td>全家店配</td>
+                                                <td>已完成</td>
+                                                <td>2,999</td>
+                                                <td class="check">
+                                                    <div
+                                                        class="checkInvoice d-flex align-items-center justify-content-center">
+                                                        檢視發票</div>
+                                                </td>
+                                                <td class="return">
+                                                    <div
+                                                        class="return-infor d-flex align-items-center justify-content-center">
+                                                        退貨資訊</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="table-icon">
+                                        <a href="#" class="fas fa-caret-left text-decoration-none"></a>
+
+                                        <span class="p-1">1</span>
+
+                                        <a href="#" class="fas fa-caret-right text-decoration-none"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="list-modifyPassword" role="tabpanel"
+                            aria-labelledby="list-modifyPassword-list">bbbbb
+                        </div>
+
+                        <div class="tab-pane fade" id="list-memberLogout" role="tabpanel"
+                            aria-labelledby="list-memberLogout-list">ccccc
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
