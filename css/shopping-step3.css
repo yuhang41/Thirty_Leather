@@ -167,16 +167,16 @@ main .my-container .shopping-container .shopping-order {
 }
 
 main .my-container .shopping-container .shopping-order .order-container {
-  max-width: 710px;
+  max-width: 840px;
   width: 100%;
-  padding: 20px 0;
+  padding: 50px 0;
   margin: auto;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-total {
   cursor: pointer;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 3.2px;
   padding-bottom: 30px;
 }
@@ -193,6 +193,10 @@ main .my-container .shopping-container .shopping-order .order-container .order-t
   font-weight: 600;
 }
 
+main .my-container .shopping-container .shopping-order .order-container .order-total p {
+  margin: 0;
+}
+
 main .my-container .shopping-container .shopping-order .order-container .order-commodity {
   overflow: hidden;
   position: relative;
@@ -202,13 +206,13 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
   transition: 1s;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content {
   width: 100%;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity {
   width: 100%;
   padding: 0 15px;
   padding-bottom: 20px;
@@ -217,12 +221,12 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
   display: flex;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .photo {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .photo {
   max-width: 80px;
   width: 100%;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .photo img {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .photo img {
   width: 100%;
   height: 100%;
   -o-object-position: center;
@@ -231,30 +235,30 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
      object-fit: cover;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-content {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content {
   padding: 0 10px;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-content .commodity-title {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-content .commodity-title p {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-title p {
   margin: 0;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-content .commodity-size {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-size {
   color: #a3b6c1;
   font-size: 15px;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-content .commodity-size p {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-size p {
   margin: 0;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-subtotal {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-subtotal {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,12 +271,53 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
           align-items: flex-end;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-subtotal .quantity-subtotal {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-subtotal .quantity-subtotal {
   text-align: right;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content .commodity .commodity-subtotal .quantity-subtotal p {
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-subtotal .quantity-subtotal p {
   margin: 0;
+  font-size: 14px;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 15px;
+  padding-bottom: 20px;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price p, main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price h4 {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price p {
+  font-size: 14px;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price h4 {
+  font-size: 36px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-complete {
