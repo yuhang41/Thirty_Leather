@@ -111,14 +111,14 @@ main{
                 border: 1px solid $color-Apricot;
                 transition: 1s;
                 .order-container{
-                    max-width: 710px;
+                    max-width: 840px;
                     width: 100%;
-                    padding: 20px 0;
+                    padding: 50px 0;
                     margin: auto;
                     .order-total{
                         cursor: pointer;
                         text-align: center;
-                        font-size: $H4-font-size;
+                        font-size: $H5-font-size;
                         letter-spacing: $font-letter-space-200;
                         padding-bottom: 30px;
                         &::after{
@@ -131,6 +131,9 @@ main{
                             font-family: "Font Awesome 5 Free";                            
                             font-weight: 600;
                         }
+                        p{
+                            margin: 0;
+                        }
                     }
                     .order-commodity{ 
                         overflow: hidden;
@@ -142,7 +145,7 @@ main{
                         //     height: 1px;
                         //     transition: 1s;
                         // }
-                        .commodity-content{
+                        .order-commodity-content{
                             width: 100%;
                             transition: 1s;                                                       
                             // &.active{                        
@@ -191,10 +194,34 @@ main{
                                         text-align: right;
                                         p{
                                             margin: 0;
+                                            font-size: $H10-font-size;
                                         }
                                     }
                                 }
-                            }    
+                            }
+                            .order-commodity-shipping{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                padding: 0 15px;
+                                padding-bottom: 20px;
+                                .order-commodity-shipping-price{
+                                    width: 200px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    p,h4{
+                                        margin: 0;
+                                        display: flex;
+                                        align-items: flex-end;
+                                    }
+                                    p{
+                                        font-size: $H10-font-size;
+                                    }
+                                    h4{
+                                        font-size: $H3-font-size;
+                                    }
+                                }
+                            }
                         }                                            
                     }
                     .order-complete{
