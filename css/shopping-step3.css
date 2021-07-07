@@ -202,21 +202,8 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
   transition: 1s;
 }
 
-main .my-container .shopping-container .shopping-order .order-container .order-commodity.active {
-  height: 1px;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content {
   width: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-main .my-container .shopping-container .shopping-order .order-container .order-commodity .commodity-content.active {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
   -webkit-transition: 1s;
   transition: 1s;
 }

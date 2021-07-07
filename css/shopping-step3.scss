@@ -138,17 +138,17 @@ main{
                         width: 100%;                        
                         border-bottom: 1px solid $color-Background-line;
                         transition: 1s;
-                        &.active{  
-                            height: 1px;
-                            transition: 1s;
-                        }
+                        // &.active{  
+                        //     height: 1px;
+                        //     transition: 1s;
+                        // }
                         .commodity-content{
                             width: 100%;
                             transition: 1s;                                                       
-                            &.active{                        
-                                transform: translateY(-100%);                            
-                                transition: 1s;
-                            }
+                            // &.active{                        
+                            //     transform: translateY(-100%);                            
+                            //     transition: 1s;
+                            // }
                             .commodity{
                                 width: 100%;
                                 padding: 0 15px;
