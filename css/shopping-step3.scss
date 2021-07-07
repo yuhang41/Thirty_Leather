@@ -1,0 +1,464 @@
+@import '_style_guild.scss';
+*{
+    list-style: none;   
+    margin: 0px;
+    padding: 0px;
+    font-family: $font-Family-A;
+}
+main{
+    background: $color-LightGray;
+    min-height: 100vh;
+    .my-container{
+        height: 100%;
+        max-width: 1550px;
+        padding: 0;        
+        padding-top: 15.7vh;
+        padding-bottom: 50px;
+        .steps{
+            display: flex;
+            padding: 0 10px;
+            max-width: 1141px;
+            .step{
+                display: flex;
+                align-items: center;                
+                &:nth-child(1){
+                    flex:0 0 32%;
+                    justify-content: start;                      
+                    .step-content{
+                        background: $color-Shopping-Step;
+                    }                    
+                }
+                &:nth-child(2){  
+                    flex:0 0 36%;
+                    justify-content: center;              
+                    .step-content{
+                        background: $color-Shopping-Step;                  
+                    }
+                }    
+                &:nth-child(3){                
+                    flex:0 0 32%;
+                    justify-content:flex-end;
+                    .step-content{                        
+                        background: $color-SkyBlue;
+                    }
+                    .step-left-line{
+                        &::after{
+                            content:'';
+                            display: block;                                      
+                            width: 100%;
+                            height: 100%;
+                            background: $color-SkyBlue;
+                        }
+                    }
+                }                   
+                .step-content{                    
+                    padding: 10px 0;
+                    border-radius: 5px;              
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                    .text{
+                        display: flex;                    
+                        justify-content: center;
+                        align-items: center;
+                        color:#ffffff;
+                        p{
+                            margin: 0;
+                            font-size: $H4-font-size;
+                            font-weight:$font-Weight-B ;
+                            letter-spacing: $font-letter-space-200;
+                        }
+                        .text-content{                        
+                            text-align: left; 
+                            p{
+                                &:nth-child(1){                                
+                                    font-size: $H10-font-size;
+                                    font-weight:$font-Weight-B ;
+                                    letter-spacing: $font-letter-space-50;                                
+                                    
+                                }
+                                &:nth-child(2){                                        
+                                    font-size: $H11-font-size;
+                                    font-weight:$font-Weight-B;
+                                    letter-spacing: $font-letter-space-100;
+                                }
+                            }                                                                           
+                        }
+                    }
+                }
+                .step-right-line{
+                    position: relative;
+                    width: 20%;
+                    height: 3px;
+                    background: $color-Shopping-Step-line;            
+                }
+                .step-left-line{
+                    width: 20%;
+                    height: 3px;
+                    background: $color-Shopping-Step-line;
+                }                
+            }
+        }
+        .shopping-container{
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            .shopping-order{
+                max-width: 1141px;
+                width: 100%;
+                min-height:452px;
+                background: $color-White;
+                border: 1px solid $color-Apricot;
+                transition: 1s;
+                .order-container{
+                    max-width: 710px;
+                    width: 100%;
+                    padding: 20px 0;
+                    margin: auto;
+                    .order-total{
+                        cursor: pointer;
+                        text-align: center;
+                        font-size: $H4-font-size;
+                        letter-spacing: $font-letter-space-200;
+                        padding-bottom: 30px;
+                        &::after{
+                            content:'\f077';
+                            font-family: "Font Awesome 5 Free";                            
+                            font-weight: 600;
+                        }
+                        &.active::after{
+                            content:'\f078';
+                            font-family: "Font Awesome 5 Free";                            
+                            font-weight: 600;
+                        }
+                    }
+                    .order-commodity{ 
+                        overflow: hidden;
+                        position: relative;
+                        width: 100%;                        
+                        border-bottom: 1px solid $color-Background-line;
+                        transition: 1s;
+                        &.active{  
+                            height: 1px;
+                            transition: 1s;
+                        }
+                        .commodity-content{
+                            width: 100%;
+                            transition: 1s;                                                       
+                            &.active{                        
+                                transform: translateY(-100%);                            
+                                transition: 1s;
+                            }
+                            .commodity{
+                                width: 100%;
+                                padding: 0 15px;
+                                padding-bottom: 20px;
+                                display: flex;
+                                .photo{                                
+                                    max-width: 80px;
+                                    width: 100%;                                
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-position: center;
+                                        object-fit: cover;
+                                    }
+                                }
+                                .commodity-content{                                
+                                    padding: 0 10px;
+                                    .commodity-title{
+                                        font-size: $H8-font-size;
+                                        font-weight: $font-Weight-B;
+                                        margin-bottom: 20px;
+                                        p{
+                                            margin: 0;
+                                        }
+                                    }
+                                    .commodity-size{
+                                        color: $color-Gainsboro;
+                                        font-size: $H9-font-size;
+                                        p{
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                                .commodity-subtotal{
+                                    margin-left: auto;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-end;
+                                    .quantity-subtotal{
+                                        text-align: right;
+                                        p{
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }    
+                        }                                            
+                    }
+                    .order-complete{
+                        width: 100%;
+                        padding: 30px 0;
+                        border-bottom: 1px solid $color-Background-line;
+                        display: flex;
+                        justify-content: center;
+                        .photo-svg{
+                            max-width: 200px;
+                            width: 100%;
+                            padding: 0 20px;
+                            img{
+                                width: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                        .complete-message{
+                            h3{
+                                font-size: $H5-font-size;
+                                letter-spacing: $font-letter-space-200;
+                            }
+                            p{
+                                margin: 0;
+                                font-size: $H10-font-size;                                
+                                &:nth-child(2){
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .information{
+                        width: 100%;
+                        padding: 20px 15px;
+                        .order-customer-information{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 20px 0;                            
+                            .information-both{
+                                position: relative;
+                                border: 1px solid $color-Background-line;
+                                border-radius: 10px;
+                                padding: 25px 10px 5px 10px;
+                                min-width: 300px;
+                                h4{
+                                    position: absolute;
+                                    top: -14px;                                                     
+                                    background-color: $color-White;
+                                    font-size: $H5-font-size;
+                                    font-weight: $font-Weight-B;
+                                    letter-spacing: $font-letter-space-200;
+                                }
+                                .information-content{                                    
+                                    display: flex;
+                                    p{                                        
+                                        color: $color-Nav-icon;
+                                        
+                                        font-size: $H8-font-size;
+                                        margin: 0;
+                                        &:nth-child(1){
+                                            flex:0 0 40%;
+                                        }
+                                        &:nth-child(2){
+                                            flex:0 0 60%;
+                                        }
+                                    }
+                                }
+                            }                            
+                        }
+                        .shipping-information{
+                            width: 100%;
+                            margin: 20px 0;                            
+                            position: relative;
+                            border: 1px solid $color-Background-line;
+                            border-radius: 10px;
+                            padding: 25px 10px 5px 10px;
+                            h4{
+                                position: absolute;
+                                top: -14px;                                                     
+                                background-color: $color-White;
+                                font-size: $H5-font-size;
+                                font-weight: $font-Weight-B;
+                                letter-spacing: $font-letter-space-200;
+                            }
+                            .shipping-information-content{
+                                display: flex;
+                                ul{
+                                    margin: 0;
+                                    li{
+                                        display: flex;                                        
+                                        color: $color-Nav-icon;                                                            
+                                        h5{
+                                            flex: 50%;
+                                            font-size: $H7-font-size;
+                                            margin: 0;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                        p{
+                                            flex: 50%;
+                                            margin: 0;
+                                            display: flex;
+                                            align-items: center;
+                                        }                                        
+                                        &:not(:last-child){
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        flex:0 0 45%;
+                                        li{
+                                            .shipping-information-name{
+                                                flex: 50%;
+                                                h5{
+                                                    font-size: $H7-font-size;
+                                                    margin: 0;
+                                                }
+                                                p{
+                                                    margin: 0;
+                                                    font-size: $H11-font-size;                                                
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        flex:0 0 55%;
+                                        .store-code-address{
+                                            flex-wrap: wrap;
+                                            .store-information{
+                                                flex: 0 0 100%;
+                                                display: flex;
+                                                h5{
+                                                    font-size: $H7-font-size;
+                                                    margin: 0;
+                                                    flex: 0 0 50%;
+                                                }
+                                                p{
+                                                    margin: 0;
+                                                    font-size: $H11-font-size;
+                                                    flex: 0 0 50%;
+                                                }
+                                            }
+                                            .code-address{
+                                                flex: 0 0 100%;
+                                                display: flex;
+                                                h5{
+                                                    font-size: $H7-font-size;
+                                                    margin: 0;
+                                                    flex: 0 0 50%;
+                                                }
+                                                p{
+                                                    margin: 0;
+                                                    font-size: $H11-font-size;
+                                                    flex: 0 0 50%;
+                                                }
+                                            }
+                                        }
+                                    }                                    
+                                }
+                            }
+                        }
+                        .payment-information{
+                            width: 100%;
+                            padding: 20px 0;
+                            position: relative;
+                            border: 1px solid $color-Background-line;
+                            border-radius: 10px;
+                            padding: 25px 10px 5px 10px;
+                            h4{
+                                position: absolute;
+                                top: -14px;                                                     
+                                background-color: $color-White;
+                                font-size: $H5-font-size;
+                                font-weight: $font-Weight-B;
+                                letter-spacing: $font-letter-space-200;
+                            }
+                            .payment-information-content{
+                                margin: 0;
+                                display: flex;
+                                li{
+                                    flex: 0 0 50%;
+                                    .payment-invoice{
+                                        flex: 0 0 100%;
+                                        display: flex;
+                                        color: $color-Nav-icon;  
+                                        h5{
+                                            font-size: $H7-font-size;
+                                            margin: 0;
+                                            flex: 0 0 50%;
+                                        }
+                                        p{
+                                            margin: 0;
+                                            font-size: $H11-font-size;
+                                            flex: 0 0 50%;
+                                        }
+                                    }
+                                }                            
+                            }
+                        }
+                    }
+                }
+            }
+            .message-and-button{
+                max-width: 371px;
+                width: 100%;
+                margin-left: 2vw;
+                min-height:452px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .customer-service-message{                    
+                    width: 100%;  
+                    max-height: 510px;
+                    height: 100%;                                        
+                    background: $color-White;
+                    border: 1px solid $color-Apricot;
+                    padding: 20px;
+                    h4{
+                        padding: 10px;
+                        margin: 0;
+                        text-align: center;
+                        font-size: $H5-font-size;                        
+                        letter-spacing: $font-letter-space-200;
+                    }
+                    .message{
+                        width: 100%;
+                        max-height: 320px;
+                        height: 100%;
+                    }
+                    .input-text{
+                        width: 100%;
+                        padding: 5px;
+                        border: 1px solid $color-Background-line;
+                        outline: none;
+                        margin: 10px 0;
+                    }
+                    .input-photo-button{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        input[type=button]{
+                            padding: 5px 3px;
+                            background-color: $color-White;
+                            outline: none;
+                            border: 1px solid $color-IronGray;                    
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .go-home-button{                                        
+                    width: 100%;
+                    .home-button{
+                        width: 100%;
+                        border: none;
+                        border-radius: 5px;
+                        outline: none;
+                        background: $color-Apricot;
+                        color: $color-White;
+                        font-size: $H4-font-size;
+                        letter-spacing: $font-letter-space-200;
+                    }                    
+                }
+            }            
+        }
+    }
+}

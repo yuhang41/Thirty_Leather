@@ -69,21 +69,19 @@ main{
                         }
                         .text-content{                        
                             text-align: left;                                                
-                            &:nth-child(1){
-                                p{
+                            p{
+                                &:nth-child(1){                                
                                     font-size: $H10-font-size;
                                     font-weight:$font-Weight-B ;
-                                    letter-spacing: $font-letter-space-50;
+                                    letter-spacing: $font-letter-space-50;                                
+                                    
                                 }
-                                
-                            }
-                            &:nth-child(2){        
-                                p{
+                                &:nth-child(2){                                        
                                     font-size: $H11-font-size;
                                     font-weight:$font-Weight-B;
                                     letter-spacing: $font-letter-space-100;
-                                }                                            
-                            }                    
+                                }
+                            }                     
                         }
                     }
                 }
