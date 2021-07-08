@@ -121,6 +121,7 @@
   font-size: 22.75px;
   border: none;
   border-bottom: 1px solid #8090a0;
+  outline: none;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .county,
@@ -147,6 +148,7 @@
   font-size: 14px;
   color: #8090a0;
   border: 1px solid #8090a0;
+  outline: none;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .member-btn button {
@@ -213,11 +215,13 @@
   color: #ffffff;
 }
 
-.member-center .tab-contents .member-data .table-container .table-icon a {
+.member-center .tab-contents .member-data .table-container .table-icon button {
+  background-color: white;
   color: #a0a0a0;
+  border: none;
 }
 
-.member-center .tab-contents .member-data .table-container .table-icon a:hover {
+.member-center .tab-contents .member-data .table-container .table-icon button:hover {
   color: #f7a269;
 }
 /*# sourceMappingURL=login.css.map */

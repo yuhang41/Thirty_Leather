@@ -114,6 +114,7 @@
                         font-size: 22.75px;
                         border: none;
                         border-bottom: 1px solid $color-WedgwoodBlue;
+                        outline: none;
                     }
 
                     .county,
@@ -140,6 +141,7 @@
                         font-size: $H10-font-size;
                         color: $color-WedgwoodBlue;
                         border: 1px solid $color-WedgwoodBlue;
+                        outline: none;
                     }
 
                     .member-btn button {
@@ -207,8 +209,10 @@
                     }
                 }
 
-                .table-icon a {
+                .table-icon button {
+                    background-color: white;
                     color: $color-MoreButton;
+                    border: none;
     
                     &:hover {
                         color: $color-Apricot;
