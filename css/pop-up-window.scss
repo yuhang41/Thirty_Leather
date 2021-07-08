@@ -1,0 +1,63 @@
+@import "_style_guild.scss";
+body {
+    margin: 0;
+    font-family: $font-Family-A;
+
+}
+
+.password-window {
+    width: 789px;
+    height: 377px;
+    background-color: $color-White;
+    border: 1px solid $color-Apricot;
+
+    .input-data {
+        margin: 0px;
+        padding: 0;
+
+        .input-block {
+            height: 300px;
+            border-right: 1px solid $color-Nav-icon;
+
+            .modify-title {
+                font-size: $H7-font-size;
+                color: $color-Nav-icon;
+            }
+
+            .input {
+                width: 90%;
+                font-size: $H11-font-size;
+                border: none;
+                border-bottom: 1px solid $color-Nav-icon;
+            }
+
+            .modify-btn {
+                width: 180px;
+                border-radius: 5px;
+                background-color: $color-White;
+                border: 1px solid $color-Nav-icon;
+                font-size: 18px;
+                color: $color-Nav-icon;
+            }
+        }
+
+        .delete-btn {
+            width: 40px;
+            height:40px;
+            border: none;
+            background-color: $color-Nav-icon;
+            color: $color-White;
+        }
+
+        .safe-validate {
+            font-size: $H7-font-size; color: $color-Nav-icon;
+        }
+
+        .lock-img {
+            width: 196px;
+            height: 235px;
+            opacity: 0.7;
+            transform:rotate(16deg);
+        }
+    }
+}
