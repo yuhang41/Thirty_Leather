@@ -9,6 +9,10 @@ body {
     height: 377px;
     background-color: $color-White;
     border: 1px solid $color-Apricot;
+    position: absolute;
+    top: 15%;
+    left: calc(50% - 394.5px);
+    z-index: 3;
 
     .input-data {
         margin: 0px;

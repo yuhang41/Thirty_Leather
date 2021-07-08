@@ -13,6 +13,10 @@ body {
   height: 377px;
   background-color: #ffffff;
   border: 1px solid #f7a269;
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 394.5px);
+  z-index: 3;
 }
 
 .password-window .input-data {
