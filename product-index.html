@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/product-index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/30leather_logo.svg" alt="">
+        </div>
+        <div class="options d-flex">
+            <div class="option">
+                <ul class="d-flex">
+                    <li><a href="">所有商品</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">女鞋</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">小白鞋</a>
+                          <a class="dropdown-item" href="#">紳士鞋</a>
+                          <a class="dropdown-item" href="#">休閒鞋</a>
+                          <a class="dropdown-item" href="#">平底鞋</a>
+                          <a class="dropdown-item" href="#">跟鞋</a>
+                          <a class="dropdown-item" href="#">涼鞋</a>
+                          <a class="dropdown-item" href="#">娃娃鞋</a>
+                          <a class="dropdown-item" href="#">靴款</a>
+                          <a class="dropdown-item" href="#">防水系列</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">訂製雪靴</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">迷你筒(16cm-18cm)</a>
+                          <a class="dropdown-item" href="#">低筒(22cm-24cm)</a>
+                          <a class="dropdown-item" href="#">中筒(26cm-28cm)</a>
+                          <a class="dropdown-item" href="#">高筒(30cm-33cm)</a>
+                        </div>
+                    </li>
+                    <li><a href="">配件</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">製鞋文章</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                          <a class="dropdown-item" href="#">系列鞋款介紹</a>
+                          <a class="dropdown-item" href="#">製成故事</a>
+                        </div>
+                    </li>
+                    <li ><a href="">試穿服務</a></li>
+                    <li class="nav-item dropdown more-option">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">更多</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">試穿服務</a>
+                          <a class="dropdown-item" href="#">製鞋文章</a>
+                          <a class="dropdown-item" href="#">配件</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-cart d-flex">
+                <form class="search d-flex my-2 my-lg-0">
+                    <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="尋找商品...">
+                    <label for="search-input"><i class="fas fa-search mr-2"></i></label>
+                </form>
+                <i class="fas fa-user m-2"></i>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart m-2"></i>
+                    <div class="cart-number">1</div>
+                </div>
+            </div>            
+        </div>
+        <div class="twd-lang d-flex">
+            <div class="twd dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TWD</a>
+                    <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+            <div class="lang dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">繁體中文</a>
+                    <!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">預設</a>
+                    </div> -->
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="commodity-menu">
+            <div class="all-commodity">
+                <div class="commodity-menu-title AllCommodity" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="true" aria-controls="multiCollapseExample1">
+                    所有商品
+                </div>                
+                <ul class="commodity-menu-options collapse show" id="multiCollapseExample1">
+                    <li><a href="#">女鞋</a></li>
+                    <li><a href="#">小白鞋</a></li>
+                    <li><a href="#">紳士鞋</a></li>
+                    <li><a href="#">休閒鞋</a></li>
+                    <li><a href="#">平底鞋</a></li>
+                    <li><a href="#">跟鞋</a></li>
+                    <li><a href="#">涼鞋</a></li>
+                    <li><a href="#">娃娃鞋</a></li>
+                    <li><a href="#">鞋款</a></li>
+                    <li><a href="#">防水系列</a></li>
+                </ul>
+                <div class="commodity-menu-title Snowshoe" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    訂製雪靴
+                </div>
+                <ul class="commodity-menu-options collapse" id="multiCollapseExample2">
+                    <li><a href="#">迷你筒(16cm-18cm)</a></li>
+                    <li><a href="#">低筒(22cm-24cm)</a></li>
+                    <li><a href="#">中筒(26cm-28cm)</a></li>
+                    <li><a href="#">高筒(30cm-33cm)</a></li>                    
+                </ul>
+                <div class="commodity-other">
+                    配件
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="product-container-title">
+                <div class="product-container-lable">
+                    <a href="#">首頁</a>
+                    >
+                    <a href="#">所有商品</a>
+                </div>
+                <div class="product-container-sort">
+                    <p>排序</p>                    
+                    <p>進階篩選</p>
+                </div>
+            </div>
+            <div class="product-container-card">
+                <!-- <div class="commdity-card">
+                    <div class="commdity-card-internal">
+                        <div class="photo">
+                            <img src="" alt="">
+                        </div>
+                        <div class="commdity-card-body">
+                            <div class="commdity-card-title">
+
+                            </div>
+                            <div class="commdity-card-price">
+
+                            </div>
+                            <div class="commdity-card-button">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div> -->                
+                <div class="product-first">
+                    <img src="img/shoes-first.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>魚骨手工編織羅馬涼鞋</p>
+                            <p>| 牽手一起長大 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$4,280</span>
+                            <span>$2,480</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-second">
+                    <img src="img/shoes-second.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>繞帶坡跟魔鬼氈涼鞋</p>
+                            <p>| 微醺六月 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,980</span>
+                            <span>$2,280</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-third">
+                    <img src="img/shoes-third.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>幾何普普風尖頭平底鞋</p>
+                            <p>| 幾何萬花筒 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$2,680</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-fourth">
+                    <img src="img/shoes-fourth.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>寬帶二字平底軟涼鞋</p>
+                            <p>| 簡單卻不簡單 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,280</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-first">
+                    <img src="img/shoes-first.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>魚骨手工編織羅馬涼鞋</p>
+                            <p>| 牽手一起長大 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$4,280</span>
+                            <span>$2,480</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-second">
+                    <img src="img/shoes-second.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>繞帶坡跟魔鬼氈涼鞋</p>
+                            <p>| 微醺六月 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,980</span>
+                            <span>$2,280</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-third">
+                    <img src="img/shoes-third.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>幾何普普風尖頭平底鞋</p>
+                            <p>| 幾何萬花筒 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$2,680</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-fourth">
+                    <img src="img/shoes-fourth.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>寬帶二字平底軟涼鞋</p>
+                            <p>| 簡單卻不簡單 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,280</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-first">
+                    <img src="img/shoes-first.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>魚骨手工編織羅馬涼鞋</p>
+                            <p>| 牽手一起長大 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$4,280</span>
+                            <span>$2,480</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-second">
+                    <img src="img/shoes-second.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>繞帶坡跟魔鬼氈涼鞋</p>
+                            <p>| 微醺六月 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,980</span>
+                            <span>$2,280</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-third">
+                    <img src="img/shoes-third.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>幾何普普風尖頭平底鞋</p>
+                            <p>| 幾何萬花筒 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$2,680</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-fourth">
+                    <img src="img/shoes-fourth.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>寬帶二字平底軟涼鞋</p>
+                            <p>| 簡單卻不簡單 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,280</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-first">
+                    <img src="img/shoes-first.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>魚骨手工編織羅馬涼鞋</p>
+                            <p>| 牽手一起長大 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$4,280</span>
+                            <span>$2,480</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-second">
+                    <img src="img/shoes-second.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>繞帶坡跟魔鬼氈涼鞋</p>
+                            <p>| 微醺六月 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,980</span>
+                            <span>$2,280</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-third">
+                    <img src="img/shoes-third.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>幾何普普風尖頭平底鞋</p>
+                            <p>| 幾何萬花筒 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$2,680</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+                <div class="product-fourth">
+                    <img src="img/shoes-fourth.png" alt="">
+                    <div class="content">
+                        <div class="text">
+                            <p>寬帶二字平底軟涼鞋</p>
+                            <p>| 簡單卻不簡單 |</p>
+                        </div>
+                        <div class="price">
+                            <span>$3,280</span>
+                            <span>$1,980</span>
+                        </div>
+                    </div>
+                    <button>加入購物車</button>
+                </div>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li><a href="#"><i class="fas fa-caret-left"></i></a></li>
+                    <li><a href="#" class="page-number">1</a></li>
+                    <li><a href="#"><i class="fas fa-caret-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="site-footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="./img/30leather_logo.svg">
+                </div>
+
+                <hr>
+
+                <div class="col-md-12">
+                    <ul class="social-icons mb-0 row list-unstyled justify-content-center">
+                        <li><a class="line d-inline-block" href=""></a></li>
+
+                        <li><a class="facebook d-inline-block" href="https://www.facebook.com/30leather" target="_blank"></a></li>
+
+                        <li><a class="instagram d-inline-block" href="https://www.instagram.com/30leather/" target="_blank"></a></li>
+                    </ul>
+
+                    <div class="return-nav d-flex justify-content-end">
+                        <a href=""><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
+                                <div class="footer-arrow-text">TOP</div>
+                            </i></a>
+                    </div>
+
+                    <div class="common-problems row col-lg-12 col-md-3 col-sm-4 col-5">
+                        <ul class="row m-auto list-unstyled">
+                            <li class="list common-problem">常見問題</li>
+
+                            <li><a href="#" class="lists"></a>售前與售後服務</li>
+
+                            <li><a href="#" class="lists"></a>付款方式</li>
+
+                            <li><a href="#" class="lists"></a>寄送方式</li>
+
+                            <li><a href="#" class="lists"></a>退款流程</li>
+
+                            <li><a href="#" class="lists"></a>發票折讓</li>
+
+                            <li class="list"><a href="#" class="lists"></a>隱私權保護</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="copyright-space d-inline-block"></div>
+
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy; 三十革-臺灣手工鞋 All
+                Rights Reserved</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="./js/product-index.js"></script>
+</body>
+</html>

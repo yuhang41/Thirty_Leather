@@ -1,0 +1,204 @@
+@import '_style_guild.scss';
+*{
+    list-style: none;   
+    margin: 0px;
+    padding: 0px;
+    font-family: $font-Family-A;
+}
+@mixin shoes-content {
+    width: 275px;
+    height: 275px;
+    background-color: $color-White-opacity;
+    margin-bottom: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    img {
+        position: absolute;
+        width: 215px;
+        top: 0;
+        left: 27px;
+        transform: translateY(-60%);
+    }
+    .content {
+        .text {
+            p {
+                margin: 0px;
+                &:nth-child(1) {
+                    font-size: $H6-font-size;
+                    font-weight: lighter;
+                    letter-spacing: $font-letter-space-100;
+                    color: $color-IronGray;
+                    margin-bottom: 10px;
+                }
+                &:nth-child(2) {
+                    font-size: $H8-font-size;
+                    font-weight: normal;
+                    letter-spacing: $font-letter-space-100;
+                    color: $color-IronGray;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .price {
+            span {
+                &:nth-child(1) {
+                    font-size: $H9-font-size;
+                    font-weight: lighter;
+                    color: $color-Original-Price;
+                    text-decoration: line-through;
+                }
+                &:nth-child(2) {
+                    font-size: $H4-font-size;
+                    font-weight: bold;
+                    color: $color-Apricot;
+                }
+            }
+        }
+    }
+    button {
+        width: 235px;
+        height: 50px;
+        color: $color-IronGray;
+        background-color: unset;
+        border: 2px solid $color-MoreButton;
+        border-radius: 45px;
+        margin: 30px 0px 10px 0px;
+    }
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    // 左邊白色區塊的欄位
+    .commodity-menu{
+        max-width: 375px;
+        width: 100%;
+        padding-top: 100px;
+        .all-commodity{
+            max-width: 200px;
+            margin: auto;
+            width: 100%;
+            .commodity-menu-title{
+                cursor: pointer;
+                padding-left: 10px;
+                margin-bottom: 10px;
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;
+                &.AllCommodity::after{
+                    content:'\f077';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.AllCommodity.active::after{
+                    content:'\f078';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.Snowshoe::after{
+                    content:'\f078';                    
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.Snowshoe.active::after{
+                    content:'\f077';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+            }
+            .commodity-menu-options{
+                width: 70%;   
+                margin-left: auto;         
+                li{
+                    font-size: $H10-font-size;
+                    margin-bottom: 10px;
+                    a{
+                        color: $color-Nav-icon;
+                    }                    
+                }
+
+            }
+            .commodity-other{
+                cursor: pointer;
+                padding-left: 10px;
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;                
+            }
+        }
+    }
+    // 所有產品
+    .product-container{        
+        max-width: calc(100% - 375px);
+        width: 100%;
+        background: $color-LightGray;
+        padding-top: 85px;
+        padding-right: 11.5vw;
+        padding-left: 2.6vw;
+        .product-container-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .product-container-lable{
+                a{
+                    font-size: $H10-font-size;
+                    color: $color-IronGray;
+                }                
+            }
+            .product-container-sort{
+                display: flex;
+                p{                    
+                    margin: 0;
+                    margin: 0 20px;
+                    font-size: $H10-font-size;
+                    color: $color-IronGray;
+                }
+            }
+        }
+        .product-container-card{
+            width: 100%;
+            padding-left: 5.5vw;
+            padding-top: 100px;            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;  
+            .product-first {
+                @include shoes-content();
+            }
+            .product-second {
+                @include shoes-content();                    
+            }
+            .product-third {
+                @include shoes-content();                    
+            }
+            .product-fourth {
+                @include shoes-content();
+            }        
+        }
+        .pagination{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                max-width: 200px;
+                display: flex;
+                li{
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    a{                    
+                        color: $color-MiddleGray;
+                    }
+                    .page-number{
+                        font-size: $H6-font-size;
+                    }                         
+                }
+            }
+        }
+    }
+    
+}
