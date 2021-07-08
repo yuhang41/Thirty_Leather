@@ -28,7 +28,8 @@
   color: #ebeae5;
   font-size: 18px;
   font-weight: bold;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  outline: none;
   z-index: 2;
 }
 

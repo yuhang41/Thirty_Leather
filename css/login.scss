@@ -9,36 +9,37 @@
 .member-center {
     width: 100%;
     height: 1011px;
-    background-color: #ebeae5;
+    background-color: $color-LightGray;
 
     .m-center-index {
         font-size: 72px;
-        color: #ffffff;
+        color: $color-White;
     }
 
     .list-Group {
         .list-group-item {
             width: 170px;
             height: 60px;
-            background-color: #7a7573;
-            color: #ebeae5;
-            font-size: 18px;
+            background-color: $color-Footer-Background;
+            color: $color-LightGray;
+            font-size: $H7-font-size;
             font-weight: bold;
-            border: 1px solid black;
+            border-bottom: 1px solid black;
+            outline: none;
             z-index: 2;
 
             &:hover {
-                background-color: #7a7573;
-                color: #ebeae5;
+                background-color: $color-Footer-Background;
+                color: $color-LightGray;
             }
 
             &.active {
                 width: 205px;
-                background-color: #ffffff;
-                color: #8090a0;
+                background-color: $color-White;
+                color: $color-WedgwoodBlue;
                 font-weight: bold;
-                border-color: #86b2c4;
-                border-right: 18px solid #86b2c4;
+                border-color: $color-SkyBlue;
+                border-right: 18px solid $color-SkyBlue;
                 margin-left: -18px;
                 z-index: 2;
             }
@@ -61,38 +62,38 @@
         .member-data {
             width: 1140px;
             height: 100%;
-            background-color: #ffffff;
-            border: 1px solid #f7a269;
+            background-color: $color-White;
+            border: 1px solid $color-Apricot;
             position: relative;
 
             .fa-user {
-                font-size: 16px;
-                color: #8090a0;
+                font-size: $H8-font-size;
+                color: $color-WedgwoodBlue;
             }
 
             .user-id {
-                font-size: 14px;
+                font-size: $H10-font-size;
                 font-weight: bold;
-                color: #8090a0;
+                color: $color-WedgwoodBlue;
                 margin: 0px 16px;
             }
 
             .general-member {
                 width: 80px;
-                background-color: #f7a269;
-                font-size: 15px;
+                background-color: $color-Apricot;
+                font-size: $H9-font-size;
                 border-radius: 10px;
             }
 
             .User-edit {
-                color: #abbac9;
+                color: $color-MoreButton-hover;
 
                 .fa-pen {
-                    font-size: 18px;
+                    font-size: $H7-font-size;
                 }
 
                 .user-edit {
-                    font-size: 15px;
+                    font-size: $H9-font-size;
                 }
             }
 
@@ -101,63 +102,63 @@
 
                 .input-data {
                     height: 300px;
-                    border-bottom: 1px solid #abbac9;
+                    border-bottom: 1px solid $color-MoreButton-hover;
 
                     .label1 {
-                        font-size: 14px;
-                        color: #8090a0;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
                     }
 
                     .input {
                         width: 278px;
                         font-size: 22.75px;
                         border: none;
-                        border-bottom: 1px solid #8090a0;
+                        border-bottom: 1px solid $color-WedgwoodBlue;
                     }
 
                     .county,
                     .zipcode {
                         width: 65px;
                         height: 32px;
-                        font-size: 14px;
-                        color: #8090a0;
-                        border: 1px solid #8090a0;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
                     }
 
                     .district {
                         width: 65px;
                         height: 32px;
-                        font-size: 14px;
-                        color: #8090a0;
-                        border: 1px solid #8090a0;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
                         margin: 0px 20px;
                     }
 
                     .input1 {
                         width: 235px;
                         height: 32px;
-                        font-size: 14px;
-                        color: #8090a0;
-                        border: 1px solid #8090a0;
+                        font-size: $H10-font-size;
+                        color: $color-WedgwoodBlue;
+                        border: 1px solid $color-WedgwoodBlue;
                     }
 
                     .member-btn button {
                         height: 41px;
-                        border: 1px solid #a0a0a0;
-                        font-size: 14px;
-                        color: #444444;
+                        border: 1px solid $color-MoreButton;
+                        font-size: $H10-font-size;
+                        color: $color-IronGray;
                     }
 
                     .member-btn button:hover {
-                        background-color: #abbac9;
-                        color: #ffffff;
+                        background-color: $color-MoreButton-hover;
+                        color: $color-White;
                     }
                 }
             }
 
             .order-five {
                 font-size: 29.25px;
-                color: #8090a0;
+                color: $color-WedgwoodBlue;
             }
 
             .table-container {
@@ -165,11 +166,11 @@
 
                 .table {
                     height: 400px;
-                    font-size: 14px;
+                    font-size: $H10-font-size;
     
                     thead {
-                        background-color: #7a7573;
-                        color: #ebeae5;
+                        background-color: $color-Footer-Background;
+                        color: $color-LightGray;
                     }
     
                     td,
@@ -180,8 +181,8 @@
                     .order-number {
                         width: 128px;
                         height: 25px;
-                        background-color: #a0a0a0;
-                        color: #ffffff;
+                        background-color: $color-MoreButton;
+                        color: $color-White;
                         margin-top: 16px;
                     }
     
@@ -190,8 +191,8 @@
     
                         .checkInvoice {
                             height: 30px;
-                            background-color: #a0a0a0;
-                            color: #ffffff;
+                            background-color: $color-MoreButton;
+                            color: $color-White;
                         }
                     }
     
@@ -200,17 +201,17 @@
     
                         .return-infor {
                             height: 30px;
-                            background-color: #a0a0a0;
-                            color: #ffffff;
+                            background-color: $color-MoreButton;
+                            color: $color-White;
                         }
                     }
                 }
 
                 .table-icon a {
-                    color: #a0a0a0;
+                    color: $color-MoreButton;
     
                     &:hover {
-                        color: #f7a269;
+                        color: $color-Apricot;
                     }
                 }
             }
