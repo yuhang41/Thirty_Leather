@@ -1,15 +1,15 @@
 @import "_style_guild.scss";
+body {
+    margin: 0;
+    font-family: $font-Family-A;
+
+}
 
 .password-window {
     width: 789px;
     height: 377px;
     background-color: $color-White;
     border: 1px solid $color-Apricot;
-    position: absolute;
-    top: 15%;
-    left: calc(50% - 394.5px);
-    z-index: 3;
-    overflow: hidden;
 
     .input-data {
         margin: 0px;
@@ -26,10 +26,9 @@
 
             .input {
                 width: 90%;
-                font-size: $H9-font-size;
+                font-size: $H11-font-size;
                 border: none;
                 border-bottom: 1px solid $color-Nav-icon;
-                outline: none;
             }
 
             .modify-btn {
