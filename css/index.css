@@ -751,12 +751,72 @@ main .shoemaking .sew-img {
   position: relative;
 }
 
-main .shoemaking .sew-img img {
+main .shoemaking .sew-img #hand-line {
   height: 1597px;
   position: absolute;
   top: 325px;
   right: -20px;
   z-index: 2;
+}
+
+main .shoemaking .sew-img #hand-line .background-hand, main .shoemaking .sew-img #hand-line .background-line {
+  fill-opacity: 0;
+  stroke: #abbac9;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 4000;
+}
+
+main .shoemaking .sew-img #hand-line .background-hand {
+  -webkit-animation: hand 4s ease-in-out;
+          animation: hand 4s ease-in-out;
+}
+
+@-webkit-keyframes hand {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hand {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+main .shoemaking .sew-img #hand-line .background-line {
+  -webkit-animation: line 4s ease-in-out;
+          animation: line 4s ease-in-out;
+}
+
+@-webkit-keyframes line {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 main .shoes-video {
@@ -784,6 +844,12 @@ main .shoes-video img:nth-child(1) {
 }
 
 main .shoes-video img:nth-child(2) {
+  height: 707px;
+  border-left: 18px solid #f7a269;
+  z-index: 3;
+}
+
+main .shoes-video #knife {
   height: 820px;
   position: absolute;
   top: 125px;
@@ -792,10 +858,35 @@ main .shoes-video img:nth-child(2) {
           transform: rotate(-7deg);
 }
 
-main .shoes-video img:nth-child(3) {
-  height: 707px;
-  border-left: 18px solid #f7a269;
-  z-index: 3;
+main .shoes-video #knife .knife-line {
+  fill-opacity: 0;
+  stroke: #abbac9;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 4000;
+}
+
+main .shoes-video #knife .knife-line {
+  -webkit-animation: knife 4s ease-in-out;
+          animation: knife 4s ease-in-out;
+}
+
+@-webkit-keyframes knife {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes knife {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 main .new-product {

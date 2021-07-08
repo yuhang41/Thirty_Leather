@@ -520,14 +520,56 @@ main {
         }
         //縫線的 svg
         .sew-img {
-            position: relative;
-            img {
+            position: relative;            
+            #hand-line{
                 height: 1597px;
                 position: absolute;
                 top: 325px;
                 right: -20px;
                 z-index: 2;
+                .background-hand,.background-line{
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 3px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                    
+                }
+                .background-hand{
+                    animation: hand 4s ease-in-out;
+                }
+                @keyframes hand
+                {
+                    0%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    
+                    100%
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                .background-line{
+                    animation: line 4s ease-in-out;
+                }
+                @keyframes line
+                {
+                    0%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    50%
+                    {
+                        stroke-dashoffset: 4000;
+                    }
+                    100%
+                    {
+                        stroke-dashoffset: 0;
+                    }
+                }
             }
+            
         }
     }
     //影片
@@ -538,28 +580,52 @@ main {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-            img {
-                &:nth-child(1) {
-                    max-width: 66.4%;
-                    position: absolute;
-                    top: -320px;
-                    left: -8vw;
-                    border-right: 18px solid $color-Apricot;
-                    z-index: 2;
+        img {
+            &:nth-child(1) {
+                max-width: 66.4%;
+                position: absolute;
+                top: -320px;
+                left: -8vw;
+                border-right: 18px solid $color-Apricot;
+                z-index: 2;
+            }                
+            &:nth-child(2) {
+                height: 707px;
+                border-left: 18px solid $color-Apricot;
+                z-index: 3;
+            }
+            
+        }
+        #knife{
+            height: 820px;
+            position: absolute;
+            top: 125px;
+            left: -8vw;
+            transform: rotate(-7deg);
+            .knife-line{
+                fill-opacity: 0;
+                stroke: $color-Background-line;
+                stroke-width: 3px;
+                stroke-dashoffset: 0;
+                stroke-dasharray: 4000;
+                
+            }
+            .knife-line{
+                animation: knife 4s ease-in-out;
+            }
+            @keyframes knife
+            {
+                0%
+                {
+                    stroke-dashoffset: 4000;
                 }
-                &:nth-child(2) {
-                    height: 820px;
-                    position: absolute;
-                    top: 125px;
-                    left: -8vw;
-                    transform: rotate(-7deg);
-                }
-                &:nth-child(3) {
-                    height: 707px;
-                    border-left: 18px solid $color-Apricot;
-                    z-index: 3;
+                
+                100%
+                {
+                    stroke-dashoffset: 0;
                 }
             }
+        }            
     }
     //新品上市
     .new-product {
