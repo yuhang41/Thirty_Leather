@@ -17,9 +17,6 @@
     }
 
     .list-Group {
-        position: absolute;
-        left: 4vw;
-
         .list-group-item {
             width: 170px;
             height: 60px;
@@ -109,7 +106,6 @@
                     .label1 {
                         font-size: 14px;
                         color: #8090a0;
-                        margin-left: 3px;
                     }
 
                     .input {
@@ -117,17 +113,6 @@
                         font-size: 22.75px;
                         border: none;
                         border-bottom: 1px solid #8090a0;
-                    }
-
-                    .label2 {
-                        font-size: 14px;
-                        color: #8090a0;
-                        margin-left: 2px;
-                    }
-
-                    .label3 {
-                        font-size: 14px;
-                        color: #8090a0;
                     }
 
                     .county,

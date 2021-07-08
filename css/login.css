@@ -21,11 +21,6 @@
   color: #ffffff;
 }
 
-.member-center .list-Group {
-  position: absolute;
-  left: 4vw;
-}
-
 .member-center .list-Group .list-group-item {
   width: 170px;
   height: 60px;
@@ -118,7 +113,6 @@
 .member-center .tab-contents .member-data .member-container .input-data .label1 {
   font-size: 14px;
   color: #8090a0;
-  margin-left: 3px;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .input {
@@ -126,17 +120,6 @@
   font-size: 22.75px;
   border: none;
   border-bottom: 1px solid #8090a0;
-}
-
-.member-center .tab-contents .member-data .member-container .input-data .label2 {
-  font-size: 14px;
-  color: #8090a0;
-  margin-left: 2px;
-}
-
-.member-center .tab-contents .member-data .member-container .input-data .label3 {
-  font-size: 14px;
-  color: #8090a0;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .county,

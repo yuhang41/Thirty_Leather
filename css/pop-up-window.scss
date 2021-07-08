@@ -13,6 +13,7 @@ body {
     top: 15%;
     left: calc(50% - 394.5px);
     z-index: 3;
+    overflow: hidden;
 
     .input-data {
         margin: 0px;
@@ -29,9 +30,10 @@ body {
 
             .input {
                 width: 90%;
-                font-size: $H11-font-size;
+                font-size: $H9-font-size;
                 border: none;
                 border-bottom: 1px solid $color-Nav-icon;
+                outline: none;
             }
 
             .modify-btn {
