@@ -611,8 +611,9 @@ main {
             img {
                 position: absolute;
                 width: 215px;
-                top: -70px;
+                top: 0;
                 left: 27px;
+                transform: translateY(-60%);
             }
             .content {
                 .text {
@@ -677,16 +678,10 @@ main {
                     @include shoes-content();
                 }
                 .product-second {
-                    @include shoes-content();
-                    img {
-                        top: -100px;
-                    }
+                    @include shoes-content();                    
                 }
                 .product-third {
-                    @include shoes-content();
-                    img {
-                        top: -50px;
-                    }
+                    @include shoes-content();                    
                 }
                 .product-fourth {
                     @include shoes-content();

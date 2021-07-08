@@ -894,8 +894,10 @@ main .new-product .container .product-item .product-first {
 main .new-product .container .product-item .product-first img {
   position: absolute;
   width: 215px;
-  top: -70px;
+  top: 0;
   left: 27px;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 
 main .new-product .container .product-item .product-first .content .text p {
@@ -966,8 +968,10 @@ main .new-product .container .product-item .product-second {
 main .new-product .container .product-item .product-second img {
   position: absolute;
   width: 215px;
-  top: -70px;
+  top: 0;
   left: 27px;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 
 main .new-product .container .product-item .product-second .content .text p {
@@ -1013,10 +1017,6 @@ main .new-product .container .product-item .product-second button {
   margin: 30px 0px 10px 0px;
 }
 
-main .new-product .container .product-item .product-second img {
-  top: -100px;
-}
-
 main .new-product .container .product-item .product-third {
   width: 275px;
   height: 306px;
@@ -1042,8 +1042,10 @@ main .new-product .container .product-item .product-third {
 main .new-product .container .product-item .product-third img {
   position: absolute;
   width: 215px;
-  top: -70px;
+  top: 0;
   left: 27px;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 
 main .new-product .container .product-item .product-third .content .text p {
@@ -1089,10 +1091,6 @@ main .new-product .container .product-item .product-third button {
   margin: 30px 0px 10px 0px;
 }
 
-main .new-product .container .product-item .product-third img {
-  top: -50px;
-}
-
 main .new-product .container .product-item .product-fourth {
   width: 275px;
   height: 306px;
@@ -1118,8 +1116,10 @@ main .new-product .container .product-item .product-fourth {
 main .new-product .container .product-item .product-fourth img {
   position: absolute;
   width: 215px;
-  top: -70px;
+  top: 0;
   left: 27px;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
 }
 
 main .new-product .container .product-item .product-fourth .content .text p {
