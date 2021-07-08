@@ -1,0 +1,531 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  list-style: none;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+main {
+  padding-left: 19.267vw;
+}
+
+main .product-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ebeae5;
+}
+
+main .product-container .productshop-container {
+  padding-top: 9vh;
+  padding-left: 2vh;
+}
+
+main .product-container .productshop-container .breadcrumbs {
+  padding-left: 1vw;
+  margin-bottom: 20px;
+}
+
+main .product-container .productshop-container .breadcrumbs .bread-label a {
+  color: #444444;
+}
+
+main .product-container .productshop-container .commidity-container {
+  max-width: 1200px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .product-container .productshop-container .commidity-container .swiper {
+  max-width: 600.353px;
+  max-height: 789.17px;
+  position: relative;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-button-next {
+  position: absolute;
+  right: -5vw;
+  top: 40%;
+  color: #7b8ca2;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-button-prev {
+  position: absolute;
+  left: -5vw;
+  top: 40%;
+  color: #7b8ca2;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .product-container .productshop-container .commidity-container .swiper body {
+  background: #000;
+  color: #000;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .mySwiper {
+  height: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 30px;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+main .product-container .productshop-container .commidity-container .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail {
+  max-width: 424.94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info {
+  min-height: 631px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #808e9e;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .discript-title {
+  margin-bottom: 10px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .discript-title p {
+  margin: 0px;
+  font-size: 36px;
+  color: #7b8ca2;
+  letter-spacing: 3.2px;
+  font-weight: bold;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation .star-eval {
+  color: #e08549;
+  font-size: 18px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation .other-eavl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation .other-eavl i {
+  color: #7b8ca2;
+  margin-right: 10px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation .other-eavl p {
+  padding: 0px 20px;
+  font-size: 14px;
+  letter-spacing: 3.2px;
+  color: #444444;
+  margin: 0px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .evaluation .other-eavl p:nth-child(2) {
+  border-left: 1px solid #7b8ca2;
+  border-right: 1px solid #7b8ca2;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .content .order-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .content .order-text i {
+  margin-right: 10px;
+  line-height: 26px;
+  font-size: 12px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-discript .content .order-text p {
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  margin: 0px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color {
+  max-width: 336.7px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-title {
+  margin-bottom: 25.42px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-title span:nth-child(1) {
+  font-size: 24px;
+  color: #444444;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  margin-right: 10px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-title span:nth-child(2) {
+  font-size: 12px;
+  color: #7b8ca2;
+  letter-spacing: 1.6px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button:nth-child(1) {
+  background-color: #77170a;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button:nth-child(2) {
+  background-color: #1d2335;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button:nth-child(3) {
+  background-color: #a8673a;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button:nth-child(4) {
+  background-color: #dbd0bd;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button:nth-child(5) {
+  background-color: #e4e6eb;
+  border: 1px solid #a0a0a0;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size {
+  max-width: 336.7px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-title {
+  margin-bottom: 5px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-title span:nth-child(1) {
+  font-size: 24px;
+  color: #444444;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  margin-right: 10px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-title span:nth-child(2) {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444444;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .small-size ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .small-size ul li {
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .small-size ul li:hover {
+  background-color: #9e9e9e;
+  border-radius: 5px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .bigger-size ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .bigger-size ul li {
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .bigger-size ul li:hover {
+  background-color: #9e9e9e;
+  border-radius: 5px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping {
+  width: 100%;
+  min-height: 156.19px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button button:hover {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #abbac9;
+  border: 1px solid #abbac9;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .putcart {
+  width: 135px;
+  height: 43px;
+  background-color: unset;
+  border: 1px solid #a0a0a0;
+  color: #444444;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .pre-order {
+  width: 70px;
+  height: 43px;
+  background-color: unset;
+  border: 1px solid #a0a0a0;
+  color: #444444;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount .minus {
+  width: 45px;
+  height: 40px;
+  background-color: unset;
+  border: none;
+  font-size: 21px;
+  color: #65737f;
+  font-weight: unset;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount .minus:hover {
+  color: #ffffff;
+  background-color: #abbac9;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input {
+  width: 60px;
+  height: 40px;
+  border: none;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount .plus {
+  width: 45px;
+  height: 40px;
+  background-color: unset;
+  border: none;
+  font-size: 21px;
+  color: #65737f;
+  font-weight: unset;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount .plus:hover {
+  color: #ffffff;
+  background-color: #abbac9;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price p {
+  margin: 0px;
+  padding: 0px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price p:nth-child(1) {
+  font-size: 21px;
+  color: #7f7f7f;
+  letter-spacing: 0.8px;
+  text-decoration: line-through;
+  margin-right: 20px;
+}
+
+main .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price p:nth-child(2) {
+  font-size: 60px;
+  letter-spacing: 0.8px;
+  color: #e08549;
+  line-height: 60px;
+}
+
+main .product-container .productdetail-container .detail-container .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .product-container .productdetail-container .detail-container .tabs .tab {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+main .product-container .productdetail-container .detail-container .tabs-contents {
+  position: relative;
+}
+
+main .product-container .productdetail-container .detail-container .tabs-contents .tab-c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  color: black;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+main .product-container .productdetail-container .detail-container .tabs-contents .tab-c.active {
+  opacity: 1;
+}
+/*# sourceMappingURL=product-detail.css.map */

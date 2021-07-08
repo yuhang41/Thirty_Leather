@@ -3,16 +3,16 @@
           box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .password-window {
   width: 789px;
   height: 377px;
   background-color: #ffffff;
   border: 1px solid #f7a269;
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 394.5px);
+  z-index: 3;
+  overflow: hidden;
 }
 
 .password-window .input-data {
@@ -32,9 +32,10 @@ body {
 
 .password-window .input-data .input-block .input {
   width: 90%;
-  font-size: 12px;
+  font-size: 15px;
   border: none;
   border-bottom: 1px solid #65737f;
+  outline: none;
 }
 
 .password-window .input-data .input-block .modify-btn {

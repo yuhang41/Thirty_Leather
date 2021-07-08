@@ -21,11 +21,6 @@
   color: #ffffff;
 }
 
-.member-center .list-Group {
-  position: absolute;
-  left: 4vw;
-}
-
 .member-center .list-Group .list-group-item {
   width: 170px;
   height: 60px;
@@ -33,7 +28,8 @@
   color: #ebeae5;
   font-size: 18px;
   font-weight: bold;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  outline: none;
   z-index: 2;
 }
 
@@ -118,7 +114,6 @@
 .member-center .tab-contents .member-data .member-container .input-data .label1 {
   font-size: 14px;
   color: #8090a0;
-  margin-left: 3px;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .input {
@@ -126,17 +121,7 @@
   font-size: 22.75px;
   border: none;
   border-bottom: 1px solid #8090a0;
-}
-
-.member-center .tab-contents .member-data .member-container .input-data .label2 {
-  font-size: 14px;
-  color: #8090a0;
-  margin-left: 2px;
-}
-
-.member-center .tab-contents .member-data .member-container .input-data .label3 {
-  font-size: 14px;
-  color: #8090a0;
+  outline: none;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .county,
@@ -163,6 +148,7 @@
   font-size: 14px;
   color: #8090a0;
   border: 1px solid #8090a0;
+  outline: none;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .member-btn button {
@@ -229,11 +215,13 @@
   color: #ffffff;
 }
 
-.member-center .tab-contents .member-data .table-container .table-icon a {
+.member-center .tab-contents .member-data .table-container .table-icon button {
+  background-color: white;
   color: #a0a0a0;
+  border: none;
 }
 
-.member-center .tab-contents .member-data .table-container .table-icon a:hover {
+.member-center .tab-contents .member-data .table-container .table-icon button:hover {
   color: #f7a269;
 }
 /*# sourceMappingURL=login.css.map */
