@@ -1,16 +1,14 @@
-*{
-    box-sizing: border-box;
-}
-
+@import "_style_guild.scss";
 body {
     margin: 0;
+    font-family: $font-Family-A;
 }
 
 .password-window {
     width: 789px;
     height: 377px;
-    background-color: #ffffff;
-    border: 1px solid #f7a269;
+    background-color: $color-White;
+    border: 1px solid $color-Apricot;
 
     .input-data {
         margin: 0px;
@@ -18,26 +16,27 @@ body {
 
         .input-block {
             height: 300px;
-            border-right: 1px solid #65737f;
+            border-right: 1px solid $color-Nav-icon;
 
             .modify-title {
-                font-size: 18px; color: #65737f;
+                font-size: $H7-font-size;
+                color: $color-Nav-icon;
             }
 
             .input {
                 width: 90%;
-                font-size: 12px;
+                font-size: $H11-font-size;
                 border: none;
-                border-bottom: 1px solid #65737f;
+                border-bottom: 1px solid $color-Nav-icon;
             }
 
             .modify-btn {
                 width: 180px;
                 border-radius: 5px;
-                background-color: #ffffff;
-                border: 1px solid #65737f;
+                background-color: $color-White;
+                border: 1px solid $color-Nav-icon;
                 font-size: 18px;
-                color: #65737f;
+                color: $color-Nav-icon;
             }
         }
 
@@ -45,12 +44,12 @@ body {
             width: 40px;
             height:40px;
             border: none;
-            background-color: #65737f;
-            color: #ffffff;
+            background-color: $color-Nav-icon;
+            color: $color-White;
         }
 
         .safe-validate {
-            font-size: 18px; color: #65737f;
+            font-size: $H7-font-size; color: $color-Nav-icon;
         }
 
         .lock-img {
