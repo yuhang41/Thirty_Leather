@@ -1,18 +1,6 @@
 AOS.init({
     duration: 1200,
   })
- //左邊白色區域 
-  let AllCommodity = document.querySelector('.AllCommodity');
-  let Snowshoe = document.querySelector('.Snowshoe');
-  
-  function AllCommodityHandler(){
-      AllCommodity.classList.toggle('active');
-  }
-  function SnowshoeHandler(){
-      Snowshoe.classList.toggle('active');
-  }
-  AllCommodity.addEventListener('click',AllCommodityHandler);
-  Snowshoe.addEventListener('click',SnowshoeHandler);
 // Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -79,4 +67,43 @@ $(".click-button").each(function (index) {
           .eq(index)
           .toggleClass("active");
   });
+});
+ 
+//development-process-swiper
+ let development_steps=['初登場','開發','合作廠商','結語']
+ var swiper3 = new Swiper(".mySwiper3", {
+   slidesPerView: 'auto',
+   spaceBetween: 30, 
+   watchSlidesVisibility: true,
+    watchSlidesProgress: true,   
+   navigation: {
+     nextEl: ".button-next",      
+   },
+   pagination: {
+     el: ".pagination-next",
+     clickable: true,
+     renderBullet: function (index, className) {
+       return '<span class="' + className + '">' + '<p>' +development_steps[index]+ '</p>'+ "</span>";
+     },
+   },
+   thumbs: {
+    swiper: swiper4,
+  },  
+ });
+ var swiper4 = new Swiper(".mySwiper4", {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".button-next",      
+  },
+  pagination: {
+    el: ".pagination-next",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + '<p>' +development_steps[index]+ '</p>'+ "</span>";
+    },
+  },
+  thumbs: {
+    swiper: swiper3,
+  },
 });
