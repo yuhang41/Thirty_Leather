@@ -447,14 +447,18 @@ main{
             }
         }
         .productdetail-container{
+            width: 100%;
+            padding: 100px 0px;
+            padding-left: 3.6vw;
             .detail-container{
                 .tabs{
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
                     .tab{
-                        margin: 0px 10px;
+                        margin: 0px 10px;                        
                         cursor: pointer;
-                    }
-                    
+                    }                    
                 }
                 .tabs-contents{
                     position: relative;
@@ -469,6 +473,17 @@ main{
                         transition: opacity 1s;
                         &.active{
                             opacity: 1;
+                        }
+                    }
+                    .development-process{                        
+                        .inner-content{
+                            display: flex;
+                            .development-process-content{
+                                flex: 0 0 45%;
+                            }
+                            .development-process-swiper{
+                                flex: 0 0 55%;
+                            }
                         }
                     }
                 }
