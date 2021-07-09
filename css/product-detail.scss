@@ -2,11 +2,19 @@
 *{
     list-style: none;   
     margin: 0px;
+    padding: 0px;
     font-family: $font-Family-A;
     scroll-behavior: smooth;
     &:focus{
         outline: none;
     }
+}
+//尺碼建議 p 樣式
+@mixin size-discript-p{
+    font-size: $H9-font-size;
+    line-height: 26px;
+    letter-spacing: $font-letter-space-50;
+    color:$color-IronGray;
 }
 body{
     scroll-behavior: smooth;
@@ -51,8 +59,8 @@ main{
                 }
             }
             .commodity-menu-options{
-                width: 70%;   
-                margin-left: auto;         
+                width: 70%; 
+                margin-left: 60px;          
                 li{
                     font-size: $H10-font-size;
                     margin-bottom: 10px;
@@ -76,14 +84,14 @@ main{
         min-height: 100vh;
         // 商品資訊
         .productshop-container{
-            padding-top: 9vh;
-            padding-left: 2vh;
+            padding-top: 85px;
+            padding-left: 2.6vw;
             background: $color-LightGray;
             .breadcrumbs{
-                padding-left: 1vw;
                 margin-bottom: 20px;
                 .bread-label{
                     a{
+                        font-size: $H10-font-size;
                         color: $color-IronGray;
                     }
                 }
@@ -468,7 +476,9 @@ main{
         .productdetail-container{
             background: $color-LightGray;
             .detail-container{
-                max-width: 1200px;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
                 margin: auto;
                 display: flex;
                 flex-direction: column;
@@ -476,16 +486,14 @@ main{
                 .tabs{
                     display: flex;
                     .tab{
-                        margin: 0px 10px;
                         cursor: pointer;
                         font-size: $H5-font-size;
                         letter-spacing: $font-letter-space-50;
-                        padding: 0px 15px;
                         margin-top: 40px;
-                        
+                        padding: 0px 35px;
                         &:nth-child(2){
                             border-right: 1px solid $color-Product-Detail-Title;
-                            border-left: 1px solid $color-Product-Detail-Title;
+                            border-left: 1px solid $color-Product-Detail-Title;  
                         }
                         &.active{
                             position: relative;
@@ -493,7 +501,7 @@ main{
                                 content: "";
                                 position: absolute;
                                 bottom:0px;
-                                left: 15px;
+                                left: 35px;
                                 width: 100px;
                                 height: 1px;
                                 background-color: $color-Evaluation-Star;
@@ -506,40 +514,50 @@ main{
                                 content: "";
                                 position: absolute;
                                 bottom:0px;
-                                left: 15px;
+                                left: 35px;
                                 width: 100px;
                                 height: 1px;
                                 background-color: $color-Evaluation-Star;
                             }
                         }
                     }
-                    
                 }
                 .tabs-contents{
-                    max-width: 890px;
+                    position: relative;
                     margin: auto;
                     margin-top: 20px;
                     display: flex;
                     .tab-c{
-                        display: none;
+                        // display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
                         width: 100%;
                         height: auto;
                         color: black;
                         transition:display 1s;
                         &.active{
-                            display: block;
+                            // display: block;
+                            opacity: 1;
+                            position: static;
                             transition: display 1s;
                         }
                     }
+                    // 商品詳細描述
                     .product-description{
+                       
                         .inner-content{
+                            margin-top: 30px;
                             .paragraph-first{
+                                max-width: 890px;
                                 text-align: justify;
                                 font-size: $H9-font-size;
                                 letter-spacing: $font-letter-space-100;
                                 line-height: 28px;
                             }
                             .paragraph-second{
+                                max-width: 890px;
                                 text-align: justify;
                                 font-size: $H9-font-size;
                                 letter-spacing: $font-letter-space-100;
@@ -957,6 +975,200 @@ main{
                                     
                                 }
                                 
+                            }
+                        }
+                    }
+                    // 開發過程
+                    .development-process{  
+                        min-height: 969px;                 
+                        .inner-content{
+                            display: flex;
+                            margin-top: 40px;
+                            .development-process-content{
+                                flex: 0 0 50%;
+                                .swiper-container{
+                                    width: 600px;
+                                    .swiper-wrapper{
+                                        .swiper-slide{
+                                            .development-process-title{
+                                                margin-bottom: 20px;
+                                                p{
+                                                    display: inline-block;
+                                                    color: $color-Evaluation-Star;
+                                                    font-size: $H7-font-size;
+                                                    border-bottom: 1px solid $color-Evaluation-Star;
+                                                }
+                                                h2{                                            
+                                                    font-size: $H3-font-size;
+                                                    font-weight: $font-Weight-B;
+                                                    margin:0;                                                                                        
+                                                }
+                                            }
+                                            .development-process-list{
+                                                margin-bottom: 20px;
+                                                p{
+                                                    color: $color-Product-Detail-Title;
+                                                    font-size: $H7-font-size;
+                                                    font-weight: $font-Weight-B;
+                                                    letter-spacing: $font-letter-space-100;
+                                                    line-height: 30px;
+                                                    margin: 0;                                                    
+                                                }                                                
+                                            }
+                                            .development-process-text{
+                                                p{
+                                                    margin-bottom: 20px;
+                                                    font-size: $H9-font-size;
+                                                    line-height: 26px;
+                                                    letter-spacing: $font-letter-space-50;
+                                                }
+                                            }
+                                        }
+                                    }                                                                    
+                                }                                
+                            }
+                            .development-process-swiper{
+                                flex: 0 0 55%;
+                                padding-left: 20px;
+                                overflow-x: hidden;
+                                .swiper-container {
+                                    width: 900px;
+                                    height: 640px;
+                                    margin-bottom: 50px;
+                                }
+                            
+                                .swiper-slide {
+                                    text-align: center;
+                                    font-size: 18px;
+                                    background: #fff;
+                                    width: 640px;
+                                    /* Center slide text vertically */
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    -webkit-justify-content: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    -webkit-align-items: center;
+                                    align-items: center;
+                                }
+                            
+                                .swiper-slide img {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        .swiper-step{
+                            width: 100%;                            
+                            display: flex;
+                            justify-content: flex-end;
+                            .swiper-step-button{
+                                flex:0 0 48%;
+                                display: flex;
+                                justify-content: space-between;
+                                .pagination-next{
+                                    position: relative;
+                                    flex: 0 0 85%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    .swiper-pagination-bullet{
+                                        position: relative;
+                                        z-index: 2;
+                                        background: $color-IronGray;
+                                        border-radius: 0px;
+                                        opacity: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        p{
+                                            position: absolute;
+                                            top:20px;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            white-space:nowrap;                                          
+                                        }
+                                        &.swiper-pagination-bullet-active{
+                                            color:$color-Evaluation-Star;
+                                            background: $color-Evaluation-Star;
+                                        }                                        
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translate(0,-50%);                                        
+                                        width: 100%;
+                                        height: 2px;                       
+                                        background: $color-IronGray;
+                                    }
+                                }
+                                .button-next{
+                                    text-align: center;
+                                    flex: 0 0 10%;                                    
+                                }
+                            }
+                        }
+                    }
+                    // 尺碼建議
+                    .size-recommendation{
+                        min-height: 700px;
+                        .inner-content{
+                            max-width: 550px;
+                            .announcement{
+                                margin-top: 30px;
+                                border-bottom: 1px solid $color-WedgwoodBlue;
+                                p{
+                                    font-size: $H6-font-size;
+                                    line-height: 26px;
+                                    color: $color-Evaluation-Star;
+                                    letter-spacing: $font-letter-space-50;
+                                }
+                            }
+                            .size-discript{
+                                margin-top: 20px;
+                                .discript-content{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin-bottom: 35px;
+                                    .title{
+                                        font-size: $H6-font-size;
+                                        line-height: 26px;
+                                        color: $color-Evaluation-Star;
+                                        letter-spacing: $font-letter-space-50;
+                                        margin-bottom: 20px;
+                                    }
+                                    .content{
+                                        max-width: 425px;
+                                       @include size-discript-p();
+                                    }
+                                }
+                                .tryon-experience{
+                                    .staff{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        margin-bottom: 35px;
+                                        .staff-name{
+                                            @include size-discript-p();
+                                        }
+                                        .staff-exp{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            text-align: center;
+                                            @include size-discript-p();
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
