@@ -18,6 +18,22 @@ var swiper = new Swiper(".mySwiper", {
       swiper: swiper,
     },
   });
+  //development-process-swiper
+  let development_steps=['初登場','開發','合作廠商','結語']
+  var swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 'auto',
+    spaceBetween: 30,    
+    navigation: {
+      nextEl: ".button-next",      
+    },
+    pagination: {
+      el: ".pagination-next",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '<p>' +development_steps[index]+ '</p>'+ "</span>";
+      },
+    },  
+  });
 
 //tab切換分頁
 

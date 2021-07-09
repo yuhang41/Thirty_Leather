@@ -72,6 +72,7 @@ main{
         background: $color-LightGray;
         .productshop-container{
             padding-top: 85px;
+            padding-bottom: 50px;
             padding-left: 2.6vw;
             .breadcrumbs{
                 padding-left: 1vw;
@@ -446,8 +447,20 @@ main{
                 }
             }
         }
-        .productdetail-container{
+        .divider{
             width: 100%;
+            display: flex;
+            justify-content: center;            
+            p{
+                margin: 0;
+                max-width: 1300px;
+                width: 100%;
+                height: 1px;
+                background: $color-Cart-Border;
+            }
+        }
+        .productdetail-container{
+            width: 100%;            
             padding: 100px 0px;
             padding-left: 3.6vw;
             .detail-container{
@@ -462,6 +475,7 @@ main{
                 }
                 .tabs-contents{
                     position: relative;
+                    padding-top: 50px;
                     .tab-c{
                         position: absolute;
                         top: 0;
@@ -472,6 +486,7 @@ main{
                         color: black;
                         transition: opacity 1s;
                         &.active{
+                            position: static;
                             opacity: 1;
                         }
                     }
@@ -480,9 +495,135 @@ main{
                             display: flex;
                             .development-process-content{
                                 flex: 0 0 45%;
+                                padding-right: 20px;
+                                .swiper-container{
+                                    .swiper-wrapper{
+                                        .swiper-slide{
+                                            .development-process-title{
+                                                margin-bottom: 20px;
+                                                p{
+                                                    display: inline-block;
+                                                    color: $color-Evaluation-Star;
+                                                    font-size: $H7-font-size;
+                                                    border-bottom: 1px solid $color-Evaluation-Star;
+                                                }
+                                                h2{                                            
+                                                    font-size: $H3-font-size;
+                                                    font-weight: $font-Weight-B;
+                                                    margin:0;                                                                                        
+                                                }
+                                            }
+                                            .development-process-list{
+                                                margin-bottom: 20px;
+                                                p{
+                                                    color: $color-Product-Detail-Title;
+                                                    font-size: $H7-font-size;
+                                                    font-weight: $font-Weight-B;
+                                                    letter-spacing: $font-letter-space-100;
+                                                    line-height: 30px;
+                                                    margin: 0;                                                    
+                                                }                                                
+                                            }
+                                            .development-process-text{
+                                                p{
+                                                    margin-bottom: 20px;
+                                                    font-size: $H9-font-size;
+                                                    line-height: 26px;
+                                                    letter-spacing: $font-letter-space-50;
+                                                }
+                                            }
+                                        }
+                                    }                                                                    
+                                }                                
                             }
                             .development-process-swiper{
                                 flex: 0 0 55%;
+                                padding-left: 20px;
+                                overflow: hidden;
+                                .swiper-container {
+                                    width: 100%;
+                                    height: 640px;
+                                    margin-bottom: 50px;
+                                }
+                            
+                                .swiper-slide {
+                                    text-align: center;
+                                    font-size: 18px;
+                                    background: #fff;
+                                    width: 640px;
+                                    /* Center slide text vertically */
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    -webkit-justify-content: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    -webkit-align-items: center;
+                                    align-items: center;
+                                }
+                            
+                                .swiper-slide img {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        .swiper-step{
+                            width: 100%;                            
+                            display: flex;
+                            justify-content: flex-end;
+                            .swiper-step-button{
+                                flex:0 0 55%;
+                                padding-left: 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                .pagination-next{
+                                    position: relative;
+                                    flex: 0 0 80%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    .swiper-pagination-bullet{
+                                        position: relative;
+                                        z-index: 2;
+                                        background: $color-IronGray;
+                                        border-radius: 0px;
+                                        opacity: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        p{
+                                            position: absolute;
+                                            top:20px;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            white-space:nowrap;                                          
+                                        }
+                                        &.swiper-pagination-bullet-active{
+                                            color:$color-Evaluation-Star;
+                                            background: $color-Evaluation-Star;
+                                        }                                        
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translate(0,-50%);                                        
+                                        width: 100%;
+                                        height: 2px;                       
+                                        background: $color-IronGray;
+                                    }
+                                }
+                                .button-next{
+                                    text-align: center;
+                                    flex: 0 0 20%;                                    
+                                }
                             }
                         }
                     }
