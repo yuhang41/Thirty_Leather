@@ -28,6 +28,7 @@
   color: #ebeae5;
   font-size: 18px;
   font-weight: bold;
+  letter-spacing: 3.2px;
   border-bottom: 1px solid black;
   outline: none;
   z-index: 2;
@@ -68,7 +69,6 @@
   height: 100%;
   background-color: #ffffff;
   border: 1px solid #f7a269;
-  position: relative;
 }
 
 .member-center .tab-contents .member-data .fa-user {
@@ -78,7 +78,6 @@
 
 .member-center .tab-contents .member-data .user-id {
   font-size: 14px;
-  font-weight: bold;
   color: #8090a0;
   margin: 0px 16px;
 }
@@ -108,12 +107,13 @@
 
 .member-center .tab-contents .member-data .member-container .input-data {
   height: 300px;
-  border-bottom: 1px solid #abbac9;
+  border-bottom: 2px solid #abbac9;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .label1 {
   font-size: 14px;
   color: #8090a0;
+  letter-spacing: 3.2px;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .input {
@@ -154,8 +154,10 @@
 .member-center .tab-contents .member-data .member-container .input-data .member-btn button {
   height: 41px;
   border: 1px solid #a0a0a0;
-  font-size: 14px;
+  font-size: 19.5px;
+  letter-spacing: 3.2px;
   color: #444444;
+  line-height: 10px;
 }
 
 .member-center .tab-contents .member-data .member-container .input-data .member-btn button:hover {
@@ -173,7 +175,6 @@
 }
 
 .member-center .tab-contents .member-data .table-container .table {
-  height: 400px;
   font-size: 14px;
 }
 
@@ -182,41 +183,19 @@
   color: #ebeae5;
 }
 
-.member-center .tab-contents .member-data .table-container .table td,
-.member-center .tab-contents .member-data .table-container .table th {
-  border-top: none;
-}
-
-.member-center .tab-contents .member-data .table-container .table .order-number {
-  width: 128px;
-  height: 25px;
-  background-color: #a0a0a0;
-  color: #ffffff;
-  margin-top: 16px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .check {
-  padding-top: 12px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .check .checkInvoice {
-  height: 30px;
+.member-center .tab-contents .member-data .table-container .table .orderNumber {
+  width: 120px;
   background-color: #a0a0a0;
   color: #ffffff;
 }
 
-.member-center .tab-contents .member-data .table-container .table .return {
-  padding-top: 12px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .return .return-infor {
-  height: 30px;
+.member-center .tab-contents .member-data .table-container .table .checkInvoice, .member-center .tab-contents .member-data .table-container .table .returnInfor {
   background-color: #a0a0a0;
   color: #ffffff;
 }
 
 .member-center .tab-contents .member-data .table-container .table-icon button {
-  background-color: white;
+  background-color: #ffffff;
   color: #a0a0a0;
   border: none;
 }

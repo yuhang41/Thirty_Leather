@@ -103,23 +103,23 @@ main .chatbot.active .more-button-list {
 }
 
 main .chatbot.active .more-button-list-item {
-  -webkit-animation: fadeInItem .6s .2s forwards;
-          animation: fadeInItem .6s .2s forwards;
+  -webkit-animation: fadeInItem 0.6s 0.2s forwards;
+          animation: fadeInItem 0.6s 0.2s forwards;
 }
 
 main .chatbot.active .more-button-list-item:nth-child(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 main .chatbot.active .more-button-list-item:nth-child(3) {
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 main .chatbot.active .more-button-list-item:nth-child(4) {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 main .chatbot.active .more-button {
@@ -139,8 +139,8 @@ main .more-button {
   border: none;
   padding: 0;
   cursor: pointer;
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,8 +172,8 @@ main .more-button-list {
           transform: scale(0);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transition: all .3s ease .1s;
-  transition: all .3s ease .1s;
+  -webkit-transition: all 0.3s ease 0.1s;
+  transition: all 0.3s ease 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -759,7 +759,8 @@ main .shoemaking .sew-img #hand-line {
   z-index: 2;
 }
 
-main .shoemaking .sew-img #hand-line .background-hand, main .shoemaking .sew-img #hand-line .background-line {
+main .shoemaking .sew-img #hand-line .background-hand,
+main .shoemaking .sew-img #hand-line .background-line {
   fill-opacity: 0;
   stroke: #abbac9;
   stroke-width: 3px;
@@ -1472,6 +1473,7 @@ main .studio-information .try-on-infor {
 
 main .studio-information .try-on-infor .try-on {
   font-size: 56px;
+  letter-spacing: 1.6px;
   height: 72px;
   margin-bottom: 12px;
 }
@@ -1486,6 +1488,7 @@ main .studio-information .try-on-infor .detail {
 
 main .studio-information .try-on-infor .infor {
   font-size: 56px;
+  letter-spacing: 1.6px;
 }
 
 main .studio-information .contact-head ul {
