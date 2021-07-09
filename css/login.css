@@ -175,7 +175,6 @@
 }
 
 .member-center .tab-contents .member-data .table-container .table {
-  height: 400px;
   font-size: 14px;
 }
 
@@ -184,41 +183,19 @@
   color: #ebeae5;
 }
 
-.member-center .tab-contents .member-data .table-container .table td,
-.member-center .tab-contents .member-data .table-container .table th {
-  border-top: none;
-}
-
-.member-center .tab-contents .member-data .table-container .table .order-number {
-  width: 128px;
-  height: 25px;
-  background-color: #a0a0a0;
-  color: #ffffff;
-  margin-top: 16px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .check {
-  padding-top: 12px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .check .checkInvoice {
-  height: 30px;
+.member-center .tab-contents .member-data .table-container .table .orderNumber {
+  width: 120px;
   background-color: #a0a0a0;
   color: #ffffff;
 }
 
-.member-center .tab-contents .member-data .table-container .table .return {
-  padding-top: 12px;
-}
-
-.member-center .tab-contents .member-data .table-container .table .return .return-infor {
-  height: 30px;
+.member-center .tab-contents .member-data .table-container .table .checkInvoice, .member-center .tab-contents .member-data .table-container .table .returnInfor {
   background-color: #a0a0a0;
   color: #ffffff;
 }
 
 .member-center .tab-contents .member-data .table-container .table-icon button {
-  background-color: white;
+  background-color: #ffffff;
   color: #a0a0a0;
   border: none;
 }

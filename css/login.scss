@@ -169,50 +169,27 @@
                 width: 90%;
 
                 .table {
-                    height: 400px;
                     font-size: $H10-font-size;
-    
+
                     thead {
                         background-color: $color-Footer-Background;
                         color: $color-LightGray;
                     }
-    
-                    td,
-                    th {
-                        border-top: none;
-                    }
-    
-                    .order-number {
-                        width: 128px;
-                        height: 25px;
+
+                    .orderNumber {
+                        width: 120px;
                         background-color: $color-MoreButton;
                         color: $color-White;
-                        margin-top: 16px;
                     }
-    
-                    .check {
-                        padding-top: 12px;
-    
-                        .checkInvoice {
-                            height: 30px;
-                            background-color: $color-MoreButton;
-                            color: $color-White;
-                        }
-                    }
-    
-                    .return {
-                        padding-top: 12px;
-    
-                        .return-infor {
-                            height: 30px;
-                            background-color: $color-MoreButton;
-                            color: $color-White;
-                        }
+
+                    .checkInvoice, .returnInfor {
+                        background-color: $color-MoreButton;
+                        color: $color-White;
                     }
                 }
 
                 .table-icon button {
-                    background-color: white;
+                    background-color: $color-White;
                     color: $color-MoreButton;
                     border: none;
     
