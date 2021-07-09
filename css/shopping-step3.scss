@@ -113,14 +113,13 @@ main{
                 .order-container{
                     max-width: 840px;
                     width: 100%;
-                    padding: 50px 0;
+                    padding: 32px 0;
                     margin: auto;
                     .order-total{
                         cursor: pointer;
                         text-align: center;
-                        font-size: $H5-font-size;
-                        letter-spacing: $font-letter-space-200;
-                        padding-bottom: 30px;
+                        font-size: $H5-font-size;                        
+                        padding-bottom: 10px;
                         &::after{
                             content:'\f077';
                             font-family: "Font Awesome 5 Free";                            
@@ -133,6 +132,7 @@ main{
                         }
                         p{
                             margin: 0;
+                            letter-spacing: $font-letter-space-200;
                         }
                     }
                     .order-commodity{ 
@@ -141,24 +141,19 @@ main{
                         width: 100%;                        
                         border-bottom: 1px solid $color-Background-line;
                         transition: 1s;
-                        // &.active{  
-                        //     height: 1px;
-                        //     transition: 1s;
-                        // }
+                        
                         .order-commodity-content{
                             width: 100%;
                             transition: 1s;                                                       
-                            // &.active{                        
-                            //     transform: translateY(-100%);                            
-                            //     transition: 1s;
-                            // }
+                            
                             .commodity{
                                 width: 100%;
                                 padding: 0 15px;
                                 padding-bottom: 20px;
                                 display: flex;
                                 .photo{                                
-                                    max-width: 80px;
+                                    max-width: 90px;
+                                    max-height: 90px;
                                     width: 100%;                                
                                     img{
                                         width: 100%;
@@ -167,19 +162,20 @@ main{
                                         object-fit: cover;
                                     }
                                 }
-                                .commodity-content{                                
-                                    padding: 0 10px;
+                                .commodity-content{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;               
+                                    padding: 0 15px;
                                     .commodity-title{
-                                        font-size: $H8-font-size;
-                                        font-weight: $font-Weight-B;
-                                        margin-bottom: 20px;
+                                        font-size: $H10-font-size;                                                                                
                                         p{
                                             margin: 0;
                                         }
                                     }
                                     .commodity-size{
                                         color: $color-Gainsboro;
-                                        font-size: $H9-font-size;
+                                        font-size: $H11-font-size;
                                         p{
                                             margin: 0;
                                         }
@@ -194,7 +190,7 @@ main{
                                         text-align: right;
                                         p{
                                             margin: 0;
-                                            font-size: $H10-font-size;
+                                            font-size: $H11-font-size;
                                         }
                                     }
                                 }
@@ -204,7 +200,7 @@ main{
                                 display: flex;
                                 justify-content: flex-end;
                                 padding: 0 15px;
-                                padding-bottom: 20px;
+                                padding-bottom: 10px;
                                 .order-commodity-shipping-price{
                                     width: 200px;
                                     display: flex;

@@ -217,6 +217,9 @@ main .my-container .shopping-container .shopping-order .shopping-information .co
 
 main .my-container .shopping-container .shopping-order .shopping-information .commidity-information .shopping-cart ul {
   width: 100%;
+  margin: 0;
+  padding: 0 15px;
+  padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +308,7 @@ main .my-container .shopping-container .shopping-order .shopping-information .sh
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 10px;
+  padding: 0 15px;
 }
 
 main .my-container .shopping-container .shopping-order .shopping-information .shipping .shipping-content {

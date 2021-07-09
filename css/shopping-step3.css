@@ -169,7 +169,7 @@ main .my-container .shopping-container .shopping-order {
 main .my-container .shopping-container .shopping-order .order-container {
   max-width: 840px;
   width: 100%;
-  padding: 50px 0;
+  padding: 32px 0;
   margin: auto;
 }
 
@@ -177,8 +177,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-t
   cursor: pointer;
   text-align: center;
   font-size: 24px;
-  letter-spacing: 3.2px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-total::after {
@@ -195,6 +194,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-t
 
 main .my-container .shopping-container .shopping-order .order-container .order-total p {
   margin: 0;
+  letter-spacing: 3.2px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity {
@@ -222,7 +222,8 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .photo {
-  max-width: 80px;
+  max-width: 90px;
+  max-height: 90px;
   width: 100%;
 }
 
@@ -236,13 +237,21 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content {
-  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-title p {
@@ -251,7 +260,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-size {
   color: #a3b6c1;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-content .commodity-size p {
@@ -277,7 +286,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .commodity .commodity-subtotal .quantity-subtotal p {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping {
@@ -289,7 +298,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 0 15px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price {
