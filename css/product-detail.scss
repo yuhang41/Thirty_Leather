@@ -3,19 +3,82 @@
     list-style: none;   
     margin: 0px;
     font-family: $font-Family-A;
+    scroll-behavior: smooth;
     &:focus{
         outline: none;
     }
 }
+body{
+    scroll-behavior: smooth;
+}
 main{
-    padding-left: 19.267vw;
+    min-height: 100vh;
+    display: flex;
+    // 左邊白色區塊的欄位
+    .commodity-menu{
+        max-width: 375px;
+        width: 100%;
+        padding-top: 100px;
+        .all-commodity{
+            max-width: 200px;
+            margin: auto;
+            width: 100%;
+            .commodity-menu-title{
+                cursor: pointer;
+                padding-left: 10px;
+                margin-bottom: 10px;
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;
+                &.AllCommodity::after{
+                    content:'\f077';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.AllCommodity.active::after{
+                    content:'\f078';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.Snowshoe::after{
+                    content:'\f078';                    
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+                &.Snowshoe.active::after{
+                    content:'\f077';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                }
+            }
+            .commodity-menu-options{
+                width: 70%;   
+                margin-left: auto;         
+                li{
+                    font-size: $H10-font-size;
+                    margin-bottom: 10px;
+                    a{
+                        color: $color-Nav-icon;
+                    }                    
+                }
+
+            }
+            .commodity-other{
+                cursor: pointer;
+                padding-left: 10px;
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;                
+            }
+        }
+    }
+    // 右邊商品資訊
     .product-container{
         width: 100%;
         min-height: 100vh;
-        background: $color-LightGray;
+        // 商品資訊
         .productshop-container{
             padding-top: 9vh;
             padding-left: 2vh;
+            background: $color-LightGray;
             .breadcrumbs{
                 padding-left: 1vw;
                 margin-bottom: 20px;
@@ -30,6 +93,7 @@ main{
                 margin: auto;
                 display: flex;
                 justify-content: space-between;
+                border-bottom: 1px solid $color-Product-Detail-Title;
                 .swiper{
                     max-width: 600.353px;
                     max-height: 789.17px;
@@ -128,6 +192,7 @@ main{
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+                    margin-bottom: 40px;
                     .odrer-info{
                         min-height: 631px;
                         display: flex;
@@ -232,6 +297,9 @@ main{
                                     &:nth-child(5){
                                         background-color: $color-Light-Gray;
                                         border: 1px solid $color-MoreButton;
+                                    }
+                                    &:hover{
+                                        border: 1px solid $color-Evaluation-Star;
                                     }
                                 }
                             }
@@ -348,6 +416,13 @@ main{
                                     width: 60px;
                                     height: 40px;
                                     border: none;
+                                    text-align: center;
+                                    -webkit-appearance: none;
+                                    &::placeholder {
+                                        font-size: $H7-font-size;
+                                        color: $color-Evaluation-Star;
+                                    }
+                                    
                                 }
                                 .plus{
                                     width: 45px;
@@ -389,29 +464,765 @@ main{
                 }
             }
         }
+        // 商品詳細描述/開發過程/尺碼建議
         .productdetail-container{
+            background: $color-LightGray;
             .detail-container{
+                max-width: 1200px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 .tabs{
                     display: flex;
                     .tab{
                         margin: 0px 10px;
                         cursor: pointer;
+                        font-size: $H5-font-size;
+                        letter-spacing: $font-letter-space-50;
+                        padding: 0px 15px;
+                        margin-top: 40px;
+                        
+                        &:nth-child(2){
+                            border-right: 1px solid $color-Product-Detail-Title;
+                            border-left: 1px solid $color-Product-Detail-Title;
+                        }
+                        &.active{
+                            position: relative;
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                bottom:0px;
+                                left: 15px;
+                                width: 100px;
+                                height: 1px;
+                                background-color: $color-Evaluation-Star;
+                            }
+                            
+                        }
+                        &:hover{
+                            position: relative;
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                bottom:0px;
+                                left: 15px;
+                                width: 100px;
+                                height: 1px;
+                                background-color: $color-Evaluation-Star;
+                            }
+                        }
                     }
                     
                 }
                 .tabs-contents{
-                    position: relative;
+                    max-width: 890px;
+                    margin: auto;
+                    margin-top: 20px;
+                    display: flex;
                     .tab-c{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
+                        display: none;
                         width: 100%;
                         height: auto;
                         color: black;
-                        transition: opacity 1s;
+                        transition:display 1s;
                         &.active{
-                            opacity: 1;
+                            display: block;
+                            transition: display 1s;
+                        }
+                    }
+                    .product-description{
+                        .inner-content{
+                            .paragraph-first{
+                                text-align: justify;
+                                font-size: $H9-font-size;
+                                letter-spacing: $font-letter-space-100;
+                                line-height: 28px;
+                            }
+                            .paragraph-second{
+                                text-align: justify;
+                                font-size: $H9-font-size;
+                                letter-spacing: $font-letter-space-100;
+                                line-height: 28px;
+                            }
+                            .shoes-detail{
+                                min-height: 969px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding-right: 12vw;
+                                .main-shoes{
+                                    position: relative;
+                                    .main-photo{
+                                        max-width: 653px;
+                                        min-height: 342px;
+                                        transform: rotate(-15deg);
+                                    }
+                                    .bg-square{
+                                        width: 483px;
+                                        height: 483px;
+                                        background-color: $color-Background-Square;
+                                        position: absolute;
+                                        top: 59px;
+                                        left: 234px;
+                                        object-fit: cover;
+                                    }
+                                    .bg-shadow{
+                                        width: 283px;
+                                        height: 20px;
+                                        border-radius: 50%;
+                                        background-color: $color-Background-Shadow;
+                                        position: absolute;
+                                        top: 272px;
+                                        left: 300px;
+                                        object-fit: cover;
+                                        filter: blur(4px);
+                                    }
+                                    @mixin click-p{
+                                        font-size: $H10-font-size;
+                                        letter-spacing: $font-letter-space-50;
+                                        line-height: 21px;
+                                        color: $color-IronGray;
+                                        margin: 0px 0px 0px 20px;
+                                    }
+                                    .click-function{
+                                        position: absolute;
+                                        .click-first{
+                                            position: absolute;
+                                            top: -200px;
+                                            left: -175px;
+                                            .click-button{
+                                                position: absolute;
+                                                bottom: -102px;
+                                                right: -55px;
+                                                width: 55px;
+                                                height: 55px;
+                                                opacity: 0.5;
+                                                background-color: $color-Shoes-Button;
+                                                border-radius: 50%;
+                                                z-index: 1;
+                                                &.active{
+                                                    &:before{
+                                                        content: "";
+                                                        position: absolute;
+                                                        top: -16px;
+                                                        left: -41px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        transform: rotate(45deg);
+                                                        background-color: $color-Shoes-Button;
+                                                        transform-origin:40px -1px;
+                                                        animation: short-line-grow .5s linear forwards;
+                                                        animation-delay: .7s;
+                                                    }
+                                                    @keyframes short-line-grow{
+                                                        to {width:80px;}
+                                                      }
+                                                    &:after{
+                                                        content: "";
+                                                        position: absolute;
+                                                        top: -44px;
+                                                        left: -229px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        background-color: $color-Shoes-Button;
+                                                        animation: long-line-grow .7s linear forwards;
+                                                    }
+                                                    @keyframes long-line-grow{
+                                                        to {width:200px;}
+                                                      }
+                                                    &~ .content-first{
+                                                        width: 600px;
+                                                        display: flex;
+                                                        align-items: flex-end;
+                                                        opacity: 1;
+                                                        transition: 0.5s;
+                                                        .content-text{
+                                                            p{
+                                                                @include click-p();
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .content-first{
+                                                width: 600px;
+                                                display: flex;
+                                                align-items: flex-end;
+                                                opacity: 0;
+                                                transition: 0.5s;
+                                                .content-text{
+                                                    p{
+                                                      @include click-p();
+                                                    }
+                                                }
+                                            }
+                                           
+                                        }
+                                        .click-second{
+                                            position: absolute;
+                                            top: 435px;
+                                            left: -180px;
+                                            .click-button{
+                                                position: absolute;
+                                                top: -149px;
+                                                left: 306px;
+                                                width: 55px;
+                                                height: 55px;
+                                                opacity: 0.5;
+                                                background-color: $color-Shoes-Button;
+                                                border-radius: 50%;
+                                                z-index: 1;
+                                                &.active{
+                                                    &:before{
+                                                        content: "";
+                                                        position: absolute;
+                                                        bottom: -64px;
+                                                        left: -56px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        transform: rotate(-68deg);
+                                                        background-color: $color-Shoes-Button;
+                                                        transform-origin:40px -1px;
+                                                        animation: second-line-grow .5s linear forwards;
+                                                    }
+                                                    @keyframes second-line-grow{
+                                                        to {width:158px;}
+                                                      }
+                                                    &~ .content-second{
+                                                    width: 800px;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    opacity: 1;
+                                                    transition: 0.5s;
+                                                    .content-text{
+                                                        p{
+                                                            @include click-p();
+                                                        }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            .content-second{
+                                                width: 800px;
+                                                display: flex;
+                                                align-items: flex-end;
+                                                opacity: 0;
+                                                transition: 0.5s;
+                                                .content-text{
+                                                    p{
+                                                        @include click-p();
+                                                    }
+                                                } 
+                                            }
+                                            
+                                        }
+                                        .click-third{
+                                            position: absolute;
+                                            top: 435px;
+                                            left: 600px;
+                                            .click-button{
+                                                position: absolute;
+                                                top: -260px;
+                                                left: -200px;
+                                                width: 55px;
+                                                height: 55px;
+                                                opacity: 0.5;
+                                                background-color: $color-Shoes-Button;
+                                                border-radius: 50%;
+                                                z-index: 1;
+                                                &.active{
+                                                    &:before{
+                                                        content: "";
+                                                        position: absolute;
+                                                        bottom: -180px;
+                                                        left: 136px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        transform: rotate(-128deg);
+                                                        background-color: $color-Shoes-Button;
+                                                        transform-origin:40px -1px;
+                                                        animation: third-line-grow .8s linear forwards;
+                                                    }
+                                                    @keyframes third-line-grow{
+                                                        to {width:281px;}
+                                                      }
+                                                      &~ .content-third{
+                                                        width: 587px;
+                                                        display: flex;
+                                                        align-items: flex-end;
+                                                        opacity: 1;
+                                                        transition: 0.5s;
+                                                        .content-text{
+                                                            p{
+                                                                @include click-p();
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .content-third{
+                                                width: 587px;
+                                                display: flex;
+                                                align-items: flex-end;
+                                                opacity: 0;
+                                                transition: 0.5s;
+                                                .content-text{
+                                                    p{
+                                                        @include click-p();
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                        .click-fourth{
+                                            position: absolute;
+                                            top: -25px;
+                                            left:695px;
+                                            .click-button{
+                                                position: absolute;
+                                                top: 220px;
+                                                left: -65px;
+                                                width: 55px;
+                                                height: 55px;
+                                                opacity: 0.5;
+                                                background-color: $color-Shoes-Button;
+                                                border-radius: 50%;
+                                                z-index: 1;
+                                                &.active{
+                                                    &:before{
+                                                        content: "";
+                                                        position: absolute;
+                                                        bottom: 28px;
+                                                        left: 12px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        background-color: $color-Shoes-Button;
+                                                        transform-origin:40px -1px;
+                                                        transform: rotate(-180deg);
+                                                        animation: fourth-line-grow .3s linear forwards;
+                                                        animation-delay: .8s;
+                                                    }
+                                                    @keyframes fourth-line-grow{
+                                                        to {width:50px;}
+                                                    } 
+                                                    
+                                                    &:after{
+                                                        content: "";
+                                                        position: absolute;
+                                                        bottom: 71px;
+                                                        left: 84px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        background-color: $color-Shoes-Button;
+                                                        transform: rotate(125deg);
+                                                        transform-origin:40px -1px;
+                                                        animation: fourth-two-line-grow .8s linear forwards;
+                                                    }
+                                                    @keyframes fourth-two-line-grow{
+                                                        to {width:92px;}
+                                                    }
+                                                    &~ .content-fourth{
+                                                        opacity: 1;
+                                                        transition: 0.5s;
+                                                        .content-fourth-one{
+                                                            display: flex;
+                                                            align-items: flex-end;
+                                                            transition: 0.5s;
+                                                            img{
+                                                                width: 300px;
+                                                            }
+                                                            .content-text{
+                                                                width: 205px;
+                                                                p{
+                                                                    @include click-p();
+                                                                }
+                                                            }   
+                                                        }
+                                                        .content-fourth-two{
+                                                            position: absolute;
+                                                            top: 205px;
+                                                            left: 70px;
+                                                            display: flex;
+                                                            align-items: flex-end;
+                                                            transition: 0.5s;
+                                                            img{
+                                                                width: 300px;
+                                                            }
+                                                            .content-text{
+                                                                width: 150px;
+                                                                p{
+                                                                    @include click-p();
+                                                                }
+                                                            } 
+                                                        }
+                                                    } 
+                                                }
+                                            }
+                                            .content-fourth{
+                                                opacity: 0;
+                                                transition: 0.5s;
+                                                .content-fourth-one{
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    // opacity: 0;
+                                                    transition: 0.5s;
+                                                    img{
+                                                        width: 300px;
+                                                    }
+                                                    .content-text{
+                                                        width: 205px;
+                                                        p{
+                                                            @include click-p();
+                                                        }
+                                                    }   
+                                                }
+                                                .content-fourth-two{
+                                                    position: absolute;
+                                                    top: 205px;
+                                                    left: 70px;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    // opacity: 0;
+                                                    transition: 0.5s;
+                                                    img{
+                                                        width: 300px;
+                                                    }
+                                                    .content-text{
+                                                        width: 150px;
+                                                        p{
+                                                            @include click-p();
+                                                        }
+                                                    } 
+                                                }
+                                            }
+                                        }
+                                        .click-fifth{
+                                            position: absolute;
+                                            top: -317px;
+                                            left: 500px;
+                                            .click-button{
+                                                position: absolute;
+                                                bottom: -150px;
+                                                left: 20px;
+                                                width: 55px;
+                                                height: 55px;
+                                                opacity: 0.5;
+                                                background-color: $color-Shoes-Button;
+                                                border-radius: 50%;
+                                                z-index: 1;
+                                                &.active{
+                                                    &:before{
+                                                        content: "";
+                                                        position: absolute;
+                                                        bottom: 112px;
+                                                        left: 32px;
+                                                        width: 0px;
+                                                        height: 2px;
+                                                        transform: rotate(124deg);
+                                                        background-color: $color-Shoes-Button;
+                                                        transform-origin:40px -1px;
+                                                        animation: fifth-line-grow .8s linear forwards; 
+                                                    }
+                                                    @keyframes fifth-line-grow{
+                                                        to {width:130px;}
+                                                      }
+                                                    &~.content-fifth{
+                                                        display: flex;
+                                                        align-items: flex-end;
+                                                        opacity: 1;
+                                                        transition: 0.5s;
+                                                        .content-text{
+                                                            width: 270px;
+                                                            p{
+                                                                @include click-p();
+                                                            }
+                                                        } 
+                                                    }
+                                                }
+                                            }
+                                            .content-fifth{
+                                                display: flex;
+                                                align-items: flex-end;
+                                                opacity: 0;
+                                                transition: 0.5s;
+                                                .content-text{
+                                                    width: 270px;
+                                                    p{
+                                                        @include click-p();
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 顧客評價&相關產品
+        .productother-container{
+            width: 100%;
+            padding-top: 60px;
+            background-color: $color-White;
+            .other-container{
+                max-width: 1120px;
+                margin: auto;
+                margin-bottom: 100px;
+                .customer-eval{
+                    border-bottom: 1px solid $color-Product-Detail-Title;
+                    .eval-title{
+                        font-size: $H3-font-size;
+                        letter-spacing: $font-letter-space-50;
+                    }
+                    .different-eval{
+                        max-width: 800px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 40px;
+                        .star-eval{
+                            p{
+                                font-size: $H10-font-size;
+                                letter-spacing: $font-letter-space-200;
+                                margin: 0px;
+                            }
+                            .star-img{
+                                font-size: $H10-font-size;
+                                color: $color-Evaluation-Star;
+                            }
+                        }
+                        .score{
+                            width: 150px;
+                            height: 150px;
+                            background-color: $color-LightGray;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            p{
+                                font-size: $H0-font-size;
+                                margin: 0px;
+                            }
+                        }
+                        .bar-graph{
+                            ul{
+                                margin: 0px;
+                                padding: 0px;
+                                width: 385px;
+                                li{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    &:nth-child(1){
+                                        .graph-line{
+                                            background-color: $color-Evaluation-Star;
+                                            margin-left: 19px;
+                                        }
+                                    }
+                                    .graph-line{
+                                        width: 280px;
+                                        height: 8px;
+                                        background-color: $color-Cart-Border;
+                                        margin: 0xp 10px;
+                                    }
+                                    p{
+                                        font-size: $H10-font-size;
+                                        letter-spacing: $font-letter-space-50;
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .customer-comment{
+                        margin-bottom: 40px;
+                        .shopping-cart{
+                            width: 100%;
+                            ul{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 0px;
+                                 .order-cart{
+                                         &.content{
+                                             flex: 0 0 80%;
+                                         }
+                                 }
+                                 .img-content{
+                                     display: flex;
+                                         img{
+                                         max-width: 138px;
+                                         width: 100%;
+                                         min-height: 138px;
+                                         object-fit: contain;
+                                         object-position: center;
+                                         margin-right: 15px;   
+                                         }
+                                         .cart-content{
+                                            width: 400px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            p{
+                                                margin: 0; 
+                                                letter-spacing: $font-letter-space-100;
+                                                }    
+                                            .cart-title{   
+                                                p{
+                                                    &:nth-child(1){
+                                                        color:$color-IronGray;
+                                                        font-size: $H6-font-size;
+                                                    }
+                                                }                         
+                                                
+                                                .star-eval{
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    .star-img{
+                                                        margin-right: 10px;
+                                                        color: $color-Evaluation-Star;
+                                                    } 
+                                                    p{
+                                                        font-size: $H10-font-size;
+                                                        letter-spacing: $font-letter-space-200;
+                                                    }
+                                                }
+                                                       
+                                            }
+                                            .cart-text{
+                                               p{
+                                                &:nth-child(1){
+                                                    font-size: $H10-font-size;
+                                                    letter-spacing: $font-letter-space-100;
+                                                    line-height: 26px;
+                                                }
+                                                &:nth-child(2){
+                                                    font-size: $H11-font-size;
+                                                    letter-spacing: $font-letter-space-100;
+                                                    color: $color-Product-Detail-Title;
+                                                }
+                                               }
+                                            }
+                                         }   
+                                     
+                                 }
+                                 .eval-custoemr{
+                                     display: flex;
+                                     flex-direction: column;
+                                     justify-content: flex-end;
+                                    .eval-name{
+                                        font-size: $H9-font-size;
+                                        letter-spacing: $font-letter-space-100;
+                                        color: $color-IronGray;
+                                        line-height: 28px;
+                                    }
+                                    .eval-date{
+                                        font-size: $H10-font-size;
+                                        letter-spacing: $font-letter-space-200;
+                                        color: $color-IronGray;
+                                    }
+                                 }
+                            }
+                        }
+                    }
+                }
+                .related-commid{
+                    margin-top: 60px;
+                    border-bottom: 1px solid $color-Product-Detail-Title;
+                    .commid-title{
+                        font-size: $H3-font-size;
+                        letter-spacing: $font-letter-space-50;
+                    }
+                    @mixin shoes-content {
+                        width: 275px;
+                        height: 275px;
+                        background-color: $color-White-opacity;
+            
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: center;
+                        text-align: center;
+                        z-index: 2;
+                        img {
+                            position: absolute;
+                            width: 215px;
+                            top: -70px;
+                            left: 27px;
+                        }
+                        .content {
+                            .text {
+                                p {
+                                    margin: 0px;
+                                    &:nth-child(1) {
+                                        font-size: $H6-font-size;
+                                        font-weight: lighter;
+                                        letter-spacing: $font-letter-space-100;
+                                        color: $color-IronGray;
+                                        margin-bottom: 10px;
+                                    }
+                                    &:nth-child(2) {
+                                        font-size: $H8-font-size;
+                                        font-weight: normal;
+                                        letter-spacing: $font-letter-space-100;
+                                        color: $color-IronGray;
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                            }
+                            .price {
+                                span {
+                                    &:nth-child(1) {
+                                        font-size: $H9-font-size;
+                                        font-weight: lighter;
+                                        color: $color-Original-Price;
+                                        text-decoration: line-through;
+                                    }
+                                    &:nth-child(2) {
+                                        font-size: $H4-font-size;
+                                        font-weight: bold;
+                                        color: $color-Apricot;
+                                    }
+                                }
+                            }
+                        }
+                        button {
+                            width: 250px;
+                            height: 50px;
+                            color: $color-IronGray;
+                            background-color: unset;
+                            border: 2px solid $color-MoreButton;
+                            border-radius: 45px;
+                            margin: 30px 0px 10px 0px;
+                        }
+                    }
+                    .product-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 80px;
+                        margin-top: 120px;
+                        .product-first {
+                            @include shoes-content();
+                        }
+                        .product-second {
+                            @include shoes-content();
+                            img {
+                                top: -100px;
+                            }
+                        }
+                        .product-third {
+                            @include shoes-content();
+                            img {
+                                top: -50px;
+                            }
+                        }
+                        .product-fourth {
+                            @include shoes-content();
                         }
                     }
                 }

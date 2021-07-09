@@ -1,3 +1,18 @@
+AOS.init({
+    duration: 1200,
+  })
+ //左邊白色區域 
+  let AllCommodity = document.querySelector('.AllCommodity');
+  let Snowshoe = document.querySelector('.Snowshoe');
+  
+  function AllCommodityHandler(){
+      AllCommodity.classList.toggle('active');
+  }
+  function SnowshoeHandler(){
+      Snowshoe.classList.toggle('active');
+  }
+  AllCommodity.addEventListener('click',AllCommodityHandler);
+  Snowshoe.addEventListener('click',SnowshoeHandler);
 // Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -20,22 +35,48 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 //tab切換分頁
-
-let tab = document.querySelectorAll('.tab');
-let tab_c = document.querySelectorAll('.tab-c');
-
-tab[index].addEventListener('click',function(){
-    alert('有按到');
-    removeTab();
-    removeTabContent();
-    tab[index].classList.add('active');
-    tab_c[index].classList.add('active');
-})
-
-function removeTab(){
-    tab.classList.remove("active");
+$(".tab").each(function (index) {
+    $(this).click(function (e) {
+        triggletab();
+        triigletabcontent();
+        $(this).toggleClass("active");
+        $(".tab-c")
+            .eq(index)
+            .toggleClass("active");
+    });
+});
+//to remove all tab headers
+function triggletab() {
+    $(".tab").each(function () {
+        $(this).removeClass("active");
+    });
+}
+//triggle the tab content
+function triigletabcontent() {
+    $(".tab-c").each(function () {
+        $(this).removeClass("active");
+    });
 }
 
-function removeTabContent(){
-    tab_c.classList.remove("active");
+//shoes parallax
+document.addEventListener("mousemove",parallax);
+function parallax(e){
+    this.querySelectorAll('.layer').forEach(layer=>{
+        const speed = layer.getAttribute('data-speed');
+
+        const x =(window.innerWidth - e.pageX*speed)/100
+        const y =(window.innerHeight - e.pageY*speed)/100
+        layer.style.transform =`translateX(${x}px) translateY(${y}px)`
+
+    })
 }
+
+//shoes 點擊效果
+$(".click-button").each(function (index) {
+  $(this).click(function (e) {
+      // removeClick();
+      $(".click-button")
+          .eq(index)
+          .toggleClass("active");
+  });
+});

@@ -12,6 +12,8 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <!-- aos-css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/product-detail.css">
@@ -105,7 +107,41 @@
         </div>
     </nav>
     <main>
+         <!-- 左邊白色區塊的欄位 -->
+         <div class="commodity-menu">
+            <div class="all-commodity">
+                <div class="commodity-menu-title AllCommodity" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="true" aria-controls="multiCollapseExample1">
+                    所有商品
+                </div>                
+                <ul class="commodity-menu-options collapse show" id="multiCollapseExample1">
+                    <li><a href="#">女鞋</a></li>
+                    <li><a href="#">小白鞋</a></li>
+                    <li><a href="#">紳士鞋</a></li>
+                    <li><a href="#">休閒鞋</a></li>
+                    <li><a href="#">平底鞋</a></li>
+                    <li><a href="#">跟鞋</a></li>
+                    <li><a href="#">涼鞋</a></li>
+                    <li><a href="#">娃娃鞋</a></li>
+                    <li><a href="#">鞋款</a></li>
+                    <li><a href="#">防水系列</a></li>
+                </ul>
+                <div class="commodity-menu-title Snowshoe" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                    訂製雪靴
+                </div>
+                <ul class="commodity-menu-options collapse" id="multiCollapseExample2">
+                    <li><a href="#">迷你筒(16cm-18cm)</a></li>
+                    <li><a href="#">低筒(22cm-24cm)</a></li>
+                    <li><a href="#">中筒(26cm-28cm)</a></li>
+                    <li><a href="#">高筒(30cm-33cm)</a></li>                    
+                </ul>
+                <div class="commodity-other">
+                    配件
+                </div>
+            </div>
+        </div>
+        <!-- 右邊商品資訊 -->
         <div class="product-container">
+            <!-- 商品資訊 -->
             <div class="productshop-container">
                 <div class="breadcrumbs">
                     <div class="bread-label">
@@ -208,7 +244,7 @@
                                     </div>
                                     <div class="other-eavl">
                                         <p>5.0分</p>
-                                        <p>1個評價</p>
+                                        <p><a href="#eval">1個評價</a></p>
                                         <p><i class="fas fa-heart"></i>收藏</p>
                                     </div>
                                 </div>
@@ -271,7 +307,7 @@
                                 <button class="pre-order">預購</button>
                                 <div class="order-amount">
                                     <button class="minus">-</button>
-                                    <input type="number">
+                                    <input type="number" placeholder="2">
                                     <button class="plus">+</button>
                                 </div>
                             </div>
@@ -283,6 +319,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 商品詳細描述/開發過程/尺碼建議 -->
             <div class="productdetail-container">
                 <div class="detail-container">
                     <div class="tabs">
@@ -293,17 +330,239 @@
                     <div class="tabs-contents">
                         <div class="tab-c active product-description">
                             <div class="inner-content">
-                              <h1>哈囉</h1>
+                              <div class="paragraph-first">
+                                  <p>類似這樣的編織涼鞋流傳了一整個世紀，每個人的童年都有一雙似曾相似的魚骨編織涼鞋，小時候或稱這款式的涼鞋為空氣鞋，印象中我也幫我爹買過這樣的涼鞋，從童鞋、女鞋、男鞋都有類似款式，可以說是一款男、女、老、少都能駕馭的涼鞋款式。</p>
+                              </div>
+                              <div class="paragraph-second">
+                                  <p>編織涼鞋的精髓在於不變的真皮，條條交疊，但細節各有不同，有的有沿條、有的沒沿條、有的低跟、有的平底、有的厚底 . . . 各有千秋。而今年編織的風格有別於以往相同寬度的編織線條，今年以  粗、細、大、小不同的真皮線條交疊出更有層次的復古風格，這款的編織鞋面在皮料上剪裁出斜線切割，交疊出看似大小不一、卻又整齊有規律的編織紋路。</p>
+                              </div>
+                              <div class="shoes-detail">
+                                  <div class="main-shoes">
+                                      <div class="bg-square layer" data-speed="5"></div>
+                                      <div class="click-function">
+                                          <div class="click-first">
+                                              <div class="click-button"></div>
+                                              <div class="content-first">
+                                                <img src="../img/shoes-introduction-one.png" alt="">
+                                                <div class="content-text ">
+                                                    <p>S型懶人古銅鉤扣</p>
+                                                    <p>懶人勾扣，有三節可條鬆緊</p>
+                                                </div>
+                                              </div>
+                                          </div>
+                                          <div class="click-second">
+                                            <div class="click-button"></div>
+                                            <div class="content-second">
+                                                <img src="../img/shoes-introduction-second.png" alt="">
+                                                <div class="content-text">
+                                                    <p>L型沿條壓馬克縫線</p>
+                                                    <p>有90度立體導角與一般平的沿條工藝不同</p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="click-third">
+                                            <div class="click-button"></div>
+                                            <div class="content-third">
+                                                <img src="../img/shoes-introduction-third.png" alt="">
+                                                <div class="content-text">
+                                                    <p>吸汗透氣豚皮內裡</p>
+                                                    <p>獨家研發包覆5mm高密度發泡層</p>
+                                                    <p>擁有強大支撐效果，耐久站、久走</p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="click-fourth">
+                                            <div class="click-button"></div>
+                                            <div class="content-fourth">
+                                                <div class="content-fourth-one">
+                                                    <img src="../img/shoes-introduction-fourth-2.png" alt="">
+                                                    <div class="content-text">
+                                                        <p>第一層 : 真皮沿條</p>
+                                                        <p>第二層 : 5mm發泡緩衝夾層</p>
+                                                        <p>第三層 : 鞋底橡膠層</p>
+                                                        <p>第四層 : 木跟</p>
+                                                        <p>第五層 : 橡膠天皮</p>
+                                                    </div>
+                                                </div>
+                                                <div class="content-fourth-two">
+                                                    <img src="../img/shoes-introduction-fourth-1.png" alt="">
+                                                    <div class="content-text">
+                                                        <p>止滑橡膠大底</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="click-fifth">
+                                            <div class="click-button"></div>
+                                            <div class="content-fifth">
+                                                <img src="../img/shoes-introduction-fifth.png" alt="">
+                                                <div class="content-text">
+                                                    <p>防磨乳膠後跟，毛面真皮後跟內裡</p>
+                                                    <p>增加摩擦力，減少穿鞋腳跟滑落不便</p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <img class="main-photo" src="../img/shoes-first.png" alt="">
+                                  </div>
+                              </div>
                             </div>
                         </div>
                         <div class="tab-c development-process">
                             <div class="inner-content">
-                                <h1>施工中/明日</h1>
+                                <h1>施工中</h1>
                             </div>
                         </div>
                         <div class="tab-c size-recommendation">
                             <div class="inner-content">
-                                <h1>施工中/後天</h1>
+                                <h1>施工中</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 顧客評價&相關產品 -->
+            <div class="productother-container">
+                <div class="other-container">
+                    <div class="customer-eval">
+                        <div class="eval-title" id="eval">顧客評價</div>
+                        <div class="different-eval">
+                            <div class="star-eval">
+                                <p>1個評價</p>
+                                <div class="star-img">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="score">
+                                <p>5.0分</p>
+                            </div>
+                            <div class="bar-graph">
+                                <ul>
+                                    <li>
+                                        <p>5分</p>
+                                        <div class="graph-line"></div>
+                                        <p>100%</p>
+                                    </li>
+                                    <li>
+                                        <p>4分</p>
+                                        <div class="graph-line"></div>
+                                        <p>0%</p>
+                                    </li>
+                                    <li>
+                                        <p>3分</p>
+                                        <div class="graph-line"></div>
+                                        <p>0%</p>
+                                    </li>
+                                    <li>
+                                        <p>2分</p>
+                                        <div class="graph-line"></div>
+                                        <p>0%</p>
+                                    </li>
+                                    <li>
+                                        <p>1分</p>
+                                        <div class="graph-line"></div>
+                                        <p>0%</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="customer-comment">
+                            <div class="shopping-cart">
+                                <ul>
+                                    <li class="order-cart img-content">
+                                        <img src="https://placeholder.pics/svg/100x100" alt="">
+                                        <div class="cart-content">
+                                            <div class="cart-title">
+                                                <p>品質不輸專櫃!!</p>
+                                                <div class="star-eval">
+                                                    <div class="star-img">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <p>5.0分</p>
+                                                </div>
+                                            </div>
+                                            <div class="cart-text">
+                                                <p>超棒 超好穿 感受到老闆製鞋的用心</p>
+                                                <p>經典黑-24.5</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="order-cart eval-custoemr">
+                                        <div class="eval-name">林土木</div>
+                                        <div class="eval-date">2021.07.07</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-commid">
+                        <div class="commid-title">相關用品</div>
+                        <div class="commidity">
+                            <div class="product-item">
+                                <div class="product-first">
+                                    <img src="../img/shoes-first.png" alt="">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>魚骨手工編織羅馬涼鞋</p>
+                                            <p>| 牽手一起長大 |</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$4,280</span>
+                                            <span>$2,480</span>
+                                        </div>
+                                    </div>
+                                    <button>加入購物車</button>
+                                </div>
+                                <div class="product-second">
+                                    <img src="../img/shoes-second.png" alt="">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>繞帶坡跟魔鬼氈涼鞋</p>
+                                            <p>| 微醺六月 |</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$3,980</span>
+                                            <span>$2,280</span>
+                                        </div>
+                                    </div>
+                                    <button>加入購物車</button>
+                                </div>
+                                <div class="product-third">
+                                    <img src="../img/shoes-third.png" alt="">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>幾何普普風尖頭平底鞋</p>
+                                            <p>| 幾何萬花筒 |</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$2,680</span>
+                                            <span>$1,980</span>
+                                        </div>
+                                    </div>
+                                    <button>加入購物車</button>
+                                </div>
+                                <div class="product-fourth">
+                                    <img src="../img/shoes-fourth.png" alt="">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>寬帶二字平底軟涼鞋</p>
+                                            <p>| 簡單卻不簡單 |</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>$3,280</span>
+                                            <span>$1,980</span>
+                                        </div>
+                                    </div>
+                                    <button>加入購物車</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -376,6 +635,8 @@
         crossorigin="anonymous"></script>
     <!-- swiper js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!-- aos-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="../js/product-detail.js"></script>
 </body>
 
