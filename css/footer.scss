@@ -98,42 +98,42 @@ footer {
     }
 }
 
-@media (max-width: 991px) {
-    .site-footer {
-        .common-problems {
-            li {
-                width: 132px;
-                height: 32px;
-            }
+// @media (max-width: 991px) {
+//     .site-footer {
+//         .common-problems {
+//             li {
+//                 width: 132px;
+//                 height: 32px;
+//             }
 
-            .lists {
-                border: none;
-            }
+//             .lists {
+//                 border: none;
+//             }
 
-            .common-problem {
-                margin-left: 10px;
-            }
-        }
-    }
-}
+//             .common-problem {
+//                 margin-left: 10px;
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 767px) {
-    .site-footer {
-        padding-bottom: 0;
-    }
+// @media (max-width: 767px) {
+//     .site-footer {
+//         padding-bottom: 0;
+//     }
 
-    .common-problems {
-        li {
-            width: 132px;
-            height: 32px;
-        }
+//     .common-problems {
+//         li {
+//             width: 132px;
+//             height: 32px;
+//         }
 
-        .lists {
-            border: none;
-        }
+//         .lists {
+//             border: none;
+//         }
 
-        .common-problem {
-            margin-left: 10px;
-        }
-    }
-}
+//         .common-problem {
+//             margin-left: 10px;
+//         }
+//     }
+// }

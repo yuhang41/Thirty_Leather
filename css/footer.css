@@ -97,33 +97,4 @@ footer .site-footer .copyright {
   letter-spacing: 1.6px;
   color: #ffffff;
 }
-
-@media (max-width: 991px) {
-  .site-footer .common-problems li {
-    width: 132px;
-    height: 32px;
-  }
-  .site-footer .common-problems .lists {
-    border: none;
-  }
-  .site-footer .common-problems .common-problem {
-    margin-left: 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  .site-footer {
-    padding-bottom: 0;
-  }
-  .common-problems li {
-    width: 132px;
-    height: 32px;
-  }
-  .common-problems .lists {
-    border: none;
-  }
-  .common-problems .common-problem {
-    margin-left: 10px;
-  }
-}
 /*# sourceMappingURL=footer.css.map */
