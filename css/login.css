@@ -205,7 +205,7 @@
 }
 
 @media (max-width: 1024px) {
-  tr {
+  .table tr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -214,17 +214,17 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  th {
+  .table th {
     display: none;
   }
-  .orderNumber {
+  .table .orderNumber {
     width: 120px;
     margin: auto;
   }
-  .orderNumber1 {
+  .table .orderNumber1 {
     margin-top: 10vh;
   }
-  .checkInvoice, .returnInfor {
+  .table .checkInvoice, .table .returnInfor {
     width: 80px;
     margin: auto;
   }
