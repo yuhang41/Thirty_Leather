@@ -8,49 +8,57 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.site-footer hr {
+footer {
+  height: 600px;
+}
+
+footer .footer-top {
+  height: 101px;
+}
+
+footer .site-footer hr {
   border: none;
 }
 
-.site-footer .footer-logo {
+footer .site-footer .footer-logo {
   width: 195px;
   height: 180px;
   margin: auto;
 }
 
-.site-footer .social-icons a {
+footer .site-footer .social-icons a {
   width: 48px;
   height: 48px;
   line-height: 48px;
   border-radius: 50%;
 }
 
-.site-footer .social-icons a.line {
+footer .site-footer .social-icons a.line {
   background-image: url("/img/LINE-ICON.jpg");
   background-position: center;
   background-size: contain;
 }
 
-.site-footer .social-icons a.facebook {
+footer .site-footer .social-icons a.facebook {
   background-image: url("/img/facebook-ICON.jpg");
   background-position: center;
   background-size: contain;
   margin: 0px 20px;
 }
 
-.site-footer .social-icons a.instagram {
+footer .site-footer .social-icons a.instagram {
   background-image: url("/img/Instagram.ICON.jpg");
   background-position: center;
   background-size: contain;
 }
 
-.site-footer .footer-arrow {
+footer .site-footer .footer-arrow {
   font-size: 72px;
   color: #f7a269;
   position: relative;
 }
 
-.site-footer .footer-arrow-text {
+footer .site-footer .footer-arrow-text {
   font-size: 18px;
   letter-spacing: 1.6px;
   position: absolute;
@@ -58,31 +66,31 @@ body {
   left: 4px;
 }
 
-.site-footer .common-problems {
+footer .site-footer .common-problems {
   font-size: 16px;
   letter-spacing: 3.2px;
   color: #444444;
 }
 
-.site-footer .common-problems .lists {
+footer .site-footer .common-problems .lists {
   border-left: 1px solid #8090a0;
   padding-right: 10px;
 }
 
-.site-footer .common-problems .list {
+footer .site-footer .common-problems .list {
   cursor: default;
 }
 
-.site-footer .common-problems a {
+footer .site-footer .common-problems a {
   color: #8090a0;
 }
 
-.site-footer .common-problems ul li {
+footer .site-footer .common-problems ul li {
   padding-left: 10px;
   cursor: pointer;
 }
 
-.site-footer .copyright {
+footer .site-footer .copyright {
   height: 80px;
   background-color: #7a7573;
   font-size: 15px;

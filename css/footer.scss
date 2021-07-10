@@ -5,89 +5,96 @@ body {
     font-family: $font-Family-A;
 }
 
-.site-footer {
-    hr {
-        border: none;
+footer {
+    height: 600px;
+    .footer-top {
+        height: 101px;
     }
 
-    .footer-logo {
-        width: 195px;
-        height: 180px;
-        margin: auto;
-    }
-
-    .social-icons {
-        a {
-            width: 48px;
-            height: 48px;
-            line-height: 48px;
-            border-radius: 50%;
-
-            &.line {
-                background-image: url("/img/LINE-ICON.jpg");
-                background-position: center;
-                background-size: contain;
+    .site-footer {
+        hr {
+            border: none;
+        }
+    
+        .footer-logo {
+            width: 195px;
+            height: 180px;
+            margin: auto;
+        }
+    
+        .social-icons {
+            a {
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                border-radius: 50%;
+    
+                &.line {
+                    background-image: url("/img/LINE-ICON.jpg");
+                    background-position: center;
+                    background-size: contain;
+                }
+    
+                &.facebook {
+                    background-image: url("/img/facebook-ICON.jpg");
+                    background-position: center;
+                    background-size: contain;
+                    margin: 0px 20px;
+                }
+    
+                &.instagram {
+                    background-image: url("/img/Instagram.ICON.jpg");
+                    background-position: center;
+                    background-size: contain;
+                }
             }
-
-            &.facebook {
-                background-image: url("/img/facebook-ICON.jpg");
-                background-position: center;
-                background-size: contain;
-                margin: 0px 20px;
+        }
+    
+        .footer-arrow {
+            font-size: 72px;
+            color: $color-Apricot;
+            position: relative;
+        }
+    
+        .footer-arrow-text {
+            font-size: $H7-font-size;
+            letter-spacing: $font-letter-space-100;
+            position: absolute;
+            top: 40px;
+            left: 4px;
+        }
+    
+        .common-problems {
+            font-size: $H8-font-size;
+            letter-spacing: $font-letter-space-200;
+            color: $color-IronGray;
+    
+            .lists {
+                border-left: 1px solid $color-WedgwoodBlue;
+                padding-right: 10px;
             }
-
-            &.instagram {
-                background-image: url("/img/Instagram.ICON.jpg");
-                background-position: center;
-                background-size: contain;
+    
+            .list {
+                cursor: default;
+            }
+    
+            a {
+                color: $color-WedgwoodBlue;
+            }
+    
+            ul li {
+                padding-left: 10px;
+                cursor: pointer;
             }
         }
-    }
-
-    .footer-arrow {
-        font-size: 72px;
-        color: $color-Apricot;
-        position: relative;
-    }
-
-    .footer-arrow-text {
-        font-size: $H7-font-size;
-        letter-spacing: $font-letter-space-100;
-        position: absolute;
-        top: 40px;
-        left: 4px;
-    }
-
-    .common-problems {
-        font-size: $H8-font-size;
-        letter-spacing: $font-letter-space-200;
-        color: $color-IronGray;
-
-        .lists {
-            border-left: 1px solid $color-WedgwoodBlue;
-            padding-right: 10px;
+    
+        .copyright {
+            height: 80px;
+            background-color: $color-Footer-Background;
+            font-size: $H9-font-size;
+            letter-spacing: $font-letter-space-100;
+            color: $color-White;
         }
-
-        .list {
-            cursor: default;
-        }
-
-        a {
-            color: $color-WedgwoodBlue;
-        }
-
-        ul li {
-            padding-left: 10px;
-            cursor: pointer;
-        }
-    }
-
-    .copyright {
-        height: 80px;
-        background-color: $color-Footer-Background;
-        font-size: $H9-font-size;
-        letter-spacing: $font-letter-space-100;
-        color: $color-White;
     }
 }
 
