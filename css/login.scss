@@ -201,3 +201,29 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .table {
+        tr{
+            display: flex;
+            flex-direction: column;
+        }
+        th {
+            display: none;
+        }
+    
+        .orderNumber {
+            width: 120px;
+            margin: auto;
+        }
+    
+        .orderNumber1 {
+            margin-top: 10vh;
+        }
+    
+        .checkInvoice, .returnInfor {
+            width: 80px;
+            margin: auto;
+        }
+    }
+}

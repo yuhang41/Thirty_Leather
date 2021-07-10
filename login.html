@@ -116,7 +116,8 @@
                             data-toggle="list" href="#list-memberCenter" role="tab"
                             aria-controls="memberCenter">會員中心</a>
 
-                        <a class="list-group-item list-group-item-action text-center" href="/passwordModify.html">密碼修改</a>
+                        <a class="list-group-item list-group-item-action text-center"
+                            href="/passwordModify.html">密碼修改</a>
 
                         <a class="list-group-item list-group-item-action text-center" href="/index.html">會員登出</a>
                     </div>
@@ -149,11 +150,9 @@
                                             <div class="col">
                                                 <div class="row">
                                                     <div class="col-12 d-flex">
-                                                        <label
-                                                            class="label1 font-weight-bold col-3 mt-2">姓名</label>
+                                                        <label class="label1 font-weight-bold col-3 mt-2">姓名</label>
 
-                                                        <input type="text"
-                                                            class="input font-weight-normal"
+                                                        <input type="text" class="input font-weight-normal"
                                                             placeholder="林土木">
                                                     </div>
                                                 </div>
@@ -196,31 +195,19 @@
                                                     <div class="col-12 pl-0 mt-1 pb-2 mb-3 d-flex">
                                                         <label class="label1 font-weight-bold col-6 mt-1">聯絡地址</label>
 
-                                                        <div class="address row">
-                                                            <a class="county dropdown-toggle mt-1 text-decoration-none d-flex align-items-center justify-content-center"
-                                                                href="#" id="navbarDropdown" role="button"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false">臺中市
-                                                            </a>
+                                                        <div class="address city-selector-set row">
+                                                            <select class="county"></select>
 
-                                                            <a class="district dropdown-toggle mt-1 text-decoration-none d-flex align-items-center justify-content-center"
-                                                                href="#" id="navbarDropdown" role="button"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false">中區
-                                                            </a>
+                                                            <select class="district"></select>
 
-                                                            <a class="zipcode mt-1 text-decoration-none d-flex align-items-center justify-content-center"
-                                                                href="#" id="navbarDropdown" role="button"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false">402
-                                                            </a>
+                                                            <input class="zipcode" type="text" size="3" readonly
+                                                                placeholder="郵遞區號">
 
                                                             <input class="input1 mt-2" type="text" placeholder="詳細的地址">
                                                         </div>
                                                     </div>
 
-                                                    <label
-                                                        class="label1 font-weight-bold col-12 mt-4 mb-0 pt-2">訂閱電子報
+                                                    <label class="label1 font-weight-bold col-12 mt-4 mb-0 pt-2">訂閱電子報
                                                         <i class="fas fa-check-square"></i>
                                                     </label>
                                                 </div>
@@ -253,70 +240,100 @@
                                                 <th class="table-active">退貨服務</th>
                                             </tr>
                                         </thead>
-                            
+
                                         <tbody>
                                             <tr>
-                                                <th class="row"><div class="orderNumber font-weight-normal">00000000123</div></th>
+                                                <th class="row">
+                                                    <div class="orderNumber font-weight-normal">00000000123</div>
+                                                </th>
                                                 <td>2021-07-05</td>
                                                 <td>已出貨</td>
                                                 <td>全家超商取貨</td>
                                                 <td>全家店配</td>
                                                 <td>處理中</td>
                                                 <td>2,999</td>
-                                                <td><div class="checkInvoice">檢視發票</div></td>
-                                                <td><div class="returnInfor">退貨資訊</div></td>
+                                                <td>
+                                                    <div class="checkInvoice">檢視發票</div>
+                                                </td>
+                                                <td>
+                                                    <div class="returnInfor">退貨資訊</div>
+                                                </td>
                                             </tr>
-                                            
+
                                             <tr>
-                                                <th class="row"><div class="orderNumber font-weight-normal">00000000123</div></th>
+                                                <th class="row">
+                                                    <div class="orderNumber orderNumber1 font-weight-normal">00000000123</div>
+                                                </th>
                                                 <td>2021-07-05</td>
                                                 <td>已出貨</td>
                                                 <td>全家超商取貨</td>
                                                 <td>全家店配</td>
                                                 <td>已完成</td>
                                                 <td>2,999</td>
-                                                <td><div class="checkInvoice">檢視發票</div></td>
-                                                <td><div class="returnInfor">退貨資訊</div></td>
+                                                <td>
+                                                    <div class="checkInvoice">檢視發票</div>
+                                                </td>
+                                                <td>
+                                                    <div class="returnInfor">退貨資訊</div>
+                                                </td>
                                             </tr>
-                            
+
                                             <tr>
-                                                <th class="row"><div class="orderNumber font-weight-normal">00000000123</div></th>
+                                                <th class="row">
+                                                    <div class="orderNumber orderNumber1 font-weight-normal">00000000123</div>
+                                                </th>
                                                 <td>2021-07-05</td>
                                                 <td>已出貨</td>
                                                 <td>全家超商取貨</td>
                                                 <td>全家店配</td>
                                                 <td>已完成</td>
                                                 <td>2,999</td>
-                                                <td><div class="checkInvoice">檢視發票</div></td>
-                                                <td><div class="returnInfor">退貨資訊</div></td>
+                                                <td>
+                                                    <div class="checkInvoice">檢視發票</div>
+                                                </td>
+                                                <td>
+                                                    <div class="returnInfor">退貨資訊</div>
+                                                </td>
                                             </tr>
-                            
+
                                             <tr>
-                                                <th class="row"><div class="orderNumber font-weight-normal">00000000123</div></th>
+                                                <th class="row">
+                                                    <div class="orderNumber orderNumber1 font-weight-normal">00000000123</div>
+                                                </th>
                                                 <td>2021-07-05</td>
                                                 <td>已出貨</td>
                                                 <td>全家超商取貨</td>
                                                 <td>全家店配</td>
                                                 <td>已完成</td>
                                                 <td>2,999</td>
-                                                <td><div class="checkInvoice">檢視發票</div></td>
-                                                <td><div class="returnInfor">退貨資訊</div></td>
+                                                <td>
+                                                    <div class="checkInvoice">檢視發票</div>
+                                                </td>
+                                                <td>
+                                                    <div class="returnInfor">退貨資訊</div>
+                                                </td>
                                             </tr>
-                            
+
                                             <tr>
-                                                <th class="row"><div class="orderNumber font-weight-normal">00000000123</div></th>
+                                                <th class="row">
+                                                    <div class="orderNumber orderNumber1 font-weight-normal">00000000123</div>
+                                                </th>
                                                 <td>2021-07-05</td>
                                                 <td>已出貨</td>
                                                 <td>全家超商取貨</td>
                                                 <td>全家店配</td>
                                                 <td>已完成</td>
                                                 <td>2,999</td>
-                                                <td><div class="checkInvoice">檢視發票</div></td>
-                                                <td><div class="returnInfor">退貨資訊</div></td>
+                                                <td>
+                                                    <div class="checkInvoice">檢視發票</div>
+                                                </td>
+                                                <td>
+                                                    <div class="returnInfor">退貨資訊</div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    
+
                                     <div class="table-icon">
                                         <button class="fas fa-caret-left text-decoration-none"></button>
 
@@ -333,6 +350,10 @@
         </div>
     </main>
 
+    <script src="/js/tw-city-selector.js"></script>
+
+    <script src="/js/address.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
