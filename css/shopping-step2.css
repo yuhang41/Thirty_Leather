@@ -130,13 +130,13 @@ main .my-container .steps .step .step-content .text .text-content {
   text-align: left;
 }
 
-main .my-container .steps .step .step-content .text .text-content:nth-child(1) p {
+main .my-container .steps .step .step-content .text .text-content p:nth-child(1) {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.8px;
 }
 
-main .my-container .steps .step .step-content .text .text-content:nth-child(2) p {
+main .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -161,6 +161,22 @@ main .my-container .shopping-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+main .my-container .shopping-container .web-title {
+  position: absolute;
+  top: 0px;
+  left: -130px;
+  font-size: 98px;
+}
+
+main .my-container .shopping-container .web-title p {
+  margin: 0px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  color: #ffffff;
 }
 
 main .my-container .shopping-container .shopping-order {
