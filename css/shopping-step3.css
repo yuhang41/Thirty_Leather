@@ -154,6 +154,22 @@ main .my-container .shopping-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+main .my-container .shopping-container .web-title {
+  position: absolute;
+  top: 0px;
+  left: -130px;
+  font-size: 98px;
+}
+
+main .my-container .shopping-container .web-title p {
+  margin: 0px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  color: #ffffff;
 }
 
 main .my-container .shopping-container .shopping-order {
@@ -322,7 +338,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-commodity .order-commodity-content .order-commodity-shipping .order-commodity-shipping-price h4 {
@@ -342,7 +358,7 @@ main .my-container .shopping-container .shopping-order .order-container .order-c
 }
 
 main .my-container .shopping-container .shopping-order .order-container .order-complete .photo-svg {
-  max-width: 200px;
+  max-width: 158px;
   width: 100%;
   padding: 0 20px;
 }
@@ -387,7 +403,6 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 main .my-container .shopping-container .shopping-order .order-container .information .order-customer-information .information-both {
   position: relative;
   border: 1px solid #abbac9;
-  border-radius: 10px;
   padding: 25px 10px 5px 10px;
   min-width: 300px;
 }
@@ -423,6 +438,7 @@ main .my-container .shopping-container .shopping-order .order-container .informa
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60%;
           flex: 0 0 60%;
+  font-size: 14px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information {
@@ -430,7 +446,6 @@ main .my-container .shopping-container .shopping-order .order-container .informa
   margin: 20px 0;
   position: relative;
   border: 1px solid #abbac9;
-  border-radius: 10px;
   padding: 25px 10px 5px 10px;
 }
 
@@ -451,6 +466,16 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul li {
@@ -464,7 +489,7 @@ main .my-container .shopping-container .shopping-order .order-container .informa
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,10 +510,33 @@ main .my-container .shopping-container .shopping-order .order-container .informa
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 14px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul li:not(:last-child) {
   margin-bottom: 20px;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul li:nth-child(2) {
+  position: relative;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul li:nth-child(2) .order-track {
+  position: absolute;
+  top: 22px;
+  left: 177px;
+  font-size: 12px;
+  background-color: #a2b5c0;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 85px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul li:nth-child(2) .order-track:hover {
+  background-color: #f7a269;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(1) {
@@ -504,7 +552,7 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(1) li .shipping-information-name h5 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -522,19 +570,20 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  line-height: 21px;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .store-information {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+      -ms-flex: 0 0 82%;
+          flex: 0 0 82%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .store-information h5 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -543,7 +592,7 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .store-information p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -551,15 +600,15 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .code-address {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+      -ms-flex: 0 0 82%;
+          flex: 0 0 82%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .code-address h5 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -568,10 +617,10 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .shipping-information .shipping-information-content ul:nth-child(2) .store-code-address .code-address p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .payment-information {
@@ -579,7 +628,6 @@ main .my-container .shopping-container .shopping-order .order-container .informa
   padding: 20px 0;
   position: relative;
   border: 1px solid #abbac9;
-  border-radius: 10px;
   padding: 25px 10px 5px 10px;
 }
 
@@ -601,8 +649,8 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .payment-information .payment-information-content li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .payment-information .payment-information-content li .payment-invoice {
@@ -616,7 +664,7 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 }
 
 main .my-container .shopping-container .shopping-order .order-container .information .payment-information .payment-information-content li .payment-invoice h5 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -625,10 +673,10 @@ main .my-container .shopping-container .shopping-order .order-container .informa
 
 main .my-container .shopping-container .shopping-order .order-container .information .payment-information .payment-information-content li .payment-invoice p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
 }
 
 main .my-container .shopping-container .message-and-button {
@@ -650,8 +698,7 @@ main .my-container .shopping-container .message-and-button {
 
 main .my-container .shopping-container .message-and-button .customer-service-message {
   width: 100%;
-  max-height: 510px;
-  height: 100%;
+  height: 550px;
   background: #ffffff;
   border: 1px solid #f7a269;
   padding: 20px;
@@ -673,10 +720,27 @@ main .my-container .shopping-container .message-and-button .customer-service-mes
 
 main .my-container .shopping-container .message-and-button .customer-service-message .input-text {
   width: 100%;
+  min-height: 80px;
   padding: 5px;
   border: 1px solid #abbac9;
   outline: none;
   margin: 10px 0;
+}
+
+main .my-container .shopping-container .message-and-button .customer-service-message .input-text::-webkit-input-placeholder {
+  color: #8090a0;
+}
+
+main .my-container .shopping-container .message-and-button .customer-service-message .input-text:-ms-input-placeholder {
+  color: #8090a0;
+}
+
+main .my-container .shopping-container .message-and-button .customer-service-message .input-text::-ms-input-placeholder {
+  color: #8090a0;
+}
+
+main .my-container .shopping-container .message-and-button .customer-service-message .input-text::placeholder {
+  color: #8090a0;
 }
 
 main .my-container .shopping-container .message-and-button .customer-service-message .input-photo-button {
@@ -691,11 +755,19 @@ main .my-container .shopping-container .message-and-button .customer-service-mes
           align-items: center;
 }
 
-main .my-container .shopping-container .message-and-button .customer-service-message .input-photo-button input[type=button] {
-  padding: 5px 3px;
-  background-color: #ffffff;
-  outline: none;
-  border: 1px solid #444444;
+main .my-container .shopping-container .message-and-button .customer-service-message .input-photo-button input[type=button]:nth-child(1) {
+  width: 85px;
+  height: 35px;
+  background-color: unset;
+  border: 1px solid #65737f;
+  border-radius: 5px;
+}
+
+main .my-container .shopping-container .message-and-button .customer-service-message .input-photo-button input[type=button]:nth-child(2) {
+  width: 55px;
+  height: 35px;
+  background-color: unset;
+  border: 1px solid #65737f;
   border-radius: 5px;
 }
 

@@ -153,6 +153,22 @@ main .my-container .shopping-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+main .my-container .shopping-container .web-title {
+  position: absolute;
+  top: 0px;
+  left: -130px;
+  font-size: 98px;
+}
+
+main .my-container .shopping-container .web-title p {
+  margin: 0px;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  color: #ffffff;
 }
 
 main .my-container .shopping-container .shopping-order {
@@ -190,6 +206,7 @@ main .my-container .shopping-container .shopping-order .order-title ul .title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px;
+  letter-spacing: 1.6px;
 }
 
 main .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(2) {
@@ -244,6 +261,20 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .img im
      object-position: center;
 }
 
+main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content {
+  min-height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title {
   color: #65737f;
 }
@@ -254,6 +285,8 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .conten
 
 main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text {
   color: #a3b6c1;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text p {
@@ -266,6 +299,7 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .price 
 
 main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p {
   margin: 0;
+  font-weight: lighter;
 }
 
 main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(1) {
@@ -319,6 +353,7 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .subtot
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: #65737f;
+  font-weight: lighter;
 }
 
 main .my-container .shopping-container .shopping-order .shopping-cart ul .delete-cart .delete .delete-button {
@@ -411,8 +446,9 @@ main .my-container .shopping-container .payment-shipping .shipping .business {
   margin: auto;
   padding: 5px 10px;
   color: #65737f;
-  border-radius: 5px;
   background-color: #abbac9;
+  font-size: 12px;
+  letter-spacing: 0.8px;
 }
 
 main .my-container .shopping-container .payment-shipping .shipping .choose {
@@ -428,7 +464,8 @@ main .my-container .shopping-container .payment-shipping .shipping .choose {
 }
 
 main .my-container .shopping-container .payment-shipping .shipping .choose .choose-button {
-  padding: 5px 10px;
+  font-size: 12px;
+  padding: 5px 15px;
   background: white;
   border: 1px solid #65737f;
   border-radius: 10px;
@@ -439,6 +476,7 @@ main .my-container .shopping-container .payment-shipping .shipping .choose .choo
 
 main .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
   background: #f7a269;
+  color: #ffffff;
   border: 1px solid #f7a269;
 }
 
@@ -511,7 +549,7 @@ main .my-container .other-amount .other-discount .other-card .commodity .commodi
 }
 
 main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
-  font-size: 14px;
+  font-size: 12px;
   color: #444444;
   margin-bottom: 20px;
 }
@@ -530,10 +568,13 @@ main .my-container .other-amount .other-discount .other-card .commodity .commodi
   padding: 5px 20px;
   -webkit-transition: .5s;
   transition: .5s;
+  font-size: 12px;
 }
 
 main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
   background: #f7a269;
+  color: #ffffff;
+  border: none;
 }
 
 main .my-container .other-amount .amount {
@@ -581,6 +622,7 @@ main .my-container .other-amount .amount .total .price-total {
 main .my-container .other-amount .amount .total .price-total p {
   margin: 0;
   font-size: 14px;
+  font-weight: bold;
 }
 
 main .my-container .other-amount .amount .order-total-button {
