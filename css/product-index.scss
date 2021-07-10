@@ -167,12 +167,26 @@ main{
             align-items: center;  
             .product-first {
                 @include shoes-content();
+                &:nth-child(n+3){
+                    img{
+                       width: 192px;
+                       top: -12px;
+                       left: 37px; 
+                    }
+                } 
             }
             .product-second {
-                @include shoes-content();                    
+                @include shoes-content();
+                &:nth-child(n+1){
+                    img{
+                       width: 192px;
+                       top: -15px;
+                       left: 37px; 
+                    }
+                }                     
             }
             .product-third {
-                @include shoes-content();                    
+                @include shoes-content();              
             }
             .product-fourth {
                 @include shoes-content();

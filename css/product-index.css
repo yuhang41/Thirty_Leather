@@ -213,6 +213,12 @@ main .product-container .product-container-card .product-first button {
   margin: 30px 0px 10px 0px;
 }
 
+main .product-container .product-container-card .product-first:nth-child(n+3) img {
+  width: 192px;
+  top: -12px;
+  left: 37px;
+}
+
 main .product-container .product-container-card .product-second {
   width: 275px;
   height: 275px;
@@ -286,6 +292,12 @@ main .product-container .product-container-card .product-second button {
   border: 2px solid #a0a0a0;
   border-radius: 45px;
   margin: 30px 0px 10px 0px;
+}
+
+main .product-container .product-container-card .product-second:nth-child(n+1) img {
+  width: 192px;
+  top: -15px;
+  left: 37px;
 }
 
 main .product-container .product-container-card .product-third {
