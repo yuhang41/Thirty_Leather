@@ -1,9 +1,13 @@
 @import "_style_guild.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+
 * {
     list-style: none;
     margin: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
+
 // container RWD
 .container {
     max-width: 1520px;
@@ -11,7 +15,7 @@
 nav {
     height: 113px;
 }
-main{
+main {
     .main-container {
         padding-left: 7.4vw;
         overflow: hidden;
@@ -43,7 +47,7 @@ main{
                 }
                 .swiper-pagination-bullet-active {
                     background-color: $color-Orange;
-    
+
                     &::before {
                         content: "";
                         height: 17px;
@@ -59,7 +63,7 @@ main{
                 text-align: center;
                 font-size: 18px;
                 height: calc(100vh - 113px);
-    
+
                 background-size: cover;
                 background-repeat: no-repeat;
                 /* Center slide text vertically */
@@ -84,16 +88,16 @@ main{
             bottom: 36px;
             right: 25px;
             z-index: 5;
-    
+
             &.active {
                 .more-button-list {
                     opacity: 1;
                     transform: scale(1);
                 }
-    
+
                 .more-button-list-item {
                     animation: fadeInItem 0.6s 0.2s forwards;
-    
+
                     &:nth-child(2) {
                         animation-delay: 0.4s;
                     }
@@ -104,14 +108,14 @@ main{
                         animation-delay: 0.8s;
                     }
                 }
-    
+
                 .more-button {
                     animation: onePulse 1s forwards linear;
                     animation-iteration-count: infinite;
                 }
             }
         }
-    
+
         .more-button {
             background-color: white;
             box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
@@ -128,7 +132,7 @@ main{
             color: #fff;
             position: relative;
             z-index: 2;
-    
+
             &-list {
                 background-color: $color-White;
                 border-radius: 8px;
@@ -144,16 +148,16 @@ main{
                 transform: scale(0);
                 transform-origin: bottom right;
                 transition: all 0.3s ease 0.1s;
-    
+
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-    
+
                 li {
                     opacity: 0;
                 }
             }
-    
+
             &-list-item {
                 &:nth-child(1) {
                     display: flex;
@@ -172,10 +176,10 @@ main{
                             border-radius: 50%;
                             margin-right: 10px;
                             cursor: pointer;
-    
+
                             justify-content: center;
                             align-items: center;
-    
+
                             .dot {
                                 width: 3px;
                                 height: 3px;
@@ -208,7 +212,7 @@ main{
                             border-radius: 50%;
                             opacity: unset;
                             cursor: pointer;
-    
+
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -245,7 +249,7 @@ main{
                         height: 52px;
                         background-color: $color-Blue;
                         border-radius: 10px;
-    
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -279,7 +283,7 @@ main{
                         border-radius: 10px;
                         padding: 0px 31px;
                         cursor: pointer;
-    
+
                         display: flex;
                         align-items: center;
                         .line-icon {
@@ -306,21 +310,21 @@ main{
                 }
             }
         }
-    
+
         @keyframes onePulse {
             0% {
                 box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
             }
-    
+
             50% {
                 box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
             }
-    
+
             100% {
                 box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
             }
         }
-    
+
         @keyframes fadeInItem {
             100% {
                 transform: translatex(0px);
@@ -335,13 +339,13 @@ main{
             .story-content {
                 display: flex;
                 position: relative;
-    
+
                 img {
                     position: absolute;
                     left: -8vw;
                     width: 974px;
                     height: 588px;
-    
+
                     z-index: 1;
                 }
                 svg {
@@ -365,7 +369,7 @@ main{
                         0% {
                             stroke-dashoffset: 4000;
                         }
-    
+
                         100% {
                             stroke-dashoffset: 0;
                         }
@@ -552,7 +556,7 @@ main{
                         0% {
                             stroke-dashoffset: 4000;
                         }
-    
+
                         100% {
                             stroke-dashoffset: 0;
                         }
@@ -617,7 +621,7 @@ main{
                     0% {
                         stroke-dashoffset: 4000;
                     }
-    
+
                     100% {
                         stroke-dashoffset: 0;
                     }
@@ -662,7 +666,7 @@ main{
                 width: 275px;
                 height: 306px;
                 background-color: $color-White-opacity;
-    
+
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -732,7 +736,7 @@ main{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-    
+
                 .product-item {
                     width: 80%;
                     display: flex;
@@ -827,12 +831,12 @@ main{
                 .swiper-container {
                     width: 100%;
                     height: 600px;
-    
+
                     .swiper-slide {
                         text-align: center;
                         font-size: 18px;
                         background: $color-WedgwoodBlue;
-    
+
                         /* Center slide text vertically */
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -913,7 +917,7 @@ main{
         // 試穿資訊
         .studio-information {
             font-family: $font-Family-A;
-    
+
             .studio-photo {
                 & img {
                     width: 559px;
@@ -921,31 +925,32 @@ main{
                     border-left: 18px solid $color-Apricot;
                 }
             }
-    
+
             .try-on-infor {
                 position: relative;
-    
+
                 .try-on {
                     font-size: $H1-font-size;
                     letter-spacing: $font-letter-space-100;
                     height: 72px;
                     margin-bottom: 12px;
                 }
-    
+
                 .detail {
                     font-size: $H6-font-size;
+                    font-family: "Source Code Pro", monospace;
                     letter-spacing: $font-letter-space-100;
                     position: absolute;
                     top: 65px;
-                    left: 36px;
+                    left: 25px;
                 }
-    
+
                 .infor {
                     font-size: $H1-font-size;
                     letter-spacing: $font-letter-space-100;
                 }
             }
-    
+
             .contact-head {
                 ul {
                     font-size: $H5-font-size;
@@ -954,33 +959,32 @@ main{
                     border-left: 1px solid $color-Apricot;
                 }
             }
-    
+
             .contact-text {
                 ul {
                     font-size: $H7-font-size;
-    
+
                     .phone {
                         padding-top: 3px;
                     }
-    
+
                     .business-time {
                         padding-top: 11px;
                     }
-    
+
                     .address {
                         padding-top: 7px;
                     }
-    
+
                     .note {
                         padding-top: 6px;
                     }
                 }
             }
-    
+
             .shop-map {
                 border-left: 18px solid $color-Apricot;
             }
         }
     }
 }
-
