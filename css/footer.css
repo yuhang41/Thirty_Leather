@@ -103,4 +103,58 @@ footer .site-footer .copyright {
   letter-spacing: 1.6px;
   color: #ffffff;
 }
+
+@media (max-width: 1024px) {
+  footer {
+    position: relative;
+  }
+  footer .site-footer {
+    padding-bottom: 0;
+  }
+  footer .site-footer .footer-arrow {
+    position: absolute;
+    top: -130px;
+    right: 10px;
+  }
+  footer .site-footer .common-problems {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  footer .site-footer .common-problems .lists {
+    border: none;
+  }
+  footer .site-footer .common-problems ul li {
+    width: 155px;
+    height: 32px;
+  }
+  footer .site-footer .common-problems .common-problem {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  footer .site-footer {
+    padding-bottom: 0;
+  }
+  footer .site-footer .footer-logo {
+    width: 95px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+  }
+  footer .site-footer .footer-arrow {
+    position: absolute;
+    top: -110px;
+    right: 10px;
+  }
+  footer .site-footer .common-problems li {
+    width: 155px;
+    height: 32px;
+  }
+  footer .site-footer .common-problems .lists {
+    border: none;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

@@ -96,43 +96,78 @@ footer {
         }
     }
 }
+@media (max-width: 1024px) {
+    footer {
+        position: relative;
 
-// @media (max-width: 991px) {
-//     .site-footer {
-//         .common-problems {
-//             li {
-//                 width: 132px;
-//                 height: 32px;
-//             }
+        .site-footer {
+            padding-bottom: 0;
 
-//             .lists {
-//                 border: none;
-//             }
+            .footer-arrow {
+                position: absolute;
+                top: -130px;
+                right: 10px;
+            }
 
-//             .common-problem {
-//                 margin-left: 10px;
-//             }
-//         }
-//     }
-// }
+            .common-problems {
+                margin-top: 50px;
+            }
+        }
+    }
+}
 
-// @media (max-width: 767px) {
-//     .site-footer {
-//         padding-bottom: 0;
-//     }
+@media (max-width: 991px) {
+    footer {
+        .site-footer {
+            .common-problems {
+                .lists {
+                    border: none;
+                }
+                ul li {
+                    width: 155px;
+                    height: 32px;
+                }
 
-//     .common-problems {
-//         li {
-//             width: 132px;
-//             height: 32px;
-//         }
+                .common-problem {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
 
-//         .lists {
-//             border: none;
-//         }
+@media (max-width: 320px) {
+    footer {
+        .site-footer {
+            padding-bottom: 0;
+            
+            .footer-logo {
+                width: 95px;
+                height: 80px;
+                margin: auto;
+                position: relative;
+            }
 
-//         .common-problem {
-//             margin-left: 10px;
-//         }
-//     }
-// }
+            .footer-arrow {
+                position: absolute;
+                top: -110px;
+                right: 10px;
+            }
+    
+            .common-problems {
+                li {
+                    width: 155px;
+                    height: 32px;
+                }
+        
+                .lists {
+                    border: none;
+                }
+            }
+
+            .copyright {
+                
+            }
+        }
+    }
+}

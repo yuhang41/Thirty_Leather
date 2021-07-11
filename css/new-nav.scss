@@ -1,0 +1,286 @@
+@import '_style_guild.scss';
+*{
+    list-style: none;   
+    margin: 0px;
+    padding: 0px; 
+    font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    &:focus{
+        outline:none;
+    }
+}
+@mixin notebook {
+    @media(max-width:1550px){
+        @content;
+        transition: 1s;
+    }
+}
+@mixin tablet {
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
+@mixin sm-phone {
+    @media(max-width:320px){
+        @content;
+        transition: 1s;
+    }
+}
+nav{
+    padding-left: 7.4vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+    @include tablet(){
+        padding-left: 0px;
+    }
+    .logo{
+        position: absolute;
+        top: 0px;
+        left: 142px;
+        width: 160px;
+        height: 148px;
+        transition: 1s;
+        z-index: 2;
+        @include tablet(){
+            width: 58px;
+            height: 58px;
+            left: 0px;
+        }
+        @include sm-phone(){
+            left: 58px;
+        }
+    }
+    .personal-item{
+        height: 113px;
+        display: flex;
+        transition: 1s;
+        @include tablet(){
+            height: 58px;
+            transition: 1s;
+        }
+        .input-cart{
+            align-items: center;
+            margin:0px 4vw 0px 0px;
+            padding-top: 40px;
+            transition: 1s;
+            @include notebook(){
+                margin:0px 2vw 0px 0px;
+            }
+            @include tablet(){
+                margin:0px 4vw 0px 0px;
+                padding-top: 0px;
+                align-items: flex-end;
+            }
+            i{
+                font-size: 20px;
+                color: $color-WedgwoodBlue;
+                cursor: pointer;
+            }
+            .search{
+                align-items: center;
+                label{
+                    margin: 0px;
+                    height: 16px;
+                }
+            }
+            input{
+                border: none;
+                border-bottom: 1px solid $color-WedgwoodBlue;
+                width:0px;
+                padding: 0px;
+                transition: 0.7s;
+                transition-delay: 1s;
+                &:hover{
+                    width:147px;
+                    transition: 0.7s;  
+                }
+                &:focus {
+                   outline: none;
+                  }
+            }
+            input::-webkit-input-placeholder { 
+                color: $color-placeholder;
+                font-size: $H10-font-size; 
+                letter-spacing: $font-letter-space-200;
+            }
+            .cart{
+                position: relative;
+               .cart-number{
+                    width: 24px;
+                    height: 15px;
+                    font-size: 14px;
+                    background-color: $color-prompt;
+                    border-radius: 8px;
+                    position: absolute;
+                    left: 28px;
+                    top: -6px;
+                    z-index: 99;
+                    text-align: center;
+                    color:$color-White ;
+                    line-height: 15px;
+                }
+            }
+        }
+        .twd-lang{
+            display: flex;
+            text-align: center;
+            @include sm-phone(){
+                &{
+                    display: none!important;
+                }
+            }
+            .twd{
+                width: 97px;
+                background-color: $color-WedgwoodBlue;
+                margin-right: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    color:$color-White;
+                    font-size: $H9-font-size;
+                    letter-spacing: $font-letter-space-100;
+                }
+            }
+            .lang{
+                width: 97px;
+                background-color: $color-WedgwoodBlue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    color: $color-White;
+                    font-size: $H9-font-size;
+                    letter-spacing: $font-letter-space-100;
+                }
+                
+            }
+        }
+    }
+}
+.navbar{
+    padding:3.5rem 0px 0px 10rem;
+    align-items: flex-start;
+    font-size:$H9-font-size;
+    letter-spacing: $font-letter-space-100;
+    .navbar-collapse{
+        margin-left: 4rem;
+        z-index: 2;
+        @include tablet(){
+            &{
+                width: calc(100vw - 58px);
+                background-color: $color-Navbar-Bgc;
+                margin-left: 0px;
+                position: absolute;
+                top: 58px;
+                border: 0.5px solid $color-IronGray;
+            }
+        }
+        @include sm-phone(){
+            &{
+                width: 100vw; 
+            }
+        }
+    }
+    .dropdown-menu{
+        background-color: unset;
+        border: unset;
+        padding: 0px;
+        position: absolute;
+        left: 5px;
+        background-color: $color-White;
+        .dropdown-item{
+            font-size: $H11-font-size;
+            color: $color-WedgwoodBlue;
+        }
+        @include tablet(){
+            position: static;
+            background-color: unset;
+        }
+    }
+    li{
+        padding:0px 1.2vw;
+        border-right: 1px solid $color-Nav-Separate;
+        transition: 1s;
+        &.more-option{
+            display: none;
+        }
+        &.all-commidity{
+            display: none;
+        }
+    }
+    @include notebook(){
+      li{
+        padding:0px 0.5vw;
+          &:nth-child(n+4){
+              display: none;
+          }
+          &.more-option{
+            display: block;
+        }
+      }      
+    }
+    @include tablet(){
+        padding:0px 0px 0px 3.7rem;
+        li{
+            border: unset;
+            &.single-commidity{
+                display: none;
+            }
+            &.all-commidity{
+                display: block;
+            }
+            &:nth-child(n+3){
+                display: block;
+            }
+            &.more-option{
+                display: none;
+            }
+            &.female-shoes{
+                display: none;
+            }
+        }
+        &-toggler{
+            width: 58px;
+            height: 58px;
+            padding: 0px;
+            border: unset;
+            border-radius: unset;
+            background-color: $color-WedgwoodBlue;
+            display: block;
+            i{
+                font-size: $H3-font-size;
+                color:$color-White;
+            }
+        }
+        &-nav{
+            margin-left: 20px;
+        }
+    }
+    @include sm-phone(){
+        padding:0px; 
+    }
+}
+//導覽列自訂義斷點
+@media (min-width:1025px){
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
