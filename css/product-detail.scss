@@ -20,637 +20,674 @@ body{
     scroll-behavior: smooth;
 }
 main{
-    min-height: 100vh;
-    display: flex;
-    // 左邊白色區塊的欄位
-    .commodity-menu{
-        max-width: 375px;
-        width: 100%;
-        padding-top: 100px;
-        .all-commodity{
-            max-width: 200px;
-            margin: auto;
+    .main-container{
+        min-height: 100vh;
+        display: flex;
+        // 左邊白色區塊的欄位
+        .commodity-menu{
+            max-width: 375px;
             width: 100%;
-            .commodity-menu-title{
-                cursor: pointer;
-                padding-left: 10px;
-                margin-bottom: 10px;
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;
-                &.AllCommodity::after{
-                    content:'\f077';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.AllCommodity.active::after{
-                    content:'\f078';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.Snowshoe::after{
-                    content:'\f078';                    
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.Snowshoe.active::after{
-                    content:'\f077';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-            }
-            .commodity-menu-options{
-                width: 70%; 
-                margin-left: 60px;          
-                li{
-                    font-size: $H10-font-size;
+            padding-top: 100px;
+            .all-commodity{
+                max-width: 200px;
+                margin: auto;
+                width: 100%;
+                .commodity-menu-title{
+                    cursor: pointer;
+                    padding-left: 10px;
                     margin-bottom: 10px;
-                    a{
-                        color: $color-Nav-icon;
-                    }                    
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    &.AllCommodity::after{
+                        content:'\f077';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                    &.AllCommodity.active::after{
+                        content:'\f078';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                    &.Snowshoe::after{
+                        content:'\f078';                    
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                    &.Snowshoe.active::after{
+                        content:'\f077';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
                 }
-
-            }
-            .commodity-other{
-                cursor: pointer;
-                padding-left: 10px;
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;                
+                .commodity-menu-options{
+                    width: 70%; 
+                    margin-left: 60px;          
+                    li{
+                        font-size: $H10-font-size;
+                        margin-bottom: 10px;
+                        a{
+                            color: $color-Nav-icon;
+                        }                    
+                    }
+    
+                }
+                .commodity-other{
+                    cursor: pointer;
+                    padding-left: 10px;
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;                
+                }
             }
         }
-    }
-    // 右邊商品資訊
-    .product-container{
-        width: 100%;
-        min-height: 100vh;
-        // 商品資訊
-        .productshop-container{
-            padding-top: 85px;
-            padding-left: 2.6vw;
-            background: $color-LightGray;
-            .breadcrumbs{
-                margin-bottom: 20px;
-                .bread-label{
-                    a{
-                        font-size: $H10-font-size;
-                        color: $color-IronGray;
+        // 右邊商品資訊
+        .product-container{
+            width: 100%;
+            min-height: 100vh;
+            // 商品資訊
+            .productshop-container{
+                padding-top: 85px;
+                padding-left: 2.6vw;
+                background: $color-LightGray;
+                .breadcrumbs{
+                    margin-bottom: 20px;
+                    .bread-label{
+                        a{
+                            font-size: $H10-font-size;
+                            color: $color-IronGray;
+                        }
                     }
                 }
-            }
-            .commidity-container{
-                max-width: 1200px;
-                margin: auto;
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px solid $color-Product-Detail-Title;
-                .swiper{
-                    max-width: 600.353px;
-                    max-height: 789.17px;
-                    position: relative;
-                    .swiper-container {
-                        width: 100%;
-                        height: 100%;
-                      }
-                      .swiper-button-next{
-                          position: absolute;
-                          right: -5vw;
-                          top:40%;
-                          color: $color-Product-Detail-Title;
-                      }
-                      .swiper-button-prev{
-                        position: absolute;
-                        left: -5vw;
-                        top:40%;
-                        color: $color-Product-Detail-Title;
-                    }
-                      .swiper-slide {
-                        text-align: center;
-                        font-size: 18px;
-                        background: #fff;
-                
-                        /* Center slide text vertically */
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-box-pack: center;
-                        -ms-flex-pack: center;
-                        -webkit-justify-content: center;
-                        justify-content: center;
-                        -webkit-box-align: center;
-                        -ms-flex-align: center;
-                        -webkit-align-items: center;
-                        align-items: center;
-                      }
-                
-                      .swiper-slide img {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                      }
-                
-                      body {
-                        background: #000;
-                        color: #000;
-                      }
-                
-                      .swiper-container {
-                        width: 100%;
-                        height: 300px;
-                        margin-left: auto;
-                        margin-right: auto;
-                      }
-                
-                      .swiper-slide {
-                        background-size: cover;
-                        background-position: center;
-                      }
-                
-                      .mySwiper2 {
-                        height: 80%;
-                        width: 100%;
-                      }
-                
-                      .mySwiper {
-                        height: 20%;
-                        box-sizing: border-box;
-                        margin-top: 30px;
-                      }
-                
-                      .mySwiper .swiper-slide {
-                        width: 25%;
-                        height: 100%;
-                        opacity: 0.4;
-                      }
-                
-                      .mySwiper .swiper-slide-thumb-active {
-                        opacity: 1;
-                      }
-                
-                      .swiper-slide img {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                      }
-                }
-                .order-detail{
-                    max-width: 424.94px;
+                .commidity-container{
+                    max-width: 1200px;
+                    margin: auto;
                     display: flex;
-                    flex-direction: column;
                     justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 40px;
-                    .odrer-info{
-                        min-height: 631px;
+                    border-bottom: 1px solid $color-Product-Detail-Title;
+                    .swiper{
+                        max-width: 600.353px;
+                        max-height: 789.17px;
+                        position: relative;
+                        .swiper-container {
+                            width: 100%;
+                            height: 100%;
+                          }
+                          .swiper-button-next{
+                              position: absolute;
+                              right: -5vw;
+                              top:40%;
+                              color: $color-Product-Detail-Title;
+                          }
+                          .swiper-button-prev{
+                            position: absolute;
+                            left: -5vw;
+                            top:40%;
+                            color: $color-Product-Detail-Title;
+                        }
+                          .swiper-slide {
+                            text-align: center;
+                            font-size: 18px;
+                            background: #fff;
+                    
+                            /* Center slide text vertically */
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: -webkit-flex;
+                            display: flex;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            -webkit-justify-content: center;
+                            justify-content: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            -webkit-align-items: center;
+                            align-items: center;
+                          }
+                    
+                          .swiper-slide img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          }
+                    
+                          body {
+                            background: #000;
+                            color: #000;
+                          }
+                    
+                          .swiper-container {
+                            width: 100%;
+                            height: 300px;
+                            margin-left: auto;
+                            margin-right: auto;
+                          }
+                    
+                          .swiper-slide {
+                            background-size: cover;
+                            background-position: center;
+                          }
+                    
+                          .mySwiper2 {
+                            height: 80%;
+                            width: 100%;
+                          }
+                    
+                          .mySwiper {
+                            height: 20%;
+                            box-sizing: border-box;
+                            margin-top: 30px;
+                          }
+                    
+                          .mySwiper .swiper-slide {
+                            width: 25%;
+                            height: 100%;
+                            opacity: 0.4;
+                          }
+                    
+                          .mySwiper .swiper-slide-thumb-active {
+                            opacity: 1;
+                          }
+                    
+                          .swiper-slide img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          }
+                    }
+                    .order-detail{
+                        max-width: 424.94px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        border-bottom: 1px solid $color-Cart-Border;
-                        .order-discript{
-                            .discript-title{
-                                margin-bottom: 10px;
+                        align-items: center;
+                        margin-bottom: 40px;
+                        .odrer-info{
+                            min-height: 631px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            border-bottom: 1px solid $color-Cart-Border;
+                            .order-discript{
+                                .discript-title{
+                                    margin-bottom: 10px;
+                                    p{
+                                        margin: 0px;
+                                        font-size: $H3-font-size;
+                                        color: $color-Product-Detail-Title;
+                                        letter-spacing: $font-letter-space-200;
+                                        font-weight: $font-Weight-B;
+                                    }
+                                }
+                                .evaluation{
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 25px;
+                                    .star-eval{
+                                        color: $color-Evaluation-Star;
+                                        font-size: $H7-font-size;
+                                    }
+                                    .other-eavl{
+                                        display: flex;
+                                        font-size: $H7-font-size;
+                                        i{
+                                            color: $color-Product-Detail-Title;
+                                            margin-right: 10px;
+                                        }
+                                        p{
+                                            padding: 0px 20px;
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-200;
+                                            color: $color-IronGray;
+                                            margin: 0px;
+                                            &:nth-child(2){
+                                                border-left: 1px solid $color-Product-Detail-Title;
+                                                border-right: 1px solid $color-Product-Detail-Title;
+                                            }
+                                        }
+                                    }
+                                }
+                                .content{
+                                    .order-text{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        i{
+                                            margin-right: 10px;
+                                            line-height: 26px;
+                                            font-size: $H11-font-size;
+                                        }
+                                        p{
+                                            font-size: $H10-font-size;
+                                            line-height: 26px;
+                                            letter-spacing: $font-letter-space-100;
+                                            margin: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                            .order-color{
+                                max-width: 336.7px;                                
+                                .color-title{
+                                    margin-bottom: 25.42px;
+                                    span{
+                                        &:nth-child(1){
+                                            font-size: $H5-font-size;
+                                            color: $color-IronGray;
+                                            font-weight: $font-Weight-B;
+                                            letter-spacing: $font-letter-space-50;
+                                            margin-right: 10px;
+                                        }
+                                        &:nth-child(2){
+                                            font-size: $H11-font-size;
+                                            color: $color-Product-Detail-Title;
+                                            letter-spacing: $font-letter-space-100;
+                                        }
+                                    } 
+                                }
+                                                              
+                                .color-style{
+                                    display: flex;
+                                    justify-content: space-around;
+                                    input[type=checkbox]{
+                                        opacity: 0;
+                                        position: absolute;
+                                        right: 0;
+                                        z-index: -999;
+                                    }  
+                                    .color-button{
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;                                                                      
+                                    }
+                                }
+                            }
+                            .order-size{
+                                max-width: 336.7px;      
+                                                       
+                                .size-title{
+                                    margin-bottom: 5px;
+                                    span{
+                                        &:nth-child(1){
+                                            font-size: $H5-font-size;
+                                            color: $color-IronGray;
+                                            font-weight: $font-Weight-B;
+                                            letter-spacing: $font-letter-space-50;
+                                            margin-right: 10px;
+                                        }
+                                        &:nth-child(2){
+                                            font-size: $H10-font-size;
+                                            font-weight: $font-Weight-B;
+                                            color: $color-IronGray;
+                                        }
+                                    }
+                                }
+                                .size-deatil{      
+                                    font-size: $H7-font-size;
+                                    font-weight: $font-Weight-B;
+                                    letter-spacing: $font-letter-space-50;
+                                    .small-size{                                        
+                                        display: flex;
+                                        flex-wrap: wrap;                                        
+                                        .size-checkbox{
+                                            opacity: 0;
+                                            position: absolute;
+                                            right: 0;
+                                            z-index: -999;
+                                        }
+                                        label{
+                                            width: 45px;
+                                            height: 40px;
+                                            text-align: center;
+                                            line-height: 40px;
+                                            margin-right: 10px;
+                                            border-radius: 5px;
+                                            &:hover{
+                                                background-color: $color-Number-Hover;                                                
+                                            }  
+                                        }                                        
+                                    }                                    
+                                }
+                                
+                            }
+                        }
+                        .order-shipping{
+                            width: 100%;
+                            min-height: 156.19px;
+                            margin-top: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .order-button{
+                                display: flex;
+                                justify-content: space-between;
+                                button:hover{
+                                    font-weight: $font-Weight-B;
+                                    color: $color-White;
+                                    background-color: $color-Background-line;
+                                    border: 1px solid $color-Background-line;
+                                }
+                                .putcart{
+                                    width: 135px;
+                                    height: 43px;
+                                    background-color: unset;
+                                    border: 1px solid $color-MoreButton;
+                                    color: $color-IronGray;
+                                    font-size: $H7-font-size;
+                                    border-radius: 5px;
+                                }
+                                .pre-order{
+                                    width: 70px;
+                                    height: 43px;
+                                    background-color: unset;
+                                    border: 1px solid $color-MoreButton;
+                                    color: $color-IronGray;
+                                    font-size: $H7-font-size;
+                                    border-radius: 5px;
+                                }
+                                .order-amount{
+                                    display: flex;
+                                    .minus{
+                                        width: 45px;
+                                        height: 40px;
+                                        background-color: unset;
+                                        border: none;
+                                        font-size: $H6-font-size;
+                                        color: $color-Nav-icon;
+                                        font-weight: unset;
+                                        &:hover{
+                                            color: $color-White;
+                                            background-color: $color-Background-line;
+                                        }
+                                    }
+                                    input{
+                                        width: 60px;
+                                        height: 40px;
+                                        border: none;
+                                        text-align: center;
+                                        -webkit-appearance: none;
+                                        &::placeholder {
+                                            font-size: $H7-font-size;
+                                            color: $color-Evaluation-Star;
+                                        }
+                                        
+                                    }
+                                    .plus{
+                                        width: 45px;
+                                        height: 40px;
+                                        background-color: unset;
+                                        border: none;
+                                        font-size: $H6-font-size;
+                                        color:$color-Nav-icon;
+                                        font-weight: unset;
+                                        &:hover{
+                                            color: $color-White;
+                                            background-color: $color-Background-line;
+                                        }
+                                    }
+                                }
+                            }
+                            .order-price{
+                                display: flex;
+                                align-items: flex-end;
                                 p{
                                     margin: 0px;
-                                    font-size: $H3-font-size;
-                                    color: $color-Product-Detail-Title;
-                                    letter-spacing: $font-letter-space-200;
-                                    font-weight: $font-Weight-B;
-                                }
-                            }
-                            .evaluation{
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 25px;
-                                .star-eval{
-                                    color: $color-Evaluation-Star;
-                                    font-size: $H7-font-size;
-                                }
-                                .other-eavl{
-                                    display: flex;
-                                    font-size: $H7-font-size;
-                                    i{
-                                        color: $color-Product-Detail-Title;
-                                        margin-right: 10px;
-                                    }
-                                    p{
-                                        padding: 0px 20px;
-                                        font-size: $H10-font-size;
-                                        letter-spacing: $font-letter-space-200;
-                                        color: $color-IronGray;
-                                        margin: 0px;
-                                        &:nth-child(2){
-                                            border-left: 1px solid $color-Product-Detail-Title;
-                                            border-right: 1px solid $color-Product-Detail-Title;
-                                        }
-                                    }
-                                }
-                            }
-                            .content{
-                                .order-text{
-                                    display: flex;
-                                    align-items: flex-start;
-                                    i{
-                                        margin-right: 10px;
-                                        line-height: 26px;
-                                        font-size: $H11-font-size;
-                                    }
-                                    p{
-                                        font-size: $H10-font-size;
-                                        line-height: 26px;
-                                        letter-spacing: $font-letter-space-100;
-                                        margin: 0px;
-                                    }
-                                }
-                            }
-                        }
-                        .order-color{
-                            max-width: 336.7px;
-                            .color-title{
-                                margin-bottom: 25.42px;
-                                span{
+                                    padding: 0px;
                                     &:nth-child(1){
-                                        font-size: $H5-font-size;
-                                        color: $color-IronGray;
-                                        font-weight: $font-Weight-B;
+                                        font-size: $H6-font-size;
+                                        color: $color-Onsell;
                                         letter-spacing: $font-letter-space-50;
-                                        margin-right: 10px;
+                                        text-decoration: line-through;
+                                        margin-right: 20px;
                                     }
                                     &:nth-child(2){
-                                        font-size: $H11-font-size;
-                                        color: $color-Product-Detail-Title;
-                                        letter-spacing: $font-letter-space-100;
-                                    }
-                                } 
-                            }
-                            .color-style{
-                                display: flex;
-                                justify-content: space-around;
-                                .color-button{
-                                    width: 36px;
-                                    height: 36px;
-                                    border-radius: 50%;
-                                    &:nth-child(1){
-                                        background-color: $color-Deep-Red;
-                                    }
-                                    &:nth-child(2){
-                                        background-color: $color-Deep-Blue;
-                                    }
-                                    &:nth-child(3){
-                                        background-color: $color-Brown;
-                                    }
-                                    &:nth-child(4){
-                                        background-color: $color-Brown-Yellow;
-                                    }
-                                    &:nth-child(5){
-                                        background-color: $color-Light-Gray;
-                                        border: 1px solid $color-MoreButton;
-                                    }
-                                    &:hover{
-                                        border: 1px solid $color-Evaluation-Star;
-                                    }
-                                }
-                            }
-                        }
-                        .order-size{
-                            max-width: 336.7px;
-                            .size-title{
-                                margin-bottom: 5px;
-                                span{
-                                    &:nth-child(1){
-                                        font-size: $H5-font-size;
-                                        color: $color-IronGray;
-                                        font-weight: $font-Weight-B;
+                                        font-size: $H0-font-size;
                                         letter-spacing: $font-letter-space-50;
-                                        margin-right: 10px;
-                                    }
-                                    &:nth-child(2){
-                                        font-size: $H10-font-size;
-                                        font-weight: $font-Weight-B;
-                                        color: $color-IronGray;
-                                    }
-                                }
-                            }
-                            .size-deatil{      
-                                font-size: $H7-font-size;
-                                font-weight: $font-Weight-B;
-                                letter-spacing: $font-letter-space-50;
-                                .small-size{
-                                    ul{
-                                        display: flex;
-                                        justify-content: space-around;
-                                        li{
-                                            width: 45px;
-                                            height: 40px;
-                                            text-align: center;
-                                            line-height: 40px;
-                                          &:hover{
-                                              background-color: $color-Number-Hover;
-                                              border-radius: 5px;
-                                          }  
-                                        }
-                                    }
-                                }
-                                .bigger-size{
-                                    ul{
-                                        display: flex;
-                                        justify-content: space-around;
-                                        li{
-                                            width: 45px;
-                                            height: 40px;
-                                            text-align: center;
-                                            line-height: 40px;
-                                            &:hover{
-                                                background-color: $color-Number-Hover;
-                                                border-radius: 5px;
-                                            }  
-                                          }
-                                    }
-                                }
-                            }
-                            
-                        }
-                    }
-                    .order-shipping{
-                        width: 100%;
-                        min-height: 156.19px;
-                        margin-top: 30px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        .order-button{
-                            display: flex;
-                            justify-content: space-between;
-                            button:hover{
-                                font-weight: $font-Weight-B;
-                                color: $color-White;
-                                background-color: $color-Background-line;
-                                border: 1px solid $color-Background-line;
-                            }
-                            .putcart{
-                                width: 135px;
-                                height: 43px;
-                                background-color: unset;
-                                border: 1px solid $color-MoreButton;
-                                color: $color-IronGray;
-                                font-size: $H7-font-size;
-                                border-radius: 5px;
-                            }
-                            .pre-order{
-                                width: 70px;
-                                height: 43px;
-                                background-color: unset;
-                                border: 1px solid $color-MoreButton;
-                                color: $color-IronGray;
-                                font-size: $H7-font-size;
-                                border-radius: 5px;
-                            }
-                            .order-amount{
-                                display: flex;
-                                .minus{
-                                    width: 45px;
-                                    height: 40px;
-                                    background-color: unset;
-                                    border: none;
-                                    font-size: $H6-font-size;
-                                    color: $color-Nav-icon;
-                                    font-weight: unset;
-                                    &:hover{
-                                        color: $color-White;
-                                        background-color: $color-Background-line;
-                                    }
-                                }
-                                input{
-                                    width: 60px;
-                                    height: 40px;
-                                    border: none;
-                                    text-align: center;
-                                    -webkit-appearance: none;
-                                    &::placeholder {
-                                        font-size: $H7-font-size;
                                         color: $color-Evaluation-Star;
+                                        line-height: 60px;
                                     }
-                                    
-                                }
-                                .plus{
-                                    width: 45px;
-                                    height: 40px;
-                                    background-color: unset;
-                                    border: none;
-                                    font-size: $H6-font-size;
-                                    color:$color-Nav-icon;
-                                    font-weight: unset;
-                                    &:hover{
-                                        color: $color-White;
-                                        background-color: $color-Background-line;
-                                    }
-                                }
-                            }
-                        }
-                        .order-price{
-                            display: flex;
-                            align-items: flex-end;
-                            p{
-                                margin: 0px;
-                                padding: 0px;
-                                &:nth-child(1){
-                                    font-size: $H6-font-size;
-                                    color: $color-Onsell;
-                                    letter-spacing: $font-letter-space-50;
-                                    text-decoration: line-through;
-                                    margin-right: 20px;
-                                }
-                                &:nth-child(2){
-                                    font-size: $H0-font-size;
-                                    letter-spacing: $font-letter-space-50;
-                                    color: $color-Evaluation-Star;
-                                    line-height: 60px;
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        // 商品詳細描述/開發過程/尺碼建議
-        .productdetail-container{
-            background: $color-LightGray;
-            .detail-container{
-                position: relative;
-                overflow: hidden;
-                width: 100%;
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .tabs{
-                    display: flex;
-                    .tab{
-                        cursor: pointer;
-                        font-size: $H5-font-size;
-                        letter-spacing: $font-letter-space-50;
-                        margin-top: 40px;
-                        padding: 0px 35px;
-                        &:nth-child(2){
-                            border-right: 1px solid $color-Product-Detail-Title;
-                            border-left: 1px solid $color-Product-Detail-Title;  
-                        }
-                        &.active{
-                            position: relative;
-                            &:after{
-                                content: "";
-                                position: absolute;
-                                bottom:0px;
-                                left: 35px;
-                                width: 100px;
-                                height: 1px;
-                                background-color: $color-Evaluation-Star;
-                            }
-                            
-                        }
-                        &:hover{
-                            position: relative;
-                            &:after{
-                                content: "";
-                                position: absolute;
-                                bottom:0px;
-                                left: 35px;
-                                width: 100px;
-                                height: 1px;
-                                background-color: $color-Evaluation-Star;
-                            }
-                        }
-                    }
-                }
-                .tabs-contents{
+            // 商品詳細描述/開發過程/尺碼建議
+            .productdetail-container{
+                background: $color-LightGray;
+                .detail-container{
                     position: relative;
+                    overflow: hidden;
+                    width: 100%;
                     margin: auto;
-                    margin-top: 20px;
                     display: flex;
-                    .tab-c{
-                        // display: none;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        opacity: 0;
-                        width: 100%;
-                        height: auto;
-                        color: black;
-                        transition:display 1s;
-                        &.active{
-                            // display: block;
-                            opacity: 1;
-                            position: static;
-                            transition: display 1s;
+                    flex-direction: column;
+                    align-items: center;
+                    .tabs{
+                        display: flex;
+                        .tab{
+                            cursor: pointer;
+                            font-size: $H5-font-size;
+                            letter-spacing: $font-letter-space-50;
+                            margin-top: 40px;
+                            padding: 0px 35px;
+                            &:nth-child(2){
+                                border-right: 1px solid $color-Product-Detail-Title;
+                                border-left: 1px solid $color-Product-Detail-Title;  
+                            }
+                            &.active{
+                                position: relative;
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom:0px;
+                                    left: 35px;
+                                    width: 100px;
+                                    height: 1px;
+                                    background-color: $color-Evaluation-Star;
+                                }
+                                
+                            }
+                            &:hover{
+                                position: relative;
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom:0px;
+                                    left: 35px;
+                                    width: 100px;
+                                    height: 1px;
+                                    background-color: $color-Evaluation-Star;
+                                }
+                            }
                         }
                     }
-                    // 商品詳細描述
-                    .product-description{
-                       
-                        .inner-content{
-                            margin-top: 30px;
-                            .paragraph-first{
-                                max-width: 890px;
-                                text-align: justify;
-                                font-size: $H9-font-size;
-                                letter-spacing: $font-letter-space-100;
-                                line-height: 28px;
+                    .tabs-contents{
+                        position: relative;
+                        margin: auto;
+                        margin-top: 20px;
+                        display: flex;
+                        .tab-c{
+                            // display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            width: 100%;
+                            height: auto;
+                            color: black;
+                            transition:display 1s;
+                            &.active{
+                                // display: block;
+                                opacity: 1;
+                                position: static;
+                                transition: display 1s;
                             }
-                            .paragraph-second{
-                                max-width: 890px;
-                                text-align: justify;
-                                font-size: $H9-font-size;
-                                letter-spacing: $font-letter-space-100;
-                                line-height: 28px;
-                            }
-                            .shoes-detail{
-                                min-height: 969px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                padding-right: 12vw;
-                                .main-shoes{
-                                    position: relative;
-                                    .main-photo{
-                                        max-width: 653px;
-                                        min-height: 342px;
-                                        transform: rotate(-15deg);
-                                    }
-                                    .bg-square{
-                                        width: 483px;
-                                        height: 483px;
-                                        background-color: $color-Background-Square;
-                                        position: absolute;
-                                        top: 59px;
-                                        left: 234px;
-                                        object-fit: cover;
-                                    }
-                                    .bg-shadow{
-                                        width: 283px;
-                                        height: 20px;
-                                        border-radius: 50%;
-                                        background-color: $color-Background-Shadow;
-                                        position: absolute;
-                                        top: 272px;
-                                        left: 300px;
-                                        object-fit: cover;
-                                        filter: blur(4px);
-                                    }
-                                    @mixin click-p{
-                                        font-size: $H10-font-size;
-                                        letter-spacing: $font-letter-space-50;
-                                        line-height: 21px;
-                                        color: $color-IronGray;
-                                        margin: 0px 0px 0px 20px;
-                                    }
-                                    .click-function{
-                                        position: absolute;
-                                        .click-first{
+                        }
+                        // 商品詳細描述
+                        .product-description{
+                           
+                            .inner-content{
+                                margin-top: 30px;
+                                .paragraph-first{
+                                    max-width: 890px;
+                                    text-align: justify;
+                                    font-size: $H9-font-size;
+                                    letter-spacing: $font-letter-space-100;
+                                    line-height: 28px;
+                                }
+                                .paragraph-second{
+                                    max-width: 890px;
+                                    text-align: justify;
+                                    font-size: $H9-font-size;
+                                    letter-spacing: $font-letter-space-100;
+                                    line-height: 28px;
+                                }
+                                .shoes-detail{
+                                    min-height: 969px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding-right: 12vw;
+                                    .main-shoes{
+                                        position: relative;
+                                        .main-photo{
+                                            max-width: 653px;
+                                            min-height: 342px;
+                                            transform: rotate(-15deg);
+                                        }
+                                        .bg-square{
+                                            width: 483px;
+                                            height: 483px;
+                                            background-color: $color-Background-Square;
                                             position: absolute;
-                                            top: -200px;
-                                            left: -175px;
-                                            .click-button{
+                                            top: 59px;
+                                            left: 234px;
+                                            object-fit: cover;
+                                        }
+                                        .bg-shadow{
+                                            width: 283px;
+                                            height: 20px;
+                                            border-radius: 50%;
+                                            background-color: $color-Background-Shadow;
+                                            position: absolute;
+                                            top: 272px;
+                                            left: 300px;
+                                            object-fit: cover;
+                                            filter: blur(4px);
+                                        }
+                                        @mixin click-p{
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-50;
+                                            line-height: 21px;
+                                            color: $color-IronGray;
+                                            margin: 0px 0px 0px 20px;
+                                        }
+                                        .click-function{
+                                            position: absolute;
+                                            .click-first{
                                                 position: absolute;
-                                                bottom: -102px;
-                                                right: -55px;
-                                                width: 55px;
-                                                height: 55px;
-                                                opacity: 0.5;
-                                                background-color: $color-Shoes-Button;
-                                                border-radius: 50%;
-                                                z-index: 1;
-                                                &.active{
-                                                    &:before{
-                                                        content: "";
-                                                        position: absolute;
-                                                        top: -16px;
-                                                        left: -41px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        transform: rotate(45deg);
-                                                        background-color: $color-Shoes-Button;
-                                                        transform-origin:40px -1px;
-                                                        animation: short-line-grow .5s linear forwards;
-                                                        animation-delay: .7s;
+                                                top: -200px;
+                                                left: -175px;
+                                                .click-button{
+                                                    position: absolute;
+                                                    bottom: -102px;
+                                                    right: -55px;
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    opacity: 0.5;
+                                                    background-color: $color-Shoes-Button;
+                                                    border-radius: 50%;
+                                                    z-index: 1;
+                                                    &.active{
+                                                        &:before{
+                                                            content: "";
+                                                            position: absolute;
+                                                            top: -16px;
+                                                            left: -41px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            transform: rotate(45deg);
+                                                            background-color: $color-Shoes-Button;
+                                                            transform-origin:40px -1px;
+                                                            animation: short-line-grow .5s linear forwards;
+                                                            animation-delay: .7s;
+                                                        }
+                                                        @keyframes short-line-grow{
+                                                            to {width:80px;}
+                                                          }
+                                                        &:after{
+                                                            content: "";
+                                                            position: absolute;
+                                                            top: -44px;
+                                                            left: -229px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            background-color: $color-Shoes-Button;
+                                                            animation: long-line-grow .7s linear forwards;
+                                                        }
+                                                        @keyframes long-line-grow{
+                                                            to {width:200px;}
+                                                          }
+                                                        &~ .content-first{
+                                                            width: 600px;
+                                                            display: flex;
+                                                            align-items: flex-end;
+                                                            opacity: 1;
+                                                            transition: 0.5s;
+                                                            .content-text{
+                                                                p{
+                                                                    @include click-p();
+                                                                }
+                                                            }
+                                                        }
                                                     }
-                                                    @keyframes short-line-grow{
-                                                        to {width:80px;}
-                                                      }
-                                                    &:after{
-                                                        content: "";
-                                                        position: absolute;
-                                                        top: -44px;
-                                                        left: -229px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        background-color: $color-Shoes-Button;
-                                                        animation: long-line-grow .7s linear forwards;
+                                                }
+                                                .content-first{
+                                                    width: 600px;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    opacity: 0;
+                                                    transition: 0.5s;
+                                                    .content-text{
+                                                        p{
+                                                          @include click-p();
+                                                        }
                                                     }
-                                                    @keyframes long-line-grow{
-                                                        to {width:200px;}
-                                                      }
-                                                    &~ .content-first{
-                                                        width: 600px;
+                                                }
+                                               
+                                            }
+                                            .click-second{
+                                                position: absolute;
+                                                top: 435px;
+                                                left: -180px;
+                                                .click-button{
+                                                    position: absolute;
+                                                    top: -149px;
+                                                    left: 306px;
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    opacity: 0.5;
+                                                    background-color: $color-Shoes-Button;
+                                                    border-radius: 50%;
+                                                    z-index: 1;
+                                                    &.active{
+                                                        &:before{
+                                                            content: "";
+                                                            position: absolute;
+                                                            bottom: -64px;
+                                                            left: -56px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            transform: rotate(-68deg);
+                                                            background-color: $color-Shoes-Button;
+                                                            transform-origin:40px -1px;
+                                                            animation: second-line-grow .5s linear forwards;
+                                                        }
+                                                        @keyframes second-line-grow{
+                                                            to {width:158px;}
+                                                          }
+                                                        &~ .content-second{
+                                                        width: 800px;
                                                         display: flex;
                                                         align-items: flex-end;
                                                         opacity: 1;
@@ -661,296 +698,194 @@ main{
                                                             }
                                                         }
                                                     }
-                                                }
-                                            }
-                                            .content-first{
-                                                width: 600px;
-                                                display: flex;
-                                                align-items: flex-end;
-                                                opacity: 0;
-                                                transition: 0.5s;
-                                                .content-text{
-                                                    p{
-                                                      @include click-p();
                                                     }
                                                 }
-                                            }
-                                           
-                                        }
-                                        .click-second{
-                                            position: absolute;
-                                            top: 435px;
-                                            left: -180px;
-                                            .click-button{
-                                                position: absolute;
-                                                top: -149px;
-                                                left: 306px;
-                                                width: 55px;
-                                                height: 55px;
-                                                opacity: 0.5;
-                                                background-color: $color-Shoes-Button;
-                                                border-radius: 50%;
-                                                z-index: 1;
-                                                &.active{
-                                                    &:before{
-                                                        content: "";
-                                                        position: absolute;
-                                                        bottom: -64px;
-                                                        left: -56px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        transform: rotate(-68deg);
-                                                        background-color: $color-Shoes-Button;
-                                                        transform-origin:40px -1px;
-                                                        animation: second-line-grow .5s linear forwards;
-                                                    }
-                                                    @keyframes second-line-grow{
-                                                        to {width:158px;}
-                                                      }
-                                                    &~ .content-second{
+                                                .content-second{
                                                     width: 800px;
                                                     display: flex;
                                                     align-items: flex-end;
-                                                    opacity: 1;
+                                                    opacity: 0;
                                                     transition: 0.5s;
                                                     .content-text{
                                                         p{
                                                             @include click-p();
                                                         }
-                                                    }
+                                                    } 
                                                 }
-                                                }
+                                                
                                             }
-                                            .content-second{
-                                                width: 800px;
-                                                display: flex;
-                                                align-items: flex-end;
-                                                opacity: 0;
-                                                transition: 0.5s;
-                                                .content-text{
-                                                    p{
-                                                        @include click-p();
-                                                    }
-                                                } 
-                                            }
-                                            
-                                        }
-                                        .click-third{
-                                            position: absolute;
-                                            top: 435px;
-                                            left: 600px;
-                                            .click-button{
+                                            .click-third{
                                                 position: absolute;
-                                                top: -260px;
-                                                left: -200px;
-                                                width: 55px;
-                                                height: 55px;
-                                                opacity: 0.5;
-                                                background-color: $color-Shoes-Button;
-                                                border-radius: 50%;
-                                                z-index: 1;
-                                                &.active{
-                                                    &:before{
-                                                        content: "";
-                                                        position: absolute;
-                                                        bottom: -180px;
-                                                        left: 136px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        transform: rotate(-128deg);
-                                                        background-color: $color-Shoes-Button;
-                                                        transform-origin:40px -1px;
-                                                        animation: third-line-grow .8s linear forwards;
+                                                top: 435px;
+                                                left: 600px;
+                                                .click-button{
+                                                    position: absolute;
+                                                    top: -260px;
+                                                    left: -200px;
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    opacity: 0.5;
+                                                    background-color: $color-Shoes-Button;
+                                                    border-radius: 50%;
+                                                    z-index: 1;
+                                                    &.active{
+                                                        &:before{
+                                                            content: "";
+                                                            position: absolute;
+                                                            bottom: -180px;
+                                                            left: 136px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            transform: rotate(-128deg);
+                                                            background-color: $color-Shoes-Button;
+                                                            transform-origin:40px -1px;
+                                                            animation: third-line-grow .8s linear forwards;
+                                                        }
+                                                        @keyframes third-line-grow{
+                                                            to {width:281px;}
+                                                          }
+                                                          &~ .content-third{
+                                                            width: 587px;
+                                                            display: flex;
+                                                            align-items: flex-end;
+                                                            opacity: 1;
+                                                            transition: 0.5s;
+                                                            .content-text{
+                                                                p{
+                                                                    @include click-p();
+                                                                }
+                                                            }
+                                                        }
                                                     }
-                                                    @keyframes third-line-grow{
-                                                        to {width:281px;}
-                                                      }
-                                                      &~ .content-third{
-                                                        width: 587px;
+                                                }
+                                                .content-third{
+                                                    width: 587px;
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    opacity: 0;
+                                                    transition: 0.5s;
+                                                    .content-text{
+                                                        p{
+                                                            @include click-p();
+                                                        }
+                                                    } 
+                                                }
+                                            }
+                                            .click-fourth{
+                                                position: absolute;
+                                                top: -25px;
+                                                left:695px;
+                                                .click-button{
+                                                    position: absolute;
+                                                    top: 220px;
+                                                    left: -65px;
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    opacity: 0.5;
+                                                    background-color: $color-Shoes-Button;
+                                                    border-radius: 50%;
+                                                    z-index: 1;
+                                                    &.active{
+                                                        &:before{
+                                                            content: "";
+                                                            position: absolute;
+                                                            bottom: 28px;
+                                                            left: 12px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            background-color: $color-Shoes-Button;
+                                                            transform-origin:40px -1px;
+                                                            transform: rotate(-180deg);
+                                                            animation: fourth-line-grow .3s linear forwards;
+                                                            animation-delay: .8s;
+                                                        }
+                                                        @keyframes fourth-line-grow{
+                                                            to {width:50px;}
+                                                        } 
+                                                        
+                                                        &:after{
+                                                            content: "";
+                                                            position: absolute;
+                                                            bottom: 71px;
+                                                            left: 84px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            background-color: $color-Shoes-Button;
+                                                            transform: rotate(125deg);
+                                                            transform-origin:40px -1px;
+                                                            animation: fourth-two-line-grow .8s linear forwards;
+                                                        }
+                                                        @keyframes fourth-two-line-grow{
+                                                            to {width:92px;}
+                                                        }
+                                                        &~ .content-fourth{
+                                                            opacity: 1;
+                                                            transition: 0.5s;
+                                                            .content-fourth-one{
+                                                                display: flex;
+                                                                align-items: flex-end;
+                                                                transition: 0.5s;
+                                                                img{
+                                                                    width: 300px;
+                                                                }
+                                                                .content-text{
+                                                                    width: 205px;
+                                                                    p{
+                                                                        @include click-p();
+                                                                    }
+                                                                }   
+                                                            }
+                                                            .content-fourth-two{
+                                                                position: absolute;
+                                                                top: 205px;
+                                                                left: 70px;
+                                                                display: flex;
+                                                                align-items: flex-end;
+                                                                transition: 0.5s;
+                                                                img{
+                                                                    width: 300px;
+                                                                }
+                                                                .content-text{
+                                                                    width: 150px;
+                                                                    p{
+                                                                        @include click-p();
+                                                                    }
+                                                                } 
+                                                            }
+                                                        } 
+                                                    }
+                                                }
+                                                .content-fourth{
+                                                    opacity: 0;
+                                                    transition: 0.5s;
+                                                    .content-fourth-one{
                                                         display: flex;
                                                         align-items: flex-end;
-                                                        opacity: 1;
+                                                        // opacity: 0;
                                                         transition: 0.5s;
+                                                        img{
+                                                            width: 300px;
+                                                        }
                                                         .content-text{
+                                                            width: 205px;
                                                             p{
                                                                 @include click-p();
                                                             }
-                                                        }
+                                                        }   
                                                     }
-                                                }
-                                            }
-                                            .content-third{
-                                                width: 587px;
-                                                display: flex;
-                                                align-items: flex-end;
-                                                opacity: 0;
-                                                transition: 0.5s;
-                                                .content-text{
-                                                    p{
-                                                        @include click-p();
-                                                    }
-                                                } 
-                                            }
-                                        }
-                                        .click-fourth{
-                                            position: absolute;
-                                            top: -25px;
-                                            left:695px;
-                                            .click-button{
-                                                position: absolute;
-                                                top: 220px;
-                                                left: -65px;
-                                                width: 55px;
-                                                height: 55px;
-                                                opacity: 0.5;
-                                                background-color: $color-Shoes-Button;
-                                                border-radius: 50%;
-                                                z-index: 1;
-                                                &.active{
-                                                    &:before{
-                                                        content: "";
+                                                    .content-fourth-two{
                                                         position: absolute;
-                                                        bottom: 28px;
-                                                        left: 12px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        background-color: $color-Shoes-Button;
-                                                        transform-origin:40px -1px;
-                                                        transform: rotate(-180deg);
-                                                        animation: fourth-line-grow .3s linear forwards;
-                                                        animation-delay: .8s;
-                                                    }
-                                                    @keyframes fourth-line-grow{
-                                                        to {width:50px;}
-                                                    } 
-                                                    
-                                                    &:after{
-                                                        content: "";
-                                                        position: absolute;
-                                                        bottom: 71px;
-                                                        left: 84px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        background-color: $color-Shoes-Button;
-                                                        transform: rotate(125deg);
-                                                        transform-origin:40px -1px;
-                                                        animation: fourth-two-line-grow .8s linear forwards;
-                                                    }
-                                                    @keyframes fourth-two-line-grow{
-                                                        to {width:92px;}
-                                                    }
-                                                    &~ .content-fourth{
-                                                        opacity: 1;
-                                                        transition: 0.5s;
-                                                        .content-fourth-one{
-                                                            display: flex;
-                                                            align-items: flex-end;
-                                                            transition: 0.5s;
-                                                            img{
-                                                                width: 300px;
-                                                            }
-                                                            .content-text{
-                                                                width: 205px;
-                                                                p{
-                                                                    @include click-p();
-                                                                }
-                                                            }   
-                                                        }
-                                                        .content-fourth-two{
-                                                            position: absolute;
-                                                            top: 205px;
-                                                            left: 70px;
-                                                            display: flex;
-                                                            align-items: flex-end;
-                                                            transition: 0.5s;
-                                                            img{
-                                                                width: 300px;
-                                                            }
-                                                            .content-text{
-                                                                width: 150px;
-                                                                p{
-                                                                    @include click-p();
-                                                                }
-                                                            } 
-                                                        }
-                                                    } 
-                                                }
-                                            }
-                                            .content-fourth{
-                                                opacity: 0;
-                                                transition: 0.5s;
-                                                .content-fourth-one{
-                                                    display: flex;
-                                                    align-items: flex-end;
-                                                    // opacity: 0;
-                                                    transition: 0.5s;
-                                                    img{
-                                                        width: 300px;
-                                                    }
-                                                    .content-text{
-                                                        width: 205px;
-                                                        p{
-                                                            @include click-p();
-                                                        }
-                                                    }   
-                                                }
-                                                .content-fourth-two{
-                                                    position: absolute;
-                                                    top: 205px;
-                                                    left: 70px;
-                                                    display: flex;
-                                                    align-items: flex-end;
-                                                    // opacity: 0;
-                                                    transition: 0.5s;
-                                                    img{
-                                                        width: 300px;
-                                                    }
-                                                    .content-text{
-                                                        width: 150px;
-                                                        p{
-                                                            @include click-p();
-                                                        }
-                                                    } 
-                                                }
-                                            }
-                                        }
-                                        .click-fifth{
-                                            position: absolute;
-                                            top: -317px;
-                                            left: 500px;
-                                            .click-button{
-                                                position: absolute;
-                                                bottom: -150px;
-                                                left: 20px;
-                                                width: 55px;
-                                                height: 55px;
-                                                opacity: 0.5;
-                                                background-color: $color-Shoes-Button;
-                                                border-radius: 50%;
-                                                z-index: 1;
-                                                &.active{
-                                                    &:before{
-                                                        content: "";
-                                                        position: absolute;
-                                                        bottom: 112px;
-                                                        left: 32px;
-                                                        width: 0px;
-                                                        height: 2px;
-                                                        transform: rotate(124deg);
-                                                        background-color: $color-Shoes-Button;
-                                                        transform-origin:40px -1px;
-                                                        animation: fifth-line-grow .8s linear forwards; 
-                                                    }
-                                                    @keyframes fifth-line-grow{
-                                                        to {width:130px;}
-                                                      }
-                                                    &~.content-fifth{
+                                                        top: 205px;
+                                                        left: 70px;
                                                         display: flex;
                                                         align-items: flex-end;
-                                                        opacity: 1;
+                                                        // opacity: 0;
                                                         transition: 0.5s;
+                                                        img{
+                                                            width: 300px;
+                                                        }
                                                         .content-text{
-                                                            width: 270px;
+                                                            width: 150px;
                                                             p{
                                                                 @include click-p();
                                                             }
@@ -958,214 +893,259 @@ main{
                                                     }
                                                 }
                                             }
-                                            .content-fifth{
-                                                display: flex;
-                                                align-items: flex-end;
-                                                opacity: 0;
-                                                transition: 0.5s;
-                                                .content-text{
-                                                    width: 270px;
-                                                    p{
-                                                        @include click-p();
+                                            .click-fifth{
+                                                position: absolute;
+                                                top: -317px;
+                                                left: 500px;
+                                                .click-button{
+                                                    position: absolute;
+                                                    bottom: -150px;
+                                                    left: 20px;
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    opacity: 0.5;
+                                                    background-color: $color-Shoes-Button;
+                                                    border-radius: 50%;
+                                                    z-index: 1;
+                                                    &.active{
+                                                        &:before{
+                                                            content: "";
+                                                            position: absolute;
+                                                            bottom: 112px;
+                                                            left: 32px;
+                                                            width: 0px;
+                                                            height: 2px;
+                                                            transform: rotate(124deg);
+                                                            background-color: $color-Shoes-Button;
+                                                            transform-origin:40px -1px;
+                                                            animation: fifth-line-grow .8s linear forwards; 
+                                                        }
+                                                        @keyframes fifth-line-grow{
+                                                            to {width:130px;}
+                                                          }
+                                                        &~.content-fifth{
+                                                            display: flex;
+                                                            align-items: flex-end;
+                                                            opacity: 1;
+                                                            transition: 0.5s;
+                                                            .content-text{
+                                                                width: 270px;
+                                                                p{
+                                                                    @include click-p();
+                                                                }
+                                                            } 
+                                                        }
                                                     }
-                                                } 
+                                                }
+                                                .content-fifth{
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    opacity: 0;
+                                                    transition: 0.5s;
+                                                    .content-text{
+                                                        width: 270px;
+                                                        p{
+                                                            @include click-p();
+                                                        }
+                                                    } 
+                                                }
                                             }
                                         }
+                                        
                                     }
                                     
                                 }
-                                
                             }
                         }
-                    }
-                    // 開發過程
-                    .development-process{  
-                        min-height: 969px;                 
-                        .inner-content{
-                            display: flex;
-                            margin-top: 40px;
-                            .development-process-content{
-                                flex: 0 0 50%;
-                                .swiper-container{
-                                    width: 600px;
-                                    .swiper-wrapper{
-                                        .swiper-slide{
-                                            .development-process-title{
-                                                margin-bottom: 20px;
-                                                p{
-                                                    display: inline-block;
-                                                    color: $color-Evaluation-Star;
-                                                    font-size: $H7-font-size;
-                                                    border-bottom: 1px solid $color-Evaluation-Star;
-                                                }
-                                                h2{                                            
-                                                    font-size: $H3-font-size;
-                                                    font-weight: $font-Weight-B;
-                                                    margin:0;                                                                                        
-                                                }
-                                            }
-                                            .development-process-list{
-                                                margin-bottom: 20px;
-                                                p{
-                                                    color: $color-Product-Detail-Title;
-                                                    font-size: $H7-font-size;
-                                                    font-weight: $font-Weight-B;
-                                                    letter-spacing: $font-letter-space-100;
-                                                    line-height: 30px;
-                                                    margin: 0;                                                    
-                                                }                                                
-                                            }
-                                            .development-process-text{
-                                                p{
-                                                    margin-bottom: 20px;
-                                                    font-size: $H9-font-size;
-                                                    line-height: 26px;
-                                                    letter-spacing: $font-letter-space-50;
-                                                }
-                                            }
-                                        }
-                                    }                                                                    
-                                }                                
-                            }
-                            .development-process-swiper{
-                                flex: 0 0 55%;
-                                padding-left: 20px;
-                                overflow-x: hidden;
-                                .swiper-container {
-                                    width: 900px;
-                                    height: 640px;
-                                    margin-bottom: 50px;
-                                }
-                            
-                                .swiper-slide {
-                                    text-align: center;
-                                    font-size: 18px;
-                                    background: #fff;
-                                    width: 640px;
-                                    /* Center slide text vertically */
-                                    display: -webkit-box;
-                                    display: -ms-flexbox;
-                                    display: -webkit-flex;
-                                    display: flex;
-                                    -webkit-box-pack: center;
-                                    -ms-flex-pack: center;
-                                    -webkit-justify-content: center;
-                                    justify-content: center;
-                                    -webkit-box-align: center;
-                                    -ms-flex-align: center;
-                                    -webkit-align-items: center;
-                                    align-items: center;
-                                }
-                            
-                                .swiper-slide img {
-                                    display: block;
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                }
-                            }
-                        }
-                        .swiper-step{
-                            width: 100%;                            
-                            display: flex;
-                            justify-content: flex-end;
-                            .swiper-step-button{
-                                flex:0 0 48%;
+                        // 開發過程
+                        .development-process{  
+                            min-height: 969px;                 
+                            .inner-content{
                                 display: flex;
-                                justify-content: space-between;
-                                .pagination-next{
-                                    position: relative;
-                                    flex: 0 0 85%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    .swiper-pagination-bullet{
-                                        position: relative;
-                                        z-index: 2;
-                                        background: $color-IronGray;
-                                        border-radius: 0px;
-                                        opacity: 1;
-                                        width: 15px;
-                                        height: 15px;
-                                        p{
-                                            position: absolute;
-                                            top:20px;
-                                            left: 50%;
-                                            transform: translateX(-50%);
-                                            white-space:nowrap;                                          
-                                        }
-                                        &.swiper-pagination-bullet-active{
-                                            color:$color-Evaluation-Star;
-                                            background: $color-Evaluation-Star;
-                                        }                                        
+                                margin-top: 40px;
+                                .development-process-content{
+                                    flex: 0 0 50%;
+                                    .swiper-container{
+                                        width: 600px;
+                                        .swiper-wrapper{
+                                            .swiper-slide{
+                                                .development-process-title{
+                                                    margin-bottom: 20px;
+                                                    p{
+                                                        display: inline-block;
+                                                        color: $color-Evaluation-Star;
+                                                        font-size: $H7-font-size;
+                                                        border-bottom: 1px solid $color-Evaluation-Star;
+                                                    }
+                                                    h2{                                            
+                                                        font-size: $H3-font-size;
+                                                        font-weight: $font-Weight-B;
+                                                        margin:0;                                                                                        
+                                                    }
+                                                }
+                                                .development-process-list{
+                                                    margin-bottom: 20px;
+                                                    p{
+                                                        color: $color-Product-Detail-Title;
+                                                        font-size: $H7-font-size;
+                                                        font-weight: $font-Weight-B;
+                                                        letter-spacing: $font-letter-space-100;
+                                                        line-height: 30px;
+                                                        margin: 0;                                                    
+                                                    }                                                
+                                                }
+                                                .development-process-text{
+                                                    p{
+                                                        margin-bottom: 20px;
+                                                        font-size: $H9-font-size;
+                                                        line-height: 26px;
+                                                        letter-spacing: $font-letter-space-50;
+                                                    }
+                                                }
+                                            }
+                                        }                                                                    
+                                    }                                
+                                }
+                                .development-process-swiper{
+                                    flex: 0 0 55%;
+                                    padding-left: 20px;
+                                    overflow-x: hidden;
+                                    .swiper-container {
+                                        width: 900px;
+                                        height: 640px;
+                                        margin-bottom: 50px;
                                     }
-                                    &::before{
-                                        content: '';
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 0;
-                                        transform: translate(0,-50%);                                        
+                                
+                                    .swiper-slide {
+                                        text-align: center;
+                                        font-size: 18px;
+                                        background: #fff;
+                                        width: 640px;
+                                        /* Center slide text vertically */
+                                        display: -webkit-box;
+                                        display: -ms-flexbox;
+                                        display: -webkit-flex;
+                                        display: flex;
+                                        -webkit-box-pack: center;
+                                        -ms-flex-pack: center;
+                                        -webkit-justify-content: center;
+                                        justify-content: center;
+                                        -webkit-box-align: center;
+                                        -ms-flex-align: center;
+                                        -webkit-align-items: center;
+                                        align-items: center;
+                                    }
+                                
+                                    .swiper-slide img {
+                                        display: block;
                                         width: 100%;
-                                        height: 2px;                       
-                                        background: $color-IronGray;
+                                        height: 100%;
+                                        object-fit: cover;
                                     }
                                 }
-                                .button-next{
-                                    text-align: center;
-                                    flex: 0 0 10%;                                    
+                            }
+                            .swiper-step{
+                                width: 100%;                            
+                                display: flex;
+                                justify-content: flex-end;
+                                .swiper-step-button{
+                                    flex:0 0 48%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .pagination-next{
+                                        position: relative;
+                                        flex: 0 0 85%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        .swiper-pagination-bullet{
+                                            position: relative;
+                                            z-index: 2;
+                                            background: $color-IronGray;
+                                            border-radius: 0px;
+                                            opacity: 1;
+                                            width: 15px;
+                                            height: 15px;
+                                            p{
+                                                position: absolute;
+                                                top:20px;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                white-space:nowrap;                                          
+                                            }
+                                            &.swiper-pagination-bullet-active{
+                                                color:$color-Evaluation-Star;
+                                                background: $color-Evaluation-Star;
+                                            }                                        
+                                        }
+                                        &::before{
+                                            content: '';
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translate(0,-50%);                                        
+                                            width: 100%;
+                                            height: 2px;                       
+                                            background: $color-IronGray;
+                                        }
+                                    }
+                                    .button-next{
+                                        text-align: center;
+                                        flex: 0 0 10%;                                    
+                                    }
                                 }
                             }
                         }
-                    }
-                    // 尺碼建議
-                    .size-recommendation{
-                        min-height: 700px;
-                        .inner-content{
-                            max-width: 550px;
-                            .announcement{
-                                margin-top: 30px;
-                                border-bottom: 1px solid $color-WedgwoodBlue;
-                                p{
-                                    font-size: $H6-font-size;
-                                    line-height: 26px;
-                                    color: $color-Evaluation-Star;
-                                    letter-spacing: $font-letter-space-50;
-                                }
-                            }
-                            .size-discript{
-                                margin-top: 20px;
-                                .discript-content{
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    margin-bottom: 35px;
-                                    .title{
+                        // 尺碼建議
+                        .size-recommendation{
+                            min-height: 700px;
+                            .inner-content{
+                                max-width: 550px;
+                                .announcement{
+                                    margin-top: 30px;
+                                    border-bottom: 1px solid $color-WedgwoodBlue;
+                                    p{
                                         font-size: $H6-font-size;
                                         line-height: 26px;
                                         color: $color-Evaluation-Star;
                                         letter-spacing: $font-letter-space-50;
-                                        margin-bottom: 20px;
-                                    }
-                                    .content{
-                                        max-width: 425px;
-                                       @include size-discript-p();
                                     }
                                 }
-                                .tryon-experience{
-                                    .staff{
+                                .size-discript{
+                                    margin-top: 20px;
+                                    .discript-content{
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
                                         margin-bottom: 35px;
-                                        .staff-name{
-                                            @include size-discript-p();
+                                        .title{
+                                            font-size: $H6-font-size;
+                                            line-height: 26px;
+                                            color: $color-Evaluation-Star;
+                                            letter-spacing: $font-letter-space-50;
+                                            margin-bottom: 20px;
                                         }
-                                        .staff-exp{
+                                        .content{
+                                            max-width: 425px;
+                                           @include size-discript-p();
+                                        }
+                                    }
+                                    .tryon-experience{
+                                        .staff{
                                             display: flex;
                                             flex-direction: column;
                                             align-items: center;
-                                            text-align: center;
-                                            @include size-discript-p();
+                                            margin-bottom: 35px;
+                                            .staff-name{
+                                                @include size-discript-p();
+                                            }
+                                            .staff-exp{
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                text-align: center;
+                                                @include size-discript-p();
+                                            }
                                         }
                                     }
                                 }
@@ -1174,273 +1154,273 @@ main{
                     }
                 }
             }
-        }
-        // 顧客評價&相關產品
-        .productother-container{
-            width: 100%;
-            padding-top: 60px;
-            background-color: $color-White;
-            .other-container{
-                max-width: 1120px;
-                margin: auto;
-                margin-bottom: 100px;
-                .customer-eval{
-                    border-bottom: 1px solid $color-Product-Detail-Title;
-                    .eval-title{
-                        font-size: $H3-font-size;
-                        letter-spacing: $font-letter-space-50;
-                    }
-                    .different-eval{
-                        max-width: 800px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-bottom: 40px;
-                        .star-eval{
-                            p{
-                                font-size: $H10-font-size;
-                                letter-spacing: $font-letter-space-200;
-                                margin: 0px;
-                            }
-                            .star-img{
-                                font-size: $H10-font-size;
-                                color: $color-Evaluation-Star;
-                            }
+            // 顧客評價&相關產品
+            .productother-container{
+                width: 100%;
+                padding-top: 60px;
+                background-color: $color-White;
+                .other-container{
+                    max-width: 1120px;
+                    margin: auto;
+                    margin-bottom: 100px;
+                    .customer-eval{
+                        border-bottom: 1px solid $color-Product-Detail-Title;
+                        .eval-title{
+                            font-size: $H3-font-size;
+                            letter-spacing: $font-letter-space-50;
                         }
-                        .score{
-                            width: 150px;
-                            height: 150px;
-                            background-color: $color-LightGray;
+                        .different-eval{
+                            max-width: 800px;
                             display: flex;
                             align-items: center;
-                            justify-content: center;
-                            p{
-                                font-size: $H0-font-size;
-                                margin: 0px;
+                            justify-content: space-between;
+                            margin-bottom: 40px;
+                            .star-eval{
+                                p{
+                                    font-size: $H10-font-size;
+                                    letter-spacing: $font-letter-space-200;
+                                    margin: 0px;
+                                }
+                                .star-img{
+                                    font-size: $H10-font-size;
+                                    color: $color-Evaluation-Star;
+                                }
                             }
-                        }
-                        .bar-graph{
-                            ul{
-                                margin: 0px;
-                                padding: 0px;
-                                width: 385px;
-                                li{
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    &:nth-child(1){
+                            .score{
+                                width: 150px;
+                                height: 150px;
+                                background-color: $color-LightGray;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                p{
+                                    font-size: $H0-font-size;
+                                    margin: 0px;
+                                }
+                            }
+                            .bar-graph{
+                                ul{
+                                    margin: 0px;
+                                    padding: 0px;
+                                    width: 385px;
+                                    li{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        &:nth-child(1){
+                                            .graph-line{
+                                                background-color: $color-Evaluation-Star;
+                                                margin-left: 19px;
+                                            }
+                                        }
                                         .graph-line{
-                                            background-color: $color-Evaluation-Star;
-                                            margin-left: 19px;
+                                            width: 280px;
+                                            height: 8px;
+                                            background-color: $color-Cart-Border;
+                                            margin: 0xp 10px;
+                                        }
+                                        p{
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-50;
+                                            margin: 0px;
                                         }
                                     }
-                                    .graph-line{
-                                        width: 280px;
-                                        height: 8px;
-                                        background-color: $color-Cart-Border;
-                                        margin: 0xp 10px;
-                                    }
-                                    p{
-                                        font-size: $H10-font-size;
-                                        letter-spacing: $font-letter-space-50;
-                                        margin: 0px;
-                                    }
                                 }
                             }
                         }
-                    }
-                    .customer-comment{
-                        margin-bottom: 40px;
-                        .shopping-cart{
-                            width: 100%;
-                            ul{
+                        .customer-comment{
+                            margin-bottom: 40px;
+                            .shopping-cart{
                                 width: 100%;
-                                display: flex;
-                                justify-content: space-between;
-                                padding: 0px;
-                                 .order-cart{
-                                         &.content{
-                                             flex: 0 0 80%;
-                                         }
-                                 }
-                                 .img-content{
-                                     display: flex;
-                                         img{
-                                         max-width: 138px;
-                                         width: 100%;
-                                         min-height: 138px;
-                                         object-fit: contain;
-                                         object-position: center;
-                                         margin-right: 15px;   
-                                         }
-                                         .cart-content{
-                                            width: 400px;
-                                            display: flex;
-                                            flex-direction: column;
-                                            justify-content: space-between;
-                                            p{
-                                                margin: 0; 
-                                                letter-spacing: $font-letter-space-100;
-                                                }    
-                                            .cart-title{   
+                                ul{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: 0px;
+                                     .order-cart{
+                                             &.content{
+                                                 flex: 0 0 80%;
+                                             }
+                                     }
+                                     .img-content{
+                                         display: flex;
+                                             img{
+                                             max-width: 138px;
+                                             width: 100%;
+                                             min-height: 138px;
+                                             object-fit: contain;
+                                             object-position: center;
+                                             margin-right: 15px;   
+                                             }
+                                             .cart-content{
+                                                width: 400px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: space-between;
                                                 p{
-                                                    &:nth-child(1){
-                                                        color:$color-IronGray;
-                                                        font-size: $H6-font-size;
-                                                    }
-                                                }                         
-                                                
-                                                .star-eval{
-                                                    display: flex;
-                                                    align-items: flex-end;
-                                                    .star-img{
-                                                        margin-right: 10px;
-                                                        color: $color-Evaluation-Star;
-                                                    } 
+                                                    margin: 0; 
+                                                    letter-spacing: $font-letter-space-100;
+                                                    }    
+                                                .cart-title{   
                                                     p{
-                                                        font-size: $H10-font-size;
-                                                        letter-spacing: $font-letter-space-200;
+                                                        &:nth-child(1){
+                                                            color:$color-IronGray;
+                                                            font-size: $H6-font-size;
+                                                        }
+                                                    }                         
+                                                    
+                                                    .star-eval{
+                                                        display: flex;
+                                                        align-items: flex-end;
+                                                        .star-img{
+                                                            margin-right: 10px;
+                                                            color: $color-Evaluation-Star;
+                                                        } 
+                                                        p{
+                                                            font-size: $H10-font-size;
+                                                            letter-spacing: $font-letter-space-200;
+                                                        }
                                                     }
+                                                           
                                                 }
-                                                       
-                                            }
-                                            .cart-text{
-                                               p{
-                                                &:nth-child(1){
-                                                    font-size: $H10-font-size;
-                                                    letter-spacing: $font-letter-space-100;
-                                                    line-height: 26px;
+                                                .cart-text{
+                                                   p{
+                                                    &:nth-child(1){
+                                                        font-size: $H10-font-size;
+                                                        letter-spacing: $font-letter-space-100;
+                                                        line-height: 26px;
+                                                    }
+                                                    &:nth-child(2){
+                                                        font-size: $H11-font-size;
+                                                        letter-spacing: $font-letter-space-100;
+                                                        color: $color-Product-Detail-Title;
+                                                    }
+                                                   }
                                                 }
-                                                &:nth-child(2){
-                                                    font-size: $H11-font-size;
-                                                    letter-spacing: $font-letter-space-100;
-                                                    color: $color-Product-Detail-Title;
-                                                }
-                                               }
-                                            }
-                                         }   
-                                     
-                                 }
-                                 .eval-custoemr{
-                                     display: flex;
-                                     flex-direction: column;
-                                     justify-content: flex-end;
-                                    .eval-name{
-                                        font-size: $H9-font-size;
-                                        letter-spacing: $font-letter-space-100;
-                                        color: $color-IronGray;
-                                        line-height: 28px;
-                                    }
-                                    .eval-date{
-                                        font-size: $H10-font-size;
-                                        letter-spacing: $font-letter-space-200;
-                                        color: $color-IronGray;
-                                    }
-                                 }
-                            }
-                        }
-                    }
-                }
-                .related-commid{
-                    margin-top: 60px;
-                    border-bottom: 1px solid $color-Product-Detail-Title;
-                    .commid-title{
-                        font-size: $H3-font-size;
-                        letter-spacing: $font-letter-space-50;
-                    }
-                    @mixin shoes-content {
-                        width: 275px;
-                        height: 275px;
-                        background-color: $color-White-opacity;
-            
-                        position: relative;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-end;
-                        align-items: center;
-                        text-align: center;
-                        z-index: 2;
-                        img {
-                            position: absolute;
-                            width: 215px;
-                            top: -70px;
-                            left: 27px;
-                        }
-                        .content {
-                            .text {
-                                p {
-                                    margin: 0px;
-                                    &:nth-child(1) {
-                                        font-size: $H6-font-size;
-                                        font-weight: lighter;
-                                        letter-spacing: $font-letter-space-100;
-                                        color: $color-IronGray;
-                                        margin-bottom: 10px;
-                                    }
-                                    &:nth-child(2) {
-                                        font-size: $H8-font-size;
-                                        font-weight: normal;
-                                        letter-spacing: $font-letter-space-100;
-                                        color: $color-IronGray;
-                                        margin-bottom: 30px;
-                                    }
-                                }
-                            }
-                            .price {
-                                span {
-                                    &:nth-child(1) {
-                                        font-size: $H9-font-size;
-                                        font-weight: lighter;
-                                        color: $color-Original-Price;
-                                        text-decoration: line-through;
-                                    }
-                                    &:nth-child(2) {
-                                        font-size: $H4-font-size;
-                                        font-weight: bold;
-                                        color: $color-Apricot;
-                                    }
+                                             }   
+                                         
+                                     }
+                                     .eval-custoemr{
+                                         display: flex;
+                                         flex-direction: column;
+                                         justify-content: flex-end;
+                                        .eval-name{
+                                            font-size: $H9-font-size;
+                                            letter-spacing: $font-letter-space-100;
+                                            color: $color-IronGray;
+                                            line-height: 28px;
+                                        }
+                                        .eval-date{
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-200;
+                                            color: $color-IronGray;
+                                        }
+                                     }
                                 }
                             }
                         }
-                        button {
-                            width: 250px;
-                            height: 50px;
-                            color: $color-IronGray;
-                            background-color: unset;
-                            border: 2px solid $color-MoreButton;
-                            border-radius: 45px;
-                            margin: 30px 0px 10px 0px;
-                        }
                     }
-                    .product-item {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 80px;
-                        margin-top: 120px;
-                        .product-first {
-                            @include shoes-content();
+                    .related-commid{
+                        margin-top: 60px;
+                        border-bottom: 1px solid $color-Product-Detail-Title;
+                        .commid-title{
+                            font-size: $H3-font-size;
+                            letter-spacing: $font-letter-space-50;
                         }
-                        .product-second {
-                            @include shoes-content();
+                        @mixin shoes-content {
+                            width: 275px;
+                            height: 275px;
+                            background-color: $color-White-opacity;
+                
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            text-align: center;
+                            z-index: 2;
                             img {
-                                top: -100px;
+                                position: absolute;
+                                width: 215px;
+                                top: -70px;
+                                left: 27px;
+                            }
+                            .content {
+                                .text {
+                                    p {
+                                        margin: 0px;
+                                        &:nth-child(1) {
+                                            font-size: $H6-font-size;
+                                            font-weight: lighter;
+                                            letter-spacing: $font-letter-space-100;
+                                            color: $color-IronGray;
+                                            margin-bottom: 10px;
+                                        }
+                                        &:nth-child(2) {
+                                            font-size: $H8-font-size;
+                                            font-weight: normal;
+                                            letter-spacing: $font-letter-space-100;
+                                            color: $color-IronGray;
+                                            margin-bottom: 30px;
+                                        }
+                                    }
+                                }
+                                .price {
+                                    span {
+                                        &:nth-child(1) {
+                                            font-size: $H9-font-size;
+                                            font-weight: lighter;
+                                            color: $color-Original-Price;
+                                            text-decoration: line-through;
+                                        }
+                                        &:nth-child(2) {
+                                            font-size: $H4-font-size;
+                                            font-weight: bold;
+                                            color: $color-Apricot;
+                                        }
+                                    }
+                                }
+                            }
+                            button {
+                                width: 250px;
+                                height: 50px;
+                                color: $color-IronGray;
+                                background-color: unset;
+                                border: 2px solid $color-MoreButton;
+                                border-radius: 45px;
+                                margin: 30px 0px 10px 0px;
                             }
                         }
-                        .product-third {
-                            @include shoes-content();
-                            img {
-                                top: -50px;
+                        .product-item {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 80px;
+                            margin-top: 120px;
+                            .product-first {
+                                @include shoes-content();
                             }
-                        }
-                        .product-fourth {
-                            @include shoes-content();
+                            .product-second {
+                                @include shoes-content();
+                                img {
+                                    top: -100px;
+                                }
+                            }
+                            .product-third {
+                                @include shoes-content();
+                                img {
+                                    top: -50px;
+                                }
+                            }
+                            .product-fourth {
+                                @include shoes-content();
+                            }
                         }
                     }
                 }
             }
         }
-    }
+        
     
-
+    }
 }
