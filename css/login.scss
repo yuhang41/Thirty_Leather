@@ -205,10 +205,6 @@
     .list-Group {
         display: flex;
         flex-direction: column;
-
-        .list-groups {
-            margin: auto;
-        }
     }
 
     .table {
@@ -226,6 +222,7 @@
         }
     
         .orderNumber1 {
+            background-color: black;
             margin-top: 10vh;
         }
     
@@ -244,7 +241,6 @@
 
     .data-right {
         margin-left: 25%;
-        margin-bottom: 50px;
     }
     
     .address-block {

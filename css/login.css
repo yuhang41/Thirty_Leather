@@ -213,9 +213,6 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .list-Group .list-groups {
-    margin: auto;
-  }
   .table tr {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -233,6 +230,7 @@
     margin: auto;
   }
   .table .orderNumber1 {
+    background-color: black;
     margin-top: 10vh;
   }
   .table .checkInvoice, .table .returnInfor {
@@ -248,7 +246,6 @@
   }
   .data-right {
     margin-left: 25%;
-    margin-bottom: 50px;
   }
   .address-block {
     display: -webkit-box;
