@@ -5,13 +5,12 @@ body {
     font-family: $font-Family-A;
 }
 
-footer {
-    height: 600px;
-    .footer-top {
-        height: 101px;
-    }
-
+footer {    
     .site-footer {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         hr {
             border: none;
         }

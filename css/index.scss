@@ -11,755 +11,515 @@
 nav {
     height: 113px;
 }
-main {
-    padding-left: 7.4vw;
-    overflow: hidden;
-    // 輪播圖
-    .swiper1 {
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        //swiper bullet
-        .swiper-pagination-bullets {
-            position: absolute;
-            left: 5vw;
-            bottom: 1vw;
-            display: flex;
-            flex-direction: column;
-            overflow: visible;
-            z-index: 2;
-            width: 34px;
-            .swiper-pagination-bullet {
-                width: 17px;
-                height: 17px;
-                border-radius: 0px;
-                margin: 17px 0px 0px 0px;
-                background-color: $color-WedgwoodBlue;
-                opacity: unset;
+main{
+    .main-container {
+        padding-left: 7.4vw;
+        overflow: hidden;
+        // 輪播圖
+        .swiper1 {
+            .swiper-container {
+                width: 100%;
+                height: 100%;
                 position: relative;
             }
-            .swiper-pagination-bullet-active {
-                background-color: $color-Orange;
-
-                &::before {
-                    content: "";
-                    height: 17px;
-                    position: absolute;
-                    top: -10px;
-                    left: -10px;
-                    border: 1px solid $color-Orange;
-                    padding: 17px;
-                }
-            }
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            height: calc(100vh - 113px);
-
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            transition: 0.5s;
-        }
-    }
-    // 聯絡客服
-    .chatbot {
-        position: fixed;
-        bottom: 36px;
-        right: 25px;
-        z-index: 5;
-
-        &.active {
-            .more-button-list {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            .more-button-list-item {
-                animation: fadeInItem 0.6s 0.2s forwards;
-
-                &:nth-child(2) {
-                    animation-delay: 0.4s;
-                }
-                &:nth-child(3) {
-                    animation-delay: 0.6s;
-                }
-                &:nth-child(4) {
-                    animation-delay: 0.8s;
-                }
-            }
-
-            .more-button {
-                animation: onePulse 1s forwards linear;
-                animation-iteration-count: infinite;
-            }
-        }
-    }
-
-    .more-button {
-        background-color: white;
-        box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        transition: 0.2s ease-in;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        position: relative;
-        z-index: 2;
-
-        &-list {
-            background-color: $color-White;
-            border-radius: 8px;
-            list-style-type: none;
-            width: 358px;
-            height: 338px;
-            box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
-            padding: 20px 20px;
-            position: absolute;
-            right: 32px;
-            bottom: 21px;
-            opacity: 0;
-            transform: scale(0);
-            transform-origin: bottom right;
-            transition: all 0.3s ease 0.1s;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            li {
-                opacity: 0;
-            }
-        }
-
-        &-list-item {
-            &:nth-child(1) {
+            //swiper bullet
+            .swiper-pagination-bullets {
+                position: absolute;
+                left: 5vw;
+                bottom: 1vw;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                img {
-                    width: 46px;
-                    height: 46px;
+                flex-direction: column;
+                overflow: visible;
+                z-index: 2;
+                width: 34px;
+                .swiper-pagination-bullet {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 0px;
+                    margin: 17px 0px 0px 0px;
+                    background-color: $color-WedgwoodBlue;
+                    opacity: unset;
+                    position: relative;
                 }
-                .option {
+                .swiper-pagination-bullet-active {
+                    background-color: $color-Orange;
+    
+                    &::before {
+                        content: "";
+                        height: 17px;
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        border: 1px solid $color-Orange;
+                        padding: 17px;
+                    }
+                }
+            }
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                height: calc(100vh - 113px);
+    
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                transition: 0.5s;
+            }
+        }
+        // 聯絡客服
+        .chatbot {
+            position: fixed;
+            bottom: 36px;
+            right: 25px;
+            z-index: 5;
+    
+            &.active {
+                .more-button-list {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+    
+                .more-button-list-item {
+                    animation: fadeInItem 0.6s 0.2s forwards;
+    
+                    &:nth-child(2) {
+                        animation-delay: 0.4s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 0.6s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 0.8s;
+                    }
+                }
+    
+                .more-button {
+                    animation: onePulse 1s forwards linear;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+    
+        .more-button {
+            background-color: white;
+            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+    
+            &-list {
+                background-color: $color-White;
+                border-radius: 8px;
+                list-style-type: none;
+                width: 358px;
+                height: 338px;
+                box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
+                padding: 20px 20px;
+                position: absolute;
+                right: 32px;
+                bottom: 21px;
+                opacity: 0;
+                transform: scale(0);
+                transform-origin: bottom right;
+                transition: all 0.3s ease 0.1s;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                li {
+                    opacity: 0;
+                }
+            }
+    
+            &-list-item {
+                &:nth-child(1) {
                     display: flex;
-                    .more {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-Gray;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                        cursor: pointer;
-
-                        justify-content: center;
-                        align-items: center;
-
-                        .dot {
-                            width: 3px;
-                            height: 3px;
-                            background-color: $color-DeepGray;
-                            position: relative;
-                            &::before {
-                                position: absolute;
-                                top: 0px;
-                                left: -5px;
-                                content: "";
+                    flex-direction: row;
+                    justify-content: space-between;
+                    img {
+                        width: 46px;
+                        height: 46px;
+                    }
+                    .option {
+                        display: flex;
+                        .more {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $color-Gray;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            cursor: pointer;
+    
+                            justify-content: center;
+                            align-items: center;
+    
+                            .dot {
                                 width: 3px;
                                 height: 3px;
                                 background-color: $color-DeepGray;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    top: 0px;
+                                    left: -5px;
+                                    content: "";
+                                    width: 3px;
+                                    height: 3px;
+                                    background-color: $color-DeepGray;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 5px;
+                                    content: "";
+                                    width: 3px;
+                                    height: 3px;
+                                    background-color: $color-DeepGray;
+                                }
                             }
-                            &::after {
-                                position: absolute;
-                                top: 0px;
-                                left: 5px;
-                                content: "";
-                                width: 3px;
-                                height: 3px;
+                        }
+                        .close {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $color-Gray;
+                            border-radius: 50%;
+                            opacity: unset;
+                            cursor: pointer;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .line {
+                                width: 13px;
+                                height: 2px;
                                 background-color: $color-DeepGray;
                             }
                         }
                     }
-                    .close {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-Gray;
-                        border-radius: 50%;
-                        opacity: unset;
-                        cursor: pointer;
-
+                }
+                &:nth-child(2) {
+                    p {
+                        margin: 0px;
+                        &:nth-child(1) {
+                            font-size: $H7-font-size;
+                            font-weight: bold;
+                            letter-spacing: $font-letter-space-50;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H10-font-size;
+                            color: $color-MiddleGray;
+                            margin-bottom: 18px;
+                        }
+                        &:nth-child(3) {
+                            font-size: $H10-font-size;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .facebook-button {
+                        width: 318px;
+                        height: 52px;
+                        background-color: $color-Blue;
+                        border-radius: 10px;
+    
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        .line {
-                            width: 13px;
-                            height: 2px;
-                            background-color: $color-DeepGray;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        .facebook-icon {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $color-White;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 35px;
+                            margin-right: 10px;
+                            i {
+                                font-size: 22px;
+                                color: $color-Blue;
+                            }
+                        }
+                        p {
+                            font-size: $H7-font-size;
+                            font-weight: bold;
+                            letter-spacing: $font-letter-space-50;
+                            color: $color-White;
+                            margin: 0px;
+                        }
+                    }
+                    .line-button {
+                        width: 318px;
+                        height: 52px;
+                        background-color: $color-Green;
+                        border-radius: 10px;
+                        padding: 0px 31px;
+                        cursor: pointer;
+    
+                        display: flex;
+                        align-items: center;
+                        .line-icon {
+                            width: 30px;
+                            height: 30px;
+                            background-color: $color-White;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 28px;
+                            margin-right: 45px;
+                            span {
+                                font-size: 13px;
+                                color: $color-Green;
+                            }
+                        }
+                        p {
+                            font-size: $H7-font-size;
+                            font-weight: bold;
+                            letter-spacing: $font-letter-space-50;
+                            color: $color-White;
+                            margin: 0px;
                         }
                     }
                 }
             }
-            &:nth-child(2) {
-                p {
-                    margin: 0px;
-                    &:nth-child(1) {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                    }
-                    &:nth-child(2) {
-                        font-size: $H10-font-size;
-                        color: $color-MiddleGray;
-                        margin-bottom: 18px;
-                    }
-                    &:nth-child(3) {
-                        font-size: $H10-font-size;
-                        font-weight: 500;
-                    }
-                }
+        }
+    
+        @keyframes onePulse {
+            0% {
+                box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
             }
-            &:nth-child(3) {
-                .facebook-button {
-                    width: 318px;
-                    height: 52px;
-                    background-color: $color-Blue;
-                    border-radius: 10px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    cursor: pointer;
-                    .facebook-icon {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-White;
-                        border-radius: 50%;
-                        text-align: center;
-                        line-height: 35px;
-                        margin-right: 10px;
-                        i {
-                            font-size: 22px;
-                            color: $color-Blue;
-                        }
-                    }
-                    p {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                        color: $color-White;
-                        margin: 0px;
-                    }
-                }
-                .line-button {
-                    width: 318px;
-                    height: 52px;
-                    background-color: $color-Green;
-                    border-radius: 10px;
-                    padding: 0px 31px;
-                    cursor: pointer;
-
-                    display: flex;
-                    align-items: center;
-                    .line-icon {
-                        width: 30px;
-                        height: 30px;
-                        background-color: $color-White;
-                        border-radius: 50%;
-                        text-align: center;
-                        line-height: 28px;
-                        margin-right: 45px;
-                        span {
-                            font-size: 13px;
-                            color: $color-Green;
-                        }
-                    }
-                    p {
-                        font-size: $H7-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-50;
-                        color: $color-White;
-                        margin: 0px;
-                    }
-                }
+    
+            50% {
+                box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
+            }
+    
+            100% {
+                box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
             }
         }
-    }
-
-    @keyframes onePulse {
-        0% {
-            box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
-        }
-
-        50% {
-            box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
-        }
-
-        100% {
-            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-        }
-    }
-
-    @keyframes fadeInItem {
-        100% {
-            transform: translatex(0px);
-            opacity: 1;
-        }
-    }
-    // 品牌理念
-    .we-story {
-        min-height: 969px;
-        background-color: $color-LightGray;
-        padding: 100px 0px 0px 0px;
-        .story-content {
-            display: flex;
-            position: relative;
-
-            img {
-                position: absolute;
-                left: -8vw;
-                width: 974px;
-                height: 588px;
-
-                z-index: 1;
+    
+        @keyframes fadeInItem {
+            100% {
+                transform: translatex(0px);
+                opacity: 1;
             }
-            svg {
-                position: absolute;
-                height: 800px;
-                top: 305px;
-                left: -2px;
-                transform: rotate(-1deg);
-                .scissors,
-                .scissors-mind {
-                    fill-opacity: 0;
-                    stroke: $color-Background-line;
-                    stroke-width: 2px;
-                    stroke-dashoffset: 0;
-                    stroke-dasharray: 4000;
+        }
+        // 品牌理念
+        .we-story {
+            min-height: 969px;
+            background-color: $color-LightGray;
+            padding: 100px 0px 0px 0px;
+            .story-content {
+                display: flex;
+                position: relative;
+    
+                img {
+                    position: absolute;
+                    left: -8vw;
+                    width: 974px;
+                    height: 588px;
+    
+                    z-index: 1;
                 }
-                .scissors {
-                    animation: scissors 4s ease-in-out;
-                }
-                @keyframes scissors {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-
-                    100% {
+                svg {
+                    position: absolute;
+                    height: 800px;
+                    top: 305px;
+                    left: -2px;
+                    transform: rotate(-1deg);
+                    .scissors,
+                    .scissors-mind {
+                        fill-opacity: 0;
+                        stroke: $color-Background-line;
+                        stroke-width: 2px;
                         stroke-dashoffset: 0;
+                        stroke-dasharray: 4000;
+                    }
+                    .scissors {
+                        animation: scissors 4s ease-in-out;
+                    }
+                    @keyframes scissors {
+                        0% {
+                            stroke-dashoffset: 4000;
+                        }
+    
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .scissors-mind {
+                        animation: mind 4s ease-in-out;
+                    }
+                    @keyframes mind {
+                        0% {
+                            stroke-dashoffset: 4000;
+                        }
+                        50% {
+                            stroke-dashoffset: 4000;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
                     }
                 }
-                .scissors-mind {
-                    animation: mind 4s ease-in-out;
-                }
-                @keyframes mind {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-                    50% {
-                        stroke-dashoffset: 4000;
-                    }
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-            }
-            .story-discript {
-                margin-left: 900px;
-                .subtitle {
-                    font-size: $H10-font-size;
-                    font-weight: normal;
-                    color: $color-Orange;
-                    position: relative;
-                    margin-bottom: 50px;
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        top: 20px;
-                        left: 0px;
-                        width: 80px;
-                        height: 1px;
-                        background-color: $color-Orange;
-                    }
-                }
-                .title {
-                    font-size: $H3-font-size;
-                    font-weight: bold;
-                    letter-spacing: $font-letter-space-100;
-                    color: $color-WedgwoodBlue;
-                    margin-bottom: 45px;
-                    position: relative;
-                    &:before {
-                        content: "";
-                        width: 0px;
-                        height: 1px;
-                        top: 20px;
-                        left: -110px;
-                        background-color: $color-Background-line;
-                        position: absolute;
-                        transform: rotate(33deg);
-                        z-index: 0;
-                        animation: short-line-grow 1s linear forwards;
-                        animation-delay: 0.5s;
-                    }
-                }
-                @keyframes short-line-grow {
-                    to {
-                        width: 100px;
-                    }
-                }
-                .content {
-                    font-size: $H7-font-size;
-                    color: $color-IronGray;
-                    font-weight: normal;
-                    letter-spacing: $font-letter-space-50;
-                    .preamble {
-                        margin-bottom: 30px;
+                .story-discript {
+                    margin-left: 900px;
+                    .subtitle {
+                        font-size: $H10-font-size;
+                        font-weight: normal;
+                        color: $color-Orange;
                         position: relative;
-                        &:after {
+                        margin-bottom: 50px;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 20px;
+                            left: 0px;
+                            width: 80px;
+                            height: 1px;
+                            background-color: $color-Orange;
+                        }
+                    }
+                    .title {
+                        font-size: $H3-font-size;
+                        font-weight: bold;
+                        letter-spacing: $font-letter-space-100;
+                        color: $color-WedgwoodBlue;
+                        margin-bottom: 45px;
+                        position: relative;
+                        &:before {
                             content: "";
                             width: 0px;
                             height: 1px;
-                            top: 171px;
-                            left: 340px;
+                            top: 20px;
+                            left: -110px;
                             background-color: $color-Background-line;
                             position: absolute;
                             transform: rotate(33deg);
                             z-index: 0;
-                            animation: long-line-grow 1s linear forwards;
-                            animation-delay: 1.5s;
+                            animation: short-line-grow 1s linear forwards;
+                            animation-delay: 0.5s;
                         }
                     }
-                    @keyframes long-line-grow {
+                    @keyframes short-line-grow {
                         to {
-                            width: 300px;
+                            width: 100px;
                         }
                     }
-                    .main-body {
-                        margin-bottom: 30px;
-                    }
-                }
-            }
-        }
-    }
-    // 製鞋 card
-    .shoemaking {
-        min-height: 969px;
-        background-color: $color-LightGray;
-        .shoes-card {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin-bottom: 70px;
-            @mixin shoes-card-contain {
-                z-index: 2;
-                img {
-                    width: 295px;
-                    border-radius: 50%;
-                    border: 5px solid $color-Border-Gary;
-                }
-                .text {
-                    margin-top: 30px;
-                    span {
-                        &:nth-child(1) {
-                            font-size: $H5-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-200;
-                            color: $color-IronGray;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H10-font-size;
-                            font-weight: lighter;
-                            color: $color-IronGray;
-                        }
-                    }
-                }
-            }
-            .chose-shoes {
-                @include shoes-card-contain();
-            }
-            .shoes-introduction {
-                @include shoes-card-contain();
-            }
-            .shoemaking-story {
-                @include shoes-card-contain();
-            }
-        }
-        .see-more-button {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 234px;
-            button {
-                width: 277px;
-                height: 79px;
-                font-size: $H5-font-size;
-                color: $color-IronGray;
-                border-radius: 35px;
-                background-color: unset;
-                border: 2px solid $color-MoreButton;
-                z-index: 1;
-                &:hover {
-                    border: 2px solid $color-MoreButton-hover;
-                    color: $color-White;
-                    font-weight: bold;
-                    background-color: $color-MoreButton-hover;
-                }
-            }
-        }
-        //縫線的 svg
-        .sew-img {
-            position: relative;
-            #hand-line {
-                height: 1597px;
-                position: absolute;
-                top: 325px;
-                right: -20px;
-                z-index: 2;
-                .background-hand,
-                .background-line {
-                    fill-opacity: 0;
-                    stroke: $color-Background-line;
-                    stroke-width: 3px;
-                    stroke-dashoffset: 0;
-                    stroke-dasharray: 4000;
-                }
-                .background-hand {
-                    animation: hand 4s ease-in-out;
-                }
-                @keyframes hand {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-                .background-line {
-                    animation: line 4s ease-in-out;
-                }
-                @keyframes line {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-                    50% {
-                        stroke-dashoffset: 4000;
-                    }
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-            }
-        }
-    }
-    //影片
-    .shoes-video {
-        min-height: 969px;
-        background-color: $color-LightGray;
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        img {
-            &:nth-child(1) {
-                max-width: 66.4%;
-                position: absolute;
-                top: -320px;
-                left: -8vw;
-                border-right: 18px solid $color-Apricot;
-                z-index: 2;
-            }
-            &:nth-child(2) {
-                height: 707px;
-                border-left: 18px solid $color-Apricot;
-                z-index: 3;
-            }
-        }
-        #knife {
-            height: 820px;
-            position: absolute;
-            top: 125px;
-            left: -8vw;
-            transform: rotate(-7deg);
-            .knife-line {
-                fill-opacity: 0;
-                stroke: $color-Background-line;
-                stroke-width: 3px;
-                stroke-dashoffset: 0;
-                stroke-dasharray: 4000;
-            }
-            .knife-line {
-                animation: knife 4s ease-in-out;
-            }
-            @keyframes knife {
-                0% {
-                    stroke-dashoffset: 4000;
-                }
-
-                100% {
-                    stroke-dashoffset: 0;
-                }
-            }
-        }
-    }
-    //新品上市
-    .new-product {
-        background-color: $color-LightGray;
-        position: relative;
-        &:after {
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 969px;
-            bottom: 0px;
-            left: 190px;
-            background-color: $color-Background-line;
-        }
-        .product-title {
-            padding-left: 95px;
-            text-align: justify;
-            display: flex;
-            .text {
-                width: 192px;
-                text-align: center;
-                span {
-                    &:nth-child(1) {
-                        font-size: $H2-font-size;
-                        font-weight: bold;
+                    .content {
+                        font-size: $H7-font-size;
                         color: $color-IronGray;
-                    }
-                    &:nth-child(2) {
-                        font-size: $H5-font-size;
-                        font-weight: lighter;
-                        color: $color-IronGray;
-                    }
-                }
-            }
-        }
-        @mixin shoes-content {
-            width: 275px;
-            height: 306px;
-            background-color: $color-White-opacity;
-
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            text-align: center;
-            z-index: 2;
-            img {
-                position: absolute;
-                width: 215px;
-                top: 0;
-                left: 27px;
-                transform: translateY(-60%);
-            }
-            .content {
-                .text {
-                    p {
-                        margin: 0px;
-                        &:nth-child(1) {
-                            font-size: $H6-font-size;
-                            font-weight: lighter;
-                            letter-spacing: $font-letter-space-100;
-                            color: $color-IronGray;
-                            margin-bottom: 10px;
+                        font-weight: normal;
+                        letter-spacing: $font-letter-space-50;
+                        .preamble {
+                            margin-bottom: 30px;
+                            position: relative;
+                            &:after {
+                                content: "";
+                                width: 0px;
+                                height: 1px;
+                                top: 171px;
+                                left: 340px;
+                                background-color: $color-Background-line;
+                                position: absolute;
+                                transform: rotate(33deg);
+                                z-index: 0;
+                                animation: long-line-grow 1s linear forwards;
+                                animation-delay: 1.5s;
+                            }
                         }
-                        &:nth-child(2) {
-                            font-size: $H8-font-size;
-                            font-weight: normal;
-                            letter-spacing: $font-letter-space-100;
-                            color: $color-IronGray;
+                        @keyframes long-line-grow {
+                            to {
+                                width: 300px;
+                            }
+                        }
+                        .main-body {
                             margin-bottom: 30px;
                         }
                     }
                 }
-                .price {
-                    span {
-                        &:nth-child(1) {
-                            font-size: $H9-font-size;
-                            font-weight: lighter;
-                            color: $color-Original-Price;
-                            text-decoration: line-through;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H4-font-size;
-                            font-weight: bold;
-                            color: $color-Apricot;
+            }
+        }
+        // 製鞋 card
+        .shoemaking {
+            min-height: 969px;
+            background-color: $color-LightGray;
+            .shoes-card {
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                margin-bottom: 70px;
+                @mixin shoes-card-contain {
+                    z-index: 2;
+                    img {
+                        width: 295px;
+                        border-radius: 50%;
+                        border: 5px solid $color-Border-Gary;
+                    }
+                    .text {
+                        margin-top: 30px;
+                        span {
+                            &:nth-child(1) {
+                                font-size: $H5-font-size;
+                                font-weight: bold;
+                                letter-spacing: $font-letter-space-200;
+                                color: $color-IronGray;
+                            }
+                            &:nth-child(2) {
+                                font-size: $H10-font-size;
+                                font-weight: lighter;
+                                color: $color-IronGray;
+                            }
                         }
                     }
                 }
-            }
-            button {
-                width: 235px;
-                height: 50px;
-                color: $color-IronGray;
-                background-color: unset;
-                border: 2px solid $color-MoreButton;
-                border-radius: 45px;
-                margin: 30px 0px 10px 0px;
-            }
-        }
-        .container {
-            min-height: 969px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .product-item {
-                width: 80%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 80px;
-                .product-first {
-                    @include shoes-content();
+                .chose-shoes {
+                    @include shoes-card-contain();
                 }
-                .product-second {
-                    @include shoes-content();
+                .shoes-introduction {
+                    @include shoes-card-contain();
                 }
-                .product-third {
-                    @include shoes-content();
-                }
-                .product-fourth {
-                    @include shoes-content();
+                .shoemaking-story {
+                    @include shoes-card-contain();
                 }
             }
             .see-more-button {
+                width: 100%;
                 display: flex;
                 justify-content: center;
+                margin-bottom: 234px;
                 button {
                     width: 277px;
                     height: 79px;
                     font-size: $H5-font-size;
                     color: $color-IronGray;
+                    border-radius: 35px;
                     background-color: unset;
                     border: 2px solid $color-MoreButton;
-                    border-radius: 35px;
-                    z-index: 2;
+                    z-index: 1;
                     &:hover {
                         border: 2px solid $color-MoreButton-hover;
                         color: $color-White;
@@ -768,213 +528,456 @@ main {
                     }
                 }
             }
+            //縫線的 svg
+            .sew-img {
+                position: relative;
+                #hand-line {
+                    height: 1597px;
+                    position: absolute;
+                    top: 325px;
+                    right: -20px;
+                    z-index: 2;
+                    .background-hand,
+                    .background-line {
+                        fill-opacity: 0;
+                        stroke: $color-Background-line;
+                        stroke-width: 3px;
+                        stroke-dashoffset: 0;
+                        stroke-dasharray: 4000;
+                    }
+                    .background-hand {
+                        animation: hand 4s ease-in-out;
+                    }
+                    @keyframes hand {
+                        0% {
+                            stroke-dashoffset: 4000;
+                        }
+    
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .background-line {
+                        animation: line 4s ease-in-out;
+                    }
+                    @keyframes line {
+                        0% {
+                            stroke-dashoffset: 4000;
+                        }
+                        50% {
+                            stroke-dashoffset: 4000;
+                        }
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                }
+            }
         }
-        .parallelogram {
-            position: absolute;
-            top: 0px;
-            right: 323px;
-            width: 465px;
-            height: 900px;
-            background-color: $color-Parallelogram;
-            transform: skewX(-30deg);
-        }
-    }
-    // 照片牆
-    .photo-wall {
-        background-color: $color-LightGray;
-        position: relative;
-        &:after {
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 1078px;
-            top: 0px;
-            left: 190px;
-            background-color: $color-Background-line;
-        }
-        .photo-title {
+        //影片
+        .shoes-video {
+            min-height: 969px;
+            background-color: $color-LightGray;
+            position: relative;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            // justify-content: flex-start;
-            .text {
+            justify-content: flex-end;
+            align-items: flex-end;
+            img {
+                &:nth-child(1) {
+                    max-width: 66.4%;
+                    position: absolute;
+                    top: -320px;
+                    left: -8vw;
+                    border-right: 18px solid $color-Apricot;
+                    z-index: 2;
+                }
+                &:nth-child(2) {
+                    height: 707px;
+                    border-left: 18px solid $color-Apricot;
+                    z-index: 3;
+                }
+            }
+            #knife {
+                height: 820px;
+                position: absolute;
+                top: 125px;
+                left: -8vw;
+                transform: rotate(-7deg);
+                .knife-line {
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 3px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                .knife-line {
+                    animation: knife 4s ease-in-out;
+                }
+                @keyframes knife {
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+    
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+        }
+        //新品上市
+        .new-product {
+            background-color: $color-LightGray;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 969px;
+                bottom: 0px;
+                left: 190px;
+                background-color: $color-Background-line;
+            }
+            .product-title {
+                padding-left: 95px;
+                text-align: justify;
+                display: flex;
+                .text {
+                    width: 192px;
+                    text-align: center;
+                    span {
+                        &:nth-child(1) {
+                            font-size: $H2-font-size;
+                            font-weight: bold;
+                            color: $color-IronGray;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H5-font-size;
+                            font-weight: lighter;
+                            color: $color-IronGray;
+                        }
+                    }
+                }
+            }
+            @mixin shoes-content {
+                width: 275px;
+                height: 306px;
+                background-color: $color-White-opacity;
+    
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                z-index: 2;
+                img {
+                    position: absolute;
+                    width: 215px;
+                    top: 0;
+                    left: 27px;
+                    transform: translateY(-60%);
+                }
+                .content {
+                    .text {
+                        p {
+                            margin: 0px;
+                            &:nth-child(1) {
+                                font-size: $H6-font-size;
+                                font-weight: lighter;
+                                letter-spacing: $font-letter-space-100;
+                                color: $color-IronGray;
+                                margin-bottom: 10px;
+                            }
+                            &:nth-child(2) {
+                                font-size: $H8-font-size;
+                                font-weight: normal;
+                                letter-spacing: $font-letter-space-100;
+                                color: $color-IronGray;
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                    .price {
+                        span {
+                            &:nth-child(1) {
+                                font-size: $H9-font-size;
+                                font-weight: lighter;
+                                color: $color-Original-Price;
+                                text-decoration: line-through;
+                            }
+                            &:nth-child(2) {
+                                font-size: $H4-font-size;
+                                font-weight: bold;
+                                color: $color-Apricot;
+                            }
+                        }
+                    }
+                }
+                button {
+                    width: 235px;
+                    height: 50px;
+                    color: $color-IronGray;
+                    background-color: unset;
+                    border: 2px solid $color-MoreButton;
+                    border-radius: 45px;
+                    margin: 30px 0px 10px 0px;
+                }
+            }
+            .container {
+                min-height: 969px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                .product-item {
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 80px;
+                    .product-card {
+                        @include shoes-content();
+                    }
+                    // .product-second {
+                    //     @include shoes-content();
+                    // }
+                    // .product-third {
+                    //     @include shoes-content();
+                    // }
+                    // .product-fourth {
+                    //     @include shoes-content();
+                    // }
+                }
+                .see-more-button {
+                    display: flex;
+                    justify-content: center;
+                    button {
+                        width: 277px;
+                        height: 79px;
+                        font-size: $H5-font-size;
+                        color: $color-IronGray;
+                        background-color: unset;
+                        border: 2px solid $color-MoreButton;
+                        border-radius: 35px;
+                        z-index: 2;
+                        &:hover {
+                            border: 2px solid $color-MoreButton-hover;
+                            color: $color-White;
+                            font-weight: bold;
+                            background-color: $color-MoreButton-hover;
+                        }
+                    }
+                }
+            }
+            .parallelogram {
+                position: absolute;
+                top: 0px;
+                right: 323px;
+                width: 465px;
+                height: 900px;
+                background-color: $color-Parallelogram;
+                transform: skewX(-30deg);
+            }
+        }
+        // 照片牆
+        .photo-wall {
+            background-color: $color-LightGray;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 1078px;
+                top: 0px;
+                left: 190px;
+                background-color: $color-Background-line;
+            }
+            .photo-title {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                span {
-                    &:nth-child(1) {
-                        font-size: $H2-font-size;
-                        font-weight: bold;
-                        color: $color-IronGray;
-                        margin-bottom: 10px;
+                // justify-content: flex-start;
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span {
+                        &:nth-child(1) {
+                            font-size: $H2-font-size;
+                            font-weight: bold;
+                            color: $color-IronGray;
+                            margin-bottom: 10px;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H7-font-size;
+                            font-weight: normal;
+                            color: $color-IronGray;
+                        }
                     }
-                    &:nth-child(2) {
-                        font-size: $H7-font-size;
-                        font-weight: normal;
-                        color: $color-IronGray;
+                }
+            }
+            .swiper2 {
+                min-height: 969px;
+                padding-top: 50px;
+                padding: 50px 100px 0px 100px;
+                .swiper-container {
+                    width: 100%;
+                    height: 600px;
+    
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        background: $color-WedgwoodBlue;
+    
+                        /* Center slide text vertically */
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        -webkit-align-items: center;
+                        align-items: center;
+                        img {
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .swiper-pagination-bullet {
+                        background-color: $color-White-opacity;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background-color: $color-White;
+                    }
+                }
+                .swiper-button-next {
+                    top: 40%;
+                    right: 40px;
+                    color: $color-Apricot;
+                    &:hover {
+                        color: $color-Photo-nextBtn-hover;
+                    }
+                }
+                .swiper-button-prev {
+                    top: 40%;
+                    left: 40px;
+                    color: $color-Apricot;
+                    &:hover {
+                        color: $color-Photo-nextBtn-hover;
+                    }
+                }
+                .plus-button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 50px;
+                    .plus {
+                        width: 66px;
+                        height: 66px;
+                        background-color: $color-Plus;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            width: 50px;
+                            height: 2px;
+                            background-color: $color-White;
+                            position: absolute;
+                            top: 32px;
+                            left: 8px;
+                        }
+                        &:after {
+                            content: "";
+                            width: 2px;
+                            height: 50px;
+                            background-color: $color-White;
+                            position: absolute;
+                            top: 8px;
+                            left: 32px;
+                        }
                     }
                 }
             }
         }
-        .swiper2 {
-            min-height: 969px;
-            padding-top: 50px;
-            padding: 50px 100px 0px 100px;
-            .swiper-container {
-                width: 100%;
-                height: 600px;
-
-                .swiper-slide {
-                    text-align: center;
-                    font-size: 18px;
-                    background: $color-WedgwoodBlue;
-
-                    /* Center slide text vertically */
-                    display: -webkit-box;
-                    display: -ms-flexbox;
-                    display: -webkit-flex;
-                    display: flex;
-                    -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                    -webkit-justify-content: center;
-                    justify-content: center;
-                    -webkit-box-align: center;
-                    -ms-flex-align: center;
-                    -webkit-align-items: center;
-                    align-items: center;
-                    img {
-                        background-repeat: no-repeat;
-                        background-size: contain;
+        // 試穿資訊
+        .studio-information {
+            font-family: $font-Family-A;
+    
+            .studio-photo {
+                & img {
+                    width: 559px;
+                    height: 838px;
+                    border-left: 18px solid $color-Apricot;
+                }
+            }
+    
+            .try-on-infor {
+                position: relative;
+    
+                .try-on {
+                    font-size: $H1-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    height: 72px;
+                    margin-bottom: 12px;
+                }
+    
+                .detail {
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    position: absolute;
+                    top: 65px;
+                    left: 36px;
+                }
+    
+                .infor {
+                    font-size: $H1-font-size;
+                    letter-spacing: $font-letter-space-100;
+                }
+            }
+    
+            .contact-head {
+                ul {
+                    font-size: $H5-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
+                    border-left: 1px solid $color-Apricot;
+                }
+            }
+    
+            .contact-text {
+                ul {
+                    font-size: $H7-font-size;
+    
+                    .phone {
+                        padding-top: 3px;
                     }
-                }
-                .swiper-pagination-bullet {
-                    background-color: $color-White-opacity;
-                }
-                .swiper-pagination-bullet-active {
-                    background-color: $color-White;
-                }
-            }
-            .swiper-button-next {
-                top: 40%;
-                right: 40px;
-                color: $color-Apricot;
-                &:hover {
-                    color: $color-Photo-nextBtn-hover;
-                }
-            }
-            .swiper-button-prev {
-                top: 40%;
-                left: 40px;
-                color: $color-Apricot;
-                &:hover {
-                    color: $color-Photo-nextBtn-hover;
-                }
-            }
-            .plus-button {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                margin-top: 50px;
-                .plus {
-                    width: 66px;
-                    height: 66px;
-                    background-color: $color-Plus;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    &:before {
-                        content: "";
-                        width: 50px;
-                        height: 2px;
-                        background-color: $color-White;
-                        position: absolute;
-                        top: 32px;
-                        left: 8px;
+    
+                    .business-time {
+                        padding-top: 11px;
                     }
-                    &:after {
-                        content: "";
-                        width: 2px;
-                        height: 50px;
-                        background-color: $color-White;
-                        position: absolute;
-                        top: 8px;
-                        left: 32px;
+    
+                    .address {
+                        padding-top: 7px;
+                    }
+    
+                    .note {
+                        padding-top: 6px;
                     }
                 }
             }
-        }
-    }
-    // 試穿資訊
-    .studio-information {
-        font-family: $font-Family-A;
-
-        .studio-photo {
-            & img {
-                width: 559px;
-                height: 838px;
+    
+            .shop-map {
                 border-left: 18px solid $color-Apricot;
             }
         }
-
-        .try-on-infor {
-            position: relative;
-
-            .try-on {
-                font-size: $H1-font-size;
-                letter-spacing: $font-letter-space-100;
-                height: 72px;
-                margin-bottom: 12px;
-            }
-
-            .detail {
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;
-                position: absolute;
-                top: 65px;
-                left: 36px;
-            }
-
-            .infor {
-                font-size: $H1-font-size;
-                letter-spacing: $font-letter-space-100;
-            }
-        }
-
-        .contact-head {
-            ul {
-                font-size: $H5-font-size;
-                font-weight: bold;
-                letter-spacing: $font-letter-space-100;
-                border-left: 1px solid $color-Apricot;
-            }
-        }
-
-        .contact-text {
-            ul {
-                font-size: $H7-font-size;
-
-                .phone {
-                    padding-top: 3px;
-                }
-
-                .business-time {
-                    padding-top: 11px;
-                }
-
-                .address {
-                    padding-top: 7px;
-                }
-
-                .note {
-                    padding-top: 6px;
-                }
-            }
-        }
-
-        .shop-map {
-            border-left: 18px solid $color-Apricot;
-        }
     }
 }
+

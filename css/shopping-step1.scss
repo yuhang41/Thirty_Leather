@@ -6,503 +6,506 @@
     font-family: $font-Family-A;
 }
 main{
-    background: $color-LightGray;
-    min-height: 100vh;
-    .my-container{
-        height: 100%;
-        max-width: 1550px;
-        padding: 0;
-        padding-top: 15.7vh;
-        .steps{
-            display: flex;
-            padding: 0 10px;
-            max-width: 1141px;
-            .step{
+    .main-container{    
+        background: $color-LightGray;
+        min-height: 100vh;
+        .my-container{
+            height: 100%;
+            max-width: 1550px;
+            padding: 0;
+            padding-top: 15.7vh;
+            .steps{
                 display: flex;
-                align-items: center;                
-                &:nth-child(1){
-                    flex:0 0 32%;
-                    justify-content: start;                      
-                    .step-content{
-                        background: $color-SkyBlue;                    
-                    }
-                    .step-right-line{
-                        &::after{
-                            content:'';
-                            display: block;                                      
-                            width: 100%;
-                            height: 100%;
-                            background: $color-SkyBlue;
-                        }
-                    }
-                }
-                &:nth-child(2){  
-                    flex:0 0 36%;
-                    justify-content: center;              
-                    .step-content{
-                        background: $color-Shopping-Step;                  
-                    }
-                }    
-                &:nth-child(3){                
-                    flex:0 0 32%;
-                    justify-content:flex-end;
-                    .step-content{
-                        background: $color-Shopping-Step;                    
-                    }
-                }                   
-                .step-content{                    
-                    padding: 10px 0;
-                    border-radius: 5px;              
-                    width: 80%;
-                    display: flex;
-                    justify-content: center;
-                    .text{
-                        display: flex;                    
-                        justify-content: center;
-                        align-items: center;
-                        color:#ffffff;
-                        p{
-                            margin: 0;
-                            font-size: $H4-font-size;
-                            font-weight:$font-Weight-B ;
-                            letter-spacing: $font-letter-space-200;
-                        }
-                        .text-content{                        
-                            text-align: left;                                                
-                            p{
-                                &:nth-child(1){                                
-                                    font-size: $H10-font-size;
-                                    font-weight:$font-Weight-B ;
-                                    letter-spacing: $font-letter-space-50;                                
-                                    
-                                }
-                                &:nth-child(2){                                        
-                                    font-size: $H11-font-size;
-                                    font-weight:$font-Weight-B;
-                                    letter-spacing: $font-letter-space-100;
-                                }
-                            }                     
-                        }
-                    }
-                }
-                .step-right-line{
-                    position: relative;
-                    width: 20%;
-                    height: 3px;
-                    background: $color-Shopping-Step-line;            
-                }
-                .step-left-line{
-                    width: 20%;
-                    height: 3px;
-                    background: $color-Shopping-Step-line;
-                }                
-            }
-        }
-        .shopping-container{
-            width: 100%;
-            margin-top: 30px;
-            display: flex;
-            position: relative;
-            .web-title{
-                position: absolute;
-                top: 0px;
-                left: -130px;
-                font-size: 98px;
-                p{
-                    margin: 0px;
-                    -webkit-writing-mode: vertical-lr;
-                    writing-mode: vertical-lr;
-                    color: $color-White;
-                }
-            }
-            .shopping-order{                
+                padding: 0 10px;
                 max-width: 1141px;
-                width: 100%;
-                min-height:452px;
-                background: $color-White;
-                border: 1px solid $color-Apricot;
-                .order-title{
-                    width: 100%;
-                    padding-top: 20px;
-                    ul{
-                        width: 100%;
-                        padding: 10px 0;
-                        display: flex;
-                        border-bottom: 1px solid $color-Gainsboro;
-                        .title{
-                            display: flex;
-                            justify-content: center;
-                            flex: 0 0 12%;
-                            font-family: $font-Family-A;
-                            font-weight: $font-Weight-B;
-                            font-size: $H10-font-size;
-                            letter-spacing: $font-letter-space-100;
-                            &:nth-child(2){
-                                flex: 0 0 28%;
-                            }                     
+                .step{
+                    display: flex;
+                    align-items: center;                
+                    &:nth-child(1){
+                        flex:0 0 32%;
+                        justify-content: start;                      
+                        .step-content{
+                            background: $color-SkyBlue;                    
+                        }
+                        .step-right-line{
+                            &::after{
+                                content:'';
+                                display: block;                                      
+                                width: 100%;
+                                height: 100%;
+                                background: $color-SkyBlue;
+                            }
                         }
                     }
-                }
-                .shopping-cart{
-                    width: 100%;
-                    padding-top: 20px;                
-                    ul{
-                        width: 100%;                    
-                        display: flex;                    
-                        .order-cart{
-                            display: flex;
+                    &:nth-child(2){  
+                        flex:0 0 36%;
+                        justify-content: center;              
+                        .step-content{
+                            background: $color-Shopping-Step;                  
+                        }
+                    }    
+                    &:nth-child(3){                
+                        flex:0 0 32%;
+                        justify-content:flex-end;
+                        .step-content{
+                            background: $color-Shopping-Step;                    
+                        }
+                    }                   
+                    .step-content{                    
+                        padding: 10px 0;
+                        border-radius: 5px;              
+                        width: 80%;
+                        display: flex;
+                        justify-content: center;
+                        .text{
+                            display: flex;                    
                             justify-content: center;
                             align-items: center;
-                            flex: 0 0 12%;
-                            font-family: $font-Family-A;
-                            font-weight: $font-Weight-B;
-                            font-size: $H10-font-size;
-                            &.content{
-                                flex: 0 0 28%;
+                            color:#ffffff;
+                            p{
+                                margin: 0;
+                                font-size: $H4-font-size;
+                                font-weight:$font-Weight-B ;
+                                letter-spacing: $font-letter-space-200;
+                            }
+                            .text-content{                        
+                                text-align: left;                                                
+                                p{
+                                    &:nth-child(1){                                
+                                        font-size: $H10-font-size;
+                                        font-weight:$font-Weight-B ;
+                                        letter-spacing: $font-letter-space-50;                                
+                                        
+                                    }
+                                    &:nth-child(2){                                        
+                                        font-size: $H11-font-size;
+                                        font-weight:$font-Weight-B;
+                                        letter-spacing: $font-letter-space-100;
+                                    }
+                                }                     
                             }
                         }
-                        .img{
-                            img{
-                                max-width: 90px;
-                                width: 100%;
-                                max-height: 90px;
-                                object-fit: contain;
-                                object-position: center;
-                            }
-                        }
-                        .content{
-                            .cart-content{
-                                min-height: 90px;
+                    }
+                    .step-right-line{
+                        position: relative;
+                        width: 20%;
+                        height: 3px;
+                        background: $color-Shopping-Step-line;            
+                    }
+                    .step-left-line{
+                        width: 20%;
+                        height: 3px;
+                        background: $color-Shopping-Step-line;
+                    }                
+                }
+            }
+            .shopping-container{
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                position: relative;
+                .web-title{
+                    position: absolute;
+                    top: 0px;
+                    left: -130px;
+                    font-size: 98px;
+                    p{
+                        margin: 0px;
+                        -webkit-writing-mode: vertical-lr;
+                        writing-mode: vertical-lr;
+                        color: $color-White;
+                    }
+                }
+                .shopping-order{                
+                    max-width: 1141px;
+                    width: 100%;
+                    min-height:452px;
+                    background: $color-White;
+                    border: 1px solid $color-Apricot;
+                    .order-title{
+                        width: 100%;
+                        padding-top: 20px;
+                        ul{
+                            width: 100%;
+                            padding: 10px 0;
+                            display: flex;
+                            border-bottom: 1px solid $color-Gainsboro;
+                            .title{
                                 display: flex;
-                                flex-direction: column;
-                                justify-content: space-between;
-                                .cart-title{                            
-                                    color:$color-Nav-icon;
-                                    p{
-                                        margin: 0;
-                                    }               
-                                }
-                                .cart-text{
-                                    color: $color-Gainsboro;
-                                    font-size: $H11-font-size;
-                                    font-weight: lighter;
-                                    p{
-                                        margin: 0;
-                                    }
-                                }
-                            }                        
+                                justify-content: center;
+                                flex: 0 0 12%;
+                                font-family: $font-Family-A;
+                                font-weight: $font-Weight-B;
+                                font-size: $H10-font-size;
+                                letter-spacing: $font-letter-space-100;
+                                &:nth-child(2){
+                                    flex: 0 0 28%;
+                                }                     
+                            }
                         }
-                        .price{                        
-                            .discount{
-                                text-align: center;
-                                p{                
-                                    margin: 0;
-                                    font-weight: lighter;                
-                                    &:nth-child(1){
-                                        font-family: $font-Family-A;
-                                        font-size: $H9-font-size;                                
-                                        color: $color-Nav-icon;
+                    }
+                    .shopping-cart{
+                        width: 100%;
+                        padding-top: 20px;                
+                        ul{
+                            width: 100%;                    
+                            display: flex;                    
+                            .order-cart{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex: 0 0 12%;
+                                font-family: $font-Family-A;
+                                font-weight: $font-Weight-B;
+                                font-size: $H10-font-size;
+                                &.content{
+                                    flex: 0 0 28%;
+                                }
+                            }
+                            .img{
+                                img{
+                                    max-width: 90px;
+                                    width: 100%;
+                                    max-height: 90px;
+                                    object-fit: contain;
+                                    object-position: center;
+                                }
+                            }
+                            .content{
+                                .cart-content{
+                                    min-height: 90px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    .cart-title{                            
+                                        color:$color-Nav-icon;
+                                        p{
+                                            margin: 0;
+                                        }               
                                     }
-                                    &:nth-child(2){
-                                        position: relative;
-                                        font-family: $font-Family-A;
-                                        font-size: $H11-font-size;                                
-                                        color: $color-PaleBlue;
-                                        &::after{
-                                            content: '';
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
-                                            width: 100%;
-                                            height: 1px;
-                                            background-color: $color-PaleBlue;
+                                    .cart-text{
+                                        color: $color-Gainsboro;
+                                        font-size: $H11-font-size;
+                                        font-weight: lighter;
+                                        p{
+                                            margin: 0;
+                                        }
+                                    }
+                                }                        
+                            }
+                            .price{                        
+                                .discount{
+                                    text-align: center;
+                                    p{                
+                                        margin: 0;
+                                        font-weight: lighter;                
+                                        &:nth-child(1){
+                                            font-family: $font-Family-A;
+                                            font-size: $H9-font-size;                                
+                                            color: $color-Nav-icon;
+                                        }
+                                        &:nth-child(2){
+                                            position: relative;
+                                            font-family: $font-Family-A;
+                                            font-size: $H11-font-size;                                
+                                            color: $color-PaleBlue;
+                                            &::after{
+                                                content: '';
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 0;
+                                                width: 100%;
+                                                height: 1px;
+                                                background-color: $color-PaleBlue;
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                        .count{
-                            .less,.plus{
-                                width: 13px;
-                                font-size: $H6-font-size;
-                                cursor: pointer;
-                                color: $color-Nav-icon;
-                            }
-                            .less:hover{
-                                color: $color-Apricot;
-                            }
-                            .plus:hover{
-                                color: $color-Apricot;
-                            }
-                            input{
-                                margin: 0 5px;
-                                text-align: center;
-                                background-color: $color-Periwinkle;
-                                outline: none;
-                                border: none;
-                            }
-                        }
-                        .subtotal{
-                            p{
-                                margin: 0;
-                                font-family: $font-Family-A;
-                                font-size: $H9-font-size;                                
-                                color: $color-Nav-icon;
-                                font-weight: lighter;
-                            }
-                        }
-                        .delete-cart{
-                            .delete{                            
-                                .delete-button{                                
-                                    padding: 5px;
+                            .count{
+                                .less,.plus{
+                                    width: 13px;
+                                    font-size: $H6-font-size;
                                     cursor: pointer;
+                                    color: $color-Nav-icon;
+                                }
+                                .less:hover{
+                                    color: $color-Apricot;
+                                }
+                                .plus:hover{
+                                    color: $color-Apricot;
+                                }
+                                input{
+                                    margin: 0 5px;
+                                    text-align: center;
+                                    background-color: $color-Periwinkle;
+                                    outline: none;
+                                    border: none;
+                                }
+                            }
+                            .subtotal{
+                                p{
+                                    margin: 0;
                                     font-family: $font-Family-A;
                                     font-size: $H9-font-size;                                
+                                    color: $color-Nav-icon;
+                                    font-weight: lighter;
+                                }
+                            }
+                            .delete-cart{
+                                .delete{                            
+                                    .delete-button{                                
+                                        padding: 5px;
+                                        cursor: pointer;
+                                        font-family: $font-Family-A;
+                                        font-size: $H9-font-size;                                
+                                        color: $color-Nav-icon;
+                                        &:hover{
+                                            color: $color-Apricot;
+                                        }
+                                    }
+                                }
+                            }
+                            .favorite{
+                                .fa-star{
+                                    padding: 5px;
+                                    cursor: pointer;
+                                    font-size: $H9-font-size;                                
+                                    color: $color-Nav-icon;
                                     color: $color-Nav-icon;
                                     &:hover{
                                         color: $color-Apricot;
                                     }
                                 }
+                                
                             }
                         }
-                        .favorite{
-                            .fa-star{
-                                padding: 5px;
-                                cursor: pointer;
-                                font-size: $H9-font-size;                                
-                                color: $color-Nav-icon;
+                    }
+                }
+                .payment-shipping{
+                    position: relative;
+                    max-width: 371px;
+                    width: 100%;
+                    min-height:452px;
+                    margin-left: 2vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $color-White;
+                    border: 1px solid $color-Apricot;
+                    h3{
+                        position: absolute;
+                        top: 20px;
+                        text-align: center;
+                        font-size: $H5-font-size;
+                        letter-spacing: $font-letter-space-200;
+                    }
+                    .shipping{
+                        width: 100%;
+    
+                        .shipping-select{
+                            position: relative;
+                            width: 80%;
+                            margin: auto;
+                            padding: 10px 0;
+                            h5{
+                                position: absolute;
+                                top: 3px;
+                                left: 15px;
+                                margin: 0;
+                                background-color: white;
+                                font-size: $H10-font-size;
+                            }
+                            select{                            
+                                width: 100%;
+                                padding: 10px 10px;
+                                border-radius: 5px;
+                                border: 1px solid $color-Background-line;
+                                outline: none;
+                                font-size: $H10-font-size;
                                 color: $color-Nav-icon;
                                 &:hover{
-                                    color: $color-Apricot;
-                                }
-                            }
-                            
+                                    background: $color-Background-line;
+                                }                     
+                            }            
                         }
-                    }
-                }
-            }
-            .payment-shipping{
-                position: relative;
-                max-width: 371px;
-                width: 100%;
-                min-height:452px;
-                margin-left: 2vw;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: $color-White;
-                border: 1px solid $color-Apricot;
-                h3{
-                    position: absolute;
-                    top: 20px;
-                    text-align: center;
-                    font-size: $H5-font-size;
-                    letter-spacing: $font-letter-space-200;
-                }
-                .shipping{
-                    width: 100%;
-
-                    .shipping-select{
-                        position: relative;
-                        width: 80%;
-                        margin: auto;
-                        padding: 10px 0;
-                        h5{
-                            position: absolute;
-                            top: 3px;
-                            left: 15px;
-                            margin: 0;
-                            background-color: white;
-                            font-size: $H10-font-size;
-                        }
-                        select{                            
-                            width: 100%;
-                            padding: 10px 10px;
-                            border-radius: 5px;
-                            border: 1px solid $color-Background-line;
-                            outline: none;
-                            font-size: $H10-font-size;
+                        .business{
+                            width: 80%;                
+                            margin: auto;
+                            padding: 5px 10px;
                             color: $color-Nav-icon;
-                            &:hover{
-                                background: $color-Background-line;
-                            }                     
-                        }            
-                    }
-                    .business{
-                        width: 80%;                
-                        margin: auto;
-                        padding: 5px 10px;
-                        color: $color-Nav-icon;
-                        background-color: $color-Background-line;
-                        font-size: $H11-font-size;
-                        letter-spacing: $font-letter-space-50;
-                    }
-                    .choose{
-                        padding-top: 20px;                        
-                        width: 80%;                
-                        margin: auto;
-                        display: flex;
-                        justify-content: flex-end;
-                        .choose-button{       
-                            font-size: $H11-font-size;                     
-                            padding: 5px 15px;
-                            background: white;
-                            border: 1px solid $color-Nav-icon;
-                            border-radius: 10px;
-                            outline: none;
-                            transition: .5s;
-                            &:hover{
-                                background: $color-Apricot;
-                                color: $color-White;
-                                border: 1px solid $color-Apricot;
+                            background-color: $color-Background-line;
+                            font-size: $H11-font-size;
+                            letter-spacing: $font-letter-space-50;
+                        }
+                        .choose{
+                            padding-top: 20px;                        
+                            width: 80%;                
+                            margin: auto;
+                            display: flex;
+                            justify-content: flex-end;
+                            .choose-button{       
+                                font-size: $H11-font-size;                     
+                                padding: 5px 15px;
+                                background: white;
+                                border: 1px solid $color-Nav-icon;
+                                border-radius: 10px;
+                                outline: none;
+                                transition: .5s;
+                                &:hover{
+                                    background: $color-Apricot;
+                                    color: $color-White;
+                                    border: 1px solid $color-Apricot;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        .other-amount{
-            width: 100%;
-            display: flex;
-            .other-discount{    
-                margin-top: 20px;            
-                max-width: 1141px;
+            .other-amount{
                 width: 100%;
-                .other-tital{
-                    display: flex;
-                    align-items: center;
-                    padding:10px 20px;
-                    border-radius: 5px;
-                    background: $color-SkyBlue;
-                    color: $color-White;
-                    letter-spacing: $font-letter-space-100;
-                    p{
-                        margin: 0;
-                        padding: 0 5px;
-                        font-size: $H6-font-size;                    
-                    }
-                }
-                .other-card{
+                display: flex;
+                .other-discount{    
+                    margin-top: 20px;            
+                    max-width: 1141px;
                     width: 100%;
-                    margin-top: 15px;
-                    padding: 0 10px;
-                    display: flex;
-                    .commodity{
-                        flex:0 0 25%;
+                    .other-tital{
                         display: flex;
-                        .photo{
-                            max-width: 112px;
-                            width: 100%;                        
-                            img{
-                                width: 100%;
-                                object-fit: cover;
-                                object-position: center;
-                            }
+                        align-items: center;
+                        padding:10px 20px;
+                        border-radius: 5px;
+                        background: $color-SkyBlue;
+                        color: $color-White;
+                        letter-spacing: $font-letter-space-100;
+                        p{
+                            margin: 0;
+                            padding: 0 5px;
+                            font-size: $H6-font-size;                    
                         }
-                        .commodity-content{  
-                            padding:0 10px;                      
-                            .title{
-                                font-size: $H11-font-size;
-                                color: $color-IronGray;
-                                margin-bottom: 20px;
-                            }
-                            .content-buttone{
-                                p{
-                                    margin: 0;
-                                    color: $color-Apricot;
-                                    font-size: $H7-font-size;
-                                    font-weight: $font-Weight-B;
+                    }
+                    .other-card{
+                        width: 100%;
+                        margin-top: 15px;
+                        padding: 0 10px;
+                        display: flex;
+                        .commodity{
+                            flex:0 0 25%;
+                            display: flex;
+                            .photo{
+                                max-width: 112px;
+                                width: 100%;                        
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
                                 }
-                                .push-cart{
-                                    border: 1px solid $color-Nav-icon;
-                                    border-radius: 10px;
-                                    outline: none;
-                                    padding: 5px 20px;
-                                    transition: .5s;
+                            }
+                            .commodity-content{  
+                                padding:0 10px;                      
+                                .title{
                                     font-size: $H11-font-size;
-                                    &:hover{
-                                        background: $color-Apricot;
-                                        color: $color-White;
-                                        border: none;
+                                    color: $color-IronGray;
+                                    margin-bottom: 20px;
+                                }
+                                .content-buttone{
+                                    p{
+                                        margin: 0;
+                                        color: $color-Apricot;
+                                        font-size: $H7-font-size;
+                                        font-weight: $font-Weight-B;
+                                    }
+                                    .push-cart{
+                                        border: 1px solid $color-Nav-icon;
+                                        border-radius: 10px;
+                                        outline: none;
+                                        padding: 5px 20px;
+                                        transition: .5s;
+                                        font-size: $H11-font-size;
+                                        &:hover{
+                                            background: $color-Apricot;
+                                            color: $color-White;
+                                            border: none;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-            }
-            .amount{
-                margin-top: 5px;
-                margin-left: 2vw;
-                max-width: 371px;
-                width: 100%;
-                .free-ship{
-                    display: flex;
-                    font-size: $H11-font-size;
-                    font-weight: $font-Weight-B;                
-                    align-items: center;
-                    p{
-                        margin: 0;
-                        margin-right: 5px;
-                        padding: 5px;
-                        font-size: $H9-font-size;
-                        background-color: $color-Apricot;
-                        color: $color-White;
-                        border-radius: 5px;
-                    }
-                }
-                .total{
-                    padding-top: 20px;
-                    .price-total{
-                        display: flex;
-                        justify-content: space-between;
-                        padding-bottom: 5px;
-                        p{                        
-                            margin: 0;
-                            font-size: $H10-font-size;   
-                            font-weight: $font-Weight-B;                         
-                        }
-                    }
-                }
-                .order-total-button{
+                .amount{
+                    margin-top: 5px;
+                    margin-left: 2vw;
+                    max-width: 371px;
                     width: 100%;
-                    padding-top: 10px;
-                    .order-total{
+                    .free-ship{
                         display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        padding-bottom: 20px;
-                        p{
-                            width: 55%;
-                            font-size: $H9-font-size;
-                            margin: 0; 
-                            padding-bottom: 10px;                           
-                            text-align: end;
-                        }
-                        .order-total-price{
-                            width: 45%;       
-                            padding: 0;                     
-                            color: $color-Apricot;
-                            font-weight: $font-Weight-B;
-                            font-size: $H3-font-size;
-                            text-align: end;
-                        }                
-                    }
-                    .next-button{
-                        width: 100%;                        
-                        border: none;
-                        outline: none;                        
-                        border-radius: 10px;
-                        display: flex;
-                        justify-content: center;                            
+                        font-size: $H11-font-size;
+                        font-weight: $font-Weight-B;                
                         align-items: center;
-                        background-color: $color-Apricot;
-                        font-size: $H4-font-size;                        
-                        letter-spacing: $font-letter-space-200;
-                        color: $color-White;
+                        p{
+                            margin: 0;
+                            margin-right: 5px;
+                            padding: 5px;
+                            font-size: $H9-font-size;
+                            background-color: $color-Apricot;
+                            color: $color-White;
+                            border-radius: 5px;
+                        }
+                    }
+                    .total{
+                        padding-top: 20px;
+                        .price-total{
+                            display: flex;
+                            justify-content: space-between;
+                            padding-bottom: 5px;
+                            p{                        
+                                margin: 0;
+                                font-size: $H10-font-size;   
+                                font-weight: $font-Weight-B;                         
+                            }
+                        }
+                    }
+                    .order-total-button{
+                        width: 100%;
+                        padding-top: 10px;
+                        .order-total{
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            padding-bottom: 20px;
+                            p{
+                                width: 55%;
+                                font-size: $H9-font-size;
+                                margin: 0; 
+                                padding-bottom: 10px;                           
+                                text-align: end;
+                            }
+                            .order-total-price{
+                                width: 45%;       
+                                padding: 0;                     
+                                color: $color-Apricot;
+                                font-weight: $font-Weight-B;
+                                font-size: $H3-font-size;
+                                text-align: end;
+                            }                
+                        }
+                        .next-button{
+                            width: 100%;                        
+                            border: none;
+                            outline: none;                        
+                            border-radius: 10px;
+                            display: flex;
+                            justify-content: center;                            
+                            align-items: center;
+                            background-color: $color-Apricot;
+                            font-size: $H4-font-size;                        
+                            letter-spacing: $font-letter-space-200;
+                            color: $color-White;
+                        }
                     }
                 }
-            }
-        }            
+            }            
+        }
     }
 }
+
