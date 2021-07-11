@@ -214,7 +214,7 @@ nav{
     @include notebook(){
       li{
         padding:0px 0.5vw;
-          &:nth-child(n+4){
+          &:nth-child(n+5){
               display: none;
           }
           &.more-option{

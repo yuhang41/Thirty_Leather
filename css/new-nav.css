@@ -319,7 +319,7 @@ nav .personal-item .twd-lang .lang a {
   .navbar li {
     padding: 0px 0.5vw;
   }
-  .navbar li:nth-child(n+4) {
+  .navbar li:nth-child(n+5) {
     display: none;
   }
   .navbar li.more-option {
