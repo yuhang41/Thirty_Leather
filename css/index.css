@@ -1025,9 +1025,18 @@ main .main-container .new-product .container .product-item .product-card .conten
   color: #f7a269;
 }
 
-main .main-container .new-product .container .product-item .product-card button {
+main .main-container .new-product .container .product-item .product-card a {
   width: 235px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #444444;
   background-color: unset;
   border: 2px solid #a0a0a0;
