@@ -100,7 +100,6 @@
                 width: 95%;
 
                 .input-data {
-                    height: 300px;
                     border-bottom: 2px solid $color-MoreButton-hover;
 
                     .label1 {
@@ -203,6 +202,11 @@
 }
 
 @media (max-width: 1024px) {
+    .list-Group {
+        display: flex;
+        flex-direction: column;
+    }
+
     .table {
         tr{
             display: flex;
@@ -218,12 +222,37 @@
         }
     
         .orderNumber1 {
+            background-color: black;
             margin-top: 10vh;
         }
     
         .checkInvoice, .returnInfor {
             width: 80px;
             margin: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .data-left {
+        margin-top: 50px;
+        margin-left: 25%;
+    }
+
+    .data-right {
+        margin-left: 25%;
+    }
+    
+    .address-block {
+        display: flex;
+        flex-direction: column;
+        .address {
+            margin-left: 15px;
+
+            .input1 {
+                position: absolute;
+                top: 75px;
+            }
         }
     }
 }
