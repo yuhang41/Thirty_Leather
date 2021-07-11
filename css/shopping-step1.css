@@ -10,19 +10,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
+main .main-container {
   background: #ebeae5;
   min-height: 100vh;
 }
 
-main .my-container {
+main .main-container .my-container {
   height: 100%;
   max-width: 1550px;
   padding: 0;
   padding-top: 15.7vh;
 }
 
-main .my-container .steps {
+main .main-container .my-container .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@ main .my-container .steps {
   max-width: 1141px;
 }
 
-main .my-container .steps .step {
+main .main-container .my-container .steps .step {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ main .my-container .steps .step {
           align-items: center;
 }
 
-main .my-container .steps .step:nth-child(1) {
+main .main-container .my-container .steps .step:nth-child(1) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32%;
           flex: 0 0 32%;
@@ -48,11 +48,11 @@ main .my-container .steps .step:nth-child(1) {
           justify-content: start;
 }
 
-main .my-container .steps .step:nth-child(1) .step-content {
+main .main-container .my-container .steps .step:nth-child(1) .step-content {
   background: #86b2c4;
 }
 
-main .my-container .steps .step:nth-child(1) .step-right-line::after {
+main .main-container .my-container .steps .step:nth-child(1) .step-right-line::after {
   content: '';
   display: block;
   width: 100%;
@@ -60,7 +60,7 @@ main .my-container .steps .step:nth-child(1) .step-right-line::after {
   background: #86b2c4;
 }
 
-main .my-container .steps .step:nth-child(2) {
+main .main-container .my-container .steps .step:nth-child(2) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 36%;
           flex: 0 0 36%;
@@ -69,11 +69,11 @@ main .my-container .steps .step:nth-child(2) {
           justify-content: center;
 }
 
-main .my-container .steps .step:nth-child(2) .step-content {
+main .main-container .my-container .steps .step:nth-child(2) .step-content {
   background: #aab1b2;
 }
 
-main .my-container .steps .step:nth-child(3) {
+main .main-container .my-container .steps .step:nth-child(3) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32%;
           flex: 0 0 32%;
@@ -82,11 +82,11 @@ main .my-container .steps .step:nth-child(3) {
           justify-content: flex-end;
 }
 
-main .my-container .steps .step:nth-child(3) .step-content {
+main .main-container .my-container .steps .step:nth-child(3) .step-content {
   background: #aab1b2;
 }
 
-main .my-container .steps .step .step-content {
+main .main-container .my-container .steps .step .step-content {
   padding: 10px 0;
   border-radius: 5px;
   width: 80%;
@@ -98,7 +98,7 @@ main .my-container .steps .step .step-content {
           justify-content: center;
 }
 
-main .my-container .steps .step .step-content .text {
+main .main-container .my-container .steps .step .step-content .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,43 +111,43 @@ main .my-container .steps .step .step-content .text {
   color: #ffffff;
 }
 
-main .my-container .steps .step .step-content .text p {
+main .main-container .my-container .steps .step .step-content .text p {
   margin: 0;
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 3.2px;
 }
 
-main .my-container .steps .step .step-content .text .text-content {
+main .main-container .my-container .steps .step .step-content .text .text-content {
   text-align: left;
 }
 
-main .my-container .steps .step .step-content .text .text-content p:nth-child(1) {
+main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(1) {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.8px;
 }
 
-main .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
+main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1.6px;
 }
 
-main .my-container .steps .step .step-right-line {
+main .main-container .my-container .steps .step .step-right-line {
   position: relative;
   width: 20%;
   height: 3px;
   background: #717777;
 }
 
-main .my-container .steps .step .step-left-line {
+main .main-container .my-container .steps .step .step-left-line {
   width: 20%;
   height: 3px;
   background: #717777;
 }
 
-main .my-container .shopping-container {
+main .main-container .my-container .shopping-container {
   width: 100%;
   margin-top: 30px;
   display: -webkit-box;
@@ -156,14 +156,14 @@ main .my-container .shopping-container {
   position: relative;
 }
 
-main .my-container .shopping-container .web-title {
+main .main-container .my-container .shopping-container .web-title {
   position: absolute;
   top: 0px;
   left: -130px;
   font-size: 98px;
 }
 
-main .my-container .shopping-container .web-title p {
+main .main-container .my-container .shopping-container .web-title p {
   margin: 0px;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
@@ -171,7 +171,7 @@ main .my-container .shopping-container .web-title p {
   color: #ffffff;
 }
 
-main .my-container .shopping-container .shopping-order {
+main .main-container .my-container .shopping-container .shopping-order {
   max-width: 1141px;
   width: 100%;
   min-height: 452px;
@@ -179,12 +179,12 @@ main .my-container .shopping-container .shopping-order {
   border: 1px solid #f7a269;
 }
 
-main .my-container .shopping-container .shopping-order .order-title {
+main .main-container .my-container .shopping-container .shopping-order .order-title {
   width: 100%;
   padding-top: 20px;
 }
 
-main .my-container .shopping-container .shopping-order .order-title ul {
+main .main-container .my-container .shopping-container .shopping-order .order-title ul {
   width: 100%;
   padding: 10px 0;
   display: -webkit-box;
@@ -193,7 +193,7 @@ main .my-container .shopping-container .shopping-order .order-title ul {
   border-bottom: 1px solid #a3b6c1;
 }
 
-main .my-container .shopping-container .shopping-order .order-title ul .title {
+main .main-container .my-container .shopping-container .shopping-order .order-title ul .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,25 +209,25 @@ main .my-container .shopping-container .shopping-order .order-title ul .title {
   letter-spacing: 1.6px;
 }
 
-main .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(2) {
+main .main-container .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(2) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 28%;
           flex: 0 0 28%;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart {
   width: 100%;
   padding-top: 20px;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,13 +245,13 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .order-
   font-size: 14px;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart.content {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart.content {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 28%;
           flex: 0 0 28%;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .img img {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .img img {
   max-width: 90px;
   width: 100%;
   max-height: 90px;
@@ -261,7 +261,7 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .img im
      object-position: center;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content {
   min-height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,47 +275,47 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .conten
           justify-content: space-between;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title {
   color: #65737f;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title p {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title p {
   margin: 0;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text {
   color: #a3b6c1;
   font-size: 12px;
   font-weight: lighter;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text p {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-text p {
   margin: 0;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount {
   text-align: center;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p {
   margin: 0;
   font-weight: lighter;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(1) {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(1) {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: #65737f;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(2) {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(2) {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #8fa5b5;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(2)::after {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .price .discount p:nth-child(2)::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -325,22 +325,22 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .price 
   background-color: #8fa5b5;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .count .less, main .my-container .shopping-container .shopping-order .shopping-cart ul .count .plus {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count .less, main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count .plus {
   width: 13px;
   font-size: 21px;
   cursor: pointer;
   color: #65737f;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .count .less:hover {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count .less:hover {
   color: #f7a269;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .count .plus:hover {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count .plus:hover {
   color: #f7a269;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .count input {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count input {
   margin: 0 5px;
   text-align: center;
   background-color: #c8d9db;
@@ -348,7 +348,7 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .count 
   border: none;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .subtotal p {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .subtotal p {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -356,7 +356,7 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .subtot
   font-weight: lighter;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .delete-cart .delete .delete-button {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .delete-cart .delete .delete-button {
   padding: 5px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
@@ -364,11 +364,11 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .delete
   color: #65737f;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .delete-cart .delete .delete-button:hover {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .delete-cart .delete .delete-button:hover {
   color: #f7a269;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star {
   padding: 5px;
   cursor: pointer;
   font-size: 15px;
@@ -376,11 +376,11 @@ main .my-container .shopping-container .shopping-order .shopping-cart ul .favori
   color: #65737f;
 }
 
-main .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star:hover {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star:hover {
   color: #f7a269;
 }
 
-main .my-container .shopping-container .payment-shipping {
+main .main-container .my-container .shopping-container .payment-shipping {
   position: relative;
   max-width: 371px;
   width: 100%;
@@ -399,7 +399,7 @@ main .my-container .shopping-container .payment-shipping {
   border: 1px solid #f7a269;
 }
 
-main .my-container .shopping-container .payment-shipping h3 {
+main .main-container .my-container .shopping-container .payment-shipping h3 {
   position: absolute;
   top: 20px;
   text-align: center;
@@ -407,18 +407,18 @@ main .my-container .shopping-container .payment-shipping h3 {
   letter-spacing: 3.2px;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping {
+main .main-container .my-container .shopping-container .payment-shipping .shipping {
   width: 100%;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .shipping-select {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select {
   position: relative;
   width: 80%;
   margin: auto;
   padding: 10px 0;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .shipping-select h5 {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select h5 {
   position: absolute;
   top: 3px;
   left: 15px;
@@ -427,7 +427,7 @@ main .my-container .shopping-container .payment-shipping .shipping .shipping-sel
   font-size: 14px;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .shipping-select select {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select select {
   width: 100%;
   padding: 10px 10px;
   border-radius: 5px;
@@ -437,11 +437,11 @@ main .my-container .shopping-container .payment-shipping .shipping .shipping-sel
   color: #65737f;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .shipping-select select:hover {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select select:hover {
   background: #abbac9;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .business {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .business {
   width: 80%;
   margin: auto;
   padding: 5px 10px;
@@ -451,7 +451,7 @@ main .my-container .shopping-container .payment-shipping .shipping .business {
   letter-spacing: 0.8px;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .choose {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose {
   padding-top: 20px;
   width: 80%;
   margin: auto;
@@ -463,7 +463,7 @@ main .my-container .shopping-container .payment-shipping .shipping .choose {
           justify-content: flex-end;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .choose .choose-button {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button {
   font-size: 12px;
   padding: 5px 15px;
   background: white;
@@ -474,26 +474,26 @@ main .my-container .shopping-container .payment-shipping .shipping .choose .choo
   transition: .5s;
 }
 
-main .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
   background: #f7a269;
   color: #ffffff;
   border: 1px solid #f7a269;
 }
 
-main .my-container .other-amount {
+main .main-container .my-container .other-amount {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .my-container .other-amount .other-discount {
+main .main-container .my-container .other-amount .other-discount {
   margin-top: 20px;
   max-width: 1141px;
   width: 100%;
 }
 
-main .my-container .other-amount .other-discount .other-tital {
+main .main-container .my-container .other-amount .other-discount .other-tital {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,13 +507,13 @@ main .my-container .other-amount .other-discount .other-tital {
   letter-spacing: 1.6px;
 }
 
-main .my-container .other-amount .other-discount .other-tital p {
+main .main-container .my-container .other-amount .other-discount .other-tital p {
   margin: 0;
   padding: 0 5px;
   font-size: 21px;
 }
 
-main .my-container .other-amount .other-discount .other-card {
+main .main-container .my-container .other-amount .other-discount .other-card {
   width: 100%;
   margin-top: 15px;
   padding: 0 10px;
@@ -522,7 +522,7 @@ main .my-container .other-amount .other-discount .other-card {
   display: flex;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
@@ -531,12 +531,12 @@ main .my-container .other-amount .other-discount .other-card .commodity {
   display: flex;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .photo {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .photo {
   max-width: 112px;
   width: 100%;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .photo img {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .photo img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -544,24 +544,24 @@ main .my-container .other-amount .other-discount .other-card .commodity .photo i
      object-position: center;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .commodity-content {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content {
   padding: 0 10px;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
   font-size: 12px;
   color: #444444;
   margin-bottom: 20px;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
   margin: 0;
   color: #f7a269;
   font-size: 18px;
   font-weight: bold;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
   border: 1px solid #65737f;
   border-radius: 10px;
   outline: none;
@@ -571,20 +571,20 @@ main .my-container .other-amount .other-discount .other-card .commodity .commodi
   font-size: 12px;
 }
 
-main .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
   background: #f7a269;
   color: #ffffff;
   border: none;
 }
 
-main .my-container .other-amount .amount {
+main .main-container .my-container .other-amount .amount {
   margin-top: 5px;
   margin-left: 2vw;
   max-width: 371px;
   width: 100%;
 }
 
-main .my-container .other-amount .amount .free-ship {
+main .main-container .my-container .other-amount .amount .free-ship {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,7 +595,7 @@ main .my-container .other-amount .amount .free-ship {
           align-items: center;
 }
 
-main .my-container .other-amount .amount .free-ship p {
+main .main-container .my-container .other-amount .amount .free-ship p {
   margin: 0;
   margin-right: 5px;
   padding: 5px;
@@ -605,11 +605,11 @@ main .my-container .other-amount .amount .free-ship p {
   border-radius: 5px;
 }
 
-main .my-container .other-amount .amount .total {
+main .main-container .my-container .other-amount .amount .total {
   padding-top: 20px;
 }
 
-main .my-container .other-amount .amount .total .price-total {
+main .main-container .my-container .other-amount .amount .total .price-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,18 +619,18 @@ main .my-container .other-amount .amount .total .price-total {
   padding-bottom: 5px;
 }
 
-main .my-container .other-amount .amount .total .price-total p {
+main .main-container .my-container .other-amount .amount .total .price-total p {
   margin: 0;
   font-size: 14px;
   font-weight: bold;
 }
 
-main .my-container .other-amount .amount .order-total-button {
+main .main-container .my-container .other-amount .amount .order-total-button {
   width: 100%;
   padding-top: 10px;
 }
 
-main .my-container .other-amount .amount .order-total-button .order-total {
+main .main-container .my-container .other-amount .amount .order-total-button .order-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,7 +643,7 @@ main .my-container .other-amount .amount .order-total-button .order-total {
   padding-bottom: 20px;
 }
 
-main .my-container .other-amount .amount .order-total-button .order-total p {
+main .main-container .my-container .other-amount .amount .order-total-button .order-total p {
   width: 55%;
   font-size: 15px;
   margin: 0;
@@ -651,7 +651,7 @@ main .my-container .other-amount .amount .order-total-button .order-total p {
   text-align: end;
 }
 
-main .my-container .other-amount .amount .order-total-button .order-total .order-total-price {
+main .main-container .my-container .other-amount .amount .order-total-button .order-total .order-total-price {
   width: 45%;
   padding: 0;
   color: #f7a269;
@@ -660,7 +660,7 @@ main .my-container .other-amount .amount .order-total-button .order-total .order
   text-align: end;
 }
 
-main .my-container .other-amount .amount .order-total-button .next-button {
+main .main-container .my-container .other-amount .amount .order-total-button .next-button {
   width: 100%;
   border: none;
   outline: none;
