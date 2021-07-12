@@ -5,415 +5,577 @@
 * {
     list-style: none;
     margin: 0px;
+    padding: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
-
-// container RWD
-.container {
-    max-width: 1520px;
+//筆電尺寸
+@mixin notebook {
+    @media(max-width:1550px){
+        @content;
+        transition: 1s;
+    }
 }
-nav {
-    height: 113px;
+// 大平板尺寸
+@mixin tablet {
+    @media(max-width:1350px){
+        @content;
+        transition: 1s;
+    }
+}
+// 小平板尺寸
+@mixin sm-tablet {
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
+//大手機尺寸
+@mixin bg-phone {
+    @media(max-width:768px){
+        @content;
+        transition: 1s;
+    }
+}
+// 商品卡片換版
+@mixin single-cart {
+    @media(max-width:660px){
+        @content;
+        transition: 1s;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media(max-width:520px){
+        @content;
+        transition: 1s;
+    }
+}
+// iphone 5s
+@mixin iphone-5s {
+    @media(max-width:320px){
+        @content;
+        transition: 1s;
+    }
 }
 main {
-    .main-container {
+    .main-container{
         padding-left: 7.4vw;
         overflow: hidden;
-        // 輪播圖
-        .swiper1 {
-            .swiper-container {
-                width: 100%;
-                height: 100%;
+        transition: 1s;
+        @include tablet(){
+            padding-left: 0px;
+        }
+    // 輪播圖
+    .swiper1 {
+        position: relative;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        //swiper bullet
+        .swiper-pagination-bullets {
+            position: absolute;
+            left: -3vw;
+            bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+            z-index: 2;
+            width: 34px;
+            @include tablet(){
+                left: 2vw;
+                bottom: 50px;
+            }
+            @include sm-tablet(){
+                left: 3vw;
+                bottom: 50px;
+            }
+            @include iphone-5s(){
+                left: 4vw;
+                bottom: 50px;
+            }
+            .swiper-pagination-bullet {
+                width: 17px;
+                height: 17px;
+                border-radius: 0px;
+                margin: 17px 0px 0px 0px;
+                background-color: $color-WedgwoodBlue;
+                opacity: unset;
                 position: relative;
             }
-            //swiper bullet
-            .swiper-pagination-bullets {
-                position: absolute;
-                left: 5vw;
-                bottom: 1vw;
-                display: flex;
-                flex-direction: column;
-                overflow: visible;
-                z-index: 2;
-                width: 34px;
-                .swiper-pagination-bullet {
-                    width: 17px;
+            .swiper-pagination-bullet-active {
+                background-color: $color-Orange;
+
+                &::before {
+                    content: "";
                     height: 17px;
-                    border-radius: 0px;
-                    margin: 17px 0px 0px 0px;
-                    background-color: $color-WedgwoodBlue;
-                    opacity: unset;
-                    position: relative;
-                }
-                .swiper-pagination-bullet-active {
-                    background-color: $color-Orange;
-
-                    &::before {
-                        content: "";
-                        height: 17px;
-                        position: absolute;
-                        top: -10px;
-                        left: -10px;
-                        border: 1px solid $color-Orange;
-                        padding: 17px;
-                    }
-                }
-            }
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                height: calc(100vh - 113px);
-
-                background-size: cover;
-                background-repeat: no-repeat;
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                transition: 0.5s;
-            }
-        }
-        // 聯絡客服
-        .chatbot {
-            position: fixed;
-            bottom: 36px;
-            right: 25px;
-            z-index: 5;
-
-            &.active {
-                .more-button-list {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-
-                .more-button-list-item {
-                    animation: fadeInItem 0.6s 0.2s forwards;
-
-                    &:nth-child(2) {
-                        animation-delay: 0.4s;
-                    }
-                    &:nth-child(3) {
-                        animation-delay: 0.6s;
-                    }
-                    &:nth-child(4) {
-                        animation-delay: 0.8s;
-                    }
-                }
-
-                .more-button {
-                    animation: onePulse 1s forwards linear;
-                    animation-iteration-count: infinite;
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    border: 1px solid $color-Orange;
+                    padding: 17px;
                 }
             }
         }
-
-        .more-button {
-            background-color: white;
-            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            transition: 0.2s ease-in;
+        .swiper-slide {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            min-height:969px;
+            transition: 1s;
+            @include sm-tablet(){
+                min-height:768px;
+            }
+            @include iphone-5s(){
+                height: 518px;
+                min-height: unset;
+            }
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
-            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
             justify-content: center;
-            color: #fff;
-            position: relative;
-            z-index: 2;
-
-            &-list {
-                background-color: $color-White;
-                border-radius: 8px;
-                list-style-type: none;
-                width: 358px;
-                height: 338px;
-                box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
-                padding: 20px 20px;
-                position: absolute;
-                right: 32px;
-                bottom: 21px;
-                opacity: 0;
-                transform: scale(0);
-                transform-origin: bottom right;
-                transition: all 0.3s ease 0.1s;
-
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+    }
+    // 聯絡客服
+    .chatbot {
+        position: fixed;
+        bottom: 36px;
+        right: 25px;
+        z-index: 5;
+        transition: 1s;
+        // @include tablet(){
+        //     bottom: 50px;
+        // }
+        
+        &.active {
+          .more-button-list {
+             opacity: 1;
+             transform: scale(1);
+          }
+          
+          .more-button-list-item {
+            animation: fadeInItem .6s .2s forwards;
+            
+            &:nth-child(2) { animation-delay: .4s; }
+            &:nth-child(3) { animation-delay: .6s; }
+            &:nth-child(4) { animation-delay: .8s; }
+          }
+          
+          .more-button {
+            animation: onePulse 1s forwards linear;
+            animation-iteration-count:infinite;
+          }
+        }
+      }
+      
+    .more-button {
+    background-color: white;
+    box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    
+    
+    &-list {
+        background-color: $color-White;
+        border-radius: 8px;
+        list-style-type: none;
+        width: 358px;
+        height: 338px;
+        box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
+        padding: 20px 20px;
+        position: absolute;
+        right: 32px;
+        bottom: 21px;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition : all .3s ease .1s;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        li { opacity: 0; }
+    }
+    
+    &-list-item {
+        &:nth-child(1){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            img {
+                width: 46px;
+                height: 46px;
+            }
+            .option {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                li {
-                    opacity: 0;
+                .more {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    cursor: pointer;
+    
+                    justify-content: center;
+                    align-items: center;
+    
+                    .dot {
+                        width: 3px;
+                        height: 3px;
+                        background-color: $color-DeepGray;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 0px;
+                            left: -5px;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background-color: $color-DeepGray;
+                        }
+                        &::after {
+                            position: absolute;
+                            top: 0px;
+                            left: 5px;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background-color: $color-DeepGray;
+                        }
+                    }
+                }
+                .close {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    opacity: unset;
+                    cursor: pointer;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .line {
+                        width: 13px;
+                        height: 2px;
+                        background-color: $color-DeepGray;
+                    }
                 }
             }
-
-            &-list-item {
+        }
+        &:nth-child(2){
+            p {
+                margin: 0px;
                 &:nth-child(1) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    img {
-                        width: 46px;
-                        height: 46px;
-                    }
-                    .option {
-                        display: flex;
-                        .more {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-Gray;
-                            border-radius: 50%;
-                            margin-right: 10px;
-                            cursor: pointer;
-
-                            justify-content: center;
-                            align-items: center;
-
-                            .dot {
-                                width: 3px;
-                                height: 3px;
-                                background-color: $color-DeepGray;
-                                position: relative;
-                                &::before {
-                                    position: absolute;
-                                    top: 0px;
-                                    left: -5px;
-                                    content: "";
-                                    width: 3px;
-                                    height: 3px;
-                                    background-color: $color-DeepGray;
-                                }
-                                &::after {
-                                    position: absolute;
-                                    top: 0px;
-                                    left: 5px;
-                                    content: "";
-                                    width: 3px;
-                                    height: 3px;
-                                    background-color: $color-DeepGray;
-                                }
-                            }
-                        }
-                        .close {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-Gray;
-                            border-radius: 50%;
-                            opacity: unset;
-                            cursor: pointer;
-
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            .line {
-                                width: 13px;
-                                height: 2px;
-                                background-color: $color-DeepGray;
-                            }
-                        }
-                    }
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
                 }
                 &:nth-child(2) {
-                    p {
-                        margin: 0px;
-                        &:nth-child(1) {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H10-font-size;
-                            color: $color-MiddleGray;
-                            margin-bottom: 18px;
-                        }
-                        &:nth-child(3) {
-                            font-size: $H10-font-size;
-                            font-weight: 500;
-                        }
-                    }
+                    font-size: $H10-font-size;
+                    color: $color-MiddleGray;
+                    margin-bottom: 18px;
                 }
                 &:nth-child(3) {
-                    .facebook-button {
-                        width: 318px;
-                        height: 52px;
-                        background-color: $color-Blue;
-                        border-radius: 10px;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-bottom: 10px;
-                        cursor: pointer;
-                        .facebook-icon {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-White;
-                            border-radius: 50%;
-                            text-align: center;
-                            line-height: 35px;
-                            margin-right: 10px;
-                            i {
-                                font-size: 22px;
-                                color: $color-Blue;
-                            }
-                        }
-                        p {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                            color: $color-White;
-                            margin: 0px;
-                        }
-                    }
-                    .line-button {
-                        width: 318px;
-                        height: 52px;
-                        background-color: $color-Green;
-                        border-radius: 10px;
-                        padding: 0px 31px;
-                        cursor: pointer;
-
-                        display: flex;
-                        align-items: center;
-                        .line-icon {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-White;
-                            border-radius: 50%;
-                            text-align: center;
-                            line-height: 28px;
-                            margin-right: 45px;
-                            span {
-                                font-size: 13px;
-                                color: $color-Green;
-                            }
-                        }
-                        p {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                            color: $color-White;
-                            margin: 0px;
-                        }
-                    }
+                    font-size: $H10-font-size;
+                    font-weight: 500;
                 }
             }
         }
-
-        @keyframes onePulse {
-            0% {
-                box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
-            }
-
-            50% {
-                box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
-            }
-
-            100% {
-                box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-            }
-        }
-
-        @keyframes fadeInItem {
-            100% {
-                transform: translatex(0px);
-                opacity: 1;
-            }
-        }
-        // 品牌理念
-        .we-story {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            padding: 100px 0px 0px 0px;
-            .story-content {
+        &:nth-child(3){
+            .facebook-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Blue;
+                border-radius: 10px;
+    
                 display: flex;
-                position: relative;
-
-                img {
-                    position: absolute;
-                    left: -8vw;
-                    width: 974px;
-                    height: 588px;
-
-                    z-index: 1;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+                .facebook-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-right: 10px;
+                    i {
+                        font-size: 22px;
+                        color: $color-Blue;
+                    }
                 }
-                svg {
-                    position: absolute;
-                    height: 800px;
-                    top: 305px;
-                    left: -2px;
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+            .line-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Green;
+                border-radius: 10px;
+                padding: 0px 31px;
+                cursor: pointer;
+    
+                display: flex;
+                align-items: center;
+                .line-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 28px;
+                    margin-right: 45px;
+                    span {
+                        font-size: 13px;
+                        color: $color-Green;
+                    }
+                }
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+    }
+    
+    @keyframes onePulse {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(150, 249, 183,0.3);
+    }
+    
+    50% {
+        box-shadow: 0px 0px 0px 12px rgba(150, 249, 183,0.1);
+    }
+    
+    100% {
+        box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    }
+    }
+    
+    @keyframes fadeInItem {
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+    }
+    // 品牌理念
+    .we-story {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        padding: 100px 0px 0px 0px;
+        transition: 1s;
+        @include tablet(){
+            padding: 0px;
+        }
+        @include sm-tablet(){
+            min-height: 768px;
+        }
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        .story-content{
+            display: flex;
+            position: relative;
+            transition: 1s;
+            @include tablet(){
+                justify-content: flex-end;
+            }
+            img {
+                position: absolute;
+                left: -8vw;
+                max-width: 54.8%;
+                z-index: 1;
+                transition: 1s;
+                @include tablet(){
+                    position: relative;
+                    max-width: none;
+                    width:100%;
+                    // min-height: 768px;
+                    min-height: 969px;
+                    left: 0px;
+                }
+                @include sm-tablet(){
+                    min-height:768px;
+                    width: 100%;
+                }
+                @include iphone-5s(){
+                    min-height: 568px;
+                    height: 568px;
+                }
+            }
+            svg {
+                position: absolute;
+                width: 52vw;
+                top: 305px;
+                left: -2px;
+                transform: rotate(-1deg);
+                transition: 1s;
+                @include notebook(){
+                    transform: rotate(9deg); 
+                }
+                @include tablet(){
                     transform: rotate(-1deg);
-                    .scissors,
-                    .scissors-mind {
-                        fill-opacity: 0;
-                        stroke: $color-Background-line;
-                        stroke-width: 2px;
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 4000;
+                    width: unset;
+                    height: 800px;
+                    top: 654px;
+                    left: 196px;
+                }
+                @include sm-tablet(){
+                    width: unset;
+                    height: 1000px;
+                    transform: rotate(24deg);
+                    top: 656px;
+                    left: -396px;
+                }
+                @include iphone-5s(){
+                    height: 800px;
+                    top: 547px;
+                    left: -356px;
+                }
+                .scissors,
+                .scissors-mind {
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                .scissors {
+                    animation: scissors 4s ease-in-out;
+                }
+                @keyframes scissors {
+                    0% {
+                        stroke-dashoffset: 4000;
                     }
-                    .scissors {
-                        animation: scissors 4s ease-in-out;
-                    }
-                    @keyframes scissors {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
 
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
-                    }
-                    .scissors-mind {
-                        animation: mind 4s ease-in-out;
-                    }
-                    @keyframes mind {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
-                        50% {
-                            stroke-dashoffset: 4000;
-                        }
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
+                    100% {
+                        stroke-dashoffset: 0;
                     }
                 }
-                .story-discript {
-                    margin-left: 900px;
-                    .subtitle {
-                        font-size: $H10-font-size;
-                        font-weight: normal;
-                        color: $color-Orange;
-                        position: relative;
-                        margin-bottom: 50px;
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            top: 20px;
-                            left: 0px;
-                            width: 80px;
-                            height: 1px;
-                            background-color: $color-Orange;
-                        }
+                .scissors-mind {
+                    animation: mind 4s ease-in-out;
+                }
+                @keyframes mind {
+                    0% {
+                        stroke-dashoffset: 4000;
                     }
-                    .title {
-                        font-size: $H3-font-size;
-                        font-weight: bold;
-                        letter-spacing: $font-letter-space-100;
-                        color: $color-WedgwoodBlue;
+                    50% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+            .story-discript {
+                margin-left: 46vw;
+                transition: 1s;
+                @include tablet(){
+                    width: 538px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.849);
+                    z-index: 1;
+                    padding: 50px 30px;
+                    margin-left: 0px;
+                    position: absolute;
+                }
+                @include bg-phone(){
+                    width: 100vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @include sm-phone(){
+                    padding: 50px 0px;
+                }
+                @include iphone-5s(){
+                    height: 568px;
+                }
+                .subtitle {
+                    font-size: $H10-font-size;
+                    font-weight:normal;
+                    color: $color-Orange;
+                    position: relative;
+                    margin-bottom: 50px;
+                    transition: 1s;
+                    font-family: $font-Family-C;
+                    @include notebook(){
+                        margin-bottom: 15px;
+                    }
+                    @include tablet(){
+                        margin-bottom: 50px;
+                    }
+                    @include iphone-5s(){
+                        margin-bottom: 15px;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 20px;
+                        left: 0px;
+                        width: 80px;
+                        height: 1px;
+                        background-color: $color-Orange;
+                    }
+                }
+                .title {
+                    margin-bottom: 45px;
+                    @include notebook(){
+                        margin-bottom: 15px;
+                    }
+                    @include tablet(){
                         margin-bottom: 45px;
-                        position: relative;
+                    }
+                    p{
+                    margin-bottom: 0px;
+                    font-size: $H3-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
+                    color: $color-WedgwoodBlue;
+                    transition: 1s;
+                    position: relative;
+                    @include sm-phone(){
+                        font-size: $H5-font-size;
+                    }
+                    &:nth-child(1){
                         &:before {
                             content: "";
                             width: 0px;
@@ -424,90 +586,233 @@ main {
                             position: absolute;
                             transform: rotate(33deg);
                             z-index: 0;
+                            transform-origin:40px -1px;
                             animation: short-line-grow 1s linear forwards;
+                            @keyframes short-line-grow{
+                                to {width:100px;}
+                            }
                             animation-delay: 0.5s;
-                        }
-                    }
-                    @keyframes short-line-grow {
-                        to {
-                            width: 100px;
-                        }
-                    }
-                    .content {
-                        font-size: $H7-font-size;
-                        color: $color-IronGray;
-                        font-weight: normal;
-                        letter-spacing: $font-letter-space-50;
-                        .preamble {
-                            margin-bottom: 30px;
-                            position: relative;
-                            &:after {
-                                content: "";
+                            @include tablet(){
+                                display: none;
+                            }
+                            @include iphone-5s(){
+                                display: block;
                                 width: 0px;
-                                height: 1px;
-                                top: 171px;
-                                left: 340px;
-                                background-color: $color-Background-line;
-                                position: absolute;
-                                transform: rotate(33deg);
-                                z-index: 0;
-                                animation: long-line-grow 1s linear forwards;
-                                animation-delay: 1.5s;
+                                top: -50px;
+                                left: -17px;
+                                transform: rotate(65deg);
+                                animation: short-line2-grow 1s linear forwards;
                             }
-                        }
-                        @keyframes long-line-grow {
-                            to {
-                                width: 300px;
+                            @keyframes short-line2-grow{
+                                to {width:88px;}
                             }
+                            
+                        } 
+                    }
+                    }
+                }
+                .content {
+                    font-size: $H7-font-size;
+                    color: $color-IronGray;
+                    font-weight: normal;
+                    letter-spacing: $font-letter-space-50;
+                    transition: 1s;
+                    @include bg-phone(){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include sm-phone(){
+                        font-size: $H10-font-size;
+                    }
+                    .preamble {
+                        margin-bottom: 30px;
+                        transition: 1s;
+                        @include notebook(){
+                            margin-bottom: 10px;
                         }
-                        .main-body {
+                        @include tablet(){
                             margin-bottom: 30px;
                         }
+                        @include bg-phone(){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        p{
+                            margin-bottom: 0px;
+                            position: relative;
+                            &:nth-child(1){
+                                &:after {
+                                    content: "";
+                                    width: 0px;
+                                    height: 1px;
+                                    top: 171px;
+                                    left: 340px;
+                                    background-color: $color-Background-line;
+                                    position: absolute;
+                                    transform: rotate(33deg);
+                                    z-index: 0;
+                                    transform-origin:102px -12px;
+                                    animation: long-line-grow 1s linear forwards;
+                                    animation-delay: 1.5s;
+                                    @keyframes long-line-grow{
+                                        to {width:300px;}
+                                    }
+                                    @include tablet(){
+                                        display: none;
+                                    }
+                                    @include iphone-5s(){
+                                        display: block;
+                                        width: 0px;
+                                        height: 1px;
+                                        top: 348px;
+                                        left: 81px;
+                                        transform: rotate(65deg);
+                                        animation: long-line2-grow 1s linear forwards;
+                                        animation-delay: 1.5s;
+                                        @keyframes long-line2-grow{
+                                            to {width:128px;}
+                                          }
+                                    }
+                                }
+                            }
+                           
+                        }
+                        
+                    }
+                    
+                    .main-body {
+                        margin-bottom: 30px;
+                        transition: 1s;
+                        @include notebook(){
+                            margin-bottom: 10px;
+                        }
+                        @include tablet(){
+                            margin-bottom: 30px;
+                        }
+                        @include bg-phone(){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        p{
+                           margin-bottom: 0px;
+                        }
+                      
                     }
                 }
             }
+        }    
+    }
+    // 製鞋 card
+    .shoemaking {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        transition: 1s;
+        @include sm-tablet(){
+            min-height: 768px;
         }
-        // 製鞋 card
-        .shoemaking {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            .shoes-card {
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        .container{
+            max-width: 1520px;
+            transition: 1s;
+            @include tablet(){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 80px;
+            }
+            @include iphone-5s(){
+                margin-top: 50px;
+            }
+            .shoemaking-card {
                 display: flex;
                 justify-content: space-around;
                 text-align: center;
                 margin-bottom: 70px;
+                transition: 1s;
+                @include tablet(){
+                    align-items: center;
+                }
+                @include sm-tablet(){
+                    width: 500px;
+                    flex-direction: column;
+                    margin: auto;
+                }
+                @include sm-phone(){
+                    align-items: flex-start;
+                    width: unset;
+                }
+                @include iphone-5s(){
+                    margin-bottom: 80px;
+                }
                 @mixin shoes-card-contain {
                     z-index: 2;
+                    transition: 1s;
+                    @include sm-tablet(){
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                    }
                     img {
                         width: 295px;
                         border-radius: 50%;
                         border: 5px solid $color-Border-Gary;
+                        background-color: $color-Shoes-Card;
+                        @include sm-tablet(){
+                            width: 184px;
+                           margin-right: 20px;
+                        }
+                        @include sm-phone(){
+                            width: 133px;
+                        }
                     }
                     .text {
                         margin-top: 30px;
-                        span {
+                        @include sm-tablet(){
+                            width: 207px;
+                        }
+                        @include sm-phone(){
+                            width: unset;
+                        }
+                        p {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-bottom: 0px;
                             &:nth-child(1) {
                                 font-size: $H5-font-size;
                                 font-weight: bold;
                                 letter-spacing: $font-letter-space-200;
                                 color: $color-IronGray;
+                                transition: 1s;
+                                @include sm-phone(){
+                                    font-size: $H9-font-size; 
+                                    letter-spacing: $font-letter-space-50; 
+                                }
                             }
                             &:nth-child(2) {
                                 font-size: $H10-font-size;
+                                font-family: $font-Family-C;
                                 font-weight: lighter;
                                 color: $color-IronGray;
+                                @include sm-phone(){
+                                    font-size: $H11-font-size; 
+                                }
                             }
                         }
                     }
                 }
-                .chose-shoes {
+                .shoes-card {
                     @include shoes-card-contain();
-                }
-                .shoes-introduction {
-                    @include shoes-card-contain();
-                }
-                .shoemaking-story {
-                    @include shoes-card-contain();
+                    @include tablet(){
+                        &:nth-child(3){
+                            margin-bottom: 60px;
+                        }
+                    }
                 }
             }
             .see-more-button {
@@ -515,6 +820,13 @@ main {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 234px;
+                transition: 1s;
+                @include tablet(){
+                    margin-bottom: 80px;
+                }
+                @include iphone-5s(){
+                    margin-bottom: 80px;
+                }
                 button {
                     width: 277px;
                     height: 79px;
@@ -532,216 +844,294 @@ main {
                     }
                 }
             }
-            //縫線的 svg
-            .sew-img {
-                position: relative;
-                #hand-line {
-                    height: 1597px;
-                    position: absolute;
-                    top: 325px;
-                    right: -20px;
-                    z-index: 2;
-                    .background-hand,
-                    .background-line {
-                        fill-opacity: 0;
-                        stroke: $color-Background-line;
-                        stroke-width: 3px;
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 4000;
-                    }
-                    .background-hand {
-                        animation: hand 4s ease-in-out;
-                    }
-                    @keyframes hand {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
-
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
-                    }
-                    .background-line {
-                        animation: line 4s ease-in-out;
-                    }
-                    @keyframes line {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
-                        50% {
-                            stroke-dashoffset: 4000;
-                        }
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
-                    }
+        }
+        //縫線的 svg
+        .sew-img {
+            position: relative;
+            img {
+                height: 1597px;
+                position: absolute;
+                top: 325px;
+                right: -20px;
+                z-index: 1;
+                transition: 1s;
+                @include tablet(){
+                    height: 2000px;
+                    top: 500px;
+                    right: -161px;
+                }
+                @include sm-tablet(){
+                    height: 1500px;
+                    top: 900px;
                 }
             }
         }
-        //影片
-        .shoes-video {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            position: relative;
+    }
+    //影片
+    .shoes-video {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        transition: 1s;
+        @include tablet(){
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            img {
-                &:nth-child(1) {
-                    max-width: 66.4%;
-                    position: absolute;
-                    top: -320px;
-                    left: -8vw;
-                    border-right: 18px solid $color-Apricot;
-                    z-index: 2;
-                }
-                &:nth-child(2) {
-                    height: 707px;
-                    border-left: 18px solid $color-Apricot;
-                    z-index: 3;
+            flex-direction: column;
+        }
+        @include sm-tablet(){
+            min-height: 768px;
+        }
+        @include sm-phone(){
+            min-height: 568px;
+        }
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        video{
+             &:nth-child(1) {
+                width: 66.4%;
+                position: absolute;
+                top: -320px;
+                left: -8vw;
+                border-right: 18px solid $color-Apricot;
+                z-index: 2;
+                transition: 1s;
+                @include tablet(){
+                    width: 100%;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    margin-bottom: 40px;
                 }
             }
-            #knife {
+            &:nth-child(2) {
+                width: 32.4%;
+                border-left: 18px solid $color-Apricot;
+                z-index: 3;
+                transition: 1s;
+                @include tablet(){
+                    width: 50%;
+                    left: 0px;
+                }
+                @include sm-tablet(){
+                    width: 40%;
+                }
+                @include bg-phone(){
+                    width: 100%;
+                }
+            }
+        }
+        img{
                 height: 820px;
                 position: absolute;
                 top: 125px;
-                left: -8vw;
+                right: 48vw;
                 transform: rotate(-7deg);
-                .knife-line {
-                    fill-opacity: 0;
-                    stroke: $color-Background-line;
-                    stroke-width: 3px;
-                    stroke-dashoffset: 0;
-                    stroke-dasharray: 4000;
+                transition: 1s;
+                @include notebook(){
+                    right: 55vw;
                 }
-                .knife-line {
-                    animation: knife 4s ease-in-out;
-                }
-                @keyframes knife {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
+                @include tablet(){
+                    height: 800px;
+                    top: unset;
+                    bottom: 260px;
+                    right: 55vw;
+                    transform: rotate(3deg);
             }
         }
-        //新品上市
-        .new-product {
-            background-color: $color-LightGray;
-            position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 1px;
-                height: 969px;
-                bottom: 0px;
-                left: 190px;
-                background-color: $color-Background-line;
+    }
+    //新品上市
+    .new-product {
+        background-color: $color-LightGray;
+        position: relative;
+        z-index: 5;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 969px;
+            bottom: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+            transition: 1s;
+            @include tablet(){
+                left: 64px;
             }
-            .product-title {
-                padding-left: 95px;
-                text-align: justify;
-                display: flex;
+            @include sm-tablet(){
+                height: 1020px;
+            }
+            @include single-cart(){
+                height: 1850px;
+            }
+            @include iphone-5s(){
+                height: 1832px;
+                left: 33px;
+            }
+        }
+        .product-title {
+            padding-left:95px;
+            transition: 1s;
+            @include tablet(){
+                padding-left: 45px;
+            }
+            @include sm-tablet(){
+                margin-bottom: 120px;
+            }
+            @include iphone-5s(){
+                padding-left: 15px;
+            }
+            text-align:justify;
+            display: flex;
+            .text{
+                width: 192px;
+                text-align: center;
+                transition: 1s;
+                z-index: 2;
+                @include tablet(){
+                    margin-top: 80px;
+                }
+                p{
+                    margin-bottom: 0px;
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        color: $color-IronGray;
+                    }
+                    &:nth-child(2) {
+                        font-size: $H5-font-size;
+                        font-weight: 300;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;                    
+                    }
+                }
+            }
+            
+        }
+        @mixin shoes-content {
+            width: 275px;
+            height: 306px;
+            background-color: $color-White-opacity;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            img {
+                position: absolute;
+                width: 215px;
+                top: -70px;
+                left: 27px;
+            }
+            .content {
                 .text {
-                    width: 192px;
-                    text-align: center;
-                    span {
+                    p {
+                        margin: 0px;
                         &:nth-child(1) {
-                            font-size: $H2-font-size;
-                            font-weight: bold;
+                            font-size: $H6-font-size;
+                            font-weight: lighter;
+                            letter-spacing: $font-letter-space-100;
                             color: $color-IronGray;
+                            margin-bottom: 10px;
                         }
                         &:nth-child(2) {
-                            font-size: $H5-font-size;
-                            font-weight: lighter;
+                            font-size: $H8-font-size;
+                            font-weight: normal;
+                            letter-spacing: $font-letter-space-100;
                             color: $color-IronGray;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .price {
+                    span {
+                        &:nth-child(1) {
+                            font-size: $H9-font-size;
+                            font-weight: lighter;
+                            color: $color-Original-Price;
+                            text-decoration: line-through;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H4-font-size;
+                            font-weight: bold;
+                            color: $color-Apricot;
                         }
                     }
                 }
             }
-            @mixin shoes-content {
-                width: 275px;
-                height: 306px;
-                background-color: $color-White-opacity;
-
-                position: relative;
+            button {
+                width: 235px;
+                height: 50px;
+                color: $color-IronGray;
+                background-color: unset;
+                border: 2px solid $color-MoreButton;
+                border-radius: 45px;
+                margin: 30px 0px 10px 0px;
+            }
+        }
+        .container{
+            min-height: 969px;
+            max-width: 1320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 1s;
+            @include tablet(){
+                max-width: 800px;
+            }
+             @include sm-tablet(){
+                min-height: 768px;
+            }
+            @include single-cart(){
+                max-width: 500px;
+            }
+            .product-item {
+                width: 100%;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                text-align: center;
-                z-index: 2;
-                img {
-                    position: absolute;
-                    width: 215px;
-                    top: 0;
-                    left: 27px;
-                    transform: translateY(-60%);
+                justify-content: space-between;
+                margin-bottom: 80px;
+                transition: 1s;
+                @include tablet(){
+                    flex-wrap: wrap; 
+                    justify-content: space-around;
+                    margin-bottom: 40px; 
                 }
-                .content {
-                    .text {
-                        p {
-                            margin: 0px;
-                            &:nth-child(1) {
-                                font-size: $H6-font-size;
-                                font-weight: lighter;
-                                letter-spacing: $font-letter-space-100;
-                                color: $color-IronGray;
-                                margin-bottom: 10px;
-                            }
-                            &:nth-child(2) {
-                                font-size: $H8-font-size;
-                                font-weight: normal;
-                                letter-spacing: $font-letter-space-100;
-                                color: $color-IronGray;
-                                margin-bottom: 30px;
-                            }
+                .product-card {
+                    @include shoes-content();
+                    &:nth-child(2){
+                        img{
+                            top: -100px;
                         }
                     }
-                    .price {
-                        span {
-                            &:nth-child(1) {
-                                font-size: $H9-font-size;
-                                font-weight: lighter;
-                                color: $color-Original-Price;
-                                text-decoration: line-through;
-                            }
-                            &:nth-child(2) {
-                                font-size: $H4-font-size;
-                                font-weight: bold;
-                                color: $color-Apricot;
-                            }
+                    &:nth-child(3){
+                        img {
+                            top: -50px;
                         }
                     }
-                }
-                a {
-                    width: 235px;
-                    height: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: $color-IronGray;
-                    background-color: unset;
-                    border: 2px solid $color-MoreButton;
-                    border-radius: 45px;
-                    margin: 30px 0px 10px 0px;
+                    @include tablet(){
+                        &:nth-child(3){
+                            margin-top: 100px;
+                        }
+                        &:nth-child(4){
+                            margin-top: 100px;   
+                        }
+                    }
+                    @include single-cart(){
+                        &:nth-child(2){
+                            margin-top: 125px;   
+                        }
+                    }
                 }
             }
-            .container {
-                min-height: 969px;
+            .see-more-button {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-
-                .product-item {
-                    width: 80%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                transition: 1s;
+                @include tablet(){
                     margin-bottom: 80px;
                     .product-card {
                         @include shoes-content();
@@ -781,215 +1171,284 @@ main {
                         }
                     }
                 }
+                
             }
-            .parallelogram {
-                position: absolute;
-                top: 0px;
+           
+        }
+        .parallelogram {
+            position: absolute;
+            top: 0px;
+            right: 323px;
+            width: 465px;
+            height: 900px;
+            background-color: $color-Parallelogram;
+            transform: skewX(-30deg);
+            transition: 1s;
+            @include tablet(){
+                top: 100px;
                 right: 323px;
-                width: 465px;
-                height: 900px;
-                background-color: $color-Parallelogram;
-                transform: skewX(-30deg);
+                width: 300px;
+                height: 860px;
+            }
+            @include single-cart(){
+                right: 280px;
+            }
+            @include sm-phone(){
+                display: none;
+            }
+            @include iphone-5s(){
+                display: none;
+            }
+        }  
+    }
+    // 照片牆
+    .photo-wall {
+        background-color: $color-LightGray;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 1078px;
+            top: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+            transition: 1s;
+            @include tablet(){
+                left: 64px;
+            }
+            @include iphone-5s(){
+                top: 0px;
+                left: 33px;
             }
         }
-        // 照片牆
-        .photo-wall {
-            background-color: $color-LightGray;
-            position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 1px;
-                height: 1078px;
-                top: 0px;
-                left: 190px;
-                background-color: $color-Background-line;
-            }
-            .photo-title {
+        .photo-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .text{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                // justify-content: flex-start;
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    span {
-                        &:nth-child(1) {
-                            font-size: $H2-font-size;
-                            font-weight: bold;
-                            color: $color-IronGray;
-                            margin-bottom: 10px;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H7-font-size;
-                            font-weight: normal;
-                            color: $color-IronGray;
+                p{
+                    margin-bottom: 0px;
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;
+                        @include iphone-5s(){
+                            font-size: $H4-font-size;
                         }
                     }
-                }
-            }
-            .swiper2 {
-                min-height: 969px;
-                padding-top: 50px;
-                padding: 50px 100px 0px 100px;
-                .swiper-container {
-                    width: 100%;
-                    height: 600px;
-
-                    .swiper-slide {
-                        text-align: center;
-                        font-size: 18px;
-                        background: $color-WedgwoodBlue;
-
-                        /* Center slide text vertically */
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-box-pack: center;
-                        -ms-flex-pack: center;
-                        -webkit-justify-content: center;
-                        justify-content: center;
-                        -webkit-box-align: center;
-                        -ms-flex-align: center;
-                        -webkit-align-items: center;
-                        align-items: center;
-                        img {
-                            background-repeat: no-repeat;
-                            background-size: contain;
+                    &:nth-child(2) {
+                        font-size: $H7-font-size;
+                        font-weight: normal;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;
+                        transition: 1s;
+                        @include sm-tablet(){
+                            font-size: $H9-font-size; 
                         }
-                    }
-                    .swiper-pagination-bullet {
-                        background-color: $color-White-opacity;
-                    }
-                    .swiper-pagination-bullet-active {
-                        background-color: $color-White;
-                    }
-                }
-                .swiper-button-next {
-                    top: 40%;
-                    right: 40px;
-                    color: $color-Apricot;
-                    &:hover {
-                        color: $color-Photo-nextBtn-hover;
-                    }
-                }
-                .swiper-button-prev {
-                    top: 40%;
-                    left: 40px;
-                    color: $color-Apricot;
-                    &:hover {
-                        color: $color-Photo-nextBtn-hover;
-                    }
-                }
-                .plus-button {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 50px;
-                    .plus {
-                        width: 66px;
-                        height: 66px;
-                        background-color: $color-Plus;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        &:before {
-                            content: "";
-                            width: 50px;
-                            height: 2px;
-                            background-color: $color-White;
-                            position: absolute;
-                            top: 32px;
-                            left: 8px;
+                        @include bg-phone(){
+                            width: 500px;
+                            font-size: $H10-font-size;
+                            text-align: center;
                         }
-                        &:after {
-                            content: "";
-                            width: 2px;
-                            height: 50px;
-                            background-color: $color-White;
-                            position: absolute;
-                            top: 8px;
-                            left: 32px;
+                        @include sm-phone(){
+                            width: 300px;
+                            font-size: $H11-font-size;
+                            text-align: center;
+                        }
+                        @include iphone-5s(){
+                            width: 250px;
+                            font-size: $H11-font-size;
+                            text-align: center;
                         }
                     }
                 }
             }
         }
-        // 試穿資訊
-        .studio-information {
-            font-family: $font-Family-A;
-
-            .studio-photo {
-                & img {
-                    width: 559px;
-                    height: 838px;
-                    border-left: 18px solid $color-Apricot;
-                }
+        .swiper2 {
+            min-height: 969px;
+            padding-top: 50px;
+            height: 10px;
+            transition: 1s;
+            @include sm-tablet(){
+            min-height: 768px;
             }
-
-            .try-on-infor {
-                position: relative;
-
-                .try-on {
-                    font-size: $H1-font-size;
-                    letter-spacing: $font-letter-space-100;
-                    height: 72px;
-                    margin-bottom: 12px;
+            .swiper-container {
+                width: 72%;
+                height: 80%;
+                transition: 1s;
+                @include tablet(){
+                    width: 60%;
                 }
+                .swiper-slide {
+                    width: 400px;
+                    text-align: center;
+                    font-size: 18px;
+                    background: $color-WedgwoodBlue;
+                    background-size: cover;
+                    background-position: center;
 
-                .detail {
-                    font-size: $H6-font-size;
-                    font-family: "Source Code Pro", monospace;
-                    letter-spacing: $font-letter-space-100;
-                    position: absolute;
-                    top: 65px;
-                    left: 25px;
-                }
-
-                .infor {
-                    font-size: $H1-font-size;
-                    letter-spacing: $font-letter-space-100;
-                }
-            }
-
-            .contact-head {
-                ul {
-                    font-size: $H5-font-size;
-                    font-weight: bold;
-                    letter-spacing: $font-letter-space-100;
-                    border-left: 1px solid $color-Apricot;
-                }
-            }
-
-            .contact-text {
-                ul {
-                    font-size: $H7-font-size;
-
-                    .phone {
-                        padding-top: 3px;
-                    }
-
-                    .business-time {
-                        padding-top: 11px;
-                    }
-
-                    .address {
-                        padding-top: 7px;
-                    }
-
-                    .note {
-                        padding-top: 6px;
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
                     }
                 }
+                .swiper-pagination-bullet {
+                    background-color: $color-White-opacity;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: $color-White;
+                }
             }
+            .swiper-button-next {
+                top: 50%;
+                right: 40px;
+                color: $color-Apricot;
+                transition: 1s;
+                @include tablet(){
+                    right: 75px;
+                }
+                &:hover {
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+            .swiper-button-prev {
+                top: 50%;
+                left: 40px;
+                color: $color-Apricot;
+                transition: 1s;
+                @include tablet(){
+                    left: 75px;
+                }
+                &:hover {
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+            .plus-button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                .plus {
+                    width: 66px;
+                    height: 66px;
+                    background-color: $color-Plus;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        width: 50px;
+                        height: 2px;
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 32px;
+                        left: 8px;
+                    }
+                    &:after {
+                        content: "";
+                        width: 2px;
+                        height: 50px;
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 8px;
+                        left: 32px;
+                    }
+                }
+            }
+        }
+        
+    }
+    // 試穿資訊
+    .studio-information {
+        font-family: $font-Family-A;
 
-            .shop-map {
+        .studio-photo {
+            & img {
+                width: 559px;
+                height: 838px;
                 border-left: 18px solid $color-Apricot;
             }
         }
+
+        .try-on-infor {
+            position: relative;
+
+            .try-on {
+                font-size: $H1-font-size;
+                height: 72px;
+                margin-bottom: 12px;
+            }
+
+            .detail {
+                font-size: $H6-font-size;
+                letter-spacing: $font-letter-space-100;
+                position: absolute;
+                top: 65px;
+                left: 36px;
+            }
+
+            .infor {
+                font-size: $H1-font-size;
+            }
+        }
+
+        .contact-head {
+            ul {
+                font-size: $H5-font-size;
+                font-weight: bold;
+                letter-spacing: $font-letter-space-100;
+                border-left: 1px solid $color-Apricot;
+            }
+        }
+
+        .contact-text {
+            ul {
+                font-size: $H7-font-size;
+
+                .phone {
+                    padding-top: 3px;
+                }
+
+                .business-time {
+                    padding-top: 11px;
+                }
+
+                .address {
+                    padding-top: 7px;
+                }
+
+                .note {
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        .shop-map {
+            border-left: 18px solid $color-Apricot;
+        }
     }
+    }
+    
 }

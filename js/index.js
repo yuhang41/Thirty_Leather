@@ -22,9 +22,9 @@ var myswiper1 = new Swiper('.myswiper1', {
 
 // Initialize Swiper 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 30,
-    slidesPerGroup: 3,
+    // slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -35,4 +35,21 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      // when window width is >= 1350px
+      1351:{
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+      1352:{
+        slidesPerView: 'auto',
+      },
+      1350:{
+        slidesPerView: 'auto',
+      },
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },      
+    }
   });
