@@ -1,5 +1,7 @@
 @import "_style_guild.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+
 * {
     list-style: none;
     margin: 0px;
@@ -143,18 +145,20 @@
                         outline: none;
                     }
 
-                    .member-btn button {
-                        height: 41px;
-                        border: 1px solid $color-MoreButton;
-                        font-size: 19.5px;
-                        letter-spacing: $font-letter-space-200;
-                        color: $color-IronGray;
-                        line-height: 10px;
-                    }
+                    .member-btn {
+                        button {
+                            height: 41px;
+                            border: 1px solid $color-MoreButton;
+                            font-size: 19.5px;
+                            letter-spacing: $font-letter-space-200;
+                            color: $color-IronGray;
+                            line-height: 10px;
 
-                    .member-btn button:hover {
-                        background-color: $color-MoreButton-hover;
-                        color: $color-White;
+                            &:hover {
+                                background-color: $color-MoreButton-hover;
+                                color: $color-White;
+                            }
+                        }
                     }
                 }
             }
@@ -187,13 +191,15 @@
                     }
                 }
 
-                .table-icon button {
-                    background-color: $color-White;
-                    color: $color-MoreButton;
-                    border: none;
-    
-                    &:hover {
-                        color: $color-Apricot;
+                .table-icon {
+                    button {
+                        background-color: $color-White;
+                        color: $color-MoreButton;
+                        border: none;
+
+                        &:hover {
+                            color: $color-Apricot;
+                        }
                     }
                 }
             }
