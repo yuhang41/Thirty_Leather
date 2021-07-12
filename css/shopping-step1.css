@@ -546,6 +546,16 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content {
   padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
@@ -574,7 +584,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
   background: #f7a269;
   color: #ffffff;
-  border: none;
+  border: 1px solid #f7a269;
 }
 
 main .main-container .my-container .other-amount .amount {

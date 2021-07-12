@@ -1054,7 +1054,18 @@ main .main-container .new-product .container .see-more-button {
           justify-content: center;
 }
 
-main .main-container .new-product .container .see-more-button button {
+main .main-container .new-product .container .see-more-button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
   width: 277px;
   height: 79px;
   font-size: 24px;
@@ -1065,7 +1076,7 @@ main .main-container .new-product .container .see-more-button button {
   z-index: 2;
 }
 
-main .main-container .new-product .container .see-more-button button:hover {
+main .main-container .new-product .container .see-more-button a:hover {
   border: 2px solid #abbac9;
   color: #ffffff;
   font-weight: bold;

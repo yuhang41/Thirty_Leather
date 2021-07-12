@@ -363,6 +363,10 @@ main .main-container .product-container .productshop-container .commidity-contai
   z-index: -999;
 }
 
+main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style input[class="color-checkbox"]:checked + label {
+  background-color: var(--color);
+}
+
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button {
   width: 36px;
   height: 36px;
@@ -410,6 +414,10 @@ main .main-container .product-container .productshop-container .commidity-contai
   position: absolute;
   right: 0;
   z-index: -999;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .small-size input[class="size-checkbox"]:checked + label {
+  background-color: var(--sizeColor);
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-size .size-deatil .small-size label {

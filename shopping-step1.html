@@ -170,16 +170,16 @@
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
-                                        <p>$2480</p>
-                                        <p>$4280</p>
+                                        <p>$<span class="discount-price" data-discount=2480>2480</span></p>
+                                        <p>$<span class="original-price" data-original=4280>4280</span></p>
                                     </div>
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$2480</p></li>
+                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal=2480>2480</span></p></li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
@@ -209,16 +209,16 @@
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
-                                        <p>$2480</p>
-                                        <p>$4280</p>
+                                        <p>$<span class="discount-price" data-discount="2480">2480</span></p>
+                                        <p>$<span class="original-price" data-original="4280">4280</span></p>
                                     </div>
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$2480</p></li>
+                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p></li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
@@ -248,16 +248,16 @@
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
-                                        <p>$2480</p>
-                                        <p>$4280</p>
+                                        <p>$<span class="discount-price" data-discount="2480">2480</span></p>
+                                        <p>$<span class="original-price" data-original="4280">4280</span></p>
                                     </div>
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$2480</p></li>
+                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p></li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
@@ -366,7 +366,7 @@
                     <div class="amount">
                         <div class="free-ship">
                             <p>免運費</p>
-                            只差$xxx可享滿$1000免運
+                            只差$<span class="difference">xxx</span>可享滿$1000免運
                         </div>
                         <div class="total">                        
                             <div class="price-total">
@@ -451,5 +451,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
+        <script src='js/shopping-step1.js'></script>
 </body>
 </html>

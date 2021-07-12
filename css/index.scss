@@ -759,7 +759,12 @@ main {
                 .see-more-button {
                     display: flex;
                     justify-content: center;
-                    button {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        cursor: pointer;
                         width: 277px;
                         height: 79px;
                         font-size: $H5-font-size;
