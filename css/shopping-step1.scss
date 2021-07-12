@@ -493,9 +493,11 @@ main{
                             }                
                         }
                         .next-button{
+                            cursor: pointer;
                             width: 100%;                        
                             border: none;
-                            outline: none;                        
+                            outline: none; 
+                            text-decoration: none;                       
                             border-radius: 10px;
                             display: flex;
                             justify-content: center;                            

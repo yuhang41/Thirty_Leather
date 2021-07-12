@@ -671,9 +671,11 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
 }
 
 main .main-container .my-container .other-amount .amount .order-total-button .next-button {
+  cursor: pointer;
   width: 100%;
   border: none;
   outline: none;
+  text-decoration: none;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;

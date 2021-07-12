@@ -53,3 +53,15 @@ var swiper = new Swiper(".mySwiper", {
       },      
     }
   });
+let photo_Button = document.querySelector('.photo-button');
+let closes = document.querySelector('.studio-photo-close');
+let studio_Photo = document.querySelector('.studio-photo');
+closes.addEventListener('click',function(){  
+  studio_Photo.classList.remove('active');
+  
+},false);
+photo_Button.addEventListener('click',function(){
+  studio_Photo.classList.add('active');
+});
+
+
