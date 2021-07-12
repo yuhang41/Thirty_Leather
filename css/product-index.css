@@ -10,26 +10,26 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
+main .main-container {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .commodity-menu {
+main .main-container .commodity-menu {
   max-width: 375px;
   width: 100%;
   padding-top: 100px;
 }
 
-main .commodity-menu .all-commodity {
+main .main-container .commodity-menu .all-commodity {
   max-width: 200px;
   margin: auto;
   width: 100%;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-title {
+main .main-container .commodity-menu .all-commodity .commodity-menu-title {
   cursor: pointer;
   padding-left: 10px;
   margin-bottom: 10px;
@@ -37,52 +37,52 @@ main .commodity-menu .all-commodity .commodity-menu-title {
   letter-spacing: 1.6px;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-title.AllCommodity::after {
+main .main-container .commodity-menu .all-commodity .commodity-menu-title.AllCommodity::after {
   content: '\f077';
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-title.AllCommodity.active::after {
+main .main-container .commodity-menu .all-commodity .commodity-menu-title.AllCommodity.active::after {
   content: '\f078';
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-title.Snowshoe::after {
+main .main-container .commodity-menu .all-commodity .commodity-menu-title.Snowshoe::after {
   content: '\f078';
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-title.Snowshoe.active::after {
+main .main-container .commodity-menu .all-commodity .commodity-menu-title.Snowshoe.active::after {
   content: '\f077';
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-options {
+main .main-container .commodity-menu .all-commodity .commodity-menu-options {
   width: 70%;
   margin-left: auto;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-options li {
+main .main-container .commodity-menu .all-commodity .commodity-menu-options li {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-main .commodity-menu .all-commodity .commodity-menu-options li a {
+main .main-container .commodity-menu .all-commodity .commodity-menu-options li a {
   color: #65737f;
 }
 
-main .commodity-menu .all-commodity .commodity-other {
+main .main-container .commodity-menu .all-commodity .commodity-other {
   cursor: pointer;
   padding-left: 10px;
   font-size: 21px;
   letter-spacing: 1.6px;
 }
 
-main .product-container {
+main .main-container .product-container {
   max-width: calc(100% - 375px);
   width: 100%;
   background: #ebeae5;
@@ -91,7 +91,7 @@ main .product-container {
   padding-left: 2.6vw;
 }
 
-main .product-container .product-container-title {
+main .main-container .product-container .product-container-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,25 +103,25 @@ main .product-container .product-container-title {
           align-items: center;
 }
 
-main .product-container .product-container-title .product-container-lable a {
+main .main-container .product-container .product-container-title .product-container-lable a {
   font-size: 14px;
   color: #444444;
 }
 
-main .product-container .product-container-title .product-container-sort {
+main .main-container .product-container .product-container-title .product-container-sort {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .product-container .product-container-title .product-container-sort p {
+main .main-container .product-container .product-container-title .product-container-sort p {
   margin: 0;
   margin: 0 20px;
   font-size: 14px;
   color: #444444;
 }
 
-main .product-container .product-container-card {
+main .main-container .product-container .product-container-card {
   width: 100%;
   padding-left: 5.5vw;
   padding-top: 100px;
@@ -138,7 +138,7 @@ main .product-container .product-container-card {
           align-items: center;
 }
 
-main .product-container .product-container-card .product-first {
+main .main-container .product-container .product-container-card .product-card {
   width: 275px;
   height: 275px;
   background-color: #ffffffcc;
@@ -161,20 +161,22 @@ main .product-container .product-container-card .product-first {
   z-index: 2;
 }
 
-main .product-container .product-container-card .product-first img {
+main .main-container .product-container .product-container-card .product-card img {
   position: absolute;
   width: 215px;
-  top: 0;
-  left: 27px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
+  bottom: 90%;
+  left: 50%;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
-main .product-container .product-container-card .product-first .content .text p {
+main .main-container .product-container .product-container-card .product-card .content .text p {
   margin: 0px;
 }
 
-main .product-container .product-container-card .product-first .content .text p:nth-child(1) {
+main .main-container .product-container .product-container-card .product-card .content .text p:nth-child(1) {
   font-size: 21px;
   font-weight: lighter;
   letter-spacing: 1.6px;
@@ -182,7 +184,7 @@ main .product-container .product-container-card .product-first .content .text p:
   margin-bottom: 10px;
 }
 
-main .product-container .product-container-card .product-first .content .text p:nth-child(2) {
+main .main-container .product-container .product-container-card .product-card .content .text p:nth-child(2) {
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 1.6px;
@@ -190,20 +192,20 @@ main .product-container .product-container-card .product-first .content .text p:
   margin-bottom: 30px;
 }
 
-main .product-container .product-container-card .product-first .content .price span:nth-child(1) {
+main .main-container .product-container .product-container-card .product-card .content .price span:nth-child(1) {
   font-size: 15px;
   font-weight: lighter;
   color: #666666;
   text-decoration: line-through;
 }
 
-main .product-container .product-container-card .product-first .content .price span:nth-child(2) {
+main .main-container .product-container .product-container-card .product-card .content .price span:nth-child(2) {
   font-size: 30px;
   font-weight: bold;
   color: #f7a269;
 }
 
-main .product-container .product-container-card .product-first button {
+main .main-container .product-container .product-container-card .product-card a {
   width: 235px;
   height: 50px;
   color: #444444;
@@ -211,246 +213,18 @@ main .product-container .product-container-card .product-first button {
   border: 2px solid #a0a0a0;
   border-radius: 45px;
   margin: 30px 0px 10px 0px;
-}
-
-main .product-container .product-container-card .product-first:nth-child(n+3) img {
-  width: 192px;
-  top: -12px;
-  left: 37px;
-}
-
-main .product-container .product-container-card .product-second {
-  width: 275px;
-  height: 275px;
-  background-color: #ffffffcc;
-  margin-bottom: 150px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  z-index: 2;
 }
 
-main .product-container .product-container-card .product-second img {
-  position: absolute;
-  width: 215px;
-  top: 0;
-  left: 27px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-}
-
-main .product-container .product-container-card .product-second .content .text p {
-  margin: 0px;
-}
-
-main .product-container .product-container-card .product-second .content .text p:nth-child(1) {
-  font-size: 21px;
-  font-weight: lighter;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 10px;
-}
-
-main .product-container .product-container-card .product-second .content .text p:nth-child(2) {
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 30px;
-}
-
-main .product-container .product-container-card .product-second .content .price span:nth-child(1) {
-  font-size: 15px;
-  font-weight: lighter;
-  color: #666666;
-  text-decoration: line-through;
-}
-
-main .product-container .product-container-card .product-second .content .price span:nth-child(2) {
-  font-size: 30px;
-  font-weight: bold;
-  color: #f7a269;
-}
-
-main .product-container .product-container-card .product-second button {
-  width: 235px;
-  height: 50px;
-  color: #444444;
-  background-color: unset;
-  border: 2px solid #a0a0a0;
-  border-radius: 45px;
-  margin: 30px 0px 10px 0px;
-}
-
-main .product-container .product-container-card .product-second:nth-child(n+1) img {
-  width: 192px;
-  top: -15px;
-  left: 37px;
-}
-
-main .product-container .product-container-card .product-third {
-  width: 275px;
-  height: 275px;
-  background-color: #ffffffcc;
-  margin-bottom: 150px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  z-index: 2;
-}
-
-main .product-container .product-container-card .product-third img {
-  position: absolute;
-  width: 215px;
-  top: 0;
-  left: 27px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-}
-
-main .product-container .product-container-card .product-third .content .text p {
-  margin: 0px;
-}
-
-main .product-container .product-container-card .product-third .content .text p:nth-child(1) {
-  font-size: 21px;
-  font-weight: lighter;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 10px;
-}
-
-main .product-container .product-container-card .product-third .content .text p:nth-child(2) {
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 30px;
-}
-
-main .product-container .product-container-card .product-third .content .price span:nth-child(1) {
-  font-size: 15px;
-  font-weight: lighter;
-  color: #666666;
-  text-decoration: line-through;
-}
-
-main .product-container .product-container-card .product-third .content .price span:nth-child(2) {
-  font-size: 30px;
-  font-weight: bold;
-  color: #f7a269;
-}
-
-main .product-container .product-container-card .product-third button {
-  width: 235px;
-  height: 50px;
-  color: #444444;
-  background-color: unset;
-  border: 2px solid #a0a0a0;
-  border-radius: 45px;
-  margin: 30px 0px 10px 0px;
-}
-
-main .product-container .product-container-card .product-fourth {
-  width: 275px;
-  height: 275px;
-  background-color: #ffffffcc;
-  margin-bottom: 150px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  z-index: 2;
-}
-
-main .product-container .product-container-card .product-fourth img {
-  position: absolute;
-  width: 215px;
-  top: 0;
-  left: 27px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-}
-
-main .product-container .product-container-card .product-fourth .content .text p {
-  margin: 0px;
-}
-
-main .product-container .product-container-card .product-fourth .content .text p:nth-child(1) {
-  font-size: 21px;
-  font-weight: lighter;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 10px;
-}
-
-main .product-container .product-container-card .product-fourth .content .text p:nth-child(2) {
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 1.6px;
-  color: #444444;
-  margin-bottom: 30px;
-}
-
-main .product-container .product-container-card .product-fourth .content .price span:nth-child(1) {
-  font-size: 15px;
-  font-weight: lighter;
-  color: #666666;
-  text-decoration: line-through;
-}
-
-main .product-container .product-container-card .product-fourth .content .price span:nth-child(2) {
-  font-size: 30px;
-  font-weight: bold;
-  color: #f7a269;
-}
-
-main .product-container .product-container-card .product-fourth button {
-  width: 235px;
-  height: 50px;
-  color: #444444;
-  background-color: unset;
-  border: 2px solid #a0a0a0;
-  border-radius: 45px;
-  margin: 30px 0px 10px 0px;
-}
-
-main .product-container .pagination {
+main .main-container .product-container .pagination {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,14 +237,14 @@ main .product-container .pagination {
           align-items: center;
 }
 
-main .product-container .pagination ul {
+main .main-container .product-container .pagination ul {
   max-width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .product-container .pagination ul li {
+main .main-container .product-container .pagination ul li {
   margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,11 +254,11 @@ main .product-container .pagination ul li {
           align-items: center;
 }
 
-main .product-container .pagination ul li a {
+main .main-container .product-container .pagination ul li a {
   color: #6d6d6d;
 }
 
-main .product-container .pagination ul li .page-number {
+main .main-container .product-container .pagination ul li .page-number {
   font-size: 21px;
 }
 /*# sourceMappingURL=product-index.css.map */

@@ -20,9 +20,10 @@
     img {
         position: absolute;
         width: 215px;
-        top: 0;
-        left: 27px;
-        transform: translateY(-60%);
+        bottom: 90%;
+        left: 50%;
+        object-position: center;
+        transform: translate(-50%,0);
     }
     .content {
         .text {
@@ -60,7 +61,7 @@
             }
         }
     }
-    button {
+    a{
         width: 235px;
         height: 50px;
         color: $color-IronGray;
@@ -68,151 +69,143 @@
         border: 2px solid $color-MoreButton;
         border-radius: 45px;
         margin: 30px 0px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 main{
-    min-height: 100vh;
-    display: flex;
-    // 左邊白色區塊的欄位
-    .commodity-menu{
-        max-width: 375px;
-        width: 100%;
-        padding-top: 100px;
-        .all-commodity{
-            max-width: 200px;
-            margin: auto;
+    .main-container{
+        min-height: 100vh;
+        display: flex;
+        // 左邊白色區塊的欄位
+        .commodity-menu{
+            max-width: 375px;
             width: 100%;
-            .commodity-menu-title{
-                cursor: pointer;
-                padding-left: 10px;
-                margin-bottom: 10px;
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;
-                &.AllCommodity::after{
-                    content:'\f077';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.AllCommodity.active::after{
-                    content:'\f078';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.Snowshoe::after{
-                    content:'\f078';                    
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-                &.Snowshoe.active::after{
-                    content:'\f077';
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 600;
-                }
-            }
-            .commodity-menu-options{
-                width: 70%;   
-                margin-left: auto;         
-                li{
-                    font-size: $H10-font-size;
-                    margin-bottom: 10px;
-                    a{
-                        color: $color-Nav-icon;
-                    }                    
-                }
-
-            }
-            .commodity-other{
-                cursor: pointer;
-                padding-left: 10px;
-                font-size: $H6-font-size;
-                letter-spacing: $font-letter-space-100;                
-            }
-        }
-    }
-    // 所有產品
-    .product-container{        
-        max-width: calc(100% - 375px);
-        width: 100%;
-        background: $color-LightGray;
-        padding-top: 85px;
-        padding-right: 11.5vw;
-        padding-left: 2.6vw;
-        .product-container-title{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .product-container-lable{
-                a{
-                    font-size: $H10-font-size;
-                    color: $color-IronGray;
-                }                
-            }
-            .product-container-sort{
-                display: flex;
-                p{                    
-                    margin: 0;
-                    margin: 0 20px;
-                    font-size: $H10-font-size;
-                    color: $color-IronGray;
-                }
-            }
-        }
-        .product-container-card{
-            width: 100%;
-            padding-left: 5.5vw;
-            padding-top: 100px;            
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;  
-            .product-first {
-                @include shoes-content();
-                &:nth-child(n+3){
-                    img{
-                       width: 192px;
-                       top: -12px;
-                       left: 37px; 
-                    }
-                } 
-            }
-            .product-second {
-                @include shoes-content();
-                &:nth-child(n+1){
-                    img{
-                       width: 192px;
-                       top: -15px;
-                       left: 37px; 
-                    }
-                }                     
-            }
-            .product-third {
-                @include shoes-content();              
-            }
-            .product-fourth {
-                @include shoes-content();
-            }        
-        }
-        .pagination{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            ul{
+            padding-top: 100px;
+            .all-commodity{
                 max-width: 200px;
-                display: flex;
-                li{
-                    margin: 0 10px;
-                    display: flex;
-                    align-items: center;
-                    a{                    
-                        color: $color-MiddleGray;
+                margin: auto;
+                width: 100%;
+                .commodity-menu-title{
+                    cursor: pointer;
+                    padding-left: 10px;
+                    margin-bottom: 10px;
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;
+                    &.AllCommodity::after{
+                        content:'\f077';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
                     }
-                    .page-number{
-                        font-size: $H6-font-size;
-                    }                         
+                    &.AllCommodity.active::after{
+                        content:'\f078';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                    &.Snowshoe::after{
+                        content:'\f078';                    
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                    &.Snowshoe.active::after{
+                        content:'\f077';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                    }
+                }
+                .commodity-menu-options{
+                    width: 70%;   
+                    margin-left: auto;         
+                    li{
+                        font-size: $H10-font-size;
+                        margin-bottom: 10px;
+                        a{
+                            color: $color-Nav-icon;
+                        }                    
+                    }
+    
+                }
+                .commodity-other{
+                    cursor: pointer;
+                    padding-left: 10px;
+                    font-size: $H6-font-size;
+                    letter-spacing: $font-letter-space-100;                
                 }
             }
         }
+        // 所有產品
+        .product-container{        
+            max-width: calc(100% - 375px);
+            width: 100%;
+            background: $color-LightGray;
+            padding-top: 85px;
+            padding-right: 11.5vw;
+            padding-left: 2.6vw;
+            .product-container-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .product-container-lable{
+                    a{
+                        font-size: $H10-font-size;
+                        color: $color-IronGray;
+                    }                
+                }
+                .product-container-sort{
+                    display: flex;
+                    p{                    
+                        margin: 0;
+                        margin: 0 20px;
+                        font-size: $H10-font-size;
+                        color: $color-IronGray;
+                    }
+                }
+            }
+            .product-container-card{
+                width: 100%;
+                padding-left: 5.5vw;
+                padding-top: 100px;            
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;  
+                .product-card {
+                    @include shoes-content();                    
+                }
+                // .product-second {
+                //     @include shoes-content();
+                //                         
+                // }
+                // .product-third {
+                //     @include shoes-content();              
+                // }
+                // .product-fourth {
+                //     @include shoes-content();
+                // }        
+            }
+            .pagination{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ul{
+                    max-width: 200px;
+                    display: flex;
+                    li{
+                        margin: 0 10px;
+                        display: flex;
+                        align-items: center;
+                        a{                    
+                            color: $color-MiddleGray;
+                        }
+                        .page-number{
+                            font-size: $H6-font-size;
+                        }                         
+                    }
+                }
+            }
+        }
+        
     }
-    
 }
