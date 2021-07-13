@@ -1,5 +1,7 @@
 @import '_style_guild.scss';
 
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+
 body {
     margin: 0;
     font-family: $font-Family-A;
@@ -57,10 +59,11 @@ footer {
     
         .footer-arrow-text {
             font-size: $H7-font-size;
+            font-family: "Source Code Pro";
             letter-spacing: $font-letter-space-100;
             position: absolute;
             top: 40px;
-            left: 4px;
+            left: 5px;
         }
     
         .common-problems {
@@ -83,7 +86,7 @@ footer {
     
             ul li {
                 padding-left: 10px;
-                cursor: pointer;
+                cursor: default;
             }
         }
     
@@ -91,6 +94,7 @@ footer {
             height: 80px;
             background-color: $color-Footer-Background;
             font-size: $H9-font-size;
+            font-family: "Source Code Pro";
             letter-spacing: $font-letter-space-100;
             color: $color-White;
         }
@@ -163,10 +167,6 @@ footer {
                 .lists {
                     border: none;
                 }
-            }
-
-            .copyright {
-                
             }
         }
     }

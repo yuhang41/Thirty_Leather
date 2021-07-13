@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -66,10 +67,11 @@ footer .site-footer .footer-arrow {
 
 footer .site-footer .footer-arrow-text {
   font-size: 18px;
+  font-family: "Source Code Pro";
   letter-spacing: 1.6px;
   position: absolute;
   top: 40px;
-  left: 4px;
+  left: 5px;
 }
 
 footer .site-footer .common-problems {
@@ -93,13 +95,14 @@ footer .site-footer .common-problems a {
 
 footer .site-footer .common-problems ul li {
   padding-left: 10px;
-  cursor: pointer;
+  cursor: default;
 }
 
 footer .site-footer .copyright {
   height: 80px;
   background-color: #7a7573;
   font-size: 15px;
+  font-family: "Source Code Pro";
   letter-spacing: 1.6px;
   color: #ffffff;
 }
