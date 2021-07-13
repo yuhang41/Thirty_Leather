@@ -10,6 +10,14 @@ document.querySelector('.more-button').addEventListener('click', function () {
 
 //Pagination Swiper
 var myswiper1 = new Swiper('.myswiper1', {
+  loop:true,
+  autoplay: {
+    delay: 3000,
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
