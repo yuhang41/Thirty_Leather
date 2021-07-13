@@ -161,23 +161,23 @@ main .main-container .chatbot.active .more-button-list {
 }
 
 main .main-container .chatbot.active .more-button-list-item {
-  -webkit-animation: fadeInItem .6s .2s forwards;
-          animation: fadeInItem .6s .2s forwards;
+  -webkit-animation: fadeInItem 0.6s 0.2s forwards;
+          animation: fadeInItem 0.6s 0.2s forwards;
 }
 
 main .main-container .chatbot.active .more-button-list-item:nth-child(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 main .main-container .chatbot.active .more-button-list-item:nth-child(3) {
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 main .main-container .chatbot.active .more-button-list-item:nth-child(4) {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 main .main-container .chatbot.active .more-button {
@@ -197,8 +197,8 @@ main .main-container .more-button {
   border: none;
   padding: 0;
   cursor: pointer;
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,8 +230,8 @@ main .main-container .more-button-list {
           transform: scale(0);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transition: all .3s ease .1s;
-  transition: all .3s ease .1s;
+  -webkit-transition: all 0.3s ease 0.1s;
+  transition: all 0.3s ease 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2332,7 +2332,8 @@ main .main-container .studio-information .studio-photo .photo .studio-photo-clos
   left: 0;
   width: 50px;
   height: 50px;
-  background: gray;
+  background: #444444;
+  color: #f7a269;
   cursor: pointer;
 }
 
@@ -2387,7 +2388,6 @@ main .main-container .studio-information .studio-information-content .try-contai
 main .main-container .studio-information .studio-information-content .try-container .try-on-infor .list-unstyled {
   font-size: 56px;
   height: 72px;
-  margin-bottom: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2415,7 +2415,7 @@ main .main-container .studio-information .studio-information-content .try-contai
 main .main-container .studio-information .studio-information-content .try-container .try-on-infor .list-unstyled .detail {
   font-size: 21px;
   letter-spacing: 3.2px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro";
   text-align: center;
   margin: 0;
 }
@@ -2459,12 +2459,35 @@ main .main-container .studio-information .studio-information-content .try-contai
   margin-bottom: 20px;
 }
 
+@media (max-width: 320px) {
+  main .main-container .studio-information .studio-information-content .try-container .try-content .contact-head ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .studio-information .studio-information-content .try-container .try-content .contact-head ul li .list-unstyled-title {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.6px;
   width: 120px;
   margin-right: 2.6vw;
+}
+
+@media (max-width: 320px) {
+  main .main-container .studio-information .studio-information-content .try-container .try-content .contact-head ul li .list-unstyled-title {
+    margin: auto;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .studio-information .studio-information-content .try-container .try-content .contact-head ul li .list-unstyled-text {
@@ -2477,26 +2500,40 @@ main .main-container .studio-information .studio-information-content .try-contai
 
 main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
   display: none;
+  text-align: center;
+  font-size: 23px;
+  line-height: 45px;
 }
 
 @media (max-width: 1024px) {
   main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
     position: absolute;
-    right: 50px;
-    bottom: 10px;
+    right: 12vw;
+    bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
-    height: 100px;
-    background: #000;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #f7a269;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 320px) {
+  main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
+    position: absolute;
+    bottom: -45px;
+    left: 27vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
 main .main-container .studio-information .studio-information-content .shop-map {
-  margin-top: 90px;
+  margin-top: 7vh;
 }
 
 @media (max-width: 1350px) {
