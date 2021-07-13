@@ -29,6 +29,14 @@
         transition: 1s;
     }
 }
+//超大手機尺寸
+@mixin max-phone {
+    @media (max-width: 992px) {
+        @content;
+        transition: 1s;
+    }
+}
+
 //大手機尺寸
 @mixin bg-phone {
     @media (max-width: 768px) {
@@ -1560,18 +1568,23 @@ main {
 
                             @include sm-tablet() {
                                 position: absolute;
-                                right: 12vw;
+                                right: 7vw;
                                 bottom: 60px;
+                            }
+
+                            @include max-phone() {
+                                position: absolute;
+                                right: 3vw;
                             }
 
                             @include bg-phone() {
                                 position: absolute;
-                                right: 0;
+                                bottom: -45px;
+                                left: 40vw;
                             }
 
                             @include single-cart() {
                                 position: absolute;
-                                bottom: -45px;
                                 left: 39vw;
                             }
 
@@ -1596,7 +1609,7 @@ main {
                         justify-content: center;
                         background: $color-LightGray;
                     }
-                    
+
                     .shop-map-content {
                         border-left: 18px solid $color-Apricot;
                     }

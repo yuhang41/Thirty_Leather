@@ -2542,8 +2542,17 @@ main .main-container .studio-information .studio-information-content .try-contai
 @media (max-width: 1024px) {
   main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
     position: absolute;
-    right: 12vw;
+    right: 7vw;
     bottom: 60px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 992px) {
+  main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
+    position: absolute;
+    right: 3vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -2552,7 +2561,8 @@ main .main-container .studio-information .studio-information-content .try-contai
 @media (max-width: 768px) {
   main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
     position: absolute;
-    right: 0;
+    bottom: -45px;
+    left: 40vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -2561,7 +2571,6 @@ main .main-container .studio-information .studio-information-content .try-contai
 @media (max-width: 660px) {
   main .main-container .studio-information .studio-information-content .try-container .try-content .photo-button {
     position: absolute;
-    bottom: -45px;
     left: 39vw;
     -webkit-transition: 1s;
     transition: 1s;
