@@ -411,6 +411,8 @@ main{
                                         border: none;
                                         text-align: center;
                                         -webkit-appearance: none;
+                                        font-size: $H7-font-size;
+                                        color: $color-Evaluation-Star;
                                         &::placeholder {
                                             font-size: $H7-font-size;
                                             color: $color-Evaluation-Star;
@@ -604,6 +606,8 @@ main{
                                                     background-color: $color-Shoes-Button;
                                                     border-radius: 50%;
                                                     z-index: 1;
+                                                    animation: onePulse 1s forwards linear;
+                                                    animation-iteration-count: infinite;
                                                     &.active{
                                                         &:before{
                                                             content: "";
@@ -676,6 +680,8 @@ main{
                                                     background-color: $color-Shoes-Button;
                                                     border-radius: 50%;
                                                     z-index: 1;
+                                                    animation: onePulse 1s forwards linear;
+                                                    animation-iteration-count: infinite;
                                                     &.active{
                                                         &:before{
                                                             content: "";
@@ -734,6 +740,8 @@ main{
                                                     background-color: $color-Shoes-Button;
                                                     border-radius: 50%;
                                                     z-index: 1;
+                                                    animation: onePulse 1s forwards linear;
+                                                    animation-iteration-count: infinite;
                                                     &.active{
                                                         &:before{
                                                             content: "";
@@ -791,6 +799,8 @@ main{
                                                     background-color: $color-Shoes-Button;
                                                     border-radius: 50%;
                                                     z-index: 1;
+                                                    animation: onePulse 1s forwards linear;
+                                                    animation-iteration-count: infinite;
                                                     &.active{
                                                         &:before{
                                                             content: "";
@@ -913,6 +923,8 @@ main{
                                                     background-color: $color-Shoes-Button;
                                                     border-radius: 50%;
                                                     z-index: 1;
+                                                    animation: onePulse 1s forwards linear;
+                                                    animation-iteration-count: infinite;
                                                     &.active{
                                                         &:before{
                                                             content: "";
@@ -954,6 +966,19 @@ main{
                                                             @include click-p();
                                                         }
                                                     } 
+                                                }
+                                            }
+                                            @keyframes onePulse {
+                                                0% {
+                                                    box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+                                                }
+                                    
+                                                50% {
+                                                    box-shadow: 0px 0px 0px 12px rgba(2245, 160, 105, 0.2);
+                                                }
+                                    
+                                                100% {
+                                                    box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
                                                 }
                                             }
                                         }

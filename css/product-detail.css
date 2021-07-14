@@ -512,6 +512,8 @@ main .main-container .product-container .productshop-container .commidity-contai
   border: none;
   text-align: center;
   -webkit-appearance: none;
+  font-size: 18px;
+  color: #e08549;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input::-webkit-input-placeholder {
@@ -764,6 +766,10 @@ main .main-container .product-container .productdetail-container .detail-contain
   background-color: #f5a069;
   border-radius: 50%;
   z-index: 1;
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .click-function .click-first .click-button.active:before {
@@ -878,6 +884,10 @@ main .main-container .product-container .productdetail-container .detail-contain
   background-color: #f5a069;
   border-radius: 50%;
   z-index: 1;
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .click-function .click-second .click-button.active:before {
@@ -966,6 +976,10 @@ main .main-container .product-container .productdetail-container .detail-contain
   background-color: #f5a069;
   border-radius: 50%;
   z-index: 1;
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .click-function .click-third .click-button.active:before {
@@ -1054,6 +1068,10 @@ main .main-container .product-container .productdetail-container .detail-contain
   background-color: #f5a069;
   border-radius: 50%;
   z-index: 1;
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .click-function .click-fourth .click-button.active:before {
@@ -1256,6 +1274,10 @@ main .main-container .product-container .productdetail-container .detail-contain
   background-color: #f5a069;
   border-radius: 50%;
   z-index: 1;
+  -webkit-animation: onePulse 1s forwards linear;
+          animation: onePulse 1s forwards linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .click-function .click-fifth .click-button.active:before {
@@ -1332,6 +1354,36 @@ main .main-container .product-container .productdetail-container .detail-contain
   line-height: 21px;
   color: #444444;
   margin: 0px 0px 0px 20px;
+}
+
+@-webkit-keyframes onePulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+            box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(255, 160, 105, 0.2);
+            box-shadow: 0px 0px 0px 12px rgba(255, 160, 105, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
+            box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
+  }
+}
+
+@keyframes onePulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+            box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(255, 160, 105, 0.2);
+            box-shadow: 0px 0px 0px 12px rgba(255, 160, 105, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
+            box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
+  }
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process {

@@ -670,7 +670,7 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
   text-align: end;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-button {
+main .main-container .my-container .other-amount .amount .order-total-button .next-a {
   cursor: pointer;
   width: 100%;
   border: none;

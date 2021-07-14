@@ -91,6 +91,7 @@ $(".click-button").each(function (index) {
   },  
  });
  var swiper4 = new Swiper(".mySwiper4", {
+   loop:true,
   slidesPerView: 'auto',
   spaceBetween: 30,
   navigation: {
@@ -107,6 +108,34 @@ $(".click-button").each(function (index) {
     swiper: swiper3,
   },
 });
+
+function updateQty(element,number){
+  var qtyArea = element.parentElement;
+  var input = qtyArea.querySelector('input');
+  var qty = Number(input.value);
+  var newQty = qty + number;
+  if(newQty < 1){
+    input.value = 1;
+  }else{
+    input.value= newQty;
+}
+}
+
+//加法計算
+var plusBtns = document.querySelectorAll('.plus-btn');
+plusBtns.forEach(function(plusBtn){
+    plusBtn.addEventListener('click',function(){
+        updateQty(this,1);
+    });
+});
+//減法計算
+var minusBtns = document.querySelectorAll('.minus-btn');
+minusBtns.forEach(function(minusBtn){
+    minusBtn.addEventListener('click',function(){
+        updateQty(this,-1);
+    });
+});
+
 // //color
 // let colorCheckboxs = document.querySelectorAll(".color-checkbox");
 // let colorButtons =document.querySelectorAll('.color-button');
