@@ -29,6 +29,8 @@ class FrontController extends Controller
         $this->user_password_modify = 'front.user.password-modify';
         //login
         $this->login = 'front.login.index';
+        //shose
+        $this->shose = 'front.shose.index';
     }
     public static function CartCalc(){//計算價錢跟數量和運費的共用涵式
         $total = \Cart::getTotalQuantity();//取的session Cart 裡的所有 quantity 總數量
@@ -209,5 +211,8 @@ class FrontController extends Controller
     //login
     public function login(){
         return view($this->login);
+    }
+    public function shose(){
+        return view($this->shose);
     }
 }

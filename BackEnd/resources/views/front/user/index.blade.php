@@ -18,8 +18,10 @@
 
                 <a class="list-group-item list-group-item-action text-center"
                     href={{ asset('/front/user/passwordModify') }}>密碼修改</a>
-
-                <a class="list-group-item list-group-item-action text-center" href="/index.html">會員登出</a>
+                <form action={{ route('user_logout') }} method="POST">
+                    @csrf
+                    <button class="list-group-item list-group-item-action text-center" type="submit">會員登出</a>
+                </form>
             </div>
         </div>
 

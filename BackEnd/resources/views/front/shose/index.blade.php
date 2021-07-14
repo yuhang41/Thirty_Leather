@@ -8,7 +8,7 @@
 @section('content')
 <div class="main-container">
     <div class="shoes-sketch">
-        <img src="./img/shoes-sketch.svg" alt="">
+        <img src={{ asset('img/shoes-sketch.svg') }} alt="">
     </div>
     <div class="main-container">
         <div class="shoes-article">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="decoration-line">
-                <img src="./img/index-shoes-line.svg" alt="">
+                <img src={{ asset('img/index-shoes-line.svg') }} alt="">
             </div>
         </div>
         <div class="shoes-img-display">
