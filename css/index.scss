@@ -10,851 +10,1257 @@
 }
 //筆電尺寸
 @mixin notebook {
-    @media (max-width: 1550px) {
+    @media(max-width:1550px){
         @content;
         transition: 1s;
     }
 }
 // 大平板尺寸
 @mixin tablet {
-    @media (max-width: 1350px) {
+    @media(max-width:1350px){
         @content;
         transition: 1s;
     }
 }
 // 小平板尺寸
 @mixin sm-tablet {
-    @media (max-width: 1024px) {
+    @media(max-width:1024px){
         @content;
         transition: 1s;
     }
 }
-//超大手機尺寸
-@mixin max-phone {
-    @media (max-width: 992px) {
+//試穿資訊換版
+@mixin try-on {
+    @media(max-width:991px){
         @content;
         transition: 1s;
     }
 }
-
 //大手機尺寸
 @mixin bg-phone {
-    @media (max-width: 768px) {
+    @media(max-width:768px){
         @content;
         transition: 1s;
     }
 }
-// 商品卡片換版
+//商品卡片換版
 @mixin single-cart {
-    @media (max-width: 660px) {
+    @media(max-width:660px){
         @content;
         transition: 1s;
     }
 }
 // 小手機尺寸
 @mixin sm-phone {
-    @media (max-width: 520px) {
+    @media(max-width:520px){
         @content;
         transition: 1s;
     }
 }
 // iphone 5s
 @mixin iphone-5s {
-    @media (max-width: 320px) {
+    @media(max-width:320px){
         @content;
         transition: 1s;
     }
 }
+nav{
+    z-index: 99;
+    transition: 1s ease-in-out;
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $color-White;
+        animation: smoothScroll 1s forwards;
+    }
+    @keyframes smoothScroll {
+        0% {
+            transform: translateY(-40px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+      &.sticky + .content {
+        padding-top: 60px;
+      }
+}
 main {
-    .main-container {
+    .main-container{
         padding-left: 7.4vw;
         overflow: hidden;
         transition: 1s;
-        @include tablet() {
+        @include tablet(){
             padding-left: 0px;
         }
-        // 輪播圖
-        .swiper1 {
+    // 輪播圖
+    .swiper1 {
+        position: relative;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
             position: relative;
-            .swiper-container {
-                width: 100%;
-                height: 100%;
+        }
+        //swiper bullet
+        .swiper-pagination-bullets {
+            position: absolute;
+            left: -3vw;
+            bottom: 2vh;
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+            z-index: 2;
+            width: 34px;
+            @include tablet(){
+                left: 2vw;
+                bottom: 50px;
+            }
+            @include sm-tablet(){
+                left: 3vw;
+                bottom: 50px;
+            }
+            @include iphone-5s(){
+                left: 4vw;
+                bottom: 50px;
+            }
+            .swiper-pagination-bullet {
+                width: 17px;
+                height: 17px;
+                border-radius: 0px;
+                margin: 17px 0px 0px 0px;
+                background-color: $color-WedgwoodBlue;
+                opacity: unset;
                 position: relative;
             }
-            //swiper bullet
-            .swiper-pagination-bullets {
-                position: absolute;
-                left: -3vw;
-                bottom: 2vh;
-                display: flex;
-                flex-direction: column;
-                overflow: visible;
-                z-index: 2;
-                width: 34px;
-                @include tablet() {
-                    left: 2vw;
-                    bottom: 50px;
-                }
-                @include sm-tablet() {
-                    left: 3vw;
-                    bottom: 50px;
-                }
-                @include iphone-5s() {
-                    left: 4vw;
-                    bottom: 50px;
-                }
-                .swiper-pagination-bullet {
-                    width: 17px;
+            .swiper-pagination-bullet-active {
+                background-color: $color-Orange;
+
+                &::before {
+                    content: "";
                     height: 17px;
-                    border-radius: 0px;
-                    margin: 17px 0px 0px 0px;
-                    background-color: $color-WedgwoodBlue;
-                    opacity: unset;
-                    position: relative;
-                }
-                .swiper-pagination-bullet-active {
-                    background-color: $color-Orange;
-
-                    &::before {
-                        content: "";
-                        height: 17px;
-                        position: absolute;
-                        top: -10px;
-                        left: -10px;
-                        border: 1px solid $color-Orange;
-                        padding: 17px;
-                    }
-                }
-            }
-            .swiper-slide {
-                width: 100%;
-                text-align: center;
-                font-size: 18px;
-                min-height: 969px;
-                transition: 1s;
-                @include sm-tablet() {
-                    min-height: 768px;
-                }
-                @include iphone-5s() {
-                    height: 518px;
-                    min-height: unset;
-                }
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                transition: 0.5s;
-            }
-        }
-        // 聯絡客服
-        .chatbot {
-            position: fixed;
-            bottom: 36px;
-            right: 25px;
-            z-index: 5;
-            transition: 1s;
-            // @include tablet(){
-            //     bottom: 50px;
-            // }
-
-            &.active {
-                .more-button-list {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-
-                .more-button-list-item {
-                    animation: fadeInItem 0.6s 0.2s forwards;
-
-                    &:nth-child(2) {
-                        animation-delay: 0.4s;
-                    }
-                    &:nth-child(3) {
-                        animation-delay: 0.6s;
-                    }
-                    &:nth-child(4) {
-                        animation-delay: 0.8s;
-                    }
-                }
-
-                .more-button {
-                    animation: onePulse 1s forwards linear;
-                    animation-iteration-count: infinite;
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    border: 1px solid $color-Orange;
+                    padding: 17px;
                 }
             }
         }
-
-        .more-button {
-            background-color: white;
-            box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            transition: 0.2s ease-in;
+        .swiper-slide {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            min-height:969px;
+            // transition: 1s;
+            @include sm-tablet(){
+                min-height:768px;
+            }
+            @include iphone-5s(){
+                height: 518px;
+                min-height: unset;
+            }
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
-            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
             justify-content: center;
-            color: #fff;
-            position: relative;
-            z-index: 2;
-
-            &-list {
-                background-color: $color-White;
-                border-radius: 8px;
-                list-style-type: none;
-                width: 358px;
-                height: 338px;
-                box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
-                padding: 20px 20px;
-                position: absolute;
-                right: 32px;
-                bottom: 21px;
-                opacity: 0;
-                transform: scale(0);
-                transform-origin: bottom right;
-                transition: all 0.3s ease 0.1s;
-
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+    }
+    // 聯絡客服
+    .chatbot {
+        position: fixed;
+        bottom: 36px;
+        right: 25px;
+        z-index: 5;
+        transition: 1s;
+        // @include tablet(){
+        //     bottom: 50px;
+        // }
+        
+        &.active {
+          .more-button-list {
+             opacity: 1;
+             transform: scale(1);
+          }
+          
+          .more-button-list-item {
+            animation: fadeInItem .6s .2s forwards;
+            
+            &:nth-child(2) { animation-delay: .4s; }
+            &:nth-child(3) { animation-delay: .6s; }
+            &:nth-child(4) { animation-delay: .8s; }
+          }
+          
+          .more-button {
+            animation: onePulse 1s forwards linear;
+            animation-iteration-count:infinite;
+          }
+        }
+      }
+      
+    .more-button {
+    background-color: white;
+    box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: .2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    
+    
+    &-list {
+        background-color: $color-White;
+        border-radius: 8px;
+        list-style-type: none;
+        width: 358px;
+        height: 338px;
+        box-shadow: 0px 0px 4px 4px rgba(150, 249, 183, 0.16);
+        padding: 20px 20px;
+        position: absolute;
+        right: 32px;
+        bottom: 21px;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition : all .3s ease .1s;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        li { opacity: 0; }
+    }
+    
+    &-list-item {
+        &:nth-child(1){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            img {
+                width: 46px;
+                height: 46px;
+            }
+            .option {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                li {
-                    opacity: 0;
+                .more {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    cursor: pointer;
+    
+                    justify-content: center;
+                    align-items: center;
+    
+                    .dot {
+                        width: 3px;
+                        height: 3px;
+                        background-color: $color-DeepGray;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 0px;
+                            left: -5px;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background-color: $color-DeepGray;
+                        }
+                        &::after {
+                            position: absolute;
+                            top: 0px;
+                            left: 5px;
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            background-color: $color-DeepGray;
+                        }
+                    }
+                }
+                .close {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-Gray;
+                    border-radius: 50%;
+                    opacity: unset;
+                    cursor: pointer;
+    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .line {
+                        width: 13px;
+                        height: 2px;
+                        background-color: $color-DeepGray;
+                    }
                 }
             }
-
-            &-list-item {
+        }
+        &:nth-child(2){
+            p {
+                margin: 0px;
                 &:nth-child(1) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    img {
-                        width: 46px;
-                        height: 46px;
-                    }
-                    .option {
-                        display: flex;
-                        .more {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-Gray;
-                            border-radius: 50%;
-                            margin-right: 10px;
-                            cursor: pointer;
-
-                            justify-content: center;
-                            align-items: center;
-
-                            .dot {
-                                width: 3px;
-                                height: 3px;
-                                background-color: $color-DeepGray;
-                                position: relative;
-                                &::before {
-                                    position: absolute;
-                                    top: 0px;
-                                    left: -5px;
-                                    content: "";
-                                    width: 3px;
-                                    height: 3px;
-                                    background-color: $color-DeepGray;
-                                }
-                                &::after {
-                                    position: absolute;
-                                    top: 0px;
-                                    left: 5px;
-                                    content: "";
-                                    width: 3px;
-                                    height: 3px;
-                                    background-color: $color-DeepGray;
-                                }
-                            }
-                        }
-                        .close {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-Gray;
-                            border-radius: 50%;
-                            opacity: unset;
-                            cursor: pointer;
-
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            .line {
-                                width: 13px;
-                                height: 2px;
-                                background-color: $color-DeepGray;
-                            }
-                        }
-                    }
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
                 }
                 &:nth-child(2) {
-                    p {
-                        margin: 0px;
-                        &:nth-child(1) {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H10-font-size;
-                            color: $color-MiddleGray;
-                            margin-bottom: 18px;
-                        }
-                        &:nth-child(3) {
-                            font-size: $H10-font-size;
-                            font-weight: 500;
-                        }
-                    }
+                    font-size: $H10-font-size;
+                    color: $color-MiddleGray;
+                    margin-bottom: 18px;
                 }
                 &:nth-child(3) {
-                    .facebook-button {
-                        width: 318px;
-                        height: 52px;
-                        background-color: $color-Blue;
-                        border-radius: 10px;
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-bottom: 10px;
-                        cursor: pointer;
-                        .facebook-icon {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-White;
-                            border-radius: 50%;
-                            text-align: center;
-                            line-height: 35px;
-                            margin-right: 10px;
-                            i {
-                                font-size: 22px;
-                                color: $color-Blue;
-                            }
-                        }
-                        p {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                            color: $color-White;
-                            margin: 0px;
-                        }
-                    }
-                    .line-button {
-                        width: 318px;
-                        height: 52px;
-                        background-color: $color-Green;
-                        border-radius: 10px;
-                        padding: 0px 31px;
-                        cursor: pointer;
-
-                        display: flex;
-                        align-items: center;
-                        .line-icon {
-                            width: 30px;
-                            height: 30px;
-                            background-color: $color-White;
-                            border-radius: 50%;
-                            text-align: center;
-                            line-height: 28px;
-                            margin-right: 45px;
-                            span {
-                                font-size: 13px;
-                                color: $color-Green;
-                            }
-                        }
-                        p {
-                            font-size: $H7-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-50;
-                            color: $color-White;
-                            margin: 0px;
-                        }
-                    }
+                    font-size: $H10-font-size;
+                    font-weight: 500;
                 }
             }
         }
-
-        @keyframes onePulse {
-            0% {
-                box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
-            }
-
-            50% {
-                box-shadow: 0px 0px 0px 12px rgba(150, 249, 183, 0.1);
-            }
-
-            100% {
-                box-shadow: 0px 0px 0px 4px rgba(150, 249, 183, 0.3);
-            }
-        }
-
-        @keyframes fadeInItem {
-            100% {
-                transform: translatex(0px);
-                opacity: 1;
-            }
-        }
-        // 品牌理念
-        .we-story {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            padding: 100px 0px 0px 0px;
-            transition: 1s;
-            @include tablet() {
-                padding: 0px;
-            }
-            @include sm-tablet() {
-                min-height: 768px;
-            }
-            @include iphone-5s() {
-                min-height: 568px;
-            }
-            .story-content {
+        &:nth-child(3){
+            .facebook-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Blue;
+                border-radius: 10px;
+    
                 display: flex;
-                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                cursor: pointer;
+                .facebook-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 35px;
+                    margin-right: 10px;
+                    i {
+                        font-size: 22px;
+                        color: $color-Blue;
+                    }
+                }
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+            .line-button {
+                width: 318px;
+                height: 52px;
+                background-color: $color-Green;
+                border-radius: 10px;
+                padding: 0px 31px;
+                cursor: pointer;
+    
+                display: flex;
+                align-items: center;
+                .line-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-White;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 28px;
+                    margin-right: 45px;
+                    span {
+                        font-size: 13px;
+                        color: $color-Green;
+                    }
+                }
+                p {
+                    font-size: $H7-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-50;
+                    color: $color-White;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+    }
+    
+    @keyframes onePulse {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(150, 249, 183,0.3);
+    }
+    
+    50% {
+        box-shadow: 0px 0px 0px 12px rgba(150, 249, 183,0.1);
+    }
+    
+    100% {
+        box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
+    }
+    }
+    
+    @keyframes fadeInItem {
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+    }
+    // 品牌理念
+    .we-story {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        padding: 100px 0px 0px 0px;
+        transition: 1s;
+        @include tablet(){
+            padding: 0px;
+        }
+        @include sm-tablet(){
+            min-height: 768px;
+        }
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        .story-content{
+            display: flex;
+            position: relative;
+            transition: 1s;
+            @include tablet(){
+                justify-content: flex-end;
+            }
+            img {
+                position: absolute;
+                left: -8vw;
+                max-width: 54.8%;
+                z-index: 1;
                 transition: 1s;
-                @include tablet() {
-                    justify-content: flex-end;
+                @include tablet(){
+                    position: relative;
+                    max-width: none;
+                    width:100%;
+                    // min-height: 768px;
+                    min-height: 969px;
+                    left: 0px;
                 }
-                img {
-                    position: absolute;
-                    left: -8vw;
-                    max-width: 54.8%;
-                    z-index: 1;
-                    transition: 1s;
-                    @include tablet() {
-                        position: relative;
-                        max-width: none;
-                        width: 100%;
-                        // min-height: 768px;
-                        min-height: 969px;
-                        left: 0px;
-                    }
-                    @include sm-tablet() {
-                        min-height: 768px;
-                        width: 100%;
-                    }
-                    @include iphone-5s() {
-                        min-height: 568px;
-                        height: 568px;
+                @include sm-tablet(){
+                    min-height:768px;
+                    width: 100%;
+                }
+                @include iphone-5s(){
+                    min-height: 568px;
+                    height: 568px;
+                }
+            }
+            svg {
+                position: absolute;
+                width: 52vw;
+                top: 305px;
+                left: -2px;
+                transform: rotate(-1deg);
+                transition: 1s;
+                &.slide-in {
+                    opacity: 0;
+                    transition: all .5s;
+                    transform: translateY(-30%) scale(0.95);
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0%) scale(1);
                     }
                 }
-                svg {
-                    position: absolute;
-                    width: 52vw;
-                    top: 305px;
-                    left: -2px;
+                @include notebook(){
+                    transform: rotate(9deg); 
+                }
+                @include tablet(){
                     transform: rotate(-1deg);
-                    transition: 1s;
-                    @include notebook() {
-                        transform: rotate(9deg);
+                    width: unset;
+                    height: 800px;
+                    top: 654px;
+                    left: 196px;
+                }
+                @include sm-tablet(){
+                    width: unset;
+                    height: 1000px;
+                    transform: rotate(24deg);
+                    top: 656px;
+                    left: -396px;
+                }
+                @include iphone-5s(){
+                    height: 800px;
+                    top: 547px;
+                    left: -356px;
+                }
+                .scissors,
+                .scissors-mind {
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                .scissors {
+                    animation: scissors 4s ease-in-out;
+                }
+                @keyframes scissors {
+                    0% {
+                        stroke-dashoffset: 4000;
                     }
-                    @include tablet() {
-                        transform: rotate(-1deg);
-                        width: unset;
-                        height: 800px;
-                        top: 654px;
-                        left: 196px;
-                    }
-                    @include sm-tablet() {
-                        width: unset;
-                        height: 1000px;
-                        transform: rotate(24deg);
-                        top: 656px;
-                        left: -396px;
-                    }
-                    @include iphone-5s() {
-                        height: 800px;
-                        top: 547px;
-                        left: -356px;
-                    }
-                    .scissors,
-                    .scissors-mind {
-                        fill-opacity: 0;
-                        stroke: $color-Background-line;
-                        stroke-width: 2px;
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 4000;
-                    }
-                    .scissors {
-                        animation: scissors 4s ease-in-out;
-                    }
-                    @keyframes scissors {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
 
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
-                    }
-                    .scissors-mind {
-                        animation: mind 4s ease-in-out;
-                    }
-                    @keyframes mind {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
-                        50% {
-                            stroke-dashoffset: 4000;
-                        }
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
+                    100% {
+                        stroke-dashoffset: 0;
                     }
                 }
-                .story-discript {
-                    margin-left: 46vw;
-                    transition: 1s;
-                    @include tablet() {
-                        width: 538px;
-                        height: 100%;
-                        background-color: rgba(255, 255, 255, 0.849);
-                        z-index: 1;
-                        padding: 50px 30px;
-                        margin-left: 0px;
-                        position: absolute;
+                .scissors-mind {
+                    animation: mind 4s ease-in-out;
+                }
+                @keyframes mind {
+                    0% {
+                        stroke-dashoffset: 4000;
                     }
-                    @include bg-phone() {
-                        width: 100vw;
+                    50% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+            .story-discript {
+                margin-left: 46vw;
+                transition: 1s;
+                @include tablet(){
+                    width: 538px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.849);
+                    z-index: 1;
+                    padding: 50px 30px;
+                    margin-left: 0px;
+                    position: absolute;
+                }
+                @include bg-phone(){
+                    width: 100vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @include sm-phone(){
+                    padding: 50px 0px;
+                }
+                @include iphone-5s(){
+                    height: 568px;
+                }
+                .subtitle {
+                    font-size: $H10-font-size;
+                    font-weight:normal;
+                    color: $color-Orange;
+                    position: relative;
+                    margin-bottom: 50px;
+                    transition: 1s;
+                    font-family: $font-Family-C;
+                    @include notebook(){
+                        margin-bottom: 15px;
+                    }
+                    @include tablet(){
+                        margin-bottom: 50px;
+                    }
+                    @include iphone-5s(){
+                        margin-bottom: 15px;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 20px;
+                        left: 0px;
+                        width: 80px;
+                        height: 1px;
+                        background-color: $color-Orange;
+                    }
+                }
+                .title {
+                    margin-bottom: 45px;
+                    @include notebook(){
+                        margin-bottom: 15px;
+                    }
+                    @include tablet(){
+                        margin-bottom: 45px;
+                    }
+                    p{
+                    margin-bottom: 0px;
+                    font-size: $H3-font-size;
+                    font-weight: bold;
+                    letter-spacing: $font-letter-space-100;
+                    color: $color-WedgwoodBlue;
+                    transition: 1s;
+                    position: relative;
+                    @include sm-phone(){
+                        font-size: $H5-font-size;
+                    }
+                    &.short-line{
+                        &:before {
+                            content: "";
+                            width: 0px;
+                            height: 1px;
+                            top: 20px;
+                            left: -110px;
+                            background-color: $color-Background-line;
+                            position: absolute;
+                            transform: rotate(33deg);
+                            z-index: 0;
+                            transform-origin:40px -1px;
+                            animation: short-line-grow 1s linear forwards;
+                            @keyframes short-line-grow{
+                                to {width:100px;}
+                            }
+                            animation-delay: 0.5s;
+                            @include tablet(){
+                                display: none;
+                            }
+                            @include iphone-5s(){
+                                display: block;
+                                width: 0px;
+                                top: -50px;
+                                left: -17px;
+                                transform: rotate(65deg);
+                                animation: short-line2-grow 1s linear forwards;
+                            }
+                            @keyframes short-line2-grow{
+                                to {width:88px;}
+                            }
+                            
+                        } 
+                    }
+                    }
+                }
+                .content {
+                    font-size: $H7-font-size;
+                    color: $color-IronGray;
+                    font-weight: normal;
+                    letter-spacing: $font-letter-space-50;
+                    transition: 1s;
+                    @include bg-phone(){
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                     }
-                    @include sm-phone() {
-                        padding: 50px 0px;
-                    }
-                    @include iphone-5s() {
-                        height: 568px;
-                    }
-                    .subtitle {
+                    @include sm-phone(){
                         font-size: $H10-font-size;
-                        font-weight: normal;
-                        color: $color-Orange;
-                        position: relative;
-                        margin-bottom: 50px;
-                        transition: 1s;
-                        font-family: $font-Family-C;
-                        @include notebook() {
-                            margin-bottom: 15px;
-                        }
-                        @include tablet() {
-                            margin-bottom: 50px;
-                        }
-                        @include iphone-5s() {
-                            margin-bottom: 15px;
-                        }
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            top: 20px;
-                            left: 0px;
-                            width: 80px;
-                            height: 1px;
-                            background-color: $color-Orange;
-                        }
                     }
-                    .title {
-                        margin-bottom: 45px;
-                        @include notebook() {
-                            margin-bottom: 15px;
-                        }
-                        @include tablet() {
-                            margin-bottom: 45px;
-                        }
-                        p {
-                            margin-bottom: 0px;
-                            font-size: $H3-font-size;
-                            font-weight: bold;
-                            letter-spacing: $font-letter-space-100;
-                            color: $color-WedgwoodBlue;
-                            transition: 1s;
-                            position: relative;
-                            @include sm-phone() {
-                                font-size: $H5-font-size;
-                            }
-                            &:nth-child(1) {
-                                &:before {
-                                    content: "";
-                                    width: 0px;
-                                    height: 1px;
-                                    top: 20px;
-                                    left: -110px;
-                                    background-color: $color-Background-line;
-                                    position: absolute;
-                                    transform: rotate(33deg);
-                                    z-index: 0;
-                                    transform-origin: 40px -1px;
-                                    animation: short-line-grow 1s linear forwards;
-                                    @keyframes short-line-grow {
-                                        to {
-                                            width: 100px;
-                                        }
-                                    }
-                                    animation-delay: 0.5s;
-                                    @include tablet() {
-                                        display: none;
-                                    }
-                                    @include iphone-5s() {
-                                        display: block;
-                                        width: 0px;
-                                        top: -50px;
-                                        left: -17px;
-                                        transform: rotate(65deg);
-                                        animation: short-line2-grow 1s linear forwards;
-                                    }
-                                    @keyframes short-line2-grow {
-                                        to {
-                                            width: 88px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .content {
-                        font-size: $H7-font-size;
-                        color: $color-IronGray;
-                        font-weight: normal;
-                        letter-spacing: $font-letter-space-50;
+                    .preamble {
+                        margin-bottom: 30px;
                         transition: 1s;
-                        @include bg-phone() {
+                        @include notebook(){
+                            margin-bottom: 10px;
+                        }
+                        @include tablet(){
+                            margin-bottom: 30px;
+                        }
+                        @include bg-phone(){
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                         }
-                        @include sm-phone() {
-                            font-size: $H10-font-size;
-                        }
-                        .preamble {
-                            margin-bottom: 30px;
-                            transition: 1s;
-                            @include notebook() {
-                                margin-bottom: 10px;
-                            }
-                            @include tablet() {
-                                margin-bottom: 30px;
-                            }
-                            @include bg-phone() {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                            }
-                            p {
-                                margin-bottom: 0px;
-                                position: relative;
-                                &:nth-child(1) {
-                                    &:after {
-                                        content: "";
+                        p{
+                            margin-bottom: 0px;
+                            position: relative;
+                            &.long-line{
+                                &:after {
+                                    content: "";
+                                    width: 0px;
+                                    height: 1px;
+                                    top: 171px;
+                                    left: 340px;
+                                    background-color: $color-Background-line;
+                                    position: absolute;
+                                    transform: rotate(33deg);
+                                    z-index: 0;
+                                    transform-origin:102px -12px;
+                                    animation: long-line-grow 1s linear forwards;
+                                    animation-delay: 1.5s;
+                                    @keyframes long-line-grow{
+                                        to {width:300px;}
+                                    }
+                                    @include tablet(){
+                                        display: none;
+                                    }
+                                    @include iphone-5s(){
+                                        display: block;
                                         width: 0px;
                                         height: 1px;
-                                        top: 171px;
-                                        left: 340px;
-                                        background-color: $color-Background-line;
-                                        position: absolute;
-                                        transform: rotate(33deg);
-                                        z-index: 0;
-                                        transform-origin: 102px -12px;
-                                        animation: long-line-grow 1s linear forwards;
+                                        top: 348px;
+                                        left: 81px;
+                                        transform: rotate(65deg);
+                                        animation: long-line2-grow 1s linear forwards;
                                         animation-delay: 1.5s;
-                                        @keyframes long-line-grow {
-                                            to {
-                                                width: 300px;
-                                            }
-                                        }
-                                        @include tablet() {
-                                            display: none;
-                                        }
-                                        @include iphone-5s() {
-                                            display: block;
-                                            width: 0px;
-                                            height: 1px;
-                                            top: 348px;
-                                            left: 81px;
-                                            transform: rotate(65deg);
-                                            animation: long-line2-grow 1s linear forwards;
-                                            animation-delay: 1.5s;
-                                            @keyframes long-line2-grow {
-                                                to {
-                                                    width: 128px;
-                                                }
-                                            }
-                                        }
+                                        @keyframes long-line2-grow{
+                                            to {width:128px;}
+                                          }
                                     }
                                 }
                             }
+                           
                         }
-
-                        .main-body {
+                        
+                    }
+                    
+                    .main-body {
+                        margin-bottom: 30px;
+                        transition: 1s;
+                        @include notebook(){
+                            margin-bottom: 10px;
+                        }
+                        @include tablet(){
                             margin-bottom: 30px;
-                            transition: 1s;
-                            @include notebook() {
-                                margin-bottom: 10px;
+                        }
+                        @include bg-phone(){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        p{
+                           margin-bottom: 0px;
+                        }
+                      
+                    }
+                }
+            }
+        }    
+    }
+    // 製鞋 card
+    .shoemaking {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        transition: 1s;
+        @include sm-tablet(){
+            min-height: 768px;
+        }
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        .container{
+            max-width: 1520px;
+            transition: 1s;
+            @include tablet(){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 80px;
+            }
+            @include iphone-5s(){
+                margin-top: 50px;
+            }
+            .shoemaking-card {
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                margin-bottom: 70px;
+                transition: 1s;
+                @include tablet(){
+                    align-items: center;
+                }
+                @include sm-tablet(){
+                    width: 500px;
+                    flex-direction: column;
+                    margin: auto;
+                }
+                @include sm-phone(){
+                    align-items: flex-start;
+                    width: unset;
+                }
+                @include iphone-5s(){
+                    margin-bottom: 80px;
+                }
+                @mixin shoes-card-contain {
+                    z-index: 2;
+                    transition: 1s;
+                    @include sm-tablet(){
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                    }
+                    img {
+                        width: 295px;
+                        border-radius: 50%;
+                        border: 5px solid $color-Border-Gary;
+                        background-color: $color-Shoes-Card;
+                        @include sm-tablet(){
+                            width: 184px;
+                           margin-right: 20px;
+                        }
+                        @include sm-phone(){
+                            width: 133px;
+                        }
+                    }
+                    .text {
+                        margin-top: 30px;
+                        @include sm-tablet(){
+                            width: 207px;
+                        }
+                        @include sm-phone(){
+                            width: unset;
+                        }
+                        p {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-bottom: 0px;
+                            &:nth-child(1) {
+                                font-size: $H5-font-size;
+                                font-weight: bold;
+                                letter-spacing: $font-letter-space-200;
+                                color: $color-IronGray;
+                                transition: 1s;
+                                @include sm-phone(){
+                                    font-size: $H9-font-size; 
+                                    letter-spacing: $font-letter-space-50; 
+                                }
                             }
-                            @include tablet() {
-                                margin-bottom: 30px;
-                            }
-                            @include bg-phone() {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                            }
-                            p {
-                                margin-bottom: 0px;
+                            &:nth-child(2) {
+                                font-size: $H10-font-size;
+                                font-family: $font-Family-C;
+                                font-weight: lighter;
+                                color: $color-IronGray;
+                                @include sm-phone(){
+                                    font-size: $H11-font-size; 
+                                }
                             }
                         }
+                    }
+                }
+                .shoes-card {
+                    @include shoes-card-contain();
+                    @include sm-tablet(){
+                        &:nth-child(3){
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+            }
+            .see-more-button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 234px;
+                transition: 1s;
+                @include tablet(){
+                    margin-bottom: 80px;
+                }
+                button {
+                    width: 277px;
+                    height: 79px;
+                    font-size: $H5-font-size;
+                    color: $color-IronGray;
+                    border-radius: 35px;
+                    background-color: unset;
+                    border: 2px solid $color-MoreButton;
+                    z-index: 1;
+                    @include sm-tablet(){
+                        background-color: $color-LightGray;
+                    }
+                    &:hover {
+                        border: 2px solid $color-MoreButton-hover;
+                        color: $color-White;
+                        font-weight: bold;
+                        background-color: $color-MoreButton-hover;
                     }
                 }
             }
         }
-        // 製鞋 card
-        .shoemaking {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            transition: 1s;
-            @include sm-tablet() {
-                min-height: 768px;
+        //縫線的 svg
+        .sew-img {
+            position: relative;
+            svg{
+                height: 1597px;
+                position: absolute;
+                top: 325px;
+                right: -20px;
+                z-index: 1;
+                // transition: 1s;
+                &.slide-in {
+                    opacity: 0;
+                    transition: all .5s;
+                    transform: translateX(10%) scale(0.95);
+                    &.active {
+                        opacity: 1;
+                        transform: translateX(0%) scale(1);
+                    }
+                }
+                @include tablet(){
+                    height: 2000px;
+                    top: 500px;
+                    right: -161px;
+                }
+                @include sm-tablet(){
+                    height: 1500px;
+                    top: 900px;
+                }
+                .finger,.sew-line{
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                .finger{
+                    animation: finger 5s ease-in-out;
+                }
+                @keyframes finger{
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    40% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                .sew-line {
+                    animation: sew-line 6s ease-in-out;
+                }
+                @keyframes sew-line {
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    50% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
             }
-            @include iphone-5s() {
-                min-height: 568px;
-            }
-            .container {
-                max-width: 1520px;
+        }
+    }
+    //影片
+    .shoes-video {
+        min-height: 969px;
+        background-color: $color-LightGray;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        transition: 1s;
+        @include tablet(){
+            display: flex;
+            flex-direction: column;
+        }
+        @include sm-tablet(){
+            min-height: 768px;
+        }
+        @include sm-phone(){
+            min-height: 568px;
+        }
+        @include iphone-5s(){
+            min-height: 568px;
+        }
+        video{
+             &:nth-child(1) {
+                width: 66.4%;
+                position: absolute;
+                top: -320px;
+                left: -8vw;
+                border-right: 18px solid $color-Apricot;
+                z-index: 2;
                 transition: 1s;
-                @include tablet() {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                @include tablet(){
+                    width: 100%;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    margin-bottom: 40px;
+                }
+            }
+            &:nth-child(2) {
+                width: 32.4%;
+                border-left: 18px solid $color-Apricot;
+                z-index: 3;
+                transition: 1s;
+                @include tablet(){
+                    width: 50%;
+                    left: 0px;
+                }
+                @include sm-tablet(){
+                    width: 40%;
+                }
+                @include bg-phone(){
+                    width: 100%;
+                }
+            }
+        }
+        svg{
+                height: 820px;
+                position: absolute;
+                top: 125px;
+                right: 48vw;
+                transform: rotate(-7deg);
+                transition: 1s;
+                @include notebook(){
+                    right: 55vw;
+                }
+                @include tablet(){
+                    height: 800px;
+                    top: unset;
+                    bottom: 260px;
+                    right: 55vw;
+                    transform: rotate(3deg);
+                }
+                .knife,.grip{
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                .knife{
+                    animation: knife 8s ease-in-out;
+                    animation-delay: 1s;
+                }
+                @keyframes knife{
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                .grip{
+                    animation: grip 7s ease-in-out;
+                    animation-delay: 2s;
+                }
+                @keyframes grip{
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+        }
+    }
+    //新品上市
+    .new-product {
+        background-color: $color-LightGray;
+        position: relative;
+        z-index: 2;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 969px;
+            bottom: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+            transition: 1s;
+            @include tablet(){
+                left: 64px;
+            }
+            @include sm-tablet(){
+                height: 1020px;
+            }
+            @include single-cart(){
+                height: 1850px;
+            }
+            @include iphone-5s(){
+                height: 1832px;
+                left: 33px;
+            }
+        }
+        .product-title {
+            padding-left:95px;
+            transition: 1s;
+            @include tablet(){
+                padding-left: 45px;
+            }
+            @include sm-tablet(){
+                margin-bottom: 120px;
+            }
+            @include iphone-5s(){
+                padding-left: 15px;
+            }
+            text-align:justify;
+            display: flex;
+            .text{
+                width: 192px;
+                text-align: center;
+                transition: 1s;
+                z-index: 2;
+                @include tablet(){
                     margin-top: 80px;
                 }
-                @include iphone-5s() {
-                    margin-top: 50px;
+                p{
+                    margin-bottom: 0px;
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        color: $color-IronGray;
+                    }
+                    &:nth-child(2) {
+                        font-size: $H5-font-size;
+                        font-weight: 300;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;                    
+                    }
                 }
-                .shoemaking-card {
-                    display: flex;
+            }
+            
+        }
+        @mixin shoes-content {
+            width: 275px;
+            height: 306px;
+            background-color: $color-White-opacity;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            img {
+                position: absolute;
+                width: 215px;
+                top: -70px;
+                left: 27px;
+            }
+            .content {
+                .text {
+                    p {
+                        margin: 0px;
+                        &:nth-child(1) {
+                            font-size: $H6-font-size;
+                            font-weight: lighter;
+                            letter-spacing: $font-letter-space-100;
+                            color: $color-IronGray;
+                            margin-bottom: 10px;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H8-font-size;
+                            font-weight: normal;
+                            letter-spacing: $font-letter-space-100;
+                            color: $color-IronGray;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .price {
+                    span {
+                        &:nth-child(1) {
+                            font-size: $H9-font-size;
+                            font-weight: lighter;
+                            color: $color-Original-Price;
+                            text-decoration: line-through;
+                        }
+                        &:nth-child(2) {
+                            font-size: $H4-font-size;
+                            font-weight: bold;
+                            color: $color-Apricot;
+                        }
+                    }
+                }
+            }
+            button {
+                width: 235px;
+                height: 50px;
+                color: $color-IronGray;
+                background-color: unset;
+                border: 2px solid $color-MoreButton;
+                border-radius: 45px;
+                margin: 30px 0px 10px 0px;
+            }
+        }
+        .container{
+            min-height: 969px;
+            max-width: 1320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 1s;
+            @include tablet(){
+                max-width: 800px;
+            }
+             @include sm-tablet(){
+                min-height: 768px;
+            }
+            @include single-cart(){
+                max-width: 500px;
+            }
+            .product-item {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 80px;
+                transition: 1s;
+                @include tablet(){
+                    flex-wrap: wrap; 
                     justify-content: space-around;
-                    text-align: center;
-                    margin-bottom: 70px;
-                    transition: 1s;
-                    @include tablet() {
-                        align-items: center;
-                    }
-                    @include sm-tablet() {
-                        width: 500px;
-                        flex-direction: column;
-                        margin: auto;
-                    }
-                    @include sm-phone() {
-                        align-items: flex-start;
-                        width: unset;
-                    }
-                    @include iphone-5s() {
-                        margin-bottom: 80px;
-                    }
-                    @mixin shoes-card-contain {
-                        z-index: 2;
-                        transition: 1s;
-                        @include sm-tablet() {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 20px;
+                    margin-bottom: 40px; 
+                }
+                .product-card {
+                    @include shoes-content();
+                    &:nth-child(2){
+                        img{
+                            top: -100px;
                         }
+                    }
+                    &:nth-child(3){
                         img {
-                            width: 295px;
-                            border-radius: 50%;
-                            border: 5px solid $color-Border-Gary;
-                            background-color: $color-Shoes-Card;
-                            @include sm-tablet() {
-                                width: 184px;
-                                margin-right: 20px;
-                            }
-                            @include sm-phone() {
-                                width: 133px;
-                            }
-                        }
-                        .text {
-                            margin-top: 30px;
-                            @include sm-tablet() {
-                                width: 207px;
-                            }
-                            @include sm-phone() {
-                                width: unset;
-                            }
-                            p {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                margin-bottom: 0px;
-                                &:nth-child(1) {
-                                    font-size: $H5-font-size;
-                                    font-weight: bold;
-                                    letter-spacing: $font-letter-space-200;
-                                    color: $color-IronGray;
-                                    transition: 1s;
-                                    @include sm-phone() {
-                                        font-size: $H9-font-size;
-                                        letter-spacing: $font-letter-space-50;
-                                    }
-                                }
-                                &:nth-child(2) {
-                                    font-size: $H10-font-size;
-                                    font-family: $font-Family-C;
-                                    font-weight: lighter;
-                                    color: $color-IronGray;
-                                    @include sm-phone() {
-                                        font-size: $H11-font-size;
-                                    }
-                                }
-                            }
+                            top: -50px;
                         }
                     }
-                    .shoes-card {
-                        @include shoes-card-contain();
-                        @include tablet() {
-                            &:nth-child(3) {
-                                margin-bottom: 60px;
-                            }
+                    @include tablet(){
+                        &:nth-child(3){
+                            margin-top: 100px;
+                        }
+                        &:nth-child(4){
+                            margin-top: 100px;   
+                        }
+                    }
+                    @include single-cart(){
+                        &:nth-child(2){
+                            margin-top: 125px;   
                         }
                     }
                 }
-                .see-more-button {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 234px;
-                    transition: 1s;
-                    @include tablet() {
-                        margin-bottom: 80px;
-                    }
-                    @include iphone-5s() {
-                        margin-bottom: 80px;
-                    }
-                    button {
+            }
+            .see-more-button {
+                display: flex;
+                justify-content: center;
+                transition: 1s;
+                @include tablet(){
+                    margin-bottom: 80px;
+                }
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        cursor: pointer;
                         width: 277px;
                         height: 79px;
                         font-size: $H5-font-size;
                         color: $color-IronGray;
-                        border-radius: 35px;
                         background-color: unset;
                         border: 2px solid $color-MoreButton;
-                        z-index: 1;
+                        border-radius: 35px;
+                        z-index: 3;
                         &:hover {
                             border: 2px solid $color-MoreButton-hover;
                             color: $color-White;
@@ -862,759 +1268,455 @@ main {
                             background-color: $color-MoreButton-hover;
                         }
                     }
-                }
+                
             }
-            //縫線的 svg
-            .sew-img {
-                position: relative;
-                img {
-                    height: 1597px;
-                    position: absolute;
-                    top: 325px;
-                    right: -20px;
-                    z-index: 1;
-                    transition: 1s;
-                    @include tablet() {
-                        height: 2000px;
-                        top: 500px;
-                        right: -161px;
-                    }
-                    @include sm-tablet() {
-                        height: 1500px;
-                        top: 900px;
-                    }
-                }
-            }
+           
         }
-        //影片
-        .shoes-video {
-            min-height: 969px;
-            background-color: $color-LightGray;
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            transition: 1s;
-            @include tablet() {
-                display: flex;
-                flex-direction: column;
-            }
-            @include sm-tablet() {
-                min-height: 768px;
-            }
-            @include sm-phone() {
-                min-height: 568px;
-            }
-            @include iphone-5s() {
-                min-height: 568px;
-            }
-            video {
-                &:nth-child(1) {
-                    width: 66.4%;
-                    position: absolute;
-                    top: -320px;
-                    left: -8vw;
-                    border-right: 18px solid $color-Apricot;
-                    z-index: 2;
-                    transition: 1s;
-                    @include tablet() {
-                        width: 100%;
-                        position: relative;
-                        top: 0px;
-                        left: 0px;
-                        margin-bottom: 40px;
-                    }
-                }
-                &:nth-child(2) {
-                    width: 32.4%;
-                    border-left: 18px solid $color-Apricot;
-                    z-index: 3;
-                    transition: 1s;
-                    @include tablet() {
-                        width: 50%;
-                        left: 0px;
-                    }
-                    @include sm-tablet() {
-                        width: 40%;
-                    }
-                    @include bg-phone() {
-                        width: 100%;
-                    }
-                }
-            }
-            img {
-                height: 820px;
-                position: absolute;
-                top: 125px;
-                right: 48vw;
-                transform: rotate(-7deg);
-                transition: 1s;
-                @include notebook() {
-                    right: 55vw;
-                }
-                @include tablet() {
-                    height: 800px;
-                    top: unset;
-                    bottom: 260px;
-                    right: 55vw;
-                    transform: rotate(3deg);
-                }
-            }
-        }
-        //新品上市
-        .new-product {
-            background-color: $color-LightGray;
-            position: relative;
-            z-index: 5;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 1px;
-                height: 969px;
-                bottom: 0px;
-                left: 190px;
-                background-color: $color-Background-line;
-                transition: 1s;
-                @include tablet() {
-                    left: 64px;
-                }
-                @include sm-tablet() {
-                    height: 1020px;
-                }
-                @include single-cart() {
-                    height: 1850px;
-                }
-                @include iphone-5s() {
-                    height: 1832px;
-                    left: 33px;
-                }
-            }
-            .product-title {
-                padding-left: 95px;
-                transition: 1s;
-                @include tablet() {
-                    padding-left: 45px;
-                }
-                @include sm-tablet() {
-                    margin-bottom: 120px;
-                }
-                @include iphone-5s() {
-                    padding-left: 15px;
-                }
-                text-align: justify;
-                display: flex;
-                .text {
-                    width: 192px;
-                    text-align: center;
-                    transition: 1s;
-                    z-index: 2;
-                    @include tablet() {
-                        margin-top: 80px;
-                    }
-                    p {
-                        margin-bottom: 0px;
-                        &:nth-child(1) {
-                            font-size: $H2-font-size;
-                            font-weight: bold;
-                            color: $color-IronGray;
-                        }
-                        &:nth-child(2) {
-                            font-size: $H5-font-size;
-                            font-weight: 300;
-                            font-family: $font-Family-C;
-                            color: $color-IronGray;
-                        }
-                    }
-                }
-            }
-            @mixin shoes-content {
-                width: 275px;
-                height: 306px;
-                background-color: $color-White-opacity;
-
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                text-align: center;
-                z-index: 2;
-                img {
-                    position: absolute;
-                    width: 215px;
-                    top: -70px;
-                    left: 27px;
-                }
-                .content {
-                    .text {
-                        p {
-                            margin: 0px;
-                            &:nth-child(1) {
-                                font-size: $H6-font-size;
-                                font-weight: lighter;
-                                letter-spacing: $font-letter-space-100;
-                                color: $color-IronGray;
-                                margin-bottom: 10px;
-                            }
-                            &:nth-child(2) {
-                                font-size: $H8-font-size;
-                                font-weight: normal;
-                                letter-spacing: $font-letter-space-100;
-                                color: $color-IronGray;
-                                margin-bottom: 30px;
-                            }
-                        }
-                    }
-                    .price {
-                        span {
-                            &:nth-child(1) {
-                                font-size: $H9-font-size;
-                                font-weight: lighter;
-                                color: $color-Original-Price;
-                                text-decoration: line-through;
-                            }
-                            &:nth-child(2) {
-                                font-size: $H4-font-size;
-                                font-weight: bold;
-                                color: $color-Apricot;
-                            }
-                        }
-                    }
-                }
-                button {
-                    width: 235px;
-                    height: 50px;
-                    color: $color-IronGray;
-                    background-color: unset;
-                    border: 2px solid $color-MoreButton;
-                    border-radius: 45px;
-                    margin: 30px 0px 10px 0px;
-                }
-            }
-            .container {
-                min-height: 969px;
-                max-width: 1320px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                transition: 1s;
-                @include tablet() {
-                    max-width: 800px;
-                }
-                @include sm-tablet() {
-                    min-height: 768px;
-                }
-                @include single-cart() {
-                    max-width: 500px;
-                }
-                .product-item {
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 80px;
-                    transition: 1s;
-                    @include tablet() {
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                        margin-bottom: 40px;
-                    }
-                    .product-card {
-                        @include shoes-content();
-                        &:nth-child(2) {
-                            img {
-                                top: -100px;
-                            }
-                        }
-                        &:nth-child(3) {
-                            img {
-                                top: -50px;
-                            }
-                        }
-                        @include tablet() {
-                            &:nth-child(3) {
-                                margin-top: 100px;
-                            }
-                            &:nth-child(4) {
-                                margin-top: 100px;
-                            }
-                        }
-                        @include single-cart() {
-                            &:nth-child(2) {
-                                margin-top: 125px;
-                            }
-                        }
-                    }
-                }
-                .see-more-button {
-                    display: flex;
-                    justify-content: center;
-                    transition: 1s;
-                    @include tablet() {
-                        margin-bottom: 80px;
-                        .product-card {
-                            @include shoes-content();
-                        }
-                        // .product-second {
-                        //     @include shoes-content();
-                        // }
-                        // .product-third {
-                        //     @include shoes-content();
-                        // }
-                        // .product-fourth {
-                        //     @include shoes-content();
-                        // }
-                    }
-                    .see-more-button {
-                        display: flex;
-                        justify-content: center;
-                        a {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            cursor: pointer;
-                            width: 277px;
-                            height: 79px;
-                            font-size: $H5-font-size;
-                            color: $color-IronGray;
-                            background-color: unset;
-                            border: 2px solid $color-MoreButton;
-                            border-radius: 35px;
-                            z-index: 2;
-                            &:hover {
-                                border: 2px solid $color-MoreButton-hover;
-                                color: $color-White;
-                                font-weight: bold;
-                                background-color: $color-MoreButton-hover;
-                            }
-                        }
-                    }
-                }
-            }
-            .parallelogram {
-                position: absolute;
-                top: 0px;
+        .parallelogram {
+            position: absolute;
+            top: 0px;
+            right: 650px;
+            width: 465px;
+            height: 900px;
+            background-color: $color-Parallelogram;
+            transform: skewX(-30deg);
+            transition: 2s ease-in-out;
+            // animation:para-move 5s linear ;
+            // @keyframes para-move {
+            //     from {right: 500px;} 
+            //     to{right:323px;} 
+            // }
+            @include tablet(){
+                top: 100px;
                 right: 323px;
-                width: 465px;
-                height: 900px;
-                background-color: $color-Parallelogram;
-                transform: skewX(-30deg);
-                transition: 1s;
-                @include tablet() {
-                    top: 100px;
-                    right: 323px;
-                    width: 300px;
-                    height: 860px;
-                }
-                @include single-cart() {
-                    right: 280px;
-                }
-                @include sm-phone() {
-                    display: none;
-                }
-                @include iphone-5s() {
-                    display: none;
-                }
+                width: 300px;
+                height: 860px;
+            }
+            @include single-cart(){
+                right: 280px;
+            }
+            @include sm-phone(){
+                display: none;
+            }
+            @include iphone-5s(){
+                display: none;
+            }
+        }      
+    }
+    // 照片牆
+    .photo-wall {
+        background-color: $color-LightGray;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 1078px;
+            top: 0px;
+            left: 190px;
+            background-color: $color-Background-line;
+            transition: 1s;
+            @include tablet(){
+                left: 64px;
+            }
+            @include iphone-5s(){
+                top: 0px;
+                left: 33px;
             }
         }
-        // 照片牆
-        .photo-wall {
-            background-color: $color-LightGray;
-            position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 1px;
-                height: 1078px;
-                top: 0px;
-                left: 190px;
-                background-color: $color-Background-line;
-                transition: 1s;
-                @include tablet() {
-                    left: 64px;
-                }
-                @include iphone-5s() {
-                    top: 0px;
-                    left: 33px;
-                }
-            }
-            .photo-title {
+        .photo-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .text{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    p {
-                        margin-bottom: 0px;
-                        &:nth-child(1) {
-                            font-size: $H2-font-size;
-                            font-weight: bold;
-                            font-family: $font-Family-C;
-                            color: $color-IronGray;
-                            @include iphone-5s() {
-                                font-size: $H4-font-size;
-                            }
-                        }
-                        &:nth-child(2) {
-                            font-size: $H7-font-size;
-                            font-weight: normal;
-                            font-family: $font-Family-C;
-                            color: $color-IronGray;
-                            transition: 1s;
-                            @include sm-tablet() {
-                                font-size: $H9-font-size;
-                            }
-                            @include bg-phone() {
-                                width: 500px;
-                                font-size: $H10-font-size;
-                                text-align: center;
-                            }
-                            @include sm-phone() {
-                                width: 300px;
-                                font-size: $H11-font-size;
-                                text-align: center;
-                            }
-                            @include iphone-5s() {
-                                width: 250px;
-                                font-size: $H11-font-size;
-                                text-align: center;
-                            }
+                p{
+                    margin-bottom: 0px;
+                    &:nth-child(1) {
+                        font-size: $H2-font-size;
+                        font-weight: bold;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;
+                        @include iphone-5s(){
+                            font-size: $H4-font-size;
                         }
                     }
-                }
-            }
-            .swiper2 {
-                min-height: 969px;
-                padding-top: 50px;
-                height: 10px;
-                transition: 1s;
-                @include sm-tablet() {
-                    min-height: 768px;
-                }
-                .swiper-container {
-                    width: 72%;
-                    height: 80%;
-                    transition: 1s;
-                    @include tablet() {
-                        width: 60%;
-                    }
-                    .swiper-slide {
-                        width: 400px;
-                        text-align: center;
-                        font-size: 18px;
-                        background: $color-WedgwoodBlue;
-                        background-size: cover;
-                        background-position: center;
-
-                        /* Center slide text vertically */
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-box-pack: center;
-                        -ms-flex-pack: center;
-                        -webkit-justify-content: center;
-                        justify-content: center;
-                        -webkit-box-align: center;
-                        -ms-flex-align: center;
-                        -webkit-align-items: center;
-                        align-items: center;
-                        img {
-                            display: block;
-                            width: 100%;
-                            height: auto;
-                            object-fit: cover;
+                    &:nth-child(2) {
+                        font-size: $H7-font-size;
+                        font-weight: normal;
+                        font-family: $font-Family-C;
+                        color: $color-IronGray;
+                        transition: 1s;
+                        @include sm-tablet(){
+                            font-size: $H9-font-size; 
                         }
-                    }
-                    .swiper-pagination-bullet {
-                        background-color: $color-White-opacity;
-                    }
-                    .swiper-pagination-bullet-active {
-                        background-color: $color-White;
-                    }
-                }
-                .swiper-button-next {
-                    top: 50%;
-                    right: 40px;
-                    color: $color-Apricot;
-                    transition: 1s;
-                    @include tablet() {
-                        right: 75px;
-                    }
-                    &:hover {
-                        color: $color-Photo-nextBtn-hover;
-                    }
-                }
-                .swiper-button-prev {
-                    top: 50%;
-                    left: 40px;
-                    color: $color-Apricot;
-                    transition: 1s;
-                    @include tablet() {
-                        left: 75px;
-                    }
-                    &:hover {
-                        color: $color-Photo-nextBtn-hover;
-                    }
-                }
-                .plus-button {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 50px;
-                    .plus {
-                        width: 66px;
-                        height: 66px;
-                        background-color: $color-Plus;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        &:before {
-                            content: "";
-                            width: 50px;
-                            height: 2px;
-                            background-color: $color-White;
-                            position: absolute;
-                            top: 32px;
-                            left: 8px;
+                        @include bg-phone(){
+                            width: 500px;
+                            font-size: $H10-font-size;
+                            text-align: center;
                         }
-                        &:after {
-                            content: "";
-                            width: 2px;
-                            height: 50px;
-                            background-color: $color-White;
-                            position: absolute;
-                            top: 8px;
-                            left: 32px;
+                        @include sm-phone(){
+                            width: 300px;
+                            font-size: $H11-font-size;
+                            text-align: center;
+                        }
+                        @include iphone-5s(){
+                            width: 250px;
+                            font-size: $H11-font-size;
+                            text-align: center;
                         }
                     }
                 }
             }
         }
-        // 試穿資訊
-        .studio-information {
-            font-family: $font-Family-A;
-            display: flex;
-            position: relative;
-
-            @include tablet() {
-                width: 100%;
-                justify-content: center;
-                background: $color-LightGray;
+        .swiper2 {
+            min-height: 969px;
+            padding-top: 50px;
+            height: 10px;
+            transition: 1s;
+            @include sm-tablet(){
+            min-height: 768px;
             }
+            .swiper-container {
+                width: 75%;
+                height: 80%;
+                transition: 1s;
+                @include tablet(){
+                    width: 60%;
+                }
+                .swiper-slide {
+                    width: 400px;
+                    text-align: center;
+                    font-size: 18px;
+                    background-color: unset;
+                    background-size: cover;
+                    background-position: center;
+                    transition: 1s;
+                    @include tablet(){
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
 
-            .studio-photo {
-                @include tablet() {
-                    display: none;
-
-                    &.active {
-                        display: flex;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        justify-content: center;
-                        align-self: center;
-                        z-index: 10;
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
                     }
                 }
-
-                .photo {
+                .swiper-pagination-bullet {
+                    background-color: $color-White-opacity;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: $color-White;
+                }
+            }
+            .swiper-button-next {
+                top: 50%;
+                right: 40px;
+                color: $color-Apricot;
+                transition: 1s;
+                @include tablet(){
+                    right: 75px;
+                }
+                &:hover {
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+            .swiper-button-prev {
+                top: 50%;
+                left: 40px;
+                color: $color-Apricot;
+                transition: 1s;
+                @include tablet(){
+                    left: 75px;
+                }
+                &:hover {
+                    color: $color-Photo-nextBtn-hover;
+                }
+            }
+            .plus-button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                .plus {
+                    width: 66px;
+                    height: 66px;
+                    background-color: $color-Plus;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     position: relative;
-
-                    & img {
-                        max-width: 559px;
-                        width: 100%;
-                        height: 838px;
-                        border-left: 18px solid $color-Apricot;
-
-                        @include tablet() {
-                            border-left: none;
-                        }
-                    }
-
-                    .studio-photo-close {
-                        display: none;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                    &:before {
+                        content: "";
                         width: 50px;
+                        height: 2px;
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 32px;
+                        left: 8px;
+                    }
+                    &:after {
+                        content: "";
+                        width: 2px;
                         height: 50px;
-                        background: #444444;
-                        color: #f7a269;
-                        cursor: pointer;
-
-                        @include tablet() {
+                        background-color: $color-White;
+                        position: absolute;
+                        top: 8px;
+                        left: 32px;
+                    }
+                }
+            }
+        }
+        
+    }
+    // 試穿資訊
+    .studio-information {
+        font-family: $font-Family-A;
+        display: flex;
+        position: relative;
+        @include tablet(){
+            width: 100%;
+            justify-content: center;
+            background: $color-LightGray;
+        }
+        .studio-photo {
+            @include tablet(){
+                display: none;                
+                &.active{
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    justify-content: center;
+                    align-self: center;
+                    z-index: 10;
+                }
+            }
+            .photo{
+                position: relative;
+                & img {
+                    max-width: 559px;
+                    width: 100%;
+                    height: 838px;
+                    border-left: 18px solid $color-Apricot;
+                    @include tablet(){
+                        border: unset;
+                    }
+                    
+                }
+                .studio-photo-close{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: gray;
+                    cursor: pointer;
+                    @include tablet(){
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 30px;
+                        z-index: 100;
+                    }
+                }
+            }                       
+        }
+        .studio-information-content{            
+            .try-container{
+                display: flex;
+                @include tablet(){                    
+                    justify-content: center;
+                    background: $color-LightGray;
+                }
+                @include sm-tablet(){
+                    display:block;
+                }
+                .try-on-infor {
+                    position: relative;   
+                    padding: 0 1.8vw;
+                    .list-unstyled{
+                        font-size: $H1-font-size;
+                        height: 72px;
+                        margin-bottom: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        white-space: nowrap;
+                        @include sm-tablet(){
+                            height: auto;
+                            align-items: center;
+                        }
+                        @include iphone-5s(){
+                            font-size: $H4-font-size;
+                        }
+                        .detail {
+                            font-size: $H6-font-size;
+                            letter-spacing: $font-letter-space-200;      
+                            font-family: 'Source Code Pro', monospace;          
+                            text-align: center;
+                            margin: 0; 
+                            position: relative;
+                            transition: 1s;
+                            @include bg-phone(){
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    bottom: -75px;
+                                    left:0px;
+                                    width: 120px;
+                                    height: 1px;
+                                    background-color: $color-Apricot;
+        
+                                }     
+                            }  
+                            @include iphone-5s(){
+                                font-size: $H10-font-size;
+                                letter-spacing: $font-letter-space-50;
+                            }
+                                                              
+                        } 
+                        
+                    }                                           
+                }
+                .try-content{   
+                    position: relative;  
+                    @include try-on(){
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }             
+                    .contact-head {  
+                        @include sm-tablet(){
                             display: flex;
                             justify-content: center;
-                            align-items: center;
-                            font-size: 30px;
-                            z-index: 100;
+                            border-top: 1px solid $color-Apricot;                                
                         }
-                    }
-                }
-            }
-            .studio-information-content {
-                .try-container {
-                    display: flex;
-
-                    @include tablet() {
-                        justify-content: center;
-                        background: $color-LightGray;
-                    }
-
-                    @include sm-tablet() {
-                        display: block;
-                    }
-
-                    .try-on-infor {
-                        position: relative;
-                        padding: 0 1.8vw;
-
-                        .list-unstyled {
-                            font-size: $H1-font-size;
-                            height: 72px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
-                            white-space: nowrap;
-
-                            @include sm-tablet() {
-                                height: auto;
-                                align-items: center;
+                        @include bg-phone(){
+                            border:unset;
+                        }                            
+                        ul {
+                            padding-left:1.8vw;                
+                            border-left: 1px solid $color-Apricot;
+                            @include sm-tablet(){
+                                border-left: none;               
+                                padding-top: 50px;                 
                             }
-
-                            .detail {
-                                font-size: $H6-font-size;
-                                letter-spacing: $font-letter-space-200;
-                                font-family: "Source Code Pro";
-                                text-align: center;
-                                margin: 0;
-                            }
-                        }
-                    }
-                    .try-content {
-                        position: relative;
-
-                        .contact-head {
-                            @include sm-tablet() {
+                            li{
                                 display: flex;
-                                justify-content: center;
-                                border-top: 1px solid $color-Apricot;
-                            }
-
-                            ul {
-                                padding-left: 1.8vw;
-                                border-left: 1px solid $color-Apricot;
-                                @include sm-tablet() {
-                                    border-left: none;
-                                    padding-top: 50px;
+                                margin-bottom: 20px;
+                                .list-unstyled-title{
+                                    font-size: $H5-font-size;
+                                    font-weight: bold;
+                                    letter-spacing: $font-letter-space-100;
+                                    width: 120px;
+                                    margin-right: 2.6vw;
+                                    @include single-cart(){
+                                        width: unset;
+                                        margin-right: unset;
+                                    }
+                                    @include iphone-5s(){
+                                        font-size: $H10-font-size;
+                                    }
                                 }
-
-                                li {
-                                    display: flex;
-                                    margin-bottom: 20px;
-                                    @include iphone-5s() {
+                                .list-unstyled-text{
+                                    font-size: $H7-font-size;
+                                    @include single-cart(){
                                         display: flex;
                                         flex-direction: column;
-                                        text-align: center;
+                                        align-items: center;
                                     }
-                                    .list-unstyled-title {
-                                        font-size: $H5-font-size;
-                                        font-weight: bold;
-                                        letter-spacing: $font-letter-space-100;
-                                        width: 120px;
-                                        margin-right: 2.6vw;
-
-                                        @include iphone-5s() {
-                                            margin: auto;
-                                        }
+                                    @include iphone-5s(){
+                                        font-size: $H11-font-size;
                                     }
-
-                                    .list-unstyled-text {
-                                        font-size: $H7-font-size;
-
-                                        @include iphone-5s() {
-                                            font-size: $H8-font-size;
-                                            white-space: nowrap;
-                                        }
-                                        p {
-                                            margin: 0;
-                                        }
+                                    p{
+                                        margin: 0;
                                     }
                                 }
+                                @include single-cart(){
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
+                                
                             }
                         }
-
-                        .photo-button {
-                            display: none;
-                            text-align: center;
-                            font-size: 23px;
-                            line-height: 45px;
-
-                            @include tablet() {
-                                position: absolute;
-                                bottom: 40px;
-                                right: -8vw;
-                                display: flex;
-                                width: 90px;
-                                height: 90px;
-                                border-radius: 50%;
-                                background: #f7a269;
-                            }
-
-                            @include sm-tablet() {
-                                position: absolute;
-                                right: 7vw;
-                                bottom: 60px;
-                            }
-
-                            @include max-phone() {
-                                position: absolute;
-                                right: 3vw;
-                            }
-
-                            @include bg-phone() {
-                                position: absolute;
-                                bottom: -45px;
-                                left: 40vw;
-                            }
-
-                            @include single-cart() {
-                                position: absolute;
-                                left: 39vw;
-                            }
-
-                            @include sm-phone() {
-                                position: absolute;
-                                left: 35vw;
-                            }
-
-                            @include iphone-5s() {
-                                position: absolute;
-                                left: 27vw;
+                    } 
+                    .photo-button{
+                        display: none;
+                        -webkit-box-shadow: 1px 5px 10px 0px #000000; 
+                        box-shadow: 1px 5px 10px 0px #000000;
+                        .text{
+                            display: flex;
+                            flex-direction: column;
+                            p{
+                                font-size: $H7-font-size;
+                                font-weight: bold;
+                                letter-spacing: $font-letter-sapce-75;
+                                margin-bottom: 0px;
                             }
                         }
-                    }
+                        
+                        @include tablet(){
+                            position: absolute;
+                            right: -155px;
+                            bottom: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 105px;
+                            height: 105px;
+                            border-radius: 50%;
+                            background: $color-Orange;
+                        }
+                        @include sm-tablet(){
+                            right: 80px;
+                        }
+                        @include try-on(){
+                            position: relative;
+                            right: unset;
+                            bottom: unset;
+                        }
+                    }               
                 }
-
-                .shop-map {
-                    margin-top: 7.1vh;
-
-                    @include tablet() {
-                        display: flex;
-                        justify-content: center;
-                        background: $color-LightGray;
-                    }
-
-                    .shop-map-content {
-                        border-left: 18px solid $color-Apricot;
-                    }
+            }         
+            
+            .shop-map {
+                margin-top: 90px;
+                @include tablet(){
+                    display: flex;
+                    justify-content: center;
+                    background: $color-LightGray;
                 }
+                .shop-map-content{
+                    
+                    border-left: 18px solid $color-Apricot;
+                }                                
             }
         }
+        
+        
+
+        
     }
+    }
+    
 }
