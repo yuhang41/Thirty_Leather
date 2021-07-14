@@ -3,7 +3,7 @@
           box-sizing: border-box;
 }
 
-*, *:before, *:after {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -11,9 +11,16 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.main-container {
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+main .main-container {
   background: #ededed;
-  min-height: 100vh;
+  min-height: calc(100vh - 113px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,20 +32,13 @@
           align-items: center;
 }
 
-input, button {
-  border: none;
-  outline: none;
-  background: none;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
-.tip {
+main .tip {
   font-size: 20px;
   margin: 40px auto 50px;
   text-align: center;
 }
 
-.cont {
+main .cont {
   overflow: hidden;
   position: relative;
   width: 900px;
@@ -47,7 +47,7 @@ input, button {
   background: #fff;
 }
 
-.form {
+main .form {
   position: relative;
   width: 640px;
   height: 100%;
@@ -67,27 +67,7 @@ input, button {
           justify-content: center;
 }
 
-.sub-cont {
-  overflow: hidden;
-  position: absolute;
-  left: 640px;
-  top: 0;
-  width: 900px;
-  height: 100%;
-  padding-left: 260px;
-  background: #fff;
-  -webkit-transition: -webkit-transform 1.2s ease-in-out;
-  transition: -webkit-transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
-}
-
-.cont.s--signup .sub-cont {
-  -webkit-transform: translate3d(-640px, 0, 0);
-          transform: translate3d(-640px, 0, 0);
-}
-
-button {
+main button {
   display: block;
   margin: 0 auto;
   width: 260px;
@@ -96,6 +76,69 @@ button {
   color: #fff;
   font-size: 15px;
   cursor: pointer;
+}
+
+main h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+}
+
+main label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+main label span {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3.2px;
+  color: #444444;
+}
+
+main input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+main .forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3.2px;
+  color: #aab2bc;
+  cursor: pointer;
+}
+
+main .submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: #e28749;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .submit:hover {
+  font-weight: bold;
+  background-color: #8090a0;
+}
+
+main .fb-btn {
+  border: 2px solid #d3dae9;
+  color: #8fa1c7;
+}
+
+main .fb-btn span {
+  font-weight: bold;
+  color: #455a81;
 }
 
 .img {
@@ -251,66 +294,24 @@ button {
           transform: translateY(72px);
 }
 
-h2 {
-  width: 100%;
-  font-size: 26px;
-  text-align: center;
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-label {
-  display: block;
-  width: 260px;
-  margin: 25px auto 0;
-  text-align: center;
-}
-
-label span {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 3.2px;
-  color: #444444;
-}
-
-input {
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.forgot-pass {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 3.2px;
-  color: #aab2bc;
-  cursor: pointer;
-}
-
-.submit {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  background: #e28749;
-  text-transform: uppercase;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.submit:hover {
-  font-weight: bold;
-  background-color: #8090a0;
-}
-
-.fb-btn {
-  border: 2px solid #d3dae9;
-  color: #8fa1c7;
-}
-
-.fb-btn span {
-  font-weight: bold;
-  color: #455a81;
+.cont.s--signup .sub-cont {
+  -webkit-transform: translate3d(-640px, 0, 0);
+          transform: translate3d(-640px, 0, 0);
 }
 
 .sign-in {
