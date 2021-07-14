@@ -7,6 +7,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    scroll-behavior: smooth;
 }
 //筆電尺寸
 @mixin notebook {
@@ -66,13 +67,33 @@
 }
 nav{
     z-index: 99;
-    transition: 1s ease-in-out;
+    transition: 1s;
     &.sticky {
         position: fixed;
         top: 0;
         width: 100%;
         background-color: $color-White;
         animation: smoothScroll 1s forwards;
+        .personal-item{
+            height: 58px;
+            .input-cart{
+                padding-top: 20px;
+
+            }
+        }
+        .navbar{
+            padding:20px 0px 0px 3.7rem;
+            @include sm-tablet(){
+                padding: 0px 0px 0px 3.7rem;
+            }
+            @include sm-phone(){
+                padding:0px;
+            }
+        }
+        .logo{
+            width: 58px;
+            height: 58px;
+        }
     }
     @keyframes smoothScroll {
         0% {
@@ -82,9 +103,7 @@ nav{
             transform: translateY(0px);
         }
     }
-      &.sticky + .content {
-        padding-top: 60px;
-      }
+
 }
 main {
     .main-container{
@@ -186,10 +205,6 @@ main {
         right: 25px;
         z-index: 5;
         transition: 1s;
-        // @include tablet(){
-        //     bottom: 50px;
-        // }
-        
         &.active {
           .more-button-list {
              opacity: 1;
@@ -418,7 +433,6 @@ main {
         box-shadow: 0px 0px 0px 4px rgba(150, 249, 183,0.3);
     }
     }
-    
     @keyframes fadeInItem {
     100% {
         transform: translatex(0px);
@@ -477,13 +491,42 @@ main {
                 left: -2px;
                 transform: rotate(-1deg);
                 transition: 1s;
-                &.slide-in {
-                    opacity: 0;
-                    transition: all .5s;
-                    transform: translateY(-30%) scale(0.95);
-                    &.active {
-                        opacity: 1;
-                        transform: translateY(0%) scale(1);
+                .scissors,
+                .scissors-mind {
+                    fill-opacity: 0;
+                    stroke: $color-Background-line;
+                    stroke-width: 2px;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 4000;
+                }
+                &[data-inviewport="scale-in"]{
+                    transition: 2s; 
+                }
+                &[data-inviewport="scale-in"].is-inViewport{
+                    .scissors,.scissors-mind{
+                        transition: 1s;
+                        animation: scissors 4s ease-in-out;
+                        animation: mind 4s ease-in-out;
+                    }                  
+                }
+                @keyframes scissors {
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                @keyframes mind {
+                    0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    50% {
+                        stroke-dashoffset: 4000;
+                    }
+                    100% {
+                        stroke-dashoffset: 0;
                     }
                 }
                 @include notebook(){
@@ -508,40 +551,7 @@ main {
                     top: 547px;
                     left: -356px;
                 }
-                .scissors,
-                .scissors-mind {
-                    fill-opacity: 0;
-                    stroke: $color-Background-line;
-                    stroke-width: 2px;
-                    stroke-dashoffset: 0;
-                    stroke-dasharray: 4000;
-                }
-                .scissors {
-                    animation: scissors 4s ease-in-out;
-                }
-                @keyframes scissors {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-                .scissors-mind {
-                    animation: mind 4s ease-in-out;
-                }
-                @keyframes mind {
-                    0% {
-                        stroke-dashoffset: 4000;
-                    }
-                    50% {
-                        stroke-dashoffset: 4000;
-                    }
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
+               
             }
             .story-discript {
                 margin-left: 46vw;
@@ -892,25 +902,6 @@ main {
                 top: 325px;
                 right: -20px;
                 z-index: 1;
-                // transition: 1s;
-                &.slide-in {
-                    opacity: 0;
-                    transition: all .5s;
-                    transform: translateX(10%) scale(0.95);
-                    &.active {
-                        opacity: 1;
-                        transform: translateX(0%) scale(1);
-                    }
-                }
-                @include tablet(){
-                    height: 2000px;
-                    top: 500px;
-                    right: -161px;
-                }
-                @include sm-tablet(){
-                    height: 1500px;
-                    top: 900px;
-                }
                 .finger,.sew-line{
                     fill-opacity: 0;
                     stroke: $color-Background-line;
@@ -918,8 +909,15 @@ main {
                     stroke-dashoffset: 0;
                     stroke-dasharray: 4000;
                 }
-                .finger{
-                    animation: finger 5s ease-in-out;
+                &[data-inviewport="scale-in"]{
+                    transition: 1s; 
+                }
+                &[data-inviewport="scale-in"].is-inViewport{
+                    .finger,.sew-line{
+                        transition: 1s;
+                        animation: finger 3s ease-in-out;
+                        animation: sew-line 4s ease-in-out;
+                    }                  
                 }
                 @keyframes finger{
                     0% {
@@ -932,9 +930,6 @@ main {
                         stroke-dashoffset: 0;
                     }
                 }
-                .sew-line {
-                    animation: sew-line 6s ease-in-out;
-                }
                 @keyframes sew-line {
                     0% {
                         stroke-dashoffset: 4000;
@@ -945,6 +940,15 @@ main {
                     100% {
                         stroke-dashoffset: 0;
                     }
+                }
+                @include tablet(){
+                    height: 2000px;
+                    top: 500px;
+                    right: -161px;
+                }
+                @include sm-tablet(){
+                    height: 1500px;
+                    top: 900px;
                 }
             }
         }
@@ -1012,16 +1016,6 @@ main {
                 right: 48vw;
                 transform: rotate(-7deg);
                 transition: 1s;
-                @include notebook(){
-                    right: 55vw;
-                }
-                @include tablet(){
-                    height: 800px;
-                    top: unset;
-                    bottom: 260px;
-                    right: 55vw;
-                    transform: rotate(3deg);
-                }
                 .knife,.grip{
                     fill-opacity: 0;
                     stroke: $color-Background-line;
@@ -1029,9 +1023,17 @@ main {
                     stroke-dashoffset: 0;
                     stroke-dasharray: 4000;
                 }
-                .knife{
-                    animation: knife 8s ease-in-out;
-                    animation-delay: 1s;
+                &[data-inviewport="scale-in"]{
+                    opacity: 0;
+                    transition: 1s; 
+                }
+                &[data-inviewport="scale-in"].is-inViewport{
+                    opacity: 1;
+                    .knife,.grip{
+                        transition: 1s;
+                        animation: knife 4s ease-in-out;
+                        animation: grip 3s ease-in-out;
+                    }                  
                 }
                 @keyframes knife{
                     0% {
@@ -1041,10 +1043,6 @@ main {
                         stroke-dashoffset: 0;
                     }
                 }
-                .grip{
-                    animation: grip 7s ease-in-out;
-                    animation-delay: 2s;
-                }
                 @keyframes grip{
                     0% {
                         stroke-dashoffset: 4000;
@@ -1052,6 +1050,16 @@ main {
                     100% {
                         stroke-dashoffset: 0;
                     }
+                }
+                @include notebook(){
+                    right: 55vw;
+                }
+                @include tablet(){
+                    height: 800px;
+                    top: unset;
+                    bottom: 260px;
+                    right: 55vw;
+                    transform: rotate(3deg);
                 }
         }
     }

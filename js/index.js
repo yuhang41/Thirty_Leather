@@ -2,9 +2,13 @@ AOS.init({
   duration: 1200,
 })
 
-//聯絡客服的顯示
+//聯絡客服的顯示開關
+let closeBtn = document.querySelector('.close');
 document.querySelector('.more-button').addEventListener('click', function () {
     document.querySelector('.chatbot').classList.toggle('active');
+});
+closeBtn.addEventListener('click', function () {
+  document.querySelector('.chatbot').classList.remove('active');
 });
 
 
@@ -94,13 +98,36 @@ var sticky = navbar.offsetTop;
 //取得banner的高度
 var bannerHeight = document.querySelector('.swiper-container').offsetHeight;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+let shortLine = document.querySelector('.short-line');
+let longLine = document.querySelector('.long-line');
 function myFunction() {
   if (window.pageYOffset >= bannerHeight) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
+    longLine.className="long-line";
+    shortLine.className="short-line";
   } else {
     navbar.classList.remove("sticky");
+    longLine.className="";
+    shortLine.className="";
   }
 }
+//slide in on scroll 
+// window.onscroll = function() {myFunction()};
+// let shortLine = document.querySelector('.short-line');
+// let longLine = document.querySelector('.long-line');
+
+
+// window.onscroll = function() {myFunction()};
+
+// function myFunction() {
+//   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+//     longLine.className="long-line";
+//     shortLine.className="short-line";
+//   } else {
+//     longLine.className="";
+//     shortLine.className="";
+//   }
+// }
 
 //試穿資訊按鈕操控
 let photo_Button = document.querySelector('.photo-button');
@@ -115,100 +142,16 @@ photo_Button.addEventListener('click',function(){
 });
 
 
-
-
-//slide in on scroll 
-// window.onscroll = function() {myFunction()};
-let shortLine = document.querySelector('.short-line');
-let longLine = document.querySelector('.long-line');
-let svgScissors = document.querySelectorAll('.scissors');
-console.log(svgScissors);
-
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    longLine.className="long-line";
-    shortLine.className="short-line";
-    svgScissors.className = "scissors";
-  } else {
-    longLine.className="";
-    shortLine.className="";
-    svgScissors.className ="";
-  }
-}
-
-// //svg animation
-// var $doc = $(document),
-//     $win = $(window),
-//     $svg = $('svg').drawsvg(animate),
-//     max = $doc.height() - $win.height();
-
-//     $win.on('scroll',function(){
-//       var p = $win.scrollTop() / max;
-//       $svg.drawsvg('progress',p);
-//     });
-
-function debounce(func, wait = 20, immediate = true) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-const sliderImages = document.querySelectorAll('.slide-in');
-
-let scissors = document.getElementById('scissors')
-let scissorsStyle = getComputedStyle(scissors);
-let scissorsHeight = parseFloat(scissorsStyle.height.replace("px", ""));
-
-let sew = document.getElementById('sew')
-let sewStyle = getComputedStyle(sew);
-let sewHeight = parseFloat(sewStyle.height.replace("px", ""));
-let sewLine =document.querySelector('.sew-line');
-let sewFinger = document.querySelector('.finger');
-console.log(sewFinger);
-
-
-function checkSlide() {
-  sliderImages.forEach(sliderImage => {
-    const slideInAtSc = (window.scrollY + window.innerHeight) - scissorsHeight / 2;
-    let scissorsTop = scissors.getBoundingClientRect().top;
-    // bottom of the image
-    const imageBottomSc = scissorsTop + scissorsHeight;
-    const isHalfShownSc = slideInAtSc > scissorsTop;
-    const isNotScrolledPastSc = window.scrollY < imageBottomSc;
-    if (isHalfShownSc && isNotScrolledPastSc) {
-      sliderImage.classList.add('active');
-    } else {
-      sliderImage.classList.remove('active');
-    }
-
-    // half way through the image
-    const slideInAt = (window.scrollY + window.innerHeight) - sewHeight / 2;
-    let sewTop = sew.getBoundingClientRect().top;
-    // bottom of the image
-    const imageBottom = sewTop + sewHeight*3.5;
-    const isHalfShown = slideInAt > sewTop;
-    const isNotScrolledPast = window.scrollY < imageBottom;
-    console.log(imageBottom,window.scrollY);
-    if (isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
-      // sewLine.classList.add("sew-line");
-      // sewFinger.classList.add("finger");
-    } else {
-      sliderImage.classList.remove('active');
-      // sewLine.classList.remove("sew-line");
-      // sewFinger.classList.remove("finger");
-    }
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+      entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
   });
-}
+};
 
-window.addEventListener('scroll', debounce(checkSlide));
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {};
+// Attach observer to every [data-inviewport] element:
+const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+ELs_inViewport.forEach(EL => {
+  Obs.observe(EL, obsOptions);
+});
