@@ -8,20 +8,24 @@
         outline:none;
     }
 }
+//筆電尺寸
 @mixin notebook {
     @media(max-width:1550px){
         @content;
         transition: 1s;
     }
 }
+// 平板尺寸
 @mixin tablet {
     @media(max-width:1024px){
         @content;
         transition: 1s;
     }
 }
+
+// 小手機尺寸
 @mixin sm-phone {
-    @media(max-width:320px){
+    @media(max-width:520px){
         @content;
         transition: 1s;
     }
@@ -126,6 +130,7 @@ nav{
         .twd-lang{
             display: flex;
             text-align: center;
+            transition: 1s;
             @include sm-phone(){
                 &{
                     display: none!important;
@@ -210,6 +215,9 @@ nav{
         &.all-commidity{
             display: none;
         }
+        &.twd-lang-item{
+            display: none;
+        }
     }
     @include notebook(){
       li{
@@ -241,6 +249,9 @@ nav{
             &.female-shoes{
                 display: none;
             }
+            &.twd-lang-item{
+                display: none;
+            }
         }
         &-toggler{
             width: 58px;
@@ -261,6 +272,11 @@ nav{
     }
     @include sm-phone(){
         padding:0px; 
+        li{
+            &.twd-lang-item{
+                display: block;
+            }
+        }
     }
 }
 //導覽列自訂義斷點
