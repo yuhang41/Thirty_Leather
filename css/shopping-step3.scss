@@ -519,14 +519,19 @@ main{
                     .go-home-button{                                        
                         width: 100%;
                         .home-button{
+                            cursor: pointer;
                             width: 100%;
-                            border: none;
+                            border: none;                            
                             border-radius: 5px;
                             outline: none;
                             background: $color-Apricot;
                             color: $color-White;
                             font-size: $H4-font-size;
                             letter-spacing: $font-letter-space-200;
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }                    
                     }
                 }            

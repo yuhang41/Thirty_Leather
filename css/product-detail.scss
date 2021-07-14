@@ -300,7 +300,8 @@ main{
                                     .color-button{
                                         width: 36px;
                                         height: 36px;
-                                        border-radius: 50%;                                                                      
+                                        border-radius: 50%; 
+                                        cursor: pointer;                                                                     
                                     }
                                 }
                             }
@@ -340,13 +341,11 @@ main{
                                         input[class="size-checkbox"]:checked+label{
                                             background-color:var(--sizeColor);
                                         }
-                                        label{
-                                            width: 45px;
-                                            height: 40px;
-                                            text-align: center;
-                                            line-height: 40px;
-                                            margin-right: 10px;
+                                        label{                                                                                        
+                                            text-align: center;                                            
+                                            padding: 0 5px;
                                             border-radius: 5px;
+                                            cursor: pointer;
                                             &:hover{
                                                 background-color: $color-Number-Hover;                                                
                                             }  
@@ -1412,7 +1411,8 @@ main{
                                     }
                                 }
                             }
-                            button {
+                            a {
+                                cursor: pointer;
                                 width: 250px;
                                 height: 50px;
                                 color: $color-IronGray;
@@ -1420,6 +1420,10 @@ main{
                                 border: 2px solid $color-MoreButton;
                                 border-radius: 45px;
                                 margin: 30px 0px 10px 0px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-decoration: none;
                             }
                         }
                         .product-item {
@@ -1428,24 +1432,19 @@ main{
                             align-items: center;
                             margin-bottom: 80px;
                             margin-top: 120px;
-                            .product-first {
+                            .product-card {
                                 @include shoes-content();
-                            }
-                            .product-second {
-                                @include shoes-content();
-                                img {
-                                    top: -100px;
+                                &:nth-child(2) {
+                                    img {
+                                        top: -100px;
+                                    }
                                 }
-                            }
-                            .product-third {
-                                @include shoes-content();
-                                img {
-                                    top: -50px;
+                                &:nth-child(3) {
+                                    img {
+                                        top: -50px;
+                                    }
                                 }
-                            }
-                            .product-fourth {
-                                @include shoes-content();
-                            }
+                            }                            
                         }
                     }
                 }

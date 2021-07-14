@@ -158,4 +158,37 @@ minusBtns.forEach(function(minusBtn){
 //     sizeButtons[index].style.background = 'none'; 
 //   }
 // })});
+// let putcart = document.querySelector('.putcart');
+// let colorCheckboxs = document.querySelectorAll(".color-checkbox");
+// let sizeCheckboxs = document.querySelectorAll('.size-checkbox');
+// putcart.addEventListener('click',function(){
+//     let productId = putcart.dataset.id;
+//     let quantity = document.querySelector('#quantity');
+//     let csrf_token =document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+//     let formData =new FormData();
+//     colorCheckboxs.forEach(checkbox =>{
+//         if(checkbox.checked){
+//             formData.append('color[]',checkbox.value);
+//         }
+//     });
+//     sizeCheckboxs.forEach(checkbox =>{
+//         if(checkbox.checked){
+//             formData.append('size[]',checkbox.value);
+//         }
+//     });
+//     formData.append('_token',csrf_token);
+//     formData.append('productId',productId);
+//     formData.append('quantity',quantity.value);
+//     fetch('/front/product/add',{
+//         'method' : 'post',
+//         'body' : formData
+//     }).then(rep=>{
+//         return rep.text();
+//     }).then(result=>{
+//         if(result == 'success'){
+//             console.log(result);
+//             alert('已加入購物車');
+//         }
+//     })
+// });
 
