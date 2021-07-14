@@ -13,6 +13,13 @@ nav{
     .options{
         background-color: $color-LightGray;
     }
+    .input-cart{
+        .search{
+            input{
+                background-color: $color-LightGray!important;
+            }
+        }
+    }
     .twd-lang{
         background-color: $color-LightGray;
     }
