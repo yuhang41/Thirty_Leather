@@ -36,21 +36,15 @@ nav {
   }
 }
 
-nav .logo {
+nav .go-home-logo {
   position: absolute;
   top: 0px;
   left: 142px;
-  width: 160px;
-  height: 148px;
-  -webkit-transition: 1s;
-  transition: 1s;
   z-index: 2;
 }
 
 @media (max-width: 1024px) {
-  nav .logo {
-    width: 58px;
-    height: 58px;
+  nav .go-home-logo {
     left: 0px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -58,8 +52,24 @@ nav .logo {
 }
 
 @media (max-width: 520px) {
-  nav .logo {
+  nav .go-home-logo {
     left: 58px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+nav .go-home-logo .logo {
+  width: 160px;
+  height: 148px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 1024px) {
+  nav .go-home-logo .logo {
+    width: 58px;
+    height: 58px;
     -webkit-transition: 1s;
     transition: 1s;
   }

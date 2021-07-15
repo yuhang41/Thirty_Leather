@@ -39,23 +39,27 @@ nav{
     @include tablet(){
         padding-left: 0px;
     }
-    .logo{
+    .go-home-logo{
         position: absolute;
         top: 0px;
         left: 142px;
-        width: 160px;
-        height: 148px;
-        transition: 1s;
         z-index: 2;
         @include tablet(){
-            width: 58px;
-            height: 58px;
             left: 0px;
         }
         @include sm-phone(){
             left: 58px;
         }
-    }
+        .logo{            
+            width: 160px;
+            height: 148px;
+            transition: 1s;            
+            @include tablet(){
+                width: 58px;
+                height: 58px;                
+            }            
+        }
+    }    
     .personal-item{
         height: 113px;
         display: flex;
