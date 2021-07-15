@@ -33,39 +33,43 @@ footer .site-footer .footer-logo {
   margin: auto;
 }
 
-footer .site-footer .social-icons a {
+footer .site-footer .footer-bottom {
+  padding: 0px;
+}
+
+footer .site-footer .footer-bottom .social-icons a {
   width: 48px;
   height: 48px;
   line-height: 48px;
   border-radius: 50%;
 }
 
-footer .site-footer .social-icons a.line {
+footer .site-footer .footer-bottom .social-icons a.line {
   background-image: url("/img/LINE-ICON.jpg");
   background-position: center;
   background-size: contain;
 }
 
-footer .site-footer .social-icons a.facebook {
+footer .site-footer .footer-bottom .social-icons a.facebook {
   background-image: url("/img/facebook-ICON.jpg");
   background-position: center;
   background-size: contain;
   margin: 0px 20px;
 }
 
-footer .site-footer .social-icons a.instagram {
+footer .site-footer .footer-bottom .social-icons a.instagram {
   background-image: url("/img/Instagram.ICON.jpg");
   background-position: center;
   background-size: contain;
 }
 
-footer .site-footer .footer-arrow {
+footer .site-footer .footer-bottom .footer-arrow {
   font-size: 72px;
   color: #f7a269;
   position: relative;
 }
 
-footer .site-footer .footer-arrow-text {
+footer .site-footer .footer-bottom .footer-arrow-text {
   font-size: 18px;
   font-family: "Source Code Pro";
   letter-spacing: 1.6px;
@@ -74,26 +78,27 @@ footer .site-footer .footer-arrow-text {
   left: 5px;
 }
 
-footer .site-footer .common-problems {
+footer .site-footer .footer-bottom .common-problems {
   font-size: 16px;
   letter-spacing: 3.2px;
   color: #444444;
+  padding: 0px;
 }
 
-footer .site-footer .common-problems .lists {
+footer .site-footer .footer-bottom .common-problems .lists {
   border-left: 1px solid #8090a0;
   padding-right: 10px;
 }
 
-footer .site-footer .common-problems .list {
+footer .site-footer .footer-bottom .common-problems .list {
   cursor: default;
 }
 
-footer .site-footer .common-problems a {
+footer .site-footer .footer-bottom .common-problems a {
   color: #8090a0;
 }
 
-footer .site-footer .common-problems ul li {
+footer .site-footer .footer-bottom .common-problems ul li {
   padding-left: 10px;
   cursor: default;
 }
@@ -107,6 +112,10 @@ footer .site-footer .copyright {
   color: #ffffff;
 }
 
+footer .site-footer .copyright span {
+  margin-left: 10px;
+}
+
 @media (max-width: 1024px) {
   footer {
     position: relative;
@@ -114,26 +123,37 @@ footer .site-footer .copyright {
   footer .site-footer {
     padding-bottom: 0;
   }
-  footer .site-footer .footer-arrow {
+  footer .site-footer .footer-bottom .footer-arrow {
     position: absolute;
     top: -130px;
     right: 10px;
   }
-  footer .site-footer .common-problems {
+  footer .site-footer .footer-bottom .common-problems {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 991px) {
-  footer .site-footer .common-problems .lists {
-    border: none;
+  footer .site-footer .footer-bottom .common-problems {
+    font-size: 14px;
   }
-  footer .site-footer .common-problems ul li {
-    width: 155px;
-    height: 32px;
+}
+
+@media (max-width: 768px) {
+  footer .site-footer .footer-bottom .common-problems {
+    margin-left: 3vw;
   }
-  footer .site-footer .common-problems .common-problem {
-    margin-left: 10px;
+  footer .site-footer .footer-bottom .common-problems .common-problem {
+    margin-left: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  footer .site-footer {
+    padding-bottom: 0;
+  }
+  footer .site-footer .copyright span {
+    display: none;
   }
 }
 
@@ -147,17 +167,10 @@ footer .site-footer .copyright {
     margin: auto;
     position: relative;
   }
-  footer .site-footer .footer-arrow {
+  footer .site-footer .footer-bottom .footer-arrow {
     position: absolute;
     top: -110px;
     right: 10px;
-  }
-  footer .site-footer .common-problems li {
-    width: 155px;
-    height: 32px;
-  }
-  footer .site-footer .common-problems .lists {
-    border: none;
   }
 }
 /*# sourceMappingURL=footer.css.map */
