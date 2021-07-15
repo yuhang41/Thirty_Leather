@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <nav>
-        <img class="logo" src={{ asset('img/30leather_logo.svg') }} alt="">
+    <nav id="navbar">
+        <a href={{ asset('/front') }} class="go-home-logo"><img class="logo" src={{ asset('img/30leather_logo.svg') }} alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -94,7 +94,7 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">購鞋怎麼選</a>
                     <a class="dropdown-item" href="#">系列鞋款介紹</a>
-                    <a class="dropdown-item" href=#>製成故事</a>
+                    <a class="dropdown-item" href={{ asset('/front/shose') }}>製成故事</a>
                   </div>
                   <a class="dropdown-item" href="#">試穿服務</a>
                 </div>
@@ -131,14 +131,22 @@
         </nav>
         <div class="personal-item">
           <div class="input-cart d-flex">
-            <form class="search d-flex my-2 my-lg-0">
+            <form class="search d-flex my-2">
                 <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                 <label for="search-input"><i class="fas fa-search mr-2"></i></label>
             </form>
-            <a href={{ asset('/front/user') }}><i class="fas fa-user m-2"></i></a>
+            @guest
+                <a href={{ asset('/front/login') }}><i class="fas fa-user m-2"></i></a>
+            @else
+                <a href={{ asset('/front/user') }}><i class="fas fa-user m-2" style="color:#000"></i></a>
+            @endguest
             <div class="cart">
-                <a href={{ asset('/front/shoppingstep1') }}><i class="fas fa-shopping-cart m-2"></i></a>
-                <div class="cart-number">1</div>
+                @guest
+                    <a href={{ asset('/front/login') }}><i class="fas fa-shopping-cart m-2"></i></a>
+                @else
+                    <a href={{ asset('/front/shoppingstep1') }}><i class="fas fa-shopping-cart m-2"></i></a>
+                @endguest
+                {{-- <div class="cart-number">1</div> --}}
             </div>
           </div>
           <div class="twd-lang d-flex">
@@ -165,9 +173,9 @@
 
                 <hr>
 
-                <div class="col-md-12">
+                <div class="footer-bottom col-xl-12">
                     <ul class="social-icons mb-0 row list-unstyled justify-content-center">
-                        <li><a class="line d-inline-block" href=""></a></li>
+                        <li><a class="line d-inline-block" href="https://page.line.me/igt6497i?openQrModal=true" target="_blank"></a></li>
 
                         <li><a class="facebook d-inline-block" href="https://www.facebook.com/30leather" target="_blank"></a></li>
 
@@ -175,12 +183,12 @@
                     </ul>
 
                     <div class="return-nav d-flex justify-content-end">
-                        <a href=""><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
+                        <a href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
                                 <div class="footer-arrow-text">TOP</div>
                             </i></a>
                     </div>
 
-                    <div class="common-problems row col-lg-12 col-md-3 col-sm-4 col-5">
+                    <div class="common-problems row col-xl-12">
                         <ul class="row m-auto list-unstyled">
                             <li class="list common-problem">常見問題</li>
 
@@ -194,7 +202,7 @@
 
                             <li><a href="#" class="lists"></a>發票折讓</li>
 
-                            <li class="list"><a href="#" class="lists"></a>隱私權保護</li>
+                            <li class="list"><a href="#" class="lists privacy"></a>隱私權保護</li>
                         </ul>
                     </div>
                 </div>
@@ -202,10 +210,9 @@
 
             <hr>
 
-            <div class="copyright-space d-inline-block"></div>
-
-            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy; 三十革-臺灣手工鞋 All
-                Rights Reserved</div>
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;  <span>森上沒戴前 All
+                Rights Reserved</span></div>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

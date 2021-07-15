@@ -116,7 +116,7 @@
                     </div>
                     <div class="order-complete">
                         <div class="photo-svg">
-                            <img src="https://placeholder.pics/svg/100x100">
+                            <img src={{ asset('img/購物車-訂單完成.svg') }}>
                         </div>
                         <div class="complete-message">
                             <h3>謝謝您!您的訂單已經成立</h3>
@@ -248,7 +248,7 @@
                     </div>
                 </div>
                 <div class="go-home-button">
-                    <button class="home-button">回首頁<i class="fas fa-long-arrow-alt-right"></i></button>
+                    <a href={{ asset('/front') }} class="home-button">回首頁<i class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
             </div>
         </div>

@@ -128,7 +128,8 @@ class FrontController extends Controller
     }
     public function product_detail($id){
         $product = Product::find($id);
-        return view($this->product_detail,compact('product'));
+        $list = Product::get();
+        return view($this->product_detail,compact('product','list'));
     }
 
     public function add(Request $req){
@@ -158,6 +159,10 @@ class FrontController extends Controller
             ),
         ));
         return 'success';
+    }
+    public function delete($id){
+        \Cart::remove($id);
+        return redirect('/front/shoppingstep1')->with('message','購物車刪除成功');
     }
     public function CartContent(){
         $dataCart = \Cart::getContent();

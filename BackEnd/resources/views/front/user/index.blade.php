@@ -20,8 +20,11 @@
                     href={{ asset('/front/user/passwordModify') }}>密碼修改</a>
                 <form action={{ route('user_logout') }} method="POST">
                     @csrf
-                    <button class="list-group-item list-group-item-action text-center" type="submit">會員登出</a>
+                    <button class="list-group-item list-group-item-action text-center" type="submit">會員登出</button>
                 </form>
+                @can('admin')
+                    <a class="list-group-item list-group-item-action text-center" href={{ asset('/admin/home') }}>管理者</a>
+                @endcan
             </div>
         </div>
 

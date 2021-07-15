@@ -73,6 +73,7 @@ Route::prefix('front')->group(function(){
         Route::get('/shoppingstep2','FrontController@ShoppingStep2');
         Route::post('/shoppingstep2/check','FrontController@Step2_Check');
     });
+    Route::delete('cart/delete/{id}','FrontController@delete');
     Route::get('/shoppingstep3','FrontController@ShoppingStep3');
 
     Route::prefix('product')->group(function(){
@@ -94,10 +95,10 @@ Route::prefix('front')->group(function(){
     });
     Route::prefix('login')->group(function(){
         Route::get('/','FrontController@login');
-        Route::get('/sigin', 'Auth\LoginController@showLoginForm')->name('signin');
-        Route::post('/sigin', 'Auth\LoginController@login');
-        Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('login_register');
-        Route::post('/register', 'Auth\RegisterController@register');
+        // Route::get('/sigin', 'Auth\LoginController@showLoginForm');
+        Route::post('/sigin', 'Auth\LoginController@login')->name('signin');
+        // Route::get('/register', 'Auth\RegisterController@showRegistrationForm');
+        Route::post('/register', 'Auth\RegisterController@register')->name('login_register');
     });
     Route::prefix('shose')->group(function(){
         Route::get('/','FrontController@shose');

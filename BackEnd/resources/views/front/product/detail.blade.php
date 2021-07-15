@@ -149,9 +149,9 @@
                             <button class="putcart" data-id="{{ $product->id }}">加入購物車</button>
                             <button class="pre-order">預購</button>
                             <div class="order-amount">
-                                <button class="minus">-</button>
+                                <button class="btn minus-btn">-</button>
                                 <input type="number" id="quantity" value="1">
-                                <button class="plus">+</button>
+                                <button class="btn plus-btn">+</button>
                             </div>
                         </div>
                         <div class="order-price">
@@ -190,7 +190,7 @@
                                         <div class="click-first">
                                             <div class="click-button"></div>
                                             <div class="content-first">
-                                                <img src="../img/shoes-introduction-one.png" alt="">
+                                                <img src={{ asset('img/shoes-introduction-one.png') }} alt="">
                                                 <div class="content-text ">
                                                     <p>S型懶人古銅鉤扣</p>
                                                     <p>懶人勾扣，有三節可條鬆緊</p>
@@ -200,7 +200,7 @@
                                         <div class="click-second">
                                             <div class="click-button"></div>
                                             <div class="content-second">
-                                                <img src="../img/shoes-introduction-second.png" alt="">
+                                                <img src={{ asset('img/shoes-introduction-second.png') }} alt="">
                                                 <div class="content-text">
                                                     <p>L型沿條壓馬克縫線</p>
                                                     <p>有90度立體導角與一般平的沿條工藝不同</p>
@@ -210,7 +210,7 @@
                                         <div class="click-third">
                                             <div class="click-button"></div>
                                             <div class="content-third">
-                                                <img src="../img/shoes-introduction-third.png" alt="">
+                                                <img src={{ asset('img/shoes-introduction-third.png') }} alt="">
                                                 <div class="content-text">
                                                     <p>吸汗透氣豚皮內裡</p>
                                                     <p>獨家研發包覆5mm高密度發泡層</p>
@@ -222,7 +222,7 @@
                                             <div class="click-button"></div>
                                             <div class="content-fourth">
                                                 <div class="content-fourth-one">
-                                                    <img src="../img/shoes-introduction-fourth-2.png" alt="">
+                                                    <img src={{ asset('img/shoes-introduction-fourth-2.png') }} alt="">
                                                     <div class="content-text">
                                                         <p>第一層 : 真皮沿條</p>
                                                         <p>第二層 : 5mm發泡緩衝夾層</p>
@@ -232,7 +232,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="content-fourth-two">
-                                                    <img src="../img/shoes-introduction-fourth-1.png" alt="">
+                                                    <img src={{ asset('img/shoes-introduction-fourth-1.png') }} alt="">
                                                     <div class="content-text">
                                                         <p>止滑橡膠大底</p>
                                                     </div>
@@ -242,7 +242,7 @@
                                         <div class="click-fifth">
                                             <div class="click-button"></div>
                                             <div class="content-fifth">
-                                                <img src="../img/shoes-introduction-fifth.png" alt="">
+                                                <img src={{ asset('img/shoes-introduction-fifth.png') }} alt="">
                                                 <div class="content-text">
                                                     <p>防磨乳膠後跟，毛面真皮後跟內裡</p>
                                                     <p>增加摩擦力，減少穿鞋腳跟滑落不便</p>
@@ -250,7 +250,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img class="main-photo" src="../img/shoes-first.png" alt="">
+                                    <img class="main-photo" src={{ asset('img/shoes-first.png') }} alt="">
                                 </div>
                             </div>
                         </div>
@@ -325,10 +325,18 @@
                             <div class="development-process-swiper">
                                 <div class="swiper-container mySwiper4">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">Slide 1</div>
-                                        <div class="swiper-slide">Slide 2</div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        <div class="swiper-slide">Slide 4</div>
+                                        <div class="swiper-slide">
+                                            <img src={{ asset('img/shoes-development1.jpg') }}>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src={{ asset('img/shoes-development2.jpg') }}>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src={{ asset('img/shoes-development3.jpg') }}>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src={{ asset('img/shoes-development4.jpg') }}>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -441,7 +449,7 @@
                         <div class="shopping-cart">
                             <ul>
                                 <li class="order-cart img-content">
-                                    <img src="https://placeholder.pics/svg/100x100" alt="">
+                                    <img src={{ asset('img/shoes-black1.jpg') }} alt="">
                                     <div class="cart-content">
                                         <div class="cart-title">
                                             <p>品質不輸專櫃!!</p>
@@ -474,21 +482,26 @@
                     <div class="commid-title">相關用品</div>
                     <div class="commidity">
                         <div class="product-item">
-                            <div class="product-first">
-                                <img src="../img/shoes-first.png" alt="">
-                                <div class="content">
-                                    <div class="text">
-                                        <p>魚骨手工編織羅馬涼鞋</p>
-                                        <p>| 牽手一起長大 |</p>
+                            @for ($i = 0; $i < 4; $i++)
+                            @php
+                                $discount = round($list[$i]->price * $list[$i]->discount)
+                            @endphp
+                                <div class="product-card">
+                                    <img src={{ asset($list[$i]->photo) }} alt="">
+                                    <div class="content">
+                                        <div class="text">
+                                            <p>{{ $list[$i]->product_nickname }}</p>
+                                            <p>{{ $list[$i]->product_name }}</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>${{ $list[$i]->price }}</span>
+                                            <span>${{ $discount }}</span>
+                                        </div>
                                     </div>
-                                    <div class="price">
-                                        <span>$4,280</span>
-                                        <span>$2,480</span>
-                                    </div>
+                                    <a href="{{ asset('/front/product/detail') }}/{{ $list[$i]->id }}">了解此商品</a>
                                 </div>
-                                <button>加入購物車</button>
-                            </div>
-                            <div class="product-second">
+                            @endfor
+                            {{-- <div class="product-card">
                                 <img src="../img/shoes-second.png" alt="">
                                 <div class="content">
                                     <div class="text">
@@ -500,9 +513,9 @@
                                         <span>$2,280</span>
                                     </div>
                                 </div>
-                                <button>加入購物車</button>
+                                <a>了解此商品</a>
                             </div>
-                            <div class="product-third">
+                            <div class="product-card">
                                 <img src="../img/shoes-third.png" alt="">
                                 <div class="content">
                                     <div class="text">
@@ -514,9 +527,9 @@
                                         <span>$1,980</span>
                                     </div>
                                 </div>
-                                <button>加入購物車</button>
+                                <a>了解此商品</a>
                             </div>
-                            <div class="product-fourth">
+                            <div class="product-card">
                                 <img src="../img/shoes-fourth.png" alt="">
                                 <div class="content">
                                     <div class="text">
@@ -528,8 +541,8 @@
                                         <span>$1,980</span>
                                     </div>
                                 </div>
-                                <button>加入購物車</button>
-                            </div>
+                                <a>了解此商品</a>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
