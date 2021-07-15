@@ -1,4 +1,4 @@
-@import '_style_guild.scss';
+@import "_style_guild.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 
@@ -7,7 +7,7 @@ body {
     font-family: $font-Family-A;
 }
 
-footer {    
+footer {
     .site-footer {
         height: 600px;
         display: flex;
@@ -16,80 +16,85 @@ footer {
         hr {
             border: none;
         }
-    
+
         .footer-logo {
             width: 195px;
             height: 180px;
             margin: auto;
         }
-    
-        .social-icons {
-            a {
-                width: 48px;
-                height: 48px;
-                line-height: 48px;
-                border-radius: 50%;
-    
-                &.line {
-                    background-image: url("/img/LINE-ICON.jpg");
-                    background-position: center;
-                    background-size: contain;
+
+        .footer-bottom {
+            padding: 0px;
+
+            .social-icons {
+                a {
+                    width: 48px;
+                    height: 48px;
+                    line-height: 48px;
+                    border-radius: 50%;
+
+                    &.line {
+                        background-image: url("/img/LINE-ICON.jpg");
+                        background-position: center;
+                        background-size: contain;
+                    }
+
+                    &.facebook {
+                        background-image: url("/img/facebook-ICON.jpg");
+                        background-position: center;
+                        background-size: contain;
+                        margin: 0px 20px;
+                    }
+
+                    &.instagram {
+                        background-image: url("/img/Instagram.ICON.jpg");
+                        background-position: center;
+                        background-size: contain;
+                    }
                 }
-    
-                &.facebook {
-                    background-image: url("/img/facebook-ICON.jpg");
-                    background-position: center;
-                    background-size: contain;
-                    margin: 0px 20px;
+            }
+
+            .footer-arrow {
+                font-size: 72px;
+                color: $color-Apricot;
+                position: relative;
+            }
+
+            .footer-arrow-text {
+                font-size: $H7-font-size;
+                font-family: "Source Code Pro";
+                letter-spacing: $font-letter-space-100;
+                position: absolute;
+                top: 40px;
+                left: 5px;
+            }
+
+            .common-problems {
+                font-size: $H8-font-size;
+                letter-spacing: $font-letter-space-200;
+                color: $color-IronGray;
+                padding: 0px;
+
+                .lists {
+                    border-left: 1px solid $color-WedgwoodBlue;
+                    padding-right: 10px;
                 }
-    
-                &.instagram {
-                    background-image: url("/img/Instagram.ICON.jpg");
-                    background-position: center;
-                    background-size: contain;
+
+                .list {
+                    cursor: default;
+                }
+
+                a {
+                    color: $color-WedgwoodBlue;
+                }
+
+                ul li {
+                    padding-left: 10px;
+                    cursor: default;
                 }
             }
         }
-    
-        .footer-arrow {
-            font-size: 72px;
-            color: $color-Apricot;
-            position: relative;
-        }
-    
-        .footer-arrow-text {
-            font-size: $H7-font-size;
-            font-family: "Source Code Pro";
-            letter-spacing: $font-letter-space-100;
-            position: absolute;
-            top: 40px;
-            left: 5px;
-        }
-    
-        .common-problems {
-            font-size: $H8-font-size;
-            letter-spacing: $font-letter-space-200;
-            color: $color-IronGray;
-    
-            .lists {
-                border-left: 1px solid $color-WedgwoodBlue;
-                padding-right: 10px;
-            }
-    
-            .list {
-                cursor: default;
-            }
-    
-            a {
-                color: $color-WedgwoodBlue;
-            }
-    
-            ul li {
-                padding-left: 10px;
-                cursor: default;
-            }
-        }
-    
+
         .copyright {
             height: 80px;
             background-color: $color-Footer-Background;
@@ -97,6 +102,10 @@ footer {
             font-family: "Source Code Pro";
             letter-spacing: $font-letter-space-100;
             color: $color-White;
+
+            span {
+                margin-left: 10px;
+            }
         }
     }
 }
@@ -107,14 +116,16 @@ footer {
         .site-footer {
             padding-bottom: 0;
 
-            .footer-arrow {
-                position: absolute;
-                top: -130px;
-                right: 10px;
-            }
-
-            .common-problems {
-                margin-top: 50px;
+            .footer-bottom {
+                .footer-arrow {
+                    position: absolute;
+                    top: -130px;
+                    right: 10px;
+                }
+    
+                .common-problems {
+                    margin-top: 50px;
+                }
             }
         }
     }
@@ -123,17 +134,38 @@ footer {
 @media (max-width: 991px) {
     footer {
         .site-footer {
-            .common-problems {
-                .lists {
-                    border: none;
+            .footer-bottom {
+                .common-problems {
+                    font-size: 14px;
                 }
-                ul li {
-                    width: 155px;
-                    height: 32px;
-                }
+            }
+        }
+    }
+}
 
-                .common-problem {
-                    margin-left: 10px;
+@media (max-width: 768px) {
+    footer {
+        .site-footer {
+            .footer-bottom {
+                .common-problems {
+                    margin-left: 3vw;
+                    .common-problem {
+                        margin-left: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    footer {
+        .site-footer {
+            padding-bottom: 0;
+            
+            .copyright {
+                span {
+                    display: none;
                 }
             }
         }
@@ -144,7 +176,7 @@ footer {
     footer {
         .site-footer {
             padding-bottom: 0;
-            
+
             .footer-logo {
                 width: 95px;
                 height: 80px;
@@ -152,20 +184,11 @@ footer {
                 position: relative;
             }
 
-            .footer-arrow {
-                position: absolute;
-                top: -110px;
-                right: 10px;
-            }
-    
-            .common-problems {
-                li {
-                    width: 155px;
-                    height: 32px;
-                }
-        
-                .lists {
-                    border: none;
+            .footer-bottom {
+                .footer-arrow {
+                    position: absolute;
+                    top: -110px;
+                    right: 10px;
                 }
             }
         }
