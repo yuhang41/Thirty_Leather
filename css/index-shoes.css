@@ -15,12 +15,64 @@
   outline: none;
 }
 
+nav {
+  background-color: #ebeae5;
+  margin-left: 146px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    margin-left: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 nav .options {
   background-color: #ebeae5;
 }
 
+nav .go-home-logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@media (max-width: 520px) {
+  nav .go-home-logo {
+    left: 58px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+nav .input-cart .search input {
+  background-color: #ebeae5 !important;
+}
+
 nav .twd-lang {
   background-color: #ebeae5;
+}
+
+.navbar {
+  padding: 3.5rem 0px 0px 1rem;
+  margin-left: 0px;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0px 0px 0px 3.7rem;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main {
@@ -84,11 +136,39 @@ main .main-container .shoes-article .decoration-line {
   position: relative;
 }
 
-main .main-container .shoes-article .decoration-line img {
+main .main-container .shoes-article .decoration-line svg {
   position: absolute;
   top: 25px;
   left: 20px;
   width: 1000px;
+}
+
+main .main-container .shoes-article .decoration-line svg .curve {
+  fill-opacity: 0;
+  stroke: #abbac9;
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 4000;
+  -webkit-animation: curve 4s ease-in-out;
+          animation: curve 4s ease-in-out;
+}
+
+@-webkit-keyframes curve {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes curve {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 main .main-container .shoes-img-display {

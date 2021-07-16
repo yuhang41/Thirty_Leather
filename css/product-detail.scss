@@ -321,7 +321,7 @@ main{
                                         &:nth-child(2){
                                             font-size: $H10-font-size;
                                             font-weight: $font-Weight-B;
-                                            color: $color-IronGray;
+                                            color: $color-Product-Detail-Title;
                                         }
                                     }
                                 }
@@ -602,7 +602,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-Shoes-Button;
+                                                    background-color: $color-SkyBlue;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -616,7 +616,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(45deg);
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color: $color-SkyBlue;
                                                             transform-origin:40px -1px;
                                                             animation: short-line-grow .5s linear forwards;
                                                             animation-delay: .7s;
@@ -631,7 +631,7 @@ main{
                                                             left: -229px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color: $color-SkyBlue;
                                                             animation: long-line-grow .7s linear forwards;
                                                         }
                                                         @keyframes long-line-grow{
@@ -676,7 +676,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-Shoes-Button;
+                                                    background-color:$color-SkyBlue;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -690,7 +690,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(-68deg);
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color:$color-SkyBlue;
                                                             transform-origin:40px -1px;
                                                             animation: second-line-grow .5s linear forwards;
                                                         }
@@ -736,7 +736,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-Shoes-Button;
+                                                    background-color:$color-SkyBlue;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -750,7 +750,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(-128deg);
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color:$color-SkyBlue;
                                                             transform-origin:40px -1px;
                                                             animation: third-line-grow .8s linear forwards;
                                                         }
@@ -795,7 +795,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-Shoes-Button;
+                                                    background-color:$color-SkyBlue;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -808,7 +808,7 @@ main{
                                                             left: 12px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color:$color-SkyBlue;
                                                             transform-origin:40px -1px;
                                                             transform: rotate(-180deg);
                                                             animation: fourth-line-grow .3s linear forwards;
@@ -825,7 +825,7 @@ main{
                                                             left: 84px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color:$color-SkyBlue;
                                                             transform: rotate(125deg);
                                                             transform-origin:40px -1px;
                                                             animation: fourth-two-line-grow .8s linear forwards;
@@ -919,7 +919,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-Shoes-Button;
+                                                    background-color:$color-SkyBlue;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -933,7 +933,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(124deg);
-                                                            background-color: $color-Shoes-Button;
+                                                            background-color:$color-SkyBlue;
                                                             transform-origin:40px -1px;
                                                             animation: fifth-line-grow .8s linear forwards; 
                                                         }
@@ -969,15 +969,15 @@ main{
                                             }
                                             @keyframes onePulse {
                                                 0% {
-                                                    box-shadow: 0px 0px 0px 0px rgba(245, 160, 105, 0.5);
+                                                    box-shadow: 0px 0px 0px 0px rgba(134,178,196,0.5);
                                                 }
                                     
                                                 50% {
-                                                    box-shadow: 0px 0px 0px 12px rgba(2245, 160, 105, 0.2);
+                                                    box-shadow: 0px 0px 0px 12px rgba(134,178,196 ,0.2);
                                                 }
                                     
                                                 100% {
-                                                    box-shadow: 0px 0px 0px 4px rgba(245, 160, 105, 0.5);
+                                                    box-shadow: 0px 0px 0px 4px rgba(134,178,196,0.5);
                                                 }
                                             }
                                         }
