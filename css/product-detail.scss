@@ -16,6 +16,20 @@
     letter-spacing: $font-letter-space-50;
     color:$color-IronGray;
 }
+//1720版本
+@mixin sm-screen{
+    @media(max-width:1750px){
+        @content;
+        transition: 1s;
+    }
+}
+//1435版本
+@mixin normal-screen{
+    @media(max-width:1435px){
+        @content;
+        transition: 1s;
+    }
+}
 body{
     scroll-behavior: smooth;
 }
@@ -28,6 +42,9 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
+            @include sm-screen(){
+                display: none;
+            }
             .all-commodity{
                 max-width: 200px;
                 margin: auto;
@@ -90,6 +107,9 @@ main{
                 background: $color-LightGray;
                 .breadcrumbs{
                     margin-bottom: 20px;
+                    @include sm-screen(){
+                        margin-left: 6rem;
+                    }
                     .bread-label{
                         a{
                             font-size: $H10-font-size;
@@ -103,6 +123,10 @@ main{
                     display: flex;
                     justify-content: space-between;
                     border-bottom: 1px solid $color-Product-Detail-Title;
+                    @include normal-screen(){
+                        flex-direction: column;
+                        align-items: center;
+                    }
                     .swiper{
                         max-width: 600.353px;
                         max-height: 789.17px;
@@ -202,157 +226,185 @@ main{
                         justify-content: space-between;
                         align-items: center;
                         margin-bottom: 40px;
+                        @include normal-screen(){
+                            max-width: unset;
+                            width: 1000px;
+                            align-items: unset;
+                        }
                         .odrer-info{
                             min-height: 631px;
                             display: flex;
                             flex-direction: column;
-                            justify-content: space-between;
+                            justify-content: flex-start;
                             border-bottom: 1px solid $color-Cart-Border;
-                            .order-discript{
-                                .discript-title{
-                                    margin-bottom: 10px;
-                                    p{
-                                        margin: 0px;
-                                        font-size: $H3-font-size;
-                                        color: $color-Product-Detail-Title;
-                                        letter-spacing: $font-letter-space-200;
-                                        font-weight: $font-Weight-B;
-                                    }
-                                }
-                                .evaluation{
+                            @include normal-screen(){
+                                border:unset;
+                                min-height: unset;
+                            }
+                            .discript-title{
+                                margin-bottom: 20px;
+                                @include normal-screen(){
                                     display: flex;
-                                    align-items: center;
-                                    margin-bottom: 25px;
-                                    .star-eval{
-                                        color: $color-Evaluation-Star;
-                                        font-size: $H7-font-size;
+                                    justify-content: center;
+                                    margin-top: 30px;
+                                    margin-bottom: 30px;
+                                }
+                                p{
+                                    margin: 0px;
+                                    font-size: $H3-font-size;
+                                    color: $color-Product-Detail-Title;
+                                    letter-spacing: $font-letter-space-200;
+                                    font-weight: $font-Weight-B;
+                                }
+                            }
+                            .order-contain{
+                                @include normal-screen(){
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                .order-discript{
+                                    margin-bottom: 30px;
+                                    @include normal-screen(){
+                                        margin-right: 5vw;
+
                                     }
-                                    .other-eavl{
+                                    .evaluation{
                                         display: flex;
-                                        font-size: $H7-font-size;
-                                        i{
-                                            color: $color-Product-Detail-Title;
-                                            margin-right: 10px;
+                                        align-items: center;
+                                        margin-bottom: 25px;
+                                        .star-eval{
+                                            color: $color-Evaluation-Star;
+                                            font-size: $H7-font-size;
                                         }
-                                        p{
-                                            padding: 0px 20px;
-                                            font-size: $H10-font-size;
-                                            letter-spacing: $font-letter-space-200;
-                                            color: $color-IronGray;
-                                            margin: 0px;
-                                            &:nth-child(2){
-                                                border-left: 1px solid $color-Product-Detail-Title;
-                                                border-right: 1px solid $color-Product-Detail-Title;
+                                        .other-eavl{
+                                            display: flex;
+                                            font-size: $H7-font-size;
+                                            i{
+                                                color: $color-Product-Detail-Title;
+                                                margin-right: 10px;
+                                            }
+                                            p{
+                                                padding: 0px 20px;
+                                                font-size: $H10-font-size;
+                                                letter-spacing: $font-letter-space-200;
+                                                color: $color-IronGray;
+                                                margin: 0px;
+                                                &:nth-child(2){
+                                                    border-left: 1px solid $color-Product-Detail-Title;
+                                                    border-right: 1px solid $color-Product-Detail-Title;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .content{
+                                        .order-text{
+                                            display: flex;
+                                            align-items: flex-start;
+                                            i{
+                                                margin-right: 10px;
+                                                line-height: 26px;
+                                                font-size: $H11-font-size;
+                                            }
+                                            p{
+                                                font-size: $H10-font-size;
+                                                line-height: 26px;
+                                                letter-spacing: $font-letter-space-100;
+                                                margin: 0px;
                                             }
                                         }
                                     }
                                 }
-                                .content{
-                                    .order-text{
-                                        display: flex;
-                                        align-items: flex-start;
-                                        i{
-                                            margin-right: 10px;
-                                            line-height: 26px;
-                                            font-size: $H11-font-size;
-                                        }
-                                        p{
-                                            font-size: $H10-font-size;
-                                            line-height: 26px;
-                                            letter-spacing: $font-letter-space-100;
-                                            margin: 0px;
-                                        }
-                                    }
-                                }
-                            }
-                            .order-color{
-                                max-width: 336.7px;                                
-                                .color-title{
-                                    margin-bottom: 25.42px;
-                                    span{
-                                        &:nth-child(1){
-                                            font-size: $H5-font-size;
-                                            color: $color-IronGray;
-                                            font-weight: $font-Weight-B;
-                                            letter-spacing: $font-letter-space-50;
-                                            margin-right: 10px;
-                                        }
-                                        &:nth-child(2){
-                                            font-size: $H11-font-size;
-                                            color: $color-Product-Detail-Title;
-                                            letter-spacing: $font-letter-space-100;
-                                        }
-                                    } 
-                                }
-                                                              
-                                .color-style{
-                                    display: flex;
-                                    justify-content: space-around;
-                                    input[type=checkbox]{
-                                        opacity: 0;
-                                        position: absolute;
-                                        right: 0;
-                                        z-index: -999;
-                                    }  
-                                    input[class="color-checkbox"]:checked+label{
-                                        background-color:var(--color);
-                                    }
-                                    .color-button{
-                                        width: 36px;
-                                        height: 36px;
-                                        border-radius: 50%; 
-                                        cursor: pointer;                                                                     
-                                    }
-                                }
-                            }
-                            .order-size{
-                                max-width: 336.7px;      
-                                                       
-                                .size-title{
-                                    margin-bottom: 5px;
-                                    span{
-                                        &:nth-child(1){
-                                            font-size: $H5-font-size;
-                                            color: $color-IronGray;
-                                            font-weight: $font-Weight-B;
-                                            letter-spacing: $font-letter-space-50;
-                                            margin-right: 10px;
-                                        }
-                                        &:nth-child(2){
-                                            font-size: $H10-font-size;
-                                            font-weight: $font-Weight-B;
-                                            color: $color-Product-Detail-Title;
-                                        }
-                                    }
-                                }
-                                .size-deatil{      
-                                    font-size: $H7-font-size;
-                                    font-weight: $font-Weight-B;
-                                    letter-spacing: $font-letter-space-50;
-                                    .small-size{                                        
-                                        display: flex;
-                                        flex-wrap: wrap;                                        
-                                        .size-checkbox{
-                                            opacity: 0;
-                                            position: absolute;
-                                            right: 0;
-                                            z-index: -999;
-                                        }
-                                        input[class="size-checkbox"]:checked+label{
-                                            background-color:var(--sizeColor);
-                                        }
-                                        label{                                                                                        
-                                            text-align: center;                                            
-                                            padding: 0 5px;
-                                            border-radius: 5px;
-                                            cursor: pointer;
-                                            &:hover{
-                                                background-color: $color-Number-Hover;                                                
+                                .color-size{
+                                    .order-color{
+                                        max-width: 336.7px;
+                                        margin-bottom: 30px;                                
+                                        .color-title{
+                                            margin-bottom: 25.42px;
+                                            span{
+                                                &:nth-child(1){
+                                                    font-size: $H5-font-size;
+                                                    color: $color-IronGray;
+                                                    font-weight: $font-Weight-B;
+                                                    letter-spacing: $font-letter-space-50;
+                                                    margin-right: 10px;
+                                                }
+                                                &:nth-child(2){
+                                                    font-size: $H11-font-size;
+                                                    color: $color-Product-Detail-Title;
+                                                    letter-spacing: $font-letter-space-100;
+                                                }
+                                            } 
+                                        }                           
+                                        .color-style{
+                                            display: flex;
+                                            justify-content: space-around;
+                                            input[type=checkbox]{
+                                                opacity: 0;
+                                                position: absolute;
+                                                right: 0;
+                                                z-index: -999;
                                             }  
-                                        }                                        
-                                    }                                    
+                                            input[class="color-checkbox"]:checked+label{
+                                                background-color:var(--color);
+                                            }
+                                            .color-button{
+                                                width: 36px;
+                                                height: 36px;
+                                                border-radius: 50%; 
+                                                cursor: pointer;                                                                     
+                                            }
+                                        }
+                                    }
+                                    .order-size{
+                                        max-width: 336.7px;      
+                                        margin-bottom: 30px;                       
+                                        .size-title{
+                                            margin-bottom: 5px;
+                                            span{
+                                                &:nth-child(1){
+                                                    font-size: $H5-font-size;
+                                                    color: $color-IronGray;
+                                                    font-weight: $font-Weight-B;
+                                                    letter-spacing: $font-letter-space-50;
+                                                    margin-right: 10px;
+                                                }
+                                                &:nth-child(2){
+                                                    font-size: $H10-font-size;
+                                                    font-weight: $font-Weight-B;
+                                                    color: $color-Product-Detail-Title;
+                                                }
+                                            }
+                                        }
+                                        .size-deatil{      
+                                            font-size: $H7-font-size;
+                                            font-weight: $font-Weight-B;
+                                            letter-spacing: $font-letter-space-50;
+                                            .small-size{                                        
+                                                display: flex;
+                                                flex-wrap: wrap;                                        
+                                                .size-checkbox{
+                                                    opacity: 0;
+                                                    position: absolute;
+                                                    right: 0;
+                                                    z-index: -999;
+                                                }
+                                                input[class="size-checkbox"]:checked+label{
+                                                    background-color:var(--sizeColor);
+                                                }
+                                                label{                                                                                        
+                                                    text-align: center;                                            
+                                                    padding: 0 5px;
+                                                    border-radius: 5px;
+                                                    cursor: pointer;
+                                                    &:hover{
+                                                        background-color: $color-Number-Hover;                                                
+                                                    }  
+                                                }                                        
+                                            }                                    
+                                        }
+                                        
+                                    }
                                 }
-                                
                             }
                         }
                         .order-shipping{
@@ -362,6 +414,12 @@ main{
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+                            @include normal-screen(){
+                               flex-direction:row-reverse;
+                               align-items: flex-end;
+                               justify-content: center;
+                               min-height:unset;
+                            }
                             .order-button{
                                 display: flex;
                                 justify-content: space-between;
@@ -379,6 +437,9 @@ main{
                                     color: $color-IronGray;
                                     font-size: $H7-font-size;
                                     border-radius: 5px;
+                                    @include normal-screen(){
+                                        margin-right: 20px;
+                                    }
                                 }
                                 .pre-order{
                                     width: 70px;
@@ -388,6 +449,9 @@ main{
                                     color: $color-IronGray;
                                     font-size: $H7-font-size;
                                     border-radius: 5px;
+                                    @include normal-screen(){
+                                        margin-right: 20px;
+                                    }
                                 }
                                 .order-amount{
                                     display: flex;
@@ -436,6 +500,9 @@ main{
                             .order-price{
                                 display: flex;
                                 align-items: flex-end;
+                                @include normal-screen(){
+                                    margin-right: 16.5vw;
+                                }
                                 p{
                                     margin: 0px;
                                     padding: 0px;
@@ -513,6 +580,9 @@ main{
                         margin: auto;
                         margin-top: 20px;
                         display: flex;
+                        @include normal-screen(){
+                            align-items: center;
+                        }
                         .tab-c{
                             // display: none;
                             position: absolute;
@@ -989,14 +1059,22 @@ main{
                         }
                         // 開發過程
                         .development-process{  
-                            min-height: 969px;                 
+                            min-height: 969px;    
                             .inner-content{
                                 display: flex;
                                 margin-top: 40px;
+                                position: relative;
+                                @include normal-screen(){
+                                    flex-direction: column;
+                                }       
                                 .development-process-content{
                                     flex: 0 0 50%;
                                     .swiper-container{
                                         width: 600px;
+                                        @include normal-screen(){
+                                            margin: unset;
+                                            margin-bottom: 40px;
+                                        }
                                         .swiper-wrapper{
                                             .swiper-slide{
                                                 .development-process-title{
@@ -1033,17 +1111,23 @@ main{
                                                     }
                                                 }
                                             }
-                                        }                                                                    
+                                        }                                                      
                                     }                                
                                 }
                                 .development-process-swiper{
                                     flex: 0 0 55%;
                                     padding-left: 20px;
                                     overflow-x: hidden;
+                                    @include normal-screen(){
+                                        padding-left: 0px;
+                                    }
                                     .swiper-container {
                                         width: 900px;
                                         height: 640px;
                                         margin-bottom: 50px;
+                                        @include normal-screen(){
+                                            width: 650px;
+                                        }
                                     }
                                 
                                     .swiper-slide {
@@ -1078,10 +1162,19 @@ main{
                                 width: 100%;                            
                                 display: flex;
                                 justify-content: flex-end;
+                                @include normal-screen(){
+                                    position: absolute;
+                                    top: 656px;
+                                    left: 0px;
+                                    justify-content: flex-start;
+                                }
                                 .swiper-step-button{
                                     flex:0 0 48%;
                                     display: flex;
                                     justify-content: space-between;
+                                    @include normal-screen(){
+                                        flex:0 0 107%;   
+                                    }
                                     .pagination-next{
                                         position: relative;
                                         flex: 0 0 85%;

@@ -7,7 +7,12 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;      
+}
+body{
+    a:hover{
+        text-decoration: none;
+    }
 }
 //筆電尺寸
 @mixin notebook {
@@ -777,6 +782,7 @@ main {
             .container {
                 max-width: 1520px;
                 transition: 1s;
+                z-index: 2;
                 @include tablet() {
                     display: flex;
                     flex-direction: column;

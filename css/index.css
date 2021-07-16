@@ -13,6 +13,10 @@
   scroll-behavior: smooth;
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 nav {
   z-index: 99;
   -webkit-transition: 1s;
@@ -1184,6 +1188,7 @@ main .main-container .shoemaking .container {
   max-width: 1520px;
   -webkit-transition: 1s;
   transition: 1s;
+  z-index: 2;
 }
 
 @media (max-width: 1350px) {
