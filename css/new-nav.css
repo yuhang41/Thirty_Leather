@@ -257,7 +257,7 @@ nav .personal-item .twd-lang .lang a {
 
 .navbar .navbar-collapse {
   margin-left: 4rem;
-  z-index: 2;
+  z-index: 5;
 }
 
 @media (max-width: 1024px) {
