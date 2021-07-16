@@ -103,18 +103,31 @@
         transition: 1s;
     }
 }
-// 小手機尺寸
-@mixin sm-phone {
+// 商品卡片換行
+@mixin card-change {
     @media (max-width:575px) {
         @content;
         transition: 1s;
     }
 }
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width:520px) {
+        @content;
+        transition: 1s;
+    }
+}
+
 .navbar{
     .navbar-collapse{
         @include sm-tablet(){
             &{
-                width: 500px;
+                width: 400px;
+            }
+        }
+        @include sm-phone(){
+            &{
+                width: 100vw; 
             }
         }
     }
@@ -237,12 +250,12 @@ main{
                 @include tablet(){
                     padding-left: unset;
                 } 
-                @include sm-phone(){
+                @include card-change(){
                     flex-direction: column;
                 } 
                 .product-card {
                     @include shoes-content();
-                    @include sm-phone(){
+                    @include card-change(){
                         &:nth-child(n+5){
                             display: none;
                         }

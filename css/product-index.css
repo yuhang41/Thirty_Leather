@@ -16,7 +16,17 @@
     transition: 1s;
   }
   .navbar .navbar-collapse {
-    width: 500px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar .navbar-collapse {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .navbar .navbar-collapse {
+    width: 100vw;
   }
 }
 
