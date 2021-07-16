@@ -105,7 +105,7 @@ nav {
 }
 main {
     .main-container {
-        padding-left: 7.4vw;
+        padding-left: 114px;
         overflow: hidden;
         transition: 1s;
         @include tablet() {
@@ -114,6 +114,7 @@ main {
         // 輪播圖
         .swiper1 {
             position: relative;
+            height: calc( 100vh - 113px);
             .swiper-container {
                 width: 100%;
                 height: 100%;
@@ -168,7 +169,7 @@ main {
                 width: 100%;
                 text-align: center;
                 font-size: 18px;
-                min-height: 969px;
+                // min-height: 969px;
                 // transition: 1s;
                 @include sm-tablet() {
                     min-height: 768px;
@@ -468,7 +469,7 @@ main {
                 }
                 img {
                     position: absolute;
-                    left: -8vw;
+                    left: -8rem;
                     max-width: 54.8%;
                     z-index: 1;
                     transition: 1s;
@@ -991,7 +992,7 @@ main {
                     width: 66.4%;
                     position: absolute;
                     top: -320px;
-                    left: -8vw;
+                    left: -8rem;
                     border-right: 18px solid $color-Apricot;
                     z-index: 2;
                     transition: 1s;
