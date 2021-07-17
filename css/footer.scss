@@ -2,129 +2,99 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 
-body {
-    margin: 0;
-    font-family: $font-Family-A;
+* {
+    box-sizing: border-box;
 }
 
 footer {
+    height: 520px;
     .site-footer {
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         hr {
             border: none;
         }
 
-        .footer-logo {
-            width: 195px;
-            height: 180px;
-            margin: auto;
-        }
+        .container {
+            padding-top: 66px;
+            .footer-logo {
+                width: 195px;
+                height: 180px;
+                margin: auto;
+            }
 
-        .footer-bottom {
-            padding: 0px;
-
-            .social-icons {
+            .footer-icons {
                 a {
-                    width: 48px;
-                    height: 48px;
-                    line-height: 48px;
-                    border-radius: 50%;
-
-                    &.line {
-                        background-image: url("/img/LINE-ICON.jpg");
-                        background-position: center;
-                        background-size: contain;
-                    }
-
-                    &.facebook {
-                        background-image: url("/img/facebook-ICON.jpg");
-                        background-position: center;
-                        background-size: contain;
-                        margin: 0px 20px;
-                    }
-
-                    &.instagram {
-                        background-image: url("/img/Instagram.ICON.jpg");
-                        background-position: center;
-                        background-size: contain;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0px 8px;
                     }
                 }
             }
 
-            .footer-arrow {
-                font-size: 72px;
-                color: $color-Apricot;
-                position: relative;
+            .return-nav {
+                .footer-arrow {
+                    font-size: 72px;
+                    color: #f7a269;
+                    position: relative;
+
+                    .footer-arrow-text {
+                        font-size: $H7-font-size;
+                        font-family: "Source Code Pro";
+                        letter-spacing: $font-letter-space-100;
+                        position: absolute;
+                        top: 40px;
+                        left: 5px;
+                    }
+                }
             }
 
-            .footer-arrow-text {
-                font-size: $H7-font-size;
-                font-family: "Source Code Pro";
-                letter-spacing: $font-letter-space-100;
-                position: absolute;
-                top: 40px;
-                left: 5px;
-            }
-
-            .common-problems {
+            .footer-links {
                 font-size: $H8-font-size;
                 letter-spacing: $font-letter-space-200;
                 color: $color-IronGray;
-                padding: 0px;
+                cursor: default;
 
-                .lists {
-                    border-left: 1px solid $color-WedgwoodBlue;
-                    padding-right: 10px;
-                }
+                .block {
+                    li {
+                        margin: 0px 5px;
+                    }
 
-                .list {
-                    cursor: default;
-                }
-
-                a {
-                    color: $color-WedgwoodBlue;
-                }
-
-                ul li {
-                    padding-left: 10px;
-                    cursor: default;
+                    .list {
+                        border-right: 1px solid $color-IronGray;
+                        padding-right: 7px;
+                    }
                 }
             }
         }
 
         .copyright {
             height: 80px;
-            background-color: $color-Footer-Background;
-            font-size: $H9-font-size;
-            font-family: "Source Code Pro";
-            letter-spacing: $font-letter-space-100;
-            color: $color-White;
+            background: gray;
+            font-size: 15px;
+            color: #ffffff;
 
             span {
-                margin-left: 10px;
+                margin-left: 5px;
             }
         }
     }
 }
+
 @media (max-width: 1024px) {
     footer {
         position: relative;
 
         .site-footer {
-            padding-bottom: 0;
-
-            .footer-bottom {
-                .footer-arrow {
-                    position: absolute;
-                    top: -130px;
-                    right: 10px;
+            .container {
+                .footer-icons {
+                    margin-bottom: 30px;
                 }
-    
-                .common-problems {
-                    margin-top: 50px;
+                .return-nav {
+                    .footer-arrow {
+                        position: absolute;
+                        top: 25%;
+                        right: 0;
+                    }
                 }
             }
         }
@@ -134,23 +104,26 @@ footer {
 @media (max-width: 991px) {
     footer {
         .site-footer {
-            .footer-bottom {
-                .common-problems {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-}
+            .container {
+                .footer-links {
+                    .block {
+                        display: flex;
+                        flex-direction: column;
 
-@media (max-width: 768px) {
-    footer {
-        .site-footer {
-            .footer-bottom {
-                .common-problems {
-                    margin-left: 3vw;
-                    .common-problem {
-                        margin-left: 11px;
+                        .block1 {
+                            margin: auto;
+                            margin-bottom: 10px;
+                        }
+
+                        .common-problem, .send {
+                            border-left: 1px solid $color-IronGray;
+                            padding-left: 7px;
+                        }
+
+                        .privacy {
+                            border-right: 1px solid $color-IronGray;
+                            padding-right: 7px;
+                        }
                     }
                 }
             }
@@ -161,11 +134,35 @@ footer {
 @media (max-width: 520px) {
     footer {
         .site-footer {
-            padding-bottom: 0;
-            
+            .container {
+                .footer-links {
+                    font-size: 14px;
+                    .block {
+                        li {
+                            margin: 0;
+                        }
+
+                        .list {
+                            padding-right: 1px;
+                            padding-left: 3px;
+                        }
+
+                        .block2 {
+                            .privacy {
+                                padding-left: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
             .copyright {
+                display: flex;
+                flex-direction: column;
+
                 span {
-                    display: none;
+                    margin-top: 5px;
+                    margin-left: 0;
                 }
             }
         }
@@ -174,21 +171,21 @@ footer {
 
 @media (max-width: 320px) {
     footer {
+        position: relative;
+
         .site-footer {
-            padding-bottom: 0;
+            .container {
+                .footer-logo {
+                    width: 95px;
+                    height: 80px;
+                }
 
-            .footer-logo {
-                width: 95px;
-                height: 80px;
-                margin: auto;
-                position: relative;
-            }
-
-            .footer-bottom {
-                .footer-arrow {
-                    position: absolute;
-                    top: -110px;
-                    right: 10px;
+                .return-nav {
+                    .footer-arrow {
+                        position: absolute;
+                        top: 12%;
+                        right: 0;
+                    }
                 }
             }
         }
