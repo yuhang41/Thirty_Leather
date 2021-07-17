@@ -176,7 +176,7 @@ nav{
     letter-spacing: $font-letter-space-100;
     .navbar-collapse{
         margin-left: 4rem;
-        z-index: 2;
+        z-index: 5;
         @include tablet(){
             &{
                 width: calc(100vw - 58px);

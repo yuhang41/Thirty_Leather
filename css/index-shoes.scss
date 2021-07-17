@@ -9,19 +9,56 @@
         outline: none;
     }
 }
+// 平板尺寸
+@mixin tablet {
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media(max-width:520px){
+        @content;
+        transition: 1s;
+    }
+}
 nav{
+    background-color: $color-LightGray;
+    margin-left:146px;
+    @include tablet(){
+        margin-left:unset;
+    }
     .options{
         background-color: $color-LightGray;
     }
-    // .input-cart{
-    //     // .search{
-    //     //     input{
-    //     //         background-color: $color-LightGray!important;
-    //     //     }
-    //     // }
-    // }
+    .go-home-logo{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        @include sm-phone(){
+            left: 58px;
+        }
+    }
+    .input-cart{
+        .search{
+            input{
+                background-color: $color-LightGray!important;
+            }
+        }
+    }
     .twd-lang{
         background-color: $color-LightGray;
+    }
+}
+.navbar{
+    padding:3.5rem 0px 0px 1rem;
+    margin-left:0px;
+    @include tablet(){
+        padding:0px 0px 0px 3.7rem;
+    }
+    @include sm-phone(){
+        padding:0px;
     }
 }
 main{
@@ -70,11 +107,28 @@ main{
             }
             .decoration-line{
                 position: relative;
-                img{
+                svg{
                     position: absolute;
                     top: 25px;
                     left: 20px;
                     width:1000px;
+                    .curve{
+                        fill-opacity: 0;
+                        stroke: $color-Background-line;
+                        stroke-width: 2px;
+                        stroke-dashoffset: 0;
+                        stroke-dasharray: 4000;
+                        animation: curve 4s ease-in-out;
+                    }
+                    @keyframes curve {
+                        0% {
+                            stroke-dashoffset: 4000;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
                 }
             }
         }

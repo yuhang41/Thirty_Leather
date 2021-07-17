@@ -13,6 +13,10 @@
   scroll-behavior: smooth;
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 nav {
   z-index: 99;
   -webkit-transition: 1s;
@@ -84,7 +88,7 @@ nav.sticky .logo {
 }
 
 main .main-container {
-  padding-left: 7.4vw;
+  padding-left: 114px;
   overflow: hidden;
   -webkit-transition: 1s;
   transition: 1s;
@@ -100,6 +104,7 @@ main .main-container {
 
 main .main-container .swiper1 {
   position: relative;
+  height: calc( 100vh - 113px);
 }
 
 main .main-container .swiper1 .swiper-container {
@@ -179,7 +184,6 @@ main .main-container .swiper1 .swiper-slide {
   width: 100%;
   text-align: center;
   font-size: 18px;
-  min-height: 969px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -606,7 +610,7 @@ main .main-container .we-story .story-content {
 
 main .main-container .we-story .story-content img {
   position: absolute;
-  left: -8vw;
+  left: -8rem;
   max-width: 54.8%;
   z-index: 1;
   -webkit-transition: 1s;
@@ -1184,6 +1188,7 @@ main .main-container .shoemaking .container {
   max-width: 1520px;
   -webkit-transition: 1s;
   transition: 1s;
+  z-index: 2;
 }
 
 @media (max-width: 1350px) {
@@ -1596,7 +1601,7 @@ main .main-container .shoes-video video:nth-child(1) {
   width: 66.4%;
   position: absolute;
   top: -320px;
-  left: -8vw;
+  left: -8rem;
   border-right: 18px solid #f7a269;
   z-index: 2;
   -webkit-transition: 1s;

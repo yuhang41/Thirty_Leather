@@ -5,6 +5,7 @@
     padding: 0px;
     font-family: $font-Family-A;
 }
+//鞋子卡片的樣式
 @mixin shoes-content {
     width: 275px;
     height: 275px;
@@ -17,6 +18,10 @@
     align-items: center;
     text-align: center;
     z-index: 2;
+    @include tablet(){
+        width: 260px;
+        height: 260px;
+    }
     img {
         position: absolute;
         width: 215px;
@@ -25,6 +30,9 @@
         left: 50%;
         object-position: center;
         transform: translate(-50%,0);
+        @include tablet(){
+            width: 200px;
+        }
     }
     .content {
         .text {
@@ -75,6 +83,65 @@
         align-items: center;
     }
 }
+//筆電尺寸
+@mixin notebook {
+    @media(max-width:1550px){
+        @content;
+        transition: 1s;
+    }
+}
+// 大平板尺寸
+@mixin tablet {
+    @media (max-width: 1350px) {
+        @content;
+        transition: 1s;
+    }
+}
+// 小平板尺寸
+@mixin sm-tablet {
+    @media (max-width: 1024px) {
+        @content;
+        transition: 1s;
+    }
+}
+// 商品卡片換行
+@mixin card-change {
+    @media (max-width:575px) {
+        @content;
+        transition: 1s;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width:520px) {
+        @content;
+        transition: 1s;
+    }
+}
+
+.navbar{
+    .navbar-collapse{
+        @include sm-tablet(){
+            &{
+                width: 400px;
+            }
+        }
+        @include sm-phone(){
+            &{
+                width: 100vw; 
+            }
+        }
+    }
+    li{
+        &:nth-child(n+5){
+            display: none;
+        }
+        &:nth-child(6){
+            display: block;
+        }
+
+    }
+}
 main{
     .main-container{
         min-height: 100vh;
@@ -84,6 +151,9 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
+            @include tablet(){
+                display: none;
+            }
             .all-commodity{
                 max-width: 200px;
                 margin: auto;
@@ -143,6 +213,10 @@ main{
             padding-top: 85px;
             padding-right: 11.5vw;
             padding-left: 2.6vw;
+            @include tablet(){
+                max-width: unset;
+                padding: 85px 2.6vw 0px 2.6vw;
+            }
             .product-container-title{
                 display: flex;
                 justify-content: space-between;
@@ -170,20 +244,24 @@ main{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                align-items: center;  
-                .product-card {
-                    @include shoes-content();                    
+                align-items: center;
+                @include notebook(){
+                    padding-top: 120px;
                 }
-                // .product-second {
-                //     @include shoes-content();
-                //                         
-                // }
-                // .product-third {
-                //     @include shoes-content();              
-                // }
-                // .product-fourth {
-                //     @include shoes-content();
-                // }        
+                @include tablet(){
+                    padding-left: unset;
+                } 
+                @include card-change(){
+                    flex-direction: column;
+                } 
+                .product-card {
+                    @include shoes-content();
+                    @include card-change(){
+                        &:nth-child(n+5){
+                            display: none;
+                        }
+                    }                    
+                }  
             }
             .pagination{
                 width: 100%;
