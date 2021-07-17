@@ -136,28 +136,17 @@ minusBtns.forEach(function(minusBtn){
     });
 });
 
-// //color
-// let colorCheckboxs = document.querySelectorAll(".color-checkbox");
-// let colorButtons =document.querySelectorAll('.color-button');
-// colorCheckboxs.forEach((colorCheckbox,index) => {colorCheckbox.addEventListener('click',function(){
-//   if(colorCheckbox.checked){
-//     colorButtons[index].style.background = colorCheckbox.value;    
-//   }else{
-//     colorButtons[index].style.background = '#fff'; 
-//   }
-// })});
+//size-key
+let size_key = document.querySelector('.size-key');
+let size_radios = document.querySelectorAll('.size-checkbox');
+size_radios.forEach(radio=>{
+  radio.addEventListener('click',()=>{
+    size_key.textContent = radio.checked ? radio.dataset.key : 0;
+  })
+});
 
-//size
-// let sizeCheckboxs = document.querySelectorAll('.size-checkbox');
-// let sizeButtons = document.querySelectorAll('.size-button');
-// sizeCheckboxs.forEach((checkbox,index) => {checkbox,addEventListener('click',function(){
-//   console.log('123');
-//   if(checkbox.checked){
-//     sizeButtons[index].style.background = '#9e9e9e';    
-//   }else{
-//     sizeButtons[index].style.background = 'none'; 
-//   }
-// })});
+
+//fetch
 // let putcart = document.querySelector('.putcart');
 // let colorCheckboxs = document.querySelectorAll(".color-checkbox");
 // let sizeCheckboxs = document.querySelectorAll('.size-checkbox');

@@ -164,6 +164,7 @@ main .main-container .product-container .product-container-card .product-card {
 main .main-container .product-container .product-container-card .product-card img {
   position: absolute;
   width: 215px;
+  max-height: 160px;
   bottom: 90%;
   left: 50%;
   -o-object-position: center;

@@ -192,7 +192,7 @@ main{
                             display: block;
                             width: 100%;
                             height: 100%;
-                            object-fit: cover;
+                            object-fit: contain;
                           }
                     }
                     .order-detail{
@@ -288,7 +288,7 @@ main{
                                 .color-style{
                                     display: flex;
                                     justify-content: space-around;
-                                    input[type=checkbox]{
+                                    input[type=radio]{
                                         opacity: 0;
                                         position: absolute;
                                         right: 0;
@@ -296,6 +296,8 @@ main{
                                     }  
                                     input[class="color-checkbox"]:checked+label{
                                         background-color:var(--color);
+                                        box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, .5);
+                                        border: 2px solid $color-Evaluation-Star;
                                     }
                                     .color-button{
                                         width: 36px;

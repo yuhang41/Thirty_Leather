@@ -215,8 +215,8 @@ main .main-container .product-container .productshop-container .commidity-contai
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail {
@@ -356,7 +356,7 @@ main .main-container .product-container .productshop-container .commidity-contai
       justify-content: space-around;
 }
 
-main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style input[type=checkbox] {
+main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style input[type=radio] {
   opacity: 0;
   position: absolute;
   right: 0;
@@ -365,6 +365,9 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style input[class="color-checkbox"]:checked + label {
   background-color: var(--color);
+  -webkit-box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid #e08549;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-color .color-style .color-button {
