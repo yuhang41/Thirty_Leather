@@ -17,7 +17,7 @@
     color:$color-IronGray;
 }
 //1720版本
-@mixin sm-screen{
+@mixin bg-screen{
     @media(max-width:1750px){
         @content;
         transition: 1s;
@@ -26,6 +26,13 @@
 //1435版本
 @mixin normal-screen{
     @media(max-width:1435px){
+        @content;
+        transition: 1s;
+    }
+}
+//850
+@mixin sm-screen{
+    @media(max-width:850px){
         @content;
         transition: 1s;
     }
@@ -42,8 +49,10 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
-            @include sm-screen(){
+            @include bg-screen(){
                 display: none;
+                max-width: unset;
+                width: unset;
             }
             .all-commodity{
                 max-width: 200px;
@@ -98,7 +107,7 @@ main{
         }
         // 右邊商品資訊
         .product-container{
-            width: 100%;
+            width: 100vw;
             min-height: 100vh;
             // 商品資訊
             .productshop-container{
@@ -107,7 +116,7 @@ main{
                 background: $color-LightGray;
                 .breadcrumbs{
                     margin-bottom: 20px;
-                    @include sm-screen(){
+                    @include bg-screen(){
                         margin-left: 6rem;
                     }
                     .bread-label{
@@ -228,7 +237,7 @@ main{
                         margin-bottom: 40px;
                         @include normal-screen(){
                             max-width: unset;
-                            width: 1000px;
+                            // width: 1000px;
                             align-items: unset;
                         }
                         .odrer-info{
@@ -249,6 +258,10 @@ main{
                                     margin-top: 30px;
                                     margin-bottom: 30px;
                                 }
+                                @include sm-screen(){
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
                                 p{
                                     margin: 0px;
                                     font-size: $H3-font-size;
@@ -261,6 +274,10 @@ main{
                                 @include normal-screen(){
                                     display: flex;
                                     justify-content: center;
+                                }
+                                @include sm-screen(){
+                                    flex-direction: column;
+                                    align-items: center;
                                 }
                                 .order-discript{
                                     margin-bottom: 30px;
@@ -320,6 +337,11 @@ main{
                                         margin-bottom: 30px;                                
                                         .color-title{
                                             margin-bottom: 25.42px;
+                                            @include sm-screen(){
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-end;
+                                            }
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
@@ -356,12 +378,17 @@ main{
                                                 cursor: pointer;                                                                     
                                             }
                                         } 
-                                    }                                                                                                                            
+                                    }                                 
                                     .order-size{
                                         max-width: 336.7px;      
                                         margin-bottom: 30px;                       
                                         .size-title{
                                             margin-bottom: 5px;
+                                            @include sm-screen(){
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-end;
+                                            }
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
@@ -420,6 +447,9 @@ main{
                                align-items: flex-end;
                                justify-content: center;
                                min-height:unset;
+                            }
+                            @include sm-screen(){
+                                flex-direction: column;
                             }
                             .order-button{
                                 display: flex;
@@ -1526,6 +1556,9 @@ main{
                             align-items: center;
                             margin-bottom: 80px;
                             margin-top: 120px;
+                            @include normal-screen(){
+                                flex-wrap: wrap;
+                            }
                             .product-card {
                                 @include shoes-content();
                                 &:nth-child(2) {
