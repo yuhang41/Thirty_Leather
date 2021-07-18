@@ -2,264 +2,315 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 
-* {
-    list-style: none;
-    margin: 0px;
+// 大平板尺寸
+@mixin tablet {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin elevenforty {
+    @media (max-width: 1140px) {
+        @content;
+    }
+}
+// 小平板尺寸
+@mixin sm-tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+//試穿資訊換版
+@mixin try-on {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+    
+//大手機尺寸
+@mixin bg-phone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+//商品卡片換版
+@mixin single-cart {
+    @media (max-width: 660px) {
+        @content;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+// iphone 5s
+@mixin iphone-5s {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+*{
+    list-style: none;   
+    margin: 0px; 
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
-.member-center {
-    width: 100%;
-    height: 1010px;
-    background-color: $color-LightGray;
-
-    .m-center-index {
-        font-size: 72px;
-        color: $color-White;
-    }
-
-    .list-Group {
-        .list-group-item {
-            width: 170px;
-            height: 60px;
-            background-color: $color-Footer-Background;
-            color: $color-LightGray;
-            font-size: $H7-font-size;
-            font-weight: bold;
-            letter-spacing: $font-letter-space-200;
-            border-bottom: 1px solid black;
-            outline: none;
-            z-index: 2;
-
-            &:hover {
-                background-color: $color-Footer-Background;
-                color: $color-LightGray;
-            }
-
-            &.active {
-                width: 205px;
-                background-color: $color-White;
-                color: $color-WedgwoodBlue;
-                font-weight: bold;
-                border-color: $color-SkyBlue;
-                border-right: 18px solid $color-SkyBlue;
-                margin-left: -18px;
-                z-index: 2;
-            }
-
-            &:first-child {
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
-            }
-
-            &:last-child {
-                border-bottom-right-radius: 0px;
-                border-bottom-left-radius: 0px;
-            }
+main {
+    .member-page {
+        max-width: 100%;
+        height: 100%;
+        background-color: $color-LightGray;
+        
+        .page-title {
+            font-size: 72px;
+            color: $color-White;
         }
-    }
 
-    .tab-contents {
-        margin-left: -17px;
-
-        .member-data {
-            width: 1140px;
-            height: 100%;
-            background-color: $color-White;
-            border: 1px solid $color-Apricot;
-
-            .fa-user {
-                font-size: $H8-font-size;
-                color: $color-WedgwoodBlue;
+        .member-lists {
+            @include sm-tablet() {
+                display: flex;
+                flex-direction: column;
             }
 
-            .user-id {
-                font-size: $H10-font-size;
-                color: $color-WedgwoodBlue;
-                margin: 0px 16px;
-            }
+            .list-group {
+                @include sm-tablet() {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
 
-            .general-member {
-                width: 80px;
-                background-color: $color-Apricot;
-                font-size: $H9-font-size;
-                border-radius: 10px;
-            }
-
-            .User-edit {
-                color: $color-MoreButton-hover;
-
-                .fa-pen {
+                .list-group-item {
+                    width: 170px;
+                    height: 60px;
+                    background-color: $color-Footer-Background;
                     font-size: $H7-font-size;
-                }
+                    color: $color-LightGray;
+                    letter-spacing: $font-letter-space-200;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                    z-index: 2;
 
-                .user-edit {
-                    font-size: $H9-font-size;
+                    &.active {
+                        width: 205px;
+                        background-color: $color-White;
+                        color: $color-WedgwoodBlue;
+                        border-color: $color-SkyBlue;
+                        border-right: 18px solid $color-SkyBlue;
+                        margin-left: -18px;
+                        z-index: 2;
+
+                        @include sm-tablet() {
+                            height: 78px;
+                            border-right: none;
+                            border-bottom: 18px solid $color-SkyBlue;
+                            z-index: 2;
+                        }
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+
+                    &:last-child {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
                 }
             }
 
-            .member-container {
-                width: 95%;
+            .tab-content {
+                .tab-pane {
+                    .member-data {
+                        height: 100%;
+                        background-color: $color-White;
+                        border: 1px solid $color-Apricot;
+                        margin-left: -17px;
 
-                .input-data {
-                    border-bottom: 2px solid $color-MoreButton-hover;
+                        @include tablet() {
+                            width: 100%;
+                        }
 
-                    .label1 {
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        letter-spacing: $font-letter-space-200;
-                    }
+                        @include elevenforty() {
+                            width: 95%;
+                        }
 
-                    .input {
-                        width: 278px;
-                        font-size: 22.75px;
-                        border: none;
-                        border-bottom: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                        @include sm-tablet() {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: -17px;
+                        }
 
-                    .county,
-                    .zipcode {
-                        width: 65px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                        .member-container {
+                            width: 95%;
+                            border-bottom: 2px solid $color-WedgwoodBlue;
+                            font-family: $font-Family-A;
+                            
+                            .data-block1 {
+                                .fa-user {
+                                    font-size: $H8-font-size;
+                                    color: $color-WedgwoodBlue;
+                                }
+                    
+                                .user-id {
+                                    font-size: $H10-font-size;
+                                    color: $color-WedgwoodBlue;
+                                    margin: 0px 16px;
+                                }
+                    
+                                .general-member {
+                                    width: 80px;
+                                    background-color: $color-Apricot;
+                                    font-size: $H9-font-size;
+                                    border-radius: 10px;
+                                }
+                            }
+    
+                            .data-block2 {
+                                color: $color-MoreButton-hover;
+                                
+                                .fa-pen {
+                                    font-size: $H7-font-size;
+                                }
+                
+                                .user-edit {
+                                    font-size: $H9-font-size;
+                                }
+                            }
+    
+                            .data-block3 {
+                                .input-data {
+                                    width: 85%;
+                                    font-size: $H7-font-size;
+                                    color: $color-WedgwoodBlue;
 
-                    .district {
-                        width: 65px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        margin: 0px 20px;
-                        outline: none;
-                    }
+                                    @include sm-tablet() {
+                                        display: flex;
+                                        flex-direction: column; 
+                                    }
+                                    
+                                    .input-left {
+                                        @include sm-tablet() {
+                                            margin: auto;
+                                            margin-top: 30px;
+                                            margin-bottom: 20px;
+                                        }
 
-                    .input1 {
-                        width: 235px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                                        input {
+                                            outline: none;
+                                            border: none;
+                                            border-bottom: 1px solid $color-WedgwoodBlue;
+                                        }
+                                    }
 
-                    .member-btn {
-                        button {
-                            height: 41px;
-                            border: 1px solid $color-MoreButton;
-                            font-size: 19.5px;
-                            letter-spacing: $font-letter-space-200;
-                            color: $color-IronGray;
-                            line-height: 10px;
+                                    .input-right {
+                                        @include sm-tablet() {
+                                            width: 324px;
+                                            margin: auto;
+                                        }
 
-                            &:hover {
-                                background-color: $color-MoreButton-hover;
-                                color: $color-White;
+                                        .contact {
+                                            .address-data {
+                                                .city-block {
+                                                    .county,
+                                                    .zipcode {
+                                                        width: 65px;
+                                                        height: 32px;
+                                                        font-size: $H10-font-size;
+                                                        color: $color-WedgwoodBlue;
+                                                        border: 1px solid $color-WedgwoodBlue;
+                                                        outline: none;
+                                                    }
+                                
+                                                    .district {
+                                                        width: 65px;
+                                                        height: 32px;
+                                                        font-size: $H10-font-size;
+                                                        color: $color-WedgwoodBlue;
+                                                        border: 1px solid $color-WedgwoodBlue;
+                                                        outline: none;
+                                                        margin: 0px 5px;
+                                                    }
+                                                }
+
+                                                .detail-address {
+                                                    width: 215px;
+                                                    height: 32px;
+                                                    font-size: $H10-font-size;
+                                                    color: $color-WedgwoodBlue;
+                                                    border: 1px solid $color-WedgwoodBlue;
+                                                    outline: none;
+                                                }
+                                            }
+                                        }
+
+                                        .subscribe {
+                                            @include sm-tablet() {
+                                                margin-top: 40px;
+                                            }
+                                            .form-check-input {
+                                                margin: 4px 0 0 5px;
+                                                width: 16px;
+                                                height: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .data-block4 {
+                                button {
+                                    height: 40px;
+                                    border: 1px solid $color-MoreButton;
+                                    font-size: 19.5px;
+                                    color: $color-IronGray;
+                                    letter-spacing: $font-letter-space-200;
+                                    border: 1px solid $color-MoreButton;
+        
+                                    &:hover {
+                                        background-color: $color-MoreButton-hover;
+                                        color: $color-White;
+                                    }
+                                }
+                            }
+                        }
+
+                        .data-block5 {
+                            .order-title {
+                                font-size: 29.25px;
+                                color: $color-WedgwoodBlue;
+                            }
+
+                            .order-content {
+                                .order-container {
+                                    width: 90%;
+                                    .order-lists {
+                                        font-size: 14px;
+
+                                        .list {
+                                            width: 106.78px;
+                                        }
+
+                                        .number, .invoice, .information {
+                                            background-color: $color-MoreButton;
+                                            color: $color-White;
+                                        }
+                                        
+                                        .list-block1 {
+                                            height: 30px;
+                                            line-height: 30px;
+                                            background-color: $color-Footer-Background;
+                                            color: $color-White;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
-
-            .order-five {
-                font-size: 29.25px;
-                color: $color-WedgwoodBlue;
-            }
-
-            .table-container {
-                width: 90%;
-
-                .table {
-                    font-size: $H10-font-size;
-
-                    thead {
-                        background-color: $color-Footer-Background;
-                        color: $color-LightGray;
-                    }
-
-                    .orderNumber {
-                        width: 120px;
-                        background-color: $color-MoreButton;
-                        color: $color-White;
-                    }
-
-                    .checkInvoice, .returnInfor {
-                        background-color: $color-MoreButton;
-                        color: $color-White;
-                    }
-                }
-
-                .table-icon {
-                    button {
-                        background-color: $color-White;
-                        color: $color-MoreButton;
-                        border: none;
-
-                        &:hover {
-                            color: $color-Apricot;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .list-Group {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .table {
-        tr{
-            display: flex;
-            flex-direction: column;
-        }
-        th {
-            display: none;
-        }
-    
-        .orderNumber {
-            width: 120px;
-            margin: auto;
-        }
-    
-        .orderNumber1 {
-            background-color: black;
-            margin-top: 10vh;
-        }
-    
-        .checkInvoice, .returnInfor {
-            width: 80px;
-            margin: auto;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .data-left {
-        margin-top: 50px;
-        margin-left: 25%;
-    }
-
-    .data-right {
-        margin-left: 25%;
-    }
-    
-    .address-block {
-        display: flex;
-        flex-direction: column;
-        .address {
-            margin-left: 15px;
-
-            .input1 {
-                position: absolute;
-                top: 75px;
             }
         }
     }
