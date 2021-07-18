@@ -23,6 +23,13 @@
         transition: 1s;
     }
 }
+//1600版本
+@mixin ex-screen{
+    @media(max-width:1600px){
+        @content;
+        transition: 1s;
+    }
+}
 //1435版本
 @mixin normal-screen{
     @media(max-width:1435px){
@@ -30,9 +37,37 @@
         transition: 1s;
     }
 }
+//1024
+@mixin tablet{
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
 //850
 @mixin sm-screen{
     @media(max-width:850px){
+        @content;
+        transition: 1s;
+    }
+}
+//750
+@mixin phone{
+    @media(max-width:750px){
+        @content;
+        transition: 1s;
+    }
+}
+//650
+@mixin normal-phone{
+    @media(max-width:650px){
+        @content;
+        transition: 1s;
+    }
+}
+//520
+@mixin sm-phone{
+    @media(max-width:520px){
         @content;
         transition: 1s;
     }
@@ -140,6 +175,13 @@ main{
                         max-width: 600.353px;
                         max-height: 789.17px;
                         position: relative;
+                        @include phone(){
+                            max-width: 500px;
+                        }
+                        @include sm-phone(){
+                            max-width: 300px;
+                        }
+                        
                         .swiper-container {
                             width: 100%;
                             height: 100%;
@@ -149,12 +191,18 @@ main{
                               right: -5vw;
                               top:40%;
                               color: $color-Product-Detail-Title;
+                              @include phone(){
+                                display: none;
+                            }
                           }
                           .swiper-button-prev{
                             position: absolute;
                             left: -5vw;
                             top:40%;
                             color: $color-Product-Detail-Title;
+                            @include phone(){
+                                display: none;
+                            }
                         }
                           .swiper-slide {
                             text-align: center;
@@ -268,6 +316,9 @@ main{
                                     color: $color-Product-Detail-Title;
                                     letter-spacing: $font-letter-space-200;
                                     font-weight: $font-Weight-B;
+                                    @include sm-phone(){
+                                        font-size: $H6-font-size;
+                                    }
                                 }
                             }
                             .order-contain{
@@ -283,15 +334,24 @@ main{
                                     margin-bottom: 30px;
                                     @include normal-screen(){
                                         margin-right: 5vw;
-
+                                    }
+                                    @include sm-screen(){
+                                    margin-bottom: 150px;
+                                    margin-right: unset;  
                                     }
                                     .evaluation{
                                         display: flex;
                                         align-items: center;
                                         margin-bottom: 25px;
+                                        @include sm-phone(){
+                                            justify-content: center;
+                                        }
                                         .star-eval{
                                             color: $color-Evaluation-Star;
                                             font-size: $H7-font-size;
+                                            @include sm-phone(){
+                                                display: none;
+                                            }
                                         }
                                         .other-eavl{
                                             display: flex;
@@ -317,6 +377,13 @@ main{
                                         .order-text{
                                             display: flex;
                                             align-items: flex-start;
+                                            transition: 1s;
+                                            @include normal-screen(){
+                                                width: 403px;
+                                            }
+                                            @include sm-phone(){
+                                                width: 300px;
+                                            }
                                             i{
                                                 margin-right: 10px;
                                                 line-height: 26px;
@@ -327,6 +394,11 @@ main{
                                                 line-height: 26px;
                                                 letter-spacing: $font-letter-space-100;
                                                 margin: 0px;
+                                                text-align: justify;
+                                                @include sm-phone(){
+                                                    display: flex;
+                                                    text-align: center;
+                                                }
                                             }
                                         }
                                     }
@@ -408,6 +480,9 @@ main{
                                             font-size: $H7-font-size;
                                             font-weight: $font-Weight-B;
                                             letter-spacing: $font-letter-space-50;
+                                            @include sm-phone(){
+                                                font-size: $H8-font-size;
+                                            }
                                             .small-size{                                        
                                                 display: flex;
                                                 flex-wrap: wrap;                                        
@@ -450,42 +525,54 @@ main{
                             }
                             @include sm-screen(){
                                 flex-direction: column;
+                                position: relative;
+                            }
+                            @include sm-phone(){
+                                align-items: center;
+                                margin-top: unset;
                             }
                             .order-button{
                                 display: flex;
                                 justify-content: space-between;
+                                @include sm-phone(){
+                                    flex-direction: column-reverse;
+                                    align-items: center;
+                                }
                                 button:hover{
                                     font-weight: $font-Weight-B;
                                     color: $color-White;
                                     background-color: $color-Background-line;
                                     border: 1px solid $color-Background-line;
                                 }
-                                .putcart{
-                                    width: 135px;
-                                    height: 43px;
-                                    background-color: unset;
-                                    border: 1px solid $color-MoreButton;
-                                    color: $color-IronGray;
-                                    font-size: $H7-font-size;
-                                    border-radius: 5px;
-                                    @include normal-screen(){
+                                .order-buy{
+                                    .putcart{
+                                        width: 135px;
+                                        height: 43px;
+                                        background-color: unset;
+                                        border: 1px solid $color-MoreButton;
+                                        color: $color-IronGray;
+                                        font-size: $H7-font-size;
+                                        border-radius: 5px;
                                         margin-right: 20px;
                                     }
-                                }
-                                .pre-order{
-                                    width: 70px;
-                                    height: 43px;
-                                    background-color: unset;
-                                    border: 1px solid $color-MoreButton;
-                                    color: $color-IronGray;
-                                    font-size: $H7-font-size;
-                                    border-radius: 5px;
-                                    @include normal-screen(){
-                                        margin-right: 20px;
+                                    .pre-order{
+                                        width: 70px;
+                                        height: 43px;
+                                        background-color: unset;
+                                        border: 1px solid $color-MoreButton;
+                                        color: $color-IronGray;
+                                        font-size: $H7-font-size;
+                                        border-radius: 5px;
+                                        @include normal-screen(){
+                                            margin-right: 20px;
+                                        }
                                     }
                                 }
                                 .order-amount{
                                     display: flex;
+                                    @include sm-phone(){
+                                        margin-bottom: 30px;
+                                    }
                                     .minus{
                                         width: 45px;
                                         height: 40px;
@@ -531,8 +618,18 @@ main{
                             .order-price{
                                 display: flex;
                                 align-items: flex-end;
+
                                 @include normal-screen(){
                                     margin-right: 16.5vw;
+                                }
+                                @include sm-screen(){
+                                    position: absolute;
+                                    bottom: 400px;
+                                    left: 10vw;
+                                    margin-right: unset;
+                                }
+                                @include sm-phone(){
+                                    bottom: 450px;
                                 }
                                 p{
                                     margin: 0px;
@@ -549,6 +646,9 @@ main{
                                         letter-spacing: $font-letter-space-50;
                                         color: $color-Evaluation-Star;
                                         line-height: 60px;
+                                        @include sm-phone(){
+                                            font-size: $H1-font-size; 
+                                        }
                                     }
                                 }
                             }
@@ -656,12 +756,19 @@ main{
                                     justify-content: center;
                                     align-items: center;
                                     padding-right: 12vw;
+                                    @include ex-screen(){
+                                        padding-right: unset;
+                                    }
                                     .main-shoes{
                                         position: relative;
+                                        @include ex-screen(){
+                                            display: none;
+                                        }
                                         .main-photo{
                                             max-width: 653px;
                                             min-height: 342px;
                                             transform: rotate(-15deg);
+                                            @include normal-screen(){}
                                         }
                                         .bg-square{
                                             width: 483px;
@@ -671,17 +778,6 @@ main{
                                             top: 59px;
                                             left: 234px;
                                             object-fit: cover;
-                                        }
-                                        .bg-shadow{
-                                            width: 283px;
-                                            height: 20px;
-                                            border-radius: 50%;
-                                            background-color: $color-Background-Shadow;
-                                            position: absolute;
-                                            top: 272px;
-                                            left: 300px;
-                                            object-fit: cover;
-                                            filter: blur(4px);
                                         }
                                         @mixin click-p{
                                             font-size: $H10-font-size;
@@ -1084,13 +1180,55 @@ main{
                                         }
                                         
                                     }
+                                    .other-shoes{
+                                        width: 100%;
+                                        display: none;
+                                        @include ex-screen(){
+                                            display: flex; 
+                                            justify-content: space-between; 
+                                        }
+                                        @mixin click-p{
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-50;
+                                            line-height: 21px;
+                                            color: $color-IronGray;
+                                            margin: 0px 0px 0px 20px;
+                                        }
+                                        .shoes-img-card{
+                                            margin-bottom: 100px;
+                                            position: relative;
+                                            .content-text{
+                                                position: absolute;
+                                                left: 0px;
+                                                &:nth-child(1){
+                                                    top: -45px
+                                                }
+                                                &:nth-child(3){
+                                                    top: -95px
+                                                }
+                                                p{
+                                                    @include click-p();
+                                                    margin: 0px;
+                                                }
+                                            }
+                                        }
+                                        // .front-shoes{
+                                            
+                                        // }
+                                        // .back-shoes{
+
+                                        // }
+                                    }
                                     
                                 }
                             }
                         }
                         // 開發過程
                         .development-process{  
-                            min-height: 969px;    
+                            min-height: 969px; 
+                            @include phone(){
+                                min-height: unset;
+                            }   
                             .inner-content{
                                 display: flex;
                                 margin-top: 40px;
@@ -1103,8 +1241,11 @@ main{
                                     .swiper-container{
                                         width: 600px;
                                         @include normal-screen(){
-                                            margin: unset;
+                                           
                                             margin-bottom: 40px;
+                                        }
+                                        @include phone(){
+                                            margin-top: 40px;
                                         }
                                         .swiper-wrapper{
                                             .swiper-slide{
@@ -1159,9 +1300,15 @@ main{
                                         @include normal-screen(){
                                             width: 650px;
                                         }
+                                        @include phone(){
+                                           height: 0px;
+                                        }
                                     }
                                 
                                     .swiper-slide {
+                                        @include phone(){
+                                            display: none;
+                                        }
                                         text-align: center;
                                         font-size: 18px;
                                         background: #fff;
@@ -1199,12 +1346,19 @@ main{
                                     left: 0px;
                                     justify-content: flex-start;
                                 }
+                                @include phone(){
+                                    top: 10px;
+                                    left: 5vw;     
+                                }
                                 .swiper-step-button{
                                     flex:0 0 48%;
                                     display: flex;
                                     justify-content: space-between;
                                     @include normal-screen(){
                                         flex:0 0 107%;   
+                                    }
+                                    @include phone(){
+                                        flex:0 0 102%;
                                     }
                                     .pagination-next{
                                         position: relative;
@@ -1245,7 +1399,10 @@ main{
                                     }
                                     .button-next{
                                         text-align: center;
-                                        flex: 0 0 10%;                                    
+                                        flex: 0 0 10%;  
+                                        @include phone(){
+                                            display: none;
+                                        }                                  
                                     }
                                 }
                             }
@@ -1317,11 +1474,24 @@ main{
                     max-width: 1120px;
                     margin: auto;
                     margin-bottom: 100px;
+                    @include normal-screen(){
+                        max-width: 800px;
+                    }
+                    @include sm-screen(){
+                        max-width: 600px;
+                    }
                     .customer-eval{
                         border-bottom: 1px solid $color-Product-Detail-Title;
+                        @include normal-phone(){
+                            border: unset;
+                        }
                         .eval-title{
                             font-size: $H3-font-size;
                             letter-spacing: $font-letter-space-50;
+                            @include sm-screen(){
+                                text-align: center;
+                                margin-bottom: 10px;
+                            }
                         }
                         .different-eval{
                             max-width: 800px;
@@ -1329,7 +1499,16 @@ main{
                             align-items: center;
                             justify-content: space-between;
                             margin-bottom: 40px;
+                            @include sm-screen(){
+                                flex-direction: column;
+                            }
                             .star-eval{
+                                @include sm-screen(){
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin-bottom: 10px;
+                                }
                                 p{
                                     font-size: $H10-font-size;
                                     letter-spacing: $font-letter-space-200;
@@ -1347,6 +1526,9 @@ main{
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                @include sm-screen(){
+                                    margin-bottom: 10px;
+                                }
                                 p{
                                     font-size: $H0-font-size;
                                     margin: 0px;
@@ -1357,6 +1539,10 @@ main{
                                     margin: 0px;
                                     padding: 0px;
                                     width: 385px;
+                                    transition: 1s;
+                                    @include sm-screen(){
+                                    width: 250px;    
+                                    }
                                     li{
                                         display: flex;
                                         align-items: center;
@@ -1372,6 +1558,10 @@ main{
                                             height: 8px;
                                             background-color: $color-Cart-Border;
                                             margin: 0xp 10px;
+                                            transition: 1s;
+                                            @include sm-screen(){
+                                                width: 150px;
+                                            }
                                         }
                                         p{
                                             font-size: $H10-font-size;
@@ -1391,6 +1581,11 @@ main{
                                     display: flex;
                                     justify-content: space-between;
                                     padding: 0px;
+                                    transition: 1s;
+                                    @include normal-phone(){
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
                                      .order-cart{
                                              &.content{
                                                  flex: 0 0 80%;
@@ -1398,19 +1593,40 @@ main{
                                      }
                                      .img-content{
                                          display: flex;
+                                         @include normal-phone(){
+                                            flex-direction: column;
+                                            align-items: center;
+                                            position: relative;
+                                            &:after{
+                                                content: "";
+                                                position: absolute;
+                                                bottom: -70px;
+                                                left: 0px;
+                                                width: 256px;
+                                                height: 1px;
+                                                background-color: $color-Product-Detail-Title;
+                                            }
+                                        }
                                              img{
                                              max-width: 138px;
                                              width: 100%;
                                              min-height: 138px;
                                              object-fit: contain;
                                              object-position: center;
-                                             margin-right: 15px;   
+                                             margin-right: 15px;  
+                                             @include normal-phone(){
+                                                 margin-right: unset;
+                                                 margin-bottom: 10px;
+                                             } 
                                              }
                                              .cart-content{
-                                                width: 400px;
+                                                width: 250px;
                                                 display: flex;
                                                 flex-direction: column;
                                                 justify-content: space-between;
+                                                @include normal-phone(){
+                                                    align-items: center;
+                                                }
                                                 p{
                                                     margin: 0; 
                                                     letter-spacing: $font-letter-space-100;
@@ -1426,6 +1642,9 @@ main{
                                                     .star-eval{
                                                         display: flex;
                                                         align-items: flex-end;
+                                                        @include normal-phone(){
+                                                            margin-bottom: 10px;
+                                                        }
                                                         .star-img{
                                                             margin-right: 10px;
                                                             color: $color-Evaluation-Star;
@@ -1452,12 +1671,14 @@ main{
                                                    }
                                                 }
                                              }   
-                                         
                                      }
                                      .eval-custoemr{
                                          display: flex;
                                          flex-direction: column;
                                          justify-content: flex-end;
+                                         @include normal-phone(){
+                                            margin-left: 140px;
+                                        }
                                         .eval-name{
                                             font-size: $H9-font-size;
                                             letter-spacing: $font-letter-space-100;
@@ -1550,6 +1771,9 @@ main{
                                 text-decoration: none;
                             }
                         }
+                        @include normal-phone(){
+                            display: none;
+                        }
                         .product-item {
                             display: flex;
                             justify-content: space-between;
@@ -1569,6 +1793,14 @@ main{
                                 &:nth-child(3) {
                                     img {
                                         top: -50px;
+                                    }
+                                }
+                                @include normal-screen(){
+                                    &:nth-child(1){
+                                        margin-bottom: 100px;
+                                    }
+                                    &:nth-child(2){
+                                        margin-bottom: 100px;
                                     }
                                 }
                             }                            
