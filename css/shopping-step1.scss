@@ -5,6 +5,41 @@
     padding: 0px;
     font-family: $font-Family-A;
 }
+//1760
+@mixin bg-screen{
+    @media(max-width:1760px){
+        @content;
+        transition: 1s;
+    }
+}
+//1350
+@mixin sm-screen{
+    @media(max-width:1350px){
+        @content;
+        transition: 1s;
+    }
+}
+//1070
+@mixin tablet{
+    @media(max-width:1070px){
+        @content;
+        transition: 1s;
+    }
+}
+//790
+@mixin bg-phone{
+    @media(max-width:790px){
+        @content;
+        transition: 1s;
+    }
+}
+//620
+@mixin sm-phone{
+    @media(max-width:620px){
+        @content;
+        transition: 1s;
+    }
+}
 main{
     .main-container{    
         background: $color-LightGray;
@@ -14,6 +49,19 @@ main{
             max-width: 1550px;
             padding: 0;
             padding-top: 15.7vh;
+            transition: 1s;
+            @include bg-screen(){
+                max-width: 1140px;
+            }
+            @include sm-screen(){
+                max-width: 880px;
+            }
+            @include tablet(){
+                max-width: unset;
+            }
+            @include sm-phone(){
+                padding-top: 5.7vh;
+            }
             .steps{
                 display: flex;
                 padding: 0 10px;
@@ -69,7 +117,10 @@ main{
                                 letter-spacing: $font-letter-space-200;
                             }
                             .text-content{                        
-                                text-align: left;                                                
+                                text-align: left;    
+                                @include tablet(){
+                                    display: none;
+                                }                                            
                                 p{
                                     &:nth-child(1){                                
                                         font-size: $H10-font-size;
@@ -104,11 +155,22 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
+                transition: 1s;
+                @include bg-screen(){
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                @include bg-phone(){
+                    align-items: center;
+                }
                 .web-title{
                     position: absolute;
                     top: 0px;
                     left: -130px;
                     font-size: 98px;
+                    @include tablet(){
+                        display: none;
+                    }
                     p{
                         margin: 0px;
                         -webkit-writing-mode: vertical-lr;
@@ -122,6 +184,12 @@ main{
                     min-height:452px;
                     background: $color-White;
                     border: 1px solid $color-Apricot;
+                    @include bg-screen(){
+                        margin-bottom: 35px;
+                    }
+                    @include bg-phone(){
+                        margin-bottom: 800px;
+                    }
                     .order-title{
                         width: 100%;
                         padding-top: 20px;
@@ -138,15 +206,40 @@ main{
                                 font-weight: $font-Weight-B;
                                 font-size: $H10-font-size;
                                 letter-spacing: $font-letter-space-100;
+                                transition: 1s;
                                 &:nth-child(2){
                                     flex: 0 0 28%;
-                                }                     
+                                    
+                                }  
+                                @include bg-phone(){
+                                    flex: 0 0 17%;
+                                    &:nth-child(6){
+                                        display: none;
+                                    }
+                                    &:nth-child(7){
+                                        display: none;
+                                    }
+                                }   
+                                @include sm-phone(){
+                                    &:nth-child(3){
+                                        display: none;
+                                    }  
+                                    &:nth-child(4){
+                                        display: none;
+                                    }  
+                                    &:nth-child(5){
+                                        display: none;
+                                    }  
+                                }                
                             }
                         }
                     }
                     .shopping-cart{
                         width: 100%;
-                        padding-top: 20px;                
+                        padding-top: 20px;      
+                        @include sm-phone(){
+                            padding-bottom: 50px;    
+                        }          
                         ul{
                             width: 100%;                    
                             display: flex;                    
@@ -158,8 +251,16 @@ main{
                                 font-family: $font-Family-A;
                                 font-weight: $font-Weight-B;
                                 font-size: $H10-font-size;
+                                transition: 1s;
+                                @include bg-phone(){
+                                    flex: 0 0 17%;
+                                }
                                 &.content{
                                     flex: 0 0 28%;
+                                    transition: 1s;
+                                    @include sm-phone(){
+                                        flex: 0 0 32%; 
+                                    }
                                 }
                             }
                             .img{
@@ -169,6 +270,15 @@ main{
                                     max-height: 90px;
                                     object-fit: contain;
                                     object-position: center;
+                                    transition: 1s;
+                                    @include sm-phone(){
+                                        max-width: unset;
+                                        max-height: unset;
+                                        width: 90px;
+                                        height: 90px;
+                                        margin-right: 10px;
+                                        margin-left: 20px;
+                                    }
                                 }
                             }
                             .content{
@@ -177,9 +287,13 @@ main{
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: space-between;
+                                    @include bg-phone(){
+                                        width: 183px;
+                                    }
                                     .cart-title{                            
                                         color:$color-Nav-icon;
                                         p{
+                                            font-size: $H10-font-size;
                                             margin: 0;
                                         }               
                                     }
@@ -280,6 +394,127 @@ main{
                                 
                             }
                         }
+                        @include bg-phone(){
+                            &:nth-child(2){
+                                ul{
+                                    .delete-cart{
+                                        position: absolute;
+                                        top: 90px;
+                                        right: 4vw;
+                                    } 
+                                    .favorite{
+                                        position: absolute;
+                                        top: 155px;
+                                        right: 3.5vw;
+                                    } 
+                                }
+                            }
+                            &:nth-child(3){
+                                ul{
+                                    .delete-cart{
+                                        position: absolute;
+                                        top: 220px;
+                                        right: 4vw;
+                                    } 
+                                    .favorite{
+                                        position: absolute;
+                                        top: 285px;
+                                        right: 3.5vw;
+                                    } 
+                                }
+                            }
+                            &:nth-child(4){
+                                ul{
+                                    .delete-cart{
+                                        position: absolute;
+                                        top: 350px;
+                                        right: 4vw;
+                                    } 
+                                    .favorite{
+                                        position: absolute;
+                                        top: 415px;
+                                        right: 3.5vw;
+                                    } 
+                                }
+                            }
+                        }
+                        @include sm-phone(){
+                            &:nth-child(2){
+                                ul{
+                                    .price{
+                                        position: absolute;
+                                        top: 197px;
+                                        left: 25px;
+                                    } 
+                                    .count{
+                                        position: absolute;
+                                        top: 197px;
+                                        left: 100px;
+                                    } 
+                                    .subtotal{
+                                        position: absolute;
+                                        top: 200px;
+                                        left: 235px;
+                                    }
+                                    .delete-cart{
+                                        top: 90px;
+                                    } 
+                                    .favorite{
+                                        top: 165px;
+                                    }   
+                                }
+                            }
+                            &:nth-child(3){
+                                ul{
+                                    .price{
+                                        position: absolute;
+                                        top: 377px;
+                                        left: 25px;
+                                    } 
+                                    .count{
+                                        position: absolute;
+                                        top: 377px;
+                                        left: 100px;
+                                    } 
+                                    .subtotal{
+                                        position: absolute;
+                                        top: 380px;
+                                        left: 235px;
+                                    }
+                                    .delete-cart{
+                                        top: 265px;
+                                    } 
+                                    .favorite{
+                                        top: 345px;
+                                    }   
+                                }
+                            }
+                            &:nth-child(4){
+                                ul{
+                                    .price{
+                                        position: absolute;
+                                        top: 550px;
+                                        left: 25px;
+                                    } 
+                                    .count{
+                                        position: absolute;
+                                        top: 550px;
+                                        left: 100px;
+                                    } 
+                                    .subtotal{
+                                        position: absolute;
+                                        top: 555px;
+                                        left: 235px;
+                                    }
+                                    .delete-cart{
+                                        top: 440px;
+                                    } 
+                                    .favorite{
+                                        top: 520px;
+                                    }  
+                                }
+                            } 
+                        }
                     }
                 }
                 .payment-shipping{
@@ -293,6 +528,9 @@ main{
                     align-items: center;
                     background: $color-White;
                     border: 1px solid $color-Apricot;
+                    @include bg-screen(){
+                        margin-left: unset;
+                    }
                     h3{
                         position: absolute;
                         top: 20px;
@@ -365,10 +603,37 @@ main{
             .other-amount{
                 width: 100%;
                 display: flex;
+                position: relative;
+                transition: 1s;
+                @include bg-screen(){
+                    justify-content: flex-end;
+                }
+                @include bg-phone(){
+                    justify-content: center;
+                }
                 .other-discount{    
                     margin-top: 20px;            
                     max-width: 1141px;
                     width: 100%;
+                    transition: 1s;
+                    @include bg-screen(){
+                        max-width: 740px;
+                        position: absolute;
+                        bottom: 355px;
+                        left: 0px;
+                    }
+                    @include sm-screen(){
+                        max-width: 350px;
+                        bottom: 15px;
+                    }
+                    @include bg-phone(){
+                        bottom: 780px;
+                        left: 29vw;
+                    }
+                    @include sm-phone(){
+                        max-width: 100vw;
+                        left:unset;
+                    }
                     .other-tital{
                         display: flex;
                         align-items: center;
@@ -388,9 +653,29 @@ main{
                         margin-top: 15px;
                         padding: 0 10px;
                         display: flex;
+                        transition: 1s;
+                        @include bg-screen(){
+                            width: 103%;
+                            flex-wrap: wrap;
+                        }
+                        @include sm-screen(){
+                            padding:0px;
+                        }
+                        @include sm-phone(){
+                            width: 100%;
+                        }
                         .commodity{
-                            flex:0 0 25%;
                             display: flex;
+                            @include bg-screen(){
+                                min-width: 370px;
+                                margin-bottom: 60px;
+                            }
+                            @include sm-screen(){
+                                min-width: 350px;
+                            }
+                            @include sm-phone(){
+                                min-width: 300px;
+                            }
                             .photo{
                                 max-width: 112px;
                                 width: 100%;                        
@@ -471,6 +756,9 @@ main{
                     .order-total-button{
                         width: 100%;
                         padding-top: 10px;
+                        @include bg-screen(){
+                            margin-bottom: 80px;
+                        }
                         .order-total{
                             display: flex;
                             justify-content: center;
