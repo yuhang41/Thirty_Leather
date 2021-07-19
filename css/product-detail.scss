@@ -193,6 +193,7 @@ main{
                               color: $color-Product-Detail-Title;
                               @include phone(){
                                 display: none;
+                                transition: none;
                             }
                           }
                           .swiper-button-prev{
@@ -202,6 +203,7 @@ main{
                             color: $color-Product-Detail-Title;
                             @include phone(){
                                 display: none;
+                                transition: none;
                             }
                         }
                           .swiper-slide {
@@ -618,7 +620,6 @@ main{
                             .order-price{
                                 display: flex;
                                 align-items: flex-end;
-
                                 @include normal-screen(){
                                     margin-right: 16.5vw;
                                 }
@@ -627,9 +628,29 @@ main{
                                     bottom: 400px;
                                     left: 10vw;
                                     margin-right: unset;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        top:85px;
+                                        left: -23px;
+                                        width: 325px;
+                                        height: 1px;
+                                        background-color: $color-Cart-Border;
+
+                                    }
                                 }
                                 @include sm-phone(){
                                     bottom: 450px;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        top:85px;
+                                        left: -23px;
+                                        width: 300px;
+                                        height: 1px;
+                                        background-color: $color-Cart-Border;
+
+                                    }
                                 }
                                 p{
                                     margin: 0px;
@@ -675,6 +696,11 @@ main{
                             letter-spacing: $font-letter-space-50;
                             margin-top: 40px;
                             padding: 0px 35px;
+                            transition: 1s;
+                            @include sm-phone(){
+                                font-size: $H7-font-size;
+                                padding: 0px 15px;
+                            }
                             &:nth-child(2){
                                 border-right: 1px solid $color-Product-Detail-Title;
                                 border-left: 1px solid $color-Product-Detail-Title;  
@@ -689,6 +715,10 @@ main{
                                     width: 100px;
                                     height: 1px;
                                     background-color: $color-Evaluation-Star;
+                                    @include sm-phone(){
+                                        left: 15px;
+                                        width: 76px;
+                                    }
                                 }
                                 
                             }
@@ -702,6 +732,10 @@ main{
                                     width: 100px;
                                     height: 1px;
                                     background-color: $color-Evaluation-Star;
+                                    @include sm-phone(){
+                                        left: 15px;
+                                        width: 76px;
+                                    }
                                 }
                             }
                         }
@@ -723,19 +757,31 @@ main{
                             width: 100%;
                             height: auto;
                             color: black;
-                            transition:display 1s;
+                            transition: none;
                             &.active{
                                 // display: block;
                                 opacity: 1;
                                 position: static;
-                                transition: display 1s;
+                                transition: none;
                             }
                         }
                         // 商品詳細描述
                         .product-description{
-                           
                             .inner-content{
                                 margin-top: 30px;
+                                transition: 1s;
+                                @include tablet(){
+                                    max-width: 800px;
+                                }
+                                @include sm-screen(){
+                                    max-width: 600px;
+                                }
+                                @include normal-phone(){
+                                    max-width: 500px;
+                                }
+                                @include sm-phone(){
+                                    max-width: 300px;
+                                }
                                 .paragraph-first{
                                     max-width: 890px;
                                     text-align: justify;
@@ -1183,9 +1229,21 @@ main{
                                     .other-shoes{
                                         width: 100%;
                                         display: none;
+                                        margin-top: 100px;
                                         @include ex-screen(){
                                             display: flex; 
                                             justify-content: space-between; 
+                                        }
+                                        @include tablet(){
+                                            flex-wrap: wrap;
+                                        }
+                                        @include sm-screen(){
+                                            justify-content: center;
+                                        }
+                                        @include sm-phone(){
+                                            img{
+                                                width: 300px;
+                                            }
                                         }
                                         @mixin click-p{
                                             font-size: $H10-font-size;
@@ -1194,30 +1252,80 @@ main{
                                             color: $color-IronGray;
                                             margin: 0px 0px 0px 20px;
                                         }
-                                        .shoes-img-card{
-                                            margin-bottom: 100px;
-                                            position: relative;
-                                            .content-text{
-                                                position: absolute;
-                                                left: 0px;
+                                        p{
+                                            @include click-p();
+                                            margin: 0px;
+                                        }
+                                        .front-shoes{
+                                            .shoes-img-card{
+                                                margin-bottom: 100px;
+                                                position: relative;
                                                 &:nth-child(1){
-                                                    top: -45px
+                                                    margin-bottom: 130px;
+                                                    @include sm-screen(){
+                                                        margin-bottom: 65px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px; 
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    @include sm-screen(){
+                                                        margin-bottom: 85px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px; 
+                                                    }
                                                 }
                                                 &:nth-child(3){
-                                                    top: -95px
+                                                    @include sm-screen(){
+                                                        margin-bottom: 65px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -65px;
+                                                        left: 0px;
+                                                    }
                                                 }
-                                                p{
-                                                    @include click-p();
-                                                    margin: 0px;
-                                                }
-                                            }
+                                                
+                                            }  
                                         }
-                                        // .front-shoes{
-                                            
-                                        // }
-                                        // .back-shoes{
-
-                                        // }
+                                        .back-shoes{
+                                            .shoes-img-card{
+                                                margin-bottom: 100px;
+                                                position: relative;
+                                                &:nth-child(1){
+                                                    margin-bottom: 130px;
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    @include sm-screen(){
+                                                        margin-bottom: 55px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -105px;
+                                                        left: 0px; 
+                                                    }
+                                                }
+                                                &:nth-child(3){
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -25px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                                
+                                            }  
+                                        }
                                     }
                                     
                                 }
@@ -1229,25 +1337,37 @@ main{
                             @include phone(){
                                 min-height: unset;
                             }   
+                            @include normal-phone(){
+                                max-width: 500px;
+                            }
+                            @include sm-phone(){
+                                max-width: 300px;
+                            }   
                             .inner-content{
                                 display: flex;
                                 margin-top: 40px;
                                 position: relative;
                                 @include normal-screen(){
                                     flex-direction: column;
-                                }       
+                                }  
                                 .development-process-content{
                                     flex: 0 0 50%;
                                     .swiper-container{
                                         width: 600px;
-                                        @include normal-screen(){
-                                           
+                                        @include normal-screen(){      
                                             margin-bottom: 40px;
                                         }
                                         @include phone(){
                                             margin-top: 40px;
                                         }
+                                        @include normal-phone(){
+                                            width: 500px;
+                                        }
+                                        @include sm-phone(){ 
+                                            width: 300px;
+                                        }
                                         .swiper-wrapper{
+                                            margin: auto;
                                             .swiper-slide{
                                                 .development-process-title{
                                                     margin-bottom: 20px;
@@ -1256,11 +1376,32 @@ main{
                                                         color: $color-Evaluation-Star;
                                                         font-size: $H7-font-size;
                                                         border-bottom: 1px solid $color-Evaluation-Star;
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            display: block;
+                                                            text-align: center;
+                                                            border:unset;
+                                                            position: relative;
+                                                            &:after{
+                                                                content: "";
+                                                                position: absolute;
+                                                                top: 25px;
+                                                                left: 115px;
+                                                                width: 70px;
+                                                                height: 1px;
+                                                                background-color: $color-Evaluation-Star;
+                                                            }
+                                                        }
                                                     }
                                                     h2{                                            
                                                         font-size: $H3-font-size;
                                                         font-weight: $font-Weight-B;
-                                                        margin:0;                                                                                        
+                                                        margin:0;  
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            font-size: $H5-font-size;
+                                                            text-align: center;  
+                                                        } 
                                                     }
                                                 }
                                                 .development-process-list{
@@ -1271,7 +1412,11 @@ main{
                                                         font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
                                                         line-height: 30px;
-                                                        margin: 0;                                                    
+                                                        margin: 0;    
+                                                        @include sm-phone(){
+                                                            font-size: $H8-font-size; 
+                                                            text-align: center;
+                                                        }                                                
                                                     }                                                
                                                 }
                                                 .development-process-text{
@@ -1280,6 +1425,10 @@ main{
                                                         font-size: $H9-font-size;
                                                         line-height: 26px;
                                                         letter-spacing: $font-letter-space-50;
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            text-align: center;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1302,12 +1451,14 @@ main{
                                         }
                                         @include phone(){
                                            height: 0px;
+                                           transition: none;
                                         }
                                     }
                                 
                                     .swiper-slide {
                                         @include phone(){
                                             display: none;
+                                            transition: none;
                                         }
                                         text-align: center;
                                         font-size: 18px;
@@ -1350,15 +1501,22 @@ main{
                                     top: 10px;
                                     left: 5vw;     
                                 }
+                                @include normal-phone(){
+                                    left: 2.5vw; 
+                                }
                                 .swiper-step-button{
                                     flex:0 0 48%;
                                     display: flex;
                                     justify-content: space-between;
+                                    transition: 1s;
                                     @include normal-screen(){
                                         flex:0 0 107%;   
                                     }
                                     @include phone(){
                                         flex:0 0 102%;
+                                    }
+                                    @include normal-phone(){
+                                        flex:0 0 108%;
                                     }
                                     .pagination-next{
                                         position: relative;
@@ -1402,6 +1560,7 @@ main{
                                         flex: 0 0 10%;  
                                         @include phone(){
                                             display: none;
+                                            transition: none;
                                         }                                  
                                     }
                                 }
@@ -1412,6 +1571,12 @@ main{
                             min-height: 700px;
                             .inner-content{
                                 max-width: 550px;
+                                @include normal-phone(){
+                                    max-width: 500px;
+                                }
+                                @include sm-phone(){
+                                    max-width: 300px;
+                                }
                                 .announcement{
                                     margin-top: 30px;
                                     border-bottom: 1px solid $color-WedgwoodBlue;
@@ -1420,6 +1585,10 @@ main{
                                         line-height: 26px;
                                         color: $color-Evaluation-Star;
                                         letter-spacing: $font-letter-space-50;
+                                        @include normal-phone(){
+                                            font-size: $H8-font-size;
+                                            text-align: center;
+                                        }
                                     }
                                 }
                                 .size-discript{
@@ -1438,7 +1607,12 @@ main{
                                         }
                                         .content{
                                             max-width: 425px;
+                                            transition: 1s;
                                            @include size-discript-p();
+                                           @include normal-phone(){
+                                               font-size: $H10-font-size;
+                                               text-align: center;
+                                           }
                                         }
                                     }
                                     .tryon-experience{
@@ -1455,7 +1629,13 @@ main{
                                                 flex-direction: column;
                                                 align-items: center;
                                                 text-align: center;
+                                                transition: 1s;
                                                 @include size-discript-p();
+                                                @include normal-phone(){
+                                                    font-size: $H11-font-size;
+                                                    line-height: unset;
+                                                    letter-spacing: unset;
+                                                }
                                             }
                                         }
                                     }
