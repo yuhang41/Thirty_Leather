@@ -442,8 +442,8 @@ main{
                                             }  
                                             input[class="color-checkbox"]:checked+label{
                                                 background-color:var(--color);
-                                                box-shadow: inset -2px -2px 2px 2px rgba(0, 0, 0, .5);
-                                                border: 2px solid $color-Evaluation-Star;
+                                                box-shadow: 1px 5px 5px 2px rgba(0, 0, 0, .3);
+                                                // border: 3px solid $color-White;
                                             }
                                             .color-button{
                                                 width: 36px;

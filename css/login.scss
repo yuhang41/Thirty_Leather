@@ -26,7 +26,7 @@
         @content;
     }
 }
-    
+
 //大手機尺寸
 @mixin bg-phone {
     @media (max-width: 768px) {
@@ -52,18 +52,18 @@
     }
 }
 
-*{
-    list-style: none;   
-    margin: 0px; 
+* {
+    list-style: none;
+    margin: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
 main {
     .member-page {
-        max-width: 100%;
+        width: 100%;
         height: 100%;
         background-color: $color-LightGray;
-        
+
         .page-title {
             font-size: 72px;
             color: $color-White;
@@ -125,18 +125,11 @@ main {
             .tab-content {
                 .tab-pane {
                     .member-data {
+                        width: 1140px;
                         height: 100%;
                         background-color: $color-White;
                         border: 1px solid $color-Apricot;
                         margin-left: -17px;
-
-                        @include tablet() {
-                            width: 100%;
-                        }
-
-                        @include elevenforty() {
-                            width: 95%;
-                        }
 
                         @include sm-tablet() {
                             width: 100%;
@@ -147,20 +140,19 @@ main {
                         .member-container {
                             width: 95%;
                             border-bottom: 2px solid $color-WedgwoodBlue;
-                            font-family: $font-Family-A;
-                            
+
                             .data-block1 {
                                 .fa-user {
                                     font-size: $H8-font-size;
                                     color: $color-WedgwoodBlue;
                                 }
-                    
+
                                 .user-id {
                                     font-size: $H10-font-size;
                                     color: $color-WedgwoodBlue;
                                     margin: 0px 16px;
                                 }
-                    
+
                                 .general-member {
                                     width: 80px;
                                     background-color: $color-Apricot;
@@ -168,19 +160,19 @@ main {
                                     border-radius: 10px;
                                 }
                             }
-    
+
                             .data-block2 {
                                 color: $color-MoreButton-hover;
-                                
+
                                 .fa-pen {
                                     font-size: $H7-font-size;
                                 }
-                
+
                                 .user-edit {
                                     font-size: $H9-font-size;
                                 }
                             }
-    
+
                             .data-block3 {
                                 .input-data {
                                     width: 85%;
@@ -189,9 +181,9 @@ main {
 
                                     @include sm-tablet() {
                                         display: flex;
-                                        flex-direction: column; 
+                                        flex-direction: column;
                                     }
-                                    
+
                                     .input-left {
                                         @include sm-tablet() {
                                             margin: auto;
@@ -224,7 +216,7 @@ main {
                                                         border: 1px solid $color-WedgwoodBlue;
                                                         outline: none;
                                                     }
-                                
+
                                                     .district {
                                                         width: 65px;
                                                         height: 32px;
@@ -251,16 +243,55 @@ main {
                                             @include sm-tablet() {
                                                 margin-top: 40px;
                                             }
-                                            .form-check-input {
-                                                margin: 4px 0 0 5px;
-                                                width: 16px;
-                                                height: 16px;
+
+                                            .title6 {
+                                                display: block;
+                                                position: relative;
+
+                                                input {
+                                                    display: none;
+                                                }
+
+                                                .checkmark {
+                                                    position: absolute;
+                                                    top: 10%;
+                                                    left: 32%;
+                                                    height: 18px;
+                                                    width: 18px;
+                                                    border: 1px solid $color-WedgwoodBlue;
+
+                                                    @include sm-tablet() {
+                                                        position: absolute;
+                                                        top: 10%;
+                                                        left: 30%;
+                                                    }
+                                                }
+
+                                                input:checked ~ .checkmark {
+                                                    background-color: $color-WedgwoodBlue;
+                                                }
+
+                                                input:checked ~ .checkmark:after {
+                                                    content: "";
+                                                    display: block;
+                                                }
+
+                                                .checkmark:after {
+                                                    width: 7px;
+                                                    height: 12px;
+                                                    border: solid white;
+                                                    border-width: 0 3px 3px 0;
+                                                    transform: rotate(45deg);
+                                                    position: absolute;
+                                                    left: calc(50% - 3.5px);
+                                                    top: 1px;
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
-    
+
                             .data-block4 {
                                 button {
                                     height: 40px;
@@ -269,7 +300,7 @@ main {
                                     color: $color-IronGray;
                                     letter-spacing: $font-letter-space-200;
                                     border: 1px solid $color-MoreButton;
-        
+
                                     &:hover {
                                         background-color: $color-MoreButton-hover;
                                         color: $color-White;
@@ -283,29 +314,110 @@ main {
                                 font-size: 29.25px;
                                 color: $color-WedgwoodBlue;
                             }
+                        }
 
+                        .data-block6 {
                             .order-content {
-                                .order-container {
-                                    width: 90%;
-                                    .order-lists {
-                                        font-size: 14px;
+                                width: 95%;
 
-                                        .list {
-                                            width: 106.78px;
+                                .order-lists {
+                                    width: 100%;
+                                    font-size: 14px;
+
+                                    .list-block1 {
+                                        width: 100%;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        background-color: $color-Footer-Background;
+                                        color: $color-White;
+
+                                        @include try-on() {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            height: 60px;
                                         }
 
-                                        .number, .invoice, .information {
-                                            background-color: $color-MoreButton;
-                                            color: $color-White;
+                                        .block1-l {
+                                            width: 45%;
+
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
+
+                                            li {
+                                                width: 84px;
+                                            }
                                         }
-                                        
-                                        .list-block1 {
-                                            height: 30px;
-                                            line-height: 30px;
-                                            background-color: $color-Footer-Background;
-                                            color: $color-White;
+
+                                        .block1-r {
+                                            width: 55%;
+
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
+
+                                            li {
+                                                width: 84px;
+                                            }
                                         }
                                     }
+
+                                    .list-block {
+                                        width: 100%;
+
+                                        @include try-on() {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            height: 60px;
+                                        }
+
+                                        li {
+                                            @include sm-tablet() {
+                                                white-space: nowrap;
+                                            }
+                                        }
+
+                                        .block-l {
+                                            width: 45%;
+
+                                            li {
+                                                width: 84px;
+                                            }
+
+                                            .number {
+                                                background-color: $color-MoreButton;
+                                                color: $color-White;
+                                            }
+                                        }
+
+                                        .block-r {
+                                            width: 55%;
+
+                                            li {
+                                                width: 84px;
+                                            }
+
+                                            .invoice,
+                                            .information {
+                                                background-color: $color-MoreButton;
+                                                color: $color-White;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .data-block7 {
+                            button {
+                                background-color: #ffffff;
+                                color: #a0a0a0;
+                                border: none;
+
+                                &:hover {
+                                    color: #f7a269;
                                 }
                             }
                         }
