@@ -211,6 +211,10 @@ main{
                                     flex: 0 0 28%;
                                     
                                 }  
+                                @include tablet(){
+                                flex: 0 0 12%;
+
+                                }
                                 @include bg-phone(){
                                     flex: 0 0 17%;
                                     &:nth-child(6){
@@ -252,6 +256,9 @@ main{
                                 font-weight: $font-Weight-B;
                                 font-size: $H10-font-size;
                                 transition: 1s;
+                                @include tablet(){
+                                    flex: 1 0 11%; 
+                                }
                                 @include bg-phone(){
                                     flex: 0 0 17%;
                                 }
@@ -531,6 +538,12 @@ main{
                     @include bg-screen(){
                         margin-left: unset;
                     }
+                    @include tablet(){
+                        margin-right: 20px;
+                    }
+                    @include bg-phone(){
+                        margin-right: unset;
+                    }
                     h3{
                         position: absolute;
                         top: 20px;
@@ -626,7 +639,11 @@ main{
                         max-width: 350px;
                         bottom: 15px;
                     }
+                    @include tablet(){
+                        margin-left: 20px;
+                    }
                     @include bg-phone(){
+                        margin-left: unset;
                         bottom: 780px;
                         left: 29vw;
                     }
@@ -725,6 +742,13 @@ main{
                     margin-left: 2vw;
                     max-width: 371px;
                     width: 100%;
+                    @include tablet(){
+                        margin-left: unset;
+                        margin-right: 20px;
+                    }
+                    @include bg-phone(){
+                        margin-right:unset;
+                    }
                     .free-ship{
                         display: flex;
                         font-size: $H11-font-size;

@@ -164,6 +164,17 @@ main .main-container .my-container .shopping-container {
   position: relative;
 }
 
+@media (max-width: 1760px) {
+  main .main-container .my-container .shopping-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .shopping-container .web-title {
   position: absolute;
   top: 0px;
@@ -540,6 +551,23 @@ main .main-container .my-container .shopping-container .customer-info {
           align-items: center;
 }
 
+@media (max-width: 1760px) {
+  main .main-container .my-container .shopping-container .customer-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .shopping-container .customer-info .orderer-info {
   max-width: 371px;
   width: 100%;
@@ -566,6 +594,7 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
 main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-title {
   font-size: 24px;
   letter-spacing: 3.2px;
+  text-align: center;
 }
 
 main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-name {
@@ -632,7 +661,11 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee {
+main .main-container .my-container .shopping-container .customer-info .recipient-info {
+  width: 100%;
+}
+
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee {
   width: 100%;
   min-height: 509px;
   background-color: #ffffff;
@@ -654,12 +687,20 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   margin: 32px auto;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-title {
+@media (max-width: 1760px) {
+  main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee {
+    margin-top: 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-title {
   font-size: 24px;
   letter-spacing: 3.2px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .shipping-type {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .shipping-type {
   min-width: 295px;
   min-height: 33px;
   background-color: #a2b5c0;
@@ -667,23 +708,23 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   line-height: 33px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .shipping-type p {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .shipping-type p {
   font-size: 16px;
   color: #ffffff;
   margin: 0px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check label {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check label {
   font-size: 14px;
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check input {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check input {
   opacity: 0;
   position: relative;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check .checkmark + label {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check .checkmark + label {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5px auto;
@@ -699,14 +740,14 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   cursor: pointer;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"] + label::before {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"] + label::before {
   content: "";
   width: 17px;
   height: 17px;
   border: 1px solid #a2b5c0;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"] + label::after {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"] + label::after {
   content: "\2713";
   color: white;
   font-size: 12px;
@@ -719,23 +760,23 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   transition: all 300ms ease-in-out;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"]:checked + label::before {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"]:checked + label::before {
   background-color: #a2b5c0;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"]:checked + label::after {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-check .checkmark[type="checkbox"]:checked + label::after {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-name label {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-name label {
   font-size: 16px;
   font-weight: bold;
   color: #65737f;
   margin: 0px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-name input {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-name input {
   border: none;
   border-bottom: 1px solid #8090a0;
   background-color: unset;
@@ -745,24 +786,24 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-name p {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-name p {
   margin: 0px;
   font-size: 12px;
   color: #a2b5c0;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-phone {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-phone {
   margin-top: 20px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-phone label {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-phone label {
   font-size: 16px;
   font-weight: bold;
   color: #65737f;
   margin: 0px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .addressee-info .addressee-phone input {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-phone input {
   border: none;
   border-bottom: 1px solid #8090a0;
   background-color: unset;
@@ -772,7 +813,7 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee .shipping-info {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .shipping-info {
   min-width: 295px;
   min-height: 103px;
   padding: 10px 10px;
@@ -791,7 +832,7 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   color: #ffffff;
 }
 
-main .main-container .my-container .shopping-container .customer-info .addressee button {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee button {
   width: 150px;
   height: 40px;
   border: 1px solid #a2b5c0;
@@ -801,7 +842,7 @@ main .main-container .my-container .shopping-container .customer-info .addressee
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .customer-info .payment {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .payment {
   width: 100%;
   min-height: 135px;
   background-color: #ffffff;
@@ -822,13 +863,13 @@ main .main-container .my-container .shopping-container .customer-info .payment {
   margin: auto;
 }
 
-main .main-container .my-container .shopping-container .customer-info .payment .payment-title {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .payment .payment-title {
   font-size: 24px;
   letter-spacing: 3.2px;
   margin-bottom: 10px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .payment .payment-type {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .payment .payment-type {
   min-width: 295px;
   min-height: 33px;
   background-color: #a2b5c0;
@@ -836,7 +877,7 @@ main .main-container .my-container .shopping-container .customer-info .payment .
   line-height: 33px;
 }
 
-main .main-container .my-container .shopping-container .customer-info .payment .payment-type p {
+main .main-container .my-container .shopping-container .customer-info .recipient-info .payment .payment-type p {
   font-size: 16px;
   color: #ffffff;
   margin: 0px;

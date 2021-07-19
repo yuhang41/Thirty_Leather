@@ -70,6 +70,13 @@
      transform: scale(1);
   }
 }
+//1760
+@mixin bg-screen{
+    @media(max-width:1760px){
+        @content;
+        transition: 1s;
+    }
+}
 main{
     .main-container{
         background: $color-LightGray;
@@ -172,6 +179,9 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
+                @include bg-screen(){
+                    flex-direction: column;
+                }
                 .web-title{
                     position: absolute;
                     top: 0px;
@@ -390,6 +400,11 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    @include bg-screen(){
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                    }
                     .orderer-info{
                         max-width: 371px;
                         width: 100%;
@@ -405,6 +420,7 @@ main{
                             .orderer-title{
                                 font-size: $H5-font-size;
                                 letter-spacing: $font-letter-space-200;
+                                text-align: center;
                             }
                             .orderer-name{
                                 @include input-style(); 
@@ -421,104 +437,109 @@ main{
                             }
                         }  
                     }
-                    .addressee{
+                    .recipient-info{
                         width: 100%;
-                        min-height: 509px;
-                        background-color: $color-White;
-                        border: 1px solid $color-Apricot;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding:20px 0px ;
-                        margin: 32px auto;
-                        .addressee-title{
-                            font-size: $H5-font-size;
-                            letter-spacing: $font-letter-space-200;
-                        }
-                        .shipping-type{
-                            min-width: 295px;
-                            min-height: 33px;
-                            background-color: $color-Textarea-Text;
-                            text-align: center;
-                            line-height: 33px;
-                            p{
-                                font-size: $H8-font-size;
-                                color: $color-White;
-                                margin: 0px;
-                            }
-                        }
-                        .addressee-info{
-                            .addressee-check{
-                                label{
-                                    font-size: $H10-font-size;
-                                    color: $color-Nav-icon;
-                                }
-                                @include checkbox();
-                            }
-                            .addressee-name{
-                                @include input-style();
-                                p{
-                                    margin: 0px;
-                                    font-size: $H11-font-size;
-                                    color: $color-Textarea-Text;
-                                }
-                            }
-                            .addressee-phone{
-                                @include input-style();
-                                margin-top: 20px;
-                            }
-                        }
-                        .shipping-info{
-                            min-width: 295px;
-                            min-height: 103px;
-                            padding: 10px 10px;
+                        .addressee{
+                            width: 100%;
+                            min-height: 509px;
+                            background-color: $color-White;
+                            border: 1px solid $color-Apricot;
                             display: flex;
                             flex-direction: column;
+                            align-items: center;
                             justify-content: space-between;
-                            background-color: $color-Textarea-Text;
-                            font-size: $H11-font-size;
-                            color: $color-White;
-                        }
-                        button{
-                            width: 150px;
-                            height: 40px;
-                            border: 1px solid $color-Textarea-Text;
-                            background-color: unset;
-                            border-radius: 10px;
-                            font-size: $H10-font-size;
-                            color: $color-Nav-icon;
-                        }
-                    }
-                    .payment{
-                        width: 100%;
-                        min-height: 135px;
-                        background-color: $color-White;
-                        border: 1px solid $color-Apricot;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        margin: auto;
-                        .payment-title{
-                            font-size: $H5-font-size;
-                            letter-spacing: $font-letter-space-200;
-                            margin-bottom: 10px;
-                        }
-                        .payment-type{
-                            min-width: 295px;
-                            min-height: 33px;
-                            background-color: $color-Textarea-Text;
-                            text-align: center;
-                            line-height: 33px;
-                            p{
-                                font-size: $H8-font-size;
+                            padding:20px 0px ;
+                            margin: 32px auto;
+                            @include bg-screen(){
+                                margin-top: 0px;
+                            }
+                            .addressee-title{
+                                font-size: $H5-font-size;
+                                letter-spacing: $font-letter-space-200;
+                            }
+                            .shipping-type{
+                                min-width: 295px;
+                                min-height: 33px;
+                                background-color: $color-Textarea-Text;
+                                text-align: center;
+                                line-height: 33px;
+                                p{
+                                    font-size: $H8-font-size;
+                                    color: $color-White;
+                                    margin: 0px;
+                                }
+                            }
+                            .addressee-info{
+                                .addressee-check{
+                                    label{
+                                        font-size: $H10-font-size;
+                                        color: $color-Nav-icon;
+                                    }
+                                    @include checkbox();
+                                }
+                                .addressee-name{
+                                    @include input-style();
+                                    p{
+                                        margin: 0px;
+                                        font-size: $H11-font-size;
+                                        color: $color-Textarea-Text;
+                                    }
+                                }
+                                .addressee-phone{
+                                    @include input-style();
+                                    margin-top: 20px;
+                                }
+                            }
+                            .shipping-info{
+                                min-width: 295px;
+                                min-height: 103px;
+                                padding: 10px 10px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                background-color: $color-Textarea-Text;
+                                font-size: $H11-font-size;
                                 color: $color-White;
-                                margin: 0px;
+                            }
+                            button{
+                                width: 150px;
+                                height: 40px;
+                                border: 1px solid $color-Textarea-Text;
+                                background-color: unset;
+                                border-radius: 10px;
+                                font-size: $H10-font-size;
+                                color: $color-Nav-icon;
                             }
                         }
-                    }
-                   
+                        .payment{
+                            width: 100%;
+                            min-height: 135px;
+                            background-color: $color-White;
+                            border: 1px solid $color-Apricot;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin: auto;
+                            .payment-title{
+                                font-size: $H5-font-size;
+                                letter-spacing: $font-letter-space-200;
+                                margin-bottom: 10px;
+                            }
+                            .payment-type{
+                                min-width: 295px;
+                                min-height: 33px;
+                                background-color: $color-Textarea-Text;
+                                text-align: center;
+                                line-height: 33px;
+                                p{
+                                    font-size: $H8-font-size;
+                                    color: $color-White;
+                                    margin: 0px;
+                                }
+                            }
+                        }
+                    }                   
                 }
             }
             .other-amount{
