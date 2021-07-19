@@ -2,264 +2,427 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 
+// 大平板尺寸
+@mixin tablet {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin elevenforty {
+    @media (max-width: 1140px) {
+        @content;
+    }
+}
+// 小平板尺寸
+@mixin sm-tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+//試穿資訊換版
+@mixin try-on {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+//大手機尺寸
+@mixin bg-phone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+//商品卡片換版
+@mixin single-cart {
+    @media (max-width: 660px) {
+        @content;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+// iphone 5s
+@mixin iphone-5s {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
 * {
     list-style: none;
     margin: 0px;
     font-family: Arial, "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
-.member-center {
-    width: 100%;
-    height: 1010px;
-    background-color: $color-LightGray;
+main {
+    .member-page {
+        width: 100%;
+        height: 100%;
+        background-color: $color-LightGray;
 
-    .m-center-index {
-        font-size: 72px;
-        color: $color-White;
-    }
-
-    .list-Group {
-        .list-group-item {
-            width: 170px;
-            height: 60px;
-            background-color: $color-Footer-Background;
-            color: $color-LightGray;
-            font-size: $H7-font-size;
-            font-weight: bold;
-            letter-spacing: $font-letter-space-200;
-            border-bottom: 1px solid black;
-            outline: none;
-            z-index: 2;
-
-            &:hover {
-                background-color: $color-Footer-Background;
-                color: $color-LightGray;
-            }
-
-            &.active {
-                width: 205px;
-                background-color: $color-White;
-                color: $color-WedgwoodBlue;
-                font-weight: bold;
-                border-color: $color-SkyBlue;
-                border-right: 18px solid $color-SkyBlue;
-                margin-left: -18px;
-                z-index: 2;
-            }
-
-            &:first-child {
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
-            }
-
-            &:last-child {
-                border-bottom-right-radius: 0px;
-                border-bottom-left-radius: 0px;
-            }
+        .page-title {
+            font-size: 72px;
+            color: $color-White;
         }
-    }
 
-    .tab-contents {
-        margin-left: -17px;
-
-        .member-data {
-            width: 1140px;
-            height: 100%;
-            background-color: $color-White;
-            border: 1px solid $color-Apricot;
-
-            .fa-user {
-                font-size: $H8-font-size;
-                color: $color-WedgwoodBlue;
+        .member-lists {
+            @include sm-tablet() {
+                display: flex;
+                flex-direction: column;
             }
 
-            .user-id {
-                font-size: $H10-font-size;
-                color: $color-WedgwoodBlue;
-                margin: 0px 16px;
-            }
+            .list-group {
+                @include sm-tablet() {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
 
-            .general-member {
-                width: 80px;
-                background-color: $color-Apricot;
-                font-size: $H9-font-size;
-                border-radius: 10px;
-            }
-
-            .User-edit {
-                color: $color-MoreButton-hover;
-
-                .fa-pen {
+                .list-group-item {
+                    width: 170px;
+                    height: 60px;
+                    background-color: $color-Footer-Background;
                     font-size: $H7-font-size;
-                }
+                    color: $color-LightGray;
+                    letter-spacing: $font-letter-space-200;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                    z-index: 2;
 
-                .user-edit {
-                    font-size: $H9-font-size;
+                    &.active {
+                        width: 205px;
+                        background-color: $color-White;
+                        color: $color-WedgwoodBlue;
+                        border-color: $color-SkyBlue;
+                        border-right: 18px solid $color-SkyBlue;
+                        margin-left: -18px;
+                        z-index: 2;
+
+                        @include sm-tablet() {
+                            height: 78px;
+                            border-right: none;
+                            border-bottom: 18px solid $color-SkyBlue;
+                            z-index: 2;
+                        }
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+
+                    &:last-child {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
                 }
             }
 
-            .member-container {
-                width: 95%;
+            .tab-content {
+                .tab-pane {
+                    .member-data {
+                        width: 1140px;
+                        height: 100%;
+                        background-color: $color-White;
+                        border: 1px solid $color-Apricot;
+                        margin-left: -17px;
 
-                .input-data {
-                    border-bottom: 2px solid $color-MoreButton-hover;
+                        @include sm-tablet() {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: -17px;
+                        }
 
-                    .label1 {
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        letter-spacing: $font-letter-space-200;
-                    }
+                        .member-container {
+                            width: 95%;
+                            border-bottom: 2px solid $color-WedgwoodBlue;
 
-                    .input {
-                        width: 278px;
-                        font-size: 22.75px;
-                        border: none;
-                        border-bottom: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                            .data-block1 {
+                                .fa-user {
+                                    font-size: $H8-font-size;
+                                    color: $color-WedgwoodBlue;
+                                }
 
-                    .county,
-                    .zipcode {
-                        width: 65px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                                .user-id {
+                                    font-size: $H10-font-size;
+                                    color: $color-WedgwoodBlue;
+                                    margin: 0px 16px;
+                                }
 
-                    .district {
-                        width: 65px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        margin: 0px 20px;
-                        outline: none;
-                    }
+                                .general-member {
+                                    width: 80px;
+                                    background-color: $color-Apricot;
+                                    font-size: $H9-font-size;
+                                    border-radius: 10px;
+                                }
+                            }
 
-                    .input1 {
-                        width: 235px;
-                        height: 32px;
-                        font-size: $H10-font-size;
-                        color: $color-WedgwoodBlue;
-                        border: 1px solid $color-WedgwoodBlue;
-                        outline: none;
-                    }
+                            .data-block2 {
+                                color: $color-MoreButton-hover;
 
-                    .member-btn {
-                        button {
-                            height: 41px;
-                            border: 1px solid $color-MoreButton;
-                            font-size: 19.5px;
-                            letter-spacing: $font-letter-space-200;
-                            color: $color-IronGray;
-                            line-height: 10px;
+                                .fa-pen {
+                                    font-size: $H7-font-size;
+                                }
 
-                            &:hover {
-                                background-color: $color-MoreButton-hover;
-                                color: $color-White;
+                                .user-edit {
+                                    font-size: $H9-font-size;
+                                }
+                            }
+
+                            .data-block3 {
+                                .input-data {
+                                    width: 85%;
+                                    font-size: $H7-font-size;
+                                    color: $color-WedgwoodBlue;
+
+                                    @include sm-tablet() {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+                                    .input-left {
+                                        @include sm-tablet() {
+                                            margin: auto;
+                                            margin-top: 30px;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        input {
+                                            outline: none;
+                                            border: none;
+                                            border-bottom: 1px solid $color-WedgwoodBlue;
+                                        }
+                                    }
+
+                                    .input-right {
+                                        @include sm-tablet() {
+                                            width: 324px;
+                                            margin: auto;
+                                        }
+
+                                        .contact {
+                                            .address-data {
+                                                .city-block {
+                                                    .county,
+                                                    .zipcode {
+                                                        width: 65px;
+                                                        height: 32px;
+                                                        font-size: $H10-font-size;
+                                                        color: $color-WedgwoodBlue;
+                                                        border: 1px solid $color-WedgwoodBlue;
+                                                        outline: none;
+                                                    }
+
+                                                    .district {
+                                                        width: 65px;
+                                                        height: 32px;
+                                                        font-size: $H10-font-size;
+                                                        color: $color-WedgwoodBlue;
+                                                        border: 1px solid $color-WedgwoodBlue;
+                                                        outline: none;
+                                                        margin: 0px 5px;
+                                                    }
+                                                }
+
+                                                .detail-address {
+                                                    width: 215px;
+                                                    height: 32px;
+                                                    font-size: $H10-font-size;
+                                                    color: $color-WedgwoodBlue;
+                                                    border: 1px solid $color-WedgwoodBlue;
+                                                    outline: none;
+                                                }
+                                            }
+                                        }
+
+                                        .subscribe {
+                                            @include sm-tablet() {
+                                                margin-top: 40px;
+                                            }
+
+                                            .title6 {
+                                                display: block;
+                                                position: relative;
+
+                                                input {
+                                                    display: none;
+                                                }
+
+                                                .checkmark {
+                                                    position: absolute;
+                                                    top: 10%;
+                                                    left: 32%;
+                                                    height: 18px;
+                                                    width: 18px;
+                                                    border: 1px solid $color-WedgwoodBlue;
+
+                                                    @include sm-tablet() {
+                                                        position: absolute;
+                                                        top: 10%;
+                                                        left: 30%;
+                                                    }
+                                                }
+
+                                                input:checked ~ .checkmark {
+                                                    background-color: $color-WedgwoodBlue;
+                                                }
+
+                                                input:checked ~ .checkmark:after {
+                                                    content: "";
+                                                    display: block;
+                                                }
+
+                                                .checkmark:after {
+                                                    width: 7px;
+                                                    height: 12px;
+                                                    border: solid white;
+                                                    border-width: 0 3px 3px 0;
+                                                    transform: rotate(45deg);
+                                                    position: absolute;
+                                                    left: calc(50% - 3.5px);
+                                                    top: 1px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .data-block4 {
+                                button {
+                                    height: 40px;
+                                    border: 1px solid $color-MoreButton;
+                                    font-size: 19.5px;
+                                    color: $color-IronGray;
+                                    letter-spacing: $font-letter-space-200;
+                                    border: 1px solid $color-MoreButton;
+
+                                    &:hover {
+                                        background-color: $color-MoreButton-hover;
+                                        color: $color-White;
+                                    }
+                                }
+                            }
+                        }
+
+                        .data-block5 {
+                            .order-title {
+                                font-size: 29.25px;
+                                color: $color-WedgwoodBlue;
+                            }
+                        }
+
+                        .data-block6 {
+                            .order-content {
+                                width: 95%;
+
+                                .order-lists {
+                                    width: 100%;
+                                    font-size: 14px;
+
+                                    .list-block1 {
+                                        width: 100%;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        background-color: $color-Footer-Background;
+                                        color: $color-White;
+
+                                        @include try-on() {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            height: 60px;
+                                        }
+
+                                        .block1-l {
+                                            width: 45%;
+
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
+
+                                            li {
+                                                width: 84px;
+                                            }
+                                        }
+
+                                        .block1-r {
+                                            width: 55%;
+
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
+
+                                            li {
+                                                width: 84px;
+                                            }
+                                        }
+                                    }
+
+                                    .list-block {
+                                        width: 100%;
+
+                                        @include try-on() {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            height: 60px;
+                                        }
+
+                                        li {
+                                            @include sm-tablet() {
+                                                white-space: nowrap;
+                                            }
+                                        }
+
+                                        .block-l {
+                                            width: 45%;
+
+                                            li {
+                                                width: 84px;
+                                            }
+
+                                            .number {
+                                                background-color: $color-MoreButton;
+                                                color: $color-White;
+                                            }
+                                        }
+
+                                        .block-r {
+                                            width: 55%;
+
+                                            li {
+                                                width: 84px;
+                                            }
+
+                                            .invoice,
+                                            .information {
+                                                background-color: $color-MoreButton;
+                                                color: $color-White;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .data-block7 {
+                            button {
+                                background-color: #ffffff;
+                                color: #a0a0a0;
+                                border: none;
+
+                                &:hover {
+                                    color: #f7a269;
+                                }
                             }
                         }
                     }
                 }
-            }
-
-            .order-five {
-                font-size: 29.25px;
-                color: $color-WedgwoodBlue;
-            }
-
-            .table-container {
-                width: 90%;
-
-                .table {
-                    font-size: $H10-font-size;
-
-                    thead {
-                        background-color: $color-Footer-Background;
-                        color: $color-LightGray;
-                    }
-
-                    .orderNumber {
-                        width: 120px;
-                        background-color: $color-MoreButton;
-                        color: $color-White;
-                    }
-
-                    .checkInvoice, .returnInfor {
-                        background-color: $color-MoreButton;
-                        color: $color-White;
-                    }
-                }
-
-                .table-icon {
-                    button {
-                        background-color: $color-White;
-                        color: $color-MoreButton;
-                        border: none;
-
-                        &:hover {
-                            color: $color-Apricot;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .list-Group {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .table {
-        tr{
-            display: flex;
-            flex-direction: column;
-        }
-        th {
-            display: none;
-        }
-    
-        .orderNumber {
-            width: 120px;
-            margin: auto;
-        }
-    
-        .orderNumber1 {
-            background-color: black;
-            margin-top: 10vh;
-        }
-    
-        .checkInvoice, .returnInfor {
-            width: 80px;
-            margin: auto;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .data-left {
-        margin-top: 50px;
-        margin-left: 25%;
-    }
-
-    .data-right {
-        margin-left: 25%;
-    }
-    
-    .address-block {
-        display: flex;
-        flex-direction: column;
-        .address {
-            margin-left: 15px;
-
-            .input1 {
-                position: absolute;
-                top: 75px;
             }
         }
     }

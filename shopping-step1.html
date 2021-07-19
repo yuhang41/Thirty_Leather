@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,66 +10,131 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/new-nav.css">
     <link rel="stylesheet" href="./css/shopping-step1.css">
     <link rel="stylesheet" href="./css/footer.css">
     <title>Document</title>
 </head>
+
 <body>
-    <nav>
-        <div class="logo">
-            <img src="img/30leather_logo.svg" alt="">
-        </div>
-        <div class="options d-flex">
-            <div class="option">
-                <ul class="d-flex">
-                    <li><a href="">所有商品</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">女鞋</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">小白鞋</a>
-                          <a class="dropdown-item" href="#">紳士鞋</a>
-                          <a class="dropdown-item" href="#">休閒鞋</a>
-                          <a class="dropdown-item" href="#">平底鞋</a>
-                          <a class="dropdown-item" href="#">跟鞋</a>
-                          <a class="dropdown-item" href="#">涼鞋</a>
-                          <a class="dropdown-item" href="#">娃娃鞋</a>
-                          <a class="dropdown-item" href="#">靴款</a>
-                          <a class="dropdown-item" href="#">防水系列</a>
+    <nav id="navbar">
+        <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt="" ></a>
+        <nav class="navbar navbar-expand-custom navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- 所有商品 -->
+                    <li class="nav-item active single-commidity">
+                        <a class="nav-link" href="./product-index.html">所有商品<span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- 下拉式的所有商品 -->
+                    <li class="nav-item dropdown all-commidity">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            所有商品
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">女鞋</a>
+                            <a class="dropdown-item" href="#">小白鞋</a>
+                            <a class="dropdown-item" href="#">紳士鞋</a>
+                            <a class="dropdown-item" href="#">休閒鞋</a>
+                            <a class="dropdown-item" href="#">平底鞋</a>
+                            <a class="dropdown-item" href="#">跟鞋</a>
+                            <a class="dropdown-item" href="#">涼鞋</a>
+                            <a class="dropdown-item" href="#">娃娃鞋</a>
+                            <a class="dropdown-item" href="#">靴款</a>
+                            <a class="dropdown-item" href="#">防水系列</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">訂製雪靴</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">迷你筒(16cm-18cm)</a>
-                          <a class="dropdown-item" href="#">低筒(22cm-24cm)</a>
-                          <a class="dropdown-item" href="#">中筒(26cm-28cm)</a>
-                          <a class="dropdown-item" href="#">高筒(30cm-33cm)</a>
+                    <!-- 女鞋 -->
+                    <li class="nav-item dropdown female-shoes">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            女鞋
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">小白鞋</a>
+                            <a class="dropdown-item" href="#">紳士鞋</a>
+                            <a class="dropdown-item" href="#">休閒鞋</a>
+                            <a class="dropdown-item" href="#">平底鞋</a>
+                            <a class="dropdown-item" href="#">跟鞋</a>
+                            <a class="dropdown-item" href="#">涼鞋</a>
+                            <a class="dropdown-item" href="#">娃娃鞋</a>
+                            <a class="dropdown-item" href="#">靴款</a>
+                            <a class="dropdown-item" href="#">防水系列</a>
                         </div>
                     </li>
-                    <li><a href="">配件</a></li>
+                    <!-- 訂製雪靴 -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">製鞋文章</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">購鞋怎麼選</a>
-                          <a class="dropdown-item" href="#">系列鞋款介紹</a>
-                          <a class="dropdown-item" href="#">製成故事</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            訂製雪靴
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">迷你筒(16cm-18cm)</a>
+                            <a class="dropdown-item" href="#">低筒(22cm-24cm)</a>
+                            <a class="dropdown-item" href="#">中筒(26cm-28cm)</a>
+                            <a class="dropdown-item" href="#">高筒(30cm-33cm)</a>
                         </div>
                     </li>
-                    <li ><a href="">試穿服務</a></li>
+                    <!-- 更多 -->
                     <li class="nav-item dropdown more-option">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">更多</a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">試穿服務</a>
-                          <a class="dropdown-item" href="#">製鞋文章</a>
-                          <a class="dropdown-item" href="#">配件</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            更多
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">配件</a>
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                購鞋文章
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                                <a class="dropdown-item" href="#">系列鞋款介紹</a>
+                                <a class="dropdown-item" href="#">製成故事</a>
+                            </div>
+                            <a class="dropdown-item" href="#">試穿服務</a>
                         </div>
+                    </li>
+                    <!-- 配件 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">配件</a>
+                    </li>
+                    <!-- 購鞋文章 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            購鞋文章
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                            <a class="dropdown-item" href="#">系列鞋款介紹</a>
+                            <a class="dropdown-item" href="#">製成故事</a>
+                        </div>
+                    </li>
+                    <!-- 試穿服務 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">試穿服務</a>
+                    </li>
+                    <!-- TWD -->
+                    <li class="nav-item twd-lang-item">
+                        <a class="nav-link" href="#">TWD</a>
+                    </li>
+                    <!-- 繁體中文 -->
+                    <li class="nav-item twd-lang-item">
+                        <a class="nav-link" href="#">繁體中文</a>
                     </li>
                 </ul>
             </div>
+        </nav>
+        <div class="personal-item">
             <div class="input-cart d-flex">
-                <form class="search d-flex my-2 my-lg-0">
-                    <input id="search-input" class="mr-sm-2" type="search" placeholder="尋找商品...">
+                <form class="search d-flex my-2">
+                    <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
                 <i class="fas fa-user m-2"></i>
@@ -76,20 +142,18 @@
                     <i class="fas fa-shopping-cart m-2"></i>
                     <div class="cart-number">1</div>
                 </div>
-            </div>            
-        </div>
-        <div class="twd-lang d-flex">
-            <div class="twd dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TWD</a>
-                    <!-- <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">預設</a>
-                    </div> -->
             </div>
-            <div class="lang dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">繁體中文</a>
-                    <!-- <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">預設</a>
-                    </div> -->
+            <div class="twd-lang d-flex">
+                <div class="twd dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">TWD
+                    </a>
+                </div>
+                <div class="lang dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">繁體中文
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -104,7 +168,7 @@
                                 <div class="text-content">
                                     <p>確認清單 & 選擇付款方式</p>
                                     <p>Cart & Check out</p>
-                                </div>                            
+                                </div>
                             </div>
                         </div>
                         <div class="step-right-line"></div>
@@ -117,8 +181,8 @@
                                 <div class="text-content">
                                     <p>填寫訂購資料</p>
                                     <p>Shipping & Billing info</p>
-                                </div>                              
-                            </div>                        
+                                </div>
+                            </div>
                         </div>
                         <div class="step-right-line"></div>
                     </div>
@@ -129,15 +193,15 @@
                                 <p>03</p>
                                 <div class="text-content">
                                     <p>確認清單 & 選擇付款方式</p>
-                                    <p>Order cmopleted</p>    
-                                </div>                            
-                            </div>                        
-                        </div>                    
+                                    <p>Order cmopleted</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="shopping-container">
                     <div class="web-title">
-                      <p>購物車</p>  
+                        <p>購物車</p>
                     </div>
                     <div class="shopping-order">
                         <div class="order-title">
@@ -160,13 +224,13 @@
                                     <div class="cart-content">
                                         <div class="cart-title">
                                             <p>{牽手一起長大}</p>
-                                            <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                            <p>低跟小木根魚骨手工編織涼鞋</p>
                                         </div>
                                         <div class="cart-text">
                                             <p>干邑白蘭地</p>
                                             22cm
                                         </div>
-                                    </div>                            
+                                    </div>
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
@@ -176,15 +240,18 @@
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1"
+                                        value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal=2480>2480</span></p></li>
+                                <li class="order-cart subtotal">
+                                    <p>$<span class="subtotal-price" data-subtotal=2480>2480</span></p>
+                                </li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
                                     </form>
-                                </li>                        
+                                </li>
                                 <li class="order-cart favorite">
                                     <i class="fas fa-star"></i>
                                 </li>
@@ -199,13 +266,13 @@
                                     <div class="cart-content">
                                         <div class="cart-title">
                                             <p>{牽手一起長大}</p>
-                                            <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                            <p>低跟小木根魚骨手工編織涼鞋</p>
                                         </div>
                                         <div class="cart-text">
                                             <p>干邑白蘭地</p>
                                             22cm
                                         </div>
-                                    </div>                            
+                                    </div>
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
@@ -215,15 +282,18 @@
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1"
+                                        value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p></li>
+                                <li class="order-cart subtotal">
+                                    <p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p>
+                                </li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
                                     </form>
-                                </li>                        
+                                </li>
                                 <li class="order-cart favorite">
                                     <i class="fas fa-star"></i>
                                 </li>
@@ -238,13 +308,13 @@
                                     <div class="cart-content">
                                         <div class="cart-title">
                                             <p>{牽手一起長大}</p>
-                                            <p>內外全真皮低跟小木根魚骨手工編織羅馬涼鞋五色</p>
+                                            <p>低跟小木根魚骨手工編織涼鞋</p>
                                         </div>
                                         <div class="cart-text">
                                             <p>干邑白蘭地</p>
                                             22cm
                                         </div>
-                                    </div>                            
+                                    </div>
                                 </li>
                                 <li class="order-cart price">
                                     <div class="discount">
@@ -254,15 +324,18 @@
                                 </li>
                                 <li class="order-cart count">
                                     <div class="less">-</div>
-                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1" value="1">
+                                    <input type="number" min="1" max="1000" step="1" name="" data-quantity="1"
+                                        value="1">
                                     <div class="plus">+</div>
                                 </li>
-                                <li class="order-cart subtotal"><p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p></li>
+                                <li class="order-cart subtotal">
+                                    <p>$<span class="subtotal-price" data-subtotal="2480">2480</span></p>
+                                </li>
                                 <li class="order-cart delete-cart">
                                     <form action="" method="" class="delete">
                                         <div class="delete-button"><i class="fas fa-times"></i></div>
                                     </form>
-                                </li>                        
+                                </li>
                                 <li class="order-cart favorite">
                                     <i class="fas fa-star"></i>
                                 </li>
@@ -295,7 +368,7 @@
                             </div>
                             <div class="choose">
                                 <button class="choose-button">選擇門市</button>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -312,11 +385,11 @@
                                 <div class="commodity-content">
                                     <div class="title">
                                         {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
-                                    </div>                            
+                                    </div>
                                     <div class="content-buttone">
                                         <p>$180</p>
                                         <button class="push-cart">加入購物車</button>
-                                    </div>                            
+                                    </div>
                                 </div>
                             </div>
                             <div class="commodity">
@@ -326,11 +399,11 @@
                                 <div class="commodity-content">
                                     <div class="title">
                                         {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
-                                    </div>                            
+                                    </div>
                                     <div class="content-buttone">
                                         <p>$180</p>
                                         <button class="push-cart">加入購物車</button>
-                                    </div>                            
+                                    </div>
                                 </div>
                             </div>
                             <div class="commodity">
@@ -340,11 +413,11 @@
                                 <div class="commodity-content">
                                     <div class="title">
                                         {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
-                                    </div>                            
+                                    </div>
                                     <div class="content-buttone">
                                         <p>$180</p>
                                         <button class="push-cart">加入購物車</button>
-                                    </div>                            
+                                    </div>
                                 </div>
                             </div>
                             <div class="commodity">
@@ -354,11 +427,11 @@
                                 <div class="commodity-content">
                                     <div class="title">
                                         {皮雅客PALC}西班亞進口皮革皮包皮衣保養油
-                                    </div>                            
+                                    </div>
                                     <div class="content-buttone">
                                         <p>$180</p>
                                         <button class="push-cart">加入購物車</button>
-                                    </div>                            
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -368,7 +441,7 @@
                             <p>免運費</p>
                             只差$<span class="difference">xxx</span>可享滿$1000免運
                         </div>
-                        <div class="total">                        
+                        <div class="total">
                             <div class="price-total">
                                 <p>小計</p>
                                 <p class="subtotal-total">$9920</p>
@@ -384,60 +457,66 @@
                                 </div>
                                 <a type="submit" class="next-a">前往結帳<i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
-                        </div>                    
+                        </div>
                     </div>
-                </div> 
+                </div>
             </div>
-        </div>        
+        </div>
     </main>
     <footer>
         <div class="site-footer">
             <div class="container">
                 <div class="footer-logo">
-                    <img src="./img/30leather_logo.svg">
+                    <img src="/img/30leather_logo.svg">
                 </div>
 
                 <hr>
-                
-                <div class="footer-bottom col-xl-12">
-                    <ul class="social-icons mb-0 row list-unstyled justify-content-center">
-                        <li><a class="line d-inline-block" href="https://page.line.me/igt6497i?openQrModal=true" target="_blank"></a></li>
 
-                        <li><a class="facebook d-inline-block" href="https://www.facebook.com/30leather" target="_blank"></a></li>
+                <div class="footer-icons d-flex justify-content-center">
+                    <a class="line" href="https://page.line.me/igt6497i?openQrModal=true" target="_blank">
+                        <img src="/img/LINE-ICON.jpg" alt="">
+                    </a>
 
-                        <li><a class="instagram d-inline-block" href="https://www.instagram.com/30leather/" target="_blank"></a></li>
-                    </ul>
+                    <a class="facebook" href="https://www.facebook.com/30leather" target="_blank">
+                        <img src="/img/facebook-ICON.jpg" alt="">
+                    </a>
 
-                    <div class="return-nav d-flex justify-content-end">
-                        <a href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
-                                <div class="footer-arrow-text">TOP</div>
-                            </i></a>
-                    </div>
+                    <a class="instagram" href="https://www.instagram.com/30leather/" target="_blank">
+                        <img src="/img/Instagram.ICON.jpg" alt="">
+                    </a>
+                </div>
 
-                    <div class="common-problems row col-xl-12">
-                        <ul class="row m-auto list-unstyled">
-                            <li class="list common-problem">常見問題</li>
+                <div class="return-nav d-flex justify-content-end">
+                    <a href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
+                            <div class="footer-arrow-text">TOP</div>
+                        </i></a>
+                </div>
 
-                            <li><a href="#" class="lists"></a>售前與售後服務</li>
+                <div class="footer-links d-flex justify-content-center">
+                    <div class="block d-flex">
+                        <ul class="block1 list-unstyled d-flex">
+                            <li class="common-problem list">常見問題</li>
 
-                            <li><a href="#" class="lists"></a>付款方式</li>
+                            <li class="sale list">售前與售後服務</li>
 
-                            <li><a href="#" class="lists"></a>寄送方式</li>
+                            <li class="pay list">付款方式</li>
+                        </ul>
 
-                            <li><a href="#" class="lists"></a>退款流程</li>
+                        <ul class="block2 list-unstyled d-flex">
+                            <li class="send list">寄送方式</li>
 
-                            <li><a href="#" class="lists"></a>發票折讓</li>
+                            <li class="refund list">退貨流程</li>
 
-                            <li class="list"><a href="#" class="lists privacy"></a>隱私權保護</li>
+                            <li class="invoice list">發票折讓</li>
+
+                            <li class="privacy">隱私權</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <hr>
-
-            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;  <span>森上沒戴前 All
-                Rights Reserved</span></div>
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;<span>森上沒戴前 All
+                    Rights Reserved</span></div>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -450,6 +529,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
-        <script src='js/shopping-step1.js'></script>
+    <script src='js/shopping-step1.js'></script>
 </body>
+
 </html>

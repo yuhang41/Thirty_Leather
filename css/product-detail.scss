@@ -17,8 +17,15 @@
     color:$color-IronGray;
 }
 //1720版本
-@mixin sm-screen{
+@mixin bg-screen{
     @media(max-width:1750px){
+        @content;
+        transition: 1s;
+    }
+}
+//1600版本
+@mixin ex-screen{
+    @media(max-width:1600px){
         @content;
         transition: 1s;
     }
@@ -26,6 +33,41 @@
 //1435版本
 @mixin normal-screen{
     @media(max-width:1435px){
+        @content;
+        transition: 1s;
+    }
+}
+//1024
+@mixin tablet{
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
+//850
+@mixin sm-screen{
+    @media(max-width:850px){
+        @content;
+        transition: 1s;
+    }
+}
+//750
+@mixin phone{
+    @media(max-width:750px){
+        @content;
+        transition: 1s;
+    }
+}
+//650
+@mixin normal-phone{
+    @media(max-width:650px){
+        @content;
+        transition: 1s;
+    }
+}
+//520
+@mixin sm-phone{
+    @media(max-width:520px){
         @content;
         transition: 1s;
     }
@@ -42,8 +84,10 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
-            @include sm-screen(){
+            @include bg-screen(){
                 display: none;
+                max-width: unset;
+                width: unset;
             }
             .all-commodity{
                 max-width: 200px;
@@ -98,7 +142,7 @@ main{
         }
         // 右邊商品資訊
         .product-container{
-            width: 100%;
+            width: 100vw;
             min-height: 100vh;
             // 商品資訊
             .productshop-container{
@@ -107,7 +151,7 @@ main{
                 background: $color-LightGray;
                 .breadcrumbs{
                     margin-bottom: 20px;
-                    @include sm-screen(){
+                    @include bg-screen(){
                         margin-left: 6rem;
                     }
                     .bread-label{
@@ -131,6 +175,13 @@ main{
                         max-width: 600.353px;
                         max-height: 789.17px;
                         position: relative;
+                        @include phone(){
+                            max-width: 500px;
+                        }
+                        @include sm-phone(){
+                            max-width: 300px;
+                        }
+                        
                         .swiper-container {
                             width: 100%;
                             height: 100%;
@@ -140,12 +191,20 @@ main{
                               right: -5vw;
                               top:40%;
                               color: $color-Product-Detail-Title;
+                              @include phone(){
+                                display: none;
+                                transition: none;
+                            }
                           }
                           .swiper-button-prev{
                             position: absolute;
                             left: -5vw;
                             top:40%;
                             color: $color-Product-Detail-Title;
+                            @include phone(){
+                                display: none;
+                                transition: none;
+                            }
                         }
                           .swiper-slide {
                             text-align: center;
@@ -228,7 +287,7 @@ main{
                         margin-bottom: 40px;
                         @include normal-screen(){
                             max-width: unset;
-                            width: 1000px;
+                            // width: 1000px;
                             align-items: unset;
                         }
                         .odrer-info{
@@ -249,12 +308,19 @@ main{
                                     margin-top: 30px;
                                     margin-bottom: 30px;
                                 }
+                                @include sm-screen(){
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
                                 p{
                                     margin: 0px;
                                     font-size: $H3-font-size;
                                     color: $color-Product-Detail-Title;
                                     letter-spacing: $font-letter-space-200;
                                     font-weight: $font-Weight-B;
+                                    @include sm-phone(){
+                                        font-size: $H6-font-size;
+                                    }
                                 }
                             }
                             .order-contain{
@@ -262,19 +328,32 @@ main{
                                     display: flex;
                                     justify-content: center;
                                 }
+                                @include sm-screen(){
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
                                 .order-discript{
                                     margin-bottom: 30px;
                                     @include normal-screen(){
                                         margin-right: 5vw;
-
+                                    }
+                                    @include sm-screen(){
+                                    margin-bottom: 150px;
+                                    margin-right: unset;  
                                     }
                                     .evaluation{
                                         display: flex;
                                         align-items: center;
                                         margin-bottom: 25px;
+                                        @include sm-phone(){
+                                            justify-content: center;
+                                        }
                                         .star-eval{
                                             color: $color-Evaluation-Star;
                                             font-size: $H7-font-size;
+                                            @include sm-phone(){
+                                                display: none;
+                                            }
                                         }
                                         .other-eavl{
                                             display: flex;
@@ -300,6 +379,13 @@ main{
                                         .order-text{
                                             display: flex;
                                             align-items: flex-start;
+                                            transition: 1s;
+                                            @include normal-screen(){
+                                                width: 403px;
+                                            }
+                                            @include sm-phone(){
+                                                width: 300px;
+                                            }
                                             i{
                                                 margin-right: 10px;
                                                 line-height: 26px;
@@ -310,6 +396,11 @@ main{
                                                 line-height: 26px;
                                                 letter-spacing: $font-letter-space-100;
                                                 margin: 0px;
+                                                text-align: justify;
+                                                @include sm-phone(){
+                                                    display: flex;
+                                                    text-align: center;
+                                                }
                                             }
                                         }
                                     }
@@ -320,6 +411,11 @@ main{
                                         margin-bottom: 30px;                                
                                         .color-title{
                                             margin-bottom: 25.42px;
+                                            @include sm-screen(){
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-end;
+                                            }
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
@@ -356,12 +452,17 @@ main{
                                                 cursor: pointer;                                                                     
                                             }
                                         } 
-                                    }                                                                                                                            
+                                    }                                 
                                     .order-size{
                                         max-width: 336.7px;      
                                         margin-bottom: 30px;                       
                                         .size-title{
                                             margin-bottom: 5px;
+                                            @include sm-screen(){
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-end;
+                                            }
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
@@ -381,6 +482,9 @@ main{
                                             font-size: $H7-font-size;
                                             font-weight: $font-Weight-B;
                                             letter-spacing: $font-letter-space-50;
+                                            @include sm-phone(){
+                                                font-size: $H8-font-size;
+                                            }
                                             .small-size{                                        
                                                 display: flex;
                                                 flex-wrap: wrap;                                        
@@ -421,41 +525,56 @@ main{
                                justify-content: center;
                                min-height:unset;
                             }
+                            @include sm-screen(){
+                                flex-direction: column;
+                                position: relative;
+                            }
+                            @include sm-phone(){
+                                align-items: center;
+                                margin-top: unset;
+                            }
                             .order-button{
                                 display: flex;
                                 justify-content: space-between;
+                                @include sm-phone(){
+                                    flex-direction: column-reverse;
+                                    align-items: center;
+                                }
                                 button:hover{
                                     font-weight: $font-Weight-B;
                                     color: $color-White;
                                     background-color: $color-Background-line;
                                     border: 1px solid $color-Background-line;
                                 }
-                                .putcart{
-                                    width: 135px;
-                                    height: 43px;
-                                    background-color: unset;
-                                    border: 1px solid $color-MoreButton;
-                                    color: $color-IronGray;
-                                    font-size: $H7-font-size;
-                                    border-radius: 5px;
-                                    @include normal-screen(){
+                                .order-buy{
+                                    .putcart{
+                                        width: 135px;
+                                        height: 43px;
+                                        background-color: unset;
+                                        border: 1px solid $color-MoreButton;
+                                        color: $color-IronGray;
+                                        font-size: $H7-font-size;
+                                        border-radius: 5px;
                                         margin-right: 20px;
                                     }
-                                }
-                                .pre-order{
-                                    width: 70px;
-                                    height: 43px;
-                                    background-color: unset;
-                                    border: 1px solid $color-MoreButton;
-                                    color: $color-IronGray;
-                                    font-size: $H7-font-size;
-                                    border-radius: 5px;
-                                    @include normal-screen(){
-                                        margin-right: 20px;
+                                    .pre-order{
+                                        width: 70px;
+                                        height: 43px;
+                                        background-color: unset;
+                                        border: 1px solid $color-MoreButton;
+                                        color: $color-IronGray;
+                                        font-size: $H7-font-size;
+                                        border-radius: 5px;
+                                        @include normal-screen(){
+                                            margin-right: 20px;
+                                        }
                                     }
                                 }
                                 .order-amount{
                                     display: flex;
+                                    @include sm-phone(){
+                                        margin-bottom: 30px;
+                                    }
                                     .minus{
                                         width: 45px;
                                         height: 40px;
@@ -504,6 +623,35 @@ main{
                                 @include normal-screen(){
                                     margin-right: 16.5vw;
                                 }
+                                @include sm-screen(){
+                                    position: absolute;
+                                    bottom: 400px;
+                                    left: 10vw;
+                                    margin-right: unset;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        top:85px;
+                                        left: -23px;
+                                        width: 325px;
+                                        height: 1px;
+                                        background-color: $color-Cart-Border;
+
+                                    }
+                                }
+                                @include sm-phone(){
+                                    bottom: 450px;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        top:85px;
+                                        left: -23px;
+                                        width: 300px;
+                                        height: 1px;
+                                        background-color: $color-Cart-Border;
+
+                                    }
+                                }
                                 p{
                                     margin: 0px;
                                     padding: 0px;
@@ -519,6 +667,9 @@ main{
                                         letter-spacing: $font-letter-space-50;
                                         color: $color-Evaluation-Star;
                                         line-height: 60px;
+                                        @include sm-phone(){
+                                            font-size: $H1-font-size; 
+                                        }
                                     }
                                 }
                             }
@@ -545,6 +696,11 @@ main{
                             letter-spacing: $font-letter-space-50;
                             margin-top: 40px;
                             padding: 0px 35px;
+                            transition: 1s;
+                            @include sm-phone(){
+                                font-size: $H7-font-size;
+                                padding: 0px 15px;
+                            }
                             &:nth-child(2){
                                 border-right: 1px solid $color-Product-Detail-Title;
                                 border-left: 1px solid $color-Product-Detail-Title;  
@@ -559,6 +715,10 @@ main{
                                     width: 100px;
                                     height: 1px;
                                     background-color: $color-Evaluation-Star;
+                                    @include sm-phone(){
+                                        left: 15px;
+                                        width: 76px;
+                                    }
                                 }
                                 
                             }
@@ -572,6 +732,10 @@ main{
                                     width: 100px;
                                     height: 1px;
                                     background-color: $color-Evaluation-Star;
+                                    @include sm-phone(){
+                                        left: 15px;
+                                        width: 76px;
+                                    }
                                 }
                             }
                         }
@@ -593,19 +757,31 @@ main{
                             width: 100%;
                             height: auto;
                             color: black;
-                            transition:display 1s;
+                            transition: none;
                             &.active{
                                 // display: block;
                                 opacity: 1;
                                 position: static;
-                                transition: display 1s;
+                                transition: none;
                             }
                         }
                         // 商品詳細描述
                         .product-description{
-                           
                             .inner-content{
                                 margin-top: 30px;
+                                transition: 1s;
+                                @include tablet(){
+                                    max-width: 800px;
+                                }
+                                @include sm-screen(){
+                                    max-width: 600px;
+                                }
+                                @include normal-phone(){
+                                    max-width: 500px;
+                                }
+                                @include sm-phone(){
+                                    max-width: 300px;
+                                }
                                 .paragraph-first{
                                     max-width: 890px;
                                     text-align: justify;
@@ -626,12 +802,19 @@ main{
                                     justify-content: center;
                                     align-items: center;
                                     padding-right: 12vw;
+                                    @include ex-screen(){
+                                        padding-right: unset;
+                                    }
                                     .main-shoes{
                                         position: relative;
+                                        @include ex-screen(){
+                                            display: none;
+                                        }
                                         .main-photo{
                                             max-width: 653px;
                                             min-height: 342px;
                                             transform: rotate(-15deg);
+                                            @include normal-screen(){}
                                         }
                                         .bg-square{
                                             width: 483px;
@@ -641,17 +824,6 @@ main{
                                             top: 59px;
                                             left: 234px;
                                             object-fit: cover;
-                                        }
-                                        .bg-shadow{
-                                            width: 283px;
-                                            height: 20px;
-                                            border-radius: 50%;
-                                            background-color: $color-Background-Shadow;
-                                            position: absolute;
-                                            top: 272px;
-                                            left: 300px;
-                                            object-fit: cover;
-                                            filter: blur(4px);
                                         }
                                         @mixin click-p{
                                             font-size: $H10-font-size;
@@ -1054,29 +1226,148 @@ main{
                                         }
                                         
                                     }
+                                    .other-shoes{
+                                        width: 100%;
+                                        display: none;
+                                        margin-top: 100px;
+                                        @include ex-screen(){
+                                            display: flex; 
+                                            justify-content: space-between; 
+                                        }
+                                        @include tablet(){
+                                            flex-wrap: wrap;
+                                        }
+                                        @include sm-screen(){
+                                            justify-content: center;
+                                        }
+                                        @include sm-phone(){
+                                            img{
+                                                width: 300px;
+                                            }
+                                        }
+                                        @mixin click-p{
+                                            font-size: $H10-font-size;
+                                            letter-spacing: $font-letter-space-50;
+                                            line-height: 21px;
+                                            color: $color-IronGray;
+                                            margin: 0px 0px 0px 20px;
+                                        }
+                                        p{
+                                            @include click-p();
+                                            margin: 0px;
+                                        }
+                                        .front-shoes{
+                                            .shoes-img-card{
+                                                margin-bottom: 100px;
+                                                position: relative;
+                                                &:nth-child(1){
+                                                    margin-bottom: 130px;
+                                                    @include sm-screen(){
+                                                        margin-bottom: 65px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px; 
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    @include sm-screen(){
+                                                        margin-bottom: 85px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px; 
+                                                    }
+                                                }
+                                                &:nth-child(3){
+                                                    @include sm-screen(){
+                                                        margin-bottom: 65px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -65px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                                
+                                            }  
+                                        }
+                                        .back-shoes{
+                                            .shoes-img-card{
+                                                margin-bottom: 100px;
+                                                position: relative;
+                                                &:nth-child(1){
+                                                    margin-bottom: 130px;
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -45px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    @include sm-screen(){
+                                                        margin-bottom: 55px;
+                                                    }
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -105px;
+                                                        left: 0px; 
+                                                    }
+                                                }
+                                                &:nth-child(3){
+                                                    .content-text{
+                                                        position: absolute;
+                                                        top: -25px;
+                                                        left: 0px;
+                                                    }
+                                                }
+                                                
+                                            }  
+                                        }
+                                    }
                                     
                                 }
                             }
                         }
                         // 開發過程
                         .development-process{  
-                            min-height: 969px;    
+                            min-height: 969px; 
+                            @include phone(){
+                                min-height: unset;
+                            }   
+                            @include normal-phone(){
+                                max-width: 500px;
+                            }
+                            @include sm-phone(){
+                                max-width: 300px;
+                            }   
                             .inner-content{
                                 display: flex;
                                 margin-top: 40px;
                                 position: relative;
                                 @include normal-screen(){
                                     flex-direction: column;
-                                }       
+                                }  
                                 .development-process-content{
                                     flex: 0 0 50%;
                                     .swiper-container{
                                         width: 600px;
-                                        @include normal-screen(){
-                                            margin: unset;
+                                        @include normal-screen(){      
                                             margin-bottom: 40px;
                                         }
+                                        @include phone(){
+                                            margin-top: 40px;
+                                        }
+                                        @include normal-phone(){
+                                            width: 500px;
+                                        }
+                                        @include sm-phone(){ 
+                                            width: 300px;
+                                        }
                                         .swiper-wrapper{
+                                            margin: auto;
                                             .swiper-slide{
                                                 .development-process-title{
                                                     margin-bottom: 20px;
@@ -1085,11 +1376,32 @@ main{
                                                         color: $color-Evaluation-Star;
                                                         font-size: $H7-font-size;
                                                         border-bottom: 1px solid $color-Evaluation-Star;
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            display: block;
+                                                            text-align: center;
+                                                            border:unset;
+                                                            position: relative;
+                                                            &:after{
+                                                                content: "";
+                                                                position: absolute;
+                                                                top: 25px;
+                                                                left: 115px;
+                                                                width: 70px;
+                                                                height: 1px;
+                                                                background-color: $color-Evaluation-Star;
+                                                            }
+                                                        }
                                                     }
                                                     h2{                                            
                                                         font-size: $H3-font-size;
                                                         font-weight: $font-Weight-B;
-                                                        margin:0;                                                                                        
+                                                        margin:0;  
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            font-size: $H5-font-size;
+                                                            text-align: center;  
+                                                        } 
                                                     }
                                                 }
                                                 .development-process-list{
@@ -1100,7 +1412,11 @@ main{
                                                         font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
                                                         line-height: 30px;
-                                                        margin: 0;                                                    
+                                                        margin: 0;    
+                                                        @include sm-phone(){
+                                                            font-size: $H8-font-size; 
+                                                            text-align: center;
+                                                        }                                                
                                                     }                                                
                                                 }
                                                 .development-process-text{
@@ -1109,6 +1425,10 @@ main{
                                                         font-size: $H9-font-size;
                                                         line-height: 26px;
                                                         letter-spacing: $font-letter-space-50;
+                                                        transition: 1s;
+                                                        @include sm-phone(){
+                                                            text-align: center;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1129,9 +1449,17 @@ main{
                                         @include normal-screen(){
                                             width: 650px;
                                         }
+                                        @include phone(){
+                                           height: 0px;
+                                           transition: none;
+                                        }
                                     }
                                 
                                     .swiper-slide {
+                                        @include phone(){
+                                            display: none;
+                                            transition: none;
+                                        }
                                         text-align: center;
                                         font-size: 18px;
                                         background: #fff;
@@ -1169,12 +1497,26 @@ main{
                                     left: 0px;
                                     justify-content: flex-start;
                                 }
+                                @include phone(){
+                                    top: 10px;
+                                    left: 5vw;     
+                                }
+                                @include normal-phone(){
+                                    left: 2.5vw; 
+                                }
                                 .swiper-step-button{
                                     flex:0 0 48%;
                                     display: flex;
                                     justify-content: space-between;
+                                    transition: 1s;
                                     @include normal-screen(){
                                         flex:0 0 107%;   
+                                    }
+                                    @include phone(){
+                                        flex:0 0 102%;
+                                    }
+                                    @include normal-phone(){
+                                        flex:0 0 108%;
                                     }
                                     .pagination-next{
                                         position: relative;
@@ -1215,7 +1557,11 @@ main{
                                     }
                                     .button-next{
                                         text-align: center;
-                                        flex: 0 0 10%;                                    
+                                        flex: 0 0 10%;  
+                                        @include phone(){
+                                            display: none;
+                                            transition: none;
+                                        }                                  
                                     }
                                 }
                             }
@@ -1225,6 +1571,12 @@ main{
                             min-height: 700px;
                             .inner-content{
                                 max-width: 550px;
+                                @include normal-phone(){
+                                    max-width: 500px;
+                                }
+                                @include sm-phone(){
+                                    max-width: 300px;
+                                }
                                 .announcement{
                                     margin-top: 30px;
                                     border-bottom: 1px solid $color-WedgwoodBlue;
@@ -1233,6 +1585,10 @@ main{
                                         line-height: 26px;
                                         color: $color-Evaluation-Star;
                                         letter-spacing: $font-letter-space-50;
+                                        @include normal-phone(){
+                                            font-size: $H8-font-size;
+                                            text-align: center;
+                                        }
                                     }
                                 }
                                 .size-discript{
@@ -1251,7 +1607,12 @@ main{
                                         }
                                         .content{
                                             max-width: 425px;
+                                            transition: 1s;
                                            @include size-discript-p();
+                                           @include normal-phone(){
+                                               font-size: $H10-font-size;
+                                               text-align: center;
+                                           }
                                         }
                                     }
                                     .tryon-experience{
@@ -1268,7 +1629,13 @@ main{
                                                 flex-direction: column;
                                                 align-items: center;
                                                 text-align: center;
+                                                transition: 1s;
                                                 @include size-discript-p();
+                                                @include normal-phone(){
+                                                    font-size: $H11-font-size;
+                                                    line-height: unset;
+                                                    letter-spacing: unset;
+                                                }
                                             }
                                         }
                                     }
@@ -1287,11 +1654,24 @@ main{
                     max-width: 1120px;
                     margin: auto;
                     margin-bottom: 100px;
+                    @include normal-screen(){
+                        max-width: 800px;
+                    }
+                    @include sm-screen(){
+                        max-width: 600px;
+                    }
                     .customer-eval{
                         border-bottom: 1px solid $color-Product-Detail-Title;
+                        @include normal-phone(){
+                            border: unset;
+                        }
                         .eval-title{
                             font-size: $H3-font-size;
                             letter-spacing: $font-letter-space-50;
+                            @include sm-screen(){
+                                text-align: center;
+                                margin-bottom: 10px;
+                            }
                         }
                         .different-eval{
                             max-width: 800px;
@@ -1299,7 +1679,16 @@ main{
                             align-items: center;
                             justify-content: space-between;
                             margin-bottom: 40px;
+                            @include sm-screen(){
+                                flex-direction: column;
+                            }
                             .star-eval{
+                                @include sm-screen(){
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin-bottom: 10px;
+                                }
                                 p{
                                     font-size: $H10-font-size;
                                     letter-spacing: $font-letter-space-200;
@@ -1317,6 +1706,9 @@ main{
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                @include sm-screen(){
+                                    margin-bottom: 10px;
+                                }
                                 p{
                                     font-size: $H0-font-size;
                                     margin: 0px;
@@ -1327,6 +1719,10 @@ main{
                                     margin: 0px;
                                     padding: 0px;
                                     width: 385px;
+                                    transition: 1s;
+                                    @include sm-screen(){
+                                    width: 250px;    
+                                    }
                                     li{
                                         display: flex;
                                         align-items: center;
@@ -1342,6 +1738,10 @@ main{
                                             height: 8px;
                                             background-color: $color-Cart-Border;
                                             margin: 0xp 10px;
+                                            transition: 1s;
+                                            @include sm-screen(){
+                                                width: 150px;
+                                            }
                                         }
                                         p{
                                             font-size: $H10-font-size;
@@ -1361,6 +1761,11 @@ main{
                                     display: flex;
                                     justify-content: space-between;
                                     padding: 0px;
+                                    transition: 1s;
+                                    @include normal-phone(){
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
                                      .order-cart{
                                              &.content{
                                                  flex: 0 0 80%;
@@ -1368,19 +1773,40 @@ main{
                                      }
                                      .img-content{
                                          display: flex;
+                                         @include normal-phone(){
+                                            flex-direction: column;
+                                            align-items: center;
+                                            position: relative;
+                                            &:after{
+                                                content: "";
+                                                position: absolute;
+                                                bottom: -70px;
+                                                left: 0px;
+                                                width: 256px;
+                                                height: 1px;
+                                                background-color: $color-Product-Detail-Title;
+                                            }
+                                        }
                                              img{
                                              max-width: 138px;
                                              width: 100%;
                                              min-height: 138px;
                                              object-fit: contain;
                                              object-position: center;
-                                             margin-right: 15px;   
+                                             margin-right: 15px;  
+                                             @include normal-phone(){
+                                                 margin-right: unset;
+                                                 margin-bottom: 10px;
+                                             } 
                                              }
                                              .cart-content{
-                                                width: 400px;
+                                                width: 250px;
                                                 display: flex;
                                                 flex-direction: column;
                                                 justify-content: space-between;
+                                                @include normal-phone(){
+                                                    align-items: center;
+                                                }
                                                 p{
                                                     margin: 0; 
                                                     letter-spacing: $font-letter-space-100;
@@ -1396,6 +1822,9 @@ main{
                                                     .star-eval{
                                                         display: flex;
                                                         align-items: flex-end;
+                                                        @include normal-phone(){
+                                                            margin-bottom: 10px;
+                                                        }
                                                         .star-img{
                                                             margin-right: 10px;
                                                             color: $color-Evaluation-Star;
@@ -1422,12 +1851,14 @@ main{
                                                    }
                                                 }
                                              }   
-                                         
                                      }
                                      .eval-custoemr{
                                          display: flex;
                                          flex-direction: column;
                                          justify-content: flex-end;
+                                         @include normal-phone(){
+                                            margin-left: 140px;
+                                        }
                                         .eval-name{
                                             font-size: $H9-font-size;
                                             letter-spacing: $font-letter-space-100;
@@ -1520,12 +1951,18 @@ main{
                                 text-decoration: none;
                             }
                         }
+                        @include normal-phone(){
+                            display: none;
+                        }
                         .product-item {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             margin-bottom: 80px;
                             margin-top: 120px;
+                            @include normal-screen(){
+                                flex-wrap: wrap;
+                            }
                             .product-card {
                                 @include shoes-content();
                                 &:nth-child(2) {
@@ -1536,6 +1973,14 @@ main{
                                 &:nth-child(3) {
                                     img {
                                         top: -50px;
+                                    }
+                                }
+                                @include normal-screen(){
+                                    &:nth-child(1){
+                                        margin-bottom: 100px;
+                                    }
+                                    &:nth-child(2){
+                                        margin-bottom: 100px;
                                     }
                                 }
                             }                            

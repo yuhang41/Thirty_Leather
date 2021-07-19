@@ -155,3 +155,9 @@ const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
 ELs_inViewport.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });
+
+let anchor = document.querySelector('.a-anchor');
+console.log(anchor);
+anchor.addEventListener('click',function(){
+  window.scrollTo(0, top); 
+})
