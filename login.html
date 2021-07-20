@@ -194,72 +194,74 @@
 
                                     <div class="user-edit ml-1">編輯會員資料</div>
                                 </div>
-
-                                <div class="data-block3">
-                                    <div class="input-data mx-auto d-flex justify-content-between">
-                                        <div class="input-left">
-                                            <div class="input-name">
-                                                <label class="title1 font-weight-bold mr-3">姓名</label>
-
-                                                <input type="text" class="content1 ml-4" placeholder="林土木">
-                                            </div>
-
-                                            <div class="input-email">
-                                                <label class="title2 font-weight-bold mr-3">信箱</label>
-
-                                                <input type="text" class="content2 ml-4"
-                                                    placeholder="test123@gmail.com">
-                                            </div>
-
-                                            <div class="input-phone">
-                                                <label class="title3 font-weight-bold mr-3">行動電話</label>
-
-                                                <input type="text" class="content3" placeholder="0900 - 123456">
-                                            </div>
-
-                                            <div class="input-date">
-                                                <label class="title4 font-weight-bold mr-3">出生日期</label>
-
-                                                <input type="text" class="content4" placeholder="1995 / 01 / 24">
-                                            </div>
-                                        </div>
-
-                                        <div class="input-right d-flex flex-column justify-content-between mt-1">
-                                            <div class="contact d-flex">
-                                                <label class="title5 font-weight-bold">聯絡地址</label>
-
-                                                <div class="address-data city-selector-set ml-2">
-                                                    <div class="city-block">
-                                                        <select class="county"></select>
-
-                                                        <select class="district"></select>
-
-                                                        <input class="zipcode text-center" type="text" size="3" readonly
-                                                            placeholder="郵遞區號">
-                                                    </div>
-
-                                                    <input class="detail-address mt-2" type="text" placeholder="詳細的地址">
+                                
+                                <form action="" method="POST">
+                                    <div class="data-block3">
+                                        <div class="input-data mx-auto d-flex justify-content-between">
+                                            <div class="input-left">
+                                                <div class="input-name">
+                                                    <label class="title1 font-weight-bold mr-3">姓名</label>
+    
+                                                    <input type="text" class="content1 ml-4" placeholder="林土木">
+                                                </div>
+    
+                                                <div class="input-email">
+                                                    <label class="title2 font-weight-bold mr-3">信箱</label>
+    
+                                                    <input type="text" class="content2 ml-4"
+                                                        placeholder="test123@gmail.com">
+                                                </div>
+    
+                                                <div class="input-phone">
+                                                    <label class="title3 font-weight-bold mr-3">行動電話</label>
+    
+                                                    <input type="text" class="content3" placeholder="0900 - 123456">
+                                                </div>
+    
+                                                <div class="input-date">
+                                                    <label class="title4 font-weight-bold mr-3">出生日期</label>
+    
+                                                    <input type="text" class="content4" placeholder="1995 / 01 / 24">
                                                 </div>
                                             </div>
-
-                                            <div class="subscribe">
-                                                <label class="title6 font-weight-bold">訂閱電子報
-                                                    <input type="checkbox" checked="checked">
-
-                                                    <span class="checkmark"></span>
-                                                </label>
+    
+                                            <div class="input-right d-flex flex-column justify-content-between mt-1">
+                                                <div class="contact d-flex">
+                                                    <label class="title5 font-weight-bold">聯絡地址</label>
+    
+                                                    <div class="address-data city-selector-set ml-2">
+                                                        <div class="city-block">
+                                                            <select class="county"></select>
+    
+                                                            <select class="district"></select>
+    
+                                                            <input class="zipcode text-center" type="text" size="3" readonly
+                                                                placeholder="郵遞區號">
+                                                        </div>
+    
+                                                        <input class="detail-address mt-2" type="text" placeholder="詳細的地址">
+                                                    </div>
+                                                </div>
+    
+                                                <div class="subscribe">
+                                                    <label class="title6 font-weight-bold">訂閱電子報
+                                                        <input type="checkbox" checked="checked">
+    
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="data-block4 d-flex justify-content-center mt-3 mb-4">
-                                    <button type="button"
-                                        class="btn d-flex align-items-center font-weight-bold mr-1">取消</button>
-
-                                    <button type="submit"
-                                        class="btn d-flex align-items-center font-weight-bold ml-1" id="save-button">儲存變更</button>
-                                </div>
+    
+                                    <div class="data-block4 d-flex justify-content-center mt-3 mb-4">
+                                        <button type="button"
+                                            class="btn d-flex align-items-center font-weight-bold mr-1">取消</button>
+    
+                                        <button type="submit"
+                                            class="btn d-flex align-items-center font-weight-bold ml-1" id="save-button">儲存變更</button>
+                                    </div>
+                                </form>
                             </div>
 
                             <div class="data-block5">
@@ -268,106 +270,106 @@
 
                             <div class="data-block6">
                                 <div class="order-content my-3 mx-auto">
-                                    <div class="order-lists">
+                                    <div class="order-lists text-center">
                                         <div class="list-block1 d-flex">
                                             <ul class="block1-l d-flex pl-0 mb-0">
-                                                <li class="order-number text-center ml-2">訂單編號</li>
-                                                <li class="order-date text-center ml-4">訂購日期</li>
-                                                <li class="order-status text-center ml-3">訂單狀態</li>
-                                                <li class="pickUp-method text-center ml-4">收貨方式</li>
+                                                <li class="order-number">訂單編號</li>
+                                                <li class="order-date ml-4">訂購日期</li>
+                                                <li class="order-status ml-3">訂單狀態</li>
+                                                <li class="pickUp-method ml-4">收貨方式</li>
                                             </ul>
 
                                             <ul class="block1-r d-flex pl-0 mb-0">
-                                                <li class="delivery-way ml-3">寄送方式</li>
-                                                <li class="process-time text-center ml-4">處理進度</li>
-                                                <li class="payable-amount text-center ml-4">應付金額</li>
-                                                <li class="check-invoice text-center ml-4">發票</li>
-                                                <li class="return-service text-center ml-4">退貨服務</li>
+                                                <li class="delivery-way">寄送方式</li>
+                                                <li class="process-time ml-4">處理進度</li>
+                                                <li class="payable-amount ml-3">應付金額</li>
+                                                <li class="check-invoice ml-4">發票</li>
+                                                <li class="return-service ml-4">退貨服務</li>
                                             </ul>
                                         </div>
 
                                         <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
-                                                <li class="number ml-2">0000000123</li>
-                                                <li class="date text-center ml-4">2021-07-05</li>
-                                                <li class="status text-center ml-3">已出貨</li>
+                                                <li class="number">0000000123</li>
+                                                <li class="date ml-4">2021-07-05</li>
+                                                <li class="status ml-3">已出貨</li>
                                                 <li class="method ml-4">全家超商取貨</li>
                                             </ul>
                                             
                                             <ul class="block-r d-flex pl-0 mb-0">
-                                                <li class="way ml-3">全家店配</li>
-                                                <li class="time text-center ml-4">處理中</li>
-                                                <li class="amount text-center ml-4">2,999</li>
-                                                <li class="invoice text-center ml-4">檢視發票</li>
-                                                <li class="information text-center ml-4">退貨資訊</li>
+                                                <li class="way">全家店配</li>
+                                                <li class="time ml-4">處理中</li>
+                                                <li class="amount ml-3">2,999</li>
+                                                <li class="invoice ml-4">檢視發票</li>
+                                                <li class="information ml-4">退貨資訊</li>
                                             </ul>
                                         </div>
 
                                         <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
-                                                <li class="number ml-2">0000000123</li>
-                                                <li class="date text-center ml-4">2021-07-05</li>
-                                                <li class="status text-center ml-3">已出貨</li>
+                                                <li class="number">0000000123</li>
+                                                <li class="date ml-4">2021-07-05</li>
+                                                <li class="status ml-3">已出貨</li>
                                                 <li class="method ml-4">全家超商取貨</li>
                                             </ul>
                                             
                                             <ul class="block-r d-flex pl-0 mb-0">
-                                                <li class="way ml-3">全家店配</li>
-                                                <li class="time text-center ml-4">處理中</li>
-                                                <li class="amount text-center ml-4">2,999</li>
-                                                <li class="invoice text-center ml-4">檢視發票</li>
-                                                <li class="information text-center ml-4">退貨資訊</li>
+                                                <li class="way">全家店配</li>
+                                                <li class="time ml-4">處理中</li>
+                                                <li class="amount ml-3">2,999</li>
+                                                <li class="invoice ml-4">檢視發票</li>
+                                                <li class="information ml-4">退貨資訊</li>
                                             </ul>
                                         </div>
 
                                         <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
-                                                <li class="number ml-2">0000000123</li>
-                                                <li class="date text-center ml-4">2021-07-05</li>
-                                                <li class="status text-center ml-3">已出貨</li>
+                                                <li class="number">0000000123</li>
+                                                <li class="date ml-4">2021-07-05</li>
+                                                <li class="status ml-3">已出貨</li>
                                                 <li class="method ml-4">全家超商取貨</li>
                                             </ul>
                                             
                                             <ul class="block-r d-flex pl-0 mb-0">
-                                                <li class="way ml-3">全家店配</li>
-                                                <li class="time text-center ml-4">處理中</li>
-                                                <li class="amount text-center ml-4">2,999</li>
-                                                <li class="invoice text-center ml-4">檢視發票</li>
-                                                <li class="information text-center ml-4">退貨資訊</li>
+                                                <li class="way">全家店配</li>
+                                                <li class="time ml-4">處理中</li>
+                                                <li class="amount ml-3">2,999</li>
+                                                <li class="invoice ml-4">檢視發票</li>
+                                                <li class="information ml-4">退貨資訊</li>
                                             </ul>
                                         </div>
 
                                         <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
-                                                <li class="number ml-2">0000000123</li>
-                                                <li class="date text-center ml-4">2021-07-05</li>
-                                                <li class="status text-center ml-3">已出貨</li>
+                                                <li class="number">0000000123</li>
+                                                <li class="date ml-4">2021-07-05</li>
+                                                <li class="status ml-3">已出貨</li>
                                                 <li class="method ml-4">全家超商取貨</li>
                                             </ul>
                                             
                                             <ul class="block-r d-flex pl-0 mb-0">
-                                                <li class="way ml-3">全家店配</li>
-                                                <li class="time text-center ml-4">處理中</li>
-                                                <li class="amount text-center ml-4">2,999</li>
-                                                <li class="invoice text-center ml-4">檢視發票</li>
-                                                <li class="information text-center ml-4">退貨資訊</li>
+                                                <li class="way">全家店配</li>
+                                                <li class="time ml-4">處理中</li>
+                                                <li class="amount ml-3">2,999</li>
+                                                <li class="invoice ml-4">檢視發票</li>
+                                                <li class="information ml-4">退貨資訊</li>
                                             </ul>
                                         </div>
 
                                         <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
-                                                <li class="number ml-2">0000000123</li>
-                                                <li class="date text-center ml-4">2021-07-05</li>
-                                                <li class="status text-center ml-3">已出貨</li>
+                                                <li class="number">0000000123</li>
+                                                <li class="date ml-4">2021-07-05</li>
+                                                <li class="status ml-3">已出貨</li>
                                                 <li class="method ml-4">全家超商取貨</li>
                                             </ul>
                                             
                                             <ul class="block-r d-flex pl-0 mb-0">
-                                                <li class="way ml-3">全家店配</li>
-                                                <li class="time text-center ml-4">處理中</li>
-                                                <li class="amount text-center ml-4">2,999</li>
-                                                <li class="invoice text-center ml-4">檢視發票</li>
-                                                <li class="information text-center ml-4">退貨資訊</li>
+                                                <li class="way">全家店配</li>
+                                                <li class="time ml-4">處理中</li>
+                                                <li class="amount ml-3">2,999</li>
+                                                <li class="invoice ml-4">檢視發票</li>
+                                                <li class="information ml-4">退貨資訊</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -387,8 +389,6 @@
             </div>
         </div>
     </main>
-    
-    <script src="/js/storeChange.js"></script>
 
     <script src="/js/tw-city-selector.js"></script>
 

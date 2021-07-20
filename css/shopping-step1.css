@@ -309,6 +309,16 @@ main .main-container .my-container .shopping-container .shopping-order .order-ti
           flex: 0 0 28%;
 }
 
+@media (max-width: 1070px) {
+  main .main-container .my-container .shopping-container .shopping-order .order-title ul .title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12%;
+            flex: 0 0 12%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 @media (max-width: 790px) {
   main .main-container .my-container .shopping-container .shopping-order .order-title ul .title {
     -webkit-box-flex: 0;
@@ -379,6 +389,16 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   font-size: 14px;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media (max-width: 1070px) {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 11%;
+            flex: 1 0 11%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @media (max-width: 790px) {
@@ -612,12 +632,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .count {
     position: absolute;
     top: 197px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .subtotal {
     position: absolute;
     top: 200px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .delete-cart {
     top: 90px;
@@ -633,12 +653,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .count {
     position: absolute;
     top: 377px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .subtotal {
     position: absolute;
     top: 380px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .delete-cart {
     top: 265px;
@@ -654,12 +674,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .count {
     position: absolute;
     top: 550px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .subtotal {
     position: absolute;
     top: 555px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .delete-cart {
     top: 440px;
@@ -691,6 +711,22 @@ main .main-container .my-container .shopping-container .payment-shipping {
 @media (max-width: 1760px) {
   main .main-container .my-container .shopping-container .payment-shipping {
     margin-left: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1070px) {
+  main .main-container .my-container .shopping-container .payment-shipping {
+    margin-right: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 790px) {
+  main .main-container .my-container .shopping-container .payment-shipping {
+    margin-right: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -835,8 +871,17 @@ main .main-container .my-container .other-amount .other-discount {
   }
 }
 
+@media (max-width: 1070px) {
+  main .main-container .my-container .other-amount .other-discount {
+    margin-left: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 @media (max-width: 790px) {
   main .main-container .my-container .other-amount .other-discount {
+    margin-left: unset;
     bottom: 780px;
     left: 29vw;
     -webkit-transition: 1s;
@@ -1002,6 +1047,23 @@ main .main-container .my-container .other-amount .amount {
   margin-left: 2vw;
   max-width: 371px;
   width: 100%;
+}
+
+@media (max-width: 1070px) {
+  main .main-container .my-container .other-amount .amount {
+    margin-left: unset;
+    margin-right: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 790px) {
+  main .main-container .my-container .other-amount .amount {
+    margin-right: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .other-amount .amount .free-ship {

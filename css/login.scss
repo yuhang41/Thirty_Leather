@@ -324,22 +324,26 @@ main {
                                     width: 100%;
                                     font-size: 14px;
 
+                                    @include try-on(){
+                                        width: 552px;
+                                        margin: auto;
+                                    }
+
                                     .list-block1 {
                                         width: 100%;
                                         height: 30px;
                                         line-height: 30px;
-                                        background-color: $color-Footer-Background;
                                         color: $color-White;
 
                                         @include try-on() {
                                             display: flex;
                                             flex-direction: column;
-                                            justify-content: space-between;
                                             height: 60px;
                                         }
 
                                         .block1-l {
                                             width: 45%;
+                                            background-color: $color-Footer-Background;
 
                                             @include try-on() {
                                                 width: 100%;
@@ -352,6 +356,7 @@ main {
 
                                         .block1-r {
                                             width: 55%;
+                                            background-color: $color-Footer-Background;
 
                                             @include try-on() {
                                                 width: 100%;
@@ -382,6 +387,10 @@ main {
                                         .block-l {
                                             width: 45%;
 
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
+
                                             li {
                                                 width: 84px;
                                             }
@@ -394,6 +403,10 @@ main {
 
                                         .block-r {
                                             width: 55%;
+
+                                            @include try-on() {
+                                                width: 100%;
+                                            }
 
                                             li {
                                                 width: 84px;
