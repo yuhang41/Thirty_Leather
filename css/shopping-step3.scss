@@ -19,6 +19,20 @@
         transition: 1s;
     }
 }
+//1200
+@mixin bg-arrow{
+    @media(max-width:1200px){
+        @content;
+        transition: 1s;
+    }
+}
+//1024
+@mixin arrow{
+    @media(max-width:1024px){
+        @content;
+        transition: 1s;
+    }
+}
 //960
 @mixin tablet{
     @media(max-width:960px){
@@ -43,6 +57,13 @@
 //340
 @mixin iphone{
     @media(max-width:340px){
+        @content;
+        transition: 1s;
+    }
+}
+//320
+@mixin iphone5s{
+    @media(max-width:320px){
         @content;
         transition: 1s;
     }
@@ -128,14 +149,15 @@ main{
                                 p{
                                     &:nth-child(1){                                
                                         font-size: $H10-font-size;
-                                        font-weight:$font-Weight-B ;
                                         letter-spacing: $font-letter-space-50;                                
                                         
                                     }
                                     &:nth-child(2){                                        
                                         font-size: $H11-font-size;
-                                        font-weight:$font-Weight-B;
                                         letter-spacing: $font-letter-space-100;
+                                        @include sm-screen(){
+                                            letter-spacing: $font-letter-space-50;
+                                        }
                                     }
                                 }                                                                           
                             }
@@ -298,6 +320,7 @@ main{
                                         width: 200px;
                                         display: flex;
                                         justify-content: space-between;
+                                        margin-top: 20px;
                                         @include sm-phone(){
                                             width: 100%;
                                         }
@@ -722,6 +745,30 @@ main{
                         }                    
                     }
                 }            
+            }
+        }
+    }
+}
+footer{
+    height: 0px!important;
+    .site-footer{
+        .container{
+            @include sm-screen(){
+                max-width: 900px;
+            }
+            .return-nav{
+                .footer-arrow{
+                    @include arrow(){
+                        position: absolute;
+                        top: 225px!important;
+                        right: 5.5vw!important;
+                    }
+                    @include iphone5s(){
+                        top: 158px!important;
+                        right: 2vw!important;
+                    }
+                    
+                }
             }
         }
     }

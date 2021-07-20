@@ -166,14 +166,20 @@ main .main-container .my-container .steps .step .step-content .text .text-conten
 
 main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(1) {
   font-size: 14px;
-  font-weight: bold;
   letter-spacing: 0.8px;
 }
 
 main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
   font-size: 12px;
-  font-weight: bold;
   letter-spacing: 1.6px;
+}
+
+@media (max-width: 1350px) {
+  main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
+    letter-spacing: 0.8px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .steps .step .step-right-line {
@@ -468,7 +474,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
           justify-content: space-between;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 620px) {
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content {
     width: 183px;
     -webkit-transition: 1s;
@@ -548,6 +554,11 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   background-color: #c8d9db;
   outline: none;
   border: none;
+  -webkit-appearance: none;
+}
+
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count input[type=number]::-webkit-outer-spin-button, main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .count input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .subtotal p {
@@ -770,10 +781,6 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
   color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select select:hover {
-  background: #abbac9;
-}
-
 main .main-container .my-container .shopping-container .payment-shipping .shipping .business {
   width: 80%;
   margin: auto;
@@ -950,6 +957,7 @@ main .main-container .my-container .other-amount .other-discount .other-card {
 @media (max-width: 620px) {
   main .main-container .my-container .other-amount .other-discount .other-card {
     width: 100%;
+    padding-left: 10px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1170,5 +1178,36 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   font-size: 30px;
   letter-spacing: 3.2px;
   color: #ffffff;
+}
+
+footer {
+  height: 0px !important;
+}
+
+@media (max-width: 1350px) {
+  footer .site-footer .container {
+    max-width: 880px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    position: absolute;
+    top: 225px !important;
+    right: 2vw !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 320px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    top: 158px !important;
+    right: 2vw !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 /*# sourceMappingURL=shopping-step1.css.map */
