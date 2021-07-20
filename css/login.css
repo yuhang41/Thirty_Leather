@@ -290,11 +290,17 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
   font-size: 14px;
 }
 
+@media (max-width: 991px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists {
+    width: 552px;
+    margin: auto;
+  }
+}
+
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block1 {
   width: 100%;
   height: 30px;
   line-height: 30px;
-  background-color: #7a7573;
   color: #ffffff;
 }
 
@@ -307,15 +313,13 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     height: 60px;
   }
 }
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block1 .block1-l {
   width: 45%;
+  background-color: #7a7573;
 }
 
 @media (max-width: 991px) {
@@ -330,6 +334,7 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block1 .block1-r {
   width: 55%;
+  background-color: #7a7573;
 }
 
 @media (max-width: 991px) {
@@ -372,6 +377,12 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
   width: 45%;
 }
 
+@media (max-width: 991px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-l {
+    width: 100%;
+  }
+}
+
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-l li {
   width: 84px;
 }
@@ -383,6 +394,12 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r {
   width: 55%;
+}
+
+@media (max-width: 991px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r {
+    width: 100%;
+  }
 }
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r li {
