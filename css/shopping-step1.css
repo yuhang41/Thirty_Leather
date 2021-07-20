@@ -632,12 +632,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .count {
     position: absolute;
     top: 197px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .subtotal {
     position: absolute;
     top: 200px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(2) ul .delete-cart {
     top: 90px;
@@ -653,12 +653,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .count {
     position: absolute;
     top: 377px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .subtotal {
     position: absolute;
     top: 380px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(3) ul .delete-cart {
     top: 265px;
@@ -674,12 +674,12 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .count {
     position: absolute;
     top: 550px;
-    left: 100px;
+    left: 125px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .subtotal {
     position: absolute;
     top: 555px;
-    left: 235px;
+    left: 265px;
   }
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart:nth-child(4) ul .delete-cart {
     top: 440px;

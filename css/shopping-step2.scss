@@ -77,6 +77,34 @@
         transition: 1s;
     }
 }
+//1350
+@mixin sm-screen{
+    @media(max-width:1350px){
+        @content;
+        transition: 1s;
+    }
+}
+//1150
+@mixin tablet{
+    @media(max-width:1150px){
+        @content;
+        transition: 1s;
+    }
+}
+//960
+@mixin bg-phone{
+    @media(max-width:960px){
+        @content;
+        transition: 1s;
+    }
+}
+//620
+@mixin sm-phone{
+    @media(max-width:620px){
+        @content;
+        transition: 1s;
+    }
+}
 main{
     .main-container{
         background: $color-LightGray;
@@ -86,6 +114,15 @@ main{
             max-width: 1550px;
             padding: 0;
             padding-top: 15.7vh;
+            @include bg-screen(){
+                max-width: 1140px;
+            }
+            @include tablet(){
+                max-width: 900px;
+            }
+            @include sm-phone(){
+                padding-top: 5.7vh;  
+            }
             .steps{
                 display: flex;
                 padding: 0 10px;
@@ -143,7 +180,10 @@ main{
                                 font-weight:$font-Weight-B ;
                                 letter-spacing: $font-letter-space-200;
                             }
-                            .text-content{                        
+                            .text-content{
+                                @include bg-phone(){
+                                    display: none;
+                                }                        
                                 text-align: left;                                                
                                 p{
                                     &:nth-child(1){                                
@@ -187,6 +227,9 @@ main{
                     top: 0px;
                     left: -130px;
                     font-size: 98px;
+                    @include sm-screen(){
+                        display: none;
+                    }
                     p{
                         margin: 0px;
                         -webkit-writing-mode: vertical-lr;
@@ -202,6 +245,9 @@ main{
                     border: 1px solid $color-Apricot;
                     padding: 3vh 1vw;
                     transition: 1s;
+                    @include sm-phone(){
+                        padding: 3vh  1.5vw;
+                    }
                    .shopping-information{
                        max-width: 840px;
                        margin: auto;
@@ -239,6 +285,9 @@ main{
                                    padding-bottom: 20px;
                                    display: flex;
                                    justify-content: space-between;
+                                   @include sm-phone(){
+                                       flex-direction: column;
+                                   }
                                     .order-cart{
                                             &.content{
                                                 flex: 0 0 80%;
@@ -261,6 +310,9 @@ main{
                                             .cart-title{                            
                                                 color:$color-IronGray;
                                                 font-size: $H10-font-size;
+                                                @include sm-phone(){
+                                                    width: 182px;
+                                                }
                                                 p{
                                                     margin: 0; 
                                                 }               
@@ -282,6 +334,12 @@ main{
                                         flex-direction: column;
                                         align-items: flex-end;
                                         justify-content: flex-end;
+                                        @include sm-phone(){
+                                            margin-top: 5px;
+                                            flex-direction: row;
+                                            justify-content: space-between;
+                                            align-items: flex-start;
+                                        }
                                     }
                                }
                            }
@@ -297,12 +355,16 @@ main{
                                 flex-direction: row;
                                 align-items: flex-end;
                                 justify-content: space-between;
+                                @include sm-phone(){
+                                    width: 100%;
+                                }
                                 .shipping-text{
                                     color:$color-IronGray;
                                 }
                                 .shipping-price{
                                     font-size: $H3-font-size;
                                     color:$color-IronGray;
+                                    line-height: 36px;
                                 }
                            }
                             
@@ -326,10 +388,19 @@ main{
                             display: flex;
                             justify-content: space-between;
                             margin-bottom: 20px;
+                            transition: 1s;
+                            @include sm-phone(){
+                                flex-direction: column;
+                                align-items: center;
+                                margin-top: 20px;
+                            }
                             .receipt-type{
                                 font-size: $H8-font-size;
                                 font-weight: $font-Weight-B;
                                 color: $color-Nav-icon;
+                                @include sm-phone(){
+                                    margin-bottom: 20px;
+                                }
                                 .type-title{
                                     margin-bottom: 5px;
                                 }
@@ -338,6 +409,9 @@ main{
                                 font-size: $H8-font-size;
                                 font-weight: $font-Weight-B;
                                 color: $color-Nav-icon;
+                                @include sm-phone(){
+                                    margin-bottom: 20px;
+                                }
                                 .type-title{
                                     margin-bottom: 5px;
                                 }
@@ -400,10 +474,18 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    transition: 1s;
                     @include bg-screen(){
+                        max-width: 1140px;
+                        margin-left: unset;
+                        margin-top: 40px;
                         flex-direction: row;
                         align-items: flex-start;
                         justify-content: space-between;
+                    }
+                    @include bg-phone(){
+                        flex-direction: column;
+                        align-items: center;
                     }
                     .orderer-info{
                         max-width: 371px;
@@ -439,6 +521,9 @@ main{
                     }
                     .recipient-info{
                         width: 100%;
+                        @include bg-screen(){
+                            max-width: 371px;
+                        }
                         .addressee{
                             width: 100%;
                             min-height: 509px;
@@ -452,6 +537,9 @@ main{
                             margin: 32px auto;
                             @include bg-screen(){
                                 margin-top: 0px;
+                            }
+                            @include bg-phone(){
+                                margin-top: 32px;
                             }
                             .addressee-title{
                                 font-size: $H5-font-size;
@@ -547,6 +635,13 @@ main{
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+                @include bg-phone(){
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+                @include sm-phone(){
+                    padding: 0px 10px;
+                }
                 .back-button{
                     font-size: $H5-font-size;
                     color: $color-IronGray;
@@ -559,6 +654,9 @@ main{
                     margin-left: 2vw;
                     max-width: 371px;
                     width: 100%;
+                    @include bg-phone(){
+                        margin-left: unset;
+                    }
                     .free-ship{
                         display: flex;
                         font-size: $H11-font-size;

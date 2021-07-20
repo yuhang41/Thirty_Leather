@@ -5,6 +5,48 @@
     padding: 0px;
     font-family: $font-Family-A;
 }
+//1760
+@mixin bg-screen{
+    @media(max-width:1760px){
+        @content;
+        transition: 1s;
+    }
+}
+//1350
+@mixin sm-screen{
+    @media(max-width:1350px){
+        @content;
+        transition: 1s;
+    }
+}
+//960
+@mixin tablet{
+    @media(max-width:960px){
+        @content;
+        transition: 1s;
+    }
+}
+//760
+@mixin bg-phone{
+    @media(max-width:760px){
+        @content;
+        transition: 1s;
+    }
+}
+//620
+@mixin sm-phone{
+    @media(max-width:620px){
+        @content;
+        transition: 1s;
+    }
+}
+//340
+@mixin iphone{
+    @media(max-width:340px){
+        @content;
+        transition: 1s;
+    }
+}
 main{
     .main-container{
         background: $color-LightGray;
@@ -15,6 +57,15 @@ main{
             padding: 0;        
             padding-top: 15.7vh;
             padding-bottom: 50px;
+            @include bg-screen(){
+                max-width: 1140px;
+            }
+            @include sm-screen(){
+                max-width: 900px;
+            }
+            @include tablet(){
+                max-width: 700px;
+            }
             .steps{
                 display: flex;
                 padding: 0 10px;
@@ -71,6 +122,9 @@ main{
                             }
                             .text-content{                        
                                 text-align: left; 
+                                @include tablet(){
+                                    display: none;
+                                }
                                 p{
                                     &:nth-child(1){                                
                                         font-size: $H10-font-size;
@@ -105,11 +159,17 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
+                @include bg-screen(){
+                    flex-direction: column;
+                }
                 .web-title{
                     position: absolute;
                     top: 0px;
                     left: -130px;
                     font-size: 98px;
+                    @include sm-screen(){
+                        display: none;
+                    }
                     p{
                         margin: 0px;
                         -webkit-writing-mode: vertical-lr;
@@ -165,33 +225,41 @@ main{
                                     padding: 0 15px;
                                     padding-bottom: 20px;
                                     display: flex;
-                                    .photo{                                
-                                        max-width: 90px;
-                                        max-height: 90px;
-                                        width: 100%;                                
-                                        img{
-                                            width: 100%;
-                                            height: 100%;
-                                            object-position: center;
-                                            object-fit: cover;
-                                        }
-                                    }
-                                    .commodity-content{
-                                        display: flex;
+                                    @include sm-phone(){
                                         flex-direction: column;
-                                        justify-content: space-between;               
-                                        padding: 0 15px;
-                                        .commodity-title{
-                                            font-size: $H10-font-size;                                                                                
-                                            p{
-                                                margin: 0;
+                                    }
+                                    .photo-content{
+                                        display: flex;
+                                        .photo{                                
+                                            max-width: 90px;
+                                            max-height: 90px;
+                                            width: 100%;                                
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                object-position: center;
+                                                object-fit: cover;
                                             }
                                         }
-                                        .commodity-size{
-                                            color: $color-Gainsboro;
-                                            font-size: $H11-font-size;
-                                            p{
-                                                margin: 0;
+                                        .commodity-content{
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;               
+                                            padding: 0 15px;
+                                            .commodity-title{
+                                                font-size: $H10-font-size;                                     @include sm-phone(){
+                                                    width: 182px;
+                                                }                                           
+                                                p{
+                                                    margin: 0;
+                                                }
+                                            }
+                                            .commodity-size{
+                                                color: $color-Gainsboro;
+                                                font-size: $H11-font-size;
+                                                p{
+                                                    margin: 0;
+                                                }
                                             }
                                         }
                                     }
@@ -200,8 +268,19 @@ main{
                                         display: flex;
                                         justify-content: flex-end;
                                         align-items: flex-end;
+                                        transition: 1s;
+                                        @include sm-phone(){
+                                            margin-left: unset;
+                                            margin-top: 5px;
+                                        }
                                         .quantity-subtotal{
                                             text-align: right;
+                                            transition: 1s;
+                                            @include sm-phone(){
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                            }
                                             p{
                                                 margin: 0;
                                                 font-size: $H11-font-size;
@@ -219,6 +298,9 @@ main{
                                         width: 200px;
                                         display: flex;
                                         justify-content: space-between;
+                                        @include sm-phone(){
+                                            width: 100%;
+                                        }
                                         p,h4{
                                             margin: 0;
                                             display: flex;
@@ -229,6 +311,7 @@ main{
                                         }
                                         h4{
                                             font-size: $H3-font-size;
+                                            line-height: 36px;
                                         }
                                     }
                                 }
@@ -240,10 +323,17 @@ main{
                             border-bottom: 1px solid $color-Background-line;
                             display: flex;
                             justify-content: center;
+                            @include sm-phone(){
+                                flex-direction: column;
+                                align-items: center;
+                            }
                             .photo-svg{
                                 max-width: 158px;
                                 width: 100%;
                                 padding: 0 20px;
+                                @include sm-phone(){
+                                    margin-bottom: 20px;
+                                }
                                 img{
                                     width: 100%;
                                     object-fit: cover;
@@ -254,10 +344,16 @@ main{
                                 h3{
                                     font-size: $H5-font-size;
                                     letter-spacing: $font-letter-space-200;
+                                    @include sm-phone(){
+                                        text-align: center;
+                                    }
                                 }
                                 p{
                                     margin: 0;
-                                    font-size: $H10-font-size;                                
+                                    font-size: $H10-font-size; 
+                                    @include sm-phone(){
+                                        text-align: center;
+                                    }                               
                                     &:nth-child(2){
                                         margin-bottom: 20px;
                                     }
@@ -267,15 +363,30 @@ main{
                         .information{
                             width: 100%;
                             padding: 20px 15px;
+                            @include iphone(){
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
                             .order-customer-information{
                                 display: flex;
                                 justify-content: space-between;
-                                margin: 20px 0;                            
+                                margin: 20px 0;
+                                transition: 1s;  
+                                @include bg-phone(){
+                                    flex-direction: column;
+                                    align-items: center;
+                                }                          
                                 .information-both{
                                     position: relative;
                                     border: 1px solid $color-Background-line;
                                     padding: 25px 10px 5px 10px;
-                                    min-width: 300px;
+                                    width: 300px;
+                                    @include bg-phone(){
+                                        &:nth-child(1){
+                                            margin-bottom: 20px;
+                                        }
+                                    }
                                     h4{
                                         position: absolute;
                                         top: -14px;                                                     
@@ -304,10 +415,14 @@ main{
                             }
                             .shipping-information{
                                 width: 100%;
-                                margin: 20px 0;                            
+                                margin-bottom: 20px;                            
                                 position: relative;
                                 border: 1px solid $color-Background-line;
                                 padding: 25px 10px 5px 10px;
+                                transition: 1s;
+                                @include iphone(){
+                                    width: 300px;
+                                }
                                 h4{
                                     position: absolute;
                                     top: -14px;                                                     
@@ -318,6 +433,10 @@ main{
                                 }
                                 .shipping-information-content{
                                     display: flex;
+                                    transition: 1s;
+                                    @include sm-phone(){
+                                        flex-direction: column;
+                                    }
                                     ul{
                                         margin: 0;
                                         display: flex;
@@ -325,13 +444,16 @@ main{
                                         justify-content: space-between;
                                         li{
                                             display: flex;                                        
-                                            color: $color-Nav-icon;                                                            
+                                            color: $color-Nav-icon;                  
                                             h5{
                                                 flex: 50%;
                                                 font-size: $H8-font-size;
                                                 margin: 0;
                                                 display: flex;
                                                 align-items: center;
+                                                @include sm-phone(){
+                                                    flex: 40%; 
+                                                }
                                             }
                                             p{
                                                 flex: 50%;
@@ -344,30 +466,44 @@ main{
                                                 margin-bottom: 20px;
                                             }
                                             &:nth-child(2){
-                                               position: relative;
-                                                .order-track{
-                                                    position: absolute;
-                                                    top: 22px;
-                                                    left: 177px;
-                                                    font-size: $H11-font-size;
-                                                    background-color: $color-Textarea-Text;
-                                                    color: $color-White;
-                                                    border-radius: 5px;
-                                                    width: 85px;
-                                                    height: 20px;
-                                                    text-align: center;
-                                                    line-height: 20px;
-                                                    &:hover{
-                                                        background-color: $color-Apricot;
+                                                display: flex;
+                                                align-items: flex-start;
+                                                h5{
+                                                    flex: 0 0 50%;
+                                                    @include sm-phone(){
+                                                        flex: 0 0 45%;   
                                                     }
+                                                }
+                                            }
+                                            .order-track{
+                                                p{
+                                                    &:nth-child(2){
+                                                        font-size: $H11-font-size;
+                                                        background-color: $color-Textarea-Text;
+                                                        color: $color-White;
+                                                        border-radius: 5px; 
+                                                        text-align: center;
+                                                        line-height: 20px;
+                                                        padding-left: 5px;
+                                                        &:hover{
+                                                            background-color: $color-Apricot;
+                                                        } 
+                                                    }  
                                                 }
                                             }
                                         }
                                         &:nth-child(1){
                                             flex:0 0 45%;
                                             li{
+                                                &:nth-child(1){
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                }
                                                 .shipping-information-name{
                                                     flex: 50%;
+                                                    @include sm-phone(){
+                                                        flex:40%;
+                                                    }
                                                     h5{
                                                         font-size: $H8-font-size;
                                                         margin: 0;
@@ -387,6 +523,10 @@ main{
                                                 .store-information{
                                                     flex: 0 0 82%;
                                                     display: flex;
+                                                    transition: 1s;
+                                                    @include sm-phone(){
+                                                        flex: 0 0 90%;   
+                                                    }
                                                     h5{
                                                         font-size: $H8-font-size;
                                                         margin: 0;
@@ -401,15 +541,27 @@ main{
                                                 .code-address{
                                                     flex: 0 0 82%;
                                                     display: flex;
+                                                    transition: 1s;
+                                                    @include sm-phone(){
+                                                        flex: 0 0 90%;   
+                                                    }
+                                                    &:nth-child(3){
+                                                        display: flex;
+                                                        align-items: flex-start;
+                                                    }
                                                     h5{
                                                         font-size: $H8-font-size;
                                                         margin: 0;
                                                         flex: 0 0 50%;
+                                                        
                                                     }
                                                     p{
                                                         margin: 0;
                                                         font-size: $H10-font-size;
                                                         flex: 0 0 70%;
+                                                        @include sm-phone(){
+                                                            flex: 0 0 50%; 
+                                                        }
                                                     }
                                                 }
                                             }
@@ -423,6 +575,9 @@ main{
                                 position: relative;
                                 border: 1px solid $color-Background-line;
                                 padding: 25px 10px 5px 10px;
+                                @include iphone(){
+                                    width: 300px;
+                                }
                                 h4{
                                     position: absolute;
                                     top: -14px;                                                     
@@ -434,8 +589,17 @@ main{
                                 .payment-information-content{
                                     margin: 0;
                                     display: flex;
+                                    @include sm-phone(){
+                                        flex-direction: column;
+                                    }
                                     li{
                                         flex: 0 0 45%;
+                                        transition: 1s;
+                                        @include sm-phone(){
+                                            &:nth-child(1){
+                                                margin-bottom: 20px;
+                                            }
+                                        }
                                         .payment-invoice{
                                             flex: 0 0 100%;
                                             display: flex;
@@ -444,11 +608,17 @@ main{
                                                 font-size: $H8-font-size;
                                                 margin: 0;
                                                 flex: 0 0 50%;
+                                                @include sm-phone(){
+                                                    flex: 0 0 45%; 
+                                                } 
                                             }
                                             p{
                                                 margin: 0;
                                                 font-size: $H10-font-size;
                                                 flex: 0 0 60%;
+                                                @include sm-phone(){
+                                                    flex: 0 0 50%; 
+                                                } 
                                             }
                                         }
                                     }                            
@@ -465,12 +635,25 @@ main{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    transition: 1s;
+                    @include bg-screen(){
+                        max-width: 1140px;
+                        margin-left: unset;
+                        align-items: flex-end;
+                    }
+                    @include tablet(){
+                        align-items: center;
+                    }
                     .customer-service-message{                    
                         width: 100%;  
                         height: 550px;                                      
                         background: $color-White;
                         border: 1px solid $color-Apricot;
                         padding: 20px;
+                        @include bg-screen(){
+                            margin-top: 30px;
+                            max-width: 371px;
+                        }
                         h4{
                             padding: 10px;
                             margin: 0;
@@ -518,6 +701,10 @@ main{
                     }
                     .go-home-button{                                        
                         width: 100%;
+                        @include bg-screen(){
+                            max-width: 371px;
+                            margin-top: 30px;
+                        }
                         .home-button{
                             cursor: pointer;
                             width: 100%;
