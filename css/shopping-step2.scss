@@ -190,6 +190,12 @@ main{
                         width: 80%;
                         display: flex;
                         justify-content: center;
+                        @include sm-screen(){
+                            width: 120%;
+                        }
+                        @include tablet(){
+                            width: 100%;
+                        }
                         .text{
                             display: flex;                    
                             justify-content: center;
@@ -199,6 +205,9 @@ main{
                                 margin: 0;
                                 font-size: $H4-font-size;
                                 font-weight:$font-Weight-B ;
+                                @include tablet(){
+                                    font-weight: unset;
+                                }
                                 letter-spacing: $font-letter-space-200;
                             }
                             .text-content{

@@ -47,6 +47,14 @@ main .main-container .my-container {
   }
 }
 
+@media (max-width: 620px) {
+  main .main-container .my-container {
+    padding-top: 5.7vh;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .steps {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,6 +131,22 @@ main .main-container .my-container .steps .step .step-content {
           justify-content: center;
 }
 
+@media (max-width: 1350px) {
+  main .main-container .my-container .steps .step .step-content {
+    width: 120%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 960px) {
+  main .main-container .my-container .steps .step .step-content {
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .steps .step .step-content .text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +165,14 @@ main .main-container .my-container .steps .step .step-content .text p {
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 3.2px;
+}
+
+@media (max-width: 1350px) {
+  main .main-container .my-container .steps .step .step-content .text p {
+    font-weight: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .steps .step .step-content .text .text-content {
