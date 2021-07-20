@@ -84,9 +84,23 @@
         transition: 1s;
     }
 }
+//1200
+@mixin bg-arrow{
+    @media(max-width:1200px){
+        @content;
+        transition: 1s;
+    }
+}
 //1150
 @mixin tablet{
     @media(max-width:1150px){
+        @content;
+        transition: 1s;
+    }
+}
+//1024
+@mixin arrow{
+    @media(max-width:1024px){
         @content;
         transition: 1s;
     }
@@ -101,6 +115,13 @@
 //620
 @mixin sm-phone{
     @media(max-width:620px){
+        @content;
+        transition: 1s;
+    }
+}
+//320
+@mixin iphone{
+    @media(max-width:320px){
         @content;
         transition: 1s;
     }
@@ -169,6 +190,12 @@ main{
                         width: 80%;
                         display: flex;
                         justify-content: center;
+                        @include sm-screen(){
+                            width: 120%;
+                        }
+                        @include tablet(){
+                            width: 100%;
+                        }
                         .text{
                             display: flex;                    
                             justify-content: center;
@@ -178,6 +205,9 @@ main{
                                 margin: 0;
                                 font-size: $H4-font-size;
                                 font-weight:$font-Weight-B ;
+                                @include tablet(){
+                                    font-weight: unset;
+                                }
                                 letter-spacing: $font-letter-space-200;
                             }
                             .text-content{
@@ -188,14 +218,15 @@ main{
                                 p{
                                     &:nth-child(1){                                
                                         font-size: $H10-font-size;
-                                        font-weight:$font-Weight-B ;
                                         letter-spacing: $font-letter-space-50;                                
                                         
                                     }
                                     &:nth-child(2){                                        
                                         font-size: $H11-font-size;
-                                        font-weight:$font-Weight-B;
                                         letter-spacing: $font-letter-space-100;
+                                        @include sm-screen(){
+                                            letter-spacing: $font-letter-space-50;
+                                        }
                                     }
                                 }                  
                             }
@@ -355,6 +386,7 @@ main{
                                 flex-direction: row;
                                 align-items: flex-end;
                                 justify-content: space-between;
+                                margin-top: 20px;
                                 @include sm-phone(){
                                     width: 100%;
                                 }
@@ -725,6 +757,33 @@ main{
                     }
                 }
             }            
+        }
+    }
+}
+footer{
+    height: 0px!important;
+    .site-footer{
+        .container{
+            @include bg-arrow(){
+                max-width: 1140px;
+            }
+            @include tablet(){
+                max-width: 900px;
+            }
+            .return-nav{
+                .footer-arrow{
+                    @include arrow(){
+                        position: absolute;
+                        top: 225px!important;
+                        right: 5vw!important;
+                    }
+                    @include iphone(){
+                        top: 158px!important;
+                        right: 2vw!important;
+                    }
+                    
+                }
+            }
         }
     }
 }

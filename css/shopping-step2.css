@@ -130,6 +130,22 @@ main .main-container .my-container .steps .step .step-content {
           justify-content: center;
 }
 
+@media (max-width: 1350px) {
+  main .main-container .my-container .steps .step .step-content {
+    width: 120%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1150px) {
+  main .main-container .my-container .steps .step .step-content {
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .steps .step .step-content .text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,6 +166,14 @@ main .main-container .my-container .steps .step .step-content .text p {
   letter-spacing: 3.2px;
 }
 
+@media (max-width: 1150px) {
+  main .main-container .my-container .steps .step .step-content .text p {
+    font-weight: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .steps .step .step-content .text .text-content {
   text-align: left;
 }
@@ -164,14 +188,20 @@ main .main-container .my-container .steps .step .step-content .text .text-conten
 
 main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(1) {
   font-size: 14px;
-  font-weight: bold;
   letter-spacing: 0.8px;
 }
 
 main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
   font-size: 12px;
-  font-weight: bold;
   letter-spacing: 1.6px;
+}
+
+@media (max-width: 1350px) {
+  main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
+    letter-spacing: 0.8px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .steps .step .step-right-line {
@@ -438,6 +468,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 20px;
 }
 
 @media (max-width: 620px) {
@@ -1197,5 +1228,44 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   letter-spacing: 3.2px;
   color: #ffffff;
   margin-bottom: 30px;
+}
+
+footer {
+  height: 0px !important;
+}
+
+@media (max-width: 1200px) {
+  footer .site-footer .container {
+    max-width: 1140px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1150px) {
+  footer .site-footer .container {
+    max-width: 900px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    position: absolute;
+    top: 225px !important;
+    right: 5vw !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 320px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    top: 158px !important;
+    right: 2vw !important;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 /*# sourceMappingURL=shopping-step2.css.map */
