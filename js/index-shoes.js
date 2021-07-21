@@ -5,7 +5,7 @@ var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: 'auto',
   spaceBetween: 30, 
   watchSlidesVisibility: true,
-   watchSlidesProgress: true,   
+  watchSlidesProgress: true,   
   navigation: {
     nextEl: ".button-next",      
   },
@@ -22,8 +22,11 @@ var swiper3 = new Swiper(".mySwiper3", {
 });
 //左邊圖片的swiper
 var swiper4 = new Swiper(".mySwiper4", {
- slidesPerView: 'auto',
- spaceBetween: 100,
+ spaceBetween: 30,
+ watchSlidesVisibility: true,
+  watchSlidesProgress: true, 
+ loop: true,
+ loopFillGroupWithBlank: true,
  navigation: {
    nextEl: ".button-next",      
  },
@@ -37,4 +40,13 @@ var swiper4 = new Swiper(".mySwiper4", {
  thumbs: {
    swiper: swiper3,
  },
+ breakpoints: {
+  // when window width is >= 1350px
+  700:{
+    slidesPerView: 'auto',
+  },
+  300: {
+    slidesPerView: 1,
+  },      
+}
 });

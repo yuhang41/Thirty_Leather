@@ -9,14 +9,42 @@
         outline: none;
     }
 }
-// 平板尺寸
+//1800
+@mixin bg-screen {
+    @media(max-width:1800px){
+        @content;
+        transition: 1s;
+    }
+}
+//1450
+@mixin sm-screen{
+    @media(max-width:1450px){
+        @content;
+        transition: 1s;
+    }
+}
+// 1024
 @mixin tablet {
     @media(max-width:1024px){
         @content;
         transition: 1s;
     }
 }
-// 小手機尺寸
+//900
+@mixin bg-phone {
+    @media(max-width:900px){
+        @content;
+        transition: 1s;
+    }
+}
+//700
+@mixin normal-phone {
+    @media(max-width:700px){
+        @content;
+        transition: 1s;
+    }
+}
+// 520
 @mixin sm-phone {
     @media(max-width:520px){
         @content;
@@ -68,6 +96,9 @@ main{
     .shoes-sketch{
         position: relative;
         overflow: visible;
+        @include bg-screen(){
+            display: none;
+        }
         img{
             position: absolute;
             top: 340px;
@@ -84,19 +115,52 @@ main{
         padding-left: 2.6vw;
         position: relative;
         overflow: hidden;
+        transition: 1s;
+        @include tablet(){
+        max-width: calc(100% - 58px);
+        }
+        @include bg-phone(){
+            max-width: 100%;
+        }
+        @include normal-phone(){
+            padding:150px 2.6vw 0px 2.6vw ;
+        }
+        @include sm-phone(){
+            padding-top: 75px;
+        }
         .shoes-article{
             display: flex;
+            @include normal-phone(){
+               justify-content: center;
+            }
             .article-container{
                 .article-title{
+                    display: flex;
+                    transition: 1s;
+                    @include bg-phone(){
+                        flex-direction: column;
+                    }
+                    @include normal-phone(){
+                        align-items: center;
+                    }
                     p{
                         font-size: $H3-font-size;
                         font-weight: $font-Weight-B;
                         letter-spacing: $font-letter-space-200;
                         color:$color-Product-Detail-Title;
+                        margin:0px;
                     } 
                 }
                 .article-content{
                     max-width: 737px;
+                    text-align: justify;
+                    transition: 1s;
+                    @include bg-phone(){
+                        max-width: 650px;
+                    }
+                    @include normal-phone(){
+                        max-width: 500px;
+                    }
                     p{
                         font-size: $H10-font-size;
                         letter-spacing: $font-letter-space-100;
@@ -112,6 +176,20 @@ main{
                     top: 25px;
                     left: 20px;
                     width:1000px;
+                    transition: 1s;
+                    @include sm-screen(){
+                        top: 170px;
+                        left: unset;
+                        right: -490px;
+                        width: 1200px;
+                    }
+                    @include bg-phone(){
+                        top: 270px;
+                        right: -720px;
+                    }
+                    @include normal-phone(){
+                        display: none;
+                    }
                     .curve{
                         fill-opacity: 0;
                         stroke: $color-Background-line;
@@ -134,16 +212,29 @@ main{
         }
         .shoes-img-display{
             margin-top: 40px;
-            .shoes-article-swiper{                  
+            .shoes-article-swiper{          
                 .inner-content{
                     height: 384px;
                     display: flex;
                     justify-content: flex-end;
                     margin-bottom: 60px;
+                    flex-wrap: wrap;
+                    @include sm-screen(){
+                        height: unset;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                    }
                     //文字的swiper
                     .development-process-content{
                         max-width: 375px;
                         flex: 0 0 50%;
+                        transition: 1s;
+                        @include sm-screen(){
+                            margin-bottom: 100px;
+                        }
+                        @include normal-phone(){
+                            max-width: unset;
+                        }
                         .swiper-container{
                             width: 600px;
                             margin-right: 0px;
@@ -203,36 +294,43 @@ main{
                         flex: 0 0 55%;
                         padding-left: 20px;
                         position: relative;
+                        transition: 1s;
+                        @include sm-screen(){
+                            padding-left: 0px;
+                        }
+                        @include normal-phone(){
+                            // max-width: 375px;
+                            // padding-left: 2.6vw;
+                            
+                        }
                         .swiper-container {
                             width: 865px;
                             height: 384px;
                             margin-bottom: 50px;
                             margin-right: 0px;
+                            @include sm-screen(){
+                                margin-left: unset;
+                                width: 100vw;
+                            }
+                            @include normal-phone(){
+                                // width: 300px;
+                            }
                         }
                         .swiper-slide {
-                            text-align: center;
-                            font-size: 18px;
-                            background: #fff;
                             width: 664px;
-                            /* Center slide text vertically */
-                            display: -webkit-box;
-                            display: -ms-flexbox;
-                            display: -webkit-flex;
-                            display: flex;
-                            -webkit-box-pack: center;
-                            -ms-flex-pack: center;
-                            -webkit-justify-content: center;
-                            justify-content: center;
-                            -webkit-box-align: center;
-                            -ms-flex-align: center;
-                            -webkit-align-items: center;
-                            align-items: center;
+                            @include normal-phone(){
+                                // width: 300px;
+                            }
+
                         }
                         .swiper-slide img {
                             display: block;
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+                            @include normal-phone(){
+                            object-fit: contain;
+                            }
                         }
                         &:before{
                             content: "";
@@ -245,60 +343,75 @@ main{
                             transform: skewX(-40deg);
                             z-index: 1;
                             opacity: 0.5;
+                            @include sm-screen(){
+                                top: unset;
+                                bottom: 500px;
+                                left: 179px;
+                            }
                         }
-                    }
-                }
-                .swiper-step{
-                    width: 100%;                            
-                    display: flex;
-                    justify-content: flex-end;
-                    .swiper-step-button{
-                        flex:0 0 50%;
-                        display: flex;
-                        justify-content: space-between;
-                        .pagination-next{
-                            position: relative;
-                            flex: 0 0 76%;
+                        .swiper-step{
                             display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            .swiper-pagination-bullet{
-                                position: relative;
-                                z-index: 2;
-                                background: $color-IronGray;
-                                border-radius: 0px;
-                                opacity: 1;
-                                width: 15px;
-                                height: 15px;
-                                p{
-                                    position: absolute;
-                                    top:20px;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    white-space:nowrap;                                          
-                                }
-                                &.swiper-pagination-bullet-active{
-                                    color:$color-Evaluation-Star;
-                                    background: $color-Evaluation-Star;
-                                }                                        
-                            }
-                            &::before{
-                                content: '';
+                            width: 865px;
+                            margin-left: auto;
+                            @include sm-screen(){
                                 position: absolute;
-                                top: 50%;
-                                left: 0;
-                                transform: translate(0,-50%);                                        
-                                width: 100%;
-                                height: 2px;                       
-                                background: $color-IronGray;
+                                top: -60px;
+                                left: 0px;
                             }
-                        }
-                        .button-next{
-                            text-align: center;
-                            flex: 0 0 22%;                                    
+                            .swiper-step-button{
+                                flex:0 0 94%;
+                                display: flex;
+                                justify-content: space-between;
+                                .pagination-next{
+                                    position: relative;
+                                    flex: 0 0 76%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    transition: 1s;
+                                    @include sm-screen(){
+                                        flex: 0 0 80%;  
+                                    }
+                                    .swiper-pagination-bullet{
+                                        position: relative;
+                                        z-index: 2;
+                                        background: $color-IronGray;
+                                        border-radius: 0px;
+                                        opacity: 1;
+                                        width: 15px;
+                                        height: 15px;
+                                        p{
+                                            position: absolute;
+                                            top:20px;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            white-space:nowrap;                                          
+                                        }
+                                        &.swiper-pagination-bullet-active{
+                                            color:$color-Evaluation-Star;
+                                            background: $color-Evaluation-Star;
+                                        }                                        
+                                    }
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translate(0,-50%);                                        
+                                        width: 100%;
+                                        height: 2px;                       
+                                        background: $color-IronGray;
+                                    }
+                                }
+                                .button-next{
+                                    text-align: center;
+                                    flex: 0 0 22%;                                    
+                                }
+                            }
                         }
                     }
                 }
+                
             }
         }
     }
