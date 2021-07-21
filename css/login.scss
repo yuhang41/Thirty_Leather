@@ -9,11 +9,6 @@
     }
 }
 
-@mixin elevenforty {
-    @media (max-width: 1140px) {
-        @content;
-    }
-}
 // 小平板尺寸
 @mixin sm-tablet {
     @media (max-width: 1024px) {
@@ -45,6 +40,13 @@
         @content;
     }
 }
+
+@mixin four-fifty {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
 // iphone 5s
 @mixin iphone-5s {
     @media (max-width: 320px) {
@@ -93,6 +95,10 @@ main {
                     outline: none;
                     z-index: 2;
 
+                    @include four-fifty() {
+                        font-size: $H10-font-size;
+                    }
+
                     &.active {
                         width: 205px;
                         background-color: $color-White;
@@ -103,6 +109,7 @@ main {
                         z-index: 2;
 
                         @include sm-tablet() {
+                            width: 170px;
                             height: 78px;
                             border-right: none;
                             border-bottom: 18px solid $color-SkyBlue;
@@ -123,9 +130,11 @@ main {
             }
 
             .tab-content {
+                max-width: 1140px;
+                width: 100%;
+
                 .tab-pane {
                     .member-data {
-                        width: 1140px;
                         height: 100%;
                         background-color: $color-White;
                         border: 1px solid $color-Apricot;
@@ -163,6 +172,7 @@ main {
 
                             .data-block2 {
                                 color: $color-MoreButton-hover;
+                                cursor: pointer;
 
                                 .fa-pen {
                                     font-size: $H7-font-size;
@@ -195,6 +205,53 @@ main {
                                             outline: none;
                                             border: none;
                                             border-bottom: 1px solid $color-WedgwoodBlue;
+
+                                            &#date {
+                                                width: 223px;
+                                            }
+
+                                            &[type="date"]::-webkit-datetime-edit-text {
+                                                padding: 5px;
+                                            }
+                                        }
+
+                                        .input1 {
+                                            @include four-fifty() {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+                                        }
+
+                                        .input1 {
+                                            @include four-fifty() {
+                                                text-align: center;
+                                            }
+                                        }
+
+                                        .title {
+                                            @include four-fifty() {
+                                                margin-left: 24px;
+                                            }
+                                        }
+
+                                        .title1 {
+                                            @include four-fifty() {
+                                                margin-top: 24px;
+                                            } 
+                                        }
+
+                                        .content::-webkit-input-placeholder {
+                                            @include four-fifty() {
+                                                text-align: center;
+                                                margin-right: 36px;
+                                            }
+                                        }
+
+                                        .content3, .content4 {
+                                            @include four-fifty() {
+                                                width: 223px;
+                                                margin-left: 36px;
+                                            }
                                         }
                                     }
 
@@ -204,8 +261,27 @@ main {
                                             margin: auto;
                                         }
 
+                                        @include four-fifty() {
+                                            width: 259px;
+                                        }
+
                                         .contact {
+                                            @include four-fifty() {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+
+                                            .title5 {
+                                                @include four-fifty() {
+                                                    text-align: center;
+                                                }
+                                            }
+
                                             .address-data {
+                                                @include four-fifty() {
+                                                    text-align: center;
+                                                }
+
                                                 .city-block {
                                                     .county,
                                                     .zipcode {
@@ -235,6 +311,7 @@ main {
                                                     color: $color-WedgwoodBlue;
                                                     border: 1px solid $color-WedgwoodBlue;
                                                     outline: none;
+                                                    padding-left: 4px;
                                                 }
                                             }
                                         }
@@ -242,6 +319,10 @@ main {
                                         .subscribe {
                                             @include sm-tablet() {
                                                 margin-top: 40px;
+                                            }
+
+                                            @include four-fifty() {
+                                                text-align: center;
                                             }
 
                                             .title6 {
@@ -255,7 +336,7 @@ main {
                                                 .checkmark {
                                                     position: absolute;
                                                     top: 10%;
-                                                    left: 32%;
+                                                    left: 31%;
                                                     height: 18px;
                                                     width: 18px;
                                                     border: 1px solid $color-WedgwoodBlue;
@@ -264,6 +345,11 @@ main {
                                                         position: absolute;
                                                         top: 10%;
                                                         left: 30%;
+                                                    }
+
+                                                    @include four-fifty() {
+                                                        position: absolute;
+                                                        left: 70%;
                                                     }
                                                 }
 
@@ -293,17 +379,25 @@ main {
                             }
 
                             .data-block4 {
-                                button {
-                                    height: 40px;
-                                    border: 1px solid $color-MoreButton;
-                                    font-size: 19.5px;
-                                    color: $color-IronGray;
-                                    letter-spacing: $font-letter-space-200;
-                                    border: 1px solid $color-MoreButton;
+                                height: 40px;
 
-                                    &:hover {
-                                        background-color: $color-MoreButton-hover;
-                                        color: $color-White;
+                                .btn-groups {
+                                    display: flex;
+                                    justify-content: center;
+                                    display: none;
+
+                                    button {
+                                        height: 40px;
+                                        border: 1px solid $color-MoreButton;
+                                        font-size: 19.5px;
+                                        color: $color-IronGray;
+                                        letter-spacing: $font-letter-space-200;
+                                        border: 1px solid $color-MoreButton;
+
+                                        &:hover {
+                                            background-color: $color-MoreButton-hover;
+                                            color: $color-White;
+                                        }
                                     }
                                 }
                             }
@@ -324,7 +418,7 @@ main {
                                     width: 100%;
                                     font-size: 14px;
 
-                                    @include try-on(){
+                                    @include try-on() {
                                         width: 552px;
                                         margin: auto;
                                     }
@@ -342,7 +436,7 @@ main {
                                         }
 
                                         .block1-l {
-                                            width: 45%;
+                                            width: calc((100% / 9) * 4);
                                             background-color: $color-Footer-Background;
 
                                             @include try-on() {
@@ -350,12 +444,16 @@ main {
                                             }
 
                                             li {
-                                                width: 84px;
+                                                flex: 0 0 25%;
+
+                                                @include try-on() {
+                                                    flex: 0 0 20%;
+                                                }
                                             }
                                         }
 
                                         .block1-r {
-                                            width: 55%;
+                                            width: calc((100% / 9) * 5);
                                             background-color: $color-Footer-Background;
 
                                             @include try-on() {
@@ -363,7 +461,7 @@ main {
                                             }
 
                                             li {
-                                                width: 84px;
+                                                flex: 0 0 20%;
                                             }
                                         }
                                     }
@@ -385,35 +483,41 @@ main {
                                         }
 
                                         .block-l {
-                                            width: 45%;
+                                            width: calc((100% / 9) * 4);
 
                                             @include try-on() {
                                                 width: 100%;
-                                            }
-
-                                            li {
-                                                width: 84px;
                                             }
 
                                             .number {
                                                 background-color: $color-MoreButton;
                                                 color: $color-White;
                                             }
+
+                                            li {
+                                                flex: 0 0 25%;
+
+                                                @include try-on() {
+                                                    flex: 0 0 20%;
+                                                }
+                                            }
                                         }
 
                                         .block-r {
-                                            width: 55%;
+                                            width: calc((100% / 9) * 5);
 
                                             @include try-on() {
                                                 width: 100%;
                                             }
 
                                             li {
-                                                width: 84px;
+                                                flex: 0 0 20%;
                                             }
 
                                             .invoice,
                                             .information {
+                                                width: 84px;
+                                                margin: auto;
                                                 background-color: $color-MoreButton;
                                                 color: $color-White;
                                             }
