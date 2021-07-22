@@ -335,7 +335,7 @@ main .main-container .shoes-img-display {
 
 @media (max-width: 520px) {
   main .main-container .shoes-img-display {
-    margin-top: 60px;
+    margin-top: 100px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -654,7 +654,7 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
 @media (max-width: 520px) {
   main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step {
     width: 100%;
-    top: -257px;
+    top: -300px;
     left: 11vw;
     -webkit-transition: 1s;
     transition: 1s;
