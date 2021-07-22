@@ -145,6 +145,8 @@ main .main-container {
 @media (max-width: 520px) {
   main .main-container {
     padding-top: 75px;
+    padding-left: unset;
+    padding-right: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -172,6 +174,7 @@ main .main-container .shoes-article .article-container .article-title {
   display: flex;
   -webkit-transition: 1s;
   transition: 1s;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 900px) {
@@ -195,12 +198,28 @@ main .main-container .shoes-article .article-container .article-title {
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-article .article-container .article-title {
+    margin-bottom: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-article .article-container .article-title p {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 3.2px;
   color: #7b8ca2;
   margin: 0px;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-article .article-container .article-title p {
+    font-size: 21px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .shoes-article .article-container .article-content {
@@ -221,6 +240,14 @@ main .main-container .shoes-article .article-container .article-content {
 @media (max-width: 700px) {
   main .main-container .shoes-article .article-container .article-content {
     max-width: 500px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-article .article-container .article-content {
+    max-width: 300px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -248,9 +275,9 @@ main .main-container .shoes-article .decoration-line svg {
 
 @media (max-width: 1450px) {
   main .main-container .shoes-article .decoration-line svg {
-    top: 170px;
+    top: 174px;
     left: unset;
-    right: -490px;
+    right: -483px;
     width: 1200px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -259,7 +286,7 @@ main .main-container .shoes-article .decoration-line svg {
 
 @media (max-width: 900px) {
   main .main-container .shoes-article .decoration-line svg {
-    top: 270px;
+    top: 257px;
     right: -720px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -304,6 +331,14 @@ main .main-container .shoes-article .decoration-line svg .curve {
 
 main .main-container .shoes-img-display {
   margin-top: 40px;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display {
+    margin-top: 60px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content {
@@ -359,9 +394,26 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content {
+    margin-bottom: 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container {
   width: 600px;
-  margin-right: 0px;
+  z-index: 2;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container {
+    width: 300px;
+    margin: auto;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title {
@@ -381,8 +433,25 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   margin: 0;
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title h2 {
+    font-size: 24px;
+    line-height: 21px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list {
   margin-bottom: 20px;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list {
+    margin-bottom: 5px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
@@ -394,8 +463,30 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   margin: 0;
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
+    font-size: 12px;
+    line-height: 21px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-text {
   z-index: 5;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-text button {
@@ -417,6 +508,14 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   border: none;
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-text button {
+    margin-top: 5px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 55%;
@@ -430,13 +529,6 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
 @media (max-width: 1450px) {
   main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper {
     padding-left: 0px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 700px) {
-  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper {
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -458,8 +550,10 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 520px) {
   main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-container {
+    margin: unset;
+    height: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -467,10 +561,15 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
 
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-slide {
   width: 664px;
+  height: unset;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 520px) {
   main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-slide {
+    width: unset;
+    height: 50%;
+    margin-top: 20px;
+    margin-right: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -517,6 +616,14 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper:before {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,6 +637,25 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
     position: absolute;
     top: -60px;
     left: 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 700px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step {
+    width: 555px;
+    left: 5vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step {
+    width: 100%;
+    top: -257px;
+    left: 11vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -616,5 +742,46 @@ main .main-container .shoes-img-display .shoes-article-swiper .inner-content .de
   -webkit-box-flex: 0;
       -ms-flex: 0 0 22%;
           flex: 0 0 22%;
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step .swiper-step-button .button-next {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+footer {
+  height: 0px !important;
+}
+
+@media (max-width: 1024px) {
+  footer .site-footer .container {
+    max-width: 900px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+footer .site-footer .container .return-nav .footer-arrow {
+  margin-right: 50px;
+  top: 250px;
+}
+
+@media (max-width: 520px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    margin-right: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 320px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    top: 150px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 /*# sourceMappingURL=index-shoes.css.map */

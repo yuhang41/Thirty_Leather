@@ -51,6 +51,13 @@
         transition: 1s;
     }
 }
+//320
+@mixin iphone {
+    @media(max-width:320px){
+        @content;
+        transition: 1s;
+    }
+}
 nav{
     background-color: $color-LightGray;
     margin-left:146px;
@@ -127,6 +134,8 @@ main{
         }
         @include sm-phone(){
             padding-top: 75px;
+            padding-left: unset;
+            padding-right: unset;
         }
         .shoes-article{
             display: flex;
@@ -137,11 +146,15 @@ main{
                 .article-title{
                     display: flex;
                     transition: 1s;
+                    margin-bottom: 20px;
                     @include bg-phone(){
                         flex-direction: column;
                     }
                     @include normal-phone(){
                         align-items: center;
+                    }
+                    @include sm-phone(){
+                        margin-bottom: 10px;
                     }
                     p{
                         font-size: $H3-font-size;
@@ -149,6 +162,9 @@ main{
                         letter-spacing: $font-letter-space-200;
                         color:$color-Product-Detail-Title;
                         margin:0px;
+                        @include sm-phone(){
+                            font-size: $H6-font-size;   
+                        }
                     } 
                 }
                 .article-content{
@@ -160,6 +176,9 @@ main{
                     }
                     @include normal-phone(){
                         max-width: 500px;
+                    }
+                    @include sm-phone(){
+                        max-width: 300px;
                     }
                     p{
                         font-size: $H10-font-size;
@@ -178,13 +197,13 @@ main{
                     width:1000px;
                     transition: 1s;
                     @include sm-screen(){
-                        top: 170px;
+                        top: 174px;
                         left: unset;
-                        right: -490px;
+                        right: -483px;
                         width: 1200px;
                     }
                     @include bg-phone(){
-                        top: 270px;
+                        top: 257px;
                         right: -720px;
                     }
                     @include normal-phone(){
@@ -212,7 +231,10 @@ main{
         }
         .shoes-img-display{
             margin-top: 40px;
-            .shoes-article-swiper{          
+            @include sm-phone(){
+                margin-top: 60px;
+            }
+            .shoes-article-swiper{   
                 .inner-content{
                     height: 384px;
                     display: flex;
@@ -224,6 +246,7 @@ main{
                         flex-direction: column;
                         justify-content: flex-start;
                     }
+                  
                     //文字的swiper
                     .development-process-content{
                         max-width: 375px;
@@ -235,9 +258,16 @@ main{
                         @include normal-phone(){
                             max-width: unset;
                         }
+                        @include sm-phone(){
+                            margin-bottom: 0px;
+                        }
                         .swiper-container{
                             width: 600px;
-                            margin-right: 0px;
+                            z-index: 2;
+                            @include sm-phone(){
+                                width: 300px;
+                                margin: auto;
+                            }
                             .swiper-wrapper{
                                 .swiper-slide{
                                     .development-process-title{
@@ -251,22 +281,37 @@ main{
                                         h2{                             
                                             font-size: $H3-font-size;
                                             font-weight: $font-Weight-B;
-                                            margin:0;                  
+                                            margin:0;            
+                                            @include sm-phone(){
+                                                font-size: $H5-font-size;
+                                                line-height: 21px;
+                                            }      
                                         }
                                     }
                                     .development-process-list{
                                         margin-bottom: 20px;
+                                        @include sm-phone(){
+                                            margin-bottom: 5px;
+                                        }
                                         p{
                                             color: $color-Product-Detail-Title;
                                             font-size: $H7-font-size;
                                             font-weight: $font-Weight-B;
                                             letter-spacing: $font-letter-space-100;
                                             line-height: 30px;
-                                            margin: 0;                                                    
+                                            margin: 0;    
+                                            @include sm-phone(){
+                                                font-size: $H11-font-size;
+                                                line-height: 21px;
+                                            }                                                
                                         }      
                                     }
                                     .development-process-text{
                                         z-index: 5;
+                                        @include sm-phone(){
+                                            display: flex;
+                                            justify-content: flex-end;
+                                        }
                                         button{
                                             width: 120px;
                                             height: 50px;
@@ -283,6 +328,9 @@ main{
                                                 background-color: $color-Evaluation-Star;
                                                 border: none;
                                             }
+                                            @include sm-phone(){
+                                                margin-top: 5px;
+                                            }
                                         }
                                     }
                                 }
@@ -298,11 +346,6 @@ main{
                         @include sm-screen(){
                             padding-left: 0px;
                         }
-                        @include normal-phone(){
-                            // max-width: 375px;
-                            // padding-left: 2.6vw;
-                            
-                        }
                         .swiper-container {
                             width: 865px;
                             height: 384px;
@@ -312,15 +355,20 @@ main{
                                 margin-left: unset;
                                 width: 100vw;
                             }
-                            @include normal-phone(){
-                                // width: 300px;
+                            @include sm-phone(){
+                                margin: unset;
+                                height: unset;
                             }
                         }
                         .swiper-slide {
                             width: 664px;
-                            @include normal-phone(){
-                                // width: 300px;
-                            }
+                            height: unset;
+                           @include sm-phone(){
+                               width: unset;
+                               height: 50%;
+                               margin-top: 20px;
+                               margin-right: unset;
+                           }
 
                         }
                         .swiper-slide img {
@@ -348,6 +396,9 @@ main{
                                 bottom: 500px;
                                 left: 179px;
                             }
+                            @include sm-phone(){
+                                display: none;
+                            }
                         }
                         .swiper-step{
                             display: flex;
@@ -357,6 +408,15 @@ main{
                                 position: absolute;
                                 top: -60px;
                                 left: 0px;
+                            }
+                            @include normal-phone(){
+                                width: 555px;
+                                left: 5vw;
+                            }
+                            @include sm-phone(){
+                                width: 100%;
+                                top: -257px;
+                                left: 11vw;
                             }
                             .swiper-step-button{
                                 flex:0 0 94%;
@@ -405,13 +465,38 @@ main{
                                 }
                                 .button-next{
                                     text-align: center;
-                                    flex: 0 0 22%;                                    
+                                    flex: 0 0 22%;
+                                    @include sm-phone(){
+                                        display: none;
+                                    }                                    
                                 }
                             }
                         }
                     }
                 }
                 
+            }
+        }
+    }
+}
+footer{
+    height: 0px!important;
+    .site-footer{
+        .container{
+            @include tablet(){
+                max-width: 900px;
+            }
+            .return-nav{
+                .footer-arrow{
+                  margin-right: 50px;
+                  top: 250px; 
+                  @include sm-phone(){
+                      margin-right: unset;
+                  } 
+                  @include iphone(){
+                      top: 150px;
+                  }
+                }
             }
         }
     }
