@@ -231,7 +231,8 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
 }
 
 @media (max-width: 450px) {
-  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content3, main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content4 {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content3,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content4 {
     width: 223px;
     margin-left: 36px;
   }
@@ -481,6 +482,12 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
           flex: 0 0 20%;
 }
 
+@media (max-width: 768px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block1 .block1-r li {
+    display: none;
+  }
+}
+
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block {
   width: 100%;
 }
@@ -498,6 +505,12 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block {
+    height: 100px;
   }
 }
 
@@ -546,10 +559,22 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
   }
 }
 
+@media (max-width: 768px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r {
+    display: none;
+  }
+}
+
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
+}
+
+@media (max-width: 768px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r li {
+    display: none;
+  }
 }
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .block-r .invoice,
@@ -558,6 +583,81 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
   margin: auto;
   background-color: #a0a0a0;
   color: #ffffff;
+}
+
+main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #ebeae5;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .top,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .mid,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .bot {
+    margin: 0;
+    padding: 0;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .top .btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .top .order-detail {
+    line-height: 40px;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 {
+    display: none;
+    height: 50px;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1 .mid li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1 .bot li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2 .mid li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2 .bot li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3 .mid li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3 .bot li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4 .mid li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4 .bot li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 .mid li,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 .bot li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16%;
+            flex: 0 0 16%;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1 .bot,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2 .bot,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3 .bot,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4 .bot,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 .bot {
+    padding-top: 8px;
+  }
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1 .bot .invoice1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square1 .bot .information1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2 .bot .invoice1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square2 .bot .information1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3 .bot .invoice1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square3 .bot .information1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4 .bot .invoice1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square4 .bot .information1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 .bot .invoice1,
+  main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6 .order-content .order-lists .list-block .ttz .square5 .bot .information1 {
+    width: 80px;
+    margin: auto;
+    background-color: #a0a0a0;
+    color: #ffffff;
+  }
 }
 
 main .member-page .member-lists .tab-content .tab-pane .member-data .data-block7 button {

@@ -237,7 +237,7 @@ main {
                                         .title1 {
                                             @include four-fifty() {
                                                 margin-top: 24px;
-                                            } 
+                                            }
                                         }
 
                                         .content::-webkit-input-placeholder {
@@ -247,7 +247,8 @@ main {
                                             }
                                         }
 
-                                        .content3, .content4 {
+                                        .content3,
+                                        .content4 {
                                             @include four-fifty() {
                                                 width: 223px;
                                                 margin-left: 36px;
@@ -462,6 +463,10 @@ main {
 
                                             li {
                                                 flex: 0 0 20%;
+
+                                                @include bg-phone() {
+                                                    display: none;
+                                                }
                                             }
                                         }
                                     }
@@ -474,6 +479,10 @@ main {
                                             flex-direction: column;
                                             justify-content: space-between;
                                             height: 60px;
+                                        }
+
+                                        @include bg-phone() {
+                                            height: 100px;
                                         }
 
                                         li {
@@ -510,8 +519,16 @@ main {
                                                 width: 100%;
                                             }
 
+                                            @include bg-phone() {
+                                                display: none;
+                                            }
+
                                             li {
                                                 flex: 0 0 20%;
+
+                                                @include bg-phone() {
+                                                    display: none;
+                                                }
                                             }
 
                                             .invoice,
@@ -522,6 +539,63 @@ main {
                                                 color: $color-White;
                                             }
                                         }
+
+                                        .ttz {
+                                            display: none;
+
+                                            @include bg-phone() {
+                                                display: flex;
+                                                flex-direction: column;
+                                                background-color: $color-LightGray;
+
+                                                .top,
+                                                .mid,
+                                                .bot {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                }
+
+                                                .top {
+                                                    .btn {
+                                                        padding: 0;
+                                                        width: 40px;
+                                                        height: 40px;
+                                                    }
+
+                                                    .order-detail {
+                                                        line-height: 40px;
+                                                    }
+                                                }
+
+                                                .square1,
+                                                .square2,
+                                                .square3,
+                                                .square4,
+                                                .square5 {
+                                                    display: none;
+                                                    height: 50px;
+
+                                                    .mid,
+                                                    .bot {
+                                                        li {
+                                                            flex: 0 0 16%;
+                                                        }
+                                                    }
+
+                                                    .bot {
+                                                        padding-top: 8px;
+
+                                                        .invoice1,
+                                                        .information1 {
+                                                            width: 80px;
+                                                            margin: auto;
+                                                            background-color: $color-MoreButton;
+                                                            color: $color-White;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -529,12 +603,12 @@ main {
 
                         .data-block7 {
                             button {
-                                background-color: #ffffff;
-                                color: #a0a0a0;
+                                background-color: $color-White;
+                                color: $color-MoreButton;
                                 border: none;
 
                                 &:hover {
-                                    color: #f7a269;
+                                    color: $color-Apricot;
                                 }
                             }
                         }
