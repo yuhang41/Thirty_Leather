@@ -66,6 +66,15 @@ nav .go-home-logo .logo {
   transition: 1s;
 }
 
+@media (max-width: 1350px) {
+  nav .go-home-logo .logo {
+    width: 113px;
+    height: 113px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 @media (max-width: 1024px) {
   nav .go-home-logo .logo {
     width: 58px;

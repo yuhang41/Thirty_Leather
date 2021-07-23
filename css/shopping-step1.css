@@ -164,16 +164,7 @@ main .main-container .my-container .steps .step .step-content .text {
 main .main-container .my-container .steps .step .step-content .text p {
   margin: 0;
   font-size: 30px;
-  font-weight: bold;
   letter-spacing: 3.2px;
-}
-
-@media (max-width: 1350px) {
-  main .main-container .my-container .steps .step .step-content .text p {
-    font-weight: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
 }
 
 main .main-container .my-container .steps .step .step-content .text .text-content {
@@ -512,6 +503,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
 
 main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .content .cart-content .cart-title p {
   font-size: 14px;
+  font-weight: lighter;
   margin: 0;
 }
 

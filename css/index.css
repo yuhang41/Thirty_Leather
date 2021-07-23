@@ -190,7 +190,7 @@ main .main-container .swiper1 .swiper-slide {
   font-size: 18px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,8 +328,8 @@ main .main-container .swiper1 .banner-card:after {
   width: 2px;
   height: 0px;
   background-color: #fff;
-  -webkit-animation: banner-line-grow 3s ease-in-out 2.5s forwards;
-          animation: banner-line-grow 3s ease-in-out 2.5s forwards;
+  -webkit-animation: banner-line-grow 1s ease-in-out 1.5s forwards;
+          animation: banner-line-grow 1s ease-in-out 1.5s forwards;
   animation-direction: reverse;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
@@ -341,9 +341,6 @@ main .main-container .swiper1 .banner-card:after {
   0% {
     height: 0px;
   }
-  50% {
-    height: 120px;
-  }
   100% {
     height: 120px;
   }
@@ -352,9 +349,6 @@ main .main-container .swiper1 .banner-card:after {
 @keyframes banner-line-grow {
   0% {
     height: 0px;
-  }
-  50% {
-    height: 120px;
   }
   100% {
     height: 120px;
@@ -810,6 +804,12 @@ main .main-container .we-story .story-content svg .scissors-mind {
   stroke-dasharray: 4000;
 }
 
+main .main-container .we-story .story-content svg .scissor-color {
+  fill-opacity: 0;
+  fill: #abbac9;
+  stroke-dashoffset: 0;
+}
+
 main .main-container .we-story .story-content svg[data-inviewport="scale-in"] {
   -webkit-transition: 2s;
   transition: 2s;
@@ -823,6 +823,14 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
           animation: scissors 4s ease-in-out;
   -webkit-animation: mind 4s ease-in-out;
           animation: mind 4s ease-in-out;
+}
+
+main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is-inViewport .scissor-color {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation: scissors-color 4s ease-in-out;
+          animation: scissors-color 4s ease-in-out;
+  fill-opacity: 1;
 }
 
 @-webkit-keyframes scissors {
@@ -864,6 +872,24 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes scissors-color {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes scissors-color {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
   }
 }
 
@@ -1586,7 +1612,7 @@ main .main-container .shoemaking .container .see-more-button button, main .main-
 }
 
 main .main-container .shoemaking .container .see-more-button button::after {
-  background: #abbac9;
+  background: #70b9cf;
   content: '';
   position: absolute;
   z-index: -1;
@@ -1633,19 +1659,19 @@ main .main-container .shoemaking .container .see-more-button button::before {
 
 @-webkit-keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
 @keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
@@ -1654,7 +1680,7 @@ main .main-container .shoemaking .container .see-more-button button:focus:before
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
           animation: colorFade 1s ease-in-out;
-  background: #f5853b;
+  background: #4ca7c3;
 }
 
 main .main-container .shoemaking .container .see-more-button button:focus {
@@ -2332,7 +2358,7 @@ main .main-container .new-product .container .see-more-button a button, main .ma
 }
 
 main .main-container .new-product .container .see-more-button a button::after {
-  background: #abbac9;
+  background: #70b9cf;
   content: '';
   position: absolute;
   z-index: -1;
@@ -2379,10 +2405,10 @@ main .main-container .new-product .container .see-more-button a button::before {
 
 @keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
@@ -2391,7 +2417,7 @@ main .main-container .new-product .container .see-more-button a button:focus:bef
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
           animation: colorFade 1s ease-in-out;
-  background: #f5853b;
+  background: #4ca7c3;
 }
 
 main .main-container .new-product .container .see-more-button a button:focus {

@@ -15,6 +15,13 @@
         transition: 1s;
     }
 }
+//1350 版本
+@mixin bg-tablet {
+    @media(max-width:1350px){
+        @content;
+        transition: 1s;
+    }
+}
 // 平板尺寸
 @mixin tablet {
     @media(max-width:1024px){
@@ -53,7 +60,11 @@ nav{
         .logo{            
             width: 160px;
             height: 148px;
-            transition: 1s;            
+            transition: 1s;   
+            @include bg-tablet(){
+                width: 113px;
+                height: 113px;
+            }         
             @include tablet(){
                 width: 58px;
                 height: 58px;                
