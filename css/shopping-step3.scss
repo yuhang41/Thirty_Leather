@@ -79,11 +79,12 @@ main{
             padding-top: 15.7vh;
             padding-bottom: 50px;
             @include bg-screen(){
-                max-width: 1140px;
+                // max-width: 1140px;
+                padding:15.7vh 6.7vw 0 6.7vw;
             }
-            @include sm-screen(){
-                max-width: 900px;
-            }
+            // @include sm-screen(){
+            //     max-width: 900px;
+            // }
             @include tablet(){
                 max-width: 700px;
             }
@@ -189,9 +190,9 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
-                @include bg-screen(){
-                    flex-direction: column;
-                }
+                // @include bg-screen(){
+                //     flex-direction: column;
+                // }
                 .web-title{
                     position: absolute;
                     top: 0px;
@@ -667,11 +668,11 @@ main{
                     flex-direction: column;
                     justify-content: space-between;
                     transition: 1s;
-                    @include bg-screen(){
-                        max-width: 1140px;
-                        margin-left: unset;
-                        align-items: flex-end;
-                    }
+                    // @include bg-screen(){
+                    //     max-width: 1140px;
+                    //     margin-left: unset;
+                    //     align-items: flex-end;
+                    // }
                     @include tablet(){
                         align-items: center;
                     }
@@ -681,10 +682,10 @@ main{
                         background: $color-White;
                         border: 1px solid $color-Apricot;
                         padding: 20px;
-                        @include bg-screen(){
-                            margin-top: 30px;
-                            max-width: 371px;
-                        }
+                        // @include bg-screen(){
+                        //     margin-top: 30px;
+                        //     max-width: 371px;
+                        // }
                         h4{
                             padding: 10px;
                             margin: 0;
@@ -732,10 +733,10 @@ main{
                     }
                     .go-home-button{                                        
                         width: 100%;
-                        @include bg-screen(){
-                            max-width: 371px;
-                            margin-top: 30px;
-                        }
+                        // @include bg-screen(){
+                        //     max-width: 371px;
+                        //     margin-top: 30px;
+                        // }
                         .home-button{
                             cursor: pointer;
                             width: 100%;
