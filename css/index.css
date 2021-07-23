@@ -37,7 +37,7 @@ nav.sticky .personal-item {
 }
 
 nav.sticky .personal-item .input-cart {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 nav.sticky .navbar {
@@ -58,6 +58,10 @@ nav.sticky .navbar {
     -webkit-transition: 1s;
     transition: 1s;
   }
+}
+
+nav.sticky .navbar-nav .nav-link {
+  padding: 0px 1em;
 }
 
 nav.sticky .logo {
@@ -161,7 +165,7 @@ main .main-container .swiper1 .swiper-pagination-bullets .swiper-pagination-bull
   height: 17px;
   border-radius: 0px;
   margin: 17px 0px 0px 0px;
-  background-color: #8090a0;
+  background-color: #67BEAC;
   opacity: unset;
   position: relative;
 }
@@ -186,7 +190,7 @@ main .main-container .swiper1 .swiper-slide {
   font-size: 18px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,6 +219,139 @@ main .main-container .swiper1 .swiper-slide {
     min-height: unset;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+}
+
+main .main-container .swiper1 .banner-card {
+  width: 500px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #354b5e;
+  position: absolute;
+  bottom: 60px;
+  left: 42vw;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .main-container .swiper1 .banner-card .banner-title {
+  margin-bottom: 20px;
+}
+
+main .main-container .swiper1 .banner-card .banner-title p {
+  margin: 0px;
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  color: #354b5e;
+  position: relative;
+}
+
+main .main-container .swiper1 .banner-card .banner-title p:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 427px;
+  height: 1px;
+  background-color: #8de1de;
+}
+
+main .main-container .swiper1 .banner-card .banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #354b5e;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  border: 1px solid #8de1de;
+  background-color: unset;
+  margin-bottom: 10px;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:hover {
+  border: 1px solid #DCBEA6;
+}
+
+main .main-container .swiper1 .banner-card .banner-content .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-container .swiper1 .banner-card .banner-content .text p {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #354b5e;
+  letter-spacing: 3.2px;
+}
+
+main .main-container .swiper1 .banner-card:after {
+  content: "";
+  position: absolute;
+  bottom: -121px;
+  left: 13vw;
+  width: 2px;
+  height: 0px;
+  background-color: #fff;
+  -webkit-animation: banner-line-grow 1s ease-in-out 1.5s forwards;
+          animation: banner-line-grow 1s ease-in-out 1.5s forwards;
+  animation-direction: reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes banner-line-grow {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 120px;
+  }
+}
+
+@keyframes banner-line-grow {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 120px;
   }
 }
 
@@ -610,7 +747,7 @@ main .main-container .we-story .story-content {
 
 main .main-container .we-story .story-content img {
   position: absolute;
-  left: -8rem;
+  left: -9rem;
   max-width: 54.8%;
   z-index: 1;
   -webkit-transition: 1s;
@@ -667,6 +804,12 @@ main .main-container .we-story .story-content svg .scissors-mind {
   stroke-dasharray: 4000;
 }
 
+main .main-container .we-story .story-content svg .scissor-color {
+  fill-opacity: 0;
+  fill: #abbac9;
+  stroke-dashoffset: 0;
+}
+
 main .main-container .we-story .story-content svg[data-inviewport="scale-in"] {
   -webkit-transition: 2s;
   transition: 2s;
@@ -680,6 +823,14 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
           animation: scissors 4s ease-in-out;
   -webkit-animation: mind 4s ease-in-out;
           animation: mind 4s ease-in-out;
+}
+
+main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is-inViewport .scissor-color {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation: scissors-color 4s ease-in-out;
+          animation: scissors-color 4s ease-in-out;
+  fill-opacity: 1;
 }
 
 @-webkit-keyframes scissors {
@@ -721,6 +872,24 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes scissors-color {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes scissors-color {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
   }
 }
 
@@ -1293,9 +1462,12 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card {
 
 main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
   width: 295px;
+  height: 295px;
   border-radius: 50%;
-  border: 5px solid #a3a091;
+  border: 5px solid #70b9cf;
   background-color: #d2cec2;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1024px) {
@@ -1417,11 +1589,106 @@ main .main-container .shoemaking .container .see-more-button button {
   width: 277px;
   height: 79px;
   font-size: 24px;
+  font-weight: bold;
   color: #444444;
   border-radius: 35px;
   background-color: unset;
-  border: 2px solid #a0a0a0;
+  border: 2px solid #70b9cf;
   z-index: 1;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+main .main-container .shoemaking .container .see-more-button button, main .main-container .shoemaking .container .see-more-button button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .shoemaking .container .see-more-button button::after {
+  background: #70b9cf;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .shoemaking .container .see-more-button button:hover:after {
+  width: 135%;
+}
+
+main .main-container .shoemaking .container .see-more-button button:hover {
+  color: #ffffff;
+}
+
+main .main-container .shoemaking .container .see-more-button button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@-webkit-keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+main .main-container .shoemaking .container .see-more-button button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #4ca7c3;
+}
+
+main .main-container .shoemaking .container .see-more-button button:focus {
+  color: #ffffff;
+}
+
+main .main-container .shoemaking .container .see-more-button button:focus:after {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -1430,13 +1697,6 @@ main .main-container .shoemaking .container .see-more-button button {
     -webkit-transition: 1s;
     transition: 1s;
   }
-}
-
-main .main-container .shoemaking .container .see-more-button button:hover {
-  border: 2px solid #abbac9;
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #abbac9;
 }
 
 main .main-container .shoemaking .sew-img {
@@ -1601,7 +1861,7 @@ main .main-container .shoes-video video:nth-child(1) {
   width: 66.4%;
   position: absolute;
   top: -320px;
-  left: -8rem;
+  left: -9rem;
   border-right: 18px solid #f7a269;
   z-index: 2;
   -webkit-transition: 1s;
@@ -2067,32 +2327,105 @@ main .main-container .new-product .container .see-more-button {
 }
 
 main .main-container .new-product .container .see-more-button a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  cursor: pointer;
+  z-index: 4;
+}
+
+main .main-container .new-product .container .see-more-button a button {
   width: 277px;
   height: 79px;
   font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
   color: #444444;
   background-color: unset;
-  border: 2px solid #a0a0a0;
+  border: 2px solid #70b9cf;
   border-radius: 35px;
-  z-index: 3;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-main .main-container .new-product .container .see-more-button a:hover {
-  border: 2px solid #abbac9;
+main .main-container .new-product .container .see-more-button a button, main .main-container .new-product .container .see-more-button a button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .new-product .container .see-more-button a button::after {
+  background: #70b9cf;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .new-product .container .see-more-button a button:hover:after {
+  width: 135%;
+}
+
+main .main-container .new-product .container .see-more-button a button:hover {
   color: #ffffff;
-  font-weight: bold;
-  background-color: #abbac9;
+}
+
+main .main-container .new-product .container .see-more-button a button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+main .main-container .new-product .container .see-more-button a button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #4ca7c3;
+}
+
+main .main-container .new-product .container .see-more-button a button:focus {
+  color: #ffffff;
+}
+
+main .main-container .new-product .container .see-more-button a button:focus:after {
+  display: none;
 }
 
 main .main-container .new-product .parallelogram {

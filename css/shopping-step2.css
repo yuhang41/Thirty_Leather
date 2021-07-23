@@ -162,16 +162,7 @@ main .main-container .my-container .steps .step .step-content .text {
 main .main-container .my-container .steps .step .step-content .text p {
   margin: 0;
   font-size: 30px;
-  font-weight: bold;
   letter-spacing: 3.2px;
-}
-
-@media (max-width: 1150px) {
-  main .main-container .my-container .steps .step .step-content .text p {
-    font-weight: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
 }
 
 main .main-container .my-container .steps .step .step-content .text .text-content {

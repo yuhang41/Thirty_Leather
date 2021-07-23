@@ -766,7 +766,14 @@ footer {
 
 footer .site-footer .container .return-nav .footer-arrow {
   margin-right: 50px;
-  top: 250px;
+}
+
+@media (max-width: 1024px) {
+  footer .site-footer .container .return-nav .footer-arrow {
+    top: 250px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @media (max-width: 520px) {

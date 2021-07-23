@@ -489,7 +489,9 @@ footer{
             .return-nav{
                 .footer-arrow{
                   margin-right: 50px;
-                  top: 250px; 
+                @include tablet(){
+                    top: 250px;
+                }
                   @include sm-phone(){
                       margin-right: unset;
                   } 

@@ -147,10 +147,6 @@ main{
                             p{
                                 margin: 0;
                                 font-size: $H4-font-size;
-                                font-weight:$font-Weight-B ;
-                                @include sm-screen(){
-                                    font-weight: unset;
-                                }
                                 letter-spacing: $font-letter-space-200;
                             }
                             .text-content{                        

@@ -176,7 +176,7 @@ main{
                         max-height: 789.17px;
                         position: relative;
                         @include phone(){
-                            max-width: 500px;
+                            max-width: 480px;
                         }
                         @include sm-phone(){
                             max-width: 300px;

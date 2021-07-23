@@ -163,7 +163,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 @media (max-width: 750px) {
   main .main-container .product-container .productshop-container .commidity-container .swiper {
-    max-width: 500px;
+    max-width: 480px;
     -webkit-transition: 1s;
     transition: 1s;
   }
