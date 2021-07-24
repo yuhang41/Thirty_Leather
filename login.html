@@ -168,11 +168,17 @@
         <div class="member-page">
             <div class="page-title text-center">會員中心首頁</div>
 
-            <div class="member-lists d-flex justify-content-center">
+            <div class="member-lists d-flex justify-content-center mx-auto">
                 <div class="list-group text-center font-weight-bold" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active font-weight-bold"
                         id="list-memberCenter-list" data-toggle="list" href="#list-memberCenter" role="tab"
                         aria-controls="memberCenter">會員中心</a>
+
+                    <a class="list-group-item list-group-item-action" id="list-profile-list"
+                        href="#">訊息</a>
+
+                    <a class="list-group-item list-group-item-action" id="list-profile-list"
+                        href="#">追蹤清單</a>
 
                     <a class="list-group-item list-group-item-action" id="list-profile-list"
                         href="/passwordModify.html">密碼修改</a>
@@ -208,28 +214,32 @@
                                                 <div class="input1 input-name">
                                                     <label class="title font-weight-bold mr-3">姓名</label>
 
-                                                    <input type="text" class="content content1 ml-4" placeholder="林土木">
+                                                    <input type="text" class="content content1 ml-4" placeholder="林土木"
+                                                        readonly>
                                                 </div>
 
                                                 <div class="input1 input-email">
                                                     <label class="title title1 font-weight-bold mr-3">信箱</label>
 
                                                     <input type="text" class="content content2 ml-4"
-                                                        placeholder="test123@gmail.com">
+                                                        placeholder="test123@gmail.com" readonly>
                                                 </div>
 
                                                 <div class="input1 input-phone">
                                                     <label class="title title1 font-weight-bold mr-3">行動電話</label>
 
                                                     <input type="text" class="content content3"
-                                                        placeholder="0900 - 123456">
+                                                        placeholder="0900 - 123456" readonly>
                                                 </div>
 
                                                 <div class="input1 input-date">
                                                     <label class="title title1 font-weight-bold mr-3">出生日期</label>
 
-                                                    <input placeholder="1995 / 01 / 24" class="content content4"
-                                                        type="text" onfocus="(this.type='date')" id="date">
+                                                    <input type="text" class="content content4"
+                                                        placeholder="1995 / 01 / 24" readonly>
+
+                                                    <!-- <input placeholder="1995 / 01 / 24" class="content content4" type="text"
+                                                        onfocus="(this.type='date')" id="date"> -->
                                                 </div>
                                             </div>
 
@@ -247,8 +257,8 @@
                                                                 readonly placeholder="郵遞區號">
                                                         </div>
 
-                                                        <input class="detail-address mt-2" type="text"
-                                                            placeholder="詳細的地址">
+                                                        <input class="detail-address mt-2 content5" type="text"
+                                                            placeholder="詳細的地址" readonly>
                                                     </div>
                                                 </div>
 
@@ -269,8 +279,7 @@
                                                 class="btn cancel d-flex align-items-center font-weight-bold mr-1">取消</button>
 
                                             <button type="submit"
-                                                class="btn d-flex align-items-center font-weight-bold ml-1"
-                                                id="save-button">儲存變更</button>
+                                                class="btn d-flex align-items-center font-weight-bold ml-1">儲存變更</button>
                                         </div>
                                     </div>
                                 </form>
