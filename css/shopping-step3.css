@@ -25,15 +25,7 @@ main .main-container .my-container {
 
 @media (max-width: 1760px) {
   main .main-container .my-container {
-    max-width: 1140px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1350px) {
-  main .main-container .my-container {
-    max-width: 900px;
+    padding: 15.7vh 6.7vw 0 6.7vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -216,17 +208,6 @@ main .main-container .my-container .shopping-container {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .shopping-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
 }
 
 main .main-container .my-container .shopping-container .web-title {
@@ -1084,18 +1065,6 @@ main .main-container .my-container .shopping-container .message-and-button {
   transition: 1s;
 }
 
-@media (max-width: 1760px) {
-  main .main-container .my-container .shopping-container .message-and-button {
-    max-width: 1140px;
-    margin-left: unset;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
 @media (max-width: 960px) {
   main .main-container .my-container .shopping-container .message-and-button {
     -webkit-box-align: center;
@@ -1112,15 +1081,6 @@ main .main-container .my-container .shopping-container .message-and-button .cust
   background: #ffffff;
   border: 1px solid #f7a269;
   padding: 20px;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .shopping-container .message-and-button .customer-service-message {
-    margin-top: 30px;
-    max-width: 371px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
 }
 
 main .main-container .my-container .shopping-container .message-and-button .customer-service-message h4 {
@@ -1192,15 +1152,6 @@ main .main-container .my-container .shopping-container .message-and-button .cust
 
 main .main-container .my-container .shopping-container .message-and-button .go-home-button {
   width: 100%;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .shopping-container .message-and-button .go-home-button {
-    max-width: 371px;
-    margin-top: 30px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
 }
 
 main .main-container .my-container .shopping-container .message-and-button .go-home-button .home-button {

@@ -6,8 +6,11 @@
     font-family: $font-Family-A;
 }
 $contW: 900px;
+$contH: 900px;
 $imgW: 260px;
+$imgH: 200px;
 $formW: $contW - $imgW;
+$formH: $contH - $imgH;
 $switchAT: 1.2s;
 
 $inputW: 260px;
@@ -18,6 +21,12 @@ $diffRatio: ($contW - $imgW) / $contW;
 @mixin signUpActive {
     .cont.s--signup & {
         @content;
+    }
+}
+@mixin bg-register{
+    @media(max-width:920px){
+        @content;
+        transition: 1s;
     }
 }
 input, button {
@@ -32,11 +41,8 @@ main{
         min-height: calc(100vh - 113px);
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-    
-    
-    
+        align-items: center;        
+    }            
     .tip {
         font-size: 20px;
         margin: 40px auto 50px;
@@ -46,10 +52,14 @@ main{
     .cont {
         overflow: hidden;
         position: relative;    
-        width: $contW;
+        max-width: $contW;
+        width: 100%;
         height: 700px;
         margin: 0 auto;
         background: #fff;
+        @include bg-register(){
+            height: $contH;
+        }
     }
     
     .form {
@@ -59,7 +69,13 @@ main{
         transition: transform $switchAT ease-in-out;
         display: flex;
         flex-direction: column;
-        justify-content: center;    
+        justify-content: center;
+        @include bg-register(){
+            max-width: $contW;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
     }
         
     
@@ -143,10 +159,10 @@ main{
     z-index: 2;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0;    
     width: $imgW;
     height: 100%;
-    padding-top: 360px;
+    padding-top: 360px;    
 
     &:before {
         content: '';
@@ -158,6 +174,9 @@ main{
         background-image: url('../img/register.jpg');
         background-size: cover;
         transition: transform $switchAT ease-in-out;
+        @include bg-register(){
+            height: $contH;
+        }
     }
 
     &:after {
@@ -175,18 +194,35 @@ main{
             transform: translate3d($formW,0,0);
         }
     }
+    @include bg-register(){
+        max-width: $contW;
+        width: 100%;
+        height: $imgH;
+        top: unset;
+        bottom: 0;
+        padding-top: 20px;
+        @include signUpActive {
+            &:before {                
+                transform: translate3d(0,$formH * -1,0);
+            }
+        }
+    }
 
     &__text {
         z-index: 2;
         position: absolute;
         left: 0;
         top: 50px;
+        max-width: $contW;
         width: 100%;
         padding: 0 20px;
         text-align: center;
         color: #fff;
         transition: transform $switchAT ease-in-out;
-
+        @include bg-register(){
+            padding: 0;
+            top: 90px;
+        }
         h2 {
             margin-bottom: 10px;
             font-size: $H5-font-size;
@@ -197,21 +233,37 @@ main{
             font-size: 14px;
             letter-spacing: $font-letter-space-50;
             line-height: 1.5;
+            @include bg-register(){
+                max-width: 300px;
+                margin: auto;
+            }
         }
 
-        &.m--up {
-            
+        &.m--up {            
             @include signUpActive {
                 transform: translateX($imgW*2);
+            }
+            @include bg-register(){                
+                @include signUpActive {
+                    transform: translateX(0);
+                    transform: translateY($imgH*2);
+                }   
             }            
         }
 
         &.m--in {
             transform: translateX($imgW * -2);
-
             @include signUpActive {
                 transform: translateX(0);
             }
+            @include bg-register(){
+                transform: translateX(0);
+                transform: translateY($imgH * 2);
+                @include signUpActive {
+                    // transform: translateX(0);
+                    transform: translateY(80%);
+                }   
+            } 
         }
     }
 
@@ -229,6 +281,9 @@ main{
         letter-spacing: $font-letter-space-200;
         cursor: pointer;
         transition: .5s;
+        @include bg-register(){
+            margin-top: 10px;
+        }
 
         &:hover{
             background: rgba(226, 135, 73, .7);
@@ -277,9 +332,11 @@ main{
 .sub-cont {
     overflow: hidden;
     position: absolute;
-    left: $formW;
+    // left: $formW;
+    right: $formW * -1;
     top: 0;
-    width: $contW;
+    max-width: $contW;
+    width: 100%;
     height: 100%;
     padding-left: $imgW;
     background: #fff;
@@ -287,6 +344,16 @@ main{
 
     @include signUpActive {
         transform: translate3d($formW * -1,0,0);
+    }
+    @include bg-register(){        
+        left: 0;
+        top: unset;
+        bottom: $formH;
+        padding-left: 0;
+        padding-bottom: $imgH;
+        @include signUpActive {
+            transform: translate3d(0,$formH * 1,0);
+        }        
     }
     
 }
@@ -298,11 +365,19 @@ main{
         transition-duration: $switchAT;
         transform: translate3d($formW,0,0);
     }
+    @include bg-register(){
+        @include signUpActive {            
+            transform: translate3d(0,$formH * -1,0);
+        }
+    }
 }
 .sign-up {
     transform: translate3d($contW * -1,0,0);
 
     @include signUpActive {
         transform: translate3d(0,0,0);
+    }
+    @include bg-register(){
+        transform: translate3d(0,$contH * 1,0);           
     }
 }

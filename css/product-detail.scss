@@ -275,7 +275,7 @@ main{
                             display: block;
                             width: 100%;
                             height: 100%;
-                            object-fit: contain;
+                            object-fit: cover;
                           }
                     }
                     .order-detail{
@@ -433,7 +433,8 @@ main{
                                         }                           
                                         .color-style{
                                             display: flex;
-                                            justify-content: space-around;
+                                            justify-content: space-between;
+                                            padding-left: 50px;                                            
                                             input[type=radio]{
                                                 opacity: 0;
                                                 position: absolute;
@@ -478,10 +479,11 @@ main{
                                                 }
                                             }
                                         }
-                                        .size-deatil{      
+                                        .size-deatil{
                                             font-size: $H7-font-size;
                                             font-weight: $font-Weight-B;
                                             letter-spacing: $font-letter-space-50;
+                                            padding-left: 50px;
                                             @include sm-phone(){
                                                 font-size: $H8-font-size;
                                             }
@@ -498,8 +500,8 @@ main{
                                                     background-color:var(--sizeColor);
                                                 }
                                                 label{                                                                                        
-                                                    text-align: center;                                            
-                                                    padding: 0 5px;
+                                                    text-align: center;
+                                                    flex: 16%;
                                                     border-radius: 5px;
                                                     cursor: pointer;
                                                     &:hover{
@@ -592,8 +594,8 @@ main{
                                         width: 60px;
                                         height: 40px;
                                         border: none;
-                                        text-align: center;
-                                        -webkit-appearance: none;
+                                        text-align: center;                                        
+                                        // -webkit-appearance: none;
                                         font-size: $H7-font-size;
                                         color: $color-Evaluation-Star;
                                         &::placeholder {
@@ -605,6 +607,11 @@ main{
                                         -webkit-appearance: none;
                                         }
                                         
+                                    }
+                                    input[type='number']::-webkit-inner-spin-button, 
+                                    input[type='number']::-webkit-outer-spin-button { 
+                                        -webkit-appearance: none;
+                                        margin: 0;
                                     }
                                     .plus{
                                         width: 45px;
