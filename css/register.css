@@ -216,7 +216,7 @@ main .fb-btn span {
   .img {
     max-width: 900px;
     width: 100%;
-    height: 150px;
+    height: 200px;
     top: unset;
     bottom: 0;
     padding-top: 20px;
@@ -224,8 +224,8 @@ main .fb-btn span {
     transition: 1s;
   }
   .cont.s--signup .img:before {
-    -webkit-transform: translate3d(0, -750px, 0);
-            transform: translate3d(0, -750px, 0);
+    -webkit-transform: translate3d(0, -700px, 0);
+            transform: translate3d(0, -700px, 0);
   }
 }
 
@@ -248,7 +248,7 @@ main .fb-btn span {
 @media (max-width: 920px) {
   .img__text {
     padding: 0;
-    top: 70px;
+    top: 90px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -266,6 +266,15 @@ main .fb-btn span {
   line-height: 1.5;
 }
 
+@media (max-width: 920px) {
+  .img__text p {
+    max-width: 300px;
+    margin: auto;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 .cont.s--signup .img__text.m--up {
   -webkit-transform: translateX(520px);
           transform: translateX(520px);
@@ -279,8 +288,8 @@ main .fb-btn span {
   .cont.s--signup .img__text.m--up {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
 }
 
@@ -298,14 +307,14 @@ main .fb-btn span {
   .img__text.m--in {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px);
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
     -webkit-transition: 1s;
     transition: 1s;
   }
   .cont.s--signup .img__text.m--in {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
   }
 }
 
@@ -324,6 +333,14 @@ main .fb-btn span {
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+@media (max-width: 920px) {
+  .img__btn {
+    margin-top: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 .img__btn:hover {
@@ -404,15 +421,15 @@ main .fb-btn span {
   .sub-cont {
     left: 0;
     top: unset;
-    bottom: 750px;
+    bottom: 700px;
     padding-left: 0;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
     -webkit-transition: 1s;
     transition: 1s;
   }
   .cont.s--signup .sub-cont {
-    -webkit-transform: translate3d(0, 750px, 0);
-            transform: translate3d(0, 750px, 0);
+    -webkit-transform: translate3d(0, 700px, 0);
+            transform: translate3d(0, 700px, 0);
   }
 }
 
@@ -436,8 +453,8 @@ main .fb-btn span {
     transition: 1s;
   }
   .cont.s--signup .sign-in {
-    -webkit-transform: translate3d(0, -750px, 0);
-            transform: translate3d(0, -750px, 0);
+    -webkit-transform: translate3d(0, -700px, 0);
+            transform: translate3d(0, -700px, 0);
   }
 }
 

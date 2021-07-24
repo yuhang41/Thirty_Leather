@@ -8,7 +8,7 @@
 $contW: 900px;
 $contH: 900px;
 $imgW: 260px;
-$imgH: 150px;
+$imgH: 200px;
 $formW: $contW - $imgW;
 $formH: $contH - $imgH;
 $switchAT: 1.2s;
@@ -221,7 +221,7 @@ main{
         transition: transform $switchAT ease-in-out;
         @include bg-register(){
             padding: 0;
-            top: 70px;            
+            top: 90px;
         }
         h2 {
             margin-bottom: 10px;
@@ -233,13 +233,17 @@ main{
             font-size: 14px;
             letter-spacing: $font-letter-space-50;
             line-height: 1.5;
+            @include bg-register(){
+                max-width: 300px;
+                margin: auto;
+            }
         }
 
         &.m--up {            
             @include signUpActive {
                 transform: translateX($imgW*2);
             }
-            @include bg-register(){
+            @include bg-register(){                
                 @include signUpActive {
                     transform: translateX(0);
                     transform: translateY($imgH*2);
@@ -257,7 +261,7 @@ main{
                 transform: translateY($imgH * 2);
                 @include signUpActive {
                     // transform: translateX(0);
-                    transform: translateY(0);
+                    transform: translateY(80%);
                 }   
             } 
         }
@@ -277,6 +281,9 @@ main{
         letter-spacing: $font-letter-space-200;
         cursor: pointer;
         transition: .5s;
+        @include bg-register(){
+            margin-top: 10px;
+        }
 
         &:hover{
             background: rgba(226, 135, 73, .7);
