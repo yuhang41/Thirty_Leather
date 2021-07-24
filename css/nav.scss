@@ -29,7 +29,6 @@
         transition: 1s;
     }
 }
-
 // 小手機尺寸
 @mixin sm-phone {
     @media(max-width:520px){
@@ -190,7 +189,7 @@ nav{
         z-index: 5;
         @include tablet(){
             &{
-                width: calc(100vw - 58px);
+                width: calc(100vw - 76px);
                 background-color: $color-Navbar-Bgc;
                 margin-left: 0px;
                 position: absolute;
@@ -210,7 +209,7 @@ nav{
         padding: 0px;
         position: absolute;
         left: 5px;
-        background-color: $color-White;
+        background-color: $color-Navbar-Bgc;
         .dropdown-item{
             font-size: $H11-font-size;
             color: $color-WedgwoodBlue;
@@ -271,15 +270,106 @@ nav{
         &-toggler{
             width: 58px;
             height: 58px;
-            padding: 0px;
-            border: unset;
-            border-radius: unset;
-            background-color: $color-WedgwoodBlue;
             display: block;
-            i{
-                font-size: $H3-font-size;
-                color:$color-White;
-            }
+            position: relative;
+            .container {
+                padding: 0px;
+                border: unset;
+                border-radius: unset;
+                background-color: $color-WedgwoodBlue;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                cursor: pointer;
+                padding: 0px;
+                              
+              .stick {
+                width: 40px;
+                height: 4px;
+                border-radius: 4px;
+                margin-bottom: 10px;
+                background-color:  $color-White;
+                display: inline-block;
+              }
+              
+              .stick:last-child {
+                margin-bottom: 0px;
+              }
+              
+              .stick-1.open {
+                animation: stick-1-open .6s ease-out forwards;
+              }
+              
+              .stick-2.open {
+                animation: stick-2-open .6s linear forwards;
+              }
+              
+              .stick-3.open {
+                animation: stick-3-open .6s linear forwards;
+              }
+              
+              @keyframes stick-1-open {
+                0%   {width: 40px;}
+                40%  {background-color: $color-Border-Line; width: 8px; transform: translate(20px, 0px);}
+                75%, 80%  {width: 8px; transform: translate(4px, -50px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                100% {background-color: $color-Border-Line; width: 4px; transform: translate(15.5px, 27px);}
+              }
+              
+              @keyframes stick-2-open {
+                80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
+                100% {background-color: $color-Border-Line; transform: translate(1px, 0px) rotate(40deg);}
+              }
+              
+              @keyframes stick-3-open {
+                80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
+                100% {background-color: $color-Border-Line; transform: translate(1px, -15px) rotate(-40deg);}
+              }
+              
+              .stick-1.close {
+                width: 4px; 
+                transform: translate(27px, 26px);
+                animation: stick-1-close .6s ease-out forwards;
+              }
+              
+              .stick-2.close {
+                transform: translate(0px, 0px) rotate(40deg);
+                animation: stick-2-close .6s ease-out forwards;
+              }
+              
+              .stick-3.close {
+                transform: translate(0px, -23px) rotate(-40deg);
+                animation: stick-3-close .6s ease-out forwards;
+              }
+              }
+              @keyframes stick-1-close {
+                0%, 70% {width: 0px;}
+                100%    {width: 40px; transform: translate(0, 0);}
+              }
+              
+              @keyframes stick-2-close {
+                0%   {background-color: $color-Border-Line; width: 40px;}
+                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, 0px) rotate(40deg);}
+                40%  {background-color: $color-White; width: 0px;}
+                65%  {transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                80%  {width: 0px;}
+                100% {width: 40px; transform: translate(0, 0px);}
+              }
+              
+              @keyframes stick-3-close {
+                0%   {background-color: $color-Border-Line; width: 40px;}
+                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
+                40%  {background-color: $color-White;}
+                65%  {transform: translate(0, -93px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                90%  {width: 8px;}
+                100% {width: 40px; transform: translate(0, 0px);}
+              }
         }
         &-nav{
             margin-left: 20px;

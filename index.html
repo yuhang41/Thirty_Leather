@@ -32,7 +32,11 @@
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                <div class="container">
+                    <div class="stick stick-1"></div>
+                    <div class="stick stick-2"></div>
+                    <div class="stick stick-3"></div>
+                  </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -241,9 +245,19 @@
             <!-- 品牌理念 -->
             <div class="we-story">
                 <div class="story-content">
-                    <img src="img/story-img.jpg" alt="">
+                    <img src="img/story-img.png" alt="">
                     <svg id="scissors" data-name="圖層 1" data-inviewport="scale-in" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1000.33 843.85">
+                        <defs>
+                            <linearGradient id="left-to-right">
+                              <stop offset="0" stop-color="#4DAF4C">
+                                <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
+                              </stop>
+                              <stop offset="0" stop-color="#fff">
+                                <animate dur="2s" attributeName="offset" fill="freeze" from="0" to="1" />
+                              </stop>
+                            </linearGradient>
+                          </defs>
                         <path class="scissors"
                             d="M359.23,28.06S332,4.14,296.29,31.22s-19,107.89,51.47,130.38S433.49,64.36,359.23,28.06Z" />
                         <ellipse class="scissors-mind" cx="531.49" cy="491.33" rx="13.96" ry="15.71"
@@ -301,7 +315,7 @@
                         <path class="scissors"
                             d="M554.73,513.46s3,54.82,55.75,60.74,96.6,12.45,119.12,52.74,95.51,73.15,141.83,105.72" />
                         <path class="scissors" d="M525.25,460s6.14-22.74-23.2-30.87-48.13-86.72-77.29-122.75" />
-                        <path class="scissor-color"
+                        <path class="scissor-color" stroke="#F0F0F0" fill="url(#left-to-right)" stroke-width="1" opacity="1"
                             d="M766.54,635.79l27.52,22.78,2.63-3,15.13,8.12h9.63l12.44,7.72s13.63-2.39,19,2.35,16.6,7.41,17.93,7.11S886,688.13,886,688.13h8.59l8.15,4.74s8.45,3.26,14.82,2.07l8.44,6.21s1.28,2.54,11.68.76,12.62,9.48,16.62,7.41,5.77-2.46,9.77.25,8.15,6.41,12.74,4.63,6.08,3.26,8.3,2.82,4-3.95,6.52,0,4.21,1.1,4.21,1.1l2.6-15.18c-1.64,5.5-4.63,3.24-4.63,3.24-1.94-2-5.9-.07-5.9-.07-5.94,3.86-17.62-6.12-25.5-4.25s-13.64-10-21.53-8.12-21.5-10.1-27.42-8.2-9.73-8-17.59-8.08-9.83-.12-15.68-4.13-9.78-4.05-9.78-4.05c-7.88,1.87-17.64-4.15-21.55-6.16s-9.82-.12-13.71-4.1-1.94-2-13.71-4.1-9.73-8-19.58-6.14-21.6-12.85-35.36-13" />
                     </svg>
                     <div class="story-discript">
@@ -556,7 +570,7 @@
                                     <span>$2,480</span>
                                 </div>
                             </div>
-                            <a>加入購物車</a>
+                            <a><button>加入購物車</button></a>
                         </div>
                         <div class="product-card">
                             <img src="img/shoes-second.png" alt="">
@@ -570,7 +584,7 @@
                                     <span>$2,280</span>
                                 </div>
                             </div>
-                            <a>加入購物車</a>
+                            <a><button>加入購物車</button></a>
                         </div>
                         <div class="product-card">
                             <img src="img/shoes-third.png" alt="">
@@ -584,7 +598,7 @@
                                     <span>$1,980</span>
                                 </div>
                             </div>
-                            <a>加入購物車</a>
+                            <a><button>加入購物車</button></a>
                         </div>
                         <div class="product-card">
                             <img src="img/shoes-fourth.png" alt="">
@@ -598,7 +612,7 @@
                                     <span>$1,980</span>
                                 </div>
                             </div>
-                            <a>加入購物車</a>
+                            <a><button>加入購物車</button></a>
                         </div>
                     </div>
                     <div class="see-more-button">
@@ -620,15 +634,87 @@
                 <div class="swiper2">
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background-image: url(img/model-4.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-5.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-6.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-7.jpg)"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-8.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-9.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-10.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-1.jpg);"></div>
-                            <div class="swiper-slide" style="background-image: url(img/model-2.jpg);"></div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/B8ihLBWFjTg/">
+                                    <img src="img/照片牆1.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>linta0525</p>
+                                    </div>
+                                </a>  
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/BrxfxKDFjS8/">
+                                    <img src="img/照片牆2.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>tintin_korea</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/Br5eY61la7y/">
+                                    <img src="img/照片牆3.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>rikaoru</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/CBXttsZDRI1/?utm_source=ig_web_copy_link">
+                                    <img src="img/照片牆4.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>mi_azure</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/BxoJZTKAzP9/">
+                                    <img src="img/照片牆5.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>_yu.tzu_</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/CI-OsbYsQ7x/">
+                                    <img src="img/照片牆6.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>joy19960610</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/Bz4_udEhK45/?utm_source=ig_web_copy_link">
+                                    <img src="img/照片牆7.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>allyyeh0220</p>
+                                    </div>
+                                </a> 
+                            </div> 
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/COW2sSBDsN6/">
+                                    <img src="img/照片牆8.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>nonprofessionalljzx</p>
+                                    </div>
+                                </a> 
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.instagram.com/p/CQgU3jeM272/">
+                                    <img src="img/照片牆9.jpg" alt="">
+                                    <div class="text">
+                                        <i class="fab fa-instagram"></i>
+                                        <p>stairgurlwantstoberich</p>
+                                    </div>
+                                </a> 
+                            </div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -775,6 +861,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- drawsvg -->
     <script src='https://cdn.jsdelivr.net/jquery.drawsvg/1/jquery.drawsvg.min.js'></script>
+    <script src="./js/nav.js"></script>
     <script src="js/index.js"></script>
 
 
