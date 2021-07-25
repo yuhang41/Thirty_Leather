@@ -486,15 +486,66 @@ main{
                                 }
                             }
                             .favorite{
-                                .fa-star{
+                                input[type="checkbox"]{
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    position: relative;
+                                    outline: none;
+                                    border: 0;
+                                    cursor: pointer;
+                                    &::after {
+                                        content:"";
+                                        position: absolute;
+                                        height: 4px;
+                                        width: 4px;
+                                        top: -6px;
+                                        left: 11.5px;
+                                        border-radius: 50%;
+                                    }
+                                    &:focus::after {
+                                        animation: firework .5s ease forwards .1s;
+                                    }
+                                    &:checked+label>.fa-star{
+                                        animation: star-fold 1s linear;
+                                        color: $color-Apricot;
+                                    }
+                                }
+                                i{
                                     padding: 5px;
                                     cursor: pointer;
                                     font-size: $H9-font-size;                                
                                     color: $color-Nav-icon;
-                                    color: $color-Nav-icon;
                                     &:hover{
                                         color: $color-Apricot;
                                     }
+                                }
+                            }
+                            //收藏效果
+                            @keyframes firework {
+                            0% {
+                                opacity: 1;
+                                box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
+                            }
+                            30% {
+                                opacity: 1;
+                            }
+                            100% {
+                                opacity: 0.0;
+                                box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
+                            }
+                            }
+                            @keyframes star-fold {
+                                0%{
+                                    transform: rotate(0deg);
+                                    color: $color-Nav-icon;
+                                }
+                                31%{
+                                    transform: rotate(270deg);
+                                    color: $color-Apricot;
+                                }
+                                100%{
+                                    transform: rotate(360deg);
+                                    color: $color-Apricot;
                                 }
                                 
                             }
