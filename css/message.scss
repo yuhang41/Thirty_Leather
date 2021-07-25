@@ -1,0 +1,118 @@
+@import "_style_guild.scss";
+
+body {
+    font-family: $font-Family-A;
+    min-height: 100vh;
+}
+
+.member-center {
+    width: 100%;
+    height: 1011px;
+    background-color: $color-LightGray;
+
+    .m-center-index {
+        font-size: 72px;
+        color: $color-White;
+    }
+
+    .list-Group {
+        .list-group-item {
+            width: 170px;
+            height: 60px;
+            background-color: $color-Footer-Background;
+            color: $color-LightGray;
+            font-size: $H7-font-size;
+            font-weight: bold;
+            letter-spacing: $font-letter-space-200;
+            border-bottom: 1px solid $color-IronGray;
+            z-index: 2;
+
+            &:hover {
+                background-color: $color-Footer-Background;
+                color: $color-LightGray;
+            }
+
+            &.active {
+                width: 205px;
+                background-color: $color-White;
+                color: $color-WedgwoodBlue;
+                font-weight: $font-Weight-B;
+                border-color: $color-SkyBlue;
+                border-right: 18px solid $color-SkyBlue;
+                margin-left: -18px;
+                z-index: 2;
+            }
+
+            &:first-child {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+        }
+    }
+
+    .tab-contents {
+        width: 1140px;
+        height: 853px;
+        background-color: $color-White;
+        border: 1px solid $color-Apricot;
+        position: relative;
+        margin-left: -17px;
+
+        .member-data {
+            .nowNews {
+                font-size: 14px;
+            }
+
+            .input-container {
+                width: 90%;
+                padding-bottom: 10vh;
+                border-bottom: 1px solid $color-IronGray;
+
+                textarea {
+                    width: 100%;
+                    height: 300px;
+                    font-size: $H10-font-size;
+                    outline: none;
+                    padding-left: 12px;
+                    resize: none;
+
+                    &::placeholder {
+                        position: absolute;
+                        left: 12px;
+                    }
+                }
+            }
+
+            .button-container {
+                width: 90%;
+                font-size: $H10-font-size;
+
+                .btn-upload {
+                    font-size: $H10-font-size;
+                    border: 1px solid black;
+                }
+                
+                .transform-btn {
+                    width: 60px;
+                    height: 40px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    background-color: $color-White;
+                    letter-spacing: $font-letter-space-100;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .list-Group {
+        display: flex;
+        flex-direction: column;
+    }
+}

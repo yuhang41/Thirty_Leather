@@ -60,10 +60,6 @@ nav.sticky .navbar {
   }
 }
 
-nav.sticky .navbar-nav .nav-link {
-  padding: 0px 1em;
-}
-
 nav.sticky .logo {
   width: 58px;
   height: 58px;
@@ -145,7 +141,7 @@ main .main-container .swiper1 .swiper-pagination-bullets {
 @media (max-width: 1024px) {
   main .main-container .swiper1 .swiper-pagination-bullets {
     left: 3vw;
-    bottom: 50px;
+    bottom: 15px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -154,7 +150,6 @@ main .main-container .swiper1 .swiper-pagination-bullets {
 @media (max-width: 320px) {
   main .main-container .swiper1 .swiper-pagination-bullets {
     left: 4vw;
-    bottom: 50px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -229,7 +224,7 @@ main .main-container .swiper1 .banner-card {
   border: 1px solid #354b5e;
   position: absolute;
   bottom: 60px;
-  left: 42vw;
+  right: 27vw;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,6 +239,52 @@ main .main-container .swiper1 .banner-card {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 1350px) {
+  main .main-container .swiper1 .banner-card {
+    right: unset;
+    left: 33vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1024px) {
+  main .main-container .swiper1 .banner-card {
+    left: 24vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 768px) {
+  main .main-container .swiper1 .banner-card {
+    left: 17vw;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 660px) {
+  main .main-container .swiper1 .banner-card {
+    width: 100vw;
+    left: 0px;
+    bottom: unset;
+    top: 40px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card {
+    height: 230px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .swiper1 .banner-card .banner-title {
@@ -267,6 +308,25 @@ main .main-container .swiper1 .banner-card .banner-title p:after {
   width: 427px;
   height: 1px;
   background-color: #8de1de;
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-title p:after {
+    bottom: -5px;
+    left: 0px;
+    width: 245px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-title p {
+    font-size: 18px;
+    color: #ffffff;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .swiper1 .banner-card .banner-content {
@@ -295,6 +355,14 @@ main .main-container .swiper1 .banner-card .banner-content button {
   margin-bottom: 10px;
 }
 
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-content button {
+    color: #ffffff;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .swiper1 .banner-card .banner-content button:hover {
   border: 1px solid #DCBEA6;
 }
@@ -320,11 +388,19 @@ main .main-container .swiper1 .banner-card .banner-content .text p {
   letter-spacing: 3.2px;
 }
 
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-content .text p {
+    color: #ffffff;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .swiper1 .banner-card:after {
   content: "";
   position: absolute;
   bottom: -121px;
-  left: 13vw;
+  left: 15em;
   width: 2px;
   height: 0px;
   background-color: #fff;
@@ -823,14 +899,6 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
           animation: scissors 4s ease-in-out;
   -webkit-animation: mind 4s ease-in-out;
           animation: mind 4s ease-in-out;
-}
-
-main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is-inViewport .scissor-color {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  -webkit-animation: scissors-color 4s ease-in-out;
-          animation: scissors-color 4s ease-in-out;
-  fill-opacity: 1;
 }
 
 @-webkit-keyframes scissors {
@@ -1473,6 +1541,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
 @media (max-width: 1024px) {
   main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
     width: 184px;
+    height: 184px;
     margin-right: 20px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -1482,6 +1551,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
 @media (max-width: 520px) {
   main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
     width: 133px;
+    height: 133px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1502,6 +1572,16 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card .text {
 @media (max-width: 520px) {
   main .main-container .shoemaking .container .shoemaking-card .shoes-card .text {
     width: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1916,7 +1996,7 @@ main .main-container .shoes-video video:nth-child(2) {
 main .main-container .shoes-video svg {
   height: 820px;
   position: absolute;
-  top: 125px;
+  top: 110px;
   right: 48vw;
   -webkit-transform: rotate(-7deg);
           transform: rotate(-7deg);
@@ -2021,15 +2101,36 @@ main .main-container .new-product:after {
   position: absolute;
   width: 1px;
   height: 969px;
-  bottom: 0px;
+  top: 115px;
   left: 190px;
   background-color: #abbac9;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-animation: linegrow-1 3s ease-in-out;
+          animation: linegrow-1 3s ease-in-out;
+}
+
+@-webkit-keyframes linegrow-1 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 969px;
+  }
+}
+
+@keyframes linegrow-1 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 969px;
+  }
 }
 
 @media (max-width: 1350px) {
   main .main-container .new-product:after {
+    top: 193px;
     left: 64px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -2038,26 +2139,80 @@ main .main-container .new-product:after {
 
 @media (max-width: 1024px) {
   main .main-container .new-product:after {
-    height: 1020px;
+    height: 1033px;
+    -webkit-animation: linegrow-2 3s ease-in-out;
+            animation: linegrow-2 3s ease-in-out;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+  @-webkit-keyframes linegrow-2 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1033px;
+    }
+  }
+  @keyframes linegrow-2 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1033px;
+    }
   }
 }
 
 @media (max-width: 660px) {
   main .main-container .new-product:after {
-    height: 1850px;
+    height: 1874px;
+    -webkit-animation: linegrow-3 3s ease-in-out;
+            animation: linegrow-3 3s ease-in-out;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+  @-webkit-keyframes linegrow-3 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1874px;
+    }
+  }
+  @keyframes linegrow-3 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1874px;
+    }
   }
 }
 
 @media (max-width: 320px) {
   main .main-container .new-product:after {
-    height: 1832px;
+    height: 1873px;
     left: 33px;
+    -webkit-animation: linegrow-4 3s ease-in-out;
+            animation: linegrow-4 3s ease-in-out;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+  @-webkit-keyframes linegrow-4 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1873px;
+    }
+  }
+  @keyframes linegrow-4 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1873px;
+    }
   }
 }
 
@@ -2256,12 +2411,12 @@ main .main-container .new-product .container .product-item .product-card .conten
   color: #f7a269;
 }
 
-main .main-container .new-product .container .product-item .product-card a {
+main .main-container .new-product .container .product-item .product-card a button {
   width: 235px;
   height: 50px;
   color: #444444;
   background-color: unset;
-  border: 2px solid #a0a0a0;
+  border: 2px solid #70b9cf;
   border-radius: 45px;
   margin: 30px 0px 10px 0px;
   display: -webkit-box;
@@ -2274,6 +2429,91 @@ main .main-container .new-product .container .product-item .product-card a {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+main .main-container .new-product .container .product-item .product-card a button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+main .main-container .new-product .container .product-item .product-card a button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #4ca7c3;
+}
+
+main .main-container .new-product .container .product-item .product-card a button:focus {
+  color: #ffffff;
+}
+
+main .main-container .new-product .container .product-item .product-card a button:focus:after {
+  display: none;
+}
+
+main .main-container .new-product .container .product-item .product-card a button, main .main-container .new-product .container .product-item .product-card a button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .new-product .container .product-item .product-card a button::after {
+  background: #70b9cf;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .new-product .container .product-item .product-card a button:hover:after {
+  width: 135%;
+}
+
+main .main-container .new-product .container .product-item .product-card a button:hover {
+  color: #ffffff;
 }
 
 main .main-container .new-product .container .product-item .product-card:nth-child(2) img {
@@ -2481,7 +2721,7 @@ main .main-container .photo-wall {
   position: relative;
 }
 
-main .main-container .photo-wall:after {
+main .main-container .photo-wall:before {
   content: "";
   position: absolute;
   width: 1px;
@@ -2491,10 +2731,32 @@ main .main-container .photo-wall:after {
   background-color: #abbac9;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-animation: linegrow2-1 3s ease-in-out;
+          animation: linegrow2-1 3s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes linegrow2-1 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 1078px;
+  }
+}
+
+@keyframes linegrow2-1 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 1078px;
+  }
 }
 
 @media (max-width: 1350px) {
-  main .main-container .photo-wall:after {
+  main .main-container .photo-wall:before {
     left: 64px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -2502,7 +2764,7 @@ main .main-container .photo-wall:after {
 }
 
 @media (max-width: 320px) {
-  main .main-container .photo-wall:after {
+  main .main-container .photo-wall:before {
     top: 0px;
     left: 33px;
     -webkit-transition: 1s;
@@ -2635,6 +2897,7 @@ main .main-container .photo-wall .swiper2 .swiper-container {
 
 main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide {
   width: 400px;
+  height: 100%;
   text-align: center;
   font-size: 18px;
   background-color: unset;
@@ -2652,6 +2915,8 @@ main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  transition: 1s;
+  overflow: hidden;
 }
 
 @media (max-width: 1350px) {
@@ -2663,12 +2928,76 @@ main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide {
   }
 }
 
-main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide img {
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img:hover ~ .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a .text {
+  position: absolute;
+  top: 26em;
+  left: 12em;
+  color: #ffffff;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 14px;
+  display: none;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a .text p {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  line-height: 14px;
+  font-family: "Source Code Pro", monospace;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a .text:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a .text:hover ~ img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .main-container .photo-wall .swiper2 .swiper-container .swiper-pagination-bullet {

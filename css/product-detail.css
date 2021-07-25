@@ -876,6 +876,10 @@ main .main-container .product-container .productshop-container .commidity-contai
   color: #e08549;
 }
 
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input[type=number]::-webkit-outer-spin-button, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input[type='number']::-webkit-inner-spin-button,
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;

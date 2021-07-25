@@ -602,6 +602,10 @@ main{
                                             font-size: $H7-font-size;
                                             color: $color-Evaluation-Star;
                                         }
+                                        &[type=number]::-webkit-outer-spin-button,
+                                        &[type=number]::-webkit-inner-spin-button {
+                                        -webkit-appearance: none;
+                                        }
                                         
                                     }
                                     input[type='number']::-webkit-inner-spin-button, 

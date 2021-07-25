@@ -63,6 +63,13 @@ body{
         transition: 1s;
     }
 }
+//450
+@mixin bg-iphone {
+    @media (max-width: 450px) {
+        @content;
+        transition: 1s;
+    }
+}
 // iphone 5s
 @mixin iphone-5s {
     @media (max-width: 320px) {
@@ -166,11 +173,6 @@ nav {
             @include sm-phone() {
                 padding: 0px;
             }
-            &-nav{
-                .nav-link{
-                    padding:0px 1em;
-                }
-            }
         }
         .logo {
             width: 58px;
@@ -219,11 +221,10 @@ main {
                 }
                 @include sm-tablet() {
                     left: 3vw;
-                    bottom: 50px;
+                    bottom: 15px;
                 }
                 @include iphone-5s() {
                     left: 4vw;
-                    bottom: 50px;
                 }
                 .swiper-pagination-bullet {
                     width: 17px;
@@ -285,13 +286,34 @@ main {
 
                 position: absolute;
                 bottom: 60px;
-                left: 42vw;
+                right: 27vw;
                 z-index: 2;
                 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                @include tablet(){
+                    right: unset;
+                    left: 33vw;
+                }
+                @include sm-tablet(){
+                    left: 24vw;
+                }
+                @include bg-phone(){
+                    left: 17vw;
+                }
+                @include single-cart(){
+                    width: 100vw;
+                    left: 0px;
+                    bottom: unset;
+                    top: 40px;
+                }
+                @include bg-iphone(){
+                    height: 230px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: unset;
+                }
                 .banner-title{
                     margin-bottom: 20px;
                     p{
@@ -309,6 +331,15 @@ main {
                             width: 427px;
                             height: 1px;
                             background-color: $color-Banner-Card-Line; 
+                            @include bg-iphone(){
+                                bottom: -5px;
+                                left: 0px;
+                                width: 245px;
+                            }
+                        }
+                        @include bg-iphone(){
+                            font-size: $H7-font-size; 
+                            color: $color-White;
                         }
                     }
                 }
@@ -327,6 +358,9 @@ main {
                         border: 1px solid $color-Banner-Card-Line;
                         background-color: unset;
                         margin-bottom: 10px;
+                        @include bg-iphone(){
+                            color: $color-White;
+                        }
                         &:hover{
                             border: 1px solid $color-Banner-Card-Button-line;
                         }
@@ -341,6 +375,9 @@ main {
                             font-weight: $font-Weight-B;
                             color: $color-Banner-Card;
                             letter-spacing: $font-letter-space-200;
+                            @include bg-iphone(){
+                                color: $color-White;
+                            }
                         }
                     }
                 }
@@ -348,7 +385,7 @@ main {
                     content: "";
                     position: absolute;
                     bottom: -121px;
-                    left: 13vw;
+                    left: 15em;
                     width: 2px;
                     height: 0px;
                     background-color: #fff;
@@ -689,11 +726,11 @@ main {
                             animation: scissors 4s ease-in-out;
                             animation: mind 4s ease-in-out;
                         }
-                        .scissor-color{
-                            transition-delay: 1s;
-                            animation: scissors-color 4s ease-in-out;
-                            fill-opacity: 1;
-                        }
+                        // .scissor-color{
+                        //     transition-delay: 1s;
+                        //     animation: scissors-color 4s ease-in-out;
+                        //     fill-opacity: 1;
+                        // }
                     }
                     @keyframes scissors {
                         0% {
@@ -1013,10 +1050,12 @@ main {
                             background-repeat: no-repeat;
                             @include sm-tablet() {
                                 width: 184px;
+                                height: 184px;
                                 margin-right: 20px;
                             }
                             @include sm-phone() {
                                 width: 133px;
+                                height: 133px;
                             }
                         }
                         .text {
@@ -1026,6 +1065,9 @@ main {
                             }
                             @include sm-phone() {
                                 width: unset;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
                             }
                             p {
                                 display: flex;
@@ -1212,7 +1254,7 @@ main {
             svg {
                 height: 820px;
                 position: absolute;
-                top: 125px;
+                top: 110px;
                 right: 48vw;
                 transform: rotate(-7deg);
                 transition: 1s;
@@ -1275,22 +1317,59 @@ main {
                 position: absolute;
                 width: 1px;
                 height: 969px;
-                bottom: 0px;
+                top: 115px;
                 left: 190px;
                 background-color: $color-Background-line;
                 transition: 1s;
+                animation: linegrow-1 3s ease-in-out ;
+                @keyframes linegrow-1 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 969px;
+                    }
+                }
                 @include tablet() {
+                    top: 193px;
                     left: 64px;
                 }
                 @include sm-tablet() {
-                    height: 1020px;
+                    height: 1033px;
+                    animation: linegrow-2 3s ease-in-out ;
+                @keyframes linegrow-2 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1033px;
+                    }
+                }
                 }
                 @include single-cart() {
-                    height: 1850px;
+                    height: 1874px;
+                    animation: linegrow-3 3s ease-in-out ;
+                @keyframes linegrow-3 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1874px;
+                    }
+                }
                 }
                 @include iphone-5s() {
-                    height: 1832px;
+                    height: 1873px;
                     left: 33px;
+                    animation: linegrow-4 3s ease-in-out ;
+                @keyframes linegrow-4 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1873px;
+                    }
+                }
                 }
             }
             .product-title {
@@ -1386,17 +1465,22 @@ main {
                     }
                 }
                 a {
-                    width: 235px;
-                    height: 50px;
-                    color: $color-IronGray;
-                    background-color: unset;
-                    border: 2px solid $color-MoreButton;
-                    border-radius: 45px;
-                    margin: 30px 0px 10px 0px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-decoration: none;
+                    button{
+                        width: 235px;
+                        height: 50px;
+                        color: $color-IronGray;
+                        background-color: unset;
+                        border: 2px solid $color-Border-Line;
+                        border-radius: 45px;
+                        margin: 30px 0px 10px 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        @include button-focus();
+                        @include button-hover();
+                    }
+                    
                 }
             }
             .container {
@@ -1491,11 +1575,6 @@ main {
                 background-color: $color-Parallelogram;
                 transform: skewX(-30deg);
                 transition: 2s ease-in-out;
-                // animation:para-move 5s linear ;
-                // @keyframes para-move {
-                //     from {right: 500px;}
-                //     to{right:323px;}
-                // }
                 @include tablet() {
                     top: 100px;
                     right: 323px;
@@ -1517,7 +1596,7 @@ main {
         .photo-wall {
             background-color: $color-LightGray;
             position: relative;
-            &:after {
+            &:before {
                 content: "";
                 position: absolute;
                 width: 1px;
@@ -1526,6 +1605,16 @@ main {
                 left: 190px;
                 background-color: $color-Background-line;
                 transition: 1s;
+                animation: linegrow2-1 3s ease-in-out ;
+                animation-delay: 3s;
+                @keyframes linegrow2-1 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1078px;
+                    }
+                }
                 @include tablet() {
                     left: 64px;
                 }
@@ -1598,6 +1687,7 @@ main {
                     }
                     .swiper-slide {
                         width: 400px;
+                        height: 100%;
                         text-align: center;
                         font-size: 18px;
                         background-color: unset;
@@ -1608,7 +1698,6 @@ main {
                             background-size: contain;
                             background-repeat: no-repeat;
                         }
-
                         /* Center slide text vertically */
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -1622,12 +1711,57 @@ main {
                         -ms-flex-align: center;
                         -webkit-align-items: center;
                         align-items: center;
-                        img {
+                        transition: 1s;
+                        overflow:hidden;
+                        a{
                             display: block;
                             width: 100%;
-                            height: auto;
+                            height: 100%;
                             object-fit: cover;
+                            position: relative;
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: 1s;
+                                &:hover{
+                                    transition: 1s;
+                                    filter: brightness(40%);
+                                    transform: scale(1.1);
+                                }
+                                &:hover~.text{
+                                    display: flex;
+                                }
+                            }
+                            .text{
+                                position: absolute;
+                                top: 26em;
+                                left: 12em;
+                                color: $color-White;
+                                z-index: 2;
+                                display: flex;
+                                align-items: flex-end;
+                                font-size: $H10-font-size;
+                                display: none;
+                                p{
+                                    margin-bottom: 0px;
+                                    margin-left: 10px;
+                                    line-height: 14px;
+                                    font-family: $font-Family-C;    
+                                }
+                                &:hover{
+                                    display: flex;
+                                }
+                                &:hover~img{
+                                    transition: 1s;
+                                    filter: brightness(40%);
+                                    transform: scale(1.1);
+                                }
+                            }
+                            
                         }
+                        
                     }
                     .swiper-pagination-bullet {
                         background-color: $color-White-opacity;
@@ -1701,7 +1835,6 @@ main {
             font-family: $font-Family-A;
             display: flex;
             position: relative;
-
             @include tablet() {
                 width: 100%;
                 justify-content: center;
