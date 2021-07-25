@@ -93,7 +93,7 @@ main button {
   display: block;
   margin: 0 auto;
   width: 260px;
-  height: 36px;
+  height: 40px;
   border-radius: 30px;
   color: #fff;
   font-size: 15px;
@@ -146,11 +146,59 @@ main .submit {
   text-transform: uppercase;
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
+  overflow: hidden;
 }
 
 main .submit:hover {
   font-weight: bold;
   background-color: #8090a0;
+  z-index: 0;
+}
+
+main .submit input[type="checkbox"].toggle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main .submit input[type="checkbox"].toggle:focus {
+  outline: 0;
+}
+
+main .submit .anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .submit .anim:before {
+  position: relative;
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+main .submit .anim:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
 }
 
 main .fb-btn {
@@ -161,6 +209,98 @@ main .fb-btn {
 main .fb-btn span {
   font-weight: bold;
   color: #455a81;
+}
+
+.clickable .toggle:checked + .anim {
+  -webkit-animation: anim-in .75s;
+          animation: anim-in .75s;
+}
+
+.clickable .toggle:checked + .anim:after {
+  -webkit-animation: anim-in-pseudo .75s;
+          animation: anim-in-pseudo .75s;
+}
+
+.clickable .toggle:not(:checked) + .anim {
+  -webkit-animation: anim-out .75s;
+          animation: anim-out .75s;
+}
+
+.clickable .toggle:not(:checked) + .anim:after {
+  -webkit-animation: anim-out-pseudo .75s;
+          animation: anim-out-pseudo .75s;
+}
+
+@-webkit-keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
 }
 
 .img {
@@ -322,8 +462,8 @@ main .fb-btn span {
   overflow: hidden;
   z-index: 2;
   position: relative;
-  width: 100px;
-  height: 36px;
+  width: 120px;
+  height: 40px;
   margin: 0 auto;
   background: transparent;
   color: #fff;
@@ -382,8 +522,8 @@ main .fb-btn span {
 }
 
 .img__btn span.m--in {
-  -webkit-transform: translateY(-72px);
-          transform: translateY(-72px);
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
 }
 
 .cont.s--signup .img__btn span.m--in {
@@ -392,8 +532,8 @@ main .fb-btn span {
 }
 
 .cont.s--signup .img__btn span.m--up {
-  -webkit-transform: translateY(72px);
-          transform: translateY(72px);
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
 }
 
 .sub-cont {
