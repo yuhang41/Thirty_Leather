@@ -828,12 +828,100 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
   outline: none;
   -webkit-transition: .5s;
   transition: .5s;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@-webkit-keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #f5853b;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus {
+  color: #ffffff;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:after {
+  display: none;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button, main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover:after {
+  width: 135%;
 }
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
-  background: #f7a269;
   color: #ffffff;
-  border: 1px solid #f7a269;
 }
 
 main .main-container .my-container .other-amount {
@@ -1058,12 +1146,91 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
   -webkit-transition: .5s;
   transition: .5s;
   font-size: 12px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart, main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover:after {
+  width: 135%;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
-  background: #f7a269;
   color: #ffffff;
-  border: 1px solid #f7a269;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #f5853b;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus {
+  color: #ffffff;
+}
+
+main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:after {
+  display: none;
 }
 
 main .main-container .my-container .other-amount .amount {

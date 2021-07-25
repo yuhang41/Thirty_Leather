@@ -3145,8 +3145,28 @@ main .main-container .studio-information .studio-photo .photo {
 main .main-container .studio-information .studio-photo .photo img {
   max-width: 559px;
   width: 100%;
-  height: 838px;
+  height: 0px;
   border-left: 18px solid #f7a269;
+  -webkit-animation: photo-fold 1s linear forwards;
+          animation: photo-fold 1s linear forwards;
+}
+
+@-webkit-keyframes photo-fold {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 868px;
+  }
+}
+
+@keyframes photo-fold {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 868px;
+  }
 }
 
 @media (max-width: 1350px) {

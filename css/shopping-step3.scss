@@ -67,6 +67,78 @@
         @content;
         transition: 1s;
     }
+}//button hover effect
+@mixin button-hover {
+    position: relative;
+    display: block;
+    overflow: hidden; 
+
+    &,&:after{
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &::after {
+        background: $color-Apricot;
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        height: 100%;
+        left: -35%;
+        top: 0;
+        transform: skew(5deg);
+        transition-duration: 0.6s;
+        transform-origin: top left;
+        width: 0;
+      }
+    &:hover:after {
+        width: 135%;
+    }
+    &:hover{
+        color: $color-White;
+    }
+    
+}
+//button focus effect
+@mixin button-focus {
+    transition: color 300ms;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        
+        border-radius: 100%;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition: 300ms ease-in-out;
+        transition: 200ms ease-in-out;                            
+    }
+    @keyframes colorFade {
+        0% { background: rgba($color-Apricot,0.25); }
+        100% { background: rgba($color-Apricot,1); }
+    }
+    &:focus:before{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        animation: colorFade 1s ease-in-out;
+        background: darken(darken($color-Apricot,7%),2.5%);
+    }
+    &:focus{
+        color: $color-White;
+    }
+    &:focus:after{
+        display: none;
+    }       
 }
 main{
     .main-container{
