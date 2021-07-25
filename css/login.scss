@@ -69,6 +69,10 @@ main {
         .page-title {
             font-size: 72px;
             color: $color-White;
+
+            @include sm-phone() {
+                font-size: $H2-font-size;
+            }
         }
 
         .member-lists {
@@ -95,8 +99,34 @@ main {
                     outline: none;
                     z-index: 2;
 
-                    @include four-fifty() {
+                    @include sm-tablet() {
+                        border-right: 1px solid black;
+                        border-bottom: none;
+                    }
+
+                    @include try-on() {
+                        width: 150px;
+                        font-size: $H8-font-size;
+                        white-space: nowrap;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    @include bg-phone() {
+                        width: 100px;
                         font-size: $H10-font-size;
+                    }
+
+                    @include sm-phone() {
+                        width: 80px;
+                        font-size: $H11-font-size;
+                    }
+                    
+                    @include four-fifty() {
+                        width: 45px;
+                        white-space: pre-wrap;
                     }
 
                     &.active {
@@ -111,9 +141,35 @@ main {
                         @include sm-tablet() {
                             width: 170px;
                             height: 78px;
+                            margin-left: 0;
                             border-right: none;
                             border-bottom: 18px solid $color-SkyBlue;
                             z-index: 2;
+                        }
+
+                        @include try-on() {
+                            width: 150px;
+                            font-size: $H8-font-size;
+                            white-space: nowrap;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        @include bg-phone() {
+                            width: 100px;
+                            font-size: $H10-font-size;
+                        }
+
+                        @include sm-phone() {
+                            width: 80px;
+                            font-size: $H11-font-size;
+                        }
+
+                        @include four-fifty() {
+                            width: 45px;
+                            white-space: pre-wrap;
                         }
                     }
 
@@ -205,14 +261,6 @@ main {
                                             outline: none;
                                             border: none;
                                             border-bottom: 1px solid $color-WedgwoodBlue;
-
-                                            &#date {
-                                                width: 223px;
-                                            }
-
-                                            &[type="date"]::-webkit-datetime-edit-text {
-                                                padding: 5px;
-                                            }
                                         }
 
                                         .input1 {
@@ -420,8 +468,11 @@ main {
                                     font-size: 14px;
 
                                     @include try-on() {
-                                        width: 552px;
                                         margin: auto;
+                                    }
+
+                                    @include sm-phone() {
+                                        font-size: 12px;
                                     }
 
                                     .list-block1 {
@@ -446,10 +497,6 @@ main {
 
                                             li {
                                                 flex: 0 0 25%;
-
-                                                @include try-on() {
-                                                    flex: 0 0 20%;
-                                                }
                                             }
                                         }
 
@@ -464,7 +511,7 @@ main {
                                             li {
                                                 flex: 0 0 20%;
 
-                                                @include bg-phone() {
+                                                @include try-on() {
                                                     display: none;
                                                 }
                                             }
@@ -477,12 +524,8 @@ main {
                                         @include try-on() {
                                             display: flex;
                                             flex-direction: column;
-                                            justify-content: space-between;
-                                            height: 60px;
-                                        }
-
-                                        @include bg-phone() {
-                                            height: 100px;
+                                            justify-content: space-around;
+                                            height: 150px;
                                         }
 
                                         li {
@@ -493,6 +536,7 @@ main {
 
                                         .block-l {
                                             width: calc((100% / 9) * 4);
+
 
                                             @include try-on() {
                                                 width: 100%;
@@ -505,10 +549,6 @@ main {
 
                                             li {
                                                 flex: 0 0 25%;
-
-                                                @include try-on() {
-                                                    flex: 0 0 20%;
-                                                }
                                             }
                                         }
 
@@ -519,14 +559,10 @@ main {
                                                 width: 100%;
                                             }
 
-                                            @include bg-phone() {
-                                                display: none;
-                                            }
-
                                             li {
                                                 flex: 0 0 20%;
 
-                                                @include bg-phone() {
+                                                @include try-on() {
                                                     display: none;
                                                 }
                                             }
@@ -543,10 +579,11 @@ main {
                                         .ttz {
                                             display: none;
 
-                                            @include bg-phone() {
+                                            @include try-on() {
                                                 display: flex;
                                                 flex-direction: column;
                                                 background-color: $color-LightGray;
+
 
                                                 .top,
                                                 .mid,
@@ -560,6 +597,11 @@ main {
                                                         padding: 0;
                                                         width: 40px;
                                                         height: 40px;
+                                                        color: $color-MoreButton;
+
+                                                        &:focus {
+                                                            box-shadow: none;
+                                                        }
                                                     }
 
                                                     .order-detail {
@@ -578,7 +620,7 @@ main {
                                                     .mid,
                                                     .bot {
                                                         li {
-                                                            flex: 0 0 16%;
+                                                            flex: 0 0 20%;
                                                         }
                                                     }
 
@@ -587,7 +629,8 @@ main {
 
                                                         .invoice1,
                                                         .information1 {
-                                                            width: 80px;
+                                                            max-width: 58px;
+                                                            width: 100%;
                                                             margin: auto;
                                                             background-color: $color-MoreButton;
                                                             color: $color-White;
@@ -603,12 +646,12 @@ main {
 
                         .data-block7 {
                             button {
-                                background-color: $color-White;
-                                color: $color-MoreButton;
+                                background-color: #ffffff;
+                                color: #a0a0a0;
                                 border: none;
 
                                 &:hover {
-                                    color: $color-Apricot;
+                                    color: #f7a269;
                                 }
                             }
                         }
