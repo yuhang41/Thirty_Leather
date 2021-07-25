@@ -597,16 +597,113 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   color: #f7a269;
 }
 
-main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  top: -6px;
+  left: 11.5px;
+  border-radius: 50%;
+}
+
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite input[type="checkbox"]:focus::after {
+  -webkit-animation: firework .5s ease forwards .1s;
+          animation: firework .5s ease forwards .1s;
+}
+
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite input[type="checkbox"]:checked + label > .fa-star {
+  -webkit-animation: star-fold 1s linear;
+          animation: star-fold 1s linear;
+  color: #f7a269;
+}
+
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite i {
   padding: 5px;
   cursor: pointer;
   font-size: 15px;
   color: #65737f;
-  color: #65737f;
 }
 
-main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite .fa-star:hover {
+main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .favorite i:hover {
   color: #f7a269;
+}
+
+@-webkit-keyframes firework {
+  0% {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+            box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.0;
+    -webkit-box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+            box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+  }
+}
+
+@keyframes firework {
+  0% {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+            box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.0;
+    -webkit-box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+            box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+  }
+}
+
+@-webkit-keyframes star-fold {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: #65737f;
+  }
+  31% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    color: #f7a269;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: #f7a269;
+  }
+}
+
+@keyframes star-fold {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: #65737f;
+  }
+  31% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    color: #f7a269;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: #f7a269;
+  }
 }
 
 @media (max-width: 790px) {

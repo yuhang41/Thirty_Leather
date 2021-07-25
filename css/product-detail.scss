@@ -358,10 +358,6 @@ main{
                                         .other-eavl{
                                             display: flex;
                                             font-size: $H7-font-size;
-                                            i{
-                                                color: $color-Product-Detail-Title;
-                                                margin-right: 10px;
-                                            }
                                             p{
                                                 padding: 0px 20px;
                                                 font-size: $H10-font-size;
@@ -372,7 +368,69 @@ main{
                                                     border-left: 1px solid $color-Product-Detail-Title;
                                                     border-right: 1px solid $color-Product-Detail-Title;
                                                 }
+                                                input[type="checkbox"]{
+                                                    -webkit-appearance: none;
+                                                    -moz-appearance: none;
+                                                    position: relative;
+                                                    outline: none;
+                                                    border: 0;
+                                                    cursor: pointer;
+                                                    &::after {
+                                                        content:"";
+                                                        position: absolute;
+                                                        height: 4px;
+                                                        width: 4px;
+                                                        top: -9px;
+                                                        left: 12.5px;
+                                                        border-radius: 50%;
+                                                    }
+                                                    &:focus::after {
+                                                        animation: firework .5s ease forwards .1s;
+                                                    }
+                                                    &:checked+label>.fa-heart{
+                                                        animation: heart-fold .6s ease-in-out;
+                                                        color: $color-Apricot;
+                                                    }
+                                                }
+                                                label{
+                                                    margin-bottom: unset;
+                                                    i{
+                                                        cursor: pointer;
+                                                        font-size: $H9-font-size;                                
+                                                        color: $color-Nav-icon;
+                                                        &:hover{
+                                                            color: $color-Apricot;
+                                                        }
+                                                    }
+                                                }
+                                               
                                             }
+                                            //收藏效果
+                                            @keyframes firework {
+                                            0% {
+                                                opacity: 1;
+                                                box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
+                                            }
+                                            30% {
+                                                opacity: 1;
+                                            }
+                                            100% {
+                                                opacity: 0.0;
+                                                box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
+                                            }
+                                            }
+                                            @keyframes heart-fold {
+                                                0%{
+                                                    font-size: $H11-font-size;
+                                                    color: $color-Nav-icon;
+                                                }
+                                                100%{
+                                                    font-size: $H9-font-size;
+                                                    color: $color-Apricot;
+                                                }
+                                                
+                                            }
+                                            
                                         }
                                     }
                                     .content{
