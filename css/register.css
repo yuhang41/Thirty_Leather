@@ -156,25 +156,6 @@ main .submit:hover {
   z-index: 0;
 }
 
-main .submit input[type="checkbox"].toggle {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  left: 0;
-  top: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-main .submit input[type="checkbox"].toggle:focus {
-  outline: 0;
-}
-
 main .submit .anim {
   position: absolute;
   top: 50%;
@@ -211,60 +192,14 @@ main .fb-btn span {
   color: #455a81;
 }
 
-.clickable .toggle:checked + .anim {
-  -webkit-animation: anim-in .75s;
-          animation: anim-in .75s;
-}
-
-.clickable .toggle:checked + .anim:after {
-  -webkit-animation: anim-in-pseudo .75s;
-          animation: anim-in-pseudo .75s;
-}
-
-.clickable .toggle:not(:checked) + .anim {
+.clickable:hover .anim {
   -webkit-animation: anim-out .75s;
           animation: anim-out .75s;
 }
 
-.clickable .toggle:not(:checked) + .anim:after {
+.clickable:hover .anim:after {
   -webkit-animation: anim-out-pseudo .75s;
           animation: anim-out-pseudo .75s;
-}
-
-@-webkit-keyframes anim-in {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes anim-in {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes anim-in-pseudo {
-  0% {
-    background: rgba(0, 0, 0, 0.25);
-  }
-  100% {
-    background: rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes anim-in-pseudo {
-  0% {
-    background: rgba(0, 0, 0, 0.25);
-  }
-  100% {
-    background: rgba(0, 0, 0, 0);
-  }
 }
 
 @-webkit-keyframes anim-out {

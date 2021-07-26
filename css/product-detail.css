@@ -911,6 +911,130 @@ main .main-container .product-container .productshop-container .commidity-contai
   }
 }
 
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim:before, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim:before {
+  position: relative;
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim:after, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .clickable .anim {
+  -webkit-animation: anim-in .75s;
+          animation: anim-in .75s;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .clickable .anim:after {
+  -webkit-animation: anim-in-pseudo .75s;
+          animation: anim-in-pseudo .75s;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .clickable .anim.active {
+  -webkit-animation: anim-out .75s;
+          animation: anim-out .75s;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .clickable .anim.active:after {
+  -webkit-animation: anim-out-pseudo .75s;
+          animation: anim-out-pseudo .75s;
+}
+
+@-webkit-keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount {
   display: -webkit-box;
   display: -ms-flexbox;

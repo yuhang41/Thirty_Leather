@@ -9,3 +9,13 @@ function SnowshoeHandler(){
 }
 AllCommodity.addEventListener('click',AllCommodityHandler);
 Snowshoe.addEventListener('click',SnowshoeHandler);
+
+
+
+let clickables = document.querySelectorAll('.clickable');
+let anim = document.querySelectorAll('.anim');
+clickables.forEach((clickable,index) =>{
+    clickable.addEventListener('click',()=>{
+        anim[index].classList.toggle('active');
+    });
+});
