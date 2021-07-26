@@ -899,6 +899,10 @@ main .main-container .product-container .productshop-container .commidity-contai
   margin-right: 20px;
 }
 
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart i {
+  display: none;
+}
+
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order {
   width: 70px;
   height: 43px;
