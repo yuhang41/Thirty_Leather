@@ -19,9 +19,9 @@
         transition: 1s;
     }
 }
-//1200
-@mixin bg-arrow{
-    @media(max-width:1200px){
+//1100
+@mixin ex-screen{
+    @media(max-width:1100px){
         @content;
         transition: 1s;
     }
@@ -67,7 +67,8 @@
         @content;
         transition: 1s;
     }
-}//button hover effect
+}
+//button hover effect
 @mixin button-hover {
     position: relative;
     display: block;
@@ -98,6 +99,7 @@
     }
     &:hover{
         color: $color-White;
+        border: unset;
     }
     
 }
@@ -135,6 +137,7 @@
     }
     &:focus{
         color: $color-White;
+        border: unset;
     }
     &:focus:after{
         display: none;
@@ -151,17 +154,13 @@ main{
             padding-top: 15.7vh;
             padding-bottom: 50px;
             @include bg-screen(){
-                // max-width: 1140px;
-                padding:15.7vh 6.7vw 0 6.7vw;
+                padding:15.7vh 6.7vw 50px 6.7vw;
             }
-            // @include sm-screen(){
-            //     max-width: 900px;
-            // }
             @include tablet(){
                 max-width: 700px;
             }
             @include sm-phone(){
-                padding-top: 5.7vh; 
+                padding:5.7vh 0px 50px 0px; 
             }
             .steps{
                 display: flex;
@@ -174,8 +173,17 @@ main{
                         flex:0 0 32%;
                         justify-content: start;                      
                         .step-content{
-                            background: $color-Shopping-Step;
-                        }                    
+                            background: $color-Shopping-Step;                    
+                        }
+                        .step-right-line{
+                            &::after{
+                                content:'';
+                                display: block;                                      
+                                width: 100%;
+                                height: 100%;
+                                background: $color-Shopping-Step-line;
+                            }
+                        }
                     }
                     &:nth-child(2){  
                         flex:0 0 36%;
@@ -183,21 +191,18 @@ main{
                         .step-content{
                             background: $color-Shopping-Step;                  
                         }
+                        .step-left-line{
+                            background: $color-Shopping-Step-line; 
+                        }
                     }    
                     &:nth-child(3){                
                         flex:0 0 32%;
                         justify-content:flex-end;
-                        .step-content{                        
-                            background: $color-SkyBlue;
+                        .step-content{
+                            background: $color-SkyBlue;                    
                         }
                         .step-left-line{
-                            &::after{
-                                content:'';
-                                display: block;                                      
-                                width: 100%;
-                                height: 100%;
-                                background: $color-SkyBlue;
-                            }
+                            background: $color-SkyBlue; 
                         }
                     }                   
                     .step-content{                    
@@ -222,11 +227,11 @@ main{
                                 font-size: $H4-font-size;
                                 letter-spacing: $font-letter-space-200;
                             }
-                            .text-content{                        
-                                text-align: left; 
-                                @include tablet(){
+                            .text-content{
+                                @include ex-screen(){
                                     display: none;
-                                }
+                                }                        
+                                text-align: left;                                                
                                 p{
                                     &:nth-child(1){                                
                                         font-size: $H10-font-size;
@@ -240,7 +245,7 @@ main{
                                             letter-spacing: $font-letter-space-50;
                                         }
                                     }
-                                }                                                                           
+                                }                  
                             }
                         }
                     }
@@ -262,9 +267,10 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
-                // @include bg-screen(){
-                //     flex-direction: column;
-                // }
+                @include ex-screen(){
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
                 .web-title{
                     position: absolute;
                     top: 0px;
@@ -292,6 +298,9 @@ main{
                         width: 100%;
                         padding: 32px 0;
                         margin: auto;
+                        @include sm-phone(){
+                            padding: 3vh 0; 
+                        }
                         .order-total{
                             cursor: pointer;
                             text-align: center;
@@ -333,22 +342,20 @@ main{
                                     }
                                     .photo-content{
                                         display: flex;
-                                        .photo{                                
-                                            max-width: 90px;
-                                            max-height: 90px;
-                                            width: 100%;                                
+                                        .photo{                           
                                             img{
-                                                width: 100%;
-                                                height: 100%;
+                                                max-width: 90px;
+                                                max-height: 90px;
+                                                
                                                 object-position: center;
                                                 object-fit: cover;
+                                                margin-right: 15px;   
                                             }
                                         }
                                         .commodity-content{
                                             display: flex;
                                             flex-direction: column;
                                             justify-content: space-between;               
-                                            padding: 0 15px;
                                             .commodity-title{
                                                 font-size: $H10-font-size;                                     @include sm-phone(){
                                                     width: 182px;
@@ -735,16 +742,11 @@ main{
                     max-width: 371px;
                     width: 100%;
                     margin-left: 2vw;
-                    min-height:452px;
+                    
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     transition: 1s;
-                    // @include bg-screen(){
-                    //     max-width: 1140px;
-                    //     margin-left: unset;
-                    //     align-items: flex-end;
-                    // }
                     @include tablet(){
                         align-items: center;
                     }
@@ -753,14 +755,12 @@ main{
                         height: 550px;                                      
                         background: $color-White;
                         border: 1px solid $color-Apricot;
-                        padding: 20px;
-                        // @include bg-screen(){
-                        //     margin-top: 30px;
-                        //     max-width: 371px;
-                        // }
+                        padding:40px 20px 20px 20px;
+                        @include ex-screen(){
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                        }
                         h4{
-                            padding: 10px;
-                            margin: 0;
                             text-align: center;
                             font-size: $H5-font-size;                        
                             letter-spacing: $font-letter-space-200;
@@ -805,24 +805,33 @@ main{
                     }
                     .go-home-button{                                        
                         width: 100%;
-                        // @include bg-screen(){
-                        //     max-width: 371px;
-                        //     margin-top: 30px;
-                        // }
+                        
+                        @include sm-phone(){
+                            padding: 0px 10px;
+                        }
                         .home-button{
-                            cursor: pointer;
-                            width: 100%;
-                            border: none;                            
-                            border-radius: 5px;
-                            outline: none;
-                            background: $color-Apricot;
-                            color: $color-White;
-                            font-size: $H4-font-size;
-                            letter-spacing: $font-letter-space-200;
-                            text-decoration: none;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            &:hover{
+                                text-decoration:none;
+                            }
+                            button{
+                                cursor: pointer;
+                                width: 100%;
+                                background-color: unset;
+                                color: $color-IronGray;
+
+                                font-size: $H4-font-size;
+                                letter-spacing: $font-letter-space-200;
+                                
+                                border: 2px solid $color-IronGray;                      
+                                border-radius: 10px;
+                                outline: none;
+                                
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                @include button-focus();
+                                @include button-hover();
+                            }
                         }                    
                     }
                 }            

@@ -264,7 +264,7 @@ main .main-container .my-container .shopping-container .shopping-order {
 
 @media (max-width: 620px) {
   main .main-container .my-container .shopping-container .shopping-order {
-    padding: 3vh  1.5vw;
+    padding: 3vh  0px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -786,6 +786,10 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
   color: #65737f;
 }
 
+main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-name input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-phone {
   margin-top: 20px;
 }
@@ -805,6 +809,10 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
   width: 261px;
   font-size: 12px;
   color: #65737f;
+}
+
+main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-phone input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-email {
@@ -827,6 +835,10 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
   width: 261px;
   font-size: 12px;
   color: #65737f;
+}
+
+main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container .orderer-email input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info {
@@ -970,6 +982,10 @@ main .main-container .my-container .shopping-container .customer-info .recipient
   color: #65737f;
 }
 
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-name input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-name p {
   margin: 0px;
   font-size: 12px;
@@ -995,6 +1011,10 @@ main .main-container .my-container .shopping-container .customer-info .recipient
   width: 261px;
   font-size: 12px;
   color: #65737f;
+}
+
+main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .addressee-info .addressee-phone input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee .shipping-info {
@@ -1063,6 +1083,7 @@ main .main-container .my-container .shopping-container .customer-info .recipient
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee button:hover {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee button::before {
@@ -1114,6 +1135,7 @@ main .main-container .my-container .shopping-container .customer-info .recipient
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee button:focus {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee button:focus:after {
@@ -1308,11 +1330,99 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f7a269;
+  background-color: unset;
   font-size: 30px;
   letter-spacing: 3.2px;
-  color: #ffffff;
+  color: #444444;
+  border: 2px solid #444444;
   margin-bottom: 30px;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #f5853b;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button:focus {
+  color: #ffffff;
+  border: unset;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button:focus:after {
+  display: none;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button, main .main-container .my-container .other-amount .amount .order-total-button .next-button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button:hover:after {
+  width: 135%;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button .next-button:hover {
+  color: #ffffff;
+  border: unset;
 }
 
 footer {

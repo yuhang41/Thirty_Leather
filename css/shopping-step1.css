@@ -985,6 +985,7 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:after {
@@ -1019,6 +1020,7 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount {
@@ -1225,7 +1227,6 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
   font-size: 12px;
   color: #444444;
-  margin-bottom: 20px;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
@@ -1233,6 +1234,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
   color: #f7a269;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
@@ -1282,6 +1284,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::before {
@@ -1324,6 +1327,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:after {
@@ -1349,6 +1353,14 @@ main .main-container .my-container .other-amount .amount {
 @media (max-width: 790px) {
   main .main-container .my-container .other-amount .amount {
     margin-right: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 620px) {
+  main .main-container .my-container .other-amount .amount {
+    padding: 0px 10px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1438,12 +1450,18 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
   text-align: end;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-a {
+main .main-container .my-container .other-amount .amount .order-total-button a {
+  width: 100%;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a:hover {
+  text-decoration: none;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button {
   cursor: pointer;
   width: 100%;
-  border: none;
   outline: none;
-  text-decoration: none;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1454,10 +1472,98 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f7a269;
+  background-color: unset;
   font-size: 30px;
   letter-spacing: 3.2px;
+  color: #444444;
+  border: 2px solid #444444;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #f5853b;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button:focus {
   color: #ffffff;
+  border: unset;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button:focus:after {
+  display: none;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button, main .main-container .my-container .other-amount .amount .order-total-button a button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button:hover:after {
+  width: 135%;
+}
+
+main .main-container .my-container .other-amount .amount .order-total-button a button:hover {
+  color: #ffffff;
+  border: unset;
 }
 
 footer {

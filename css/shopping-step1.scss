@@ -85,6 +85,7 @@
     }
     &:hover{
         color: $color-White;
+        border: unset;
     }
     
 }
@@ -122,6 +123,7 @@
     }
     &:focus{
         color: $color-White;
+        border: unset;
     }
     &:focus:after{
         display: none;
@@ -854,7 +856,6 @@ main{
                                 .title{
                                     font-size: $H11-font-size;
                                     color: $color-IronGray;
-                                    margin-bottom: 20px;
                                 }
                                 .content-buttone{
                                     p{
@@ -862,6 +863,7 @@ main{
                                         color: $color-Apricot;
                                         font-size: $H7-font-size;
                                         font-weight: $font-Weight-B;
+                                        margin-bottom: 20px;
                                     }
                                     .push-cart{
                                         border: 1px solid $color-Nav-icon;
@@ -889,6 +891,9 @@ main{
                     }
                     @include bg-phone(){
                         margin-right:unset;
+                    }
+                    @include sm-phone(){
+                        padding: 0px 10px;
                     }
                     .free-ship{
                         display: flex;
@@ -945,21 +950,33 @@ main{
                                 text-align: end;
                             }                
                         }
-                        .next-a{
-                            cursor: pointer;
-                            width: 100%;                        
-                            border: none;
-                            outline: none; 
-                            text-decoration: none;                       
-                            border-radius: 10px;
-                            display: flex;
-                            justify-content: center;                            
-                            align-items: center;
-                            background-color: $color-Apricot;
-                            font-size: $H4-font-size;                        
-                            letter-spacing: $font-letter-space-200;
-                            color: $color-White;
+                        a{
+                            width: 100%; 
+                            
+                            &:hover{
+                                text-decoration:none;
+                            }
+                            button{
+                                cursor: pointer;
+                                width: 100%;                        
+                                outline: none; 
+                     
+                                border-radius: 10px;
+
+                                display: flex;
+                                justify-content: center;                            
+                                align-items: center;
+
+                                background-color: unset;
+                                font-size: $H4-font-size;                        
+                                letter-spacing: $font-letter-space-200;
+                                color: $color-IronGray;
+                                border: 2px solid $color-IronGray;
+                                @include button-focus();
+                                @include button-hover();
+                            }
                         }
+                        
                     }
                 }
             }            
