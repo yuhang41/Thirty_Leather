@@ -1,0 +1,325 @@
+@import '_style_guild.scss';
+
+// 大平板尺寸
+@mixin tablet {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
+// 小平板尺寸
+@mixin sm-tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+//試穿資訊換版
+@mixin try-on {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+//大手機尺寸
+@mixin bg-phone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+//商品卡片換版
+@mixin single-cart {
+    @media (max-width: 660px) {
+        @content;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin four-fifty {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+// iphone 5s
+@mixin iphone-5s {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+*{
+    list-style: none;   
+    margin: 0px;
+    padding: 0px;
+    font-family: $font-Family-A;
+}
+
+main {
+    .trace-page {
+        width: 100%;
+        height: 100%;
+        background-color: $color-LightGray;
+
+        .trace-title {
+            font-size: 72px;
+            color: $color-White;
+
+            @include sm-phone() {
+                font-size: $H2-font-size;
+            }
+        }
+
+        .trace-lists {
+            @include sm-tablet() {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .list-group {
+                @include sm-tablet() {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                .list-group-item {
+                    width: 170px;
+                    height: 60px;
+                    background-color: $color-Footer-Background;
+                    font-size: $H7-font-size;
+                    color: $color-LightGray;
+                    letter-spacing: $font-letter-space-200;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                    z-index: 2;
+
+                    @include sm-tablet() {
+                        border-right: 1px solid black;
+                        border-bottom: none;
+                    }
+
+                    @include try-on() {
+                        width: 150px;
+                        font-size: $H8-font-size;
+                        white-space: nowrap;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    @include bg-phone() {
+                        width: 100px;
+                        font-size: $H10-font-size;
+                    }
+
+                    @include sm-phone() {
+                        width: 80px;
+                        font-size: $H11-font-size;
+                    }
+                    
+                    @include four-fifty() {
+                        width: 45px;
+                        white-space: pre-wrap;
+                    }
+
+                    &.active {
+                        width: 205px;
+                        background-color: $color-White;
+                        color: $color-WedgwoodBlue;
+                        border-color: $color-SkyBlue;
+                        border-right: 18px solid $color-SkyBlue;
+                        margin-left: -18px;
+                        z-index: 2;
+
+                        @include sm-tablet() {
+                            width: 170px;
+                            height: 78px;
+                            margin-left: 0;
+                            border-right: none;
+                            border-bottom: 18px solid $color-SkyBlue;
+                            z-index: 2;
+                        }
+
+                        @include try-on() {
+                            width: 150px;
+                            font-size: $H8-font-size;
+                            white-space: nowrap;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        @include bg-phone() {
+                            width: 100px;
+                            font-size: $H10-font-size;
+                        }
+
+                        @include sm-phone() {
+                            width: 80px;
+                            font-size: $H11-font-size;
+                        }
+
+                        @include four-fifty() {
+                            width: 46px;
+                            white-space: pre-wrap;
+                        }
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+
+                    &:last-child {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+            }
+
+            .tab-content {
+                max-width: 1140px;
+                width: 100%;
+
+                .tab-pane {
+                    .trace-data {
+                        height: 100%;
+                        background-color: $color-White;
+                        border: 1px solid $color-Apricot;
+                        margin-left: -17px;
+
+                        @include sm-tablet() {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: -17px;
+                        }
+
+                        .trace-container {
+                            width: 95%;
+
+                            .data-block1 {
+                                height: 36px;
+                                font-size: 18px;
+                                color: $color-Nav-icon;
+                                border-bottom: 2px solid #76828e;
+
+                                .product-img {
+                                    flex: 0 0 24%;
+                                }
+
+                                .product-information {
+                                    flex: 0 0 60%;
+                                }
+
+                                .product-price {
+                                    flex: 0 0 8%;
+                                }
+
+                                .product-delete {
+                                    flex: 0 0 8%;
+                                }
+                            }
+
+                            .data-block2 {
+                                font-size: 16px;
+                                color: $color-Nav-icon;
+
+                                .block2-top {
+                                    .top-img {
+                                        flex: 0 0 23.5%;
+
+                                        img {
+                                            width: 238px;
+                                            height: 238px;
+                                        }
+                                    }
+
+                                    .top-title {
+                                        flex: 0 0 59.75%;
+                                    }
+
+                                    .top-price {
+                                        flex: 0 0 9.5%;
+
+                                        .delete-price1 {
+                                            text-decoration: line-through;
+                                        }
+
+                                        .modify-price1 {
+                                            color: #ed701b;
+                                        }
+                                    }
+
+                                    .top-delete {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .block2-bottom {
+                                    .bottom-img {
+                                        flex: 0 0 23.5%;
+
+                                        img {
+                                            width: 238px;
+                                            height: 238px;
+                                        }
+                                    }
+
+                                    .bottom-title {
+                                        flex: 0 0 59.75%;
+                                    }
+
+                                    .bottom-price {
+                                        flex: 0 0 9.5%;
+
+                                        .delete-price2 {
+                                            text-decoration: line-through;
+                                        }
+
+                                        .modify-price2 {
+                                            color: #ed701b;
+                                        }
+                                    }
+
+                                    .bottom-delete {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            .data-block3 {
+                                display: flex;
+                                justify-content: center;
+                                
+                                .all-delete {
+                                    border: 1px solid $color-Nav-icon;
+                                    font-size: 18px;
+                                    color: $color-Nav-icon;
+                                }
+                            }
+
+                            .data-block4 {
+                                button {
+                                    background-color: #ffffff;
+                                    color: #a0a0a0;
+                                    border: none;
+    
+                                    &:hover {
+                                        color: #f7a269;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
