@@ -32,5 +32,3 @@ function copyInformation(){
         addressee_phone.placeholder="0900 - 123456";
     } 
 }
-
-

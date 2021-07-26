@@ -85,6 +85,7 @@
     }
     &:hover{
         color: $color-White;
+        border: unset;
     }
     
 }
@@ -122,6 +123,7 @@
     }
     &:focus{
         color: $color-White;
+        border: unset;
     }
     &:focus:after{
         display: none;
@@ -854,7 +856,6 @@ main{
                                 .title{
                                     font-size: $H11-font-size;
                                     color: $color-IronGray;
-                                    margin-bottom: 20px;
                                 }
                                 .content-buttone{
                                     p{
@@ -862,6 +863,7 @@ main{
                                         color: $color-Apricot;
                                         font-size: $H7-font-size;
                                         font-weight: $font-Weight-B;
+                                        margin-bottom: 20px;
                                     }
                                     .push-cart{
                                         border: 1px solid $color-Nav-icon;
@@ -889,6 +891,9 @@ main{
                     }
                     @include bg-phone(){
                         margin-right:unset;
+                    }
+                    @include sm-phone(){
+                        padding: 0px 10px;
                     }
                     .free-ship{
                         display: flex;
@@ -987,6 +992,7 @@ main{
                                 }
                             }
                         }
+                        
                     }
                 }
             }            

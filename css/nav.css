@@ -385,7 +385,7 @@ nav .personal-item .twd-lang .lang a {
     display: block;
     position: relative;
   }
-  .navbar-toggler .container {
+  .navbar-toggler .stick-container {
     padding: 0px;
     border: unset;
     border-radius: unset;
@@ -412,7 +412,7 @@ nav .personal-item .twd-lang .lang a {
     cursor: pointer;
     padding: 0px;
   }
-  .navbar-toggler .container .stick {
+  .navbar-toggler .stick-container .stick {
     width: 40px;
     height: 4px;
     border-radius: 4px;
@@ -420,18 +420,18 @@ nav .personal-item .twd-lang .lang a {
     background-color: #ffffff;
     display: inline-block;
   }
-  .navbar-toggler .container .stick:last-child {
+  .navbar-toggler .stick-container .stick:last-child {
     margin-bottom: 0px;
   }
-  .navbar-toggler .container .stick-1.open {
+  .navbar-toggler .stick-container .stick-1.open {
     -webkit-animation: stick-1-open .6s ease-out forwards;
             animation: stick-1-open .6s ease-out forwards;
   }
-  .navbar-toggler .container .stick-2.open {
+  .navbar-toggler .stick-container .stick-2.open {
     -webkit-animation: stick-2-open .6s linear forwards;
             animation: stick-2-open .6s linear forwards;
   }
-  .navbar-toggler .container .stick-3.open {
+  .navbar-toggler .stick-container .stick-3.open {
     -webkit-animation: stick-3-open .6s linear forwards;
             animation: stick-3-open .6s linear forwards;
   }
@@ -531,20 +531,20 @@ nav .personal-item .twd-lang .lang a {
               transform: translate(1px, -15px) rotate(-40deg);
     }
   }
-  .navbar-toggler .container .stick-1.close {
+  .navbar-toggler .stick-container .stick-1.close {
     width: 4px;
     -webkit-transform: translate(27px, 26px);
             transform: translate(27px, 26px);
     -webkit-animation: stick-1-close .6s ease-out forwards;
             animation: stick-1-close .6s ease-out forwards;
   }
-  .navbar-toggler .container .stick-2.close {
+  .navbar-toggler .stick-container .stick-2.close {
     -webkit-transform: translate(0px, 0px) rotate(40deg);
             transform: translate(0px, 0px) rotate(40deg);
     -webkit-animation: stick-2-close .6s ease-out forwards;
             animation: stick-2-close .6s ease-out forwards;
   }
-  .navbar-toggler .container .stick-3.close {
+  .navbar-toggler .stick-container .stick-3.close {
     -webkit-transform: translate(0px, -23px) rotate(-40deg);
             transform: translate(0px, -23px) rotate(-40deg);
     -webkit-animation: stick-3-close .6s ease-out forwards;
