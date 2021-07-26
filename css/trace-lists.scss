@@ -202,28 +202,61 @@ main {
                         }
 
                         .trace-container {
-                            width: 95%;
+                            width: 90%;
 
                             .data-block1 {
                                 height: 36px;
-                                font-size: 18px;
+                                font-size: $H7-font-size;
                                 color: $color-Nav-icon;
                                 border-bottom: 2px solid #76828e;
+
+                                @include bg-phone() {
+                                    height: 54px;
+                                }
 
                                 .product-img {
                                     flex: 0 0 24%;
                                 }
 
                                 .product-information {
-                                    flex: 0 0 60%;
+                                    flex: 0 0 48%;
+
+                                    @include bg-phone() {
+                                        flex: 0 0 40%;
+                                    }
+
+                                    @include sm-phone() {
+                                        flex: 0 0 36%;
+                                    }
                                 }
 
                                 .product-price {
                                     flex: 0 0 8%;
+
+                                    @include bg-phone() {
+                                        flex: 0 0 12%;
+                                    }
+
+                                    @include sm-phone() {
+                                        flex:  0 0 14%;
+                                    }
+                                }
+
+                                .buy-status {
+                                    flex: 0 0 14%;
+
+                                    .status {
+                                        padding-left: 6px;
+
+                                        @include bg-phone() {
+                                            padding-left: 0;
+                                        }
+                                    }
                                 }
 
                                 .product-delete {
-                                    flex: 0 0 8%;
+                                    flex: 0 0 6%;
+                                    white-space: nowrap;
                                 }
                             }
 
@@ -233,20 +266,60 @@ main {
 
                                 .block2-top {
                                     .top-img {
-                                        flex: 0 0 23.5%;
+                                        flex: 0 0 23%;
 
                                         img {
-                                            width: 238px;
-                                            height: 238px;
+                                            max-width: 238px;
+                                            width: 100%;
+                                            max-height: 238px;
+                                            height: 100%;
                                         }
                                     }
 
-                                    .top-title {
-                                        flex: 0 0 59.75%;
+                                    .top-title {   
+                                        flex: 0 0 48.25%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 40.25%;
+                                        }
+
+                                        @include sm-phone() {
+                                            flex: 0 0 36.25%;
+                                        }
+
+                                        @include iphone-5s() {
+                                            flex: 0 0 32.25%;
+                                            font-size: $H12-font-size;
+                                        }
+
+                                        .heading1 {
+                                            @include try-on() {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+
+                                            .hold-hands {
+                                                white-space: nowrap;
+                                            }
+
+                                            .genuine-leather {
+                                                @include try-on() {
+                                                    padding-left: 7px;
+                                                }
+                                            }
+                                        }
                                     }
 
                                     .top-price {
-                                        flex: 0 0 9.5%;
+                                        flex: 0 0 6.75%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 10.75%;
+                                        }
+
+                                        @include iphone-5s() {
+                                            font-size: $H12-font-size;
+                                        }
 
                                         .delete-price1 {
                                             text-decoration: line-through;
@@ -257,27 +330,76 @@ main {
                                         }
                                     }
 
+                                    .top-status {
+                                        flex: 0 0 17%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 21%;
+                                        }
+
+                                        @include iphone-5s() {
+                                            font-size: $H12-font-size;
+                                        }
+                                    }
+
                                     .top-delete {
+                                        flex: 0 0 5%;
                                         cursor: pointer;
                                     }
                                 }
 
                                 .block2-bottom {
                                     .bottom-img {
-                                        flex: 0 0 23.5%;
+                                        flex: 0 0 23%;
 
                                         img {
-                                            width: 238px;
-                                            height: 238px;
+                                            max-width: 238px;
+                                            width: 100%;
+                                            max-height: 238px;
+                                            height: 100%;
                                         }
                                     }
 
                                     .bottom-title {
-                                        flex: 0 0 59.75%;
+                                        flex: 0 0 48.25%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 40.25%;
+                                        }
+
+                                        @include sm-phone() {
+                                            flex: 0 0 36.25%;
+                                        }
+
+                                        @include iphone-5s() {
+                                            flex: 0 0 36.25%;
+                                            font-size: $H12-font-size;
+                                        }
+
+                                        .heading2 {
+                                            @include try-on() {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+
+                                            .cowhide {
+                                                @include try-on() {
+                                                    padding-left: 7px;
+                                                }
+                                            }
+                                        }
                                     }
 
                                     .bottom-price {
-                                        flex: 0 0 9.5%;
+                                        flex: 0 0 6.75%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 10.75%;
+                                        }
+
+                                        @include iphone-5s() {
+                                            font-size: $H12-font-size;
+                                        }
 
                                         .delete-price2 {
                                             text-decoration: line-through;
@@ -288,7 +410,33 @@ main {
                                         }
                                     }
 
+                                    .bottom-status {
+                                        flex: 0 0 17%;
+
+                                        @include bg-phone() {
+                                            flex: 0 0 21%;
+                                        }
+
+                                        .add-shoppingCart {
+                                            font-size: $H8-font-size;
+                                            color: $color-Nav-icon;
+                                            border: 1px solid $color-Nav-icon;
+                                            background-color: $color-White;
+
+                                            @include iphone-5s() {
+                                                font-size: $H12-font-size;
+                                            }
+
+                                            &:hover {
+                                                font-weight: bold;
+                                                background-color: $color-MoreButton-hover;
+                                                color: $color-White;
+                                            }
+                                        }
+                                    }
+
                                     .bottom-delete {
+                                        flex: 0 0 5%;
                                         cursor: pointer;
                                     }
                                 }
@@ -302,6 +450,12 @@ main {
                                     border: 1px solid $color-Nav-icon;
                                     font-size: 18px;
                                     color: $color-Nav-icon;
+
+                                    &:hover {
+                                        font-weight: bold;
+                                        background-color: $color-MoreButton-hover;
+                                        color: $color-White;
+                                    }
                                 }
                             }
 
