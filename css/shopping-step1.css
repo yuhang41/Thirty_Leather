@@ -985,6 +985,7 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:after {
@@ -1019,6 +1020,7 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
 
 main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount {
@@ -1225,7 +1227,6 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
   font-size: 12px;
   color: #444444;
-  margin-bottom: 20px;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
@@ -1233,6 +1234,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
   color: #f7a269;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
@@ -1282,6 +1284,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::before {
@@ -1324,6 +1327,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus {
   color: #ffffff;
+  border: unset;
 }
 
 main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:after {
@@ -1349,6 +1353,14 @@ main .main-container .my-container .other-amount .amount {
 @media (max-width: 790px) {
   main .main-container .my-container .other-amount .amount {
     margin-right: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 620px) {
+  main .main-container .my-container .other-amount .amount {
+    padding: 0px 10px;
     -webkit-transition: 1s;
     transition: 1s;
   }
