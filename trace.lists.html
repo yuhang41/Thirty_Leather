@@ -169,7 +169,7 @@
             <div class="trace-lists d-flex justify-content-center mx-auto">
                 <div class="list-group text-center font-weight-bold" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action" id="list-profile-list"
-                        href="/login.html">會員中心</a>
+                        href="/loginn.html">會員中心</a>
 
                     <a class="list-group-item list-group-item-action active" id="list-traceLists-list"
                         data-toggle="list" href="#list-traceLists" role="tab" aria-controls="traceLists">追蹤清單</a>
@@ -196,19 +196,27 @@
                                         </li>
 
                                         <li class="product-information">
-                                            <div class="information">商品資訊</div>
+                                            <div class="information d-flex">
+                                                <div class="goods">商品</div>
+
+                                                <div class="data">資訊</div>
+                                            </div>
                                         </li>
 
                                         <li class="product-price">
-                                            <div class="price">價格</div>
+                                            <div class="price text-center">價格</div>
                                         </li>
 
                                         <li class="buy-status">
-                                            <div class="status">購買狀態</div>
+                                            <ul class="status d-flex justify-content-center">
+                                                <li class="purchase">購買</li>
+                                                
+                                                <li class="situation">狀態</li>
+                                            </ul>
                                         </li>
 
                                         <li class="product-delete">
-                                            <div class="delete">刪除</div>
+                                            <div class="delete text-center">刪除</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -227,18 +235,23 @@
                                             </ul>
                                         </div>
     
-                                        <div class="top-price mt-3">
+                                        <div class="top-price pt-3 text-center">
                                             <ul>
                                                 <li class="delete-price1">$4280</li>
+
                                                 <li class="modify-price1 font-weight-bold">$2,480</li>
                                             </ul>
                                         </div>
 
-                                        <div class="top-status">
-                                            <div class="status pl-1">已訂閱貨到通知</div>
+                                        <div class="top-status pt-3">
+                                            <ul class="d-flex justify-content-center status1">
+                                                <li class="subscribed">已訂閱</li>
+
+                                                <li class="goods-inform">貨到通知</li>
+                                            </ul>
                                         </div>
     
-                                        <div class="top-delete">
+                                        <div class="top-delete text-center">
                                             <i class="fas fa-trash"></i>
                                         </div>
                                     </div>
@@ -256,18 +269,21 @@
                                             </ul>
                                         </div>
     
-                                        <div class="bottom-price mt-3">
+                                        <div class="bottom-price pt-3 text-center">
                                             <ul>
                                                 <li class="delete-price2">$4680</li>
                                                 <li class="modify-price2 font-weight-bold">$2,680</li>
                                             </ul>
                                         </div>
 
-                                        <div class="bottom-status pl-1">
-                                            <button class="btn btn-sm add-shoppingCart">加入購物車</button>
+                                        <div class="bottom-status d-flex justify-content-center">
+                                            <button class="btn add-shoppingCart d-flex align-items-center justify-content-center">
+                                                <div>加入</div>
+                                                <div>購物車</div>
+                                            </button>
                                         </div>
     
-                                        <div class="bottom-delete">
+                                        <div class="bottom-delete text-center">
                                             <i class="fas fa-trash"></i>
                                         </div>
                                     </div>
