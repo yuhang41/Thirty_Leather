@@ -179,25 +179,25 @@ putcart.addEventListener('click',function(e){
   }      
 });
 
-function cartClick(){
-  putcart.firstChild.data='';
-  check.style.display='block';
-  putcart.style.background='#6ba2f2';
-  orderBuy.classList.add('active');
+function cartClick(){  
+  everyStyle('','block','#6ba2f2','active');
 };
 
 function cartUnclick(){  
   if( orderBuy.className == 'order-buy active'){
-    putcart.firstChild.data='加入購物車';
-    check.style.display='none';
-    putcart.style.background='unset';
-    orderBuy.classList.add('active2');    
-  }
-  
+    everyStyle('加入購物車','none','unset','active2');
+  }  
 };
 function cartDelete(){  
     console.log('刪除');    
     orderBuy.classList.remove('active');
     orderBuy.classList.remove('active2');
     min = true;
+}
+
+function everyStyle(data,display,background,className){
+  putcart.firstChild.data = data;
+  check.style.display= display ;
+  putcart.style.background = background;
+  orderBuy.classList.add( className );
 }
