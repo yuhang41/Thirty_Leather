@@ -151,7 +151,13 @@
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="fas fa-user m-2"></i>
+                <i class="nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">個人訊息</a>
+                            <a class="dropdown-item" href="#">追蹤清單</a>
+                        </div>
+                </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
                     <div class="cart-number">1</div>
@@ -719,7 +725,7 @@
             <!-- 試穿資訊 -->
             <div class="studio-information">
                 <div class="studio-photo col-xl-5">
-                    <div class="photo">
+                    <div class="photo" data-inviewport="scale-in">
                         <img src="img/studio-photo.jpg">
                         <div class="studio-photo-close">X</div>
                     </div>

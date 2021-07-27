@@ -463,13 +463,15 @@ main{
                                                         animation: firework .5s ease forwards .1s;
                                                     }
                                                     &:checked+label>.fa-heart{
-                                                        animation: heart-fold .6s ease-in-out;
+                                                        animation: heart-fold .2s ease-in-out;
                                                         color: $color-Apricot;
                                                     }
                                                 }
                                                 label{
                                                     margin-bottom: unset;
                                                     i{
+                                                        width: 20px;
+                                                        height: 20px;
                                                         cursor: pointer;
                                                         font-size: $H9-font-size;                                
                                                         color: $color-Nav-icon;
@@ -496,11 +498,11 @@ main{
                                             }
                                             @keyframes heart-fold {
                                                 0%{
-                                                    font-size: $H11-font-size;
+                                                    font-size: $H9-font-size;
                                                     color: $color-Nav-icon;
                                                 }
                                                 100%{
-                                                    font-size: $H9-font-size;
+                                                    font-size: $H7-font-size;
                                                     color: $color-Apricot;
                                                 }
                                                 
@@ -683,6 +685,7 @@ main{
                                 }
                                 .order-buy{
                                     display: flex;
+                                    position: relative;
                                     .putcart{
                                         width: 135px;
                                         height: 43px;
@@ -691,7 +694,11 @@ main{
                                         color: $color-IronGray;
                                         font-size: $H7-font-size;
                                         border-radius: 5px;
-                                        margin-right: 20px;                                                                                                                
+                                        margin-right: 20px;
+                                        i{
+                                            display: none;
+                                            color: $color-White;
+                                        }                    
                                     }
                                     .pre-order{                                        
                                         width: 70px;
@@ -708,6 +715,62 @@ main{
                                         }
                                         
                                     }
+                                    &.active.active2::after{
+                                        content: " + 已加入購物車";
+                                        position: absolute;
+                                        top: -80px;
+                                        left: -50px;
+                                        width: 235px;
+                                        height: 60px;
+                                        font-size: $H5-font-size;
+                                        background-color: $color-Deep-Blue;
+                                        color: $color-Shoes-Button;
+                                        border: 1px solid $color-Shoes-Button;
+                                        border-radius: 30px;
+                                        padding: 12px 34px;
+                                        animation: cart-fade-out .3s ease-in-out;
+                                        animation-fill-mode: forwards;
+                                    }
+                                    &.active::after{
+                                        content: " + 已加入購物車";
+                                        position: absolute;
+                                        top: -80px;
+                                        left: -50px;
+                                        width: 235px;
+                                        height: 60px;
+                                        font-size: $H5-font-size;
+                                        background-color: $color-Deep-Blue;
+                                        color: $color-Shoes-Button;
+                                        border: 1px solid $color-Shoes-Button;
+                                        border-radius: 30px;
+                                        padding: 12px 34px;
+                                        animation: cart-fade-in .3s ease-in-out;
+                                    }
+                                              
+                                    @keyframes cart-fade-in {
+                                        0%{
+                                            top: -50px;
+                                            opacity: 0.2;
+                                        }
+                                        100%{
+                                            top: -80px;
+                                            opacity: 1;
+                                        }
+                                        
+                                    }
+                                    @keyframes cart-fade-out {
+                                        0%{
+                                            top: -80px;
+                                            opacity: 1;
+                                        }
+                                        100%{
+                                            top: -50px;
+                                            opacity:0;
+                                        } 
+                                    }
+                                    .hidden-scrollbar::-webkit-scrollbar {
+                                        visibility: hidden;
+                                     }
                                     .pre-order,.putcart{
                                         position: relative;
                                         overflow: hidden;
@@ -2175,18 +2238,22 @@ main{
                                 }
                             }
                             a {
-                                cursor: pointer;
-                                width: 250px;
-                                height: 50px;
-                                color: $color-IronGray;
-                                background-color: unset;
-                                border: 2px solid $color-MoreButton;
-                                border-radius: 45px;
-                                margin: 30px 0px 10px 0px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-decoration: none;
+                                button{
+                                    cursor: pointer;
+                                    width: 250px;
+                                    height: 50px;
+                                    color: $color-IronGray;
+                                    background-color: unset;
+                                    border: 2px solid $color-MoreButton;
+                                    border-radius: 45px;
+                                    margin: 30px 0px 10px 0px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-decoration: none;
+                                    @include button-focus();
+                                    @include button-hover();
+                                }
                             }
                         }
                         @include normal-phone(){

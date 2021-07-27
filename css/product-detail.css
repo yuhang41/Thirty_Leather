@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -515,8 +516,8 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p input[type="checkbox"]:checked + label > .fa-heart {
-  -webkit-animation: heart-fold .6s ease-in-out;
-          animation: heart-fold .6s ease-in-out;
+  -webkit-animation: heart-fold .2s ease-in-out;
+          animation: heart-fold .2s ease-in-out;
   color: #f7a269;
 }
 
@@ -525,6 +526,8 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p label i {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   font-size: 15px;
   color: #65737f;
@@ -568,22 +571,22 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 @-webkit-keyframes heart-fold {
   0% {
-    font-size: 12px;
+    font-size: 15px;
     color: #65737f;
   }
   100% {
-    font-size: 15px;
+    font-size: 18px;
     color: #f7a269;
   }
 }
 
 @keyframes heart-fold {
   0% {
-    font-size: 12px;
+    font-size: 15px;
     color: #65737f;
   }
   100% {
-    font-size: 15px;
+    font-size: 18px;
     color: #f7a269;
   }
 }
@@ -886,6 +889,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart {
@@ -901,6 +905,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart i {
   display: none;
+  color: #ffffff;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order {
@@ -1015,6 +1020,90 @@ main .main-container .product-container .productshop-container .commidity-contai
     -webkit-transition: 1s;
     transition: 1s;
   }
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy.active.active2::after {
+  content: " + 已加入購物車";
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  width: 235px;
+  height: 60px;
+  font-size: 24px;
+  background-color: #1d2335;
+  color: #f5a069;
+  border: 1px solid #f5a069;
+  border-radius: 30px;
+  padding: 12px 34px;
+  -webkit-animation: cart-fade-out .3s ease-in-out;
+          animation: cart-fade-out .3s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy.active::after {
+  content: " + 已加入購物車";
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  width: 235px;
+  height: 60px;
+  font-size: 24px;
+  background-color: #1d2335;
+  color: #f5a069;
+  border: 1px solid #f5a069;
+  border-radius: 30px;
+  padding: 12px 34px;
+  -webkit-animation: cart-fade-in .3s ease-in-out;
+          animation: cart-fade-in .3s ease-in-out;
+}
+
+@-webkit-keyframes cart-fade-in {
+  0% {
+    top: -50px;
+    opacity: 0.2;
+  }
+  100% {
+    top: -80px;
+    opacity: 1;
+  }
+}
+
+@keyframes cart-fade-in {
+  0% {
+    top: -50px;
+    opacity: 0.2;
+  }
+  100% {
+    top: -80px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cart-fade-out {
+  0% {
+    top: -80px;
+    opacity: 1;
+  }
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+@keyframes cart-fade-out {
+  0% {
+    top: -80px;
+    opacity: 1;
+  }
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .hidden-scrollbar::-webkit-scrollbar {
+  visibility: hidden;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart {
@@ -3381,7 +3470,7 @@ main .main-container .product-container .productother-container .other-container
   color: #f7a269;
 }
 
-main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a {
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button {
   cursor: pointer;
   width: 250px;
   height: 50px;
@@ -3400,6 +3489,93 @@ main .main-container .product-container .productother-container .other-container
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(247, 162, 105, 0.25);
+  }
+  100% {
+    background: #f7a269;
+  }
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #f5853b;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:focus {
+  color: #ffffff;
+  border: none;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:focus:after {
+  display: none;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button, main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:hover:after {
+  width: 135%;
+}
+
+main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:hover {
+  color: #ffffff;
+  border: none;
 }
 
 main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card:nth-child(2) img {
