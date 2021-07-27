@@ -316,27 +316,34 @@ main {
                 }
                 .banner-title{
                     margin-bottom: 20px;
+                    width: 427.86px;
+                    height: 49px;
+                    overflow: hidden;
+                    @include bg-iphone(){
+                        width: 244.28px;
+                        height: 27px;
+                    }
                     p{
                         margin: 0px;
                         font-size: $H3-5-font-size;
                         font-weight: $font-Weight-B;
                         letter-spacing: $font-letter-space-100;
                         color: $color-Banner-Card;
+                        transform-origin: 40px 5px;
                         position: relative;
-                        &:after{
-                            content: "";
-                            position: absolute;
-                            bottom: 0px;
-                            left: 0px;
-                            width: 427px;
-                            height: 1px;
-                            background-color: $color-Banner-Card-Line; 
-                            @include bg-iphone(){
-                                bottom: -5px;
-                                left: 0px;
-                                width: 245px;
+                        animation: text-move 1s ease-in-out;
+                        text-align: center;
+                        @keyframes text-move {
+                            0%{
+                                transform-origin: 20px 0px;
+                                transform: rotate(45deg);
+                            }
+                            100%{
+                                transform-origin: 40px 5px;
+                                transform: rotate(0deg);
                             }
                         }
+                        
                         @include bg-iphone(){
                             font-size: $H7-font-size; 
                             color: $color-White;
@@ -347,6 +354,7 @@ main {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    position: relative;
                     button{
                         width: 120px;
                         height: 40px;
@@ -358,11 +366,10 @@ main {
                         border: 1px solid $color-Banner-Card-Line;
                         background-color: unset;
                         margin-bottom: 10px;
+                        @include button-hover();
+                        @include button-focus();
                         @include bg-iphone(){
                             color: $color-White;
-                        }
-                        &:hover{
-                            border: 1px solid $color-Banner-Card-Button-line;
                         }
                     }
                     .text{
@@ -380,6 +387,21 @@ main {
                             }
                         }
                     }
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: -20px;
+                        left: -130px;
+                        width: 427px;
+                        height: 1px;
+                        background-color: $color-Banner-Card-Line;
+                        transform:unset; 
+                        @include bg-iphone(){
+                            bottom: -5px;
+                            left: -38px;
+                            width: 245px;
+                        }
+                    }
                 }
                 &:after{
                     content: "";
@@ -393,6 +415,19 @@ main {
                     animation-direction:reverse;
                     animation-iteration-count: infinite;
                     animation-delay: 2s;
+                    @include single-cart(){
+                        bottom: -295px;
+                        left: unset;
+                        right: 15em; 
+                    }
+                    @include bg-iphone(){
+                        bottom: -360px;
+                        right: 14.5em; 
+                    }
+                    @include iphone-5s(){
+                        bottom: -240px;
+                        right: 10.5em;
+                    }
                 }
                 @keyframes banner-line-grow {
                     0%{
@@ -1858,25 +1893,34 @@ main {
 
                 .photo {
                     position: relative;
-
+                    &[data-inviewport="scale-in"] {
+                        opacity: 0;
+                        transition: 1s;
+                    }
+                    &[data-inviewport="scale-in"].is-inViewport {
+                        opacity: 1;
+                        img{
+                            animation:  photo-fold .6s linear forwards;
+                        }
+                    } 
+                    @keyframes photo-fold {
+                        from{
+                            height: 0px;
+                        }
+                        to{
+                            height: 841px;
+                        }
+                        
+                    }  
                     & img {
                         max-width: 559px;
                         width: 100%;
                         height: 0px;
-                        border-left: 18px solid $color-Apricot;
-                        animation:  photo-fold 1s linear forwards;
-                        @keyframes photo-fold {
-                            from{
-                                height: 0px;
-                            }
-                            to{
-                                height: 868px;
-                            }
-                            
-                        }
+                        border-left: 18px solid $color-Apricot;                      
                         @include tablet() {
                             border: unset;
                         }
+ 
                     }
 
                     .studio-photo-close {

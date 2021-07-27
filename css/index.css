@@ -289,6 +289,18 @@ main .main-container .swiper1 .banner-card {
 
 main .main-container .swiper1 .banner-card .banner-title {
   margin-bottom: 20px;
+  width: 427.86px;
+  height: 49px;
+  overflow: hidden;
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-title {
+    width: 244.28px;
+    height: 27px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .swiper1 .banner-card .banner-title p {
@@ -297,26 +309,41 @@ main .main-container .swiper1 .banner-card .banner-title p {
   font-weight: bold;
   letter-spacing: 1.6px;
   color: #354b5e;
+  -webkit-transform-origin: 40px 5px;
+          transform-origin: 40px 5px;
   position: relative;
+  -webkit-animation: text-move 1s ease-in-out;
+          animation: text-move 1s ease-in-out;
+  text-align: center;
 }
 
-main .main-container .swiper1 .banner-card .banner-title p:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 427px;
-  height: 1px;
-  background-color: #8de1de;
+@-webkit-keyframes text-move {
+  0% {
+    -webkit-transform-origin: 20px 0px;
+            transform-origin: 20px 0px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform-origin: 40px 5px;
+            transform-origin: 40px 5px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
-@media (max-width: 450px) {
-  main .main-container .swiper1 .banner-card .banner-title p:after {
-    bottom: -5px;
-    left: 0px;
-    width: 245px;
-    -webkit-transition: 1s;
-    transition: 1s;
+@keyframes text-move {
+  0% {
+    -webkit-transform-origin: 20px 0px;
+            transform-origin: 20px 0px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform-origin: 40px 5px;
+            transform-origin: 40px 5px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
@@ -340,6 +367,7 @@ main .main-container .swiper1 .banner-card .banner-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 main .main-container .swiper1 .banner-card .banner-content button {
@@ -353,6 +381,100 @@ main .main-container .swiper1 .banner-card .banner-content button {
   border: 1px solid #8de1de;
   background-color: unset;
   margin-bottom: 10px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button, main .main-container .swiper1 .banner-card .banner-content button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button::after {
+  background: #70b9cf;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:hover:after {
+  width: 135%;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:hover {
+  color: #ffffff;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 300ms ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+@-webkit-keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+@keyframes colorFade {
+  0% {
+    background: rgba(112, 185, 207, 0.25);
+  }
+  100% {
+    background: #70b9cf;
+  }
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:focus:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation: colorFade 1s ease-in-out;
+          animation: colorFade 1s ease-in-out;
+  background: #4ca7c3;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:focus {
+  color: #ffffff;
+}
+
+main .main-container .swiper1 .banner-card .banner-content button:focus:after {
+  display: none;
 }
 
 @media (max-width: 450px) {
@@ -361,10 +483,6 @@ main .main-container .swiper1 .banner-card .banner-content button {
     -webkit-transition: 1s;
     transition: 1s;
   }
-}
-
-main .main-container .swiper1 .banner-card .banner-content button:hover {
-  border: 1px solid #DCBEA6;
 }
 
 main .main-container .swiper1 .banner-card .banner-content .text {
@@ -396,6 +514,28 @@ main .main-container .swiper1 .banner-card .banner-content .text p {
   }
 }
 
+main .main-container .swiper1 .banner-card .banner-content:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -130px;
+  width: 427px;
+  height: 1px;
+  background-color: #8de1de;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card .banner-content:after {
+    bottom: -5px;
+    left: -38px;
+    width: 245px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .swiper1 .banner-card:after {
   content: "";
   position: absolute;
@@ -411,6 +551,34 @@ main .main-container .swiper1 .banner-card:after {
           animation-iteration-count: infinite;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+
+@media (max-width: 660px) {
+  main .main-container .swiper1 .banner-card:after {
+    bottom: -295px;
+    left: unset;
+    right: 15em;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 450px) {
+  main .main-container .swiper1 .banner-card:after {
+    bottom: -360px;
+    right: 14.5em;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 320px) {
+  main .main-container .swiper1 .banner-card:after {
+    bottom: -240px;
+    right: 10.5em;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @-webkit-keyframes banner-line-grow {
@@ -1735,15 +1903,6 @@ main .main-container .shoemaking .container .see-more-button button::before {
   -webkit-transition: 300ms ease-in-out;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-}
-
-@-webkit-keyframes colorFade {
-  0% {
-    background: rgba(112, 185, 207, 0.25);
-  }
-  100% {
-    background: #70b9cf;
-  }
 }
 
 @keyframes colorFade {
@@ -3142,13 +3301,19 @@ main .main-container .studio-information .studio-photo .photo {
   position: relative;
 }
 
-main .main-container .studio-information .studio-photo .photo img {
-  max-width: 559px;
-  width: 100%;
-  height: 0px;
-  border-left: 18px solid #f7a269;
-  -webkit-animation: photo-fold 1s linear forwards;
-          animation: photo-fold 1s linear forwards;
+main .main-container .studio-information .studio-photo .photo[data-inviewport="scale-in"] {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .main-container .studio-information .studio-photo .photo[data-inviewport="scale-in"].is-inViewport {
+  opacity: 1;
+}
+
+main .main-container .studio-information .studio-photo .photo[data-inviewport="scale-in"].is-inViewport img {
+  -webkit-animation: photo-fold .6s linear forwards;
+          animation: photo-fold .6s linear forwards;
 }
 
 @-webkit-keyframes photo-fold {
@@ -3156,7 +3321,7 @@ main .main-container .studio-information .studio-photo .photo img {
     height: 0px;
   }
   to {
-    height: 868px;
+    height: 841px;
   }
 }
 
@@ -3165,8 +3330,15 @@ main .main-container .studio-information .studio-photo .photo img {
     height: 0px;
   }
   to {
-    height: 868px;
+    height: 841px;
   }
+}
+
+main .main-container .studio-information .studio-photo .photo img {
+  max-width: 559px;
+  width: 100%;
+  height: 0px;
+  border-left: 18px solid #f7a269;
 }
 
 @media (max-width: 1350px) {

@@ -310,8 +310,8 @@
                                                 <p>5.0分</p>
                                                 <p><a href="#eval">1個評價</a></p>
                                                 <p>
-                                                    <input type="checkbox" id="star2">
-                                                    <label for="star2">
+                                                    <input type="checkbox" id="heart">
+                                                    <label for="heart">
                                                         <i class="fas fa-heart">
                                                         </i>
                                                     </label>
@@ -393,13 +393,18 @@
                             </div>
                             <div class="order-shipping">
                                 <div class="order-button">
-                                    <div class="order-buy">                                        
-                                        <button  class="putcart">
-                                            加入購物車                                            
+                                    <div class="order-buy">   
+                                        <button  class="putcart clickable" onclick="M.toast({html: 'I am a toast'})">
+                                            加入購物車
+                                            <i class="fas fa-check"></i>
+                                            <div class="anim"></div>
                                         </button>
                                         <button class="pre-order">
                                             預購                                            
                                         </button>
+                                        <!-- <div class="buy-cart">
+                                            + 已加入購物車
+                                        </div> -->
                                     </div>
                                     <div class="order-amount">
                                         <button type="button" class="btn minus-btn">-</button>

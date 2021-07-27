@@ -156,7 +156,45 @@ size_radios.forEach(radio=>{
 
 //加入購物車效果
 let putcart = document.querySelector('.putcart');
+let check = document.querySelector('.fa-check');
+let orderBuy = document.querySelector('.order-buy')
+let cartText = window.getComputedStyle(orderBuy,'::after');
+let min = false;
+console.log(cartText);
+
 putcart.addEventListener('click',function(e){
-  console.log(e);
-  putcart.firstChild.data='';
+  cartClick();
+  window.setTimeout(function(){
+    cartUnclick();
+  },500)
+  cartDelete();
+    
 });
+
+function cartClick(){
+  putcart.firstChild.data='';
+  check.style.display='block';
+  putcart.style.background='#6ba2f2';
+  orderBuy.classList.add('active');
+};
+
+function cartUnclick(){
+  if( orderBuy.className == 'order-buy active'){
+    putcart.firstChild.data='加入購物車';
+    check.style.display='none';
+    putcart.style.background='unset';
+    orderBuy.classList.add('active2');
+    min = true;
+  }
+  
+};
+function cartDelete(){
+  if(min){
+    putcart.firstChild.data='加入購物車';
+    check.style.display='none';
+    putcart.style.background='unset';
+    orderBuy.classList.remove('active');
+    orderBuy.classList.remove('active2');
+    min = false;
+  }
+}
