@@ -14,7 +14,7 @@
 }
 // 大平板尺寸
 @mixin tablet {
-    @media (max-width: 1350px) {
+    @media (max-width: 1150px) {
         @content;
         transition: 1s;
     }
@@ -42,7 +42,9 @@
 }
 //鞋子卡片的樣式
 @mixin shoes-content {
-    width: 275px;
+    max-width: 275px;
+    min-width: 230px;
+    width: 100%;
     height: 275px;
     background-color: $color-White-opacity;
     margin-bottom: 150px;
@@ -53,10 +55,10 @@
     align-items: center;
     text-align: center;
     z-index: 2;
-    @include tablet(){
-        width: 260px;
-        height: 260px;
-    }
+    // @include tablet(){
+    //     width: 260px;
+    //     height: 260px;
+    // }
     img {
         position: absolute;
         width: 215px;
@@ -65,9 +67,9 @@
         left: 50%;
         object-position: center;
         transform: translate(-50%,0);
-        @include tablet(){
-            width: 200px;
-        }
+        // @include tablet(){
+        //     width: 200px;
+        // }
     }
     .content {
         .text {
@@ -106,17 +108,19 @@
         }
     }
     a{
+        max-width: 235px;
+        width: 100%;
+        margin: 30px 0px 10px 0px;
         &:hover{
             text-decoration: none;
         }
         button{
-            width: 235px;
+            width: 100%;
             height: 50px;
             color: $color-IronGray;
             background-color: unset;
             border: 2px solid $color-MoreButton;
-            border-radius: 45px;
-            margin: 30px 0px 10px 0px;
+            border-radius: 45px;            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -235,7 +239,7 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
-            @include tablet(){
+            @include sm-tablet(){
                 display: none;
             }
             .all-commodity{
@@ -295,9 +299,9 @@ main{
             width: 100%;
             background: $color-LightGray;
             padding-top: 85px;
-            padding-right: 11.5vw;
+            // padding-right: 11.5vw;
             padding-left: 2.6vw;
-            @include tablet(){
+            @include sm-tablet(){
                 max-width: unset;
                 padding: 85px 2.6vw 0px 2.6vw;
             }
@@ -322,30 +326,44 @@ main{
                 }
             }
             .product-container-card{
+                max-width: 1293px;
                 width: 100%;
-                padding-left: 5.5vw;
-                padding-top: 100px;            
+                margin-right: auto;
+                padding-left: 6.9%;              
+                padding-right: 3.9%;
+                padding-top: 120px;            
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                @include notebook(){
-                    padding-top: 120px;
-                }
-                @include tablet(){
+                
+                @include sm-tablet(){
                     padding-left: unset;
+                    padding-right: unset;
                 } 
-                @include card-change(){
-                    flex-direction: column;
-                } 
-                .product-card {
-                    @include shoes-content();
+                // @include card-change(){
+                //     flex-direction: column;
+                // }
+                .product-card-spacing{
+                    flex: 0 0 25%;
+                    // max-width: 295px;
+                    // min-width: 250px;
+                    // width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;                
                     @include card-change(){
-                        &:nth-child(n+5){
-                            display: none;
-                        }
-                    }                    
-                }  
+                        flex: 0 0 60%;
+                    }
+                    .product-card {
+                        @include shoes-content();
+                        @include card-change(){
+                            &:nth-child(n+5){
+                                display: none;
+                            }
+                        }                    
+                    }
+                }                
             }
             .pagination{
                 width: 100%;

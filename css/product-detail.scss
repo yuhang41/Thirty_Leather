@@ -714,6 +714,21 @@ main{
                                             margin-right: 20px;
                                         }
                                         
+                                    }                                    
+                                    &.active::after{
+                                        content: " + 已加入購物車";
+                                        position: absolute;
+                                        top: -80px;
+                                        left: -50px;
+                                        width: 235px;
+                                        height: 60px;
+                                        font-size: $H5-font-size;
+                                        background-color: $color-Deep-Blue;
+                                        color: $color-Shoes-Button;
+                                        border: 1px solid $color-Shoes-Button;
+                                        border-radius: 30px;
+                                        padding: 12px 34px;
+                                        animation: cart-fade-in .3s ease-in-out;
                                     }
                                     &.active.active2::after{
                                         content: " + 已加入購物車";
@@ -730,21 +745,6 @@ main{
                                         padding: 12px 34px;
                                         animation: cart-fade-out .3s ease-in-out;
                                         animation-fill-mode: forwards;
-                                    }
-                                    &.active::after{
-                                        content: " + 已加入購物車";
-                                        position: absolute;
-                                        top: -80px;
-                                        left: -50px;
-                                        width: 235px;
-                                        height: 60px;
-                                        font-size: $H5-font-size;
-                                        background-color: $color-Deep-Blue;
-                                        color: $color-Shoes-Button;
-                                        border: 1px solid $color-Shoes-Button;
-                                        border-radius: 30px;
-                                        padding: 12px 34px;
-                                        animation: cart-fade-in .3s ease-in-out;
                                     }
                                               
                                     @keyframes cart-fade-in {

@@ -159,16 +159,24 @@ let putcart = document.querySelector('.putcart');
 let check = document.querySelector('.fa-check');
 let orderBuy = document.querySelector('.order-buy')
 let cartText = window.getComputedStyle(orderBuy,'::after');
-let min = false;
-console.log(cartText);
+let min = true;
 
 putcart.addEventListener('click',function(e){
-  cartClick();
-  window.setTimeout(function(){
-    cartUnclick();
-  },500)
-  cartDelete();
-    
+  if(min){
+    min = false;
+    cartClick();
+    let promise = new Promise((resolve)=>{
+      window.setTimeout(function(){
+        cartUnclick();
+        return resolve();
+      },2000)    
+    })
+    promise.then(()=>{
+      window.setTimeout(function(){
+        cartDelete();
+      },500)       
+    });
+  }      
 });
 
 function cartClick(){
@@ -178,23 +186,18 @@ function cartClick(){
   orderBuy.classList.add('active');
 };
 
-function cartUnclick(){
+function cartUnclick(){  
   if( orderBuy.className == 'order-buy active'){
     putcart.firstChild.data='加入購物車';
     check.style.display='none';
     putcart.style.background='unset';
-    orderBuy.classList.add('active2');
-    min = true;
+    orderBuy.classList.add('active2');    
   }
   
 };
-function cartDelete(){
-  if(min){
-    putcart.firstChild.data='加入購物車';
-    check.style.display='none';
-    putcart.style.background='unset';
+function cartDelete(){  
+    console.log('刪除');    
     orderBuy.classList.remove('active');
     orderBuy.classList.remove('active2');
-    min = false;
-  }
+    min = true;
 }
