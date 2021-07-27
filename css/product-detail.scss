@@ -634,7 +634,7 @@ main{
                                                 }
                                                 label{                                                                                        
                                                     text-align: center;
-                                                    flex: 16%;
+                                                    flex: 0 0 16%;
                                                     border-radius: 5px;
                                                     cursor: pointer;
                                                     &:hover{
@@ -691,7 +691,9 @@ main{
                                         color: $color-IronGray;
                                         font-size: $H7-font-size;
                                         border-radius: 5px;
-                                        margin-right: 20px;                                                                                                                
+                                        margin-right: 20px;
+                                        @include button-focus();
+                                        @include button-hover();
                                     }
                                     .pre-order{                                        
                                         width: 70px;
@@ -707,96 +709,7 @@ main{
                                             margin-right: 20px;
                                         }
                                         
-                                    }
-                                    .pre-order,.putcart{
-                                        position: relative;
-                                        overflow: hidden;
-                                        z-index: 0;
-                                        .anim {
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            z-index: -1;
-                                            transform: translate(-50%,-50%);
-                                        
-                                            &:before {
-                                                position: relative;
-                                                content: '';
-                                                display: block;
-                                                margin-top: 100%;
-                                            }
-                                            
-                                            &:after {
-                                                content: '';
-                                                position: absolute;
-                                                top: 0;
-                                                bottom:0;
-                                                left: 0;
-                                                right: 0;
-                                                border-radius: 50%;
-                                            }
-                                        }
                                     }                                    
-                                    .clickable {
-                                        .anim {    
-                                            animation:anim-in .75s;
-                                            &:after {         
-                                                animation:anim-in-pseudo .75s;
-                                            }
-                                        }
-                                        .anim{
-                                            &.active{
-                                                animation:anim-out .75s;
-                                                &:after {         
-                                                    animation:anim-out-pseudo .75s;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    @keyframes anim-in
-                                    {
-                                        0%
-                                        {
-                                            width: 0%;
-                                        }
-                                        100%
-                                        {
-                                            width: 100%;
-                                        }
-                                    }
-                                    @keyframes anim-in-pseudo
-                                    {
-                                        0%
-                                        {
-                                            background: rgba(#000,0.25);
-                                        }
-                                        100%
-                                        {
-                                            background: rgba(#000,0);
-                                        }
-                                    }
-                                    @keyframes anim-out
-                                    {
-                                        0%
-                                        {
-                                            width: 0%;
-                                        }
-                                        100%
-                                        {
-                                            width: 100%;
-                                        }
-                                    }
-                                    @keyframes anim-out-pseudo
-                                    {
-                                        0%
-                                        {
-                                            background: rgba(#000,0.25);
-                                        }
-                                        100%
-                                        {
-                                            background: rgba(#000,0);
-                                        }
-                                    }
                                 }
                                 .order-amount{
                                     display: flex;
@@ -2175,18 +2088,25 @@ main{
                                 }
                             }
                             a {
-                                cursor: pointer;
-                                width: 250px;
-                                height: 50px;
-                                color: $color-IronGray;
-                                background-color: unset;
-                                border: 2px solid $color-MoreButton;
-                                border-radius: 45px;
-                                margin: 30px 0px 10px 0px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-decoration: none;
+                                cursor: pointer;                            
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                                button{
+                                    width: 235px;
+                                    height: 50px;
+                                    color: $color-IronGray;
+                                    background-color: unset;
+                                    border: 2px solid $color-MoreButton;
+                                    border-radius: 45px;
+                                    margin: 30px 0px 10px 0px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    @include button-focus();
+                                    @include button-hover();
+                                    
+                                }
                             }
                         }
                         @include normal-phone(){

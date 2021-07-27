@@ -146,16 +146,17 @@ size_radios.forEach(radio=>{
 });
 
 //加入購物車效果
-let clickables = document.querySelectorAll('.clickable');
-let anim = document.querySelectorAll('.anim');
-clickables.forEach((clickable,index) =>{
-    clickable.addEventListener('click',()=>{
-        anim[index].classList.toggle('active');
-    });
-});
+// let clickables = document.querySelectorAll('.clickable');
+// let anim = document.querySelectorAll('.anim');
+// clickables.forEach((clickable,index) =>{
+//     clickable.addEventListener('click',()=>{
+//         anim[index].classList.toggle('active');
+//     });
+// });
 
 //加入購物車效果
 let putcart = document.querySelector('.putcart');
-putcart.addEventListener('click',function(){
+putcart.addEventListener('click',function(e){
+  console.log(e);
   putcart.firstChild.data='';
 });
