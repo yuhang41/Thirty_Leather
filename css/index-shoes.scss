@@ -9,21 +9,21 @@
         outline: none;
     }
 }
-//1800
-@mixin bg-screen {
-    @media(max-width:1800px){
+//1350
+@mixin bg-screen{
+    @media(max-width:1350px){
         @content;
         transition: 1s;
     }
 }
-//1450
+//1250
 @mixin sm-screen{
-    @media(max-width:1450px){
+    @media(max-width:1250px){
         @content;
         transition: 1s;
     }
 }
-// 1024
+//1024
 @mixin tablet {
     @media(max-width:1024px){
         @content;
@@ -37,9 +37,9 @@
         transition: 1s;
     }
 }
-//700
+//720
 @mixin normal-phone {
-    @media(max-width:700px){
+    @media(max-width:720px){
         @content;
         transition: 1s;
     }
@@ -60,7 +60,7 @@
 }
 nav{
     background-color: $color-LightGray;
-    margin-left:146px;
+    margin-left:8vw;
     @include tablet(){
         margin-left:unset;
     }
@@ -97,387 +97,376 @@ nav{
     }
 }
 main{
-    min-height: 969px;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    .shoes-sketch{
-        position: relative;
-        overflow: visible;
-        @include bg-screen(){
-            display: none;
-        }
-        img{
-            position: absolute;
-            top: 340px;
-            left: -320px;
-            width: 700px;
-            z-index: 1;
-        }
-    }
     .main-container{
-        max-width: calc(100% - 146px);
-        width: 100%;
-        background: $color-LightGray;
-        padding-top: 150px;
-        padding-left: 2.6vw;
+        padding-left: 8vw;
         position: relative;
         overflow: hidden;
         transition: 1s;
         @include tablet(){
-        max-width: calc(100% - 58px);
+            padding-left: 6vw;
         }
         @include bg-phone(){
-            max-width: 100%;
+          
         }
         @include normal-phone(){
-            padding:150px 2.6vw 0px 2.6vw ;
-        }
-        @include sm-phone(){
-            padding-top: 75px;
             padding-left: unset;
-            padding-right: unset;
         }
-        .shoes-article{
-            display: flex;
+        .content-container{
+            min-height: 969px;
+            background-color: $color-LightGray;
+            padding:100px 0px 20px 1.5em; 
             @include normal-phone(){
-               justify-content: center;
+                padding:50px 0.5px 20px 0.5em;  
             }
-            .article-container{
-                .article-title{
-                    display: flex;
-                    transition: 1s;
-                    margin-bottom: 20px;
-                    @include bg-phone(){
-                        flex-direction: column;
-                    }
-                    @include normal-phone(){
-                        align-items: center;
-                    }
-                    @include sm-phone(){
-                        margin-bottom: 10px;
-                    }
-                    p{
-                        font-size: $H3-font-size;
-                        font-weight: $font-Weight-B;
-                        letter-spacing: $font-letter-space-200;
-                        color:$color-Product-Detail-Title;
-                        margin:0px;
-                        @include sm-phone(){
-                            font-size: $H6-font-size;   
-                        }
-                    } 
+            .shoes-article{
+                display: flex;
+                      
+                @include normal-phone(){
+                   justify-content: center;
                 }
-                .article-content{
-                    max-width: 737px;
-                    text-align: justify;
-                    transition: 1s;
-                    @include bg-phone(){
-                        max-width: 650px;
-                    }
-                    @include normal-phone(){
-                        max-width: 500px;
-                    }
-                    @include sm-phone(){
-                        max-width: 300px;
-                    }
-                    p{
-                        font-size: $H10-font-size;
-                        letter-spacing: $font-letter-space-100;
-                        line-height: 26px;
-                        color: $color-IronGray;
-                    }
-                }
-            }
-            .decoration-line{
-                position: relative;
-                svg{
-                    position: absolute;
-                    top: 25px;
-                    left: 20px;
-                    width:1000px;
-                    transition: 1s;
-                    @include sm-screen(){
-                        top: 174px;
-                        left: unset;
-                        right: -483px;
-                        width: 1200px;
-                    }
-                    @include bg-phone(){
-                        top: 257px;
-                        right: -720px;
-                    }
-                    @include normal-phone(){
-                        display: none;
-                    }
-                    .curve{
-                        fill-opacity: 0;
-                        stroke: $color-Background-line;
-                        stroke-width: 2px;
-                        stroke-dashoffset: 0;
-                        stroke-dasharray: 4000;
-                        animation: curve 4s ease-in-out;
-                    }
-                    @keyframes curve {
-                        0% {
-                            stroke-dashoffset: 4000;
-                        }
-
-                        100% {
-                            stroke-dashoffset: 0;
-                        }
-                    }
-                }
-            }
-        }
-        .shoes-img-display{
-            margin-top: 40px;
-            @include sm-phone(){
-                margin-top: 100px;
-            }
-            .shoes-article-swiper{   
-                .inner-content{
-                    height: 384px;
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-bottom: 60px;
-                    flex-wrap: wrap;
-                    @include sm-screen(){
-                        height: unset;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                    }
-                  
-                    //文字的swiper
-                    .development-process-content{
-                        max-width: 375px;
-                        flex: 0 0 50%;
+                .article-container{
+                    .article-title{
+                        display: flex;
                         transition: 1s;
-                        @include sm-screen(){
-                            margin-bottom: 100px;
+                        margin-bottom: 20px;
+                        @include bg-phone(){
+                            flex-direction: column;
                         }
                         @include normal-phone(){
-                            max-width: unset;
+                            align-items: center;
                         }
                         @include sm-phone(){
-                            margin-bottom: 0px;
+                            margin-bottom: 10px;
                         }
-                        .swiper-container{
-                            width: 600px;
-                            z-index: 2;
+                        p{
+                            font-size: $H3-font-size;
+                            font-weight: $font-Weight-B;
+                            letter-spacing: $font-letter-space-200;
+                            color:$color-Product-Detail-Title;
+                            margin:0px;
                             @include sm-phone(){
-                                width: 300px;
-                                margin: auto;
+                                font-size: $H6-font-size;   
                             }
-                            .swiper-wrapper{
-                                .swiper-slide{
-                                    .development-process-title{
-                                        margin-bottom: 20px;
-                                        p{
-                                            display: inline-block;
-                                            color: $color-Evaluation-Star;
-                                            font-size: $H7-font-size;
-                                            border-bottom: 1px solid $color-Evaluation-Star;
-                                        }
-                                        h2{                             
-                                            font-size: $H3-font-size;
-                                            font-weight: $font-Weight-B;
-                                            margin:0;            
-                                            @include sm-phone(){
-                                                font-size: $H5-font-size;
-                                                line-height: 21px;
-                                            }      
-                                        }
-                                    }
-                                    .development-process-list{
-                                        margin-bottom: 20px;
-                                        @include sm-phone(){
-                                            margin-bottom: 5px;
-                                        }
-                                        p{
-                                            color: $color-Product-Detail-Title;
-                                            font-size: $H7-font-size;
-                                            font-weight: $font-Weight-B;
-                                            letter-spacing: $font-letter-space-100;
-                                            line-height: 30px;
-                                            margin: 0;    
-                                            @include sm-phone(){
-                                                font-size: $H11-font-size;
-                                                line-height: 21px;
-                                            }                                                
-                                        }      
-                                    }
-                                    .development-process-text{
-                                        z-index: 5;
-                                        @include sm-phone(){
-                                            display: flex;
-                                            justify-content: flex-end;
-                                        }
-                                        button{
-                                            width: 120px;
-                                            height: 50px;
-                                            border-radius: 8px;
-                                            border: 1px solid $color-WedgwoodBlue;
-                                            font-size: $H7-font-size;
-                                            color: $color-IronGray;
-                                            background-color: unset;
-                                            margin-top: 119px;
-                                            line-height: 26px;
-                                            letter-spacing: $font-letter-space-50;
-                                            &:hover{
-                                                color: $color-White;
-                                                background-color: $color-Evaluation-Star;
-                                                border: none;
-                                            }
-                                            @include sm-phone(){
-                                                margin-top: 5px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }                                                                    
-                        }                                
+                        } 
                     }
-                    //圖片的swiper
-                    .development-process-swiper{
-                        flex: 0 0 55%;
-                        padding-left: 20px;
-                        position: relative;
+                    .article-content{
+                        max-width: 737px;
+                        text-align: justify;
                         transition: 1s;
-                        @include sm-screen(){
-                            padding-left: 0px;
+                        @include bg-phone(){
+                            max-width: 650px;
                         }
-                        .swiper-container {
-                            width: 865px;
-                            height: 384px;
-                            margin-bottom: 50px;
-                            margin-right: 0px;
-                            @include sm-screen(){
-                                margin-left: unset;
-                                width: 100vw;
-                            }
-                            @include sm-phone(){
-                                margin: unset;
-                                height: unset;
-                            }
+                        @include normal-phone(){
+                            max-width: 500px;
                         }
-                        .swiper-slide {
-                            width: 664px;
-                            height: unset;
-                           @include sm-phone(){
-                               width: unset;
-                               height: 50%;
-                               margin-top: 20px;
-                               margin-right: unset;
-                           }
-
+                        @include sm-phone(){
+                            max-width: 300px;
                         }
-                        .swiper-slide img {
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            @include normal-phone(){
-                            object-fit: contain;
-                            }
+                        p{
+                            font-size: $H10-font-size;
+                            letter-spacing: $font-letter-space-100;
+                            line-height: 26px;
+                            color: $color-IronGray;
                         }
-                        &:before{
-                            content: "";
-                            position: absolute;
-                            top: 0px;
-                            left: -179px;
-                            width: 300px;
-                            height: 384px;
-                            background-color: $color-Parallelogram;
-                            transform: skewX(-40deg);
-                            z-index: 1;
-                            opacity: 0.5;
-                            @include sm-screen(){
-                                top: unset;
-                                bottom: 500px;
-                                left: 179px;
-                            }
-                            @include sm-phone(){
-                                display: none;
-                            }
+                    }
+                }
+                .decoration-line{  
+                    position: relative;       
+                    svg{
+                        position: absolute;
+                        top: 17px;
+                        left: 1vw;
+                        width:1000px;
+                        transition: 1s;
+                        @include bg-screen(){
+                            top: 174px;
+                            left: unset;
+                            right: -483px;
+                            width: 1200px;
                         }
-                        .swiper-step{
-                            display: flex;
-                            width: 865px;
-                            margin-left: auto;
-                            @include sm-screen(){
-                                position: absolute;
-                                top: -60px;
-                                left: 0px;
+                        @include bg-phone(){
+                            top: 257px;
+                            right: -720px;
+                        }
+                        @include normal-phone(){
+                            display: none;
+                        }
+                        .curve{
+                            fill-opacity: 0;
+                            stroke: $color-Background-line;
+                            stroke-width: 2px;
+                            stroke-dashoffset: 0;
+                            stroke-dasharray: 4000;
+                            animation: curve 4s ease-in-out;
+                        }
+                        @keyframes curve {
+                            0% {
+                                stroke-dashoffset: 4000;
                             }
-                            @include normal-phone(){
-                                width: 555px;
-                                left: 5vw;
-                            }
-                            @include sm-phone(){
-                                width: 100%;
-                                top: -300px;
-                                left: 11vw;
-                            }
-                            .swiper-step-button{
-                                flex:0 0 94%;
-                                display: flex;
-                                justify-content: space-between;
-                                .pagination-next{
-                                    position: relative;
-                                    flex: 0 0 76%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    transition: 1s;
-                                    @include sm-screen(){
-                                        flex: 0 0 80%;  
-                                    }
-                                    .swiper-pagination-bullet{
-                                        position: relative;
-                                        z-index: 2;
-                                        background: $color-IronGray;
-                                        border-radius: 0px;
-                                        opacity: 1;
-                                        width: 15px;
-                                        height: 15px;
-                                        p{
-                                            position: absolute;
-                                            top:20px;
-                                            left: 50%;
-                                            transform: translateX(-50%);
-                                            white-space:nowrap;                                          
-                                        }
-                                        &.swiper-pagination-bullet-active{
-                                            color:$color-Evaluation-Star;
-                                            background: $color-Evaluation-Star;
-                                        }                                        
-                                    }
-                                    &::before{
-                                        content: '';
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 0;
-                                        transform: translate(0,-50%);                                        
-                                        width: 100%;
-                                        height: 2px;                       
-                                        background: $color-IronGray;
-                                    }
-                                }
-                                .button-next{
-                                    text-align: center;
-                                    flex: 0 0 22%;
-                                    @include sm-phone(){
-                                        display: none;
-                                    }                                    
-                                }
+    
+                            100% {
+                                stroke-dashoffset: 0;
                             }
                         }
                     }
                 }
-                
+            }
+            .shoes-img-display{
+                position: relative;
+                margin-top: 40px;
+                @include sm-phone(){
+                    margin-top: 100px;
+                }
+                .shoes-article-swiper{   
+                    .inner-content{
+                        height: 384px;
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-bottom: 60px; 
+                        @include bg-screen(){
+                            justify-content: unset;
+                        }
+                        @include sm-screen(){
+                            height: unset;
+                            flex-direction: column;
+                        }                     
+                        //文字的swiper
+                        .development-process-content{
+                            max-width: 375px;
+                            flex: 0 0 50%;
+                            transition: 1s;
+                            margin-right: 50px;
+                            @include sm-screen(){
+                                margin-bottom: 100px;
+                            }
+                            @include normal-phone(){
+                                max-width: unset;
+                            }
+                            @include sm-phone(){
+                                margin-bottom: 0px;
+                            }
+                            .swiper-container{
+                                width: 430px;
+                                z-index: 2;
+                                @include sm-phone(){
+                                    width: 300px;
+                                    margin: auto;
+                                }
+                                .swiper-wrapper{
+                                    .swiper-slide{
+                                        .development-process-title{
+                                            margin-bottom: 20px;
+                                            p{
+                                                display: inline-block;
+                                                color: $color-Evaluation-Star;
+                                                font-size: $H7-font-size;
+                                                border-bottom: 1px solid $color-Evaluation-Star;
+                                            }
+                                            h2{                             
+                                                font-size: $H3-font-size;
+                                                font-weight: $font-Weight-B;
+                                                margin:0;            
+                                                @include sm-phone(){
+                                                    font-size: $H5-font-size;
+                                                    line-height: 21px;
+                                                }      
+                                            }
+                                        }
+                                        .development-process-list{
+                                            margin-bottom: 20px;
+                                            @include sm-phone(){
+                                                margin-bottom: 5px;
+                                            }
+                                            p{
+                                                color: $color-Product-Detail-Title;
+                                                font-size: $H7-font-size;
+                                                font-weight: $font-Weight-B;
+                                                letter-spacing: $font-letter-space-100;
+                                                line-height: 30px;
+                                                margin: 0;    
+                                                @include sm-phone(){
+                                                    font-size: $H11-font-size;
+                                                    line-height: 21px;
+                                                }                                                
+                                            }      
+                                        }
+                                        .development-process-text{
+                                            z-index: 5;
+                                            @include sm-phone(){
+                                                display: flex;
+                                                justify-content: flex-end;
+                                            }
+                                            button{
+                                                width: 120px;
+                                                height: 50px;
+                                                border-radius: 8px;
+                                                border: 1px solid $color-WedgwoodBlue;
+                                                font-size: $H7-font-size;
+                                                color: $color-IronGray;
+                                                background-color: unset;
+                                                margin-top: 119px;
+                                                line-height: 26px;
+                                                letter-spacing: $font-letter-space-50;
+                                                &:hover{
+                                                    color: $color-White;
+                                                    background-color: $color-Evaluation-Star;
+                                                    border: none;
+                                                }
+                                                @include sm-phone(){
+                                                    margin-top: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }                                                                    
+                            }                                
+                        }
+                        //圖片的swiper
+                        .development-process-swiper{
+                            flex: 0 0 55%;
+                            padding-left: 20px;
+                            position: relative;
+                            transition: 1s;
+                            @include sm-screen(){
+                                padding-left: unset;
+                            }
+                            .swiper-container {
+                                width: 765px;
+                                height: 384px;
+                                margin-bottom: 50px;
+                                margin-right: 0px;
+                                @include sm-screen(){
+                                  width: unset;  
+                                }
+                                @include sm-phone(){
+                                    margin: unset;
+                                    height: unset;
+                                }
+                            }
+                            .swiper-slide {
+                                width: 664px;
+                                height: unset;
+                               @include sm-phone(){
+                                   width: unset;
+                                   height: 50%;
+                                   margin-top: 20px;
+                                   margin-right: unset;
+                               }
+    
+                            }
+                            .swiper-slide img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                @include normal-phone(){
+                                object-fit: contain;
+                                }
+                            }
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: 0px;
+                                left: -179px;
+                                width: 300px;
+                                height: 384px;
+                                background-color: $color-Parallelogram;
+                                transform: skewX(-40deg);
+                                z-index: 1;
+                                opacity: 0.5;
+                                transition: 1s;
+                                @include sm-screen(){
+                                    top: -450px;
+                                    left: 200px;
+                                }
+                                @include sm-phone(){
+                                    display: none;
+                                }
+                            }
+                            .swiper-step{
+                                display: flex;
+                                width: 765px;
+                                margin-left: auto;
+                                transition: 1s;
+                                @include sm-screen(){
+                                    position: absolute;
+                                    top: -70px;
+                                }
+                                @include normal-phone(){
+                                    width: 100vw;
+                                    left: 5vw;
+                                }
+                                @include sm-phone(){
+                                    width: 100%;
+                                    top: -300px;
+                                    left: 11vw;
+                                }
+                                .swiper-step-button{
+                                    flex:0 0 94%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .pagination-next{
+                                        position: relative;
+                                        flex: 0 0 76%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        transition: 1s;
+                                        .swiper-pagination-bullet{
+                                            position: relative;
+                                            z-index: 2;
+                                            background: $color-IronGray;
+                                            border-radius: 0px;
+                                            opacity: 1;
+                                            width: 15px;
+                                            height: 15px;
+                                            p{
+                                                position: absolute;
+                                                top:20px;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                white-space:nowrap;                                          
+                                            }
+                                            &.swiper-pagination-bullet-active{
+                                                color:$color-Evaluation-Star;
+                                                background: $color-Evaluation-Star;
+                                            }                                        
+                                        }
+                                        &::before{
+                                            content: '';
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translate(0,-50%);                                        
+                                            width: 100%;
+                                            height: 2px;                       
+                                            background: $color-IronGray;
+                                        }
+                                    }
+                                    .button-next{
+                                        text-align: center;
+                                        flex: 0 0 22%;
+                                        @include sm-phone(){
+                                            display: none;
+                                        }                                    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .shoes-sketch{
+                    position: absolute;
+                    top: 0px;
+                    right: 1400px;
+                    img{
+                        width: 700px;
+                    }
+                }
             }
         }
+        
     }
 }
 footer{
