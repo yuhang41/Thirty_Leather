@@ -165,12 +165,14 @@ putcart.addEventListener('click',function(e){
   if(min){
     min = false;
     cartClick();
+    
     let promise = new Promise((resolve)=>{
       window.setTimeout(function(){
         cartUnclick();
         return resolve();
       },2000)    
     })
+
     promise.then(()=>{
       window.setTimeout(function(){
         cartDelete();
@@ -197,7 +199,7 @@ function cartDelete(){
 
 function everyStyle(data,display,background,className){
   putcart.firstChild.data = data;
-  check.style.display= display ;
+  check.style.display = display ;
   putcart.style.background = background;
   orderBuy.classList.add( className );
 }
