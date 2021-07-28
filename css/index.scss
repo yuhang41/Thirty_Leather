@@ -173,6 +173,11 @@ nav {
             @include sm-phone() {
                 padding: 0px;
             }
+            &-nav{
+                .nav-link{
+                    padding:0px 1em;
+                }
+            }
         }
         .logo {
             width: 58px;
@@ -761,11 +766,6 @@ main {
                             animation: scissors 4s ease-in-out;
                             animation: mind 4s ease-in-out;
                         }
-                        // .scissor-color{
-                        //     transition-delay: 1s;
-                        //     animation: scissors-color 4s ease-in-out;
-                        //     fill-opacity: 1;
-                        // }
                     }
                     @keyframes scissors {
                         0% {
@@ -1302,7 +1302,6 @@ main {
                     stroke-dasharray: 4000;
                 }
                 &[data-inviewport="scale-in"] {
-                    opacity: 0;
                     transition: 1s;
                 }
                 &[data-inviewport="scale-in"].is-inViewport {
@@ -1893,30 +1892,27 @@ main {
 
                 .photo {
                     position: relative;
-                    &[data-inviewport="scale-in"] {
-                        opacity: 0;
-                        transition: 1s;
-                    }
-                    &[data-inviewport="scale-in"].is-inViewport {
-                        opacity: 1;
-                        img{
-                            animation:  photo-fold .6s linear forwards;
-                        }
-                    } 
-                    @keyframes photo-fold {
-                        from{
-                            height: 0px;
-                        }
-                        to{
-                            height: 841px;
-                        }
-                        
-                    }  
                     & img {
                         max-width: 559px;
                         width: 100%;
                         height: 0px;
-                        border-left: 18px solid $color-Apricot;                      
+                        border-left: 18px solid $color-Apricot;    
+                        &[data-inviewport="scale-in"] {
+                            transition: 1s;
+                        }
+                        &[data-inviewport="scale-in"].is-inViewport {
+                            opacity: 1;
+                            animation:  photo-fold .6s linear forwards; 
+                        } 
+                        @keyframes photo-fold {
+                            from{
+                                height: 0px;
+                            }
+                            to{
+                                height: 841px;
+                            }
+                            
+                        }                    
                         @include tablet() {
                             border: unset;
                         }

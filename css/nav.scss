@@ -123,6 +123,20 @@ nav{
                 font-size: $H10-font-size; 
                 letter-spacing: $font-letter-space-200;
             }
+            .member{
+                .dropdown-menu{
+                    border: unset;
+                    padding: 0px;
+                    background-color: $color-Navbar-Bgc; 
+                    width: 40px !important;
+                    min-width: 6em;
+                    transform: translate3d(-37px, 25px, 0px)!important;
+                    .dropdown-item{
+                        font-size: $H11-font-size;
+                        color: $color-WedgwoodBlue;
+                    }
+                }
+            }
             .cart{
                 position: relative;
                .cart-number{

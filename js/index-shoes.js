@@ -5,7 +5,8 @@ var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: 'auto',
   spaceBetween: 30, 
   watchSlidesVisibility: true,
-  watchSlidesProgress: true,   
+  watchSlidesProgress: true,
+  centeredSlides: false,   
   navigation: {
     nextEl: ".button-next",      
   },
