@@ -2,7 +2,7 @@
 let development_steps=['層皮','腳跟','樁頭','結語']
 //右邊文字的swiper
 var swiper3 = new Swiper(".mySwiper3", {
-  slidesPerView: 'auto',
+  slidesPerView: '1',
   spaceBetween: 30, 
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
