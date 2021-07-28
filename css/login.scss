@@ -280,6 +280,7 @@ main {
                                         }
 
                                         .title {
+                                            width: 72px;
                                             @include four-fifty() {
                                                 margin-left: 24px;
                                             }
@@ -289,6 +290,10 @@ main {
                                             @include four-fifty() {
                                                 margin-top: 24px;
                                             }
+                                        }
+
+                                        .content {
+                                            margin-left: 32px;
                                         }
 
                                         .content::-webkit-input-placeholder {

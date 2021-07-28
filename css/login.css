@@ -295,6 +295,10 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
   }
 }
 
+main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .title {
+  width: 72px;
+}
+
 @media (max-width: 450px) {
   main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .title {
     margin-left: 24px;
@@ -305,6 +309,10 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
   main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .title1 {
     margin-top: 24px;
   }
+}
+
+main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content {
+  margin-left: 32px;
 }
 
 @media (max-width: 450px) {
