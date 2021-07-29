@@ -2258,16 +2258,12 @@ main .main-container .new-product {
   z-index: 2;
 }
 
-main .main-container .new-product:after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 969px;
-  top: 115px;
-  left: 190px;
-  background-color: #abbac9;
+main .main-container .new-product[data-inviewport="scale-in"] {
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:after {
   -webkit-animation: linegrow-1 3s ease-in-out;
           animation: linegrow-1 3s ease-in-out;
 }
@@ -2288,6 +2284,97 @@ main .main-container .new-product:after {
   to {
     height: 969px;
   }
+}
+
+@media (max-width: 1024px) {
+  main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:after {
+    height: 1033px;
+    -webkit-animation: linegrow-2 3s ease-in-out;
+            animation: linegrow-2 3s ease-in-out;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes linegrow-2 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1033px;
+    }
+  }
+  @keyframes linegrow-2 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1033px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:after {
+    height: 1874px;
+    -webkit-animation: linegrow-3 3s ease-in-out;
+            animation: linegrow-3 3s ease-in-out;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes linegrow-3 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1874px;
+    }
+  }
+  @keyframes linegrow-3 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1874px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:after {
+    height: 1873px;
+    left: 33px;
+    -webkit-animation: linegrow-4 3s ease-in-out;
+            animation: linegrow-4 3s ease-in-out;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes linegrow-4 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1873px;
+    }
+  }
+  @keyframes linegrow-4 {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 1873px;
+    }
+  }
+}
+
+main .main-container .new-product:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 969px;
+  top: 115px;
+  left: 190px;
+  background-color: #abbac9;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 1350px) {
@@ -2883,20 +2970,14 @@ main .main-container .photo-wall {
   position: relative;
 }
 
-main .main-container .photo-wall:before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 1078px;
-  top: 0px;
-  left: 190px;
-  background-color: #abbac9;
+main .main-container .photo-wall[data-inviewport="scale-in"] {
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:before {
   -webkit-animation: linegrow2-1 3s ease-in-out;
           animation: linegrow2-1 3s ease-in-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 @-webkit-keyframes linegrow2-1 {
@@ -2915,6 +2996,18 @@ main .main-container .photo-wall:before {
   to {
     height: 1078px;
   }
+}
+
+main .main-container .photo-wall:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1078px;
+  top: 0px;
+  left: 190px;
+  background-color: #abbac9;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 1350px) {

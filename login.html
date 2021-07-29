@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -28,13 +28,13 @@
                     <div class="stick stick-1"></div>
                     <div class="stick stick-2"></div>
                     <div class="stick stick-3"></div>
-                </div>
+                  </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <!-- 所有商品 -->
                     <li class="nav-item active single-commidity">
-                        <a class="nav-link" href="#">所有商品<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./product-index.html">所有商品<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- 下拉式的所有商品 -->
                     <li class="nav-item dropdown all-commidity">
@@ -139,11 +139,17 @@
         </nav>
         <div class="personal-item">
             <div class="input-cart d-flex">
-                <form class="search d-flex my-2 my-lg-0">
+                <form class="search d-flex my-2">
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="fas fa-user m-2"></i>
+                <i class="member nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">個人訊息</a>
+                            <a class="dropdown-item" href="#">追蹤清單</a>
+                        </div>
+                </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
                     <div class="cart-number">1</div>
