@@ -340,12 +340,13 @@ main {
                         text-align: center;
                         @keyframes text-move {
                             0%{
-                                transform-origin: 20px 0px;
-                                transform: rotate(45deg);
+                                top: 50px;
+                            }
+                            70%{
+                                top: 10px;
                             }
                             100%{
-                                transform-origin: 40px 5px;
-                                transform: rotate(0deg);
+                                top: 0px;
                             }
                         }
                         
@@ -443,6 +444,67 @@ main {
                     }
                 }
             }
+        }
+        // 回到上層的按鈕
+        .back-top{
+            display: none;
+
+            &.sticky{
+                display: block;
+                
+                position: fixed;
+                bottom: 92px;
+                right: 40px;
+                z-index: 5;
+                opacity: 0.3;
+                animation: top-move-in .3s ease-in-out;
+                animation-fill-mode: both;
+                @keyframes top-move-in {
+                    0%{
+                        bottom: 95px;
+                        opacity: 0;
+                    }
+                    100%{
+                        bottom: 92px;
+                        opacity: 0.3;
+                    }
+                    
+                }
+                &:hover{
+                    opacity: 0.3;
+                    animation: top-move .7s ease-in-out;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes top-move {
+                    0%{
+                        bottom: 100px;
+                        opacity: 0.5;
+                    }
+                    20%{
+                        bottom: 92px;
+                        opacity: 0.7;
+                    }
+                    40%{
+                        bottom: 100px;
+                        opacity: 0.9;
+                    }
+                    80%{
+                        bottom: 92px;
+                        opacity: 1; 
+                    }
+                    100%{
+                        bottom: 100px;
+                        opacity: 0.5;
+                    }
+                    
+                }
+                a{
+                    i{
+                        font-size: $H3-font-size;
+                    }
+                }
+            }
+           
         }
         // 聯絡客服
         .chatbot {

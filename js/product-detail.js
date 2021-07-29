@@ -145,14 +145,6 @@ size_radios.forEach(radio=>{
   })
 });
 
-//加入購物車效果
-// let clickables = document.querySelectorAll('.clickable');
-// let anim = document.querySelectorAll('.anim');
-// clickables.forEach((clickable,index) =>{
-//     clickable.addEventListener('click',()=>{
-//         anim[index].classList.toggle('active');
-//     });
-// });
 
 //加入購物車效果
 let putcart = document.querySelector('.putcart');
@@ -203,3 +195,24 @@ function everyStyle(data,display,background,className){
   putcart.style.background = background;
   orderBuy.classList.add( className );
 }
+
+//navbar
+//When the user scrolls the page, execute myFunction
+window.onscroll = function(){myFunction()};
+//取得banner的高度
+var bannerHeight = document.querySelector('.swiper-container').offsetHeight;
+let backTopBtn = document.querySelector('.back-top');
+function myFunction() {
+  if (window.pageYOffset >= bannerHeight) {
+    backTopBtn.classList.add("sticky");
+  } else {
+    backTopBtn.classList.remove("sticky");
+  }
+}
+
+//回到上層按鈕
+let anchor = document.querySelector('.a-anchor');
+console.log(anchor);
+anchor.addEventListener('click',function(){
+  window.scrollTo(0, top); 
+})

@@ -176,14 +176,30 @@ nav .personal-item .input-cart input::-webkit-input-placeholder {
   letter-spacing: 3.2px;
 }
 
+nav .personal-item .input-cart .member {
+  width: 100%;
+}
+
+nav .personal-item .input-cart .member:hover .dropdown-menu {
+  display: block;
+}
+
 nav .personal-item .input-cart .member .dropdown-menu {
   border: unset;
   padding: 0px;
   background-color: rgba(232, 231, 226, 0.9);
   width: 40px !important;
   min-width: 6em;
-  -webkit-transform: translate3d(-37px, 25px, 0px) !important;
-          transform: translate3d(-37px, 25px, 0px) !important;
+  -webkit-transform: translate3d(-37px, 0px, 0px) !important;
+          transform: translate3d(-37px, 0px, 0px) !important;
+}
+
+nav .personal-item .input-cart .member .dropdown-menu.show {
+  display: none;
+}
+
+nav .personal-item .input-cart .member .dropdown-menu:hover {
+  display: block;
 }
 
 nav .personal-item .input-cart .member .dropdown-menu .dropdown-item {
