@@ -95,7 +95,7 @@ $(".click-button").each(function (index) {
   slidesPerView: 'auto',
   spaceBetween: 30,
   navigation: {
-    nextEl: ".button-next",      
+    nextEl: ".button-next",     
   },
   pagination: {
     el: ".pagination-next",
@@ -169,12 +169,12 @@ putcart.addEventListener('click',function(e){
       window.setTimeout(function(){
         cartUnclick();
         return resolve();
-      },2000)    
+      },500)    
     })
     promise.then(()=>{
       window.setTimeout(function(){
         cartDelete();
-      },500)       
+      },250)       
     });
   }      
 });

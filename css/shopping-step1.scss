@@ -5,23 +5,30 @@
     padding: 0px;
     font-family: $font-Family-A;
 }
-//1760
+//1700
 @mixin bg-screen{
-    @media(max-width:1760px){
+    @media(max-width:1700px){
         @content;
         transition: 1s;
     }
 }
-//1350
+//1450
+@mixin screen{
+    @media(max-width:1450px){
+        @content;
+        transition: 1s;
+    }
+}
+//1320
 @mixin sm-screen{
-    @media(max-width:1350px){
+    @media(max-width:1320px){
         @content;
         transition: 1s;
     }
 }
-//1070
+//1230
 @mixin tablet{
-    @media(max-width:1070px){
+    @media(max-width:1230px){
         @content;
         transition: 1s;
     }
@@ -33,9 +40,23 @@
         transition: 1s;
     }
 }
-//790
+//925
+@mixin sm-tablet{
+    @media(max-width:925px){
+        @content;
+        transition: 1s;
+    }
+}
+//800
 @mixin bg-phone{
-    @media(max-width:790px){
+    @media(max-width:800px){
+        @content;
+        transition: 1s;
+    }
+}
+//670
+@mixin phone{
+    @media(max-width:670px){
         @content;
         transition: 1s;
     }
@@ -43,6 +64,13 @@
 //620
 @mixin sm-phone{
     @media(max-width:620px){
+        @content;
+        transition: 1s;
+    }
+}
+//520
+@mixin bg-iphone{
+    @media(max-width:520px){
         @content;
         transition: 1s;
     }
@@ -135,26 +163,24 @@ main{
         min-height: 100vh;
         .my-container{
             height: 100%;
-            max-width: 1550px;
+            max-width: 1770px;
+            width: 100%;
             padding: 0;
-            padding-top: 15.7vh;
+            padding: 15.7vh 0px 5vh 6.7vw;
             transition: 1s;
-            @include bg-screen(){
-                max-width: 1140px;
+            @include screen(){
+                padding:15.7vh 1vw 10vh 1vw ;
             }
             @include sm-screen(){
-                max-width: 880px;
-            }
-            @include tablet(){
-                max-width: unset;
-            }
-            @include sm-phone(){
-                padding-top: 5.7vh;
+                padding-top:5vh;
             }
             .steps{
                 display: flex;
                 padding: 0 10px;
                 max-width: 1141px;
+                @include sm-screen(){
+                    max-width: unset;
+                }
                 .step{
                     display: flex;
                     align-items: center;                
@@ -194,7 +220,7 @@ main{
                         width: 80%;
                         display: flex;
                         justify-content: center;
-                        @include sm-screen(){
+                        @include screen(){
                             width: 120%;
                         }
                         @include tablet(){
@@ -212,7 +238,7 @@ main{
                             }
                             .text-content{                        
                                 text-align: left;    
-                                @include tablet(){
+                                @include sm-tablet(){
                                     display: none;
                                 }                                            
                                 p{
@@ -223,7 +249,7 @@ main{
                                     &:nth-child(2){                                        
                                         font-size: $H11-font-size;
                                         letter-spacing: $font-letter-space-100;
-                                        @include sm-screen(){
+                                        @include screen(){
                                             letter-spacing: $font-letter-space-50;
                                         }
                                     }
@@ -250,19 +276,16 @@ main{
                 display: flex;
                 position: relative;
                 transition: 1s;
-                @include bg-screen(){
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
-                @include bg-phone(){
-                    align-items: center;
+                flex-wrap: wrap;
+                @include sm-screen(){
+                    justify-content: center;
                 }
                 .web-title{
                     position: absolute;
                     top: 0px;
                     left: -130px;
                     font-size: 98px;
-                    @include tablet(){
+                    @include screen(){
                         display: none;
                     }
                     p{
@@ -275,14 +298,18 @@ main{
                 .shopping-order{                
                     max-width: 1141px;
                     width: 100%;
-                    min-height:452px;
+                    max-height:452px;
                     background: $color-White;
                     border: 1px solid $color-Apricot;
+                    transition: 1s;
                     @include bg-screen(){
-                        margin-bottom: 35px;
+                        max-width: 72%;
                     }
-                    @include bg-phone(){
-                        margin-bottom: 800px;
+                    @include sm-screen(){
+                        max-width: 100%;
+                    }
+                    @include sm-tablet(){
+                        max-height: unset;
                     }
                     .order-title{
                         width: 100%;
@@ -301,14 +328,18 @@ main{
                                 font-size: $H10-font-size;
                                 letter-spacing: $font-letter-space-100;
                                 transition: 1s;
+                                &:nth-child(1){
+                                    @include sm-phone(){
+                                        margin:0px 30px;
+                                    }
+                                }
                                 &:nth-child(2){
                                     flex: 0 0 28%;
-                                    
+                                    @include sm-phone(){
+                                        flex: none;
+                                        margin:0px 20px;
+                                    }
                                 }  
-                                @include tablet(){
-                                flex: 0 0 12%;
-
-                                }
                                 @include bg-phone(){
                                     flex: 0 0 17%;
                                     &:nth-child(6){
@@ -675,327 +706,299 @@ main{
                         }
                     }
                 }
-                .payment-shipping{
-                    position: relative;
-                    max-width: 371px;
-                    width: 100%;
-                    min-height:452px;
-                    margin-left: 2vw;
+                .other-amount{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: $color-White;
-                    border: 1px solid $color-Apricot;
-                    @include bg-screen(){
-                        margin-left: unset;
-                    }
-                    @include tablet(){
-                        margin-right: 20px;
-                    }
-                    @include bg-phone(){
-                        margin-right: unset;
-                    }
-                    h3{
-                        position: absolute;
-                        top: 20px;
-                        text-align: center;
-                        font-size: $H5-font-size;
-                        letter-spacing: $font-letter-space-200;
-                    }
-                    .shipping{
-                        width: 100%;
-    
-                        .shipping-select{
-                            position: relative;
-                            width: 80%;
-                            margin: auto;
-                            padding: 10px 0;
-                            h5{
-                                position: absolute;
-                                top: 3px;
-                                left: 15px;
-                                margin: 0;
-                                background-color: white;
-                                font-size: $H10-font-size;
-                            }
-                            select{                            
-                                width: 100%;
-                                padding: 10px 10px;
-                                border-radius: 5px;
-                                border: 1px solid $color-Background-line;
-                                outline: none;
-                                font-size: $H10-font-size;
-                                color: $color-Nav-icon;                  
-                            }            
-                        }
-                        .business{
-                            width: 80%;                
-                            margin: auto;
-                            padding: 5px 10px;
-                            color: $color-Nav-icon;
-                            background-color: $color-Background-line;
-                            font-size: $H11-font-size;
-                            letter-spacing: $font-letter-space-50;
-                        }
-                        .choose{
-                            padding-top: 20px;                        
-                            width: 80%;                
-                            margin: auto;
-                            display: flex;
-                            justify-content: flex-end;
-                            .choose-button{       
-                                font-size: $H11-font-size;                     
-                                padding: 5px 15px;
-                                background: white;
-                                border: 1px solid $color-Nav-icon;
-                                border-radius: 10px;
-                                outline: none;
-                                transition: .5s;
-                                @include button-focus();
-                                @include button-hover();
-                            }
-                        }
-                    }
-                }
-            }
-            .other-amount{
-                width: 100%;
-                display: flex;
-                position: relative;
-                transition: 1s;
-                @include bg-screen(){
-                    justify-content: flex-end;
-                }
-                @include bg-phone(){
-                    justify-content: center;
-                }
-                .other-discount{    
-                    margin-top: 20px;            
-                    max-width: 1141px;
-                    width: 100%;
+                    position: relative;
                     transition: 1s;
                     @include bg-screen(){
-                        max-width: 740px;
-                        position: absolute;
-                        bottom: 355px;
-                        left: 0px;
+                        max-width: 72%; 
                     }
                     @include sm-screen(){
-                        max-width: 350px;
-                        bottom: 15px;
+                        max-width: 60%;
                     }
-                    @include tablet(){
-                        margin-left: 20px;
+                    @include sm-tablet(){
+                        max-width: 45%;
                     }
-                    @include bg-phone(){
-                        margin-left: unset;
-                        bottom: 780px;
-                        left: 29vw;
+                    @include phone(){
+                        max-width: 100%;
                     }
-                    @include sm-phone(){
-                        max-width: 100vw;
-                        left:unset;
-                    }
-                    .other-tital{
-                        display: flex;
-                        align-items: center;
-                        padding:10px 20px;
-                        border-radius: 5px;
-                        background: $color-SkyBlue;
-                        color: $color-White;
-                        letter-spacing: $font-letter-space-100;
-                        p{
-                            margin: 0;
-                            padding: 0 5px;
-                            font-size: $H6-font-size;                    
-                        }
-                    }
-                    .other-card{
+                    .other-discount{    
+                        margin-top: 20px;            
+                        max-width: 1141px;
                         width: 100%;
-                        margin-top: 15px;
-                        padding: 0 10px;
-                        display: flex;
                         transition: 1s;
-                        @include bg-screen(){
-                            width: 103%;
-                            flex-wrap: wrap;
-                        }
-                        @include sm-screen(){
-                            padding:0px;
-                        }
-                        @include sm-phone(){
-                            width: 100%;
-                            padding-left: 10px;
-                        }
-                        .commodity{
+                        .other-tital{
                             display: flex;
-                            @include bg-screen(){
-                                min-width: 370px;
-                                margin-bottom: 60px;
-                            }
-                            @include sm-screen(){
-                                min-width: 350px;
-                            }
-                            @include sm-phone(){
-                                min-width: 300px;
-                            }
-                            .photo{
-                                max-width: 112px;
-                                width: 100%;                        
-                                img{
-                                    width: 100%;
-                                    object-fit: cover;
-                                    object-position: center;
-                                }
-                            }
-                            .commodity-content{  
-                                padding:0 10px;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-between;
-                                .title{
-                                    font-size: $H11-font-size;
-                                    color: $color-IronGray;
-                                }
-                                .content-buttone{
-                                    p{
-                                        margin: 0;
-                                        color: $color-Apricot;
-                                        font-size: $H7-font-size;
-                                        font-weight: $font-Weight-B;
-                                        margin-bottom: 20px;
-                                    }
-                                    .push-cart{
-                                        border: 1px solid $color-Nav-icon;
-                                        border-radius: 10px;
-                                        outline: none;
-                                        padding: 5px 20px;
-                                        transition: .5s;
-                                        font-size: $H11-font-size;
-                                        @include button-hover();
-                                        @include button-focus();
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .amount{
-                    margin-top: 5px;
-                    margin-left: 2vw;
-                    max-width: 371px;
-                    width: 100%;
-                    @include tablet(){
-                        margin-left: unset;
-                        margin-right: 20px;
-                    }
-                    @include bg-phone(){
-                        margin-right:unset;
-                    }
-                    @include sm-phone(){
-                        padding: 0px 10px;
-                    }
-                    .free-ship{
-                        display: flex;
-                        font-size: $H11-font-size;
-                        font-weight: $font-Weight-B;                
-                        align-items: center;
-                        p{
-                            margin: 0;
-                            margin-right: 5px;
-                            padding: 5px;
-                            font-size: $H9-font-size;
-                            background-color: $color-Apricot;
-                            color: $color-White;
-                            border-radius: 5px;
-                        }
-                    }
-                    .total{
-                        padding-top: 20px;
-                        .price-total{
-                            display: flex;
-                            justify-content: space-between;
-                            padding-bottom: 5px;
-                            p{                        
-                                margin: 0;
-                                font-size: $H10-font-size;   
-                                font-weight: $font-Weight-B;                         
-                            }
-                        }
-                    }
-                    .order-total-button{
-                        width: 100%;
-                        padding-top: 10px;
-                        @include bg-screen(){
-                            margin-bottom: 80px;
-                        }
-                        .order-total{
-                            display: flex;
-                            justify-content: center;
-                            align-items: flex-end;
-                            padding-bottom: 20px;
-                            p{
-                                width: 55%;
-                                font-size: $H9-font-size;
-                                margin: 0; 
-                                padding-bottom: 10px;                           
-                                text-align: end;
-                            }
-                            .order-total-price{
-                                width: 45%;       
-                                padding: 0;                     
-                                color: $color-Apricot;
-                                font-weight: $font-Weight-B;
-                                font-size: $H3-font-size;
-                                text-align: end;
-                            }                
-                        }
-                        .next-a{
-                            cursor: pointer;
-                            width: 100%;
-                            border: none;
-                            outline: none; 
-                            text-decoration: none;                       
-                            border-radius: 10px;
-                            display: flex;
-                            justify-content: center;                            
                             align-items: center;
-                            background-color: $color-Apricot;
-                            font-size: $H4-font-size;                        
-                            letter-spacing: $font-letter-space-200;
+                            padding:10px 20px;
+                            border-radius: 5px;
+                            background: $color-SkyBlue;
                             color: $color-White;
-                            position: relative;
-                            z-index: 0;
-                            overflow: hidden;
-                            .anim {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                z-index: -1;
-                                transform: translate(-50%,-50%);
-                            
-                                &:before {
-                                    position: relative;
-                                    content: '';
-                                    display: block;
-                                    margin-top: 100%;
+                            letter-spacing: $font-letter-space-100;
+                            p{
+                                margin: 0;
+                                padding: 0 5px;
+                                font-size: $H6-font-size;                    
+                            }
+                        }
+                        .other-card{
+                            width: 100%;
+                            margin-top: 15px;
+                            padding: 0 10px;
+                            display: flex;
+                            transition: 1s;
+                            @include sm-screen(){
+                                flex-wrap: wrap;
+                            }
+                            .commodity{
+                                display: flex;
+                                @include sm-screen(){
+                                    width: 50%;
+                                    margin-bottom: 15px;
                                 }
-                                
-                                &:after {
-                                    content: '';
-                                    position: absolute;
-                                    top: 0;
-                                    bottom:0;
-                                    left: 0;
-                                    right: 0;
-                                    border-radius: 50%;
+                                @include sm-tablet(){
+                                    width: 100%;
+                                }
+                                @include phone(){
+                                    width: 50%;
+                                }
+                                @include bg-iphone(){
+                                    width: 100%;
+                                }
+                                .photo{
+                                    max-width: 112px;
+                                    width: 100%;                        
+                                    img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        object-position: center;
+                                    }
+                                }
+                                .commodity-content{  
+                                    padding:0 10px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    .title{
+                                        font-size: $H11-font-size;
+                                        color: $color-IronGray;
+                                    }
+                                    .content-buttone{
+                                        p{
+                                            margin: 0;
+                                            color: $color-Apricot;
+                                            font-size: $H7-font-size;
+                                            font-weight: $font-Weight-B;
+                                            
+                                        }
+                                        .push-cart{
+                                            border: 1px solid $color-Nav-icon;
+                                            border-radius: 10px;
+                                            outline: none;
+                                            padding: 5px 20px;
+                                            transition: .5s;
+                                            font-size: $H11-font-size;
+                                            @include button-hover();
+                                            @include button-focus();
+                                        }
+                                    }
                                 }
                             }
                         }
-                        
                     }
                 }
-            }            
+                .payment-amount{
+                    width: 341px;
+                    margin-left: 20px;
+                    @include sm-screen(){
+                        order: 3;
+                        margin-top: 20px;
+                    }
+                    @include phone(){
+                        margin-left: unset;   
+                    }
+                    .payment-shipping{
+                        position: relative;
+                        max-width: 371px;
+                        width: 100%;
+                        min-height:452px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $color-White;
+                        border: 1px solid $color-Apricot;
+                       
+                        h3{
+                            position: absolute;
+                            top: 20px;
+                            text-align: center;
+                            font-size: $H5-font-size;
+                            letter-spacing: $font-letter-space-200;
+                        }
+                        .shipping{
+                            width: 100%;
+        
+                            .shipping-select{
+                                position: relative;
+                                width: 80%;
+                                margin: auto;
+                                padding: 10px 0;
+                                h5{
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 15px;
+                                    margin: 0;
+                                    background-color: white;
+                                    font-size: $H10-font-size;
+                                }
+                                select{                            
+                                    width: 100%;
+                                    padding: 10px 10px;
+                                    border-radius: 5px;
+                                    border: 1px solid $color-Background-line;
+                                    outline: none;
+                                    font-size: $H10-font-size;
+                                    color: $color-Nav-icon;                  
+                                }            
+                            }
+                            .business{
+                                width: 80%;                
+                                margin: auto;
+                                padding: 5px 10px;
+                                color: $color-Nav-icon;
+                                background-color: $color-Background-line;
+                                font-size: $H11-font-size;
+                                letter-spacing: $font-letter-space-50;
+                            }
+                            .choose{
+                                padding-top: 20px;                        
+                                width: 80%;                
+                                margin: auto;
+                                display: flex;
+                                justify-content: flex-end;
+                                .choose-button{       
+                                    font-size: $H11-font-size;                     
+                                    padding: 5px 15px;
+                                    background: white;
+                                    border: 1px solid $color-Nav-icon;
+                                    border-radius: 10px;
+                                    outline: none;
+                                    transition: .5s;
+                                    @include button-focus();
+                                    @include button-hover();
+                                }
+                            }
+                        }
+                    }
+                    .amount{
+                        margin-top: 5px;
+                        max-width: 341px;
+                        width: 100%;
+                        position: absolute;
+                        @include sm-screen(){
+                            position: relative;
+                        }
+                        .free-ship{
+                            display: flex;
+                            font-size: $H11-font-size;
+                            font-weight: $font-Weight-B;                
+                            align-items: center;
+                            p{
+                                margin: 0;
+                                margin-right: 5px;
+                                padding: 5px;
+                                font-size: $H9-font-size;
+                                background-color: $color-Apricot;
+                                color: $color-White;
+                                border-radius: 5px;
+                            }
+                        }
+                        .total{
+                            padding-top: 20px;
+                            .price-total{
+                                display: flex;
+                                justify-content: space-between;
+                                padding-bottom: 5px;
+                                p{                        
+                                    margin: 0;
+                                    font-size: $H10-font-size;   
+                                    font-weight: $font-Weight-B;                         
+                                }
+                            }
+                        }
+                        .order-total-button{
+                            width: 100%;
+                            padding-top: 10px;
+                            .order-total{
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-end;
+                                padding-bottom: 20px;
+                                p{
+                                    width: 55%;
+                                    font-size: $H9-font-size;
+                                    margin: 0; 
+                                    padding-bottom: 10px;                           
+                                    text-align: end;
+                                }
+                                .order-total-price{
+                                    width: 45%;       
+                                    padding: 0;                     
+                                    color: $color-Apricot;
+                                    font-weight: $font-Weight-B;
+                                    font-size: $H3-font-size;
+                                    text-align: end;
+                                }                
+                            }
+                            .next-a{
+                                cursor: pointer;
+                                width: 100%;
+                                border: none;
+                                outline: none; 
+                                text-decoration: none;                       
+                                border-radius: 10px;
+                                display: flex;
+                                justify-content: center;                            
+                                align-items: center;
+                                background-color: $color-Apricot;
+                                font-size: $H4-font-size;                        
+                                letter-spacing: $font-letter-space-200;
+                                color: $color-White;
+                                position: relative;
+                                z-index: 0;
+                                overflow: hidden;
+                                .anim {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    z-index: -1;
+                                    transform: translate(-50%,-50%);
+                                
+                                    &:before {
+                                        position: relative;
+                                        content: '';
+                                        display: block;
+                                        margin-top: 100%;
+                                    }
+                                    
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        bottom:0;
+                                        left: 0;
+                                        right: 0;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                } 
+                
+            }           
         }
     }
 }
@@ -1033,7 +1036,7 @@ footer{
     height: 0px!important;
     .site-footer{
         .container{
-            @include sm-screen(){
+            @include screen(){
                 max-width: 880px;
             }
             .return-nav{

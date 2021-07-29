@@ -156,9 +156,6 @@ main{
             @include bg-screen(){
                 padding:15.7vh 6.7vw 50px 6.7vw;
             }
-            @include tablet(){
-                max-width: 700px;
-            }
             @include sm-phone(){
                 padding:5.7vh 0px 50px 0px; 
             }
@@ -228,7 +225,7 @@ main{
                                 letter-spacing: $font-letter-space-200;
                             }
                             .text-content{
-                                @include ex-screen(){
+                                @include tablet(){
                                     display: none;
                                 }                        
                                 text-align: left;                                                

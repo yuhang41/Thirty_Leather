@@ -2732,6 +2732,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10%;
           flex: 0 0 10%;
+  z-index: 2;
 }
 
 @media (max-width: 750px) {

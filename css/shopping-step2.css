@@ -22,21 +22,13 @@ main .main-container {
 main .main-container .my-container {
   height: 100%;
   max-width: 1550px;
-  padding: 0;
   padding-top: 15.7vh;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 1760px) {
   main .main-container .my-container {
-    max-width: 1140px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1150px) {
-  main .main-container .my-container {
-    max-width: 900px;
+    padding: 15.7vh 6.7vw 50px 6.7vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -44,7 +36,7 @@ main .main-container .my-container {
 
 @media (max-width: 620px) {
   main .main-container .my-container {
-    padding-top: 5.7vh;
+    padding: 5.7vh 0px 50px 0px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -138,7 +130,7 @@ main .main-container .my-container .steps .step .step-content {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
   main .main-container .my-container .steps .step .step-content {
     width: 100%;
     -webkit-transition: 1s;
@@ -217,7 +209,7 @@ main .main-container .my-container .shopping-container {
   position: relative;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1100px) {
   main .main-container .my-container .shopping-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -257,7 +249,7 @@ main .main-container .my-container .shopping-container .shopping-order {
   min-height: 452px;
   background: #ffffff;
   border: 1px solid #f7a269;
-  padding: 3vh 1vw;
+  padding: 2vh 1vw;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -702,11 +694,10 @@ main .main-container .my-container .shopping-container .customer-info {
   transition: 1s;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1100px) {
   main .main-container .my-container .shopping-container .customer-info {
-    max-width: 1140px;
+    max-width: unset;
     margin-left: unset;
-    margin-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -717,12 +708,13 @@ main .main-container .my-container .shopping-container .customer-info {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 20px;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 850px) {
   main .main-container .my-container .shopping-container .customer-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -752,6 +744,14 @@ main .main-container .my-container .shopping-container .customer-info .orderer-i
       -ms-flex-align: center;
           align-items: center;
   padding-top: 20px;
+}
+
+@media (max-width: 960px) {
+  main .main-container .my-container .shopping-container .customer-info .orderer-info {
+    margin-bottom: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .shopping-container .customer-info .orderer-info .orderer-container {
@@ -845,7 +845,7 @@ main .main-container .my-container .shopping-container .customer-info .recipient
   width: 100%;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1100px) {
   main .main-container .my-container .shopping-container .customer-info .recipient-info {
     max-width: 371px;
     -webkit-transition: 1s;
@@ -875,17 +875,9 @@ main .main-container .my-container .shopping-container .customer-info .recipient
   margin: 32px auto;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1100px) {
   main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee {
-    margin-top: 0px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 960px) {
-  main .main-container .my-container .shopping-container .customer-info .recipient-info .addressee {
-    margin-top: 32px;
+    margin: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1163,6 +1155,14 @@ main .main-container .my-container .shopping-container .customer-info .recipient
   margin: auto;
 }
 
+@media (max-width: 1100px) {
+  main .main-container .my-container .shopping-container .customer-info .recipient-info .payment {
+    margin-top: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .shopping-container .customer-info .recipient-info .payment .payment-title {
   font-size: 24px;
   letter-spacing: 3.2px;
@@ -1196,7 +1196,7 @@ main .main-container .my-container .other-amount {
           align-items: flex-end;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 850px) {
   main .main-container .my-container .other-amount {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1221,9 +1221,16 @@ main .main-container .my-container .other-amount {
 main .main-container .my-container .other-amount .back-button {
   font-size: 24px;
   color: #444444;
-  margin-bottom: 30px;
   border: 0px;
   background-color: unset;
+}
+
+@media (max-width: 850px) {
+  main .main-container .my-container .other-amount .back-button {
+    margin-top: 40px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .other-amount .amount {
@@ -1317,10 +1324,16 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
 }
 
 main .main-container .my-container .other-amount .amount .order-total-button .next-button {
+  cursor: pointer;
   width: 100%;
   border: none;
+  border-radius: 5px;
   outline: none;
-  border-radius: 10px;
+  background: #f7a269;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 3.2px;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1330,12 +1343,6 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: unset;
-  font-size: 30px;
-  letter-spacing: 3.2px;
-  color: #444444;
-  border: 2px solid #444444;
-  margin-bottom: 30px;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -1425,7 +1432,7 @@ footer {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
   footer .site-footer .container {
     max-width: 900px;
     -webkit-transition: 1s;

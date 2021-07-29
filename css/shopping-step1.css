@@ -17,40 +17,25 @@ main .main-container {
 
 main .main-container .my-container {
   height: 100%;
-  max-width: 1550px;
+  max-width: 1770px;
+  width: 100%;
   padding: 0;
-  padding-top: 15.7vh;
+  padding: 15.7vh 0px 5vh 6.7vw;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1450px) {
   main .main-container .my-container {
-    max-width: 1140px;
+    padding: 15.7vh 1vw 10vh 1vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1320px) {
   main .main-container .my-container {
-    max-width: 880px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1070px) {
-  main .main-container .my-container {
-    max-width: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 620px) {
-  main .main-container .my-container {
-    padding-top: 5.7vh;
+    padding-top: 5vh;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -62,6 +47,14 @@ main .main-container .my-container .steps {
   display: flex;
   padding: 0 10px;
   max-width: 1141px;
+}
+
+@media (max-width: 1320px) {
+  main .main-container .my-container .steps {
+    max-width: unset;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .my-container .steps .step {
@@ -132,7 +125,7 @@ main .main-container .my-container .steps .step .step-content {
           justify-content: center;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1450px) {
   main .main-container .my-container .steps .step .step-content {
     width: 120%;
     -webkit-transition: 1s;
@@ -140,7 +133,7 @@ main .main-container .my-container .steps .step .step-content {
   }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1230px) {
   main .main-container .my-container .steps .step .step-content {
     width: 100%;
     -webkit-transition: 1s;
@@ -171,7 +164,7 @@ main .main-container .my-container .steps .step .step-content .text .text-conten
   text-align: left;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 925px) {
   main .main-container .my-container .steps .step .step-content .text .text-content {
     display: none;
     -webkit-transition: 1s;
@@ -189,7 +182,7 @@ main .main-container .my-container .steps .step .step-content .text .text-conten
   letter-spacing: 1.6px;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1450px) {
   main .main-container .my-container .steps .step .step-content .text .text-content p:nth-child(2) {
     letter-spacing: 0.8px;
     -webkit-transition: 1s;
@@ -219,27 +212,15 @@ main .main-container .my-container .shopping-container {
   position: relative;
   -webkit-transition: 1s;
   transition: 1s;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1320px) {
   main .main-container .my-container .shopping-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 790px) {
-  main .main-container .my-container .shopping-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -252,7 +233,7 @@ main .main-container .my-container .shopping-container .web-title {
   font-size: 98px;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1450px) {
   main .main-container .my-container .shopping-container .web-title {
     display: none;
     -webkit-transition: 1s;
@@ -271,22 +252,32 @@ main .main-container .my-container .shopping-container .web-title p {
 main .main-container .my-container .shopping-container .shopping-order {
   max-width: 1141px;
   width: 100%;
-  min-height: 452px;
+  max-height: 452px;
   background: #ffffff;
   border: 1px solid #f7a269;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-@media (max-width: 1760px) {
+@media (max-width: 1700px) {
   main .main-container .my-container .shopping-container .shopping-order {
-    margin-bottom: 35px;
+    max-width: 72%;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 1320px) {
   main .main-container .my-container .shopping-container .shopping-order {
-    margin-bottom: 800px;
+    max-width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 925px) {
+  main .main-container .my-container .shopping-container .shopping-order {
+    max-height: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -324,23 +315,32 @@ main .main-container .my-container .shopping-container .shopping-order .order-ti
   transition: 1s;
 }
 
+@media (max-width: 620px) {
+  main .main-container .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(1) {
+    margin: 0px 30px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(2) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 28%;
           flex: 0 0 28%;
 }
 
-@media (max-width: 1070px) {
-  main .main-container .my-container .shopping-container .shopping-order .order-title ul .title {
+@media (max-width: 620px) {
+  main .main-container .my-container .shopping-container .shopping-order .order-title ul .title:nth-child(2) {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 12%;
-            flex: 0 0 12%;
+        -ms-flex: none;
+            flex: none;
+    margin: 0px 20px;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 800px) {
   main .main-container .my-container .shopping-container .shopping-order .order-title ul .title {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 17%;
@@ -412,7 +412,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   transition: 1s;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1230px) {
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 11%;
@@ -422,7 +422,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 800px) {
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart ul .order-cart {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 17%;
@@ -706,7 +706,7 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 800px) {
   main .main-container .my-container .shopping-container .shopping-order .shopping-cart {
     -webkit-transition: 1s;
     transition: 1s;
@@ -813,130 +813,224 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
   }
 }
 
-main .main-container .my-container .shopping-container .payment-shipping {
-  position: relative;
-  max-width: 371px;
-  width: 100%;
-  min-height: 452px;
-  margin-left: 2vw;
+main .main-container .my-container .shopping-container .other-amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 1700px) {
+  main .main-container .my-container .shopping-container .other-amount {
+    max-width: 72%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 1320px) {
+  main .main-container .my-container .shopping-container .other-amount {
+    max-width: 60%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 925px) {
+  main .main-container .my-container .shopping-container .other-amount {
+    max-width: 45%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 670px) {
+  main .main-container .my-container .shopping-container .other-amount {
+    max-width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount {
+  margin-top: 20px;
+  max-width: 1141px;
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-tital {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
-  border: 1px solid #f7a269;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .shopping-container .payment-shipping {
-    margin-left: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1070px) {
-  main .main-container .my-container .shopping-container .payment-shipping {
-    margin-right: 20px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 790px) {
-  main .main-container .my-container .shopping-container .payment-shipping {
-    margin-right: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .shopping-container .payment-shipping h3 {
-  position: absolute;
-  top: 20px;
-  text-align: center;
-  font-size: 24px;
-  letter-spacing: 3.2px;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping {
-  width: 100%;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  padding: 10px 0;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select h5 {
-  position: absolute;
-  top: 3px;
-  left: 15px;
-  margin: 0;
-  background-color: white;
-  font-size: 14px;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping .shipping-select select {
-  width: 100%;
-  padding: 10px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid #abbac9;
-  outline: none;
-  font-size: 14px;
-  color: #65737f;
+  background: #86b2c4;
+  color: #ffffff;
+  letter-spacing: 1.6px;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .business {
-  width: 80%;
-  margin: auto;
-  padding: 5px 10px;
-  color: #65737f;
-  background-color: #abbac9;
-  font-size: 12px;
-  letter-spacing: 0.8px;
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-tital p {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 21px;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose {
-  padding-top: 20px;
-  width: 80%;
-  margin: auto;
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card {
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button {
+@media (max-width: 1320px) {
+  main .main-container .my-container .shopping-container .other-amount .other-discount .other-card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1320px) {
+  main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity {
+    width: 50%;
+    margin-bottom: 15px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 925px) {
+  main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity {
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 670px) {
+  main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity {
+    width: 50%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity {
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .photo {
+  max-width: 112px;
+  width: 100%;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .photo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
   font-size: 12px;
-  padding: 5px 15px;
-  background: white;
+  color: #444444;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
+  margin: 0;
+  color: #f7a269;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
   border: 1px solid #65737f;
   border-radius: 10px;
   outline: none;
+  padding: 5px 20px;
   -webkit-transition: .5s;
   transition: .5s;
+  font-size: 12px;
+  position: relative;
+  display: block;
+  overflow: hidden;
   -webkit-transition: color 300ms;
   transition: color 300ms;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  position: relative;
-  display: block;
-  overflow: hidden;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button::before {
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart, main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover:after {
+  width: 135%;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
+  color: #ffffff;
+  border: unset;
+}
+
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -975,7 +1069,7 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
   }
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:before {
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:before {
   -webkit-transform: scale(2);
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
@@ -983,311 +1077,138 @@ main .main-container .my-container .shopping-container .payment-shipping .shippi
   background: #f5853b;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus {
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus {
   color: #ffffff;
   border: unset;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:focus:after {
+main .main-container .my-container .shopping-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:after {
   display: none;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button, main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:after {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+main .main-container .my-container .shopping-container .payment-amount {
+  width: 341px;
+  margin-left: 20px;
 }
 
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button::after {
-  background: #f7a269;
-  content: '';
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  left: -35%;
-  top: 0;
-  -webkit-transform: skew(5deg);
-          transform: skew(5deg);
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  width: 0;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover:after {
-  width: 135%;
-}
-
-main .main-container .my-container .shopping-container .payment-shipping .shipping .choose .choose-button:hover {
-  color: #ffffff;
-  border: unset;
-}
-
-main .main-container .my-container .other-amount {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .other-amount {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+@media (max-width: 1320px) {
+  main .main-container .my-container .shopping-container .payment-amount {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 20px;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 790px) {
-  main .main-container .my-container .other-amount {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .other-discount {
-  margin-top: 20px;
-  max-width: 1141px;
-  width: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .other-amount .other-discount {
-    max-width: 740px;
-    position: absolute;
-    bottom: 355px;
-    left: 0px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1350px) {
-  main .main-container .my-container .other-amount .other-discount {
-    max-width: 350px;
-    bottom: 15px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1070px) {
-  main .main-container .my-container .other-amount .other-discount {
-    margin-left: 20px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 790px) {
-  main .main-container .my-container .other-amount .other-discount {
+@media (max-width: 670px) {
+  main .main-container .my-container .shopping-container .payment-amount {
     margin-left: unset;
-    bottom: 780px;
-    left: 29vw;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 620px) {
-  main .main-container .my-container .other-amount .other-discount {
-    max-width: 100vw;
-    left: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .other-discount .other-tital {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping {
+  position: relative;
+  max-width: 371px;
+  width: 100%;
+  min-height: 452px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 20px;
+  background: #ffffff;
+  border: 1px solid #f7a269;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping h3 {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 3.2px;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping {
+  width: 100%;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .shipping-select {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .shipping-select h5 {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  margin: 0;
+  background-color: white;
+  font-size: 14px;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .shipping-select select {
+  width: 100%;
+  padding: 10px 10px;
   border-radius: 5px;
-  background: #86b2c4;
-  color: #ffffff;
-  letter-spacing: 1.6px;
+  border: 1px solid #abbac9;
+  outline: none;
+  font-size: 14px;
+  color: #65737f;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-tital p {
-  margin: 0;
-  padding: 0 5px;
-  font-size: 21px;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card {
-  width: 100%;
-  margin-top: 15px;
-  padding: 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .other-amount .other-discount .other-card {
-    width: 103%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1350px) {
-  main .main-container .my-container .other-amount .other-discount .other-card {
-    padding: 0px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 620px) {
-  main .main-container .my-container .other-amount .other-discount .other-card {
-    width: 100%;
-    padding-left: 10px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 1760px) {
-  main .main-container .my-container .other-amount .other-discount .other-card .commodity {
-    min-width: 370px;
-    margin-bottom: 60px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1350px) {
-  main .main-container .my-container .other-amount .other-discount .other-card .commodity {
-    min-width: 350px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 620px) {
-  main .main-container .my-container .other-amount .other-discount .other-card .commodity {
-    min-width: 300px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .photo {
-  max-width: 112px;
-  width: 100%;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .photo img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content {
-  padding: 0 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .title {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .business {
+  width: 80%;
+  margin: auto;
+  padding: 5px 10px;
+  color: #65737f;
+  background-color: #abbac9;
   font-size: 12px;
-  color: #444444;
+  letter-spacing: 0.8px;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone p {
-  margin: 0;
-  color: #f7a269;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose {
+  padding-top: 20px;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button {
+  font-size: 12px;
+  padding: 5px 15px;
+  background: white;
   border: 1px solid #65737f;
   border-radius: 10px;
   outline: none;
-  padding: 5px 20px;
   -webkit-transition: .5s;
   transition: .5s;
-  font-size: 12px;
-  position: relative;
-  display: block;
-  overflow: hidden;
   -webkit-transition: color 300ms;
   transition: color 300ms;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart, main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:after {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::after {
-  background: #f7a269;
-  content: '';
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  left: -35%;
-  top: 0;
-  -webkit-transform: skew(5deg);
-          transform: skew(5deg);
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  width: 0;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover:after {
-  width: 135%;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:hover {
-  color: #ffffff;
-  border: unset;
-}
-
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart::before {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1317,7 +1238,7 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
   }
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:before {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:focus:before {
   -webkit-transform: scale(2);
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
@@ -1325,48 +1246,62 @@ main .main-container .my-container .other-amount .other-discount .other-card .co
   background: #f5853b;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:focus {
   color: #ffffff;
   border: unset;
 }
 
-main .main-container .my-container .other-amount .other-discount .other-card .commodity .commodity-content .content-buttone .push-cart:focus:after {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:focus:after {
   display: none;
 }
 
-main .main-container .my-container .other-amount .amount {
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button, main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button::after {
+  background: #f7a269;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: -35%;
+  top: 0;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 0;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:hover:after {
+  width: 135%;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .payment-shipping .shipping .choose .choose-button:hover {
+  color: #ffffff;
+  border: unset;
+}
+
+main .main-container .my-container .shopping-container .payment-amount .amount {
   margin-top: 5px;
-  margin-left: 2vw;
-  max-width: 371px;
+  max-width: 341px;
   width: 100%;
+  position: absolute;
 }
 
-@media (max-width: 1070px) {
-  main .main-container .my-container .other-amount .amount {
-    margin-left: unset;
-    margin-right: 20px;
+@media (max-width: 1320px) {
+  main .main-container .my-container .shopping-container .payment-amount .amount {
+    position: relative;
     -webkit-transition: 1s;
     transition: 1s;
   }
 }
 
-@media (max-width: 790px) {
-  main .main-container .my-container .other-amount .amount {
-    margin-right: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 620px) {
-  main .main-container .my-container .other-amount .amount {
-    padding: 0px 10px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .amount .free-ship {
+main .main-container .my-container .shopping-container .payment-amount .amount .free-ship {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1377,7 +1312,7 @@ main .main-container .my-container .other-amount .amount .free-ship {
           align-items: center;
 }
 
-main .main-container .my-container .other-amount .amount .free-ship p {
+main .main-container .my-container .shopping-container .payment-amount .amount .free-ship p {
   margin: 0;
   margin-right: 5px;
   padding: 5px;
@@ -1387,11 +1322,11 @@ main .main-container .my-container .other-amount .amount .free-ship p {
   border-radius: 5px;
 }
 
-main .main-container .my-container .other-amount .amount .total {
+main .main-container .my-container .shopping-container .payment-amount .amount .total {
   padding-top: 20px;
 }
 
-main .main-container .my-container .other-amount .amount .total .price-total {
+main .main-container .my-container .shopping-container .payment-amount .amount .total .price-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1401,26 +1336,18 @@ main .main-container .my-container .other-amount .amount .total .price-total {
   padding-bottom: 5px;
 }
 
-main .main-container .my-container .other-amount .amount .total .price-total p {
+main .main-container .my-container .shopping-container .payment-amount .amount .total .price-total p {
   margin: 0;
   font-size: 14px;
   font-weight: bold;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button {
   width: 100%;
   padding-top: 10px;
 }
 
-@media (max-width: 1760px) {
-  main .main-container .my-container .other-amount .amount .order-total-button {
-    margin-bottom: 80px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-main .main-container .my-container .other-amount .amount .order-total-button .order-total {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .order-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,7 +1360,7 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
   padding-bottom: 20px;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .order-total p {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .order-total p {
   width: 55%;
   font-size: 15px;
   margin: 0;
@@ -1441,7 +1368,7 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
   text-align: end;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .order-total .order-total-price {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .order-total .order-total-price {
   width: 45%;
   padding: 0;
   color: #f7a269;
@@ -1450,7 +1377,7 @@ main .main-container .my-container .other-amount .amount .order-total-button .or
   text-align: end;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-a {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .next-a {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -1475,7 +1402,7 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   overflow: hidden;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-a .anim {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .next-a .anim {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1484,14 +1411,14 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
           transform: translate(-50%, -50%);
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-a .anim:before {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .next-a .anim:before {
   position: relative;
   content: '';
   display: block;
   margin-top: 100%;
 }
 
-main .main-container .my-container .other-amount .amount .order-total-button .next-a .anim:after {
+main .main-container .my-container .shopping-container .payment-amount .amount .order-total-button .next-a .anim:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1551,7 +1478,7 @@ footer {
   height: 0px !important;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1450px) {
   footer .site-footer .container {
     max-width: 880px;
     -webkit-transition: 1s;
