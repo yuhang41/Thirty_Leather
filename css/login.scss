@@ -486,7 +486,6 @@ main {
                                             display: flex;
                                             flex-direction: column;
                                             height: 60px;
-                                            margin-bottom: 0px;
                                         }
 
                                         .block1-l {
@@ -528,7 +527,8 @@ main {
                                             display: flex;
                                             flex-direction: column;
                                             justify-content: space-around;
-                                            height: 150px;
+                                            height: 144px;
+                                            margin-bottom: 72px;
                                         }
 
                                         li {

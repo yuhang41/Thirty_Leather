@@ -530,7 +530,6 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
         -ms-flex-direction: column;
             flex-direction: column;
     height: 60px;
-    margin-bottom: 0px;
   }
 }
 
@@ -590,7 +589,8 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .data-block6
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: 150px;
+    height: 144px;
+    margin-bottom: 72px;
   }
 }
 
