@@ -43,6 +43,9 @@ var swiper4 = new Swiper(".mySwiper4", {
  },
  breakpoints: {
   // when window width is >= 1350px
+  // 1250:{
+  //   slidesPerView: 'auto',
+  // },
   700:{
     slidesPerView: 'auto',
   },

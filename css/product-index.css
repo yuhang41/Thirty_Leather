@@ -218,6 +218,7 @@ main .main-container .product-container .product-container-card .product-card-sp
 }
 
 main .main-container .product-container .product-container-card .product-card-spacing .product-card {
+  padding: 0 10px;
   max-width: 275px;
   min-width: 230px;
   width: 100%;

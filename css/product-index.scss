@@ -356,6 +356,7 @@ main{
                         flex: 0 0 60%;
                     }
                     .product-card {
+                        padding: 0 10px;
                         @include shoes-content();
                         @include card-change(){
                             &:nth-child(n+5){

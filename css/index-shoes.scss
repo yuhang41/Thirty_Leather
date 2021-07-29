@@ -18,7 +18,7 @@
 }
 //1250
 @mixin sm-screen{
-    @media(max-width:1250px){
+    @media(max-width:1190px){
         @content;
         transition: 1s;
     }
@@ -101,13 +101,10 @@ main{
         padding-left: 8vw;
         position: relative;
         overflow: hidden;
-        transition: 1s;
+        transition: 1s;        
         @include tablet(){
             padding-left: 6vw;
-        }
-        @include bg-phone(){
-          
-        }
+        }        
         @include normal-phone(){
             padding-left: unset;
         }
@@ -120,7 +117,7 @@ main{
             }
             .shoes-article{
                 display: flex;
-                      
+                overflow-inline: hidden;                      
                 @include normal-phone(){
                    justify-content: center;
                 }
@@ -170,8 +167,8 @@ main{
                         }
                     }
                 }
-                .decoration-line{  
-                    position: relative;       
+                .decoration-line{                      
+                    position: relative;                    
                     svg{
                         position: absolute;
                         top: 17px;
@@ -221,22 +218,37 @@ main{
                     .inner-content{
                         height: 384px;
                         display: flex;
-                        justify-content: flex-end;
+                        // justify-content: flex-end;
                         margin-bottom: 60px; 
-                        @include bg-screen(){
-                            justify-content: unset;
-                        }
-                        @include sm-screen(){
+                        // @include bg-screen(){
+                        //     // justify-content: space-between;
+                        // }
+                        // @include sm-screen(){
+                        //     // height: unset;
+                        //     // justify-content: space-between;
+                        //     // flex-direction: column;
+                        // }
+                        @include tablet(){
                             height: unset;
+                            justify-content: space-between;
                             flex-direction: column;
-                        }                     
+                        }
                         //文字的swiper
                         .development-process-content{
                             max-width: 375px;
                             flex: 0 0 50%;
                             transition: 1s;
                             margin-right: 50px;
+                            margin-left: auto;
+                            // @include bg-screen(){                                
+                            //     // margin-right: auto;
+                            // }
                             @include sm-screen(){
+                                margin-right: auto;
+                            }
+                            @include tablet(){
+                                margin-right: unset;
+                                margin-left: unset;
                                 margin-bottom: 100px;
                             }
                             @include normal-phone(){
@@ -246,7 +258,8 @@ main{
                                 margin-bottom: 0px;
                             }
                             .swiper-container{
-                                width: 430px;
+                                max-width: 430px;
+                                width: 100%;
                                 z-index: 2;
                                 @include sm-phone(){
                                     width: 300px;
@@ -331,12 +344,18 @@ main{
                                 padding-left: unset;
                             }
                             .swiper-container {
-                                width: 765px;
+                                max-width: 765px;
+                                width: 100%;
                                 height: 384px;
                                 margin-bottom: 50px;
                                 margin-right: 0px;
-                                @include sm-screen(){
-                                  width: unset;  
+                                // @include sm-screen(){
+                                //   width: unset;
+                                // }
+                                @include tablet(){
+                                    max-width: unset;
+                                    width: unset;
+                                    margin-left: unset;
                                 }
                                 @include sm-phone(){
                                     margin: unset;
@@ -344,7 +363,8 @@ main{
                                 }
                             }
                             .swiper-slide {
-                                width: 664px;
+                                max-width: 664px;
+                                width: 100%;
                                 height: unset;
                                @include sm-phone(){
                                    width: unset;
@@ -359,6 +379,9 @@ main{
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
+                                @include bg-screen(){                                
+                                    object-fit: contain;    
+                                }
                                 @include normal-phone(){
                                 object-fit: contain;
                                 }
@@ -375,7 +398,11 @@ main{
                                 z-index: 1;
                                 opacity: 0.5;
                                 transition: 1s;
-                                @include sm-screen(){
+                                // @include sm-screen(){
+                                //     top: -450px;
+                                //     left: 200px;
+                                // }
+                                @include tablet(){
                                     top: -450px;
                                     left: 200px;
                                 }
@@ -385,14 +412,22 @@ main{
                             }
                             .swiper-step{
                                 display: flex;
-                                width: 765px;
+                                max-width: 765px;
+                                width: 100%;
                                 margin-left: auto;
                                 transition: 1s;
-                                @include sm-screen(){
+                                // @include sm-screen(){
+                                //     position: absolute;
+                                //     // width: 39.8vw;
+                                //     top: -70px;
+                                // }
+                                @include tablet(){
                                     position: absolute;
+                                    // width: 39.8vw;
                                     top: -70px;
                                 }
                                 @include normal-phone(){
+                                    max-width: unset;
                                     width: 100vw;
                                     left: 5vw;
                                 }
