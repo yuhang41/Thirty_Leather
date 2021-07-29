@@ -123,7 +123,7 @@ main {
                         width: 80px;
                         font-size: $H11-font-size;
                     }
-                    
+
                     @include four-fifty() {
                         width: 45px;
                         white-space: pre-wrap;
@@ -273,15 +273,12 @@ main {
                                             }
                                         }
 
-                                        .input1 {
-                                            @include four-fifty() {
-                                                text-align: center;
-                                            }
-                                        }
-
                                         .title {
+                                            width: 72px;
+
                                             @include four-fifty() {
-                                                margin-left: 24px;
+                                                width: 100%;
+                                                text-align: center;
                                             }
                                         }
 
@@ -291,18 +288,17 @@ main {
                                             }
                                         }
 
-                                        .content::-webkit-input-placeholder {
+                                        .content {
+                                            margin-left: 32px;
+
                                             @include four-fifty() {
-                                                text-align: center;
-                                                margin-right: 36px;
+                                                margin-left: 0px;
                                             }
                                         }
 
-                                        .content3,
-                                        .content4 {
+                                        .content::-webkit-input-placeholder {
                                             @include four-fifty() {
-                                                width: 223px;
-                                                margin-left: 36px;
+                                                text-align: center;
                                             }
                                         }
                                     }
@@ -330,8 +326,12 @@ main {
                                             }
 
                                             .address-data {
+                                                @include sm-tablet() {
+                                                    padding-left: 12px;
+                                                }
+
                                                 @include four-fifty() {
-                                                    text-align: center;
+                                                    padding-left: 0;
                                                 }
 
                                                 .city-block {
@@ -543,7 +543,6 @@ main {
                                         .block-l {
                                             width: calc((100% / 9) * 4);
 
-
                                             @include try-on() {
                                                 width: 100%;
                                             }
@@ -589,7 +588,6 @@ main {
                                                 display: flex;
                                                 flex-direction: column;
                                                 background-color: $color-LightGray;
-
 
                                                 .top,
                                                 .mid,

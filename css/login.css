@@ -289,15 +289,14 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
   }
 }
 
-@media (max-width: 450px) {
-  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .input1 {
-    text-align: center;
-  }
+main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .title {
+  width: 72px;
 }
 
 @media (max-width: 450px) {
   main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .title {
-    margin-left: 24px;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -307,18 +306,19 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
   }
 }
 
+main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content {
+  margin-left: 32px;
+}
+
 @media (max-width: 450px) {
-  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content::-webkit-input-placeholder {
-    text-align: center;
-    margin-right: 36px;
+  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content {
+    margin-left: 0px;
   }
 }
 
 @media (max-width: 450px) {
-  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content3,
-  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content4 {
-    width: 223px;
-    margin-left: 36px;
+  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-left .content::-webkit-input-placeholder {
+    text-align: center;
   }
 }
 
@@ -353,9 +353,15 @@ main .member-page .member-lists .tab-content .tab-pane .member-data .member-cont
   }
 }
 
+@media (max-width: 1024px) {
+  main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-right .contact .address-data {
+    padding-left: 12px;
+  }
+}
+
 @media (max-width: 450px) {
   main .member-page .member-lists .tab-content .tab-pane .member-data .member-container .data-block3 .input-data .input-right .contact .address-data {
-    text-align: center;
+    padding-left: 0;
   }
 }
 
