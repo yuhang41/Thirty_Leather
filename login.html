@@ -15,11 +15,13 @@
 
     <link rel="stylesheet" href="/css/login.css">
 
+    <link rel="stylesheet" href="/css/footer.css">
+
     <title>Document</title>
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -34,7 +36,7 @@
                 <ul class="navbar-nav">
                     <!-- 所有商品 -->
                     <li class="nav-item active single-commidity">
-                        <a class="nav-link" href="#">所有商品<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./product-index.html">所有商品<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- 下拉式的所有商品 -->
                     <li class="nav-item dropdown all-commidity">
@@ -139,11 +141,17 @@
         </nav>
         <div class="personal-item">
             <div class="input-cart d-flex">
-                <form class="search d-flex my-2 my-lg-0">
+                <form class="search d-flex my-2">
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="fas fa-user m-2"></i>
+                <i class="member nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">個人訊息</a>
+                        <a class="dropdown-item" href="#">追蹤清單</a>
+                    </div>
+                </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
                     <div class="cart-number">1</div>
@@ -177,8 +185,7 @@
                     <a class="list-group-item list-group-item-action" id="list-profile-list"
                         href="/trace-lists.html">追蹤清單</a>
 
-                    <a class="list-group-item list-group-item-action" id="list-profile-list"
-                        href="/message.html">訊息</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" href="/message.html">訊息</a>
 
                     <a class="list-group-item list-group-item-action" id="list-profile-list"
                         href="/passwordModify.html">密碼修改</a>
@@ -212,28 +219,28 @@
                                         <div class="input-data mx-auto d-flex justify-content-between">
                                             <div class="input-left">
                                                 <div class="input1 input-name">
-                                                    <label class="title font-weight-bold mr-3">姓名</label>
+                                                    <label class="title font-weight-bold">姓名</label>
 
-                                                    <input type="text" class="content content1 ml-4" placeholder="林土木"
+                                                    <input type="text" class="content content1" placeholder="林土木"
                                                         readonly>
                                                 </div>
 
                                                 <div class="input1 input-email">
-                                                    <label class="title title1 font-weight-bold mr-3">信箱</label>
+                                                    <label class="title title1 font-weight-bold">信箱</label>
 
-                                                    <input type="text" class="content content2 ml-4"
+                                                    <input type="text" class="content content2"
                                                         placeholder="test123@gmail.com" readonly>
                                                 </div>
 
                                                 <div class="input1 input-phone">
-                                                    <label class="title title1 font-weight-bold mr-3">行動電話</label>
+                                                    <label class="title title1 font-weight-bold">行動電話</label>
 
                                                     <input type="text" class="content content3"
                                                         placeholder="0900 - 123456" readonly>
                                                 </div>
 
                                                 <div class="input1 input-date">
-                                                    <label class="title title1 font-weight-bold mr-3">出生日期</label>
+                                                    <label class="title title1 font-weight-bold">出生日期</label>
 
                                                     <input type="text" class="content content4"
                                                         placeholder="1995 / 01 / 24" readonly>
@@ -335,32 +342,35 @@
                                             </ul>
 
                                             <div class="ttz">
-                                                <ul class="top d-flex">
-                                                    <li><button class="btn plus-btn1">+</button></li>
-                                                    <li class="order-detail font-weight-bold">訂單明細</li>
-                                                </ul>
-
-                                                <div class="square1">
-                                                    <ul class="mid d-flex">
-                                                        <li>寄送方式</li>
-                                                        <li>處理進度</li>
-                                                        <li>應付金額</li>
-                                                        <li>發票</li>
-                                                        <li>退貨服務</li>
+                                                <button class="click-first">
+                                                    <ul class="top d-flex">
+                                                        <li class="plus plus-1">+</li>
+                                                        <li class="minus minus-1">-</li>
+                                                        <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <ul class="bot d-flex">
-                                                        <li>全家店配</li>
-                                                        <li>已配送</li>
-                                                        <li>2,999</li>
-                                                        <li>
-                                                            <div class="invoice1">檢視發票</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="information1">退貨資訊</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="square1">
+                                                        <ul class="mid d-flex">
+                                                            <li>寄送方式</li>
+                                                            <li>處理進度</li>
+                                                            <li>應付金額</li>
+                                                            <li>發票</li>
+                                                            <li>退貨服務</li>
+                                                        </ul>
+
+                                                        <ul class="bot d-flex">
+                                                            <li>全家店配</li>
+                                                            <li>已配送</li>
+                                                            <li>2,999</li>
+                                                            <li>
+                                                                <div class="invoice1">檢視發票</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="information1">退貨資訊</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
@@ -389,33 +399,37 @@
                                                 </li>
                                             </ul>
 
+
                                             <div class="ttz">
-                                                <ul class="top d-flex">
-                                                    <li><button class="btn plus-btn2">+</button></li>
-                                                    <li class="order-detail font-weight-bold">訂單明細</li>
-                                                </ul>
-
-                                                <div class="square2">
-                                                    <ul class="mid d-flex">
-                                                        <li>寄送方式</li>
-                                                        <li>處理進度</li>
-                                                        <li>應付金額</li>
-                                                        <li>發票</li>
-                                                        <li>退貨服務</li>
+                                                <button class="click-second">
+                                                    <ul class="top d-flex">
+                                                        <li class="plus plus-2">+</li>
+                                                        <li class="minus minus-2">-</li>
+                                                        <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <ul class="bot d-flex">
-                                                        <li>全家店配</li>
-                                                        <li>處理中</li>
-                                                        <li>2,999</li>
-                                                        <li>
-                                                            <div class="invoice1">檢視發票</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="information1">退貨資訊</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="square2">
+                                                        <ul class="mid d-flex">
+                                                            <li>寄送方式</li>
+                                                            <li>處理進度</li>
+                                                            <li>應付金額</li>
+                                                            <li>發票</li>
+                                                            <li>退貨服務</li>
+                                                        </ul>
+
+                                                        <ul class="bot d-flex">
+                                                            <li>全家店配</li>
+                                                            <li>已配送</li>
+                                                            <li>2,999</li>
+                                                            <li>
+                                                                <div class="invoice1">檢視發票</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="information1">退貨資訊</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
@@ -444,33 +458,37 @@
                                                 </li>
                                             </ul>
 
+
                                             <div class="ttz">
-                                                <ul class="top d-flex">
-                                                    <li><button class="btn plus-btn3">+</button></li>
-                                                    <li class="order-detail font-weight-bold">訂單明細</li>
-                                                </ul>
-
-                                                <div class="square3">
-                                                    <ul class="mid d-flex">
-                                                        <li>寄送方式</li>
-                                                        <li>處理進度</li>
-                                                        <li>應付金額</li>
-                                                        <li>發票</li>
-                                                        <li>退貨服務</li>
+                                                <button class="click-third">
+                                                    <ul class="top d-flex">
+                                                        <li class="plus plus-3">+</li>
+                                                        <li class="minus minus-3">-</li>
+                                                        <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <ul class="bot d-flex">
-                                                        <li>全家店配</li>
-                                                        <li>處理中</li>
-                                                        <li>2,999</li>
-                                                        <li>
-                                                            <div class="invoice1">檢視發票</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="information1">退貨資訊</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="square3">
+                                                        <ul class="mid d-flex">
+                                                            <li>寄送方式</li>
+                                                            <li>處理進度</li>
+                                                            <li>應付金額</li>
+                                                            <li>發票</li>
+                                                            <li>退貨服務</li>
+                                                        </ul>
+
+                                                        <ul class="bot d-flex">
+                                                            <li>全家店配</li>
+                                                            <li>已配送</li>
+                                                            <li>2,999</li>
+                                                            <li>
+                                                                <div class="invoice1">檢視發票</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="information1">退貨資訊</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
@@ -499,33 +517,37 @@
                                                 </li>
                                             </ul>
 
+
                                             <div class="ttz">
-                                                <ul class="top d-flex">
-                                                    <li><button class="btn plus-btn4">+</button></li>
-                                                    <li class="order-detail font-weight-bold">訂單明細</li>
-                                                </ul>
-
-                                                <div class="square4">
-                                                    <ul class="mid d-flex">
-                                                        <li>寄送方式</li>
-                                                        <li>處理進度</li>
-                                                        <li>應付金額</li>
-                                                        <li>發票</li>
-                                                        <li>退貨服務</li>
+                                                <button class="click-fourth">
+                                                    <ul class="top d-flex">
+                                                        <li class="plus plus-4">+</li>
+                                                        <li class="minus minus-4">-</li>
+                                                        <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <ul class="bot d-flex">
-                                                        <li>全家店配</li>
-                                                        <li>處理中</li>
-                                                        <li>2,999</li>
-                                                        <li>
-                                                            <div class="invoice1">檢視發票</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="information1">退貨資訊</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="square4">
+                                                        <ul class="mid d-flex">
+                                                            <li>寄送方式</li>
+                                                            <li>處理進度</li>
+                                                            <li>應付金額</li>
+                                                            <li>發票</li>
+                                                            <li>退貨服務</li>
+                                                        </ul>
+
+                                                        <ul class="bot d-flex">
+                                                            <li>全家店配</li>
+                                                            <li>已配送</li>
+                                                            <li>2,999</li>
+                                                            <li>
+                                                                <div class="invoice1">檢視發票</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="information1">退貨資訊</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
@@ -554,33 +576,37 @@
                                                 </li>
                                             </ul>
 
+
                                             <div class="ttz">
-                                                <ul class="top d-flex">
-                                                    <li><button class="btn plus-btn5">+</button></li>
-                                                    <li class="order-detail font-weight-bold">訂單明細</li>
-                                                </ul>
-
-                                                <div class="square5">
-                                                    <ul class="mid d-flex">
-                                                        <li>寄送方式</li>
-                                                        <li>處理進度</li>
-                                                        <li>應付金額</li>
-                                                        <li>發票</li>
-                                                        <li>退貨服務</li>
+                                                <button class="click-fifth">
+                                                    <ul class="top d-flex">
+                                                        <li class="plus plus-5">+</li>
+                                                        <li class="minus minus-5">-</li>
+                                                        <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <ul class="bot d-flex">
-                                                        <li>全家店配</li>
-                                                        <li>處理中</li>
-                                                        <li>2,999</li>
-                                                        <li>
-                                                            <div class="invoice1">檢視發票</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="information1">退貨資訊</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                    <div class="square5">
+                                                        <ul class="mid d-flex">
+                                                            <li>寄送方式</li>
+                                                            <li>處理進度</li>
+                                                            <li>應付金額</li>
+                                                            <li>發票</li>
+                                                            <li>退貨服務</li>
+                                                        </ul>
+
+                                                        <ul class="bot d-flex">
+                                                            <li>全家店配</li>
+                                                            <li>已配送</li>
+                                                            <li>2,999</li>
+                                                            <li>
+                                                                <div class="invoice1">檢視發票</div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="information1">退貨資訊</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -600,6 +626,65 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="site-footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="/img/30leather_logo.svg">
+                </div>
+
+                <hr>
+
+                <div class="footer-icons d-flex justify-content-center">
+                    <a class="line" href="https://page.line.me/igt6497i?openQrModal=true" target="_blank">
+                        <img src="/img/LINE-ICON.jpg" alt="">
+                    </a>
+
+                    <a class="facebook" href="https://www.facebook.com/30leather" target="_blank">
+                        <img src="/img/facebook-ICON.jpg" alt="">
+                    </a>
+
+                    <a class="instagram" href="https://www.instagram.com/30leather/" target="_blank">
+                        <img src="/img/Instagram.ICON.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="d-inline-block"></div>
+
+                <!-- <div class="return-nav d-flex justify-content-end">
+                    <a class="" href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
+                            <div class="footer-arrow-text">TOP</div>
+                        </i></a>
+                </div> -->
+
+                <div class="footer-links d-flex justify-content-center">
+                    <div class="block d-flex">
+                        <ul class="block1 list-unstyled d-flex">
+                            <li class="common-problem list">常見問題</li>
+
+                            <li class="sale list">售前與售後服務</li>
+
+                            <li class="pay list">付款方式</li>
+                        </ul>
+
+                        <ul class="block2 list-unstyled d-flex">
+                            <li class="send list">寄送方式</li>
+
+                            <li class="refund list">退貨流程</li>
+
+                            <li class="invoice list">發票折讓</li>
+
+                            <li class="privacy">隱私權</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;<span>森上沒戴前 All
+                    Rights Reserved</span></div>
+        </div>
+    </footer>
 
     <script src="/js/login.js"></script>
 

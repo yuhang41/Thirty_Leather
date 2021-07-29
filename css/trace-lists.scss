@@ -75,13 +75,13 @@ main {
         }
 
         .trace-lists {
-            @include sm-tablet() {
+            @include try-on() {
                 display: flex;
                 flex-direction: column;
             }
 
             .list-group {
-                @include sm-tablet() {
+                @include try-on() {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -98,34 +98,25 @@ main {
                     outline: none;
                     z-index: 2;
 
-                    @include sm-tablet() {
-                        border-right: 1px solid black;
-                        border-bottom: none;
-                    }
-
                     @include try-on() {
-                        width: 150px;
+                        max-width: 205px;
+                        width: 100%;
                         font-size: $H8-font-size;
                         white-space: nowrap;
                         padding: 0;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        border-right: 1px solid black;
+                        border-bottom: none;
                     }
 
                     @include bg-phone() {
-                        width: 100px;
                         font-size: $H10-font-size;
                     }
 
                     @include sm-phone() {
-                        width: 80px;
                         font-size: $H11-font-size;
-                    }
-
-                    @include four-fifty() {
-                        width: 45px;
-                        white-space: pre-wrap;
                     }
 
                     &.active {
@@ -137,38 +128,22 @@ main {
                         margin-left: -18px;
                         z-index: 2;
 
-                        @include sm-tablet() {
-                            width: 170px;
+                        @include try-on() {
+                            max-width: 205px;
+                            width: 100%;
                             height: 78px;
-                            margin-left: 0;
                             border-right: none;
                             border-bottom: 18px solid $color-SkyBlue;
                             z-index: 2;
-                        }
-
-                        @include try-on() {
-                            width: 150px;
                             font-size: $H8-font-size;
-                            white-space: nowrap;
-                            padding: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
                         }
 
                         @include bg-phone() {
-                            width: 100px;
                             font-size: $H10-font-size;
                         }
 
                         @include sm-phone() {
-                            width: 80px;
                             font-size: $H11-font-size;
-                        }
-
-                        @include four-fifty() {
-                            width: 46px;
-                            white-space: pre-wrap;
                         }
                     }
 
@@ -195,7 +170,7 @@ main {
                         border: 1px solid $color-Apricot;
                         margin-left: -17px;
 
-                        @include sm-tablet() {
+                        @include try-on() {
                             width: 100%;
                             margin-left: 0;
                             margin-top: -17px;
@@ -261,7 +236,7 @@ main {
                                 .buy-status {
                                     flex: 0 0 13%;
 
-                                    @include bg-phone()  {
+                                    @include bg-phone() {
                                         flex: 0 0 16%;
                                     }
 
@@ -275,7 +250,8 @@ main {
                                             flex-direction: column;
                                         }
 
-                                        .purchase, .situation {
+                                        .purchase,
+                                        .situation {
                                             @include four-fifty() {
                                                 margin: auto;
                                             }
@@ -290,7 +266,7 @@ main {
                                         flex: 0 0 9%;
                                     }
 
-                                    @include sm-phone()  {
+                                    @include sm-phone() {
                                         flex: 0 0 10%;
                                     }
                                 }
@@ -386,6 +362,24 @@ main {
                                                 flex-direction: column;
                                                 text-align: center;
                                             }
+
+                                            .subscribed, .goods-inform {
+                                                @include sm-tablet() {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            img {
+                                                width: 24px;
+                                                height: 24px;
+                                                display: none;
+                                                padding-top: 2px;
+
+                                                @include sm-tablet() {
+                                                    display: flex;
+                                                    margin: auto;
+                                                }
+                                            }
                                         }
                                     }
 
@@ -399,6 +393,11 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 12.5%;
+                                        }
+
+                                        img {
+                                            width: 22px;
+                                            height: 22px;
                                         }
                                     }
                                 }
@@ -481,26 +480,29 @@ main {
                                             background-color: $color-White;
                                             padding: 0;
                                             margin: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
 
-                                            @include bg-phone() {
-                                                display: flex;
-                                                flex-direction: column;
-                                                height: 50px;
-                                                font-size: $H9-font-size;
-                                            }
-
-                                            @include sm-phone() {
-                                                font-size: $H12-font-size;
-                                            }
-
-                                            @include iphone-5s() {
-                                                font-size: $H11-font-size;
+                                            @include sm-tablet() {
+                                                display: none;
                                             }
 
                                             &:hover {
                                                 font-weight: bold;
                                                 background-color: $color-MoreButton-hover;
                                                 color: $color-White;
+                                            }
+                                        }
+
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                            display: none;
+
+                                            @include sm-tablet() {
+                                                display: flex;
+                                                margin-top: 3px;
                                             }
                                         }
                                     }
@@ -515,6 +517,11 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 12.5%;
+                                        }
+
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
                                         }
                                     }
                                 }

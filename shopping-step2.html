@@ -18,7 +18,7 @@
 
 <body>
     <nav id="navbar">
-        <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt="" ></a>
+        <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,7 +141,13 @@
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="fas fa-user m-2"></i>
+                <i class="member nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">個人訊息</a>
+                            <a class="dropdown-item" href="#">追蹤清單</a>
+                        </div>
+                </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
                     <div class="cart-number">1</div>
@@ -386,33 +392,33 @@
                     <button herf="#" class="back-button">
                         &lt; &lt;返回購物車 
                     </button>
-                            <div class="amount">
-                                <div class="free-ship">
-                                    <p>已享用之優惠</p>
-                                    優惠促銷 : 滿千免運
-                                </div>
-                                <div class="total">
-                                    <div class="price-total">
-                                        <p>小計</p>
-                                        <p class="subtotal-total">$9920</p>
-                                    </div>
-                                    <div class="price-total">
-                                        <p>商品總金額</p>
-                                        <p class="shipping-total">$0</p>
-                                    </div>
-                                    <div class="order-total-button">
-                                        <div class="order-total">
-                                            <p>總金額</p>
-                                            <p class="order-total-price">$9920</p>
-                                        </div>
-                                        <button type="submit" class="next-button clickable">
-                                            提交訂單
-                                            <i class="fas fa-long-arrow-alt-right"></i>
-                                            <div class="anim"></div>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="amount">
+                        <div class="free-ship">
+                            <p>已享用之優惠</p>
+                            優惠促銷 : 滿千免運
+                        </div>
+                        <div class="total">
+                            <div class="price-total">
+                                <p>小計</p>
+                                <p class="subtotal-total">$9920</p>
                             </div>
+                            <div class="price-total">
+                                <p>商品總金額</p>
+                                <p class="shipping-total">$0</p>
+                            </div>
+                            <div class="order-total-button">
+                                <div class="order-total">
+                                    <p>總金額</p>
+                                    <p class="order-total-price">$9920</p>
+                                </div>
+                                <button type="submit" class="next-button clickable">
+                                    提交訂單
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                    <div class="anim"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -439,13 +445,6 @@
                         <img src="/img/Instagram.ICON.jpg" alt="">
                     </a>
                 </div>
-
-                <div class="return-nav d-flex justify-content-end">
-                    <a href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
-                            <div class="footer-arrow-text">TOP</div>
-                        </i></a>
-                </div>
-
                 <div class="footer-links d-flex justify-content-center">
                     <div class="block d-flex">
                         <ul class="block1 list-unstyled d-flex">

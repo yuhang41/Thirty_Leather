@@ -340,12 +340,13 @@ main {
                         text-align: center;
                         @keyframes text-move {
                             0%{
-                                transform-origin: 20px 0px;
-                                transform: rotate(45deg);
+                                top: 50px;
+                            }
+                            70%{
+                                top: 10px;
                             }
                             100%{
-                                transform-origin: 40px 5px;
-                                transform: rotate(0deg);
+                                top: 0px;
                             }
                         }
                         
@@ -443,6 +444,67 @@ main {
                     }
                 }
             }
+        }
+        // 回到上層的按鈕
+        .back-top{
+            display: none;
+
+            &.sticky{
+                display: block;
+                
+                position: fixed;
+                bottom: 92px;
+                right: 40px;
+                z-index: 5;
+                opacity: 0.3;
+                animation: top-move-in .3s ease-in-out;
+                animation-fill-mode: both;
+                @keyframes top-move-in {
+                    0%{
+                        bottom: 95px;
+                        opacity: 0;
+                    }
+                    100%{
+                        bottom: 92px;
+                        opacity: 0.3;
+                    }
+                    
+                }
+                &:hover{
+                    opacity: 0.3;
+                    animation: top-move .7s ease-in-out;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes top-move {
+                    0%{
+                        bottom: 100px;
+                        opacity: 0.5;
+                    }
+                    20%{
+                        bottom: 92px;
+                        opacity: 0.7;
+                    }
+                    40%{
+                        bottom: 100px;
+                        opacity: 0.9;
+                    }
+                    80%{
+                        bottom: 92px;
+                        opacity: 1; 
+                    }
+                    100%{
+                        bottom: 100px;
+                        opacity: 0.5;
+                    }
+                    
+                }
+                a{
+                    i{
+                        font-size: $H3-font-size;
+                    }
+                }
+            }
+           
         }
         // 聯絡客服
         .chatbot {
@@ -1346,15 +1408,10 @@ main {
             background-color: $color-LightGray;
             position: relative;
             z-index: 2;
-            &:after {
-                content: "";
-                position: absolute;
-                width: 1px;
-                height: 969px;
-                top: 115px;
-                left: 190px;
-                background-color: $color-Background-line;
+            &[data-inviewport="scale-in"] {
                 transition: 1s;
+            }
+            &[data-inviewport="scale-in"].is-inViewport:after{
                 animation: linegrow-1 3s ease-in-out ;
                 @keyframes linegrow-1 {
                     from{
@@ -1364,6 +1421,53 @@ main {
                         height: 969px;
                     }
                 }
+                @include sm-tablet() {
+                    height: 1033px;
+                    animation: linegrow-2 3s ease-in-out ;
+                @keyframes linegrow-2 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1033px;
+                    }
+                }
+                }
+                @include single-cart() {
+                    height: 1874px;
+                    animation: linegrow-3 3s ease-in-out ;
+                @keyframes linegrow-3 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1874px;
+                    }
+                }
+                }
+                @include iphone-5s() {
+                    height: 1873px;
+                    left: 33px;
+                    animation: linegrow-4 3s ease-in-out ;
+                @keyframes linegrow-4 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1873px;
+                    }
+                }
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 969px;
+                top: 115px;
+                left: 190px;
+                background-color: $color-Background-line;
+                transition: 1s;
                 @include tablet() {
                     top: 193px;
                     left: 64px;
@@ -1630,6 +1734,20 @@ main {
         .photo-wall {
             background-color: $color-LightGray;
             position: relative;
+            &[data-inviewport="scale-in"] {
+                transition: 1s;
+            }
+            &[data-inviewport="scale-in"].is-inViewport:before{
+                animation: linegrow2-1 3s ease-in-out ;
+                @keyframes linegrow2-1 {
+                    from{
+                        height: 0px;
+                    }
+                   to{
+                        height: 1078px;
+                    }
+                }
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -1639,16 +1757,6 @@ main {
                 left: 190px;
                 background-color: $color-Background-line;
                 transition: 1s;
-                animation: linegrow2-1 3s ease-in-out ;
-                animation-delay: 3s;
-                @keyframes linegrow2-1 {
-                    from{
-                        height: 0px;
-                    }
-                   to{
-                        height: 1078px;
-                    }
-                }
                 @include tablet() {
                     left: 64px;
                 }
@@ -1891,28 +1999,32 @@ main {
                 }
 
                 .photo {
+                    width: unset;
+                    height: 0px;
                     position: relative;
+                    overflow: hidden;
+                    &[data-inviewport="scale-in"] {
+                        opacity: 0;
+                        transition: 1s;
+                    }
+                    &[data-inviewport="scale-in"].is-inViewport {
+                        opacity: 1;
+                        animation:  photo-fold 1s linear forwards; 
+                    } 
+                    @keyframes photo-fold {
+                        from{
+                            height: 0px;
+                        }
+                        to{
+                            height: 841px;
+                        }
+                        
+                    }   
                     & img {
                         max-width: 559px;
                         width: 100%;
-                        height: 0px;
-                        border-left: 18px solid $color-Apricot;    
-                        &[data-inviewport="scale-in"] {
-                            transition: 1s;
-                        }
-                        &[data-inviewport="scale-in"].is-inViewport {
-                            opacity: 1;
-                            animation:  photo-fold .6s linear forwards; 
-                        } 
-                        @keyframes photo-fold {
-                            from{
-                                height: 0px;
-                            }
-                            to{
-                                height: 841px;
-                            }
-                            
-                        }                    
+                        height: 841px;
+                        border-left: 18px solid $color-Apricot;                     
                         @include tablet() {
                             border: unset;
                         }

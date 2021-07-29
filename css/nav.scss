@@ -124,13 +124,25 @@ nav{
                 letter-spacing: $font-letter-space-200;
             }
             .member{
+                width: 100%;
+                &:hover{
+                    .dropdown-menu{
+                        display: block;
+                    }
+                }
                 .dropdown-menu{
                     border: unset;
                     padding: 0px;
                     background-color: $color-Navbar-Bgc; 
                     width: 40px !important;
                     min-width: 6em;
-                    transform: translate3d(-37px, 25px, 0px)!important;
+                    transform: translate3d(-37px, 0px, 0px)!important;
+                    &.show{
+                       display: none;
+                    }
+                    &:hover{
+                        display: block;
+                    }
                     .dropdown-item{
                         font-size: $H11-font-size;
                         color: $color-WedgwoodBlue;

@@ -72,11 +72,13 @@
         // }
     }
     .content {
+       
         .text {
+            padding: 0px 5px;
             p {
                 margin: 0px;
                 &:nth-child(1) {
-                    font-size: $H6-font-size;
+                    font-size: $H7-font-size;
                     font-weight: lighter;
                     letter-spacing: $font-letter-space-100;
                     color: $color-IronGray;
@@ -108,7 +110,7 @@
         }
     }
     a{
-        max-width: 235px;
+        max-width: 200px;
         width: 100%;
         margin: 30px 0px 10px 0px;
         &:hover{

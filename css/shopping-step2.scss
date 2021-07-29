@@ -96,9 +96,9 @@
         transition: 1s;
     }
 }
-//1150
+//1100
 @mixin tablet{
-    @media(max-width:1150px){
+    @media(max-width:1100px){
         @content;
         transition: 1s;
     }
@@ -113,6 +113,13 @@
 //960
 @mixin bg-phone{
     @media(max-width:960px){
+        @content;
+        transition: 1s;
+    }
+}
+//850
+@mixin phone{
+    @media(max-width:850px){
         @content;
         transition: 1s;
     }
@@ -213,16 +220,13 @@ main{
         .my-container{
             height: 100%;
             max-width: 1550px;
-            padding: 0;
             padding-top: 15.7vh;
+            padding-bottom: 50px;
             @include bg-screen(){
-                max-width: 1140px;
-            }
-            @include tablet(){
-                max-width: 900px;
+                padding:15.7vh 6.7vw 50px 6.7vw;
             }
             @include sm-phone(){
-                padding-top: 5.7vh;  
+                padding: 5.7vh 0px 50px 0px;  
             }
             .steps{
                 display: flex;
@@ -326,8 +330,8 @@ main{
                 margin-top: 30px;
                 display: flex;
                 position: relative;
-                @include bg-screen(){
-                    flex-direction: column;
+                @include tablet(){
+                    flex-direction: column;        
                 }
                 .web-title{
                     position: absolute;
@@ -350,7 +354,7 @@ main{
                     min-height:452px;
                     background: $color-White;
                     border: 1px solid $color-Apricot;
-                    padding: 3vh 1vw;
+                    padding: 2vh 1vw;
                     transition: 1s;
                     @include sm-phone(){
                         padding: 3vh  0px;
@@ -583,15 +587,15 @@ main{
                     flex-direction: column;
                     align-items: center;
                     transition: 1s;
-                    @include bg-screen(){
-                        max-width: 1140px;
+                    @include tablet(){
+                        max-width: unset;
                         margin-left: unset;
-                        margin-top: 40px;
                         flex-direction: row;
                         align-items: flex-start;
                         justify-content: space-between;
+                        margin-top: 20px;
                     }
-                    @include bg-phone(){
+                    @include phone(){
                         flex-direction: column;
                         align-items: center;
                     }
@@ -604,6 +608,9 @@ main{
                         flex-direction: column;
                         align-items: center;
                         padding-top: 20px;
+                        @include bg-phone(){
+                            margin-bottom: 20px;
+                        }
                         .orderer-container{
                             max-width: 261px;
                             margin: auto;
@@ -629,7 +636,7 @@ main{
                     }
                     .recipient-info{
                         width: 100%;
-                        @include bg-screen(){
+                        @include tablet(){
                             max-width: 371px;
                         }
                         .addressee{
@@ -643,12 +650,12 @@ main{
                             justify-content: space-between;
                             padding:20px 0px ;
                             margin: 32px auto;
-                            @include bg-screen(){
-                                margin-top: 0px;
+                            @include tablet(){
+                                margin: unset;
                             }
-                            @include bg-phone(){
-                                margin-top: 32px;
-                            }
+                            // @include bg-phone(){
+                            //     margin-top: 32px;
+                            // }
                             .addressee-title{
                                 font-size: $H5-font-size;
                                 letter-spacing: $font-letter-space-200;
@@ -720,6 +727,9 @@ main{
                             justify-content: center;
                             align-items: center;
                             margin: auto;
+                            @include tablet(){
+                                margin-top: 20px;
+                            }
                             .payment-title{
                                 font-size: $H5-font-size;
                                 letter-spacing: $font-letter-space-200;
@@ -746,7 +756,7 @@ main{
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                @include bg-phone(){
+                @include phone(){
                     flex-direction: column-reverse;
                     align-items: center;
                 }
@@ -756,9 +766,11 @@ main{
                 .back-button{
                     font-size: $H5-font-size;
                     color: $color-IronGray;
-                    margin-bottom:30px;
                     border: 0px;
                     background-color: unset;
+                    @include phone(){
+                        margin-top: 40px;
+                    }
                 }
                 .amount{
                     margin-top: 15px;
@@ -820,19 +832,19 @@ main{
                             }                
                         }
                         .next-button{
-                            width: 100%;                        
-                            border: none;
-                            outline: none;                        
-                            border-radius: 10px;
-                            display: flex;
-                            justify-content: center;                            
-                            align-items: center;
-                            background-color: unset;
-                            font-size: $H4-font-size;                        
+                            cursor: pointer;
+                            width: 100%;
+                            border: none;                            
+                            border-radius: 5px;
+                            outline: none;
+                            background: $color-Apricot;
+                            color: $color-White;
+                            font-size: $H4-font-size;
                             letter-spacing: $font-letter-space-200;
-                            color: $color-IronGray;
-                            border: 2px solid $color-IronGray;
-                            margin-bottom: 30px;
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             position: relative;
                             z-index: 0;
                             overflow: hidden;
