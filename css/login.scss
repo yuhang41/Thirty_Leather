@@ -230,8 +230,10 @@ main {
                             }
 
                             .data-block2 {
+                                width: 120px;
                                 color: $color-MoreButton-hover;
                                 cursor: pointer;
+                                margin: auto;
 
                                 .fa-pen {
                                     font-size: $H7-font-size;
@@ -582,45 +584,50 @@ main {
                                         }
 
                                         .ttz {
+                                            width: 100%;
                                             display: none;
-
-                                            @include try-on() {
+                                            
+                                            @include try-on()  {
                                                 display: flex;
                                                 flex-direction: column;
-                                                background-color: $color-LightGray;
+                                            }
 
-                                                .top,
-                                                .mid,
-                                                .bot {
+                                            .click-first, .click-second, .click-third, .click-fourth, .click-fifth{
+                                                padding: 0;
+
+                                                @include try-on() {
+                                                    border: none;
+                                                    background-color: $color-LightGray;
+                                                }
+
+    
+                                                .top, .mid, .bot{
                                                     margin: 0;
                                                     padding: 0;
                                                 }
-
+    
                                                 .top {
-                                                    .btn {
-                                                        padding: 0;
+                                                    .plus, .minus {
                                                         width: 40px;
                                                         height: 40px;
+                                                        font-size: 24px;
                                                         color: $color-MoreButton;
-
-                                                        &:focus {
-                                                            box-shadow: none;
-                                                        }
+                                                        line-height: 40px;
                                                     }
+    
+                                                    .minus-1, .minus-2, .minus-3, .minus-4, .minus-5 {
+                                                        display: none;                                                    }
 
                                                     .order-detail {
+                                                        font-size: 18px;
                                                         line-height: 40px;
                                                     }
                                                 }
-
-                                                .square1,
-                                                .square2,
-                                                .square3,
-                                                .square4,
-                                                .square5 {
+    
+                                                .square1, .square2, .square3, .square4, .square5 {
                                                     display: none;
                                                     height: 50px;
-
+    
                                                     .mid,
                                                     .bot {
                                                         li {
@@ -630,7 +637,7 @@ main {
 
                                                     .bot {
                                                         padding-top: 8px;
-
+                
                                                         .invoice1,
                                                         .information1 {
                                                             max-width: 58px;
