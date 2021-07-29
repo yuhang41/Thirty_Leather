@@ -100,12 +100,13 @@ main {
                     z-index: 2;
 
                     @include sm-tablet() {
+                        max-width: 205px;
+                        width: 100%;
                         border-right: 1px solid black;
                         border-bottom: none;
                     }
 
                     @include try-on() {
-                        width: 150px;
                         font-size: $H8-font-size;
                         white-space: nowrap;
                         padding: 0;
@@ -115,17 +116,14 @@ main {
                     }
 
                     @include bg-phone() {
-                        width: 100px;
                         font-size: $H10-font-size;
                     }
 
                     @include sm-phone() {
-                        width: 80px;
                         font-size: $H11-font-size;
                     }
 
                     @include four-fifty() {
-                        width: 45px;
                         white-space: pre-wrap;
                     }
 
@@ -139,7 +137,8 @@ main {
                         z-index: 2;
 
                         @include sm-tablet() {
-                            width: 170px;
+                            max-width: 205px;
+                            width: 100%;
                             height: 78px;
                             margin-left: 0;
                             border-right: none;
@@ -148,7 +147,6 @@ main {
                         }
 
                         @include try-on() {
-                            width: 150px;
                             font-size: $H8-font-size;
                             white-space: nowrap;
                             padding: 0;
@@ -158,17 +156,14 @@ main {
                         }
 
                         @include bg-phone() {
-                            width: 100px;
                             font-size: $H10-font-size;
                         }
 
                         @include sm-phone() {
-                            width: 80px;
                             font-size: $H11-font-size;
                         }
 
                         @include four-fifty() {
-                            width: 46px;
                             white-space: pre-wrap;
                         }
                     }
@@ -205,8 +200,8 @@ main {
                         .member-container {
                             width: 95%;
                             border-bottom: 2px solid $color-WedgwoodBlue;
-                            @include iphone-5s() {
-                                margin-top: 60px;
+                            @include sm-tablet() {
+                                margin-top: 72px;
                             }
 
                             .data-block1 {
@@ -230,8 +225,10 @@ main {
                             }
 
                             .data-block2 {
+                                width: 120px;
                                 color: $color-MoreButton-hover;
                                 cursor: pointer;
+                                margin: auto;
 
                                 .fa-pen {
                                     font-size: $H7-font-size;
@@ -489,7 +486,6 @@ main {
                                             display: flex;
                                             flex-direction: column;
                                             height: 60px;
-                                            margin-bottom: 0px;
                                         }
 
                                         .block1-l {
@@ -531,7 +527,8 @@ main {
                                             display: flex;
                                             flex-direction: column;
                                             justify-content: space-around;
-                                            height: 150px;
+                                            height: 144px;
+                                            margin-bottom: 72px;
                                         }
 
                                         li {
@@ -582,45 +579,50 @@ main {
                                         }
 
                                         .ttz {
+                                            width: 100%;
                                             display: none;
-
-                                            @include try-on() {
+                                            
+                                            @include try-on()  {
                                                 display: flex;
                                                 flex-direction: column;
-                                                background-color: $color-LightGray;
+                                            }
 
-                                                .top,
-                                                .mid,
-                                                .bot {
+                                            .click-first, .click-second, .click-third, .click-fourth, .click-fifth{
+                                                padding: 0;
+
+                                                @include try-on() {
+                                                    border: none;
+                                                    background-color: $color-LightGray;
+                                                }
+
+    
+                                                .top, .mid, .bot{
                                                     margin: 0;
                                                     padding: 0;
                                                 }
-
+    
                                                 .top {
-                                                    .btn {
-                                                        padding: 0;
+                                                    .plus, .minus {
                                                         width: 40px;
                                                         height: 40px;
+                                                        font-size: 24px;
                                                         color: $color-MoreButton;
-
-                                                        &:focus {
-                                                            box-shadow: none;
-                                                        }
+                                                        line-height: 40px;
                                                     }
+    
+                                                    .minus-1, .minus-2, .minus-3, .minus-4, .minus-5 {
+                                                        display: none;                                                    }
 
                                                     .order-detail {
+                                                        font-size: 18px;
                                                         line-height: 40px;
                                                     }
                                                 }
-
-                                                .square1,
-                                                .square2,
-                                                .square3,
-                                                .square4,
-                                                .square5 {
+    
+                                                .square1, .square2, .square3, .square4, .square5 {
                                                     display: none;
                                                     height: 50px;
-
+    
                                                     .mid,
                                                     .bot {
                                                         li {
@@ -630,7 +632,7 @@ main {
 
                                                     .bot {
                                                         padding-top: 8px;
-
+                
                                                         .invoice1,
                                                         .information1 {
                                                             max-width: 58px;
