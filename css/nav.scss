@@ -125,24 +125,21 @@ nav{
             }
             .member{
                 width: 100%;
+                position: relative;
                 &:hover{
                     .dropdown-menu{
                         display: block;
                     }
                 }
                 .dropdown-menu{
+                    position: absolute;
+                    top: 20px;
+                    left: -35px;
                     border: unset;
                     padding: 0px;
                     background-color: $color-Navbar-Bgc; 
                     width: 40px !important;
                     min-width: 6em;
-                    transform: translate3d(-37px, 0px, 0px)!important;
-                    &.show{
-                       display: none;
-                    }
-                    &:hover{
-                        display: block;
-                    }
                     .dropdown-item{
                         font-size: $H11-font-size;
                         color: $color-WedgwoodBlue;

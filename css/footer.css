@@ -23,6 +23,10 @@ footer .site-footer .container .footer-logo {
   margin: auto;
 }
 
+footer .site-footer .container .footer-icons {
+  margin-bottom: 1rem;
+}
+
 footer .site-footer .container .footer-icons a img {
   width: 50px;
   height: 50px;

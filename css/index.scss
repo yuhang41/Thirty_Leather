@@ -336,14 +336,11 @@ main {
                         color: $color-Banner-Card;
                         transform-origin: 40px 5px;
                         position: relative;
-                        animation: text-move 1s ease-in-out;
+                        animation: text-move .5s ease-in-out;
                         text-align: center;
                         @keyframes text-move {
                             0%{
                                 top: 50px;
-                            }
-                            70%{
-                                top: 10px;
                             }
                             100%{
                                 top: 0px;
@@ -1407,6 +1404,7 @@ main {
         .new-product {
             background-color: $color-LightGray;
             position: relative;
+            overflow: hidden;
             z-index: 2;
             &[data-inviewport="scale-in"] {
                 transition: 1s;
@@ -1974,6 +1972,7 @@ main {
         }
         // 試穿資訊
         .studio-information {
+            height: 841px;
             font-family: $font-Family-A;
             display: flex;
             position: relative;
@@ -1982,7 +1981,9 @@ main {
                 justify-content: center;
                 background: $color-LightGray;
             }
-
+            @include sm-tablet(){
+                height: unset;
+            }
             .studio-photo {
                 @include tablet() {
                     display: none;
@@ -2052,18 +2053,18 @@ main {
                 }
             }
             .studio-information-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 .try-container {
                     display: flex;
-
                     @include tablet() {
                         justify-content: center;
                         background: $color-LightGray;
                     }
-
                     @include sm-tablet() {
                         display: block;
                     }
-
                     .try-on-infor {
                         position: relative;
                         padding: 0 1.8vw;
@@ -2113,7 +2114,6 @@ main {
                             }
                         }
                     }
-
                     .try-content {
                         position: relative;
 
@@ -2231,16 +2231,15 @@ main {
                         }
                     }
                 }
-
                 .shop-map {
-                    margin-top: 90px;
-
                     @include tablet() {
                         display: flex;
                         justify-content: center;
                         background: $color-LightGray;
                     }
-
+                    @include try-on(){
+                        margin-top: 80px;
+                    }
                     .shop-map-content {
                         border-left: 18px solid $color-Apricot;
                     }
