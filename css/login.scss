@@ -190,6 +190,7 @@ main {
                         background-color: $color-White;
                         border: 1px solid $color-Apricot;
                         margin-left: -17px;
+                        margin-bottom: 48px;
 
                         @include sm-tablet() {
                             width: 100%;
