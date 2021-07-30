@@ -336,6 +336,7 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
   transition: 1s;
   margin-right: 50px;
   margin-left: auto;
+  position: relative;
 }
 
 @media (max-width: 1190px) {
@@ -485,6 +486,26 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
     -webkit-transition: 1s;
     transition: 1s;
   }
+}
+
+main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .shoes-sketch {
+  position: absolute;
+  top: 0px;
+  left: -800px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 1240px) {
+  main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .shoes-sketch {
+    opacity: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .shoes-sketch img {
+  width: 700px;
 }
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper {
@@ -727,16 +748,6 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
     -webkit-transition: 1s;
     transition: 1s;
   }
-}
-
-main .main-container .content-container .shoes-img-display .shoes-sketch {
-  position: absolute;
-  top: 0px;
-  right: 1400px;
-}
-
-main .main-container .content-container .shoes-img-display .shoes-sketch img {
-  width: 700px;
 }
 
 footer {

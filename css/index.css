@@ -1793,6 +1793,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
   background-color: #d2cec2;
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 1024px) {

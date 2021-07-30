@@ -1,5 +1,5 @@
 //development-process-swiper
-let development_steps=['層皮','腳跟','楦頭','結語']
+let development_steps=['層皮','腳跟','楦頭','內裏']
 //右邊文字的swiper
 var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: '1',

@@ -1142,6 +1142,7 @@ main {
                             background-color: $color-Shoes-Card;
                             background-position: top;
                             background-repeat: no-repeat;
+                            background-size: cover;
                             @include sm-tablet() {
                                 width: 184px;
                                 height: 184px;
