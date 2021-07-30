@@ -76,13 +76,13 @@ main {
         }
 
         .member-lists {
-            @include sm-tablet() {
+            @include try-on() {
                 display: flex;
                 flex-direction: column;
             }
 
             .list-group {
-                @include sm-tablet() {
+                @include try-on() {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -111,24 +111,23 @@ main {
                         }
                     }
 
-                    @include sm-tablet() {
+                    @include try-on() {
                         max-width: 205px;
                         width: 100%;
-                        border-right: 1px solid black;
-                        border-bottom: none;
-                    }
-
-                    @include try-on() {
                         font-size: $H8-font-size;
                         white-space: nowrap;
                         padding: 0;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        border-right: 1px solid black;
+                        border-bottom: none;
                     }
 
                     @include bg-phone() {
                         font-size: $H10-font-size;
+                        display: flex;
+                        flex-direction: column;
                     }
 
                     @include sm-phone() {
@@ -145,27 +144,18 @@ main {
                         z-index: 2;
                         font-size: $H6-font-size;
 
-                        @include sm-tablet() {
+                        @include try-on() {
                             max-width: 205px;
                             width: 100%;
                             height: 78px;
-                            margin-left: 0;
                             border-right: none;
                             border-bottom: 18px solid $color-SkyBlue;
                             z-index: 2;
-                        }
-
-                        @include try-on() {
-                            font-size: $H6-font-size;
-                            white-space: nowrap;
-                            padding: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            padding-left: 8px;
                         }
 
                         @include bg-phone() {
-                            font-size: $H7-font-size;;
+                            font-size: $H7-font-size;
                         }
 
                         @include sm-phone() {
@@ -197,7 +187,7 @@ main {
                         margin-left: -17px;
                         margin-bottom: 72px;
 
-                        @include sm-tablet() {
+                        @include try-on() {
                             width: 100%;
                             margin-left: 0;
                             margin-top: -17px;

@@ -98,6 +98,18 @@ main {
                     outline: none;
                     z-index: 2;
 
+                    &:hover {
+                        font-size: $H6-font-size;
+
+                        @include bg-phone() {
+                            font-size: $H7-font-size;
+                        }
+
+                        @include sm-phone() {
+                            font-size: $H9-font-size;
+                        }
+                    }
+
                     @include try-on() {
                         max-width: 205px;
                         width: 100%;
@@ -113,6 +125,8 @@ main {
 
                     @include bg-phone() {
                         font-size: $H10-font-size;
+                        display: flex;
+                        flex-direction: column;
                     }
 
                     @include sm-phone() {

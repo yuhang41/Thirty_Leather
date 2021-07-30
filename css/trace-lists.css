@@ -66,6 +66,22 @@ main .trace-page .trace-lists .list-group .list-group-item {
   z-index: 2;
 }
 
+main .trace-page .trace-lists .list-group .list-group-item:hover {
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  main .trace-page .trace-lists .list-group .list-group-item:hover {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  main .trace-page .trace-lists .list-group .list-group-item:hover {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 991px) {
   main .trace-page .trace-lists .list-group .list-group-item {
     max-width: 205px;
@@ -90,6 +106,13 @@ main .trace-page .trace-lists .list-group .list-group-item {
 @media (max-width: 768px) {
   main .trace-page .trace-lists .list-group .list-group-item {
     font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
