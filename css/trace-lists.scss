@@ -275,6 +275,8 @@ main {
                             .data-block2 {
                                 font-size: $H8-font-size;
                                 color: $color-Nav-icon;
+                                border-bottom: 2px solid #76828e;
+                                padding-bottom: 60px;
 
                                 @include bg-phone() {
                                     font-size: $H9-font-size;

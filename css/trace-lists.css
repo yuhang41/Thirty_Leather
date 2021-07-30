@@ -321,6 +321,8 @@ main .trace-page .trace-lists .tab-content .tab-pane .trace-data .trace-containe
 main .trace-page .trace-lists .tab-content .tab-pane .trace-data .trace-container .data-block2 {
   font-size: 16px;
   color: #65737f;
+  border-bottom: 2px solid #76828e;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 768px) {
