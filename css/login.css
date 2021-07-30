@@ -67,6 +67,22 @@ main .member-page .member-lists .list-group .list-group-item {
   z-index: 2;
 }
 
+main .member-page .member-lists .list-group .list-group-item:hover {
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  main .member-page .member-lists .list-group .list-group-item:hover {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  main .member-page .member-lists .list-group .list-group-item:hover {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 1024px) {
   main .member-page .member-lists .list-group .list-group-item {
     max-width: 205px;
@@ -105,12 +121,6 @@ main .member-page .member-lists .list-group .list-group-item {
   }
 }
 
-@media (max-width: 450px) {
-  main .member-page .member-lists .list-group .list-group-item {
-    white-space: pre-wrap;
-  }
-}
-
 main .member-page .member-lists .list-group .list-group-item.active {
   width: 205px;
   background-color: #ffffff;
@@ -119,6 +129,7 @@ main .member-page .member-lists .list-group .list-group-item.active {
   border-right: 18px solid #86b2c4;
   margin-left: -18px;
   z-index: 2;
+  font-size: 21px;
 }
 
 @media (max-width: 1024px) {
@@ -135,7 +146,7 @@ main .member-page .member-lists .list-group .list-group-item.active {
 
 @media (max-width: 991px) {
   main .member-page .member-lists .list-group .list-group-item.active {
-    font-size: 16px;
+    font-size: 21px;
     white-space: nowrap;
     padding: 0;
     display: -webkit-box;
@@ -152,19 +163,13 @@ main .member-page .member-lists .list-group .list-group-item.active {
 
 @media (max-width: 768px) {
   main .member-page .member-lists .list-group .list-group-item.active {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 520px) {
   main .member-page .member-lists .list-group .list-group-item.active {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 450px) {
-  main .member-page .member-lists .list-group .list-group-item.active {
-    white-space: pre-wrap;
+    font-size: 15px;
   }
 }
 

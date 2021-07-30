@@ -99,6 +99,18 @@ main {
                     outline: none;
                     z-index: 2;
 
+                    &:hover {
+                        font-size: $H6-font-size;
+
+                        @include bg-phone() {
+                            font-size: $H7-font-size;
+                        }
+
+                        @include sm-phone() {
+                            font-size: $H9-font-size;
+                        }
+                    }
+
                     @include sm-tablet() {
                         max-width: 205px;
                         width: 100%;
@@ -123,10 +135,6 @@ main {
                         font-size: $H11-font-size;
                     }
 
-                    @include four-fifty() {
-                        white-space: pre-wrap;
-                    }
-
                     &.active {
                         width: 205px;
                         background-color: $color-White;
@@ -135,6 +143,7 @@ main {
                         border-right: 18px solid $color-SkyBlue;
                         margin-left: -18px;
                         z-index: 2;
+                        font-size: $H6-font-size;
 
                         @include sm-tablet() {
                             max-width: 205px;
@@ -147,7 +156,7 @@ main {
                         }
 
                         @include try-on() {
-                            font-size: $H8-font-size;
+                            font-size: $H6-font-size;
                             white-space: nowrap;
                             padding: 0;
                             display: flex;
@@ -156,15 +165,11 @@ main {
                         }
 
                         @include bg-phone() {
-                            font-size: $H10-font-size;
+                            font-size: $H7-font-size;;
                         }
 
                         @include sm-phone() {
-                            font-size: $H11-font-size;
-                        }
-
-                        @include four-fifty() {
-                            white-space: pre-wrap;
+                            font-size: $H9-font-size;
                         }
                     }
 
