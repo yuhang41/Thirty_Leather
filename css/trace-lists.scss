@@ -98,6 +98,18 @@ main {
                     outline: none;
                     z-index: 2;
 
+                    &:hover {
+                        font-size: $H6-font-size;
+
+                        @include bg-phone() {
+                            font-size: $H7-font-size;
+                        }
+
+                        @include sm-phone() {
+                            font-size: $H9-font-size;
+                        }
+                    }
+
                     @include try-on() {
                         max-width: 205px;
                         width: 100%;
@@ -113,6 +125,8 @@ main {
 
                     @include bg-phone() {
                         font-size: $H10-font-size;
+                        display: flex;
+                        flex-direction: column;
                     }
 
                     @include sm-phone() {
@@ -299,16 +313,27 @@ main {
                                     .top-img {
                                         flex: 0 0 23.5%;
 
+                                        @include four-fifty() {
+                                            flex: 0 0 33.5%;
+                                        }
+
                                         img {
                                             max-width: 238px;
                                             width: 100%;
                                             max-height: 238px;
                                             height: 100%;
+
+                                            @include four-fifty() {
+                                                width: 120px;
+                                                height: 120px;
+                                                margin-top: -24px;
+                                            }
                                         }
                                     }
 
                                     .top-title {
                                         flex: 0 0 46.5%;
+                                        padding-top: 24px;
 
                                         @include bg-phone() {
                                             flex: 0 0 40.5%;
@@ -316,6 +341,11 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 34.5%;
+                                        }
+
+                                        @include four-fifty() {
+                                            flex: 0 0 66.5%;
+                                            padding-top: 0px;
                                         }
 
                                         .heading1 {
@@ -327,6 +357,35 @@ main {
                                             .genuine-leather {
                                                 @include tablet() {
                                                     padding-left: 7px;
+                                                }
+                                            }
+
+                                            .fourfifty {
+                                                display: none;
+
+                                                @include four-fifty() {
+                                                    padding-top: 24px;
+                                                    padding-left: 6px;
+                                                    display: flex;
+                                                }
+
+                                                .ffz-price {
+                                                    .ffz-delete {
+                                                        text-decoration: line-through;
+                                                    }
+                                                    .ffz-modify {
+                                                        color: #ed701b;
+                                                    }
+                                                }
+
+                                                .ffz-cart {
+                                                    margin-top: 12px;
+                                                    margin-left: 56px;
+                                                }
+
+                                                .ffz-can {
+                                                    margin-top: 12px;
+                                                    margin-left: 20px;
                                                 }
                                             }
                                         }
@@ -341,6 +400,10 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 13.5%;
+                                        }
+
+                                        @include four-fifty() {
+                                            display: none;
                                         }
 
                                         .delete-price1 {
@@ -361,6 +424,10 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 16%;
+                                        }
+
+                                        @include four-fifty() {
+                                            display: none;
                                         }
 
                                         .status1 {
@@ -402,6 +469,10 @@ main {
                                             flex: 0 0 12.5%;
                                         }
 
+                                        @include four-fifty() {
+                                            display: none;
+                                        }
+
                                         img {
                                             width: 22px;
                                             height: 22px;
@@ -413,16 +484,26 @@ main {
                                     .bottom-img {
                                         flex: 0 0 23.5%;
 
+                                        @include four-fifty() {
+                                            flex: 0 0 33.5%;
+                                        }
+
                                         img {
                                             max-width: 238px;
                                             width: 100%;
                                             max-height: 238px;
                                             height: 100%;
+
+                                            @include four-fifty() {
+                                                width: 120px;
+                                                height: 120px;
+                                            }
                                         }
                                     }
 
                                     .bottom-title {
                                         flex: 0 0 46.5%;
+                                        padding-top: 24px;
 
                                         @include bg-phone() {
                                             flex: 0 0 40.5%;
@@ -430,6 +511,11 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 34.5%;
+                                        }
+
+                                        @include four-fifty() {
+                                            flex: 0 0 66.5%;
+                                            padding-top: 0px;
                                         }
 
                                         .heading2 {
@@ -444,6 +530,34 @@ main {
                                                 }
                                             }
                                         }
+
+                                        .fourfifty {
+                                            display: none;
+
+                                            @include four-fifty() {
+                                                padding-left: 6px;
+                                                display: flex;
+                                            }
+
+                                            .ffz-price {
+                                                .ffz-delete {
+                                                    text-decoration: line-through;
+                                                }
+                                                .ffz-modify {
+                                                    color: #ed701b;
+                                                }
+                                            }
+
+                                            .ffz-cart {
+                                                margin-top: 12px;
+                                                margin-left: 56px;
+                                            }
+
+                                            .ffz-can {
+                                                margin-top: 12px;
+                                                margin-left: 20px;
+                                            }
+                                        }
                                     }
 
                                     .bottom-price {
@@ -455,6 +569,10 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 13.5%;
+                                        }
+
+                                        @include four-fifty() {
+                                            display: none;
                                         }
 
                                         .delete-price2 {
@@ -475,6 +593,10 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 16%;
+                                        }
+
+                                        @include four-fifty() {
+                                            display: none;
                                         }
 
                                         .add-shoppingCart {
@@ -511,6 +633,10 @@ main {
                                                 display: flex;
                                                 margin-top: 3px;
                                             }
+
+                                            @include four-fifty() {
+                                                display: none;
+                                            }
                                         }
                                     }
 
@@ -524,6 +650,10 @@ main {
 
                                         @include sm-phone() {
                                             flex: 0 0 12.5%;
+                                        }
+
+                                        @include four-fifty() {
+                                            display: none;
                                         }
 
                                         img {
