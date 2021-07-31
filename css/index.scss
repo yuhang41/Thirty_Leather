@@ -236,12 +236,12 @@ main {
                     height: 17px;
                     border-radius: 0px;
                     margin: 17px 0px 0px 0px;
-                    background-color: $color-Banner-Button;
+                    background-color: $color-Banner-Card;
                     opacity: unset;
                     position: relative;
                 }
                 .swiper-pagination-bullet-active {
-                    background-color: $color-Orange;
+                    background-color: $color-Banner-Card-Line;
 
                     &::before {
                         content: "";
@@ -1318,7 +1318,7 @@ main {
                     position: absolute;
                     top: -320px;
                     left: -9rem;
-                    border-right: 18px solid $color-Apricot;
+                    border-right: 18px solid $color-Border-Line;
                     z-index: 2;
                     transition: 1s;
                     @include tablet() {
@@ -1331,7 +1331,7 @@ main {
                 }
                 &:nth-child(2) {
                     width: 32.4%;
-                    border-left: 18px solid $color-Apricot;
+                    border-left: 18px solid $color-Border-Line;
                     z-index: 3;
                     transition: 1s;
                     @include tablet() {
@@ -1943,7 +1943,7 @@ main {
                     .plus {
                         width: 66px;
                         height: 66px;
-                        background-color: $color-Plus;
+                        background-color: $color-Border-Line;
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
@@ -2026,7 +2026,7 @@ main {
                         max-width: 559px;
                         width: 100%;
                         height: 841px;
-                        border-left: 18px solid $color-Apricot;                     
+                        border-left: 18px solid $color-Border-Line;                     
                         @include tablet() {
                             border: unset;
                         }
@@ -2242,7 +2242,7 @@ main {
                         margin-top: 80px;
                     }
                     .shop-map-content {
-                        border-left: 18px solid $color-Apricot;
+                        border-left: 18px solid $color-Border-Line;
                     }
                 }
             }
