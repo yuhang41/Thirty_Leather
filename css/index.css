@@ -3209,6 +3209,7 @@ main .main-container .photo-wall .photo-title .text p:nth-child(2) {
 main .main-container .photo-wall .swiper2 {
   min-height: 969px;
   padding-top: 50px;
+  padding-bottom: 50px;
   height: 10px;
   -webkit-transition: 1s;
   transition: 1s;
