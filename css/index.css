@@ -1794,6 +1794,8 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-filter: brightness(1.045);
+          filter: brightness(1.045);
 }
 
 @media (max-width: 1024px) {
@@ -1810,6 +1812,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
   main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
     width: 133px;
     height: 133px;
+    border: 2px solid #70b9cf;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -2024,6 +2027,16 @@ main .main-container .shoemaking .container .see-more-button button:focus:after 
 @media (max-width: 1024px) {
   main .main-container .shoemaking .container .see-more-button button {
     background-color: #ebeae5;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .shoemaking .container .see-more-button button {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
     -webkit-transition: 1s;
     transition: 1s;
   }

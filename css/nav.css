@@ -611,10 +611,10 @@ nav .personal-item .twd-lang .lang a {
     padding: 0px;
   }
   .navbar-toggler .stick-container .stick {
-    width: 40px;
+    width: 28px;
     height: 4px;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     background-color: #ffffff;
     display: inline-block;
   }
@@ -653,8 +653,8 @@ nav .personal-item .twd-lang .lang a {
     100% {
       background-color: #1d2335;
       width: 4px;
-      -webkit-transform: translate(15.5px, 27px);
-              transform: translate(15.5px, 27px);
+      -webkit-transform: translate(10.5px, 19px);
+              transform: translate(10.5px, 19px);
     }
   }
   @keyframes stick-1-open {
@@ -677,8 +677,8 @@ nav .personal-item .twd-lang .lang a {
     100% {
       background-color: #1d2335;
       width: 4px;
-      -webkit-transform: translate(15.5px, 27px);
-              transform: translate(15.5px, 27px);
+      -webkit-transform: translate(10.5px, 19px);
+              transform: translate(10.5px, 19px);
     }
   }
   @-webkit-keyframes stick-2-open {
@@ -689,8 +689,8 @@ nav .personal-item .twd-lang .lang a {
     }
     100% {
       background-color: #1d2335;
-      -webkit-transform: translate(1px, 0px) rotate(40deg);
-              transform: translate(1px, 0px) rotate(40deg);
+      -webkit-transform: translate(2px, -0.2px) rotate(40deg);
+              transform: translate(2px, -0.2px) rotate(40deg);
     }
   }
   @keyframes stick-2-open {
@@ -701,8 +701,8 @@ nav .personal-item .twd-lang .lang a {
     }
     100% {
       background-color: #1d2335;
-      -webkit-transform: translate(1px, 0px) rotate(40deg);
-              transform: translate(1px, 0px) rotate(40deg);
+      -webkit-transform: translate(2px, -0.2px) rotate(40deg);
+              transform: translate(2px, -0.2px) rotate(40deg);
     }
   }
   @-webkit-keyframes stick-3-open {
@@ -713,8 +713,8 @@ nav .personal-item .twd-lang .lang a {
     }
     100% {
       background-color: #1d2335;
-      -webkit-transform: translate(1px, -15px) rotate(-40deg);
-              transform: translate(1px, -15px) rotate(-40deg);
+      -webkit-transform: translate(1.5px, -12.5px) rotate(-40deg);
+              transform: translate(1.5px, -12.5px) rotate(-40deg);
     }
   }
   @keyframes stick-3-open {
@@ -725,8 +725,8 @@ nav .personal-item .twd-lang .lang a {
     }
     100% {
       background-color: #1d2335;
-      -webkit-transform: translate(1px, -15px) rotate(-40deg);
-              transform: translate(1px, -15px) rotate(-40deg);
+      -webkit-transform: translate(1.5px, -12.5px) rotate(-40deg);
+              transform: translate(1.5px, -12.5px) rotate(-40deg);
     }
   }
   .navbar-toggler .stick-container .stick-1.close {
@@ -753,7 +753,7 @@ nav .personal-item .twd-lang .lang a {
       width: 0px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0);
               transform: translate(0, 0);
     }
@@ -763,7 +763,7 @@ nav .personal-item .twd-lang .lang a {
       width: 0px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0);
               transform: translate(0, 0);
     }
@@ -771,7 +771,7 @@ nav .personal-item .twd-lang .lang a {
   @-webkit-keyframes stick-2-close {
     0% {
       background-color: #1d2335;
-      width: 40px;
+      width: 28px;
     }
     20% {
       background-color: #1d2335;
@@ -793,7 +793,7 @@ nav .personal-item .twd-lang .lang a {
       width: 0px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0px);
               transform: translate(0, 0px);
     }
@@ -801,7 +801,7 @@ nav .personal-item .twd-lang .lang a {
   @keyframes stick-2-close {
     0% {
       background-color: #1d2335;
-      width: 40px;
+      width: 28px;
     }
     20% {
       background-color: #1d2335;
@@ -823,7 +823,7 @@ nav .personal-item .twd-lang .lang a {
       width: 0px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0px);
               transform: translate(0, 0px);
     }
@@ -831,7 +831,7 @@ nav .personal-item .twd-lang .lang a {
   @-webkit-keyframes stick-3-close {
     0% {
       background-color: #1d2335;
-      width: 40px;
+      width: 28px;
     }
     20% {
       background-color: #1d2335;
@@ -852,7 +852,7 @@ nav .personal-item .twd-lang .lang a {
       width: 8px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0px);
               transform: translate(0, 0px);
     }
@@ -860,7 +860,7 @@ nav .personal-item .twd-lang .lang a {
   @keyframes stick-3-close {
     0% {
       background-color: #1d2335;
-      width: 40px;
+      width: 28px;
     }
     20% {
       background-color: #1d2335;
@@ -881,7 +881,7 @@ nav .personal-item .twd-lang .lang a {
       width: 8px;
     }
     100% {
-      width: 40px;
+      width: 28px;
       -webkit-transform: translate(0, 0px);
               transform: translate(0, 0px);
     }

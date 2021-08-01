@@ -435,14 +435,13 @@ nav{
                 padding: 0px;
                               
               .stick {
-                width: 40px;
+                width: 28px;
                 height: 4px;
                 border-radius: 4px;
-                margin-bottom: 10px;
+                margin-bottom: 8px;
                 background-color:  $color-White;
                 display: inline-block;
               }
-              
               .stick:last-child {
                 margin-bottom: 0px;
               }
@@ -463,17 +462,17 @@ nav{
                 0%   {width: 40px;}
                 40%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(20px, 0px);}
                 75%, 80%  {width: 8px; transform: translate(4px, -50px); animation-timing-function: cubic-bezier(0,1,1,1);}
-                100% {background-color: $color-Deep-Blue; width: 4px; transform: translate(15.5px, 27px);}
+                100% {background-color: $color-Deep-Blue; width: 4px; transform: translate(10.5px, 19px);}
               }
               
               @keyframes stick-2-open {
                 80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
-                100% {background-color: $color-Deep-Blue; transform: translate(1px, 0px) rotate(40deg);}
+                100% {background-color: $color-Deep-Blue; transform: translate(2px, -0.2px) rotate(40deg);}
               }
               
               @keyframes stick-3-open {
                 80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
-                100% {background-color: $color-Deep-Blue; transform: translate(1px, -15px) rotate(-40deg);}
+                100% {background-color: $color-Deep-Blue; transform: translate(1.5px, -12.5px) rotate(-40deg);}
               }
               
               .stick-1.close {
@@ -494,25 +493,25 @@ nav{
               }
               @keyframes stick-1-close {
                 0%, 70% {width: 0px;}
-                100%    {width: 40px; transform: translate(0, 0);}
+                100%    {width: 28px; transform: translate(0, 0);}
               }
               
               @keyframes stick-2-close {
-                0%   {background-color: $color-Deep-Blue; width: 40px;}
+                0%   {background-color: $color-Deep-Blue; width: 28px;}
                 20%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(0, 0px) rotate(40deg);}
                 40%  {background-color: $color-White; width: 0px;}
                 65%  {transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1);}
                 80%  {width: 0px;}
-                100% {width: 40px; transform: translate(0, 0px);}
+                100% {width: 28px; transform: translate(0, 0px);}
               }
               
               @keyframes stick-3-close {
-                0%   {background-color: $color-Deep-Blue; width: 40px;}
+                0%   {background-color: $color-Deep-Blue; width: 28px;}
                 20%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
                 40%  {background-color: $color-White;}
                 65%  {transform: translate(0, -93px); animation-timing-function: cubic-bezier(0,1,1,1);}
                 90%  {width: 8px;}
-                100% {width: 40px; transform: translate(0, 0px);}
+                100% {width: 28px; transform: translate(0, 0px);}
               }
         }
         &-nav{

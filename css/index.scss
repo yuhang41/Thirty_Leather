@@ -1143,6 +1143,7 @@ main {
                             background-position: top;
                             background-repeat: no-repeat;
                             background-size: cover;
+                            filter: brightness(1.045);
                             @include sm-tablet() {
                                 width: 184px;
                                 height: 184px;
@@ -1151,6 +1152,7 @@ main {
                             @include sm-phone() {
                                 width: 133px;
                                 height: 133px;
+                                border: 2px solid $color-Border-Line;
                             }
                         }
                         .text {
@@ -1226,6 +1228,11 @@ main {
                         @include button-focus();
                         @include sm-tablet() {
                             background-color: $color-LightGray;
+                        }
+                        @include sm-phone(){
+                            width: 160px;
+                            height: 50px;
+                            font-size: $H7-font-size;
                         }
                     }
                 }
