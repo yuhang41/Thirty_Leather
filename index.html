@@ -28,7 +28,7 @@
 
 <body>
     <nav id="navbar">
-        <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
+        <a href="./index.html" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,12 +41,12 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <!-- 所有商品 -->
-                    <li class="nav-item active single-commidity">
+                    <li class="nav-item single-commidity">
                         <a class="nav-link" href="./product-index.html">所有商品<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- 下拉式的所有商品 -->
                     <li class="nav-item dropdown all-commidity">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle" href="./product-index.html" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             所有商品
                         </a>
@@ -107,11 +107,11 @@
                                 購鞋文章
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                                <a class="dropdown-item" href="./index-shoes.html">購鞋怎麼選</a>
                                 <a class="dropdown-item" href="#">系列鞋款介紹</a>
                                 <a class="dropdown-item" href="#">製成故事</a>
                             </div>
-                            <a class="dropdown-item" href="#">試穿服務</a>
+                            <a class="dropdown-item" href="#try-on">試穿服務</a>
                         </div>
                     </li>
                     <!-- 配件 -->
@@ -125,14 +125,14 @@
                             購鞋文章
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">購鞋怎麼選</a>
+                            <a class="dropdown-item" href="./index-shoes.html">購鞋怎麼選</a>
                             <a class="dropdown-item" href="#">系列鞋款介紹</a>
                             <a class="dropdown-item" href="#">製成故事</a>
                         </div>
                     </li>
                     <!-- 試穿服務 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">試穿服務</a>
+                        <a class="nav-link" href="#try-on">試穿服務</a>
                     </li>
                     <!-- TWD -->
                     <li class="nav-item twd-lang-item">
@@ -151,12 +151,11 @@
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="member nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">個人訊息</a>
-                            <a class="dropdown-item" href="#">追蹤清單</a>
-                        </div>
+                <i class="member fas fa-user m-2" href="#">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./message.html">個人訊息</a>
+                        <a class="dropdown-item" href="./trace.lists.html">追蹤清單</a>
+                    </div>
                 </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
@@ -196,7 +195,7 @@
                         <p>∵ 生活好質感 從穿上開始 ∵</p>
                     </div>
                     <div class="banner-content">
-                        <a href="#"><button>SHOP NOW</button></a>
+                        <a href="./product-index.html"><button>SHOP NOW</button></a>
                         <div class="text">
                             <p>#防疫期間—</p>
                             <p>#官網滿千免運</p>
@@ -352,21 +351,27 @@
                 <div class="container mx-auto">
                     <div class="shoemaking-card" data-aos="fade-up" data-aos-anchor-placement="top-center">
                         <div class="shoes-card chose-shoes">
-                            <img alt="" style="background-image: url(/img/shoes-card1.svg);">
+                            <a href="./index-shoes.html">
+                                <img  alt="" style="background-image: url(/img/shoes-card1.svg);">
+                            </a>
                             <div class="text">
                                 <p>購鞋怎麼選</p>
                                 <p>How to choose</p>
                             </div>
                         </div>
                         <div class="shoes-card shoes-introduction">
-                            <img src="./img/shoes-card2.svg" alt="">
+                            <a href="">
+                                <img src="./img/shoes-card2.svg" alt="">
+                            </a>
                             <div class="text">
                                 <p>系列鞋款介紹</p>
                                 <p>Series Introduction</p>
                             </div>
                         </div>
                         <div class="shoes-card shoemaking-story">
-                            <img src="./img/shoes-card3.svg" alt="">
+                            <a href="">
+                                <img alt="" style="background-image: url(./img/shoes-card3.svg);">
+                            </a>
                             <div class="text">
                                 <p>製作過程</p>
                                 <p>Making a story</p>
@@ -618,7 +623,7 @@
                         </div>
                     </div>
                     <div class="see-more-button">
-                        <a class="more-product"><button class="see-more">更多商品</button></a>
+                        <a href="./product-index.html" class="more-product"><button class="see-more">更多商品</button></a>
                     </div>
                 </div>
                 <div class="parallelogram" id="move"></div>
@@ -729,7 +734,7 @@
 
             </div>
             <!-- 試穿資訊 -->
-            <div class="studio-information">
+            <div id="try-on" class="studio-information">
                 <div class="studio-photo col-xl-5">
                     <div class="photo" data-inviewport="scale-in">
                         <img src="img/studio-photo.jpg" >
@@ -738,7 +743,7 @@
 
                 </div>
                 <div class="studio-information-content col-xl-7 mt-5">
-                    <div class="try-container col-md-12">
+                    <div class="try-container">
                         <div class="try-on-infor">
                             <div class="list-unstyled">
                                 試穿
@@ -834,7 +839,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;<span>森上沒戴前 All
+            <div class="copyright d-flex align-items-center justify-content-center">Copyright &copy;<span>森上梅戴前 All
                     Rights Reserved</span>
             </div>
         </div>

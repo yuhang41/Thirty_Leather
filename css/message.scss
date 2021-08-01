@@ -1,8 +1,60 @@
 @import "_style_guild.scss";
 
+@mixin tablet {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+
+// 小平板尺寸
+@mixin sm-tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+//試穿資訊換版
+@mixin try-on {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+//大手機尺寸
+@mixin bg-phone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+//商品卡片換版
+@mixin single-cart {
+    @media (max-width: 660px) {
+        @content;
+    }
+}
+// 小手機尺寸
+@mixin sm-phone {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin four-fifty {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+// iphone 5s
+@mixin iphone-5s {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
 body {
     font-family: $font-Family-A;
     min-height: 100vh;
+    position: relative;
 }
 
 .member-center {
@@ -15,104 +67,165 @@ body {
         color: $color-White;
     }
 
-    .list-Group {
-        .list-group-item {
-            width: 170px;
-            height: 60px;
-            background-color: $color-Footer-Background;
-            color: $color-LightGray;
-            font-size: $H7-font-size;
-            font-weight: bold;
-            letter-spacing: $font-letter-space-200;
-            border-bottom: 1px solid $color-IronGray;
-            z-index: 2;
+    .list-Group  {
+        @include try-on() {
+            display: flex;
+            flex-direction: column;
+        }
 
-            &:hover {
+        .list-group {
+            @include try-on() {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+    
+            .list-group-item {
+                width: 170px;
+                height: 60px;
                 background-color: $color-Footer-Background;
+                font-size: $H7-font-size;
                 color: $color-LightGray;
-            }
-
-            &.active {
-                width: 205px;
-                background-color: $color-White;
-                color: $color-WedgwoodBlue;
-                font-weight: $font-Weight-B;
-                border-color: $color-SkyBlue;
-                border-right: 18px solid $color-SkyBlue;
-                margin-left: -18px;
+                letter-spacing: $font-letter-space-200;
+                border-bottom: 1px solid black;
+                outline: none;
                 z-index: 2;
-            }
 
-            &:first-child {
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
-            }
+                &:hover {
+                    font-size: $H6-font-size;
 
-            &:last-child {
-                border-bottom-right-radius: 0px;
-                border-bottom-left-radius: 0px;
+                    @include bg-phone() {
+                        font-size: $H7-font-size;
+                    }
+
+                    @include sm-phone() {
+                        font-size: $H9-font-size;
+                    }
+                }
+
+                @include try-on() {
+                    max-width: 205px;
+                    width: 100%;
+                    font-size: $H8-font-size;
+                    white-space: nowrap;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    border-bottom: none;
+                }
+    
+                @include bg-phone() {
+                    font-size: $H10-font-size;
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                @include sm-phone() {
+                    font-size: $H11-font-size;
+                }
+    
+                &.active {
+                    width: 205px;
+                    background-color: $color-White;
+                    color: $color-WedgwoodBlue;
+                    border-color: $color-SkyBlue;
+                    border-right: 18px solid $color-SkyBlue;
+                    margin-left: -18px;
+                    z-index: 2;
+                    font-size: $H6-font-size;
+
+                    @include try-on() {
+                        max-width: 205px;
+                        width: 100%;
+                        height: 78px;
+                        border-right: none;
+                        border-bottom: 18px solid $color-SkyBlue;
+                        z-index: 2;
+                    }
+    
+                    @include bg-phone() {
+                        font-size: $H7-font-size;
+                    }
+    
+                    @include sm-phone() {
+                        font-size: $H9-font-size;
+                    }
+                }
+    
+                &:first-child {
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+    
+                &:last-child {
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
             }
         }
-    }
+    
+        .tab-contents {
+            max-width: 1140px;
+            width: 100%;
+            margin-left: -17px;
 
-    .tab-contents {
-        width: 1140px;
-        height: 853px;
-        background-color: $color-White;
-        border: 1px solid $color-Apricot;
-        position: relative;
-        margin-left: -17px;
-
-        .member-data {
-            .nowNews {
-                font-size: 14px;
+            @include try-on() {
+                width: 100%;
+                margin-left: 0;
+                margin-top: -17px;
             }
-
-            .input-container {
-                width: 90%;
-                padding-bottom: 10vh;
-                border-bottom: 1px solid $color-IronGray;
-
-                textarea {
-                    width: 100%;
-                    height: 300px;
+    
+            .member-data {
+                height: 853px;
+                background-color: $color-White;
+                border: 1px solid $color-Apricot;
+                position: relative;
+    
+                .nowNews {
+                    font-size: 14px;
+                }
+    
+                .input-container {
+                    width: 90%;
+                    padding-bottom: 10vh;
+                    border-bottom: 1px solid $color-IronGray;
+    
+                    textarea {
+                        width: 100%;
+                        height: 300px;
+                        font-size: $H10-font-size;
+                        outline: none;
+                        padding-left: 12px;
+                        resize: none;
+    
+                        &::placeholder {
+                            position: absolute;
+                            left: 12px;
+                        }
+                    }
+                }
+    
+                .button-container {
+                    width: 90%;
                     font-size: $H10-font-size;
-                    outline: none;
-                    padding-left: 12px;
-                    resize: none;
-
-                    &::placeholder {
-                        position: absolute;
-                        left: 12px;
+    
+                    .btn-upload {
+                        font-size: $H10-font-size;
+                        border: 1px solid black;
+                    }
+    
+                    .transform-btn {
+                        width: 60px;
+                        height: 40px;
+                        border: 1px solid;
+                        border-radius: 5px;
+                        background-color: $color-White;
+                        letter-spacing: $font-letter-space-100;
                     }
                 }
             }
-
-            .button-container {
-                width: 90%;
-                font-size: $H10-font-size;
-
-                .btn-upload {
-                    font-size: $H10-font-size;
-                    border: 1px solid black;
-                }
-                
-                .transform-btn {
-                    width: 60px;
-                    height: 40px;
-                    border: 1px solid;
-                    border-radius: 5px;
-                    background-color: $color-White;
-                    letter-spacing: $font-letter-space-100;
-                }
-            }
         }
-    }
-}
-
-@media(max-width:1024px) {
-    .list-Group {
-        display: flex;
-        flex-direction: column;
     }
 }

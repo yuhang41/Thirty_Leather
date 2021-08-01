@@ -16,7 +16,14 @@
         transition: 1s;
     }
 }
-//1250
+//1240
+@mixin svg-sketch{
+    @media(max-width:1240px){
+        @content;
+        transition: 1s;
+    }
+}
+//1190
 @mixin sm-screen{
     @media(max-width:1190px){
         @content;
@@ -240,6 +247,7 @@ main{
                             transition: 1s;
                             margin-right: 50px;
                             margin-left: auto;
+                            position: relative;
                             // @include bg-screen(){                                
                             //     // margin-right: auto;
                             // }
@@ -332,7 +340,19 @@ main{
                                         }
                                     }
                                 }                                                                    
-                            }                                
+                            } 
+                            .shoes-sketch{
+                                position: absolute;
+                                top: 0px;
+                                left: -800px;
+                                transition: 1s;
+                                @include svg-sketch(){
+                                    opacity: 0;
+                                }
+                                img{
+                                    width: 700px;
+                                }
+                            }                               
                         }
                         //圖片的swiper
                         .development-process-swiper{
@@ -490,14 +510,6 @@ main{
                         }
                     }
                     
-                }
-                .shoes-sketch{
-                    position: absolute;
-                    top: 0px;
-                    right: 1400px;
-                    img{
-                        width: 700px;
-                    }
                 }
             }
         }

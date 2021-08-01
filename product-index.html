@@ -17,7 +17,7 @@
 
 <body>
     <nav id="navbar">
-        <a href="" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
+        <a href="./index.html" class="go-home-logo"><img class="logo" src="./img/30leather_logo.svg" alt=""></a>
         <nav class="navbar navbar-expand-custom navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,12 +30,12 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <!-- 所有商品 -->
-                    <li class="nav-item active single-commidity">
+                    <li class="nav-item single-commidity">
                         <a class="nav-link" href="./product-index.html">所有商品<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- 下拉式的所有商品 -->
                     <li class="nav-item dropdown all-commidity">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle" href="./product-index.html" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             所有商品
                         </a>
@@ -140,12 +140,11 @@
                     <input id="search-input" class=" search-input mr-sm-2" type="search" placeholder="尋找商品...">
                     <label for="search-input"><i class="fas fa-search mr-2"></i></label>
                 </form>
-                <i class="member nav-item dropdown fas fa-user m-2" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">個人訊息</a>
-                            <a class="dropdown-item" href="#">追蹤清單</a>
-                        </div>
+                <i class="member fas fa-user m-2" href="#">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./message.html">個人訊息</a>
+                        <a class="dropdown-item" href="./trace.lists.html">追蹤清單</a>
+                    </div>
                 </i>
                 <div class="cart">
                     <i class="fas fa-shopping-cart m-2"></i>
@@ -525,6 +524,12 @@
                     </ul>
                 </div>
             </div>
+            <!-- 回到上層的按鈕 -->
+            <div class="back-top">
+                <a href="#web-top">
+                    <i class="a-anchor fas fa-angle-double-up"></i>
+                </a>
+            </div>
         </div>
     </main>
     <footer>
@@ -549,13 +554,6 @@
                         <img src="/img/Instagram.ICON.jpg" alt="">
                     </a>
                 </div>
-
-                <div class="return-nav d-flex justify-content-end">
-                    <a href="#web-top"><i class="footer-arrow fas fa-sort-up" aria-hidden="true">
-                            <div class="footer-arrow-text">TOP</div>
-                        </i></a>
-                </div>
-
                 <div class="footer-links d-flex justify-content-center">
                     <div class="block d-flex">
                         <ul class="block1 list-unstyled d-flex">

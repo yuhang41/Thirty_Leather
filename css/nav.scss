@@ -22,9 +22,22 @@
         transition: 1s;
     }
 }
+//1190
+@mixin search-change {
+    @media(max-width:1190px){
+        @content;
+        transition: 1s;
+    }
+}
 // 平板尺寸
 @mixin tablet {
     @media(max-width:1024px){
+        @content;
+    }
+}
+//620
+@mixin phone {
+    @media(max-width:620px){
         @content;
         transition: 1s;
     }
@@ -44,6 +57,7 @@ nav{
     transition: 1s;
     @include tablet(){
         padding-left: 0px;
+        transition: 1s;
     }
     .go-home-logo{
         position: absolute;
@@ -52,6 +66,7 @@ nav{
         z-index: 2;
         @include tablet(){
             left: 0px;
+            transition: 1s;
         }
         @include sm-phone(){
             left: 58px;
@@ -66,7 +81,8 @@ nav{
             }         
             @include tablet(){
                 width: 58px;
-                height: 58px;                
+                height: 58px;      
+                transition: 1s;          
             }            
         }
     }    
@@ -90,62 +106,159 @@ nav{
                 margin:0px 4vw 0px 0px;
                 padding-top: 0px;
                 align-items: flex-end;
+                transition: 1s;
             }
             i{
                 font-size: 20px;
-                color: $color-WedgwoodBlue;
+                color: $color-Banner-Card;
                 cursor: pointer;
             }
             .search{
-                align-items: center;
+                align-items: center; 
+                .search-input{
+                    border: none;
+                    border-bottom: 1px solid $color-WedgwoodBlue;
+                    width:0px;
+                    padding: 0px;
+                    transition: 0.7s;
+                    transition-delay: 1s;
+                    z-index: 5;
+                    @include search-change(){
+                        width: 100%;
+                        background-color: $color-Navbar-Bgc; 
+                        padding: 5px 10px;
+                        
+                        border: 3px solid $color-White;
+                        display: none;
+
+                        position: absolute;
+                        top: 113px;
+                        left: 0px;
+                    }
+                    @include tablet(){
+                        width:0px;
+                        background-color: unset;
+                        padding: 0px;
+
+                        border: none;
+                        display: block;
+                        border-bottom: 1px solid $color-WedgwoodBlue;
+
+                        position: unset;
+                        top: 0px;
+                        left: 0px ;
+                        transition-delay: 1s;
+                    }
+                    @include phone(){
+                        width: 100%;
+                        background-color: $color-Navbar-Bgc; 
+                        padding: 5px 10px;
+                        
+                        border: 3px solid $color-White;
+                        display: none;
+
+                        position: absolute;
+                        top: 58px;
+                        left: 0px;
+                    }
+                    &:hover{
+                        width:147px;
+                        transition: 0.7s;
+                        @include search-change(){
+                            width: 100%;
+                            display: block;
+                            animation: input-fade-in-1 .5s linear;
+                            transition: none;
+                            transition-delay: 1s; 
+                        }
+                        @keyframes input-fade-in-1 {
+                            0%{
+                                top: 111px;
+                                opacity: 0.5;
+                            }
+                            50%{
+                                top: 113px;
+                                opacity: 1;
+                            }
+                            100%{
+                                top: 113px;
+                                opacity: 1;
+                            }
+                        }
+                        @include tablet(){
+                            width:147px;
+                        }
+                        @include phone(){
+                            width: 100%;
+                            display: block;
+                            animation: input-fade-in .5s linear;
+                            transition: none;
+                            transition-delay: 1s;
+                        } 
+                        @keyframes input-fade-in {
+                            0%{
+                                top: 54px;
+                                opacity: 0.5;
+                            }
+                            50%{
+                                top: 58px;
+                                opacity: 1;
+                            }
+                            100%{
+                                top: 58px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    &:focus{
+                        display: block;
+                        @include phone(){
+                            width: 100%;
+                        }
+                    }
+                    &:focus {
+                       outline: none;
+                    }
+                     
+                }
+                input::-webkit-input-placeholder { 
+                    color: $color-placeholder;
+                    font-size: $H10-font-size; 
+                    letter-spacing: $font-letter-space-200;
+                }
                 label{
                     margin: 0px;
                     height: 16px;
+                    transition: none;
+                    transition-delay: 1s;
+                    @include phone(){
+                        height: 20px;
+                        transition: none;
+                    }
                 }
-            }
-            input{
-                border: none;
-                border-bottom: 1px solid $color-WedgwoodBlue;
-                width:0px;
-                padding: 0px;
-                transition: 0.7s;
-                transition-delay: 1s;
-                &:hover{
-                    width:147px;
-                    transition: 0.7s;  
-                }
-                &:focus {
-                   outline: none;
-                  }
-            }
-            input::-webkit-input-placeholder { 
-                color: $color-placeholder;
-                font-size: $H10-font-size; 
-                letter-spacing: $font-letter-space-200;
             }
             .member{
                 width: 100%;
+                position: relative;
                 &:hover{
                     .dropdown-menu{
                         display: block;
                     }
                 }
                 .dropdown-menu{
-                    border: unset;
+                    position: absolute;
+                    top: 20px;
+                    left: -35px;
+                    border: 1px solid $color-IronGray;
                     padding: 0px;
                     background-color: $color-Navbar-Bgc; 
                     width: 40px !important;
                     min-width: 6em;
-                    transform: translate3d(-37px, 0px, 0px)!important;
-                    &.show{
-                       display: none;
-                    }
-                    &:hover{
-                        display: block;
-                    }
+                    text-align: center!important;
                     .dropdown-item{
-                        font-size: $H11-font-size;
-                        color: $color-WedgwoodBlue;
+                        font-size: $H9-font-size;
+                        color: $color-IronGray;
+                        padding: 5px 0px;
                     }
                 }
             }
@@ -178,7 +291,7 @@ nav{
             }
             .twd{
                 width: 97px;
-                background-color: $color-WedgwoodBlue;
+                background-color: $color-Banner-Card;
                 margin-right: 4px;
                 display: flex;
                 align-items: center;
@@ -191,7 +304,7 @@ nav{
             }
             .lang{
                 width: 97px;
-                background-color: $color-WedgwoodBlue;
+                background-color: $color-Banner-Card;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -230,15 +343,20 @@ nav{
         }
     }
     .dropdown-menu{
-        background-color: unset;
-        border: unset;
+        border: 1px solid $color-IronGray;
         padding: 0px;
         position: absolute;
         left: 5px;
         background-color: $color-Navbar-Bgc;
+        @include tablet(){
+            border: unset;
+        }
         .dropdown-item{
-            font-size: $H11-font-size;
-            color: $color-WedgwoodBlue;
+            font-size: $H9-font-size;
+            color: $color-IronGray;
+            @include tablet(){
+                font-size: $H10-font-size;
+            }
         }
         @include tablet(){
             position: static;
@@ -247,7 +365,7 @@ nav{
     }
     li{
         padding:0px 1.2vw;
-        border-right: 1px solid $color-Nav-Separate;
+        border-right: 1px solid $color-Swiper-Line;
         transition: 1s;
         &.more-option{
             display: none;
@@ -343,19 +461,19 @@ nav{
               
               @keyframes stick-1-open {
                 0%   {width: 40px;}
-                40%  {background-color: $color-Border-Line; width: 8px; transform: translate(20px, 0px);}
+                40%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(20px, 0px);}
                 75%, 80%  {width: 8px; transform: translate(4px, -50px); animation-timing-function: cubic-bezier(0,1,1,1);}
-                100% {background-color: $color-Border-Line; width: 4px; transform: translate(15.5px, 27px);}
+                100% {background-color: $color-Deep-Blue; width: 4px; transform: translate(15.5px, 27px);}
               }
               
               @keyframes stick-2-open {
                 80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
-                100% {background-color: $color-Border-Line; transform: translate(1px, 0px) rotate(40deg);}
+                100% {background-color: $color-Deep-Blue; transform: translate(1px, 0px) rotate(40deg);}
               }
               
               @keyframes stick-3-open {
                 80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
-                100% {background-color: $color-Border-Line; transform: translate(1px, -15px) rotate(-40deg);}
+                100% {background-color: $color-Deep-Blue; transform: translate(1px, -15px) rotate(-40deg);}
               }
               
               .stick-1.close {
@@ -380,8 +498,8 @@ nav{
               }
               
               @keyframes stick-2-close {
-                0%   {background-color: $color-Border-Line; width: 40px;}
-                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, 0px) rotate(40deg);}
+                0%   {background-color: $color-Deep-Blue; width: 40px;}
+                20%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(0, 0px) rotate(40deg);}
                 40%  {background-color: $color-White; width: 0px;}
                 65%  {transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1);}
                 80%  {width: 0px;}
@@ -389,8 +507,8 @@ nav{
               }
               
               @keyframes stick-3-close {
-                0%   {background-color: $color-Border-Line; width: 40px;}
-                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
+                0%   {background-color: $color-Deep-Blue; width: 40px;}
+                20%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
                 40%  {background-color: $color-White;}
                 65%  {transform: translate(0, -93px); animation-timing-function: cubic-bezier(0,1,1,1);}
                 90%  {width: 8px;}

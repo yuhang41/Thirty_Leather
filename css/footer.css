@@ -14,13 +14,17 @@ footer .site-footer hr {
 }
 
 footer .site-footer .container {
-  padding-top: 66px;
+  padding-top: 132px;
 }
 
 footer .site-footer .container .footer-logo {
   width: 195px;
   height: 180px;
   margin: auto;
+}
+
+footer .site-footer .container .footer-icons {
+  margin-bottom: 2rem;
 }
 
 footer .site-footer .container .footer-icons a img {
@@ -51,6 +55,10 @@ footer .site-footer .container .footer-links {
   cursor: default;
 }
 
+footer .site-footer .container .footer-links .block ul {
+  margin-bottom: 2rem;
+}
+
 footer .site-footer .container .footer-links .block li {
   margin: 0px 5px;
 }
@@ -62,7 +70,7 @@ footer .site-footer .container .footer-links .block .list {
 
 footer .site-footer .copyright {
   height: 80px;
-  background: gray;
+  background: #354b5e;
   font-size: 15px;
   color: #ffffff;
 }
