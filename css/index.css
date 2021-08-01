@@ -1320,7 +1320,7 @@ main .main-container .we-story .story-content .story-discript {
 main .main-container .we-story .story-content .story-discript .subtitle {
   font-size: 14px;
   font-weight: normal;
-  color: #8de1de;
+  color: #70b9cf;
   position: relative;
   margin-bottom: 50px;
   -webkit-transition: 1s;
@@ -1407,7 +1407,7 @@ main .main-container .we-story .story-content .story-discript .title p.short-lin
   height: 1px;
   top: 20px;
   left: -110px;
-  background-color: #8de1de;
+  background-color: #70b9cf;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -1551,7 +1551,7 @@ main .main-container .we-story .story-content .story-discript .content .preamble
   height: 1px;
   top: 171px;
   left: 340px;
-  background-color: #8de1de;
+  background-color: #70b9cf;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -2459,7 +2459,7 @@ main .main-container .new-product:after {
   height: 969px;
   top: 115px;
   left: 190px;
-  background-color: #8de1de;
+  background-color: #f7a269;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -3055,6 +3055,7 @@ main .main-container .new-product .parallelogram {
 main .main-container .photo-wall {
   background-color: #ebeae5;
   position: relative;
+  padding-bottom: 150px;
 }
 
 main .main-container .photo-wall[data-inviewport="scale-in"] {
@@ -3072,7 +3073,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:befor
     height: 0px;
   }
   to {
-    height: 1078px;
+    height: 1228px;
   }
 }
 
@@ -3081,7 +3082,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:befor
     height: 0px;
   }
   to {
-    height: 1078px;
+    height: 1228px;
   }
 }
 
@@ -3089,10 +3090,10 @@ main .main-container .photo-wall:before {
   content: "";
   position: absolute;
   width: 1px;
-  height: 1078px;
+  height: 1228px;
   top: 0px;
   left: 190px;
-  background-color: #8de1de;
+  background-color: #f7a269;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -3208,9 +3209,8 @@ main .main-container .photo-wall .photo-title .text p:nth-child(2) {
 
 main .main-container .photo-wall .swiper2 {
   min-height: 969px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  height: 10px;
+  padding-top: 25px;
+  height: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -3405,7 +3405,7 @@ main .main-container .photo-wall .swiper2 .plus-button {
 main .main-container .photo-wall .swiper2 .plus-button .plus {
   width: 55px;
   height: 55px;
-  background-color: #8de1de;
+  background-color: #70b9cf;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3446,6 +3446,7 @@ main .main-container .studio-information {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1350px) {

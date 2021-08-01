@@ -904,7 +904,7 @@ main {
                     .subtitle {
                         font-size: $H10-font-size;
                         font-weight: normal;
-                        color: $color-Banner-Card-Line;
+                        color: $color-Border-Line;
                         position: relative;
                         margin-bottom: 50px;
                         transition: 1s;
@@ -954,7 +954,7 @@ main {
                                     height: 1px;
                                     top: 20px;
                                     left: -110px;
-                                    background-color: $color-Banner-Card-Line;
+                                    background-color: $color-Border-Line;
                                     position: absolute;
                                     transform: rotate(33deg);
                                     z-index: 0;
@@ -1024,7 +1024,7 @@ main {
                                         height: 1px;
                                         top: 171px;
                                         left: 340px;
-                                        background-color: $color-Banner-Card-Line;
+                                        background-color: $color-Border-Line;
                                         position: absolute;
                                         transform: rotate(33deg);
                                         z-index: 0;
@@ -1465,7 +1465,7 @@ main {
                 height: 969px;
                 top: 115px;
                 left: 190px;
-                background-color: $color-Banner-Card-Line;
+                background-color: $color-Apricot;
                 transition: 1s;
                 @include tablet() {
                     top: 193px;
@@ -1733,6 +1733,7 @@ main {
         .photo-wall {
             background-color: $color-LightGray;
             position: relative;
+            padding-bottom: 150px;
             &[data-inviewport="scale-in"] {
                 transition: 1s;
             }
@@ -1743,7 +1744,7 @@ main {
                         height: 0px;
                     }
                    to{
-                        height: 1078px;
+                        height: 1228px;
                     }
                 }
             }
@@ -1751,10 +1752,10 @@ main {
                 content: "";
                 position: absolute;
                 width: 1px;
-                height: 1078px;
+                height: 1228px;
                 top: 0px;
                 left: 190px;
-                background-color: $color-Banner-Card-Line;
+                background-color: $color-Apricot;
                 transition: 1s;
                 @include tablet() {
                     left: 64px;
@@ -1813,9 +1814,8 @@ main {
             }
             .swiper2 {
                 min-height: 969px;
-                padding-top: 50px;
-                padding-bottom: 50px;
-                height: 10px;
+                padding-top: 25px;
+                height: 100px;
                 transition: 1s;
                 @include sm-tablet() {
                     min-height: 768px;
@@ -1944,7 +1944,7 @@ main {
                     .plus {
                         width: 55px;
                         height: 55px;
-                        background-color: $color-Banner-Card-Line;
+                        background-color: $color-Border-Line;
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
@@ -1978,6 +1978,7 @@ main {
             font-family: $font-Family-A;
             display: flex;
             position: relative;
+            margin-bottom: 100px;
             @include tablet() {
                 width: 100%;
                 justify-content: center;
