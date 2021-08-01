@@ -1109,7 +1109,7 @@ main {
                     display: flex;
                     justify-content: space-around;
                     text-align: center;
-                    margin-bottom: 70px;
+                    margin-bottom: 50px;
                     transition: 1s;
                     @include tablet() {
                         align-items: center;
@@ -1211,11 +1211,13 @@ main {
                         margin-bottom: 80px;
                     }
                     button {
-                        width: 277px;
-                        height: 79px;
+                        width: 245px;
+                        height: 75px;
                         font-size: $H5-font-size;
                         font-weight: $font-Weight-B;
                         color: $color-IronGray;
+                        letter-spacing: $font-letter-space-100;
+
                         border-radius: 35px;
                         background-color: unset;
                         border: 2px solid $color-Border-Line;
@@ -1316,7 +1318,7 @@ main {
                 &:nth-child(1) {
                     width: 66.4%;
                     position: absolute;
-                    top: -320px;
+                    top: -280px;
                     left: -9rem;
                     border-right: 18px solid $color-Border-Line;
                     z-index: 2;
@@ -1684,10 +1686,11 @@ main {
                     a{
                         z-index: 4;
                         button {
-                            width: 277px;
-                            height: 79px;
+                            width: 245px;
+                            height: 75px;
                             font-size: $H5-font-size;
                             font-weight: bold;
+                            letter-spacing: $font-letter-space-100;
 
                             text-decoration: none;
                             cursor: pointer;

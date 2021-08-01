@@ -1718,7 +1718,7 @@ main .main-container .shoemaking .container .shoemaking-card {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1924,11 +1924,12 @@ main .main-container .shoemaking .container .see-more-button {
 }
 
 main .main-container .shoemaking .container .see-more-button button {
-  width: 277px;
-  height: 79px;
+  width: 245px;
+  height: 75px;
   font-size: 24px;
   font-weight: bold;
   color: #444444;
+  letter-spacing: 1.6px;
   border-radius: 35px;
   background-color: unset;
   border: 2px solid #70b9cf;
@@ -2189,7 +2190,7 @@ main .main-container .shoes-video {
 main .main-container .shoes-video video:nth-child(1) {
   width: 66.4%;
   position: absolute;
-  top: -320px;
+  top: -280px;
   left: -9rem;
   border-right: 18px solid #70b9cf;
   z-index: 2;
@@ -2907,10 +2908,11 @@ main .main-container .new-product .container .see-more-button a {
 }
 
 main .main-container .new-product .container .see-more-button a button {
-  width: 277px;
-  height: 79px;
+  width: 245px;
+  height: 75px;
   font-size: 24px;
   font-weight: bold;
+  letter-spacing: 1.6px;
   text-decoration: none;
   cursor: pointer;
   color: #444444;
