@@ -904,7 +904,7 @@ main {
                     .subtitle {
                         font-size: $H10-font-size;
                         font-weight: normal;
-                        color: $color-Orange;
+                        color: $color-Banner-Card-Line;
                         position: relative;
                         margin-bottom: 50px;
                         transition: 1s;
@@ -941,7 +941,7 @@ main {
                             font-size: $H3-font-size;
                             font-weight: bold;
                             letter-spacing: $font-letter-space-100;
-                            color: $color-WedgwoodBlue;
+                            color: $color-Banner-Card;
                             transition: 1s;
                             position: relative;
                             @include sm-phone() {
@@ -954,7 +954,7 @@ main {
                                     height: 1px;
                                     top: 20px;
                                     left: -110px;
-                                    background-color: $color-Background-line;
+                                    background-color: $color-Banner-Card-Line;
                                     position: absolute;
                                     transform: rotate(33deg);
                                     z-index: 0;
@@ -1024,7 +1024,7 @@ main {
                                         height: 1px;
                                         top: 171px;
                                         left: 340px;
-                                        background-color: $color-Background-line;
+                                        background-color: $color-Banner-Card-Line;
                                         position: absolute;
                                         transform: rotate(33deg);
                                         z-index: 0;
@@ -1465,7 +1465,7 @@ main {
                 height: 969px;
                 top: 115px;
                 left: 190px;
-                background-color: $color-Background-line;
+                background-color: $color-Banner-Card-Line;
                 transition: 1s;
                 @include tablet() {
                     top: 193px;
@@ -1596,7 +1596,7 @@ main {
                             &:nth-child(2) {
                                 font-size: $H4-font-size;
                                 font-weight: bold;
-                                color: $color-Apricot;
+                                color: $color-Banner-Card-Line;
                             }
                         }
                     }
@@ -1754,7 +1754,7 @@ main {
                 height: 1078px;
                 top: 0px;
                 left: 190px;
-                background-color: $color-Background-line;
+                background-color: $color-Banner-Card-Line;
                 transition: 1s;
                 @include tablet() {
                     left: 64px;
@@ -1941,9 +1941,9 @@ main {
                     justify-content: center;
                     margin-top: 50px;
                     .plus {
-                        width: 66px;
-                        height: 66px;
-                        background-color: $color-Border-Line;
+                        width: 55px;
+                        height: 55px;
+                        background-color: $color-Banner-Card-Line;
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
@@ -1951,21 +1951,21 @@ main {
                         position: relative;
                         &:before {
                             content: "";
-                            width: 50px;
+                            width: 39px;
                             height: 2px;
                             background-color: $color-White;
                             position: absolute;
-                            top: 32px;
+                            top: 27px;
                             left: 8px;
                         }
                         &:after {
                             content: "";
                             width: 2px;
-                            height: 50px;
+                            height: 39px;
                             background-color: $color-White;
                             position: absolute;
                             top: 8px;
-                            left: 32px;
+                            left: 27px;
                         }
                     }
                 }

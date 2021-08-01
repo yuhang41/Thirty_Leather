@@ -13,7 +13,7 @@ footer {
         }
 
         .container {
-            padding-top: 66px;
+            padding-top: 132px;
             .footer-logo {
                 width: 195px;
                 height: 180px;
@@ -21,7 +21,7 @@ footer {
             }
 
             .footer-icons {
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 a {
                     img {
                         width: 50px;
@@ -55,6 +55,9 @@ footer {
                 cursor: default;
 
                 .block {
+                    ul{
+                        margin-bottom: 2rem;
+                    }
                     li {
                         margin: 0px 5px;
                     }
@@ -69,7 +72,7 @@ footer {
 
         .copyright {
             height: 80px;
-            background: gray;
+            background: $color-Banner-Card;
             font-size: 15px;
             color: #ffffff;
 

@@ -1320,7 +1320,7 @@ main .main-container .we-story .story-content .story-discript {
 main .main-container .we-story .story-content .story-discript .subtitle {
   font-size: 14px;
   font-weight: normal;
-  color: #e28749;
+  color: #8de1de;
   position: relative;
   margin-bottom: 50px;
   -webkit-transition: 1s;
@@ -1387,7 +1387,7 @@ main .main-container .we-story .story-content .story-discript .title p {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 1.6px;
-  color: #8090a0;
+  color: #354b5e;
   -webkit-transition: 1s;
   transition: 1s;
   position: relative;
@@ -1407,7 +1407,7 @@ main .main-container .we-story .story-content .story-discript .title p.short-lin
   height: 1px;
   top: 20px;
   left: -110px;
-  background-color: #abbac9;
+  background-color: #8de1de;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -1551,7 +1551,7 @@ main .main-container .we-story .story-content .story-discript .content .preamble
   height: 1px;
   top: 171px;
   left: 340px;
-  background-color: #abbac9;
+  background-color: #8de1de;
   position: absolute;
   -webkit-transform: rotate(33deg);
           transform: rotate(33deg);
@@ -2459,7 +2459,7 @@ main .main-container .new-product:after {
   height: 969px;
   top: 115px;
   left: 190px;
-  background-color: #abbac9;
+  background-color: #8de1de;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -2744,7 +2744,7 @@ main .main-container .new-product .container .product-item .product-card .conten
 main .main-container .new-product .container .product-item .product-card .content .price span:nth-child(2) {
   font-size: 30px;
   font-weight: bold;
-  color: #f7a269;
+  color: #8de1de;
 }
 
 main .main-container .new-product .container .product-item .product-card a button {
@@ -3092,7 +3092,7 @@ main .main-container .photo-wall:before {
   height: 1078px;
   top: 0px;
   left: 190px;
-  background-color: #abbac9;
+  background-color: #8de1de;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -3402,9 +3402,9 @@ main .main-container .photo-wall .swiper2 .plus-button {
 }
 
 main .main-container .photo-wall .swiper2 .plus-button .plus {
-  width: 66px;
-  height: 66px;
-  background-color: #70b9cf;
+  width: 55px;
+  height: 55px;
+  background-color: #8de1de;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3420,22 +3420,22 @@ main .main-container .photo-wall .swiper2 .plus-button .plus {
 
 main .main-container .photo-wall .swiper2 .plus-button .plus:before {
   content: "";
-  width: 50px;
+  width: 39px;
   height: 2px;
   background-color: #ffffff;
   position: absolute;
-  top: 32px;
+  top: 27px;
   left: 8px;
 }
 
 main .main-container .photo-wall .swiper2 .plus-button .plus:after {
   content: "";
   width: 2px;
-  height: 50px;
+  height: 39px;
   background-color: #ffffff;
   position: absolute;
   top: 8px;
-  left: 32px;
+  left: 27px;
 }
 
 main .main-container .studio-information {
