@@ -25,6 +25,7 @@ main .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .commodity-menu {
@@ -110,7 +111,8 @@ main .main-container .product-container {
 main .main-container .product-container .productshop-container {
   padding-top: 85px;
   padding-left: 2.6vw;
-  background: #ebeae5;
+  background: #ededeb;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productshop-container .breadcrumbs {
@@ -139,7 +141,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #7b8ca2;
+  border-bottom: 1px solid #354b5e;
 }
 
 @media (max-width: 1435px) {
@@ -187,7 +189,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   position: absolute;
   right: -5vw;
   top: 40%;
-  color: #f7a269;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .swiper .swiper-button-next:hover {
@@ -208,7 +210,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   position: absolute;
   left: -5vw;
   top: 40%;
-  color: #f7a269;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .swiper .swiper-button-prev:hover {
@@ -385,7 +387,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .discript-title p {
   margin: 0px;
   font-size: 36px;
-  color: #7b8ca2;
+  color: #354b5e;
   letter-spacing: 3.2px;
   font-weight: bold;
 }
@@ -467,7 +469,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .star-eval {
-  color: #e08549;
+  color: #70b9cf;
   font-size: 18px;
 }
 
@@ -538,7 +540,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   height: 20px;
   cursor: pointer;
   font-size: 15px;
-  color: #65737f;
+  color: #354b5e;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p label i:hover {
@@ -678,7 +680,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .color-size .order-color .color-title span:nth-child(1) {
   font-size: 24px;
-  color: #444444;
+  color: #354b5e;
   font-weight: bold;
   letter-spacing: 0.8px;
   margin-right: 10px;
@@ -747,7 +749,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .color-size .order-size .size-title span:nth-child(1) {
   font-size: 24px;
-  color: #444444;
+  color: #354b5e;
   font-weight: bold;
   letter-spacing: 0.8px;
   margin-right: 10px;
@@ -794,6 +796,9 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .color-size .order-size .size-deatil .small-size label {
+  width: 47px;
+  height: 40px;
+  line-height: 36px;
   text-align: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 16%;
@@ -803,7 +808,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .color-size .order-size .size-deatil .small-size label:hover {
-  background-color: #9e9e9e;
+  background-color: #d1d1b3;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping {
@@ -904,7 +909,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 135px;
   height: 43px;
   background-color: unset;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #70b9cf;
   color: #444444;
   font-size: 18px;
   border-radius: 5px;
@@ -920,7 +925,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 70px;
   height: 43px;
   background-color: unset;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #70b9cf;
   color: #444444;
   font-size: 18px;
   border-radius: 5px;
@@ -958,19 +963,19 @@ main .main-container .product-container .productshop-container .commidity-contai
 
 @-webkit-keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
 @keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
@@ -979,7 +984,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
           animation: colorFade 1s ease-in-out;
-  background: #f5853b;
+  background: #4ca7c3;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order:focus {
@@ -997,7 +1002,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order::after {
-  background: #f7a269;
+  background: #70b9cf;
   content: '';
   position: absolute;
   z-index: -1;
@@ -1165,8 +1170,8 @@ main .main-container .product-container .productshop-container .commidity-contai
   height: 40px;
   background-color: unset;
   border: none;
-  font-size: 21px;
-  color: #65737f;
+  font-size: 24px;
+  color: #354b5e;
   font-weight: unset;
 }
 
@@ -1181,27 +1186,27 @@ main .main-container .product-container .productshop-container .commidity-contai
   border: none;
   text-align: center;
   font-size: 18px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input::-webkit-input-placeholder {
   font-size: 18px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input:-ms-input-placeholder {
   font-size: 18px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input::-ms-input-placeholder {
   font-size: 18px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input::placeholder {
   font-size: 18px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount input:focus::-webkit-input-placeholder {
@@ -1219,8 +1224,8 @@ main .main-container .product-container .productshop-container .commidity-contai
   height: 40px;
   background-color: unset;
   border: none;
-  font-size: 21px;
-  color: #65737f;
+  font-size: 24px;
+  color: #354b5e;
   font-weight: unset;
 }
 
@@ -1299,7 +1304,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price p:nth-child(2) {
   font-size: 60px;
   letter-spacing: 0.8px;
-  color: #e08549;
+  color: #70b9cf;
   line-height: 60px;
 }
 
@@ -1312,7 +1317,8 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productdetail-container {
-  background: #ebeae5;
+  background: #ededeb;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productdetail-container .detail-container {
@@ -1373,7 +1379,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   left: 35px;
   width: 100px;
   height: 1px;
-  background-color: #e08549;
+  background-color: #70b9cf;
 }
 
 @media (max-width: 520px) {
@@ -1396,15 +1402,55 @@ main .main-container .product-container .productdetail-container .detail-contain
   left: 35px;
   width: 100px;
   height: 1px;
-  background-color: #e08549;
+  background-color: #70b9cf;
+  -webkit-animation: title-line-grow .5s linear;
+          animation: title-line-grow .5s linear;
 }
 
 @media (max-width: 520px) {
   main .main-container .product-container .productdetail-container .detail-container .tabs .tab:hover:after {
     left: 15px;
     width: 76px;
+    -webkit-animation: title-line-grow-short .5s linear;
+            animation: title-line-grow-short .5s linear;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+}
+
+@-webkit-keyframes title-line-grow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes title-line-grow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@-webkit-keyframes title-line-grow-short {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 76px;
+  }
+}
+
+@keyframes title-line-grow-short {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 76px;
   }
 }
 
@@ -1434,7 +1480,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   opacity: 0;
   width: 100%;
   height: auto;
-  color: black;
+  color: #354b5e;
   -webkit-transition: none;
   transition: none;
 }
@@ -1551,7 +1597,7 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .product-description .inner-content .shoes-detail .main-shoes .bg-square {
   width: 483px;
   height: 483px;
-  background-color: #d1d0cd;
+  background-color: #d1d1b3;
   position: absolute;
   top: 59px;
   left: 234px;
@@ -1576,7 +1622,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   width: 55px;
   height: 55px;
   opacity: 0.5;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   border-radius: 50%;
   z-index: 1;
   -webkit-animation: onePulse 1s forwards linear;
@@ -1594,7 +1640,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   height: 2px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
   -webkit-animation: short-line-grow .5s linear forwards;
@@ -1622,7 +1668,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   left: -229px;
   width: 0px;
   height: 2px;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-animation: long-line-grow .7s linear forwards;
           animation: long-line-grow .7s linear forwards;
 }
@@ -1694,7 +1740,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   width: 55px;
   height: 55px;
   opacity: 0.5;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   border-radius: 50%;
   z-index: 1;
   -webkit-animation: onePulse 1s forwards linear;
@@ -1712,7 +1758,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   height: 2px;
   -webkit-transform: rotate(-68deg);
           transform: rotate(-68deg);
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
   -webkit-animation: second-line-grow .5s linear forwards;
@@ -1786,7 +1832,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   width: 55px;
   height: 55px;
   opacity: 0.5;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   border-radius: 50%;
   z-index: 1;
   -webkit-animation: onePulse 1s forwards linear;
@@ -1804,7 +1850,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   height: 2px;
   -webkit-transform: rotate(-128deg);
           transform: rotate(-128deg);
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
   -webkit-animation: third-line-grow .8s linear forwards;
@@ -1878,7 +1924,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   width: 55px;
   height: 55px;
   opacity: 0.5;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   border-radius: 50%;
   z-index: 1;
   -webkit-animation: onePulse 1s forwards linear;
@@ -1894,7 +1940,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   left: 12px;
   width: 0px;
   height: 2px;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
   -webkit-transform: rotate(-180deg);
@@ -1924,7 +1970,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   left: 84px;
   width: 0px;
   height: 2px;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform: rotate(125deg);
           transform: rotate(125deg);
   -webkit-transform-origin: 40px -1px;
@@ -2084,7 +2130,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   width: 55px;
   height: 55px;
   opacity: 0.5;
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   border-radius: 50%;
   z-index: 1;
   -webkit-animation: onePulse 1s forwards linear;
@@ -2102,7 +2148,7 @@ main .main-container .product-container .productdetail-container .detail-contain
   height: 2px;
   -webkit-transform: rotate(124deg);
           transform: rotate(124deg);
-  background-color: #86b2c4;
+  background-color: #7b8c2a;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
   -webkit-animation: fifth-line-grow .8s linear forwards;
@@ -2171,31 +2217,31 @@ main .main-container .product-container .productdetail-container .detail-contain
 
 @-webkit-keyframes onePulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(134, 178, 196, 0.5);
-            box-shadow: 0px 0px 0px 0px rgba(134, 178, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(123, 140, 42, 0.5);
+            box-shadow: 0px 0px 0px 0px rgba(123, 140, 42, 0.5);
   }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 12px rgba(134, 178, 196, 0.2);
-            box-shadow: 0px 0px 0px 12px rgba(134, 178, 196, 0.2);
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(123, 140, 42, 0.2);
+            box-shadow: 0px 0px 0px 12px rgba(123, 140, 42, 0.2);
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 4px rgba(134, 178, 196, 0.5);
-            box-shadow: 0px 0px 0px 4px rgba(134, 178, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(123, 140, 42, 0.5);
+            box-shadow: 0px 0px 0px 4px rgba(123, 140, 42, 0.5);
   }
 }
 
 @keyframes onePulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(134, 178, 196, 0.5);
-            box-shadow: 0px 0px 0px 0px rgba(134, 178, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(123, 140, 42, 0.5);
+            box-shadow: 0px 0px 0px 0px rgba(123, 140, 42, 0.5);
   }
   50% {
-    -webkit-box-shadow: 0px 0px 0px 12px rgba(134, 178, 196, 0.2);
-            box-shadow: 0px 0px 0px 12px rgba(134, 178, 196, 0.2);
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(123, 140, 42, 0.2);
+            box-shadow: 0px 0px 0px 12px rgba(123, 140, 42, 0.2);
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 4px rgba(134, 178, 196, 0.5);
-            box-shadow: 0px 0px 0px 4px rgba(134, 178, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 4px rgba(123, 140, 42, 0.5);
+            box-shadow: 0px 0px 0px 4px rgba(123, 140, 42, 0.5);
   }
 }
 
@@ -2441,9 +2487,9 @@ main .main-container .product-container .productdetail-container .detail-contain
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title p {
   display: inline-block;
-  color: #e08549;
+  color: #7b8c2a;
   font-size: 18px;
-  border-bottom: 1px solid #e08549;
+  border-bottom: 1px solid #7b8c2a;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -2490,7 +2536,7 @@ main .main-container .product-container .productdetail-container .detail-contain
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
-  color: #7b8ca2;
+  color: #70b9cf;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -2719,8 +2765,8 @@ main .main-container .product-container .productdetail-container .detail-contain
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .swiper-step .swiper-step-button .pagination-next .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  color: #e08549;
-  background: #e08549;
+  color: #70b9cf;
+  background: #70b9cf;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .swiper-step .swiper-step-button .pagination-next::before {
@@ -2898,6 +2944,7 @@ main .main-container .product-container .productother-container {
   width: 100%;
   padding-top: 60px;
   background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productother-container .other-container {
@@ -2999,7 +3046,7 @@ main .main-container .product-container .productother-container .other-container
 
 main .main-container .product-container .productother-container .other-container .customer-eval .different-eval .star-eval .star-img {
   font-size: 14px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productother-container .other-container .customer-eval .different-eval .score {
@@ -3059,7 +3106,7 @@ main .main-container .product-container .productother-container .other-container
 }
 
 main .main-container .product-container .productother-container .other-container .customer-eval .different-eval .bar-graph ul li:nth-child(1) .graph-line {
-  background-color: #e08549;
+  background-color: #70b9cf;
   margin-left: 19px;
 }
 
@@ -3230,7 +3277,7 @@ main .main-container .product-container .productother-container .other-container
 
 main .main-container .product-container .productother-container .other-container .customer-eval .customer-comment .shopping-cart ul .img-content .cart-content .cart-title .star-eval .star-img {
   margin-right: 10px;
-  color: #e08549;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productother-container .other-container .customer-eval .customer-comment .shopping-cart ul .img-content .cart-content .cart-title .star-eval p {
@@ -3384,7 +3431,7 @@ main .main-container .product-container .productother-container .other-container
 main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card .content .price span:nth-child(2) {
   font-size: 30px;
   font-weight: bold;
-  color: #f7a269;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button {
@@ -3440,10 +3487,10 @@ main .main-container .product-container .productother-container .other-container
 
 @keyframes colorFade {
   0% {
-    background: rgba(247, 162, 105, 0.25);
+    background: rgba(112, 185, 207, 0.25);
   }
   100% {
-    background: #f7a269;
+    background: #70b9cf;
   }
 }
 
@@ -3452,7 +3499,7 @@ main .main-container .product-container .productother-container .other-container
   transform: scale(2);
   -webkit-animation: colorFade 1s ease-in-out;
           animation: colorFade 1s ease-in-out;
-  background: #f5853b;
+  background: #4ca7c3;
 }
 
 main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button:focus {
@@ -3470,7 +3517,7 @@ main .main-container .product-container .productother-container .other-container
 }
 
 main .main-container .product-container .productother-container .other-container .related-commid .product-item .product-card a button::after {
-  background: #f7a269;
+  background: #70b9cf;
   content: '';
   position: absolute;
   z-index: -1;

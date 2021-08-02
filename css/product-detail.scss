@@ -85,7 +85,7 @@
         transition: all 0.3s;
     }
     &::after {
-        background: $color-Apricot;
+        background: $color-Border-Line;
         content: '';
         position: absolute;
         z-index: -1;
@@ -130,14 +130,14 @@
         transition: 200ms ease-in-out;                            
     }
     @keyframes colorFade {
-        0% { background: rgba($color-Apricot,0.25); }
-        100% { background: rgba($color-Apricot,1); }
+        0% { background: rgba($color-Border-Line,0.25); }
+        100% { background: rgba($color-Border-Line,1); }
     }
     &:focus:before{
         -webkit-transform: scale(2);
         transform: scale(2);
         animation: colorFade 1s ease-in-out;
-        background: darken(darken($color-Apricot,7%),2.5%);
+        background: darken(darken($color-Border-Line,7%),2.5%);
     }
     &:focus{
         color: $color-White;
@@ -154,6 +154,7 @@ main{
     .main-container{
         min-height: 100vh;
         display: flex;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
         // 左邊白色區塊的欄位
         .commodity-menu{
             max-width: 375px;
@@ -223,7 +224,8 @@ main{
             .productshop-container{
                 padding-top: 85px;
                 padding-left: 2.6vw;
-                background: $color-LightGray;
+                background: $color-New-Background;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .breadcrumbs{
                     margin-bottom: 20px;
                     @include bg-screen(){
@@ -241,7 +243,7 @@ main{
                     margin: auto;
                     display: flex;
                     justify-content: space-between;
-                    border-bottom: 1px solid $color-Product-Detail-Title;
+                    border-bottom: 1px solid $color-Banner-Card;
                     @include normal-screen(){
                         flex-direction: column;
                         align-items: center;
@@ -265,7 +267,7 @@ main{
                               position: absolute;
                               right: -5vw;
                               top:40%;
-                              color: $color-Apricot;
+                              color: $color-Border-Line;
                               &:hover {
                                     color: $color-Photo-nextBtn-hover;
                                 }
@@ -278,7 +280,7 @@ main{
                             position: absolute;
                             left: -5vw;
                             top:40%;
-                            color: $color-Apricot;
+                            color: $color-Border-Line;
                             &:hover {
                                 color: $color-Photo-nextBtn-hover;
                             }
@@ -396,7 +398,7 @@ main{
                                 p{
                                     margin: 0px;
                                     font-size: $H3-font-size;
-                                    color: $color-Product-Detail-Title;
+                                    color: $color-Banner-Card;
                                     letter-spacing: $font-letter-space-200;
                                     font-weight: $font-Weight-B;
                                     @include sm-phone(){
@@ -430,7 +432,7 @@ main{
                                             justify-content: center;
                                         }
                                         .star-eval{
-                                            color: $color-Evaluation-Star;
+                                            color: $color-Border-Line;
                                             font-size: $H7-font-size;
                                             @include sm-phone(){
                                                 display: none;
@@ -480,7 +482,7 @@ main{
                                                         height: 20px;
                                                         cursor: pointer;
                                                         font-size: $H9-font-size;                                
-                                                        color: $color-Nav-icon;
+                                                        color: $color-Banner-Card;
                                                         &:hover{
                                                             color: $color-Apricot;
                                                         }
@@ -560,7 +562,7 @@ main{
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
-                                                    color: $color-IronGray;
+                                                    color: $color-Banner-Card;
                                                     font-weight: $font-Weight-B;
                                                     letter-spacing: $font-letter-space-50;
                                                     margin-right: 10px;
@@ -608,7 +610,7 @@ main{
                                             span{
                                                 &:nth-child(1){
                                                     font-size: $H5-font-size;
-                                                    color: $color-IronGray;
+                                                    color: $color-Banner-Card;
                                                     font-weight: $font-Weight-B;
                                                     letter-spacing: $font-letter-space-50;
                                                     margin-right: 10px;
@@ -640,13 +642,16 @@ main{
                                                 input[class="size-checkbox"]:checked+label{
                                                     background-color:var(--sizeColor);
                                                 }
-                                                label{                                                                                        
+                                                label{    
+                                                    width: 47px;
+                                                    height: 40px; 
+                                                    line-height: 36px;                            
                                                     text-align: center;
                                                     flex: 0 0 16%;
                                                     border-radius: 5px;
                                                     cursor: pointer;
                                                     &:hover{
-                                                        background-color: $color-Number-Hover;                                                
+                                                        background-color: $color-Product-Detail-Square;                                                
                                                     }  
                                                 }                                        
                                             }                                    
@@ -696,7 +701,7 @@ main{
                                         width: 135px;
                                         height: 43px;
                                         background-color: unset;
-                                        border: 1px solid $color-MoreButton;
+                                        border: 1px solid $color-Border-Line;
                                         color: $color-IronGray;
                                         font-size: $H7-font-size;
                                         border-radius: 5px;
@@ -710,7 +715,7 @@ main{
                                         width: 70px;
                                         height: 43px;
                                         background-color: unset;
-                                        border: 1px solid $color-MoreButton;
+                                        border: 1px solid $color-Border-Line;
                                         color: $color-IronGray;
                                         font-size: $H7-font-size;
                                         border-radius: 5px;
@@ -817,8 +822,8 @@ main{
                                         height: 40px;
                                         background-color: unset;
                                         border: none;
-                                        font-size: $H6-font-size;
-                                        color: $color-Nav-icon;
+                                        font-size: $H5-font-size;
+                                        color: $color-Banner-Card;
                                         font-weight: unset;
                                         &:hover{
                                             color: $color-White;
@@ -832,10 +837,10 @@ main{
                                         text-align: center;                                        
                                         // -webkit-appearance: none;
                                         font-size: $H7-font-size;
-                                        color: $color-Evaluation-Star;
+                                        color: $color-Border-Line;
                                         &::placeholder {
                                             font-size: $H7-font-size;
-                                            color: $color-Evaluation-Star;
+                                            color: $color-Border-Line;
                                         }
                                         &:focus{
                                             &::-webkit-input-placeholder { 
@@ -854,8 +859,8 @@ main{
                                         height: 40px;
                                         background-color: unset;
                                         border: none;
-                                        font-size: $H6-font-size;
-                                        color:$color-Nav-icon;
+                                        font-size: $H5-font-size;
+                                        color:$color-Banner-Card;
                                         font-weight: unset;
                                         &:hover{
                                             color: $color-White;
@@ -912,7 +917,7 @@ main{
                                     &:nth-child(2){
                                         font-size: $H0-font-size;
                                         letter-spacing: $font-letter-space-50;
-                                        color: $color-Evaluation-Star;
+                                        color: $color-Border-Line;
                                         line-height: 60px;
                                         @include sm-phone(){
                                             font-size: $H1-font-size; 
@@ -926,7 +931,8 @@ main{
             }
             // 商品詳細描述/開發過程/尺碼建議
             .productdetail-container{
-                background: $color-LightGray;
+                background: $color-New-Background;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .detail-container{
                     position: relative;
                     overflow: hidden;
@@ -961,7 +967,7 @@ main{
                                     left: 35px;
                                     width: 100px;
                                     height: 1px;
-                                    background-color: $color-Evaluation-Star;
+                                    background-color: $color-Border-Line;
                                     @include sm-phone(){
                                         left: 15px;
                                         width: 76px;
@@ -978,11 +984,31 @@ main{
                                     left: 35px;
                                     width: 100px;
                                     height: 1px;
-                                    background-color: $color-Evaluation-Star;
+                                    background-color: $color-Border-Line;
+                                    animation: title-line-grow .5s linear;
                                     @include sm-phone(){
                                         left: 15px;
                                         width: 76px;
+                                        animation: title-line-grow-short .5s linear;
                                     }
+                                }
+                                @keyframes title-line-grow {
+                                    0%{
+                                        width: 0px;
+                                    }
+                                    100%{
+                                        width: 100px;
+                                    }
+                                    
+                                }
+                                @keyframes title-line-grow-short {
+                                    0%{
+                                        width: 0px;
+                                    }
+                                    100%{
+                                        width: 76px;
+                                    }
+                                    
                                 }
                             }
                         }
@@ -1003,7 +1029,7 @@ main{
                             opacity: 0;
                             width: 100%;
                             height: auto;
-                            color: black;
+                            color: $color-Banner-Card;
                             transition: none;
                             &.active{
                                 // display: block;
@@ -1066,7 +1092,7 @@ main{
                                         .bg-square{
                                             width: 483px;
                                             height: 483px;
-                                            background-color: $color-Background-Square;
+                                            background-color: $color-Product-Detail-Square;
                                             position: absolute;
                                             top: 59px;
                                             left: 234px;
@@ -1092,7 +1118,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color: $color-SkyBlue;
+                                                    background-color: $color-Product-Detail-Circle;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -1106,7 +1132,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(45deg);
-                                                            background-color: $color-SkyBlue;
+                                                            background-color: $color-Product-Detail-Circle;
                                                             transform-origin:40px -1px;
                                                             animation: short-line-grow .5s linear forwards;
                                                             animation-delay: .7s;
@@ -1121,7 +1147,7 @@ main{
                                                             left: -229px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color: $color-SkyBlue;
+                                                            background-color: $color-Product-Detail-Circle;
                                                             animation: long-line-grow .7s linear forwards;
                                                         }
                                                         @keyframes long-line-grow{
@@ -1166,7 +1192,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color:$color-SkyBlue;
+                                                    background-color:$color-Product-Detail-Circle;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -1180,7 +1206,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(-68deg);
-                                                            background-color:$color-SkyBlue;
+                                                            background-color:$color-Product-Detail-Circle;
                                                             transform-origin:40px -1px;
                                                             animation: second-line-grow .5s linear forwards;
                                                         }
@@ -1226,7 +1252,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color:$color-SkyBlue;
+                                                    background-color:$color-Product-Detail-Circle;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -1240,7 +1266,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(-128deg);
-                                                            background-color:$color-SkyBlue;
+                                                            background-color:$color-Product-Detail-Circle;
                                                             transform-origin:40px -1px;
                                                             animation: third-line-grow .8s linear forwards;
                                                         }
@@ -1285,7 +1311,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color:$color-SkyBlue;
+                                                    background-color:$color-Product-Detail-Circle;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -1298,7 +1324,7 @@ main{
                                                             left: 12px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color:$color-SkyBlue;
+                                                            background-color:$color-Product-Detail-Circle;
                                                             transform-origin:40px -1px;
                                                             transform: rotate(-180deg);
                                                             animation: fourth-line-grow .3s linear forwards;
@@ -1315,7 +1341,7 @@ main{
                                                             left: 84px;
                                                             width: 0px;
                                                             height: 2px;
-                                                            background-color:$color-SkyBlue;
+                                                            background-color:$color-Product-Detail-Circle;
                                                             transform: rotate(125deg);
                                                             transform-origin:40px -1px;
                                                             animation: fourth-two-line-grow .8s linear forwards;
@@ -1409,7 +1435,7 @@ main{
                                                     width: 55px;
                                                     height: 55px;
                                                     opacity: 0.5;
-                                                    background-color:$color-SkyBlue;
+                                                    background-color:$color-Product-Detail-Circle;
                                                     border-radius: 50%;
                                                     z-index: 1;
                                                     animation: onePulse 1s forwards linear;
@@ -1423,7 +1449,7 @@ main{
                                                             width: 0px;
                                                             height: 2px;
                                                             transform: rotate(124deg);
-                                                            background-color:$color-SkyBlue;
+                                                            background-color:$color-Product-Detail-Circle;
                                                             transform-origin:40px -1px;
                                                             animation: fifth-line-grow .8s linear forwards; 
                                                         }
@@ -1459,15 +1485,15 @@ main{
                                             }
                                             @keyframes onePulse {
                                                 0% {
-                                                    box-shadow: 0px 0px 0px 0px rgba(134,178,196,0.5);
+                                                    box-shadow: 0px 0px 0px 0px rgba(123,140,42,0.5);
                                                 }
                                     
                                                 50% {
-                                                    box-shadow: 0px 0px 0px 12px rgba(134,178,196 ,0.2);
+                                                    box-shadow: 0px 0px 0px 12px rgba(123,140,42,0.2);
                                                 }
                                     
                                                 100% {
-                                                    box-shadow: 0px 0px 0px 4px rgba(134,178,196,0.5);
+                                                    box-shadow: 0px 0px 0px 4px rgba(123,140,42,0.5);
                                                 }
                                             }
                                         }
@@ -1620,9 +1646,9 @@ main{
                                                     margin-bottom: 20px;
                                                     p{
                                                         display: inline-block;
-                                                        color: $color-Evaluation-Star;
+                                                        color: $color-Product-Detail-Circle;
                                                         font-size: $H7-font-size;
-                                                        border-bottom: 1px solid $color-Evaluation-Star;
+                                                        border-bottom: 1px solid $color-Product-Detail-Circle;
                                                         transition: 1s;
                                                         @include sm-phone(){
                                                             display: block;
@@ -1654,7 +1680,7 @@ main{
                                                 .development-process-list{
                                                     margin-bottom: 20px;
                                                     p{
-                                                        color: $color-Product-Detail-Title;
+                                                        color:$color-Border-Line;
                                                         font-size: $H7-font-size;
                                                         font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
@@ -1787,8 +1813,8 @@ main{
                                                 white-space:nowrap;                                          
                                             }
                                             &.swiper-pagination-bullet-active{
-                                                color:$color-Evaluation-Star;
-                                                background: $color-Evaluation-Star;
+                                                color:$color-Border-Line;
+                                                background: $color-Border-Line;
                                             }                                        
                                         }
                                         &::before{
@@ -1898,6 +1924,7 @@ main{
                 width: 100%;
                 padding-top: 60px;
                 background-color: $color-White;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .other-container{
                     max-width: 1120px;
                     margin: auto;
@@ -1944,7 +1971,7 @@ main{
                                 }
                                 .star-img{
                                     font-size: $H10-font-size;
-                                    color: $color-Evaluation-Star;
+                                    color: $color-Border-Line;
                                 }
                             }
                             .score{
@@ -1977,7 +2004,7 @@ main{
                                         justify-content: space-between;
                                         &:nth-child(1){
                                             .graph-line{
-                                                background-color: $color-Evaluation-Star;
+                                                background-color: $color-Border-Line;
                                                 margin-left: 19px;
                                             }
                                         }
@@ -2075,7 +2102,7 @@ main{
                                                         }
                                                         .star-img{
                                                             margin-right: 10px;
-                                                            color: $color-Evaluation-Star;
+                                                            color: $color-Border-Line;
                                                         } 
                                                         p{
                                                             font-size: $H10-font-size;
@@ -2179,7 +2206,7 @@ main{
                                         &:nth-child(2) {
                                             font-size: $H4-font-size;
                                             font-weight: bold;
-                                            color: $color-Apricot;
+                                            color: $color-Border-Line;
                                         }
                                     }
                                 }

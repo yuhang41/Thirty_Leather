@@ -225,16 +225,7 @@ main{
                     .inner-content{
                         height: 384px;
                         display: flex;
-                        // justify-content: flex-end;
                         margin-bottom: 60px; 
-                        // @include bg-screen(){
-                        //     // justify-content: space-between;
-                        // }
-                        // @include sm-screen(){
-                        //     // height: unset;
-                        //     // justify-content: space-between;
-                        //     // flex-direction: column;
-                        // }
                         @include tablet(){
                             height: unset;
                             justify-content: space-between;
@@ -248,9 +239,6 @@ main{
                             margin-right: 50px;
                             margin-left: auto;
                             position: relative;
-                            // @include bg-screen(){                                
-                            //     // margin-right: auto;
-                            // }
                             @include sm-screen(){
                                 margin-right: auto;
                             }
@@ -341,6 +329,7 @@ main{
                                     }
                                 }                                                                    
                             } 
+                            // 鞋子素描 svg
                             .shoes-sketch{
                                 position: absolute;
                                 top: 0px;
@@ -369,9 +358,6 @@ main{
                                 height: 384px;
                                 margin-bottom: 50px;
                                 margin-right: 0px;
-                                // @include sm-screen(){
-                                //   width: unset;
-                                // }
                                 @include tablet(){
                                     max-width: unset;
                                     width: unset;
@@ -418,10 +404,6 @@ main{
                                 z-index: 1;
                                 opacity: 0.5;
                                 transition: 1s;
-                                // @include sm-screen(){
-                                //     top: -450px;
-                                //     left: 200px;
-                                // }
                                 @include tablet(){
                                     top: -450px;
                                     left: 200px;
@@ -436,14 +418,8 @@ main{
                                 width: 100%;
                                 margin-left: auto;
                                 transition: 1s;
-                                // @include sm-screen(){
-                                //     position: absolute;
-                                //     // width: 39.8vw;
-                                //     top: -70px;
-                                // }
                                 @include tablet(){
                                     position: absolute;
-                                    // width: 39.8vw;
                                     top: -70px;
                                 }
                                 @include normal-phone(){

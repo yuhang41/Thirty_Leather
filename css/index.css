@@ -490,19 +490,38 @@ main .main-container .swiper1 .banner-card .banner-content .text {
           align-items: center;
 }
 
-main .main-container .swiper1 .banner-card .banner-content .text p {
+main .main-container .swiper1 .banner-card .banner-content .text .text-mask {
+  width: 165.7px;
+  height: 24px;
+  overflow: hidden;
+}
+
+main .main-container .swiper1 .banner-card .banner-content .text .text-mask p {
   margin: 0px;
   font-size: 16px;
   font-weight: bold;
   color: #354b5e;
   letter-spacing: 3.2px;
+  -webkit-animation: text-move .8s ease-in-out;
+          animation: text-move .8s ease-in-out;
+  text-align: center;
+  position: relative;
 }
 
 @media (max-width: 450px) {
-  main .main-container .swiper1 .banner-card .banner-content .text p {
+  main .main-container .swiper1 .banner-card .banner-content .text .text-mask p {
     color: #ffffff;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+}
+
+@keyframes text-move {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
   }
 }
 
@@ -3238,6 +3257,15 @@ main .main-container .photo-wall .swiper2 {
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 {
+    min-height: unset;
+    height: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .photo-wall .swiper2 .swiper-container {
   width: 75%;
   height: 80%;
@@ -3248,6 +3276,14 @@ main .main-container .photo-wall .swiper2 .swiper-container {
 @media (max-width: 1350px) {
   main .main-container .photo-wall .swiper2 .swiper-container {
     width: 60%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-container {
+    height: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -3286,6 +3322,14 @@ main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide {
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide {
+    height: 50%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a {
   display: block;
   width: 100%;
@@ -3293,6 +3337,15 @@ main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
+}
+
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img {
@@ -3320,19 +3373,24 @@ main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img:
   display: flex;
 }
 
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .photo-wall .swiper2 .swiper-container .swiper-slide a .text {
   position: absolute;
-  top: 26em;
-  left: 12em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #ffffff;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   font-size: 14px;
+  z-index: 2;
   display: none;
 }
 
@@ -3382,6 +3440,14 @@ main .main-container .photo-wall .swiper2 .swiper-button-next {
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-button-next {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .photo-wall .swiper2 .swiper-button-next:hover {
   color: #6ba2f2;
 }
@@ -3397,6 +3463,14 @@ main .main-container .photo-wall .swiper2 .swiper-button-prev {
 @media (max-width: 1350px) {
   main .main-container .photo-wall .swiper2 .swiper-button-prev {
     left: 75px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 520px) {
+  main .main-container .photo-wall .swiper2 .swiper-button-prev {
+    display: none;
     -webkit-transition: 1s;
     transition: 1s;
   }

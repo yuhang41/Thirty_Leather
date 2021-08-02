@@ -25,7 +25,7 @@ var swiper3 = new Swiper(".mySwiper3", {
 var swiper4 = new Swiper(".mySwiper4", {
  spaceBetween: 30,
  watchSlidesVisibility: true,
-  watchSlidesProgress: true, 
+watchSlidesProgress: true, 
  loop: true,
  loopFillGroupWithBlank: true,
  navigation: {
