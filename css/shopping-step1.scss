@@ -298,7 +298,7 @@ main{
                 .shopping-order{                
                     max-width: 1141px;
                     width: 100%;
-                    max-height:452px;
+                    // max-height:452px;
                     background: $color-White;
                     border: 1px solid $color-Apricot;
                     transition: 1s;
@@ -368,8 +368,8 @@ main{
                         }
                     }
                     .shopping-order-content{
-                        height: calc(100% - 62px);
-                        overflow-y: auto;
+                        // height: calc(100% - 62px);
+                        // overflow-y: auto;
                         @include bg-phone(){
                             height: unset;
                             overflow-y: unset;
@@ -817,6 +817,7 @@ main{
                                             padding: 5px 20px;
                                             transition: .5s;
                                             font-size: $H11-font-size;
+                                            white-space: nowrap;
                                             @include button-hover();
                                             @include button-focus();
                                         }
