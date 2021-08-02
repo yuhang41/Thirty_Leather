@@ -302,6 +302,7 @@ main{
                     background: $color-White;
                     border: 1px solid $color-Apricot;
                     transition: 1s;
+                    overflow: hidden;
                     @include bg-screen(){
                         max-width: 72%;
                     }
@@ -319,6 +320,7 @@ main{
                             padding: 10px 0;
                             display: flex;
                             border-bottom: 1px solid $color-Gainsboro;
+                            margin-bottom: 0;
                             .title{
                                 display: flex;
                                 justify-content: center;
@@ -328,6 +330,8 @@ main{
                                 font-size: $H10-font-size;
                                 letter-spacing: $font-letter-space-100;
                                 transition: 1s;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                                 &:nth-child(1){
                                     @include sm-phone(){
                                         margin:0px 30px;
@@ -363,153 +367,199 @@ main{
                             }
                         }
                     }
-                    .shopping-cart{
-                        width: 100%;
-                        padding-top: 20px;      
-                        @include sm-phone(){
-                            padding-bottom: 50px;    
-                        }          
-                        ul{
-                            width: 100%;                    
-                            display: flex;                    
-                            .order-cart{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                flex: 0 0 12%;
-                                font-family: $font-Family-A;
-                                font-weight: $font-Weight-B;
-                                font-size: $H10-font-size;
-                                transition: 1s;
-                                @include tablet(){
-                                    flex: 1 0 11%; 
-                                }
-                                @include bg-phone(){
-                                    flex: 0 0 17%;
-                                }
-                                &.content{
-                                    flex: 0 0 28%;
-                                    transition: 1s;
-                                    @include sm-phone(){
-                                        flex: 0 0 32%; 
-                                    }
-                                }
-                            }
-                            .img{
-                                img{
-                                    max-width: 90px;
-                                    width: 100%;
-                                    max-height: 90px;
-                                    object-fit: contain;
-                                    object-position: center;
-                                    transition: 1s;
-                                    @include sm-phone(){
-                                        max-width: unset;
-                                        max-height: unset;
-                                        width: 90px;
-                                        height: 90px;
-                                        margin-right: 10px;
-                                        margin-left: 20px;
-                                    }
-                                }
-                            }
-                            .content{
-                                .cart-content{
-                                    min-height: 90px;
+                    .shopping-order-content{
+                        height: calc(100% - 62px);
+                        overflow-y: auto;
+                        @include bg-phone(){
+                            height: unset;
+                            overflow-y: unset;
+                        }
+                        .shopping-cart{
+                            width: 100%;
+                            padding-top: 20px;      
+                            @include sm-phone(){
+                                padding-bottom: 50px;    
+                            }          
+                            ul{
+                                width: 100%;                    
+                                display: flex;                    
+                                .order-cart{
                                     display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-between;
-                                    @include sm-phone(){
-                                        width: 183px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex: 0 0 12%;
+                                    font-family: $font-Family-A;
+                                    font-weight: $font-Weight-B;
+                                    font-size: $H10-font-size;
+                                    transition: 1s;
+                                    @include tablet(){
+                                        flex: 1 0 11%; 
                                     }
-                                    .cart-title{                            
-                                        color:$color-Nav-icon;
-                                        p{
-                                            font-size: $H10-font-size;
+                                    @include bg-phone(){
+                                        flex: 0 0 17%;
+                                    }
+                                    &.content{
+                                        flex: 0 0 28%;
+                                        transition: 1s;
+                                        @include sm-phone(){
+                                            flex: 0 0 32%; 
+                                        }
+                                    }
+                                }
+                                .img{
+                                    img{
+                                        max-width: 90px;
+                                        width: 100%;
+                                        max-height: 90px;
+                                        object-fit: contain;
+                                        object-position: center;
+                                        transition: 1s;
+                                        @include sm-phone(){
+                                            max-width: unset;
+                                            max-height: unset;
+                                            width: 90px;
+                                            height: 90px;
+                                            margin-right: 10px;
+                                            margin-left: 20px;
+                                        }
+                                    }
+                                }
+                                .content{
+                                    .cart-content{
+                                        min-height: 90px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        @include sm-phone(){
+                                            width: 183px;
+                                        }
+                                        .cart-title{                            
+                                            color:$color-Nav-icon;
+                                            p{
+                                                font-size: $H10-font-size;
+                                                font-weight: lighter;
+                                                margin: 0;
+                                            }               
+                                        }
+                                        .cart-text{
+                                            color: $color-Gainsboro;
+                                            font-size: $H11-font-size;
                                             font-weight: lighter;
-                                            margin: 0;
-                                        }               
-                                    }
-                                    .cart-text{
-                                        color: $color-Gainsboro;
-                                        font-size: $H11-font-size;
-                                        font-weight: lighter;
-                                        p{
-                                            margin: 0;
+                                            p{
+                                                margin: 0;
+                                            }
                                         }
-                                    }
-                                }                        
-                            }
-                            .price{                        
-                                .discount{
-                                    text-align: center;
-                                    p{                
-                                        margin: 0;
-                                        font-weight: lighter;                
-                                        &:nth-child(1){
-                                            font-family: $font-Family-A;
-                                            font-size: $H9-font-size;                                
-                                            color: $color-Nav-icon;
-                                        }
-                                        &:nth-child(2){
-                                            position: relative;
-                                            font-family: $font-Family-A;
-                                            font-size: $H11-font-size;                                
-                                            color: $color-PaleBlue;
-                                            &::after{
-                                                content: '';
-                                                position: absolute;
-                                                top: 50%;
-                                                left: 0;
-                                                width: 100%;
-                                                height: 1px;
-                                                background-color: $color-PaleBlue;
+                                    }                        
+                                }
+                                .price{                        
+                                    .discount{
+                                        text-align: center;
+                                        p{                
+                                            margin: 0;
+                                            font-weight: lighter;                
+                                            &:nth-child(1){
+                                                font-family: $font-Family-A;
+                                                font-size: $H9-font-size;                                
+                                                color: $color-Nav-icon;
+                                            }
+                                            &:nth-child(2){
+                                                position: relative;
+                                                font-family: $font-Family-A;
+                                                font-size: $H11-font-size;                                
+                                                color: $color-PaleBlue;
+                                                &::after{
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    background-color: $color-PaleBlue;
+                                                }
                                             }
                                         }
                                     }
                                 }
-                            }
-                            .count{
-                                .less,.plus{
-                                    width: 13px;
-                                    font-size: $H6-font-size;
-                                    cursor: pointer;
-                                    color: $color-Nav-icon;
-                                }
-                                .less:hover{
-                                    color: $color-Apricot;
-                                }
-                                .plus:hover{
-                                    color: $color-Apricot;
-                                }
-                                input{
-                                    margin: 0 5px;
-                                    text-align: center;
-                                    background-color: $color-Periwinkle;
-                                    outline: none;
-                                    border: none;
-                                    -webkit-appearance: none;
-                                    &[type=number]::-webkit-outer-spin-button,
-                                    &[type=number]::-webkit-inner-spin-button {
-                                    -webkit-appearance: none;
+                                .count{
+                                    .less,.plus{
+                                        width: 13px;
+                                        font-size: $H6-font-size;
+                                        cursor: pointer;
+                                        color: $color-Nav-icon;
+                                    }
+                                    .less:hover{
+                                        color: $color-Apricot;
+                                    }
+                                    .plus:hover{
+                                        color: $color-Apricot;
+                                    }
+                                    input{
+                                        margin: 0 5px;
+                                        text-align: center;
+                                        background-color: $color-Periwinkle;
+                                        outline: none;
+                                        border: none;
+                                        -webkit-appearance: none;
+                                        &[type=number]::-webkit-outer-spin-button,
+                                        &[type=number]::-webkit-inner-spin-button {
+                                        -webkit-appearance: none;
+                                        }
                                     }
                                 }
-                            }
-                            .subtotal{
-                                p{
-                                    margin: 0;
-                                    font-family: $font-Family-A;
-                                    font-size: $H9-font-size;                                
-                                    color: $color-Nav-icon;
-                                    font-weight: lighter;
+                                .subtotal{
+                                    p{
+                                        margin: 0;
+                                        font-family: $font-Family-A;
+                                        font-size: $H9-font-size;                                
+                                        color: $color-Nav-icon;
+                                        font-weight: lighter;
+                                    }
                                 }
-                            }
-                            .delete-cart{
-                                .delete{                            
-                                    .delete-button{                                
+                                .delete-cart{
+                                    .delete{                            
+                                        .delete-button{
+                                            padding: 5px;
+                                            cursor: pointer;
+                                            font-family: $font-Family-A;
+                                            font-size: $H9-font-size;                                
+                                            color: $color-Nav-icon;
+                                            border: none;
+                                            outline: none;
+                                            background: none;
+                                            &:hover{
+                                                color: $color-Apricot;
+                                            }
+                                        }
+                                    }
+                                }
+                                .favorite{
+                                    input[type="checkbox"]{
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        position: relative;
+                                        outline: none;
+                                        border: 0;
+                                        cursor: pointer;
+                                        &::after {
+                                            content:"";
+                                            position: absolute;
+                                            height: 4px;
+                                            width: 4px;
+                                            top: -6px;
+                                            left: 11.5px;
+                                            border-radius: 50%;
+                                        }
+                                        &:focus::after {
+                                            animation: firework .5s ease forwards .1s;
+                                        }
+                                        &:checked+label>.fa-star{
+                                            animation: star-fold 1s linear;
+                                            color: $color-Apricot;
+                                        }
+                                    }
+                                    i{
                                         padding: 5px;
                                         cursor: pointer;
-                                        font-family: $font-Family-A;
                                         font-size: $H9-font-size;                                
                                         color: $color-Nav-icon;
                                         &:hover{
@@ -517,199 +567,165 @@ main{
                                         }
                                     }
                                 }
-                            }
-                            .favorite{
-                                input[type="checkbox"]{
-                                    -webkit-appearance: none;
-                                    -moz-appearance: none;
-                                    position: relative;
-                                    outline: none;
-                                    border: 0;
-                                    cursor: pointer;
-                                    &::after {
-                                        content:"";
-                                        position: absolute;
-                                        height: 4px;
-                                        width: 4px;
-                                        top: -6px;
-                                        left: 11.5px;
-                                        border-radius: 50%;
+                                //收藏效果
+                                @keyframes firework {
+                                0% {
+                                    opacity: 1;
+                                    box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
+                                }
+                                30% {
+                                    opacity: 1;
+                                }
+                                100% {
+                                    opacity: 0.0;
+                                    box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
+                                }
+                                }
+                                @keyframes star-fold {
+                                    0%{
+                                        transform: rotate(0deg);
+                                        color: $color-Nav-icon;
                                     }
-                                    &:focus::after {
-                                        animation: firework .5s ease forwards .1s;
-                                    }
-                                    &:checked+label>.fa-star{
-                                        animation: star-fold 1s linear;
+                                    31%{
+                                        transform: rotate(270deg);
                                         color: $color-Apricot;
                                     }
-                                }
-                                i{
-                                    padding: 5px;
-                                    cursor: pointer;
-                                    font-size: $H9-font-size;                                
-                                    color: $color-Nav-icon;
-                                    &:hover{
+                                    100%{
+                                        transform: rotate(360deg);
                                         color: $color-Apricot;
                                     }
+                                    
                                 }
                             }
-                            //收藏效果
-                            @keyframes firework {
-                            0% {
-                                opacity: 1;
-                                box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
-                            }
-                            30% {
-                                opacity: 1;
-                            }
-                            100% {
-                                opacity: 0.0;
-                                box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
-                            }
-                            }
-                            @keyframes star-fold {
-                                0%{
-                                    transform: rotate(0deg);
-                                    color: $color-Nav-icon;
+                            @include bg-phone(){
+                                &:nth-child(2){
+                                    ul{
+                                        .delete-cart{
+                                            position: absolute;
+                                            top: 90px;
+                                            right: 4vw;
+                                        } 
+                                        .favorite{
+                                            position: absolute;
+                                            top: 155px;
+                                            right: 3.5vw;
+                                        } 
+                                    }
                                 }
-                                31%{
-                                    transform: rotate(270deg);
-                                    color: $color-Apricot;
+                                &:nth-child(3){
+                                    ul{
+                                        .delete-cart{
+                                            position: absolute;
+                                            top: 220px;
+                                            right: 4vw;
+                                        } 
+                                        .favorite{
+                                            position: absolute;
+                                            top: 285px;
+                                            right: 3.5vw;
+                                        } 
+                                    }
                                 }
-                                100%{
-                                    transform: rotate(360deg);
-                                    color: $color-Apricot;
+                                &:nth-child(4){
+                                    ul{
+                                        .delete-cart{
+                                            position: absolute;
+                                            top: 350px;
+                                            right: 4vw;
+                                        } 
+                                        .favorite{
+                                            position: absolute;
+                                            top: 415px;
+                                            right: 3.5vw;
+                                        } 
+                                    }
                                 }
-                                
+                            }
+                            @include sm-phone(){
+                                &:nth-child(2){
+                                    ul{
+                                        .price{
+                                            position: absolute;
+                                            top: 197px;
+                                            left: 25px;
+                                        } 
+                                        .count{
+                                            position: absolute;
+                                            top: 197px;
+                                            left: 125px;
+                                        } 
+                                        .subtotal{
+                                            position: absolute;
+                                            top: 200px;
+                                            left: 265px;
+                                        }
+                                        .delete-cart{
+                                            top: 90px;
+                                        } 
+                                        .favorite{
+                                            top: 165px;
+                                        }   
+                                    }
+                                }
+                                &:nth-child(3){
+                                    ul{
+                                        .price{
+                                            position: absolute;
+                                            top: 377px;
+                                            left: 25px;
+                                        } 
+                                        .count{
+                                            position: absolute;
+                                            top: 377px;
+                                            left: 125px;
+                                        } 
+                                        .subtotal{
+                                            position: absolute;
+                                            top: 380px;
+                                            left: 265px;
+                                        }
+                                        .delete-cart{
+                                            top: 265px;
+                                        } 
+                                        .favorite{
+                                            top: 345px;
+                                        }   
+                                    }
+                                }
+                                &:nth-child(4){
+                                    ul{
+                                        .price{
+                                            position: absolute;
+                                            top: 550px;
+                                            left: 25px;
+                                        } 
+                                        .count{
+                                            position: absolute;
+                                            top: 550px;
+                                            left: 125px;
+                                        } 
+                                        .subtotal{
+                                            position: absolute;
+                                            top: 555px;
+                                            left: 265px;
+                                        }
+                                        .delete-cart{
+                                            top: 440px;
+                                        } 
+                                        .favorite{
+                                            top: 520px;
+                                        }  
+                                    }
+                                } 
                             }
                         }
-                        @include bg-phone(){
-                            &:nth-child(2){
-                                ul{
-                                    .delete-cart{
-                                        position: absolute;
-                                        top: 90px;
-                                        right: 4vw;
-                                    } 
-                                    .favorite{
-                                        position: absolute;
-                                        top: 155px;
-                                        right: 3.5vw;
-                                    } 
-                                }
-                            }
-                            &:nth-child(3){
-                                ul{
-                                    .delete-cart{
-                                        position: absolute;
-                                        top: 220px;
-                                        right: 4vw;
-                                    } 
-                                    .favorite{
-                                        position: absolute;
-                                        top: 285px;
-                                        right: 3.5vw;
-                                    } 
-                                }
-                            }
-                            &:nth-child(4){
-                                ul{
-                                    .delete-cart{
-                                        position: absolute;
-                                        top: 350px;
-                                        right: 4vw;
-                                    } 
-                                    .favorite{
-                                        position: absolute;
-                                        top: 415px;
-                                        right: 3.5vw;
-                                    } 
-                                }
-                            }
-                        }
-                        @include sm-phone(){
-                            &:nth-child(2){
-                                ul{
-                                    .price{
-                                        position: absolute;
-                                        top: 197px;
-                                        left: 25px;
-                                    } 
-                                    .count{
-                                        position: absolute;
-                                        top: 197px;
-                                        left: 125px;
-                                    } 
-                                    .subtotal{
-                                        position: absolute;
-                                        top: 200px;
-                                        left: 265px;
-                                    }
-                                    .delete-cart{
-                                        top: 90px;
-                                    } 
-                                    .favorite{
-                                        top: 165px;
-                                    }   
-                                }
-                            }
-                            &:nth-child(3){
-                                ul{
-                                    .price{
-                                        position: absolute;
-                                        top: 377px;
-                                        left: 25px;
-                                    } 
-                                    .count{
-                                        position: absolute;
-                                        top: 377px;
-                                        left: 125px;
-                                    } 
-                                    .subtotal{
-                                        position: absolute;
-                                        top: 380px;
-                                        left: 265px;
-                                    }
-                                    .delete-cart{
-                                        top: 265px;
-                                    } 
-                                    .favorite{
-                                        top: 345px;
-                                    }   
-                                }
-                            }
-                            &:nth-child(4){
-                                ul{
-                                    .price{
-                                        position: absolute;
-                                        top: 550px;
-                                        left: 25px;
-                                    } 
-                                    .count{
-                                        position: absolute;
-                                        top: 550px;
-                                        left: 125px;
-                                    } 
-                                    .subtotal{
-                                        position: absolute;
-                                        top: 555px;
-                                        left: 265px;
-                                    }
-                                    .delete-cart{
-                                        top: 440px;
-                                    } 
-                                    .favorite{
-                                        top: 520px;
-                                    }  
-                                }
-                            } 
-                        }
-                    }
+                    }                    
                 }
                 .other-amount{
                     display: flex;
                     position: relative;
                     transition: 1s;
+                    width: 100%;
                     @include bg-screen(){
                         max-width: 72%; 
                     }
@@ -752,7 +768,10 @@ main{
                             }
                             .commodity{
                                 display: flex;
+                                flex: 0 0 25%;
+                                
                                 @include sm-screen(){
+                                    flex: none;
                                     width: 50%;
                                     margin-bottom: 15px;
                                 }

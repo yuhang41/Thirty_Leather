@@ -371,6 +371,12 @@ nav .personal-item .input-cart .member .dropdown-menu .dropdown-item {
   padding: 5px 0px;
 }
 
+nav .personal-item .input-cart .member .dropdown-menu .dropdown-item .user-logout {
+  outline: none;
+  border: none;
+  background: none;
+}
+
 nav .personal-item .input-cart .cart {
   position: relative;
 }

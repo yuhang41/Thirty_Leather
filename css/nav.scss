@@ -259,6 +259,11 @@ nav{
                         font-size: $H9-font-size;
                         color: $color-IronGray;
                         padding: 5px 0px;
+                        .user-logout{
+                            outline: none;
+                            border: none;
+                            background: none;
+                        }
                     }
                 }
             }

@@ -19,9 +19,9 @@
         transition: 1s;
     }
 }
-//1100
+//1110
 @mixin ex-screen{
-    @media(max-width:1100px){
+    @media(max-width:1110px){
         @content;
         transition: 1s;
     }
