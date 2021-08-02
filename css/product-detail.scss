@@ -151,6 +151,7 @@
 @mixin background-change{
     position: relative;
     &:before{
+        @content;
         content: "";
         position: absolute;
         z-index: -1;
@@ -236,12 +237,13 @@ main{
         .product-container{
             width: 100vw;
             min-height: 100vh;
-            background: $color-New-Background;
-            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
             // 商品資訊
             .productshop-container{
                 padding-top: 85px;
                 padding-left: 2.6vw;
+                @include background-change(){
+                    background-color: $color-New-Background;
+                }
                 .breadcrumbs{
                     margin-bottom: 20px;
                     @include bg-screen(){
@@ -955,6 +957,9 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    @include background-change(){
+                        background-color: $color-New-Background;
+                    }
                     .tabs{
                         display: flex;
                         .tab{
@@ -1937,12 +1942,10 @@ main{
             .productother-container{
                 width: 100%;
                 padding-top: 60px;
-                background-color: $color-White;
-                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+                @include background-change();
                 .other-container{
                     max-width: 1120px;
                     margin: auto;
-                    margin-bottom: 100px;
                     @include normal-screen(){
                         max-width: 800px;
                     }
