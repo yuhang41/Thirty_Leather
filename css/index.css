@@ -490,19 +490,38 @@ main .main-container .swiper1 .banner-card .banner-content .text {
           align-items: center;
 }
 
-main .main-container .swiper1 .banner-card .banner-content .text p {
+main .main-container .swiper1 .banner-card .banner-content .text .text-mask {
+  width: 165.7px;
+  height: 24px;
+  overflow: hidden;
+}
+
+main .main-container .swiper1 .banner-card .banner-content .text .text-mask p {
   margin: 0px;
   font-size: 16px;
   font-weight: bold;
   color: #354b5e;
   letter-spacing: 3.2px;
+  -webkit-animation: text-move .8s ease-in-out;
+          animation: text-move .8s ease-in-out;
+  text-align: center;
+  position: relative;
 }
 
 @media (max-width: 450px) {
-  main .main-container .swiper1 .banner-card .banner-content .text p {
+  main .main-container .swiper1 .banner-card .banner-content .text .text-mask p {
     color: #ffffff;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+}
+
+@keyframes text-move {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
   }
 }
 

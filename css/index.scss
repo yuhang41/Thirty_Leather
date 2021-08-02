@@ -379,14 +379,30 @@ main {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        p{
-                            margin: 0px;
-                            font-size: $H8-font-size;
-                            font-weight: $font-Weight-B;
-                            color: $color-Banner-Card;
-                            letter-spacing: $font-letter-space-200;
-                            @include bg-iphone(){
-                                color: $color-White;
+                        .text-mask{
+                            width: 165.7px;
+                            height: 24px;
+                            overflow: hidden;
+                            p{
+                                margin: 0px;
+                                font-size: $H8-font-size;
+                                font-weight: $font-Weight-B;
+                                color: $color-Banner-Card;
+                                letter-spacing: $font-letter-space-200;
+                                animation: text-move .8s ease-in-out;
+                                text-align: center;
+                                position: relative;
+                                @include bg-iphone(){
+                                    color: $color-White;
+                                }
+                            }
+                            @keyframes text-move {
+                                0%{
+                                    top: 50px;
+                                }
+                                100%{
+                                    top: 0px;
+                                }
                             }
                         }
                     }
