@@ -518,7 +518,6 @@ main{
                                 .delete-cart{
                                     .delete{                            
                                         .delete-button{
-                                            padding: 5px;
                                             cursor: pointer;
                                             font-family: $font-Family-A;
                                             font-size: $H9-font-size;                                
@@ -558,7 +557,6 @@ main{
                                         }
                                     }
                                     i{
-                                        padding: 5px;
                                         cursor: pointer;
                                         font-size: $H9-font-size;                                
                                         color: $color-Nav-icon;
@@ -598,126 +596,40 @@ main{
                                 }
                             }
                             @include bg-phone(){
-                                &:nth-child(2){
                                     ul{
+                                        position: relative;
                                         .delete-cart{
                                             position: absolute;
-                                            top: 90px;
+                                            top: 0px;
                                             right: 4vw;
                                         } 
                                         .favorite{
                                             position: absolute;
-                                            top: 155px;
+                                            top: 70px;
                                             right: 3.5vw;
                                         } 
-                                    }
-                                }
-                                &:nth-child(3){
-                                    ul{
-                                        .delete-cart{
-                                            position: absolute;
-                                            top: 220px;
-                                            right: 4vw;
-                                        } 
-                                        .favorite{
-                                            position: absolute;
-                                            top: 285px;
-                                            right: 3.5vw;
-                                        } 
-                                    }
-                                }
-                                &:nth-child(4){
-                                    ul{
-                                        .delete-cart{
-                                            position: absolute;
-                                            top: 350px;
-                                            right: 4vw;
-                                        } 
-                                        .favorite{
-                                            position: absolute;
-                                            top: 415px;
-                                            right: 3.5vw;
-                                        } 
-                                    }
-                                }
+                                    }        
                             }
                             @include sm-phone(){
-                                &:nth-child(2){
                                     ul{
+                                        position: relative;
                                         .price{
                                             position: absolute;
-                                            top: 197px;
-                                            left: 25px;
-                                        } 
+                                            top: 95px;
+                                            left: 1.5em; 
+                                        }
                                         .count{
                                             position: absolute;
-                                            top: 197px;
-                                            left: 125px;
-                                        } 
+                                            top: 95px;
+                                            left: 9em;  
+                                        }
                                         .subtotal{
                                             position: absolute;
-                                            top: 200px;
-                                            left: 265px;
+                                            top: 100px;
+                                            left: 18.5em;
                                         }
-                                        .delete-cart{
-                                            top: 90px;
-                                        } 
-                                        .favorite{
-                                            top: 165px;
-                                        }   
                                     }
-                                }
-                                &:nth-child(3){
-                                    ul{
-                                        .price{
-                                            position: absolute;
-                                            top: 377px;
-                                            left: 25px;
-                                        } 
-                                        .count{
-                                            position: absolute;
-                                            top: 377px;
-                                            left: 125px;
-                                        } 
-                                        .subtotal{
-                                            position: absolute;
-                                            top: 380px;
-                                            left: 265px;
-                                        }
-                                        .delete-cart{
-                                            top: 265px;
-                                        } 
-                                        .favorite{
-                                            top: 345px;
-                                        }   
-                                    }
-                                }
-                                &:nth-child(4){
-                                    ul{
-                                        .price{
-                                            position: absolute;
-                                            top: 550px;
-                                            left: 25px;
-                                        } 
-                                        .count{
-                                            position: absolute;
-                                            top: 550px;
-                                            left: 125px;
-                                        } 
-                                        .subtotal{
-                                            position: absolute;
-                                            top: 555px;
-                                            left: 265px;
-                                        }
-                                        .delete-cart{
-                                            top: 440px;
-                                        } 
-                                        .favorite{
-                                            top: 520px;
-                                        }  
-                                    }
-                                } 
-                            }
+                            }   
                         }
                     }                    
                 }
@@ -1052,29 +964,6 @@ main{
         background: rgba(#000,0);
     }
 }
-footer{
-    height: 0px!important;
-    .site-footer{
-        .container{
-            @include screen(){
-                max-width: 880px;
-            }
-            .return-nav{
-                .footer-arrow{
-                    @include arrow(){
-                        position: absolute;
-                        top: 225px!important;
-                        right: 2vw!important;
-                    }
-                    @include iphone(){
-                        top: 158px!important;
-                        right: 2vw!important;
-                    }
-                    
-                }
-            }
-        }
-    }
-}
+
 
 

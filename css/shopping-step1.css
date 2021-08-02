@@ -598,7 +598,6 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
 }
 
 main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .delete-cart .delete .delete-button {
-  padding: 5px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -643,7 +642,6 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
 }
 
 main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .favorite i {
-  padding: 5px;
   cursor: pointer;
   font-size: 15px;
   color: #65737f;
@@ -726,34 +724,17 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
     -webkit-transition: 1s;
     transition: 1s;
   }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .delete-cart {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul {
+    position: relative;
+  }
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .delete-cart {
     position: absolute;
-    top: 90px;
+    top: 0px;
     right: 4vw;
   }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .favorite {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .favorite {
     position: absolute;
-    top: 155px;
-    right: 3.5vw;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .delete-cart {
-    position: absolute;
-    top: 220px;
-    right: 4vw;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .favorite {
-    position: absolute;
-    top: 285px;
-    right: 3.5vw;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .delete-cart {
-    position: absolute;
-    top: 350px;
-    right: 4vw;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .favorite {
-    position: absolute;
-    top: 415px;
+    top: 70px;
     right: 3.5vw;
   }
 }
@@ -763,68 +744,23 @@ main .main-container .my-container .shopping-container .shopping-order .shopping
     -webkit-transition: 1s;
     transition: 1s;
   }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .price {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul {
+    position: relative;
+  }
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .price {
     position: absolute;
-    top: 197px;
-    left: 25px;
+    top: 95px;
+    left: 1.5em;
   }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .count {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .count {
     position: absolute;
-    top: 197px;
-    left: 125px;
+    top: 95px;
+    left: 9em;
   }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .subtotal {
+  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart ul .subtotal {
     position: absolute;
-    top: 200px;
-    left: 265px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .delete-cart {
-    top: 90px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(2) ul .favorite {
-    top: 165px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .price {
-    position: absolute;
-    top: 377px;
-    left: 25px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .count {
-    position: absolute;
-    top: 377px;
-    left: 125px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .subtotal {
-    position: absolute;
-    top: 380px;
-    left: 265px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .delete-cart {
-    top: 265px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(3) ul .favorite {
-    top: 345px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .price {
-    position: absolute;
-    top: 550px;
-    left: 25px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .count {
-    position: absolute;
-    top: 550px;
-    left: 125px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .subtotal {
-    position: absolute;
-    top: 555px;
-    left: 265px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .delete-cart {
-    top: 440px;
-  }
-  main .main-container .my-container .shopping-container .shopping-order .shopping-order-content .shopping-cart:nth-child(4) ul .favorite {
-    top: 520px;
+    top: 100px;
+    left: 18.5em;
   }
 }
 
@@ -1494,37 +1430,6 @@ main .main-container .my-container .shopping-container .payment-amount .amount .
   }
   100% {
     background: rgba(0, 0, 0, 0);
-  }
-}
-
-footer {
-  height: 0px !important;
-}
-
-@media (max-width: 1450px) {
-  footer .site-footer .container {
-    max-width: 880px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1024px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    position: absolute;
-    top: 225px !important;
-    right: 2vw !important;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 320px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    top: 158px !important;
-    right: 2vw !important;
-    -webkit-transition: 1s;
-    transition: 1s;
   }
 }
 /*# sourceMappingURL=shopping-step1.css.map */
