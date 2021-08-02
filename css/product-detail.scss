@@ -154,6 +154,7 @@ main{
     .main-container{
         min-height: 100vh;
         display: flex;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
         // 左邊白色區塊的欄位
         .commodity-menu{
             max-width: 375px;
@@ -223,7 +224,8 @@ main{
             .productshop-container{
                 padding-top: 85px;
                 padding-left: 2.6vw;
-                background: $color-LightGray;
+                background: $color-New-Background;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .breadcrumbs{
                     margin-bottom: 20px;
                     @include bg-screen(){
@@ -929,7 +931,8 @@ main{
             }
             // 商品詳細描述/開發過程/尺碼建議
             .productdetail-container{
-                background: $color-LightGray;
+                background: $color-New-Background;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .detail-container{
                     position: relative;
                     overflow: hidden;
@@ -1643,9 +1646,9 @@ main{
                                                     margin-bottom: 20px;
                                                     p{
                                                         display: inline-block;
-                                                        color: $color-Evaluation-Star;
+                                                        color: $color-Product-Detail-Circle;
                                                         font-size: $H7-font-size;
-                                                        border-bottom: 1px solid $color-Evaluation-Star;
+                                                        border-bottom: 1px solid $color-Product-Detail-Circle;
                                                         transition: 1s;
                                                         @include sm-phone(){
                                                             display: block;
@@ -1677,7 +1680,7 @@ main{
                                                 .development-process-list{
                                                     margin-bottom: 20px;
                                                     p{
-                                                        color: $color-Product-Detail-Title;
+                                                        color:$color-Border-Line;
                                                         font-size: $H7-font-size;
                                                         font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
@@ -1810,8 +1813,8 @@ main{
                                                 white-space:nowrap;                                          
                                             }
                                             &.swiper-pagination-bullet-active{
-                                                color:$color-Evaluation-Star;
-                                                background: $color-Evaluation-Star;
+                                                color:$color-Border-Line;
+                                                background: $color-Border-Line;
                                             }                                        
                                         }
                                         &::before{
@@ -1921,6 +1924,7 @@ main{
                 width: 100%;
                 padding-top: 60px;
                 background-color: $color-White;
+                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .other-container{
                     max-width: 1120px;
                     margin: auto;

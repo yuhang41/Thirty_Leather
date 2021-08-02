@@ -33,6 +33,8 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true, 
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -53,7 +55,7 @@ var swiper = new Swiper(".mySwiper", {
         slidesPerView: 2,
         slidesPerGroup: 2,
       },
-      320: {
+      1: {
         slidesPerView: 1,
         slidesPerGroup: 1,
       },      

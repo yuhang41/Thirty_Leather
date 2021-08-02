@@ -746,7 +746,6 @@ main {
                 }
             }
         }
-
         @keyframes onePulse {
             0% {
                 box-shadow: 0px 0px 0px 0px rgba(150, 249, 183, 0.3);
@@ -1846,12 +1845,19 @@ main {
                 @include sm-tablet() {
                     min-height: 768px;
                 }
+                @include sm-phone(){
+                    min-height: unset;
+                    height: 100%;
+                }
                 .swiper-container {
                     width: 75%;
                     height: 80%;
                     transition: 1s;
                     @include tablet() {
                         width: 60%;
+                    }
+                    @include sm-phone(){
+                        height: unset;
                     }
                     .swiper-slide {
                         width: 400px;
@@ -1865,6 +1871,9 @@ main {
                         @include tablet() {
                             background-size: contain;
                             background-repeat: no-repeat;
+                        }
+                        @include sm-phone(){
+                            height: 50%;
                         }
                         /* Center slide text vertically */
                         display: -webkit-box;
@@ -1887,6 +1896,9 @@ main {
                             height: 100%;
                             object-fit: cover;
                             position: relative;
+                            @include sm-phone(){
+                                object-fit: contain;
+                            }
                             img {
                                 display: block;
                                 width: 100%;
@@ -1901,16 +1913,19 @@ main {
                                 &:hover~.text{
                                     display: flex;
                                 }
+                                @include sm-phone(){
+                                    object-fit: contain;
+                                }
                             }
                             .text{
                                 position: absolute;
-                                top: 26em;
-                                left: 12em;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
                                 color: $color-White;
-                                z-index: 2;
-                                display: flex;
-                                align-items: flex-end;
                                 font-size: $H10-font-size;
+
+                                z-index: 2;
                                 display: none;
                                 p{
                                     margin-bottom: 0px;
@@ -1946,6 +1961,9 @@ main {
                     @include tablet() {
                         right: 75px;
                     }
+                    @include sm-phone(){
+                        display: none;
+                    }
                     &:hover {
                         color: $color-Photo-nextBtn-hover;
                     }
@@ -1957,6 +1975,9 @@ main {
                     transition: 1s;
                     @include tablet() {
                         left: 75px;
+                    }
+                    @include sm-phone(){
+                        display: none;
                     }
                     &:hover {
                         color: $color-Photo-nextBtn-hover;

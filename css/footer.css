@@ -9,6 +9,10 @@
           box-sizing: border-box;
 }
 
+footer {
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+}
+
 footer .site-footer hr {
   border: none;
 }

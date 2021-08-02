@@ -25,6 +25,7 @@ main .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .commodity-menu {
@@ -110,7 +111,8 @@ main .main-container .product-container {
 main .main-container .product-container .productshop-container {
   padding-top: 85px;
   padding-left: 2.6vw;
-  background: #ebeae5;
+  background: #ededeb;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productshop-container .breadcrumbs {
@@ -1315,7 +1317,8 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productdetail-container {
-  background: #ebeae5;
+  background: #ededeb;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productdetail-container .detail-container {
@@ -2484,9 +2487,9 @@ main .main-container .product-container .productdetail-container .detail-contain
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title p {
   display: inline-block;
-  color: #e08549;
+  color: #7b8c2a;
   font-size: 18px;
-  border-bottom: 1px solid #e08549;
+  border-bottom: 1px solid #7b8c2a;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -2533,7 +2536,7 @@ main .main-container .product-container .productdetail-container .detail-contain
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
-  color: #7b8ca2;
+  color: #70b9cf;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -2762,8 +2765,8 @@ main .main-container .product-container .productdetail-container .detail-contain
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .swiper-step .swiper-step-button .pagination-next .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  color: #e08549;
-  background: #e08549;
+  color: #70b9cf;
+  background: #70b9cf;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .swiper-step .swiper-step-button .pagination-next::before {
@@ -2941,6 +2944,7 @@ main .main-container .product-container .productother-container {
   width: 100%;
   padding-top: 60px;
   background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .product-container .productother-container .other-container {
