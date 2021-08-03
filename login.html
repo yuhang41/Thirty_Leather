@@ -179,18 +179,22 @@
                 <div class="list-group text-center font-weight-bold" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active font-weight-bold"
                         id="list-memberCenter-list" data-toggle="list" href="#list-memberCenter" role="tab"
-                        aria-controls="memberCenter">會員<span>中心</span></a>
+                        aria-controls="memberCenter">會員<span>中心</span>
+                    </a>
 
                     <a class="list-group-item list-group-item-action" id="list-profile-list"
-                        href="/trace.lists.html">追蹤<span>清單</span></a>
+                        href="/trace.lists.html">追蹤<span>清單</span>
+                    </a>
 
                     <a class="list-group-item list-group-item-action" id="list-profile-list" href="/message.html">訊息</a>
 
-                    <a class="list-group-item list-group-item-action" id="list-profile-list"
-                        href="/passwordModify.html">密碼<span>修改</span></a>
-
-                    <a class="list-group-item list-group-item-action" id="list-messages-list"
-                        href="/index.html">會員<span>登出</span></a>
+                    <a class="list-group-item  list-group-item-action" id="list-profile-list"
+                        href="/passwordModify.html">密碼<span>修改</span>
+                    </a>
+                    <!-- <a class="list-group-item  list-group-item-action" id="list-profile-list"
+                        href="/passwordModify.html">會員<span>登出</span>
+                    </a>  -->
+                    <button type="submit" class="list-group-item list-group-item-action">會員<span>登出</span></button>                    
                 </div>
 
                 <div class="tab-content" id="nav-tabContent">
@@ -203,7 +207,8 @@
 
                                     <div class="user-id font-weight-bold">abcdefg</div>
 
-                                    <div class="general-member d-flex align-items-center justify-content-center">一般會員
+                                    <div class="general-member d-flex align-items-center justify-content-center">
+                                        一般會員
                                     </div>
                                 </div>
 
@@ -220,28 +225,28 @@
                                                 <div class="input1 input-name">
                                                     <label class="title font-weight-bold">姓名</label>
 
-                                                    <input type="text" class="content content1" placeholder="林土木"
+                                                    <input type="text" class="content content-edit" placeholder="林土木"
                                                         readonly>
                                                 </div>
 
                                                 <div class="input1 input-email">
                                                     <label class="title title1 font-weight-bold">信箱</label>
 
-                                                    <input type="text" class="content content2"
+                                                    <input type="text" class="content content-edit"
                                                         placeholder="test123@gmail.com" readonly>
                                                 </div>
 
                                                 <div class="input1 input-phone">
                                                     <label class="title title1 font-weight-bold">行動電話</label>
 
-                                                    <input type="text" class="content content3"
+                                                    <input type="text" class="content content-edit"
                                                         placeholder="0900 - 123456" readonly>
                                                 </div>
 
                                                 <div class="input1 input-date">
                                                     <label class="title title1 font-weight-bold">出生日期</label>
 
-                                                    <input type="text" class="content content4"
+                                                    <input type="text" class="content content-edit"
                                                         placeholder="1995 / 01 / 24" readonly>
 
                                                     <!-- <input placeholder="1995 / 01 / 24" class="content content4" type="text"
@@ -263,7 +268,7 @@
                                                                 readonly placeholder="郵遞區號">
                                                         </div>
 
-                                                        <input class="detail-address mt-2 content5" type="text"
+                                                        <input class="detail-address mt-2 content-edit" type="text"
                                                             placeholder="詳細的地址" readonly>
                                                     </div>
                                                 </div>
@@ -315,7 +320,7 @@
                                             </ul>
                                         </div>
 
-                                        <div class="list-block block-top d-flex mt-2">
+                                        <div class="list-block d-flex mt-2">
                                             <ul class="block-l d-flex pl-0 mb-0">
                                                 <li>
                                                     <div class="number">0000000123</div>
@@ -341,14 +346,14 @@
                                             </ul>
 
                                             <div class="ttz">
-                                                <button class="click-first">
+                                                <button class="click-toggle">
                                                     <ul class="top d-flex">
-                                                        <li class="plus plus-1">+</li>
-                                                        <li class="minus minus-1">-</li>
+                                                        <li class="plus">+</li>
+                                                        <li class="minus">-</li>
                                                         <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <div class="square1">
+                                                    <div class="square">
                                                         <ul class="mid d-flex">
                                                             <li>寄送方式</li>
                                                             <li>處理進度</li>
@@ -400,14 +405,14 @@
 
 
                                             <div class="ttz">
-                                                <button class="click-second">
+                                                <button class="click-toggle">
                                                     <ul class="top d-flex">
-                                                        <li class="plus plus-2">+</li>
-                                                        <li class="minus minus-2">-</li>
+                                                        <li class="plus">+</li>
+                                                        <li class="minus">-</li>
                                                         <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <div class="square2">
+                                                    <div class="square">
                                                         <ul class="mid d-flex">
                                                             <li>寄送方式</li>
                                                             <li>處理進度</li>
@@ -459,14 +464,14 @@
 
 
                                             <div class="ttz">
-                                                <button class="click-third">
+                                                <button class="click-toggle">
                                                     <ul class="top d-flex">
-                                                        <li class="plus plus-3">+</li>
-                                                        <li class="minus minus-3">-</li>
+                                                        <li class="plus">+</li>
+                                                        <li class="minus">-</li>
                                                         <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <div class="square3">
+                                                    <div class="square">
                                                         <ul class="mid d-flex">
                                                             <li>寄送方式</li>
                                                             <li>處理進度</li>
@@ -518,14 +523,14 @@
 
 
                                             <div class="ttz">
-                                                <button class="click-fourth">
+                                                <button class="click-toggle">
                                                     <ul class="top d-flex">
-                                                        <li class="plus plus-4">+</li>
-                                                        <li class="minus minus-4">-</li>
+                                                        <li class="plus">+</li>
+                                                        <li class="minus">-</li>
                                                         <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <div class="square4">
+                                                    <div class="square">
                                                         <ul class="mid d-flex">
                                                             <li>寄送方式</li>
                                                             <li>處理進度</li>
@@ -577,14 +582,14 @@
 
 
                                             <div class="ttz">
-                                                <button class="click-fifth">
+                                                <button class="click-toggle">
                                                     <ul class="top d-flex">
-                                                        <li class="plus plus-5">+</li>
-                                                        <li class="minus minus-5">-</li>
+                                                        <li class="plus">+</li>
+                                                        <li class="minus">-</li>
                                                         <li class="order-detail font-weight-bold">訂單明細</li>
                                                     </ul>
 
-                                                    <div class="square5">
+                                                    <div class="square">
                                                         <ul class="mid d-flex">
                                                             <li>寄送方式</li>
                                                             <li>處理進度</li>
