@@ -15,64 +15,24 @@
   outline: none;
 }
 
-nav {
-  background-color: #ebeae5;
-  margin-left: 8vw;
+#navbar {
+  position: relative;
 }
 
-@media (max-width: 1024px) {
-  nav {
-    margin-left: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-nav .options {
-  background-color: #ebeae5;
-}
-
-nav .go-home-logo {
+#navbar:before {
+  content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-@media (max-width: 520px) {
-  nav .go-home-logo {
-    left: 58px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 nav .input-cart .search input {
-  background-color: #ebeae5 !important;
-}
-
-nav .twd-lang {
-  background-color: #ebeae5;
-}
-
-.navbar {
-  padding: 3.5rem 0px 0px 1rem;
-  margin-left: 0px;
-}
-
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0px 0px 0px 3.7rem;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 520px) {
-  .navbar {
-    padding: 0px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
+  background-color: transparent !important;
 }
 
 main .main-container {
@@ -81,6 +41,19 @@ main .main-container {
   overflow: hidden;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+
+main .main-container:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1024px) {
@@ -101,8 +74,21 @@ main .main-container {
 
 main .main-container .content-container {
   min-height: 969px;
-  background-color: #ebeae5;
+  position: relative;
   padding: 100px 0px 20px 1.5em;
+}
+
+main .main-container .content-container:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 720px) {
@@ -745,46 +731,6 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
 @media (max-width: 520px) {
   main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step .swiper-step-button .button-next {
     display: none;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-footer {
-  height: 0px !important;
-}
-
-@media (max-width: 1024px) {
-  footer .site-footer .container {
-    max-width: 900px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-footer .site-footer .container .return-nav .footer-arrow {
-  margin-right: 50px;
-}
-
-@media (max-width: 1024px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    top: 250px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 520px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    margin-right: unset;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 320px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    top: 150px;
     -webkit-transition: 1s;
     transition: 1s;
   }

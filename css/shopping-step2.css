@@ -15,8 +15,21 @@
 }
 
 main .main-container {
-  background: #ebeae5;
+  position: relative;
   min-height: 100vh;
+}
+
+main .main-container:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .my-container {
@@ -1417,45 +1430,6 @@ main .main-container .my-container .other-amount .amount .order-total-button .ne
   }
   100% {
     background: rgba(0, 0, 0, 0);
-  }
-}
-
-footer {
-  height: 0px !important;
-}
-
-@media (max-width: 1200px) {
-  footer .site-footer .container {
-    max-width: 1140px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1100px) {
-  footer .site-footer .container {
-    max-width: 900px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 1024px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    position: absolute;
-    top: 225px !important;
-    right: 5vw !important;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 320px) {
-  footer .site-footer .container .return-nav .footer-arrow {
-    top: 158px !important;
-    right: 2vw !important;
-    -webkit-transition: 1s;
-    transition: 1s;
   }
 }
 /*# sourceMappingURL=shopping-step2.css.map */

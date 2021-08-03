@@ -167,6 +167,18 @@ body
 {
     scroll-behavior: smooth;
 }
+#navbar{
+    @include background-change();
+}
+nav{
+    .input-cart{
+        .search{
+            input{
+                background-color: transparent!important;
+            }
+        }
+    }
+}
 main{
     .main-container{
         min-height: 100vh;
@@ -490,7 +502,7 @@ main{
                                                     }
                                                     &:checked+label>.fa-heart{
                                                         animation: heart-fold .2s ease-in-out;
-                                                        color: $color-Apricot;
+                                                        color: $color-Border-Line;
                                                     }
                                                 }
                                                 label{
@@ -502,7 +514,7 @@ main{
                                                         font-size: $H9-font-size;                                
                                                         color: $color-Banner-Card;
                                                         &:hover{
-                                                            color: $color-Apricot;
+                                                            color: $color-Border-Line;
                                                         }
                                                     }
                                                 }
@@ -512,14 +524,14 @@ main{
                                             @keyframes firework {
                                             0% {
                                                 opacity: 1;
-                                                box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
+                                                box-shadow: 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line;
                                             }
                                             30% {
                                                 opacity: 1;
                                             }
                                             100% {
                                                 opacity: 0.0;
-                                                box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
+                                                box-shadow: 0 -15px 0 0px $color-Border-Line, 14px -8px 0 0px $color-Border-Line, 14px 8px 0 0px $color-Border-Line, 0 15px 0 0px $color-Border-Line, -14px 8px 0 0px $color-Border-Line, -14px -8px 0 0px $color-Border-Line;
                                             }
                                             }
                                             @keyframes heart-fold {
@@ -529,7 +541,7 @@ main{
                                                 }
                                                 100%{
                                                     font-size: $H7-font-size;
-                                                    color: $color-Apricot;
+                                                    color: $color-Border-Line;
                                                 }
                                                 
                                             }
@@ -1876,7 +1888,7 @@ main{
                                     p{
                                         font-size: $H6-font-size;
                                         line-height: 26px;
-                                        color: $color-Evaluation-Star;
+                                        color: $color-Banner-Card;
                                         letter-spacing: $font-letter-space-50;
                                         @include normal-phone(){
                                             font-size: $H8-font-size;
@@ -1894,7 +1906,7 @@ main{
                                         .title{
                                             font-size: $H6-font-size;
                                             line-height: 26px;
-                                            color: $color-Evaluation-Star;
+                                            color: $color-Border-Line;
                                             letter-spacing: $font-letter-space-50;
                                             margin-bottom: 20px;
                                         }

@@ -57,6 +57,13 @@ inputs.forEach((input)=>{
     })
 })
 
+//收藏清單動畫觸發
+let starIcon = document.querySelectorAll('.favorite');
+starIcon.forEach(function(item,idx){
+    item.addEventListener('click',function(){
+        this.classList.toggle('active');
+    });
+})
 
   
     

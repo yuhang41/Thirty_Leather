@@ -64,6 +64,14 @@ nav.sticky .navbar-nav .nav-link {
   padding: 0px 1em;
 }
 
+@media (max-width: 1024px) {
+  nav.sticky .navbar-nav .nav-link {
+    padding: .5em 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 nav.sticky .logo {
   width: 58px;
   height: 58px;
@@ -96,6 +104,19 @@ main .main-container {
   overflow: hidden;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+
+main .main-container:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -1048,10 +1069,23 @@ main .main-container .more-button-list-item:nth-child(3) .line-button p {
 
 main .main-container .we-story {
   min-height: 969px;
-  background-color: #ebeae5;
   padding: 100px 0px 0px 0px;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+
+main .main-container .we-story:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -1676,9 +1710,22 @@ main .main-container .we-story .story-content .story-discript .content .main-bod
 
 main .main-container .shoemaking {
   min-height: 969px;
-  background-color: #ebeae5;
+  position: relative;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .shoemaking:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1024px) {
@@ -2166,7 +2213,7 @@ main .main-container .shoemaking .sew-img svg[data-inviewport="scale-in"].is-inV
 
 main .main-container .shoes-video {
   min-height: 969px;
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2179,6 +2226,19 @@ main .main-container .shoes-video {
           align-items: flex-end;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .shoes-video:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -2213,7 +2273,7 @@ main .main-container .shoes-video {
 
 @media (max-width: 320px) {
   main .main-container .shoes-video {
-    min-height: 568px;
+    min-height: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -2243,7 +2303,7 @@ main .main-container .shoes-video video:nth-child(1) {
 }
 
 main .main-container .shoes-video video:nth-child(2) {
-  width: 32.4%;
+  width: 45.4%;
   border-left: 18px solid #70b9cf;
   z-index: 3;
   -webkit-transition: 1s;
@@ -2371,11 +2431,32 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-video svg {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .new-product {
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   overflow: hidden;
   z-index: 2;
+}
+
+main .main-container .new-product:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .new-product[data-inviewport="scale-in"] {
@@ -3087,9 +3168,22 @@ main .main-container .new-product .parallelogram {
 }
 
 main .main-container .photo-wall {
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   padding-bottom: 150px;
+}
+
+main .main-container .photo-wall:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .photo-wall[data-inviewport="scale-in"] {

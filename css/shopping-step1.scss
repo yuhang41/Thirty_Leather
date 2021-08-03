@@ -19,9 +19,9 @@
         transition: 1s;
     }
 }
-//1320
+//1335
 @mixin sm-screen{
-    @media(max-width:1320px){
+    @media(max-width:1335px){
         @content;
         transition: 1s;
     }
@@ -40,9 +40,9 @@
         transition: 1s;
     }
 }
-//925
+//940
 @mixin sm-tablet{
-    @media(max-width:925px){
+    @media(max-width:940px){
         @content;
         transition: 1s;
     }
@@ -54,9 +54,9 @@
         transition: 1s;
     }
 }
-//670
+//690
 @mixin phone{
-    @media(max-width:670px){
+    @media(max-width:690px){
         @content;
         transition: 1s;
     }
@@ -157,9 +157,27 @@
         display: none;
     }       
 }
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
 main{
     .main-container{    
-        background: $color-LightGray;
+        @include background-change(){
+            background: $color-New-Background;
+        };
         min-height: 100vh;
         .my-container{
             height: 100%;
@@ -532,36 +550,30 @@ main{
                                     }
                                 }
                                 .favorite{
-                                    input[type="checkbox"]{
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        position: relative;
-                                        outline: none;
-                                        border: 0;
-                                        cursor: pointer;
-                                        &::after {
-                                            content:"";
-                                            position: absolute;
-                                            height: 4px;
-                                            width: 4px;
-                                            top: -6px;
-                                            left: 11.5px;
-                                            border-radius: 50%;
-                                        }
-                                        &:focus::after {
-                                            animation: firework .5s ease forwards .1s;
-                                        }
-                                        &:checked+label>.fa-star{
-                                            animation: star-fold 1s linear;
-                                            color: $color-Apricot;
-                                        }
-                                    }
-                                    i{
+                                    .fa-star{
                                         cursor: pointer;
                                         font-size: $H9-font-size;                                
                                         color: $color-Nav-icon;
                                         &:hover{
                                             color: $color-Apricot;
+                                        }
+                                    }
+                                }
+                                .favorite.active{
+                                    .fa-star{
+                                        color: $color-Apricot;
+                                        animation: star-fold 1s ease-in-out;
+
+                                        position: relative;
+                                        &:after{
+                                            content: "";
+                                            position: absolute;
+                                            height: 4px;
+                                            width: 4px;
+                                            top: 7px;
+                                            left: 7px;
+                                            border-radius: 50%;
+                                            animation: firework .5s ease-in-out;
                                         }
                                     }
                                 }

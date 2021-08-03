@@ -150,6 +150,22 @@ body{
         display: none;
     }       
 }
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
 nav {
     z-index: 99;
     transition: 1s;
@@ -176,6 +192,9 @@ nav {
             &-nav{
                 .nav-link{
                     padding:0px 1em;
+                    @include sm-tablet(){
+                        padding:.5em 0px;
+                    }
                 }
             }
         }
@@ -198,6 +217,7 @@ main {
         padding-left: 146px;
         overflow: hidden;
         transition: 1s;
+        @include background-change();
         @include tablet() {
             padding-left: 0px;
         }
@@ -768,9 +788,11 @@ main {
         // 品牌理念
         .we-story {
             min-height: 969px;
-            background-color: $color-LightGray;
             padding: 100px 0px 0px 0px;
             transition: 1s;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             @include tablet() {
                 padding: 0px;
             }
@@ -1099,7 +1121,9 @@ main {
         // 製鞋 card
         .shoemaking {
             min-height: 969px;
-            background-color: $color-LightGray;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             transition: 1s;
             @include sm-tablet() {
                 min-height: 768px;
@@ -1317,7 +1341,9 @@ main {
         //影片
         .shoes-video {
             min-height: 969px;
-            background-color: $color-LightGray;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             position: relative;
             display: flex;
             justify-content: flex-end;
@@ -1334,7 +1360,7 @@ main {
                 min-height: 568px;
             }
             @include iphone-5s() {
-                min-height: 568px;
+                min-height: unset;
             }
             video {
                 &:nth-child(1) {
@@ -1354,7 +1380,7 @@ main {
                     }
                 }
                 &:nth-child(2) {
-                    width: 32.4%;
+                    width: 45.4%;
                     border-left: 18px solid $color-Border-Line;
                     z-index: 3;
                     transition: 1s;
@@ -1423,11 +1449,16 @@ main {
                     right: 55vw;
                     transform: rotate(3deg);
                 }
+                @include sm-phone(){
+                    display: none;
+                }
             }
         }
         //新品上市
         .new-product {
-            background-color: $color-LightGray;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             position: relative;
             overflow: hidden;
             z-index: 2;
@@ -1756,7 +1787,9 @@ main {
         }
         // 照片牆
         .photo-wall {
-            background-color: $color-LightGray;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             position: relative;
             padding-bottom: 150px;
             &[data-inviewport="scale-in"] {
