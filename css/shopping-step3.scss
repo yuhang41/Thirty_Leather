@@ -188,7 +188,7 @@ main{
                         flex:0 0 32%;
                         justify-content: start;                      
                         .step-content{
-                            background: $color-Shopping-Step;                    
+                            background: $color-Banner-Card;                    
                         }
                         .step-right-line{
                             &::after{
@@ -196,7 +196,7 @@ main{
                                 display: block;                                      
                                 width: 100%;
                                 height: 100%;
-                                background: $color-Shopping-Step-line;
+                                background: $color-Banner-Card;
                             }
                         }
                     }
@@ -204,17 +204,17 @@ main{
                         flex:0 0 36%;
                         justify-content: center;              
                         .step-content{
-                            background: $color-Shopping-Step;                  
+                            background: $color-Banner-Card;                  
                         }
                         .step-left-line{
-                            background: $color-Shopping-Step-line; 
+                            background: $color-Banner-Card; 
                         }
                     }    
                     &:nth-child(3){                
                         flex:0 0 32%;
                         justify-content:flex-end;
                         .step-content{
-                            background: $color-SkyBlue;                    
+                            background: $color-Border-Line;                    
                         }
                         .step-left-line{
                             background: $color-SkyBlue; 
@@ -268,12 +268,12 @@ main{
                         position: relative;
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;            
+                        background: $color-Banner-Card;            
                     }
                     .step-left-line{
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;
+                        background: $color-Banner-Card;
                     }                
                 }
             }
@@ -460,10 +460,13 @@ main{
                                 @include sm-phone(){
                                     margin-bottom: 20px;
                                 }
-                                img{
+                                svg{
                                     width: 100%;
                                     object-fit: cover;
                                     object-position: center;
+                                    .finish{
+                                       fill: $color-Border-Line;
+                                    }
                                 }
                             }
                             .complete-message{
@@ -520,6 +523,7 @@ main{
                                         font-size: $H5-font-size;
                                         font-weight: $font-Weight-B;
                                         letter-spacing: $font-letter-space-200;
+                                        color: $color-Banner-Card;
                                     }
                                     .information-content{                                    
                                         display: flex;
@@ -556,6 +560,7 @@ main{
                                     font-size: $H5-font-size;
                                     font-weight: $font-Weight-B;
                                     letter-spacing: $font-letter-space-200;
+                                    color: $color-Banner-Card;
                                 }
                                 .shipping-information-content{
                                     display: flex;
@@ -650,6 +655,7 @@ main{
                                                     flex: 0 0 82%;
                                                     display: flex;
                                                     transition: 1s;
+                                                    margin-bottom: 15px;
                                                     @include sm-phone(){
                                                         flex: 0 0 90%;   
                                                     }
@@ -668,6 +674,9 @@ main{
                                                     flex: 0 0 82%;
                                                     display: flex;
                                                     transition: 1s;
+                                                    &:not(:last-child){
+                                                        margin-bottom: 15px;
+                                                    }
                                                     @include sm-phone(){
                                                         flex: 0 0 90%;   
                                                     }
@@ -711,6 +720,7 @@ main{
                                     font-size: $H5-font-size;
                                     font-weight: $font-Weight-B;
                                     letter-spacing: $font-letter-space-200;
+                                    color: $color-Banner-Card;
                                 }
                                 .payment-information-content{
                                     margin: 0;
@@ -729,7 +739,10 @@ main{
                                         .payment-invoice{
                                             flex: 0 0 100%;
                                             display: flex;
-                                            color: $color-Nav-icon;  
+                                            color: $color-Nav-icon;
+                                            &:not(:last-child){
+                                                margin-bottom: 15px;
+                                            }
                                             h5{
                                                 font-size: $H8-font-size;
                                                 margin: 0;
@@ -841,6 +854,7 @@ main{
                             position: relative;
                             z-index: 0;
                             overflow: hidden;
+                            font-weight: lighter;
                             .anim {
                                 position: absolute;
                                 top: 50%;

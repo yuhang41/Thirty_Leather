@@ -2572,25 +2572,37 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:afte
 }
 
 main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
-  -webkit-animation: para-fold .7s ease-in-out;
-          animation: para-fold .7s ease-in-out;
+  -webkit-animation: para-fold 2.5s ease-in-out;
+          animation: para-fold 2.5s ease-in-out;
 }
 
 @-webkit-keyframes para-fold {
   0% {
     width: 165px;
+    opacity: 0;
+  }
+  80% {
+    width: 165px;
+    opacity: 0;
   }
   100% {
     width: 465px;
+    opacity: 1;
   }
 }
 
 @keyframes para-fold {
   0% {
     width: 165px;
+    opacity: 0;
+  }
+  80% {
+    width: 165px;
+    opacity: 0;
   }
   100% {
     width: 465px;
+    opacity: 1;
   }
 }
 
@@ -2911,7 +2923,7 @@ main .main-container .new-product .container .product-item .product-card .conten
 main .main-container .new-product .container .product-item .product-card .content .price span:nth-child(2) {
   font-size: 30px;
   font-weight: bold;
-  color: #8de1de;
+  color: #70b9cf;
 }
 
 main .main-container .new-product .container .product-item .product-card a button {

@@ -764,10 +764,10 @@ main{
                                         width: 235px;
                                         height: 60px;
                                         font-size: $H5-font-size;
-                                        background-color: $color-Deep-Blue;
-                                        color: $color-Shoes-Button;
-                                        border: 1px solid $color-Shoes-Button;
+                                        background-color: $color-Product-Detail-Circle;
+                                        color: $color-White;
                                         border-radius: 30px;
+                                        box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);
                                         padding: 12px 34px;
                                         animation: cart-fade-in .3s ease-in-out;
                                     }
@@ -779,10 +779,10 @@ main{
                                         width: 235px;
                                         height: 60px;
                                         font-size: $H5-font-size;
-                                        background-color: $color-Deep-Blue;
-                                        color: $color-Shoes-Button;
-                                        border: 1px solid $color-Shoes-Button;
+                                        background-color: $color-Product-Detail-Circle;
+                                        color: $color-White;
                                         border-radius: 30px;
+                                        box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);
                                         padding: 12px 34px;
                                         animation: cart-fade-out .3s ease-in-out;
                                         animation-fill-mode: forwards;
@@ -1713,7 +1713,6 @@ main{
                                                     p{
                                                         color:$color-Border-Line;
                                                         font-size: $H7-font-size;
-                                                        font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
                                                         line-height: 30px;
                                                         margin: 0;    

@@ -141,7 +141,7 @@ main{
                             font-size: $H3-font-size;
                             font-weight: $font-Weight-B;
                             letter-spacing: $font-letter-space-200;
-                            color:$color-Product-Detail-Title;
+                            color:$color-Banner-Card;
                             margin:0px;
                             @include sm-phone(){
                                 font-size: $H6-font-size;   
@@ -192,7 +192,7 @@ main{
                         }
                         .curve{
                             fill-opacity: 0;
-                            stroke: $color-Background-line;
+                            stroke: $color-Border-Line;
                             stroke-width: 2px;
                             stroke-dashoffset: 0;
                             stroke-dasharray: 4000;
@@ -262,14 +262,15 @@ main{
                                             margin-bottom: 20px;
                                             p{
                                                 display: inline-block;
-                                                color: $color-Evaluation-Star;
+                                                color: $color-Product-Detail-Circle;
                                                 font-size: $H7-font-size;
-                                                border-bottom: 1px solid $color-Evaluation-Star;
+                                                border-bottom: 1px solid $color-Product-Detail-Circle;
                                             }
                                             h2{                             
                                                 font-size: $H3-font-size;
                                                 font-weight: $font-Weight-B;
-                                                margin:0;            
+                                                margin:0;
+                                                color: $color-Banner-Card;            
                                                 @include sm-phone(){
                                                     font-size: $H5-font-size;
                                                     line-height: 21px;
@@ -304,7 +305,7 @@ main{
                                                 width: 120px;
                                                 height: 50px;
                                                 border-radius: 8px;
-                                                border: 1px solid $color-WedgwoodBlue;
+                                                border: 1px solid $color-Banner-Card;
                                                 font-size: $H7-font-size;
                                                 color: $color-IronGray;
                                                 background-color: unset;
@@ -313,7 +314,7 @@ main{
                                                 letter-spacing: $font-letter-space-50;
                                                 &:hover{
                                                     color: $color-White;
-                                                    background-color: $color-Evaluation-Star;
+                                                    background-color: $color-Border-Line;
                                                     border: none;
                                                 }
                                                 @include sm-phone(){
@@ -454,8 +455,8 @@ main{
                                                 white-space:nowrap;                                          
                                             }
                                             &.swiper-pagination-bullet-active{
-                                                color:$color-Evaluation-Star;
-                                                background: $color-Evaluation-Star;
+                                                color:$color-Border-Line;
+                                                background: $color-Border-Line;
                                             }                                        
                                         }
                                         &::before{

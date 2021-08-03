@@ -158,7 +158,7 @@ main .main-container .content-container .shoes-article .article-container .artic
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 3.2px;
-  color: #7b8ca2;
+  color: #354b5e;
   margin: 0px;
 }
 
@@ -251,7 +251,7 @@ main .main-container .content-container .shoes-article .decoration-line svg {
 
 main .main-container .content-container .shoes-article .decoration-line svg .curve {
   fill-opacity: 0;
-  stroke: #abbac9;
+  stroke: #70b9cf;
   stroke-width: 2px;
   stroke-dashoffset: 0;
   stroke-dasharray: 4000;
@@ -380,15 +380,16 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title p {
   display: inline-block;
-  color: #e08549;
+  color: #7b8c2a;
   font-size: 18px;
-  border-bottom: 1px solid #e08549;
+  border-bottom: 1px solid #7b8c2a;
 }
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-title h2 {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
+  color: #354b5e;
 }
 
 @media (max-width: 520px) {
@@ -451,7 +452,7 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
   width: 120px;
   height: 50px;
   border-radius: 8px;
-  border: 1px solid #8090a0;
+  border: 1px solid #354b5e;
   font-size: 18px;
   color: #444444;
   background-color: unset;
@@ -462,7 +463,7 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-text button:hover {
   color: #ffffff;
-  background-color: #e08549;
+  background-color: #70b9cf;
   border: none;
 }
 
@@ -705,8 +706,8 @@ main .main-container .content-container .shoes-img-display .shoes-article-swiper
 }
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step .swiper-step-button .pagination-next .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  color: #e08549;
-  background: #e08549;
+  color: #70b9cf;
+  background: #70b9cf;
 }
 
 main .main-container .content-container .shoes-img-display .shoes-article-swiper .inner-content .development-process-swiper .swiper-step .swiper-step-button .pagination-next::before {

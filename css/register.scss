@@ -133,7 +133,7 @@ main{
     .submit {
         margin-top: 40px;
         margin-bottom: 20px;
-        background: $color-Orange;
+        background: $color-Border-Line;
         text-transform: uppercase;
         transition: .5s;
         position: relative;
@@ -170,12 +170,11 @@ main{
     }
     
     .fb-btn {
-        border: 2px solid #d3dae9;
-        color: darken(#d3dae9, 20%);
-    
+        color: $color-White;
+        background-color: $color-Blue;
         span {
             font-weight: bold;
-            color: darken(#768cb6, 20%);
+            color: $color-White;
         }
     }                
 }
@@ -327,10 +326,11 @@ main{
         overflow: hidden;
         z-index: 2;
         position: relative;
-        width: 120px;
+        width: 130px;
         height: $btnH;
         margin: 0 auto;
-        background: transparent;
+        background: rgba($color: $color-White, $alpha: 0.5);
+        border-radius: 30px;
         color: #fff;
         text-transform: uppercase;
         font-size: $H7-font-size;
@@ -429,7 +429,9 @@ main{
 }
 .sign-up {
     transform: translate3d($contW * -1,0,0);
-
+    h2{
+        font-weight: unset;
+    }
     @include signUpActive {
         transform: translate3d(0,0,0);
     }

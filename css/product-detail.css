@@ -1087,10 +1087,11 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 235px;
   height: 60px;
   font-size: 24px;
-  background-color: #1d2335;
-  color: #f5a069;
-  border: 1px solid #f5a069;
+  background-color: #7b8c2a;
+  color: #ffffff;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
+          box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
   padding: 12px 34px;
   -webkit-animation: cart-fade-in .3s ease-in-out;
           animation: cart-fade-in .3s ease-in-out;
@@ -1104,10 +1105,11 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 235px;
   height: 60px;
   font-size: 24px;
-  background-color: #1d2335;
-  color: #f5a069;
-  border: 1px solid #f5a069;
+  background-color: #7b8c2a;
+  color: #ffffff;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
+          box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
   padding: 12px 34px;
   -webkit-animation: cart-fade-out .3s ease-in-out;
           animation: cart-fade-out .3s ease-in-out;
@@ -2591,7 +2593,6 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
   color: #70b9cf;
   font-size: 18px;
-  font-weight: bold;
   letter-spacing: 1.6px;
   line-height: 30px;
   margin: 0;
