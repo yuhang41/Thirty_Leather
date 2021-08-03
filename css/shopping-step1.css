@@ -89,7 +89,7 @@ main .main-container .my-container .steps .step:nth-child(1) {
 }
 
 main .main-container .my-container .steps .step:nth-child(1) .step-content {
-  background: #86b2c4;
+  background: #70b9cf;
 }
 
 main .main-container .my-container .steps .step:nth-child(1) .step-right-line::after {
@@ -97,7 +97,7 @@ main .main-container .my-container .steps .step:nth-child(1) .step-right-line::a
   display: block;
   width: 100%;
   height: 100%;
-  background: #86b2c4;
+  background: #70b9cf;
 }
 
 main .main-container .my-container .steps .step:nth-child(2) {
@@ -110,7 +110,7 @@ main .main-container .my-container .steps .step:nth-child(2) {
 }
 
 main .main-container .my-container .steps .step:nth-child(2) .step-content {
-  background: #aab1b2;
+  background: #354b5e;
 }
 
 main .main-container .my-container .steps .step:nth-child(3) {
@@ -123,7 +123,7 @@ main .main-container .my-container .steps .step:nth-child(3) {
 }
 
 main .main-container .my-container .steps .step:nth-child(3) .step-content {
-  background: #aab1b2;
+  background: #354b5e;
 }
 
 main .main-container .my-container .steps .step .step-content {
@@ -207,13 +207,13 @@ main .main-container .my-container .steps .step .step-right-line {
   position: relative;
   width: 20%;
   height: 3px;
-  background: #717777;
+  background: #354b5e;
 }
 
 main .main-container .my-container .steps .step .step-left-line {
   width: 20%;
   height: 3px;
-  background: #717777;
+  background: #354b5e;
 }
 
 main .main-container .my-container .shopping-container {

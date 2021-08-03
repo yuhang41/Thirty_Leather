@@ -257,7 +257,7 @@ main{
                         flex:0 0 32%;
                         justify-content: start;                      
                         .step-content{
-                            background: $color-Shopping-Step;                    
+                            background: $color-Banner-Card;                    
                         }
                         .step-right-line{
                             &::after{
@@ -265,7 +265,7 @@ main{
                                 display: block;                                      
                                 width: 100%;
                                 height: 100%;
-                                background: $color-Shopping-Step-line;
+                                background: $color-Banner-Card;
                             }
                         }
                     }
@@ -273,17 +273,17 @@ main{
                         flex:0 0 36%;
                         justify-content: center;              
                         .step-content{
-                            background: $color-SkyBlue;                  
+                            background: $color-Border-Line;                  
                         }
                         .step-left-line{
-                            background: $color-SkyBlue; 
+                            background: $color-Border-Line; 
                         }
                     }    
                     &:nth-child(3){                
                         flex:0 0 32%;
                         justify-content:flex-end;
                         .step-content{
-                            background: $color-Shopping-Step;                    
+                            background: $color-Banner-Card;                    
                         }
                     }                   
                     .step-content{                    
@@ -334,12 +334,12 @@ main{
                         position: relative;
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;            
+                        background: $color-Banner-Card;            
                     }
                     .step-left-line{
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;
+                        background: $color-Banner-Card;
                     }                
                 }
             }
