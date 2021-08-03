@@ -1524,7 +1524,7 @@ main {
                             width: 165px; 
                             opacity: 0; 
                         }
-                        80%{
+                        60%{
                             width: 165px;
                             opacity: 0;
                         }
@@ -1535,13 +1535,19 @@ main {
                     }
                     @include tablet(){
                 
-                        animation: para-fold-2 .7s ease-in-out;
+                        animation: para-fold-2 2.5s ease-in-out;
                         @keyframes para-fold-2 {
                             0%{
-                                width: 165px;  
+                                width: 165px; 
+                                opacity: 0; 
+                            }
+                            60%{
+                                width: 165px;
+                                opacity: 0;
                             }
                             100%{
                                 width: 365px;
+                                opacity: 1;
                             }
                         } 
                     }

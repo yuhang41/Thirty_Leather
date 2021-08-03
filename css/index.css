@@ -2581,7 +2581,7 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .par
     width: 165px;
     opacity: 0;
   }
-  80% {
+  60% {
     width: 165px;
     opacity: 0;
   }
@@ -2596,7 +2596,7 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .par
     width: 165px;
     opacity: 0;
   }
-  80% {
+  60% {
     width: 165px;
     opacity: 0;
   }
@@ -2608,25 +2608,37 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .par
 
 @media (max-width: 1350px) {
   main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
-    -webkit-animation: para-fold-2 .7s ease-in-out;
-            animation: para-fold-2 .7s ease-in-out;
+    -webkit-animation: para-fold-2 2.5s ease-in-out;
+            animation: para-fold-2 2.5s ease-in-out;
     -webkit-transition: 1s;
     transition: 1s;
   }
   @-webkit-keyframes para-fold-2 {
     0% {
       width: 165px;
+      opacity: 0;
+    }
+    60% {
+      width: 165px;
+      opacity: 0;
     }
     100% {
       width: 365px;
+      opacity: 1;
     }
   }
   @keyframes para-fold-2 {
     0% {
       width: 165px;
+      opacity: 0;
+    }
+    60% {
+      width: 165px;
+      opacity: 0;
     }
     100% {
       width: 365px;
+      opacity: 1;
     }
   }
 }

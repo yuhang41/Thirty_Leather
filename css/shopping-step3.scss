@@ -446,7 +446,7 @@ main{
                         .order-complete{
                             width: 100%;
                             padding: 30px 0;
-                            border-bottom: 1px solid $color-Background-line;
+                            border-bottom: 1px solid $color-Border-Line;
                             display: flex;
                             justify-content: center;
                             @include sm-phone(){
@@ -500,7 +500,7 @@ main{
                             .order-customer-information{
                                 display: flex;
                                 justify-content: space-between;
-                                margin: 20px 0;
+                                margin: 40px 0;
                                 transition: 1s;  
                                 @include bg-phone(){
                                     flex-direction: column;
@@ -545,7 +545,7 @@ main{
                             }
                             .shipping-information{
                                 width: 100%;
-                                margin-bottom: 20px;                            
+                                margin-bottom: 40px;                            
                                 position: relative;
                                 border: 1px solid $color-Background-line;
                                 padding: 25px 10px 5px 10px;

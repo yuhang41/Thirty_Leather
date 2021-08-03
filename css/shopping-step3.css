@@ -500,7 +500,7 @@ main .main-container .my-container .shopping-container .shopping-order .order-co
 main .main-container .my-container .shopping-container .shopping-order .order-container .order-complete {
   width: 100%;
   padding: 30px 0;
-  border-bottom: 1px solid #abbac9;
+  border-bottom: 1px solid #70b9cf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,7 +608,7 @@ main .main-container .my-container .shopping-container .shopping-order .order-co
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 0;
+  margin: 40px 0;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -681,7 +681,7 @@ main .main-container .my-container .shopping-container .shopping-order .order-co
 
 main .main-container .my-container .shopping-container .shopping-order .order-container .information .shipping-information {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   position: relative;
   border: 1px solid #abbac9;
   padding: 25px 10px 5px 10px;
