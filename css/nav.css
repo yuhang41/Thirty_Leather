@@ -15,6 +15,22 @@
   outline: none;
 }
 
+#navbar {
+  position: relative;
+}
+
+#navbar:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
+}
+
 nav {
   padding-left: 7.4vw;
   position: relative;
@@ -323,6 +339,10 @@ nav .personal-item .input-cart .search input::-webkit-input-placeholder {
   color: #9b9b9b;
   font-size: 14px;
   letter-spacing: 3.2px;
+}
+
+nav .personal-item .input-cart .search input {
+  background-color: transparent !important;
 }
 
 nav .personal-item .input-cart .search label {

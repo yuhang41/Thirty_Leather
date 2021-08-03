@@ -24,7 +24,7 @@ nav {
 }
 
 nav.sticky {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 100%;
   background-color: #ffffff;
@@ -1784,7 +1784,7 @@ main .main-container .shoemaking .container .shoemaking-card {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1869,6 +1869,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
     width: 184px;
     height: 184px;
     margin-right: 20px;
+    border: 4px solid #70b9cf;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1994,7 +1995,7 @@ main .main-container .shoemaking .container .see-more-button {
 
 main .main-container .shoemaking .container .see-more-button button {
   width: 245px;
-  height: 70px;
+  height: 65px;
   font-size: 24px;
   font-weight: bold;
   color: #444444;
@@ -2288,6 +2289,8 @@ main .main-container .shoes-video video:nth-child(1) {
   z-index: 2;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-shadow: 2px 6px 15px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 6px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1350px) {
@@ -2308,6 +2311,8 @@ main .main-container .shoes-video video:nth-child(2) {
   z-index: 3;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-shadow: -4px 6px 15px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: -4px 6px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1350px) {
@@ -2566,6 +2571,54 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:afte
   }
 }
 
+main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
+  -webkit-animation: para-fold .7s ease-in-out;
+          animation: para-fold .7s ease-in-out;
+}
+
+@-webkit-keyframes para-fold {
+  0% {
+    width: 165px;
+  }
+  100% {
+    width: 465px;
+  }
+}
+
+@keyframes para-fold {
+  0% {
+    width: 165px;
+  }
+  100% {
+    width: 465px;
+  }
+}
+
+@media (max-width: 1350px) {
+  main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
+    -webkit-animation: para-fold-2 .7s ease-in-out;
+            animation: para-fold-2 .7s ease-in-out;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes para-fold-2 {
+    0% {
+      width: 165px;
+    }
+    100% {
+      width: 365px;
+    }
+  }
+  @keyframes para-fold-2 {
+    0% {
+      width: 165px;
+    }
+    100% {
+      width: 365px;
+    }
+  }
+}
+
 main .main-container .new-product:after {
   content: "";
   position: absolute;
@@ -2782,7 +2835,7 @@ main .main-container .new-product .container .product-item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -3022,7 +3075,7 @@ main .main-container .new-product .container .see-more-button a {
 
 main .main-container .new-product .container .see-more-button a button {
   width: 245px;
-  height: 70px;
+  height: 65px;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -3122,30 +3175,20 @@ main .main-container .new-product .container .see-more-button a button:focus:aft
 main .main-container .new-product .parallelogram {
   position: absolute;
   top: 0px;
-  right: 650px;
+  left: 37vw;
   width: 465px;
   height: 900px;
   background-color: #f0efeb;
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
 }
 
 @media (max-width: 1350px) {
   main .main-container .new-product .parallelogram {
     top: 100px;
-    right: 323px;
-    width: 300px;
+    left: 31vw;
+    width: 365px;
     height: 860px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 660px) {
-  main .main-container .new-product .parallelogram {
-    right: 280px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -3191,7 +3234,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"] {
   transition: 1s;
 }
 
-main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:before {
+main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:after {
   -webkit-animation: linegrow2-1 3s ease-in-out;
           animation: linegrow2-1 3s ease-in-out;
 }
@@ -3214,7 +3257,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:befor
   }
 }
 
-main .main-container .photo-wall:before {
+main .main-container .photo-wall:after {
   content: "";
   position: absolute;
   width: 1px;
@@ -3227,7 +3270,7 @@ main .main-container .photo-wall:before {
 }
 
 @media (max-width: 1350px) {
-  main .main-container .photo-wall:before {
+  main .main-container .photo-wall:after {
     left: 64px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -3235,7 +3278,7 @@ main .main-container .photo-wall:before {
 }
 
 @media (max-width: 320px) {
-  main .main-container .photo-wall:before {
+  main .main-container .photo-wall:after {
     top: 0px;
     left: 33px;
     -webkit-transition: 1s;

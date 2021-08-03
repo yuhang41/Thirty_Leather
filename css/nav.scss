@@ -49,6 +49,25 @@
         transition: 1s;
     }
 }
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
+#navbar{
+    @include background-change();
+}
 nav{
     padding-left: 7.4vw;
     position: relative;
@@ -225,6 +244,9 @@ nav{
                     color: $color-placeholder;
                     font-size: $H10-font-size; 
                     letter-spacing: $font-letter-space-200;
+                }
+                input{
+                    background-color: transparent!important;
                 }
                 label{
                     margin: 0px;
