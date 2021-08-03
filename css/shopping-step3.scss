@@ -143,9 +143,27 @@
         display: none;
     }       
 }
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
 main{
     .main-container{
-        background: $color-LightGray;
+        @include background-change(){
+            background-color: $color-New-Background;
+        }
         min-height: 100vh;
         .my-container{
             height: 100%;
@@ -170,7 +188,7 @@ main{
                         flex:0 0 32%;
                         justify-content: start;                      
                         .step-content{
-                            background: $color-Shopping-Step;                    
+                            background: $color-Banner-Card;                    
                         }
                         .step-right-line{
                             &::after{
@@ -178,7 +196,7 @@ main{
                                 display: block;                                      
                                 width: 100%;
                                 height: 100%;
-                                background: $color-Shopping-Step-line;
+                                background: $color-Banner-Card;
                             }
                         }
                     }
@@ -186,20 +204,20 @@ main{
                         flex:0 0 36%;
                         justify-content: center;              
                         .step-content{
-                            background: $color-Shopping-Step;                  
+                            background: $color-Banner-Card;                  
                         }
                         .step-left-line{
-                            background: $color-Shopping-Step-line; 
+                            background: $color-Banner-Card; 
                         }
                     }    
                     &:nth-child(3){                
                         flex:0 0 32%;
                         justify-content:flex-end;
                         .step-content{
-                            background: $color-SkyBlue;                    
+                            background: $color-Border-Line;                    
                         }
                         .step-left-line{
-                            background: $color-SkyBlue; 
+                            background: $color-Border-Line; 
                         }
                     }                   
                     .step-content{                    
@@ -250,12 +268,12 @@ main{
                         position: relative;
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;            
+                        background: $color-Banner-Card;            
                     }
                     .step-left-line{
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;
+                        background: $color-Banner-Card;
                     }                
                 }
             }
@@ -428,7 +446,7 @@ main{
                         .order-complete{
                             width: 100%;
                             padding: 30px 0;
-                            border-bottom: 1px solid $color-Background-line;
+                            border-bottom: 1px solid $color-Border-Line;
                             display: flex;
                             justify-content: center;
                             @include sm-phone(){
@@ -442,10 +460,13 @@ main{
                                 @include sm-phone(){
                                     margin-bottom: 20px;
                                 }
-                                img{
+                                svg{
                                     width: 100%;
                                     object-fit: cover;
                                     object-position: center;
+                                    .finish{
+                                       fill: $color-Border-Line;
+                                    }
                                 }
                             }
                             .complete-message{
@@ -479,7 +500,7 @@ main{
                             .order-customer-information{
                                 display: flex;
                                 justify-content: space-between;
-                                margin: 20px 0;
+                                margin: 40px 0;
                                 transition: 1s;  
                                 @include bg-phone(){
                                     flex-direction: column;
@@ -502,6 +523,7 @@ main{
                                         font-size: $H5-font-size;
                                         font-weight: $font-Weight-B;
                                         letter-spacing: $font-letter-space-200;
+                                        color: $color-Banner-Card;
                                     }
                                     .information-content{                                    
                                         display: flex;
@@ -523,7 +545,7 @@ main{
                             }
                             .shipping-information{
                                 width: 100%;
-                                margin-bottom: 20px;                            
+                                margin-bottom: 40px;                            
                                 position: relative;
                                 border: 1px solid $color-Background-line;
                                 padding: 25px 10px 5px 10px;
@@ -538,6 +560,7 @@ main{
                                     font-size: $H5-font-size;
                                     font-weight: $font-Weight-B;
                                     letter-spacing: $font-letter-space-200;
+                                    color: $color-Banner-Card;
                                 }
                                 .shipping-information-content{
                                     display: flex;
@@ -632,6 +655,7 @@ main{
                                                     flex: 0 0 82%;
                                                     display: flex;
                                                     transition: 1s;
+                                                    margin-bottom: 15px;
                                                     @include sm-phone(){
                                                         flex: 0 0 90%;   
                                                     }
@@ -650,6 +674,9 @@ main{
                                                     flex: 0 0 82%;
                                                     display: flex;
                                                     transition: 1s;
+                                                    &:not(:last-child){
+                                                        margin-bottom: 15px;
+                                                    }
                                                     @include sm-phone(){
                                                         flex: 0 0 90%;   
                                                     }
@@ -693,6 +720,7 @@ main{
                                     font-size: $H5-font-size;
                                     font-weight: $font-Weight-B;
                                     letter-spacing: $font-letter-space-200;
+                                    color: $color-Banner-Card;
                                 }
                                 .payment-information-content{
                                     margin: 0;
@@ -711,7 +739,10 @@ main{
                                         .payment-invoice{
                                             flex: 0 0 100%;
                                             display: flex;
-                                            color: $color-Nav-icon;  
+                                            color: $color-Nav-icon;
+                                            &:not(:last-child){
+                                                margin-bottom: 15px;
+                                            }
                                             h5{
                                                 font-size: $H8-font-size;
                                                 margin: 0;
@@ -823,6 +854,7 @@ main{
                             position: relative;
                             z-index: 0;
                             overflow: hidden;
+                            font-weight: lighter;
                             .anim {
                                 position: absolute;
                                 top: 50%;
@@ -882,30 +914,6 @@ main{
     100%
     {
         background: rgba(#000,0);
-    }
-}
-footer{
-    height: 0px!important;
-    .site-footer{
-        .container{
-            @include sm-screen(){
-                max-width: 900px;
-            }
-            .return-nav{
-                .footer-arrow{
-                    @include arrow(){
-                        position: absolute;
-                        top: 225px!important;
-                        right: 5.5vw!important;
-                    }
-                    @include iphone5s(){
-                        top: 158px!important;
-                        right: 2vw!important;
-                    }
-                    
-                }
-            }
-        }
     }
 }
 

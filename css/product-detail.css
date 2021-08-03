@@ -20,18 +20,50 @@ body {
   scroll-behavior: smooth;
 }
 
+#navbar {
+  position: relative;
+}
+
+#navbar:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
+}
+
+nav .input-cart .search input {
+  background-color: transparent !important;
+}
+
 main .main-container {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
 }
 
 main .main-container .commodity-menu {
   max-width: 375px;
   width: 100%;
   padding-top: 100px;
+  position: relative;
+}
+
+main .main-container .commodity-menu:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1750px) {
@@ -111,8 +143,20 @@ main .main-container .product-container {
 main .main-container .product-container .productshop-container {
   padding-top: 85px;
   padding-left: 2.6vw;
-  background: #ededeb;
+  position: relative;
+}
+
+main .main-container .product-container .productshop-container:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .product-container .productshop-container .breadcrumbs {
@@ -528,7 +572,7 @@ main .main-container .product-container .productshop-container .commidity-contai
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p input[type="checkbox"]:checked + label > .fa-heart {
   -webkit-animation: heart-fold .2s ease-in-out;
           animation: heart-fold .2s ease-in-out;
-  color: #f7a269;
+  color: #70b9cf;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p label {
@@ -544,38 +588,38 @@ main .main-container .product-container .productshop-container .commidity-contai
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .odrer-info .order-contain .order-discript .evaluation .other-eavl p label i:hover {
-  color: #f7a269;
+  color: #70b9cf;
 }
 
 @-webkit-keyframes firework {
   0% {
     opacity: 1;
-    -webkit-box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
-            box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+    -webkit-box-shadow: 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf;
+            box-shadow: 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf;
   }
   30% {
     opacity: 1;
   }
   100% {
     opacity: 0.0;
-    -webkit-box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
-            box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+    -webkit-box-shadow: 0 -15px 0 0px #70b9cf, 14px -8px 0 0px #70b9cf, 14px 8px 0 0px #70b9cf, 0 15px 0 0px #70b9cf, -14px 8px 0 0px #70b9cf, -14px -8px 0 0px #70b9cf;
+            box-shadow: 0 -15px 0 0px #70b9cf, 14px -8px 0 0px #70b9cf, 14px 8px 0 0px #70b9cf, 0 15px 0 0px #70b9cf, -14px 8px 0 0px #70b9cf, -14px -8px 0 0px #70b9cf;
   }
 }
 
 @keyframes firework {
   0% {
     opacity: 1;
-    -webkit-box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
-            box-shadow: 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269, 0 0 0 -2px #f7a269;
+    -webkit-box-shadow: 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf;
+            box-shadow: 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf, 0 0 0 -2px #70b9cf;
   }
   30% {
     opacity: 1;
   }
   100% {
     opacity: 0.0;
-    -webkit-box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
-            box-shadow: 0 -15px 0 0px #f7a269, 14px -8px 0 0px #f7a269, 14px 8px 0 0px #f7a269, 0 15px 0 0px #f7a269, -14px 8px 0 0px #f7a269, -14px -8px 0 0px #f7a269;
+    -webkit-box-shadow: 0 -15px 0 0px #70b9cf, 14px -8px 0 0px #70b9cf, 14px 8px 0 0px #70b9cf, 0 15px 0 0px #70b9cf, -14px 8px 0 0px #70b9cf, -14px -8px 0 0px #70b9cf;
+            box-shadow: 0 -15px 0 0px #70b9cf, 14px -8px 0 0px #70b9cf, 14px 8px 0 0px #70b9cf, 0 15px 0 0px #70b9cf, -14px 8px 0 0px #70b9cf, -14px -8px 0 0px #70b9cf;
   }
 }
 
@@ -586,7 +630,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   }
   100% {
     font-size: 18px;
-    color: #f7a269;
+    color: #70b9cf;
   }
 }
 
@@ -597,7 +641,7 @@ main .main-container .product-container .productshop-container .commidity-contai
   }
   100% {
     font-size: 18px;
-    color: #f7a269;
+    color: #70b9cf;
   }
 }
 
@@ -1043,10 +1087,11 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 235px;
   height: 60px;
   font-size: 24px;
-  background-color: #1d2335;
-  color: #f5a069;
-  border: 1px solid #f5a069;
+  background-color: #7b8c2a;
+  color: #ffffff;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
+          box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
   padding: 12px 34px;
   -webkit-animation: cart-fade-in .3s ease-in-out;
           animation: cart-fade-in .3s ease-in-out;
@@ -1060,10 +1105,11 @@ main .main-container .product-container .productshop-container .commidity-contai
   width: 235px;
   height: 60px;
   font-size: 24px;
-  background-color: #1d2335;
-  color: #f5a069;
-  border: 1px solid #f5a069;
+  background-color: #7b8c2a;
+  color: #ffffff;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
+          box-shadow: 0px 17px 23px -19px rgba(0, 0, 0, 0.61);
   padding: 12px 34px;
   -webkit-animation: cart-fade-out .3s ease-in-out;
           animation: cart-fade-out .3s ease-in-out;
@@ -1316,11 +1362,6 @@ main .main-container .product-container .productshop-container .commidity-contai
   }
 }
 
-main .main-container .product-container .productdetail-container {
-  background: #ededeb;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
-}
-
 main .main-container .product-container .productdetail-container .detail-container {
   position: relative;
   overflow: hidden;
@@ -1336,6 +1377,20 @@ main .main-container .product-container .productdetail-container .detail-contain
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+main .main-container .product-container .productdetail-container .detail-container:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .product-container .productdetail-container .detail-container .tabs {
@@ -2538,7 +2593,6 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .development-process .inner-content .development-process-content .swiper-container .swiper-wrapper .swiper-slide .development-process-list p {
   color: #70b9cf;
   font-size: 18px;
-  font-weight: bold;
   letter-spacing: 1.6px;
   line-height: 30px;
   margin: 0;
@@ -2831,7 +2885,7 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .size-recommendation .inner-content .announcement p {
   font-size: 21px;
   line-height: 26px;
-  color: #e08549;
+  color: #354b5e;
   letter-spacing: 0.8px;
 }
 
@@ -2865,7 +2919,7 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productdetail-container .detail-container .tabs-contents .size-recommendation .inner-content .size-discript .discript-content .title {
   font-size: 21px;
   line-height: 26px;
-  color: #e08549;
+  color: #70b9cf;
   letter-spacing: 0.8px;
   margin-bottom: 20px;
 }
@@ -2943,14 +2997,24 @@ main .main-container .product-container .productdetail-container .detail-contain
 main .main-container .product-container .productother-container {
   width: 100%;
   padding-top: 60px;
-  background-color: #ffffff;
+  position: relative;
+}
+
+main .main-container .product-container .productother-container:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .product-container .productother-container .other-container {
   max-width: 1120px;
   margin: auto;
-  margin-bottom: 100px;
 }
 
 @media (max-width: 1435px) {

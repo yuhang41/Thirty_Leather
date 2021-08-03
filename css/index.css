@@ -24,7 +24,7 @@ nav {
 }
 
 nav.sticky {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 100%;
   background-color: #ffffff;
@@ -64,6 +64,14 @@ nav.sticky .navbar-nav .nav-link {
   padding: 0px 1em;
 }
 
+@media (max-width: 1024px) {
+  nav.sticky .navbar-nav .nav-link {
+    padding: .5em 0px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 nav.sticky .logo {
   width: 58px;
   height: 58px;
@@ -96,6 +104,19 @@ main .main-container {
   overflow: hidden;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+
+main .main-container:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -1048,10 +1069,23 @@ main .main-container .more-button-list-item:nth-child(3) .line-button p {
 
 main .main-container .we-story {
   min-height: 969px;
-  background-color: #ebeae5;
   padding: 100px 0px 0px 0px;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+
+main .main-container .we-story:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -1676,9 +1710,22 @@ main .main-container .we-story .story-content .story-discript .content .main-bod
 
 main .main-container .shoemaking {
   min-height: 969px;
-  background-color: #ebeae5;
+  position: relative;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .shoemaking:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1024px) {
@@ -1737,7 +1784,7 @@ main .main-container .shoemaking .container .shoemaking-card {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1822,6 +1869,7 @@ main .main-container .shoemaking .container .shoemaking-card .shoes-card img {
     width: 184px;
     height: 184px;
     margin-right: 20px;
+    border: 4px solid #70b9cf;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1947,7 +1995,7 @@ main .main-container .shoemaking .container .see-more-button {
 
 main .main-container .shoemaking .container .see-more-button button {
   width: 245px;
-  height: 70px;
+  height: 65px;
   font-size: 24px;
   font-weight: bold;
   color: #444444;
@@ -2166,7 +2214,7 @@ main .main-container .shoemaking .sew-img svg[data-inviewport="scale-in"].is-inV
 
 main .main-container .shoes-video {
   min-height: 969px;
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2179,6 +2227,19 @@ main .main-container .shoes-video {
           align-items: flex-end;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .main-container .shoes-video:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 @media (max-width: 1350px) {
@@ -2213,7 +2274,7 @@ main .main-container .shoes-video {
 
 @media (max-width: 320px) {
   main .main-container .shoes-video {
-    min-height: 568px;
+    min-height: unset;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -2228,6 +2289,8 @@ main .main-container .shoes-video video:nth-child(1) {
   z-index: 2;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-shadow: 2px 6px 15px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 6px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1350px) {
@@ -2243,11 +2306,13 @@ main .main-container .shoes-video video:nth-child(1) {
 }
 
 main .main-container .shoes-video video:nth-child(2) {
-  width: 32.4%;
+  width: 45.4%;
   border-left: 18px solid #70b9cf;
   z-index: 3;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-shadow: -4px 6px 15px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: -4px 6px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1350px) {
@@ -2371,11 +2436,32 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
   }
 }
 
+@media (max-width: 520px) {
+  main .main-container .shoes-video svg {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .new-product {
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   overflow: hidden;
   z-index: 2;
+}
+
+main .main-container .new-product:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .new-product[data-inviewport="scale-in"] {
@@ -2481,6 +2567,78 @@ main .main-container .new-product[data-inviewport="scale-in"].is-inViewport:afte
     }
     to {
       height: 1873px;
+    }
+  }
+}
+
+main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
+  -webkit-animation: para-fold 2.5s ease-in-out;
+          animation: para-fold 2.5s ease-in-out;
+}
+
+@-webkit-keyframes para-fold {
+  0% {
+    width: 165px;
+    opacity: 0;
+  }
+  60% {
+    width: 165px;
+    opacity: 0;
+  }
+  100% {
+    width: 465px;
+    opacity: 1;
+  }
+}
+
+@keyframes para-fold {
+  0% {
+    width: 165px;
+    opacity: 0;
+  }
+  60% {
+    width: 165px;
+    opacity: 0;
+  }
+  100% {
+    width: 465px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1350px) {
+  main .main-container .new-product[data-inviewport="scale-in"].is-inViewport .parallelogram {
+    -webkit-animation: para-fold-2 2.5s ease-in-out;
+            animation: para-fold-2 2.5s ease-in-out;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes para-fold-2 {
+    0% {
+      width: 165px;
+      opacity: 0;
+    }
+    60% {
+      width: 165px;
+      opacity: 0;
+    }
+    100% {
+      width: 365px;
+      opacity: 1;
+    }
+  }
+  @keyframes para-fold-2 {
+    0% {
+      width: 165px;
+      opacity: 0;
+    }
+    60% {
+      width: 165px;
+      opacity: 0;
+    }
+    100% {
+      width: 365px;
+      opacity: 1;
     }
   }
 }
@@ -2701,7 +2859,7 @@ main .main-container .new-product .container .product-item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -2777,7 +2935,7 @@ main .main-container .new-product .container .product-item .product-card .conten
 main .main-container .new-product .container .product-item .product-card .content .price span:nth-child(2) {
   font-size: 30px;
   font-weight: bold;
-  color: #8de1de;
+  color: #70b9cf;
 }
 
 main .main-container .new-product .container .product-item .product-card a button {
@@ -2941,7 +3099,7 @@ main .main-container .new-product .container .see-more-button a {
 
 main .main-container .new-product .container .see-more-button a button {
   width: 245px;
-  height: 70px;
+  height: 65px;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -3041,30 +3199,20 @@ main .main-container .new-product .container .see-more-button a button:focus:aft
 main .main-container .new-product .parallelogram {
   position: absolute;
   top: 0px;
-  right: 650px;
+  left: 37vw;
   width: 465px;
   height: 900px;
   background-color: #f0efeb;
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
 }
 
 @media (max-width: 1350px) {
   main .main-container .new-product .parallelogram {
     top: 100px;
-    right: 323px;
-    width: 300px;
+    left: 31vw;
+    width: 365px;
     height: 860px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media (max-width: 660px) {
-  main .main-container .new-product .parallelogram {
-    right: 280px;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -3087,9 +3235,22 @@ main .main-container .new-product .parallelogram {
 }
 
 main .main-container .photo-wall {
-  background-color: #ebeae5;
+  position: relative;
   position: relative;
   padding-bottom: 150px;
+}
+
+main .main-container .photo-wall:before {
+  background-color: #ededeb;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+  opacity: 0.7;
 }
 
 main .main-container .photo-wall[data-inviewport="scale-in"] {
@@ -3097,7 +3258,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"] {
   transition: 1s;
 }
 
-main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:before {
+main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:after {
   -webkit-animation: linegrow2-1 3s ease-in-out;
           animation: linegrow2-1 3s ease-in-out;
 }
@@ -3120,7 +3281,7 @@ main .main-container .photo-wall[data-inviewport="scale-in"].is-inViewport:befor
   }
 }
 
-main .main-container .photo-wall:before {
+main .main-container .photo-wall:after {
   content: "";
   position: absolute;
   width: 1px;
@@ -3133,7 +3294,7 @@ main .main-container .photo-wall:before {
 }
 
 @media (max-width: 1350px) {
-  main .main-container .photo-wall:before {
+  main .main-container .photo-wall:after {
     left: 64px;
     -webkit-transition: 1s;
     transition: 1s;
@@ -3141,7 +3302,7 @@ main .main-container .photo-wall:before {
 }
 
 @media (max-width: 320px) {
-  main .main-container .photo-wall:before {
+  main .main-container .photo-wall:after {
     top: 0px;
     left: 33px;
     -webkit-transition: 1s;

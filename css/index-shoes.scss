@@ -65,42 +65,34 @@
         transition: 1s;
     }
 }
-nav{
-    background-color: $color-LightGray;
-    margin-left:8vw;
-    @include tablet(){
-        margin-left:unset;
-    }
-    .options{
-        background-color: $color-LightGray;
-    }
-    .go-home-logo{
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
         position: absolute;
-        top: 0px;
-        left: 0px;
-        @include sm-phone(){
-            left: 58px;
-        }
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
+#navbar{
+    @include background-change(){
+       
     }
+}
+nav{
     .input-cart{
         .search{
             input{
-                background-color: $color-LightGray!important;
+                background-color: transparent!important;
             }
         }
-    }
-    .twd-lang{
-        background-color: $color-LightGray;
-    }
-}
-.navbar{
-    padding:3.5rem 0px 0px 1rem;
-    margin-left:0px;
-    @include tablet(){
-        padding:0px 0px 0px 3.7rem;
-    }
-    @include sm-phone(){
-        padding:0px;
     }
 }
 main{
@@ -108,7 +100,8 @@ main{
         padding-left: 8vw;
         position: relative;
         overflow: hidden;
-        transition: 1s;        
+        transition: 1s;
+        @include background-change();
         @include tablet(){
             padding-left: 6vw;
         }        
@@ -117,7 +110,9 @@ main{
         }
         .content-container{
             min-height: 969px;
-            background-color: $color-LightGray;
+            @include background-change(){
+                background-color: $color-New-Background;
+            }
             padding:100px 0px 20px 1.5em; 
             @include normal-phone(){
                 padding:50px 0.5px 20px 0.5em;  
@@ -146,7 +141,7 @@ main{
                             font-size: $H3-font-size;
                             font-weight: $font-Weight-B;
                             letter-spacing: $font-letter-space-200;
-                            color:$color-Product-Detail-Title;
+                            color:$color-Banner-Card;
                             margin:0px;
                             @include sm-phone(){
                                 font-size: $H6-font-size;   
@@ -197,7 +192,7 @@ main{
                         }
                         .curve{
                             fill-opacity: 0;
-                            stroke: $color-Background-line;
+                            stroke: $color-Border-Line;
                             stroke-width: 2px;
                             stroke-dashoffset: 0;
                             stroke-dasharray: 4000;
@@ -267,14 +262,15 @@ main{
                                             margin-bottom: 20px;
                                             p{
                                                 display: inline-block;
-                                                color: $color-Evaluation-Star;
+                                                color: $color-Product-Detail-Circle;
                                                 font-size: $H7-font-size;
-                                                border-bottom: 1px solid $color-Evaluation-Star;
+                                                border-bottom: 1px solid $color-Product-Detail-Circle;
                                             }
                                             h2{                             
                                                 font-size: $H3-font-size;
                                                 font-weight: $font-Weight-B;
-                                                margin:0;            
+                                                margin:0;
+                                                color: $color-Banner-Card;            
                                                 @include sm-phone(){
                                                     font-size: $H5-font-size;
                                                     line-height: 21px;
@@ -309,7 +305,7 @@ main{
                                                 width: 120px;
                                                 height: 50px;
                                                 border-radius: 8px;
-                                                border: 1px solid $color-WedgwoodBlue;
+                                                border: 1px solid $color-Banner-Card;
                                                 font-size: $H7-font-size;
                                                 color: $color-IronGray;
                                                 background-color: unset;
@@ -318,7 +314,7 @@ main{
                                                 letter-spacing: $font-letter-space-50;
                                                 &:hover{
                                                     color: $color-White;
-                                                    background-color: $color-Evaluation-Star;
+                                                    background-color: $color-Border-Line;
                                                     border: none;
                                                 }
                                                 @include sm-phone(){
@@ -459,8 +455,8 @@ main{
                                                 white-space:nowrap;                                          
                                             }
                                             &.swiper-pagination-bullet-active{
-                                                color:$color-Evaluation-Star;
-                                                background: $color-Evaluation-Star;
+                                                color:$color-Border-Line;
+                                                background: $color-Border-Line;
                                             }                                        
                                         }
                                         &::before{
@@ -490,29 +486,5 @@ main{
             }
         }
         
-    }
-}
-footer{
-    height: 0px!important;
-    .site-footer{
-        .container{
-            @include tablet(){
-                max-width: 900px;
-            }
-            .return-nav{
-                .footer-arrow{
-                  margin-right: 50px;
-                @include tablet(){
-                    top: 250px;
-                }
-                  @include sm-phone(){
-                      margin-right: unset;
-                  } 
-                  @include iphone(){
-                      top: 150px;
-                  }
-                }
-            }
-        }
     }
 }

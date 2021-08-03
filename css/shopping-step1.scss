@@ -19,9 +19,9 @@
         transition: 1s;
     }
 }
-//1320
+//1335
 @mixin sm-screen{
-    @media(max-width:1320px){
+    @media(max-width:1335px){
         @content;
         transition: 1s;
     }
@@ -40,9 +40,9 @@
         transition: 1s;
     }
 }
-//925
+//940
 @mixin sm-tablet{
-    @media(max-width:925px){
+    @media(max-width:940px){
         @content;
         transition: 1s;
     }
@@ -54,9 +54,9 @@
         transition: 1s;
     }
 }
-//670
+//690
 @mixin phone{
-    @media(max-width:670px){
+    @media(max-width:690px){
         @content;
         transition: 1s;
     }
@@ -157,9 +157,27 @@
         display: none;
     }       
 }
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
 main{
     .main-container{    
-        background: $color-LightGray;
+        @include background-change(){
+            background: $color-New-Background;
+        };
         min-height: 100vh;
         .my-container{
             height: 100%;
@@ -188,7 +206,7 @@ main{
                         flex:0 0 32%;
                         justify-content: start;                      
                         .step-content{
-                            background: $color-SkyBlue;                    
+                            background:$color-Border-Line;                    
                         }
                         .step-right-line{
                             &::after{
@@ -196,7 +214,7 @@ main{
                                 display: block;                                      
                                 width: 100%;
                                 height: 100%;
-                                background: $color-SkyBlue;
+                                background:$color-Border-Line;
                             }
                         }
                     }
@@ -204,14 +222,14 @@ main{
                         flex:0 0 36%;
                         justify-content: center;              
                         .step-content{
-                            background: $color-Shopping-Step;                  
+                            background:$color-Banner-Card;                  
                         }
                     }    
                     &:nth-child(3){                
                         flex:0 0 32%;
                         justify-content:flex-end;
                         .step-content{
-                            background: $color-Shopping-Step;                    
+                            background:$color-Banner-Card;                    
                         }
                     }                   
                     .step-content{                    
@@ -261,12 +279,12 @@ main{
                         position: relative;
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;            
+                        background: $color-Banner-Card;            
                     }
                     .step-left-line{
                         width: 20%;
                         height: 3px;
-                        background: $color-Shopping-Step-line;
+                        background: $color-Banner-Card;
                     }                
                 }
             }
@@ -518,7 +536,6 @@ main{
                                 .delete-cart{
                                     .delete{                            
                                         .delete-button{
-                                            padding: 5px;
                                             cursor: pointer;
                                             font-family: $font-Family-A;
                                             font-size: $H9-font-size;                                
@@ -533,37 +550,30 @@ main{
                                     }
                                 }
                                 .favorite{
-                                    input[type="checkbox"]{
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        position: relative;
-                                        outline: none;
-                                        border: 0;
-                                        cursor: pointer;
-                                        &::after {
-                                            content:"";
-                                            position: absolute;
-                                            height: 4px;
-                                            width: 4px;
-                                            top: -6px;
-                                            left: 11.5px;
-                                            border-radius: 50%;
-                                        }
-                                        &:focus::after {
-                                            animation: firework .5s ease forwards .1s;
-                                        }
-                                        &:checked+label>.fa-star{
-                                            animation: star-fold 1s linear;
-                                            color: $color-Apricot;
-                                        }
-                                    }
-                                    i{
-                                        padding: 5px;
+                                    .fa-star{
                                         cursor: pointer;
                                         font-size: $H9-font-size;                                
                                         color: $color-Nav-icon;
                                         &:hover{
                                             color: $color-Apricot;
+                                        }
+                                    }
+                                }
+                                .favorite.active{
+                                    .fa-star{
+                                        color: $color-Apricot;
+                                        animation: star-fold 1s ease-in-out;
+
+                                        position: relative;
+                                        &:after{
+                                            content: "";
+                                            position: absolute;
+                                            height: 4px;
+                                            width: 4px;
+                                            top: 7px;
+                                            left: 7px;
+                                            border-radius: 50%;
+                                            animation: firework .5s ease-in-out;
                                         }
                                     }
                                 }
@@ -598,126 +608,40 @@ main{
                                 }
                             }
                             @include bg-phone(){
-                                &:nth-child(2){
                                     ul{
+                                        position: relative;
                                         .delete-cart{
                                             position: absolute;
-                                            top: 90px;
+                                            top: 0px;
                                             right: 4vw;
                                         } 
                                         .favorite{
                                             position: absolute;
-                                            top: 155px;
+                                            top: 70px;
                                             right: 3.5vw;
                                         } 
-                                    }
-                                }
-                                &:nth-child(3){
-                                    ul{
-                                        .delete-cart{
-                                            position: absolute;
-                                            top: 220px;
-                                            right: 4vw;
-                                        } 
-                                        .favorite{
-                                            position: absolute;
-                                            top: 285px;
-                                            right: 3.5vw;
-                                        } 
-                                    }
-                                }
-                                &:nth-child(4){
-                                    ul{
-                                        .delete-cart{
-                                            position: absolute;
-                                            top: 350px;
-                                            right: 4vw;
-                                        } 
-                                        .favorite{
-                                            position: absolute;
-                                            top: 415px;
-                                            right: 3.5vw;
-                                        } 
-                                    }
-                                }
+                                    }        
                             }
                             @include sm-phone(){
-                                &:nth-child(2){
                                     ul{
+                                        position: relative;
                                         .price{
                                             position: absolute;
-                                            top: 197px;
-                                            left: 25px;
-                                        } 
+                                            top: 95px;
+                                            left: 1.5em; 
+                                        }
                                         .count{
                                             position: absolute;
-                                            top: 197px;
-                                            left: 125px;
-                                        } 
+                                            top: 95px;
+                                            left: 9em;  
+                                        }
                                         .subtotal{
                                             position: absolute;
-                                            top: 200px;
-                                            left: 265px;
+                                            top: 100px;
+                                            left: 18.5em;
                                         }
-                                        .delete-cart{
-                                            top: 90px;
-                                        } 
-                                        .favorite{
-                                            top: 165px;
-                                        }   
                                     }
-                                }
-                                &:nth-child(3){
-                                    ul{
-                                        .price{
-                                            position: absolute;
-                                            top: 377px;
-                                            left: 25px;
-                                        } 
-                                        .count{
-                                            position: absolute;
-                                            top: 377px;
-                                            left: 125px;
-                                        } 
-                                        .subtotal{
-                                            position: absolute;
-                                            top: 380px;
-                                            left: 265px;
-                                        }
-                                        .delete-cart{
-                                            top: 265px;
-                                        } 
-                                        .favorite{
-                                            top: 345px;
-                                        }   
-                                    }
-                                }
-                                &:nth-child(4){
-                                    ul{
-                                        .price{
-                                            position: absolute;
-                                            top: 550px;
-                                            left: 25px;
-                                        } 
-                                        .count{
-                                            position: absolute;
-                                            top: 550px;
-                                            left: 125px;
-                                        } 
-                                        .subtotal{
-                                            position: absolute;
-                                            top: 555px;
-                                            left: 265px;
-                                        }
-                                        .delete-cart{
-                                            top: 440px;
-                                        } 
-                                        .favorite{
-                                            top: 520px;
-                                        }  
-                                    }
-                                } 
-                            }
+                            }   
                         }
                     }                    
                 }
@@ -921,8 +845,7 @@ main{
                         }
                         .free-ship{
                             display: flex;
-                            font-size: $H11-font-size;
-                            font-weight: $font-Weight-B;                
+                            font-size: $H11-font-size;               
                             align-items: center;
                             p{
                                 margin: 0;
@@ -1052,29 +975,6 @@ main{
         background: rgba(#000,0);
     }
 }
-footer{
-    height: 0px!important;
-    .site-footer{
-        .container{
-            @include screen(){
-                max-width: 880px;
-            }
-            .return-nav{
-                .footer-arrow{
-                    @include arrow(){
-                        position: absolute;
-                        top: 225px!important;
-                        right: 2vw!important;
-                    }
-                    @include iphone(){
-                        top: 158px!important;
-                        right: 2vw!important;
-                    }
-                    
-                }
-            }
-        }
-    }
-}
+
 
 

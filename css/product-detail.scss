@@ -147,19 +147,48 @@
         display: none;
     }       
 }
-body{
+//background change
+@mixin background-change{
+    position: relative;
+    &:before{
+        @content;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+        opacity: 0.7;
+   }
+}
+body
+{
     scroll-behavior: smooth;
+}
+#navbar{
+    @include background-change();
+}
+nav{
+    .input-cart{
+        .search{
+            input{
+                background-color: transparent!important;
+            }
+        }
+    }
 }
 main{
     .main-container{
         min-height: 100vh;
         display: flex;
-        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
         // 左邊白色區塊的欄位
         .commodity-menu{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
+            @include background-change();
             @include bg-screen(){
                 display: none;
                 max-width: unset;
@@ -224,8 +253,9 @@ main{
             .productshop-container{
                 padding-top: 85px;
                 padding-left: 2.6vw;
-                background: $color-New-Background;
-                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+                @include background-change(){
+                    background-color: $color-New-Background;
+                }
                 .breadcrumbs{
                     margin-bottom: 20px;
                     @include bg-screen(){
@@ -472,7 +502,7 @@ main{
                                                     }
                                                     &:checked+label>.fa-heart{
                                                         animation: heart-fold .2s ease-in-out;
-                                                        color: $color-Apricot;
+                                                        color: $color-Border-Line;
                                                     }
                                                 }
                                                 label{
@@ -484,7 +514,7 @@ main{
                                                         font-size: $H9-font-size;                                
                                                         color: $color-Banner-Card;
                                                         &:hover{
-                                                            color: $color-Apricot;
+                                                            color: $color-Border-Line;
                                                         }
                                                     }
                                                 }
@@ -494,14 +524,14 @@ main{
                                             @keyframes firework {
                                             0% {
                                                 opacity: 1;
-                                                box-shadow: 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot, 0 0 0 -2px $color-Apricot;
+                                                box-shadow: 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line, 0 0 0 -2px $color-Border-Line;
                                             }
                                             30% {
                                                 opacity: 1;
                                             }
                                             100% {
                                                 opacity: 0.0;
-                                                box-shadow: 0 -15px 0 0px $color-Apricot, 14px -8px 0 0px $color-Apricot, 14px 8px 0 0px $color-Apricot, 0 15px 0 0px $color-Apricot, -14px 8px 0 0px $color-Apricot, -14px -8px 0 0px $color-Apricot;
+                                                box-shadow: 0 -15px 0 0px $color-Border-Line, 14px -8px 0 0px $color-Border-Line, 14px 8px 0 0px $color-Border-Line, 0 15px 0 0px $color-Border-Line, -14px 8px 0 0px $color-Border-Line, -14px -8px 0 0px $color-Border-Line;
                                             }
                                             }
                                             @keyframes heart-fold {
@@ -511,7 +541,7 @@ main{
                                                 }
                                                 100%{
                                                     font-size: $H7-font-size;
-                                                    color: $color-Apricot;
+                                                    color: $color-Border-Line;
                                                 }
                                                 
                                             }
@@ -734,10 +764,10 @@ main{
                                         width: 235px;
                                         height: 60px;
                                         font-size: $H5-font-size;
-                                        background-color: $color-Deep-Blue;
-                                        color: $color-Shoes-Button;
-                                        border: 1px solid $color-Shoes-Button;
+                                        background-color: $color-Product-Detail-Circle;
+                                        color: $color-White;
                                         border-radius: 30px;
+                                        box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);
                                         padding: 12px 34px;
                                         animation: cart-fade-in .3s ease-in-out;
                                     }
@@ -749,10 +779,10 @@ main{
                                         width: 235px;
                                         height: 60px;
                                         font-size: $H5-font-size;
-                                        background-color: $color-Deep-Blue;
-                                        color: $color-Shoes-Button;
-                                        border: 1px solid $color-Shoes-Button;
+                                        background-color: $color-Product-Detail-Circle;
+                                        color: $color-White;
                                         border-radius: 30px;
+                                        box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);
                                         padding: 12px 34px;
                                         animation: cart-fade-out .3s ease-in-out;
                                         animation-fill-mode: forwards;
@@ -931,8 +961,6 @@ main{
             }
             // 商品詳細描述/開發過程/尺碼建議
             .productdetail-container{
-                background: $color-New-Background;
-                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
                 .detail-container{
                     position: relative;
                     overflow: hidden;
@@ -941,6 +969,9 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    @include background-change(){
+                        background-color: $color-New-Background;
+                    }
                     .tabs{
                         display: flex;
                         .tab{
@@ -1682,7 +1713,6 @@ main{
                                                     p{
                                                         color:$color-Border-Line;
                                                         font-size: $H7-font-size;
-                                                        font-weight: $font-Weight-B;
                                                         letter-spacing: $font-letter-space-100;
                                                         line-height: 30px;
                                                         margin: 0;    
@@ -1857,7 +1887,7 @@ main{
                                     p{
                                         font-size: $H6-font-size;
                                         line-height: 26px;
-                                        color: $color-Evaluation-Star;
+                                        color: $color-Banner-Card;
                                         letter-spacing: $font-letter-space-50;
                                         @include normal-phone(){
                                             font-size: $H8-font-size;
@@ -1875,7 +1905,7 @@ main{
                                         .title{
                                             font-size: $H6-font-size;
                                             line-height: 26px;
-                                            color: $color-Evaluation-Star;
+                                            color: $color-Border-Line;
                                             letter-spacing: $font-letter-space-50;
                                             margin-bottom: 20px;
                                         }
@@ -1923,12 +1953,10 @@ main{
             .productother-container{
                 width: 100%;
                 padding-top: 60px;
-                background-color: $color-White;
-                background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+                @include background-change();
                 .other-container{
                     max-width: 1120px;
                     margin: auto;
-                    margin-bottom: 100px;
                     @include normal-screen(){
                         max-width: 800px;
                     }
