@@ -106,13 +106,13 @@ let backTopBtn = document.querySelector('.back-top');
 function myFunction() {
   if (window.pageYOffset >= bannerHeight) {
     navbar.classList.add("sticky");
-    longLine.className="long-line";
-    shortLine.className="short-line";
+    // longLine.className="long-line";
+    // shortLine.className="short-line";
     backTopBtn.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
-    longLine.className="";
-    shortLine.className="";
+    // longLine.className="";
+    // shortLine.className="";
     backTopBtn.classList.remove("sticky");
   }
 }

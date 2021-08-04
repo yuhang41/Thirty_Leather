@@ -356,7 +356,7 @@ main {
                         color: $color-Banner-Card;
                         transform-origin: 40px 5px;
                         position: relative;
-                        animation: text-move .5s ease-in-out;
+                        animation: text-move 1s ease-in-out;
                         text-align: center;
                         @keyframes text-move {
                             0%{
@@ -859,15 +859,18 @@ main {
                         .scissors,
                         .scissors-mind {
                             transition: 1s;
-                            animation: scissors 4s ease-in-out;
-                            animation: mind 4s ease-in-out;
+                            animation: scissors 8s ease-in-out;
+                            animation: mind 8s ease-in-out;
                         }
                     }
                     @keyframes scissors {
                         0% {
                             stroke-dashoffset: 4000;
                         }
+                        50%{
+                            stroke-dashoffset: 4000;
 
+                        }
                         100% {
                             stroke-dashoffset: 0;
                         }
@@ -985,6 +988,37 @@ main {
                                 font-size: $H5-font-size;
                             }
                             &.short-line {
+                                &[data-inviewport="scale-in"] {
+                                    transition: 1s;
+                                }
+                                &[data-inviewport="scale-in"].is-inViewport:before {
+                                    animation: short-line-grow 1.5s linear forwards;
+                                    @include iphone-5s(){
+                                        animation: short-line2-grow 1s linear forwards;
+                                    }
+                                }
+                                @keyframes short-line-grow {
+                                    0%{
+                                        width: 0px;
+                                    }
+                                    50%{
+                                        width: 0px;
+                                    }
+                                    100% {
+                                        width: 100px;
+                                    }
+                                }
+                                @keyframes short-line2-grow {
+                                    0%{
+                                        width: 0px;
+                                    }
+                                    50%{
+                                        width: 0px;
+                                    }
+                                    100% {
+                                        width: 88px;
+                                    }
+                                }
                                 &:before {
                                     content: "";
                                     width: 0px;
@@ -996,13 +1030,7 @@ main {
                                     transform: rotate(33deg);
                                     z-index: 0;
                                     transform-origin: 40px -1px;
-                                    animation: short-line-grow 1s linear forwards;
-                                    @keyframes short-line-grow {
-                                        to {
-                                            width: 100px;
-                                        }
-                                    }
-                                    animation-delay: 0.5s;
+                                    
                                     @include tablet() {
                                         display: none;
                                     }
@@ -1012,12 +1040,7 @@ main {
                                         top: -50px;
                                         left: -17px;
                                         transform: rotate(65deg);
-                                        animation: short-line2-grow 1s linear forwards;
-                                    }
-                                    @keyframes short-line2-grow {
-                                        to {
-                                            width: 88px;
-                                        }
+                                        
                                     }
                                 }
                             }
@@ -1055,6 +1078,39 @@ main {
                                 margin-bottom: 0px;
                                 position: relative;
                                 &.long-line {
+                                    &[data-inviewport="scale-in"] {
+                                        transition: 1s;
+                                    }
+                                    &[data-inviewport="scale-in"].is-inViewport:after {
+                                        animation-delay: 1.5s;
+                                        animation: long-line-grow 2.5s linear forwards;
+                                        @include iphone-5s() {
+                                            animation: long-line2-grow 2.5s linear forwards;
+                                            animation-delay: 1.5s;
+                                            @keyframes long-line2-grow {
+                                                0%{
+                                                    width: 0px;
+                                                }
+                                                50%{
+                                                    width: 0px;
+                                                }
+                                                100% {
+                                                    width: 128px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    @keyframes long-line-grow {
+                                        0%{
+                                            width: 0px;
+                                        }
+                                        50%{
+                                            width: 0px;
+                                        }
+                                        100% {
+                                            width: 300px;
+                                        }
+                                    }
                                     &:after {
                                         content: "";
                                         width: 0px;
@@ -1066,13 +1122,6 @@ main {
                                         transform: rotate(33deg);
                                         z-index: 0;
                                         transform-origin: 102px -12px;
-                                        animation: long-line-grow 1s linear forwards;
-                                        animation-delay: 1.5s;
-                                        @keyframes long-line-grow {
-                                            to {
-                                                width: 300px;
-                                            }
-                                        }
                                         @include tablet() {
                                             display: none;
                                         }
@@ -1083,13 +1132,6 @@ main {
                                             top: 348px;
                                             left: 81px;
                                             transform: rotate(65deg);
-                                            animation: long-line2-grow 1s linear forwards;
-                                            animation-delay: 1.5s;
-                                            @keyframes long-line2-grow {
-                                                to {
-                                                    width: 128px;
-                                                }
-                                            }
                                         }
                                     }
                                 }
@@ -1301,8 +1343,8 @@ main {
                         .finger,
                         .sew-line {
                             transition: 1s;
-                            animation: finger 3s ease-in-out;
-                            animation: sew-line 4s ease-in-out;
+                            animation: finger 5s ease-in-out;
+                            animation: sew-line 6s ease-in-out;
                         }
                     }
                     @keyframes finger {
@@ -1422,12 +1464,15 @@ main {
                     .knife,
                     .grip {
                         transition: 1s;
-                        animation: knife 4s ease-in-out;
-                        animation: grip 3s ease-in-out;
+                        animation: knife 6s ease-in-out;
+                        animation: grip 6s ease-in-out;
                     }
                 }
                 @keyframes knife {
                     0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    50%{
                         stroke-dashoffset: 4000;
                     }
                     100% {
@@ -1436,6 +1481,9 @@ main {
                 }
                 @keyframes grip {
                     0% {
+                        stroke-dashoffset: 4000;
+                    }
+                    50%{
                         stroke-dashoffset: 4000;
                     }
                     100% {

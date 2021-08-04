@@ -337,8 +337,8 @@ main .main-container .swiper1 .banner-card .banner-title p {
   -webkit-transform-origin: 40px 5px;
           transform-origin: 40px 5px;
   position: relative;
-  -webkit-animation: text-move .5s ease-in-out;
-          animation: text-move .5s ease-in-out;
+  -webkit-animation: text-move 1s ease-in-out;
+          animation: text-move 1s ease-in-out;
   text-align: center;
 }
 
@@ -1205,14 +1205,17 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
 main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is-inViewport .scissors-mind {
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: scissors 4s ease-in-out;
-          animation: scissors 4s ease-in-out;
-  -webkit-animation: mind 4s ease-in-out;
-          animation: mind 4s ease-in-out;
+  -webkit-animation: scissors 8s ease-in-out;
+          animation: scissors 8s ease-in-out;
+  -webkit-animation: mind 8s ease-in-out;
+          animation: mind 8s ease-in-out;
 }
 
 @-webkit-keyframes scissors {
   0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
     stroke-dashoffset: 4000;
   }
   100% {
@@ -1222,6 +1225,9 @@ main .main-container .we-story .story-content svg[data-inviewport="scale-in"].is
 
 @keyframes scissors {
   0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
     stroke-dashoffset: 4000;
   }
   100% {
@@ -1454,6 +1460,73 @@ main .main-container .we-story .story-content .story-discript .title p {
   }
 }
 
+main .main-container .we-story .story-content .story-discript .title p.short-line[data-inviewport="scale-in"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .main-container .we-story .story-content .story-discript .title p.short-line[data-inviewport="scale-in"].is-inViewport:before {
+  -webkit-animation: short-line-grow 1.5s linear forwards;
+          animation: short-line-grow 1.5s linear forwards;
+}
+
+@media (max-width: 320px) {
+  main .main-container .we-story .story-content .story-discript .title p.short-line[data-inviewport="scale-in"].is-inViewport:before {
+    -webkit-animation: short-line2-grow 1s linear forwards;
+            animation: short-line2-grow 1s linear forwards;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@-webkit-keyframes short-line-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes short-line-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@-webkit-keyframes short-line2-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 88px;
+  }
+}
+
+@keyframes short-line2-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 88px;
+  }
+}
+
 main .main-container .we-story .story-content .story-discript .title p.short-line:before {
   content: "";
   width: 0px;
@@ -1467,22 +1540,6 @@ main .main-container .we-story .story-content .story-discript .title p.short-lin
   z-index: 0;
   -webkit-transform-origin: 40px -1px;
           transform-origin: 40px -1px;
-  -webkit-animation: short-line-grow 1s linear forwards;
-          animation: short-line-grow 1s linear forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-@-webkit-keyframes short-line-grow {
-  to {
-    width: 100px;
-  }
-}
-
-@keyframes short-line-grow {
-  to {
-    width: 100px;
-  }
 }
 
 @media (max-width: 1350px) {
@@ -1501,22 +1558,8 @@ main .main-container .we-story .story-content .story-discript .title p.short-lin
     left: -17px;
     -webkit-transform: rotate(65deg);
             transform: rotate(65deg);
-    -webkit-animation: short-line2-grow 1s linear forwards;
-            animation: short-line2-grow 1s linear forwards;
     -webkit-transition: 1s;
     transition: 1s;
-  }
-}
-
-@-webkit-keyframes short-line2-grow {
-  to {
-    width: 88px;
-  }
-}
-
-@keyframes short-line2-grow {
-  to {
-    width: 88px;
   }
 }
 
@@ -1598,6 +1641,75 @@ main .main-container .we-story .story-content .story-discript .content .preamble
   position: relative;
 }
 
+main .main-container .we-story .story-content .story-discript .content .preamble p.long-line[data-inviewport="scale-in"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .main-container .we-story .story-content .story-discript .content .preamble p.long-line[data-inviewport="scale-in"].is-inViewport:after {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation: long-line-grow 2.5s linear forwards;
+          animation: long-line-grow 2.5s linear forwards;
+}
+
+@media (max-width: 320px) {
+  main .main-container .we-story .story-content .story-discript .content .preamble p.long-line[data-inviewport="scale-in"].is-inViewport:after {
+    -webkit-animation: long-line2-grow 2.5s linear forwards;
+            animation: long-line2-grow 2.5s linear forwards;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  @-webkit-keyframes long-line2-grow {
+    0% {
+      width: 0px;
+    }
+    50% {
+      width: 0px;
+    }
+    100% {
+      width: 128px;
+    }
+  }
+  @keyframes long-line2-grow {
+    0% {
+      width: 0px;
+    }
+    50% {
+      width: 0px;
+    }
+    100% {
+      width: 128px;
+    }
+  }
+}
+
+@-webkit-keyframes long-line-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes long-line-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
 main .main-container .we-story .story-content .story-discript .content .preamble p.long-line:after {
   content: "";
   width: 0px;
@@ -1611,22 +1723,6 @@ main .main-container .we-story .story-content .story-discript .content .preamble
   z-index: 0;
   -webkit-transform-origin: 102px -12px;
           transform-origin: 102px -12px;
-  -webkit-animation: long-line-grow 1s linear forwards;
-          animation: long-line-grow 1s linear forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-@-webkit-keyframes long-line-grow {
-  to {
-    width: 300px;
-  }
-}
-
-@keyframes long-line-grow {
-  to {
-    width: 300px;
-  }
 }
 
 @media (max-width: 1350px) {
@@ -1646,22 +1742,8 @@ main .main-container .we-story .story-content .story-discript .content .preamble
     left: 81px;
     -webkit-transform: rotate(65deg);
             transform: rotate(65deg);
-    -webkit-animation: long-line2-grow 1s linear forwards;
-            animation: long-line2-grow 1s linear forwards;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
     -webkit-transition: 1s;
     transition: 1s;
-  }
-  @-webkit-keyframes long-line2-grow {
-    to {
-      width: 128px;
-    }
-  }
-  @keyframes long-line2-grow {
-    to {
-      width: 128px;
-    }
   }
 }
 
@@ -2139,10 +2221,10 @@ main .main-container .shoemaking .sew-img svg[data-inviewport="scale-in"].is-inV
 main .main-container .shoemaking .sew-img svg[data-inviewport="scale-in"].is-inViewport .sew-line {
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: finger 3s ease-in-out;
-          animation: finger 3s ease-in-out;
-  -webkit-animation: sew-line 4s ease-in-out;
-          animation: sew-line 4s ease-in-out;
+  -webkit-animation: finger 5s ease-in-out;
+          animation: finger 5s ease-in-out;
+  -webkit-animation: sew-line 6s ease-in-out;
+          animation: sew-line 6s ease-in-out;
 }
 
 @-webkit-keyframes finger {
@@ -2373,14 +2455,17 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
 main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport .grip {
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: knife 4s ease-in-out;
-          animation: knife 4s ease-in-out;
-  -webkit-animation: grip 3s ease-in-out;
-          animation: grip 3s ease-in-out;
+  -webkit-animation: knife 6s ease-in-out;
+          animation: knife 6s ease-in-out;
+  -webkit-animation: grip 6s ease-in-out;
+          animation: grip 6s ease-in-out;
 }
 
 @-webkit-keyframes knife {
   0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
     stroke-dashoffset: 4000;
   }
   100% {
@@ -2392,6 +2477,9 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
   0% {
     stroke-dashoffset: 4000;
   }
+  50% {
+    stroke-dashoffset: 4000;
+  }
   100% {
     stroke-dashoffset: 0;
   }
@@ -2401,6 +2489,9 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
   0% {
     stroke-dashoffset: 4000;
   }
+  50% {
+    stroke-dashoffset: 4000;
+  }
   100% {
     stroke-dashoffset: 0;
   }
@@ -2408,6 +2499,9 @@ main .main-container .shoes-video svg[data-inviewport="scale-in"].is-inViewport 
 
 @keyframes grip {
   0% {
+    stroke-dashoffset: 4000;
+  }
+  50% {
     stroke-dashoffset: 4000;
   }
   100% {
