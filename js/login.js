@@ -4,155 +4,139 @@ let btn_groups = document.querySelector('.btn-groups');
 
 let cancel = document.querySelector('.cancel');
 
+let content_edits = [...document.querySelectorAll('.content-edit')];
+
 // 編輯
-data_block2.addEventListener('click', function () {
-    btn_groups.style.display = 'flex'
-
-    document.querySelector(".content1").readOnly = false;
-    document.querySelector(".content2").readOnly = false;
-    document.querySelector(".content3").readOnly = false;
-    document.querySelector(".content4").readOnly = false;
-    document.querySelector(".content5").readOnly = false;
+data_block2.addEventListener('click', function () {    
+    judgment('flex',false);
 });
-
 // 取消
 cancel.addEventListener('click', function () {
-    btn_groups.style.display = 'none'
-
-    document.querySelector(".content1").readOnly = true;
-    document.querySelector(".content2").readOnly = true;
-    document.querySelector(".content3").readOnly = true;
-    document.querySelector(".content4").readOnly = true;
-    document.querySelector(".content5").readOnly = true;
+    judgment('none',true);
 });
+function judgment(display,readOnly){
+    btn_groups.style.display = display;
 
+    content_edits.forEach(edit=>{
+        edit.readOnly = readOnly;
+    });
+    
+}
 
-let click_first = document.querySelector('.click-first');
-let click_second = document.querySelector('.click-second');
-let click_third = document.querySelector('.click-third');
-let click_fourth = document.querySelector('.click-fourth');
-let click_fifth = document.querySelector('.click-fifth');
-
-
-let square1 = document.querySelector('.square1');
-let square2 = document.querySelector('.square2');
-let square3 = document.querySelector('.square3');
-let square4 = document.querySelector('.square4');
-let square5 = document.querySelector('.square5');
-
+let click_toggles = [...document.querySelectorAll('.click-toggle')];
+let squares = [...document.querySelectorAll('.square')];
 // + icon
-let plus_1 = document.querySelector('.plus-1');
-let plus_2 = document.querySelector('.plus-2');
-let plus_3 = document.querySelector('.plus-3');
-let plus_4 = document.querySelector('.plus-4');
-let plus_5 = document.querySelector('.plus-5');
-
+let pluss = [...document.querySelectorAll('.plus')];
 // - icon
-let minus_1 = document.querySelector('.minus-1');
-let minus_2 = document.querySelector('.minus-2');
-let minus_3 = document.querySelector('.minus-3');
-let minus_4 = document.querySelector('.minus-4');
-let minus_5 = document.querySelector('.minus-5');
+let minuss = [...document.querySelectorAll('.minus')];
 
-let clickTime = 0;
+// let clickTime = 0;
 
 // 訂單明細按鈕
-click_first.onclick = function () {
-    clickTime++;
+click_toggles.forEach((click_toggle,index)=>{
+    click_toggle.addEventListener('click',()=>{        
+        pluss[index].classList.toggle('active');
+        minuss[index].classList.toggle('active');
+        squares[index].classList.toggle('active');
+    });
+});
 
-    if (clickTime % 2 == 0) {
-        plus_1.style.display = 'block'
+// click_first.onclick = function () {
+//     clickTime++;
 
-        minus_1.style.display ='none';
+//     if (clickTime % 2 == 0) {
+//         plus_1.style.display = 'block'
 
-        square1.style.display = 'none';
-    }
+//         minus_1.style.display ='none';
 
-    else {
-        minus_1.style.display = 'block';
+//         square1.style.display = 'none';
+//     }
 
-        plus_1.style.display = 'none';
+//     else {
+//         minus_1.style.display = 'block';
 
-        square1.style.display = 'block';
-    }
-}
+//         plus_1.style.display = 'none';
 
-click_second.onclick = function () {
-    clickTime++;
+//         square1.style.display = 'block';
+//     }
+// }
 
-    if (clickTime % 2 == 0) {
-        plus_2.style.display = 'block'
+// click_second.onclick = function () {
+//     clickTime++;
 
-        minus_2.style.display ='none';
+//     if (clickTime % 2 == 0) {
+//         plus_2.style.display = 'block'
 
-        square2.style.display = 'none';
-    }
+//         minus_2.style.display ='none';
 
-    else {
-        minus_2.style.display = 'block';
+//         square2.style.display = 'none';
+//     }
 
-        plus_2.style.display = 'none';
+//     else {
+//         minus_2.style.display = 'block';
 
-        square2.style.display = 'block';
-    }
-}
+//         plus_2.style.display = 'none';
 
-click_third.onclick = function () {
-    clickTime++;
+//         square2.style.display = 'block';
+//     }
+// }
 
-    if (clickTime % 2 == 0) {
-        plus_3.style.display = 'block'
+// click_third.onclick = function () {
+//     clickTime++;
 
-        minus_3.style.display ='none';
+//     if (clickTime % 2 == 0) {
+//         plus_3.style.display = 'block'
 
-        square3.style.display = 'none';
-    }
+//         minus_3.style.display ='none';
 
-    else {
-        minus_3.style.display = 'block';
+//         square3.style.display = 'none';
+//     }
 
-        plus_3.style.display = 'none';
+//     else {
+//         minus_3.style.display = 'block';
 
-        square3.style.display = 'block';
-    }
-}
+//         plus_3.style.display = 'none';
 
-click_fourth.onclick = function () {
-    clickTime++;
+//         square3.style.display = 'block';
+//     }
+// }
 
-    if (clickTime % 2 == 0) {
-        plus_4.style.display = 'block'
+// click_fourth.onclick = function () {
+//     clickTime++;
 
-        minus_4.style.display ='none';
+//     if (clickTime % 2 == 0) {
+//         plus_4.style.display = 'block'
 
-        square4.style.display = 'none';
-    }
+//         minus_4.style.display ='none';
 
-    else {
-        minus_4.style.display = 'block';
+//         square4.style.display = 'none';
+//     }
 
-        plus_4.style.display = 'none';
+//     else {
+//         minus_4.style.display = 'block';
 
-        square4.style.display = 'block';
-    }
-}
+//         plus_4.style.display = 'none';
 
-click_fifth.onclick = function () {
-    clickTime++;
+//         square4.style.display = 'block';
+//     }
+// }
 
-    if (clickTime % 2 == 0) {
-        plus_5.style.display = 'block'
+// click_fifth.onclick = function () {
+//     clickTime++;
 
-        minus_5.style.display ='none';
+//     if (clickTime % 2 == 0) {
+//         plus_5.style.display = 'block'
 
-        square5.style.display = 'none';
-    }
+//         minus_5.style.display ='none';
 
-    else {
-        minus_5.style.display = 'block';
+//         square5.style.display = 'none';
+//     }
 
-        plus_5.style.display = 'none';
+//     else {
+//         minus_5.style.display = 'block';
 
-        square5.style.display = 'block';
-    }
-}
+//         plus_5.style.display = 'none';
+
+//         square5.style.display = 'block';
+//     }
+// }
