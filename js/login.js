@@ -23,7 +23,7 @@ function judgment(display,readOnly){
     
 }
 
-let click_toggles = [...document.querySelectorAll('.click-toggle')];
+let click_toggles = [...document.querySelectorAll('.order-detail-click')];
 let squares = [...document.querySelectorAll('.square')];
 // + icon
 let pluss = [...document.querySelectorAll('.plus')];
