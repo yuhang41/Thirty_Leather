@@ -56,10 +56,6 @@
     align-items: center;
     text-align: center;
     z-index: 2;
-    // @include tablet(){
-    //     width: 260px;
-    //     height: 260px;
-    // }
     img {
         position: absolute;
         width: 215px;
@@ -277,6 +273,21 @@ main{
                 max-width: 200px;
                 margin: auto;
                 width: 100%;
+                &.sticky{
+                    position: fixed!important;
+                    top: 10px;
+                    left:90px;
+                    width: 100%;
+                    animation: smoothScroll 1s forwards;
+                }
+                @keyframes smoothScroll {
+                    0% {
+                        transform: translateY(-40px);
+                    }
+                    100% {
+                        transform: translateY(0px);
+                    }
+                }
                 .commodity-menu-title{
                     cursor: pointer;
                     padding-left: 10px;

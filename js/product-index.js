@@ -23,11 +23,17 @@ clickables.forEach((clickable,index) =>{
 //navbar
 //When the user scrolls the page, execute myFunction
 window.onscroll = function(){myFunction()};
-//取得banner的高度
+//取得螢幕的高度
 var  screenHeight = screen.height;
-console.log(screenHeight);
+
 let backTopBtn = document.querySelector('.back-top');
+let commodityOpt = document.querySelector('.all-commodity');
 function myFunction() {
+  if(window.pageYOffset >= screenHeight/2){
+    commodityOpt.classList.add("sticky");
+  }else{
+    commodityOpt.classList.remove("sticky");
+  }
   if (window.pageYOffset >= screenHeight) {
     backTopBtn.classList.add("sticky");
   } else {
