@@ -29,15 +29,19 @@ let squares = [...document.querySelectorAll('.square')];
 let pluss = [...document.querySelectorAll('.plus')];
 // - icon
 let minuss = [...document.querySelectorAll('.minus')];
-
 // let clickTime = 0;
 
 // 訂單明細按鈕
-click_toggles.forEach((click_toggle,index)=>{
-    click_toggle.addEventListener('click',()=>{        
-        pluss[index].classList.toggle('active');
-        minuss[index].classList.toggle('active');
-        squares[index].classList.toggle('active');
+click_toggles.forEach((click_toggle,index)=>{    
+    click_toggle.addEventListener('click',(e)=>{        
+        if(!squares[index].classList.contains('active')){
+            squares[index].classList.add('active');
+            pluss[index].classList.toggle('active');
+            minuss[index].classList.toggle('active');            
+            setTimeout(()=>{
+                squares[index].classList.remove('active');
+            },1000);
+        }
     });
 });
 
