@@ -670,20 +670,25 @@ main {
                                                         color: $color-MoreButton;
                                                         line-height: 40px;
                                                     }
-                                                    .plus{
-                                                        &.active{
-                                                            display: none;
-                                                        }
-                                                    }
-                                                    .minus{
+                                                    .plus{                                                        
                                                         display: none;
-                                                        &.active{
-                                                            display: block;
-                                                        }
+                                                        
+                                                    }
+                                                    .minus{                                                        
+                                                        display: block;
+                                                        
                                                     }
                                                     .order-detail {
                                                         font-size: 18px;
                                                         line-height: 40px;
+                                                    }
+                                                    &.collapsed{
+                                                        .plus{
+                                                            display: block;
+                                                        }
+                                                        .minus{
+                                                            display: none;                                                            
+                                                        }
                                                     }
                                                 }
     

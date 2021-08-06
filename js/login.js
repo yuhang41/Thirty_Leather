@@ -23,27 +23,25 @@ function judgment(display,readOnly){
     
 }
 
-let click_toggles = [...document.querySelectorAll('.order-detail-click')];
-let squares = [...document.querySelectorAll('.square')];
-// + icon
-let pluss = [...document.querySelectorAll('.plus')];
-// - icon
-let minuss = [...document.querySelectorAll('.minus')];
-// let clickTime = 0;
+// let click_toggles = [...document.querySelectorAll('.order-detail-click')];
+// let squares = [...document.querySelectorAll('.square')];
+// // + icon
+// let pluss = [...document.querySelectorAll('.plus')];
+// // - icon
+// let minuss = [...document.querySelectorAll('.minus')];
+// // let clickTime = 0;
 
-// 訂單明細按鈕
-click_toggles.forEach((click_toggle,index)=>{    
-    click_toggle.addEventListener('click',(e)=>{        
-        if(!squares[index].classList.contains('active')){
-            squares[index].classList.add('active');
-            pluss[index].classList.toggle('active');
-            minuss[index].classList.toggle('active');            
-            setTimeout(()=>{
-                squares[index].classList.remove('active');
-            },1000);
-        }
-    });
-});
+// // 訂單明細按鈕
+// click_toggles.forEach((click_toggle,index)=>{    
+//     click_toggle.addEventListener('click',(e)=>{     
+        
+//         // console.log(eval(click_toggle.getAttribute('aria-expanded')));
+//         if(!eval(click_toggle.getAttribute('aria-expanded'))){            
+//             pluss[index].classList.toggle('active');
+//             minuss[index].classList.toggle('active');
+//         }
+//     });
+// });
 
 // click_first.onclick = function () {
 //     clickTime++;
