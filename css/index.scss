@@ -546,6 +546,9 @@ main {
             right: 25px;
             z-index: 5;
             transition: 1s;
+            @include bg-iphone(){
+                right: 5px;
+            }
             &.active {
                 .more-button-list {
                     opacity: 1;
@@ -608,7 +611,10 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-
+                @include bg-iphone(){
+                    width: 300px;
+                    right: 6px;
+                }
                 li {
                     opacity: 0;
                 }
@@ -711,6 +717,9 @@ main {
                         align-items: center;
                         margin-bottom: 10px;
                         cursor: pointer;
+                        @include bg-iphone(){
+                            width: 260px;
+                        }
                         .facebook-icon {
                             width: 30px;
                             height: 30px;
@@ -730,6 +739,9 @@ main {
                             letter-spacing: $font-letter-space-50;
                             color: $color-White;
                             margin: 0px;
+                            @include bg-iphone(){
+                                font-size: $H9-font-size;
+                            }
                         }
                     }
                     .line-button {
@@ -742,6 +754,11 @@ main {
 
                         display: flex;
                         align-items: center;
+                        @include bg-iphone(){
+                            width: 260px;
+                            padding: 0px 18px;
+
+                        }
                         .line-icon {
                             width: 30px;
                             height: 30px;
@@ -750,6 +767,9 @@ main {
                             text-align: center;
                             line-height: 28px;
                             margin-right: 45px;
+                            @include bg-iphone(){
+                                margin-right: 12px;
+                            }
                             span {
                                 font-size: 13px;
                                 color: $color-Green;
@@ -761,6 +781,9 @@ main {
                             letter-spacing: $font-letter-space-50;
                             color: $color-White;
                             margin: 0px;
+                            @include bg-iphone(){
+                                font-size: $H9-font-size;
+                            }
                         }
                     }
                 }
