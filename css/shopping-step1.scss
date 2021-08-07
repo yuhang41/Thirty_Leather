@@ -549,7 +549,7 @@ main{
                                         }
                                     }
                                 }
-                                .favorite{
+                                .favorite{                                    
                                     .fa-star{
                                         cursor: pointer;
                                         font-size: $H9-font-size;                                
@@ -559,7 +559,7 @@ main{
                                         }
                                     }
                                 }
-                                .favorite.active{
+                                .favorite.active{                                    
                                     .fa-star{
                                         color: $color-Apricot;
                                         animation: star-fold 1s ease-in-out;
@@ -575,7 +575,7 @@ main{
                                             border-radius: 50%;
                                             animation: firework .5s ease-in-out;
                                         }
-                                    }
+                                    }                                    
                                 }
                                 //收藏效果
                                 @keyframes firework {

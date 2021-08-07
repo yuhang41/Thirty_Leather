@@ -130,6 +130,7 @@ main .trace-page .trace-lists .list-group .list-group-item.active {
   border-right: 18px solid #86b2c4;
   margin-left: -18px;
   z-index: 2;
+  font-size: 21px;
 }
 
 @media (max-width: 991px) {
@@ -140,19 +141,18 @@ main .trace-page .trace-lists .list-group .list-group-item.active {
     border-right: none;
     border-bottom: 18px solid #86b2c4;
     z-index: 2;
-    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   main .trace-page .trace-lists .list-group .list-group-item.active {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 520px) {
   main .trace-page .trace-lists .list-group .list-group-item.active {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
