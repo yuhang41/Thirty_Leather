@@ -17,6 +17,8 @@ let bottom_price = document.querySelector('.bottom-price')
 
 let bottom_status = document.querySelector('.bottom-status');
 
+let add_shoppingCart = document.querySelector('.add-shoppingCart');
+
 let bottom_delete = document.querySelector('.bottom-delete');
 
 
@@ -37,6 +39,7 @@ bottom_delete.addEventListener('click', function () {
     bottom_title.style.display = 'none'
     bottom_price.style.display = 'none'
     bottom_status.style.display = 'none'
+    add_shoppingCart.style.display = 'none'
     bottom_delete.style.display = 'none'
 });
 
