@@ -69,9 +69,11 @@ main {
         .page-title {
             font-size: 72px;
             color: $color-White;
-
+            position: relative;
+            margin-bottom: 10px;
+            transform: translateY(33px);
             @include sm-phone() {
-                font-size: $H2-font-size;
+                visibility: hidden;
             }
         }
 
@@ -129,7 +131,7 @@ main {
                     }
 
                     &.active {
-                        width: 205px;
+                        max-width: 205px;
                         background-color: $color-White;
                         color: $color-WedgwoodBlue;
                         border-color: $color-SkyBlue;

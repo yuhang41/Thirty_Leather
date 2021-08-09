@@ -1196,38 +1196,6 @@ main .main-container .product-container .productshop-container .commidity-contai
   visibility: hidden;
 }
 
-main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart {
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-}
-
-main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim:before, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim:before {
-  position: relative;
-  content: '';
-  display: block;
-  margin-top: 100%;
-}
-
-main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .pre-order .anim:after, main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-buy .putcart .anim:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-}
-
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1309,6 +1277,12 @@ main .main-container .product-container .productshop-container .commidity-contai
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .order-amount .plus:hover {
   color: #ffffff;
   background-color: #abbac9;
+}
+
+main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-button .sold-out {
+  width: 100%;
+  font-size: 30px;
+  color: #77170a;
 }
 
 main .main-container .product-container .productshop-container .commidity-container .order-detail .order-shipping .order-price {

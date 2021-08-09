@@ -827,35 +827,7 @@ main{
                                     .hidden-scrollbar::-webkit-scrollbar {
                                         visibility: hidden;
                                      }
-                                    .pre-order,.putcart{
-                                        position: relative;
-                                        overflow: hidden;
-                                        z-index: 0;
-                                        .anim {
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            z-index: -1;
-                                            transform: translate(-50%,-50%);
-                                        
-                                            &:before {
-                                                position: relative;
-                                                content: '';
-                                                display: block;
-                                                margin-top: 100%;
-                                            }
-                                            
-                                            &:after {
-                                                content: '';
-                                                position: absolute;
-                                                top: 0;
-                                                bottom:0;
-                                                left: 0;
-                                                right: 0;
-                                                border-radius: 50%;
-                                            }
-                                        }
-                                    }                                    
+                                                                     
                                 }
                                 .order-amount{
                                     display: flex;
@@ -912,6 +884,11 @@ main{
                                             background-color: $color-Background-line;
                                         }
                                     }
+                                }
+                                .sold-out{
+                                    width: 100%;
+                                    font-size: $H4-font-size;
+                                    color: $color-Deep-Red;
                                 }
                             }
                             .order-price{

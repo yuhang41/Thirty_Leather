@@ -67,10 +67,13 @@ main {
 
         .trace-title {
             font-size: 72px;
+            position: relative;
+            transform: translateY(33px);
+            margin-bottom: 10px;
             color: $color-White;
 
             @include sm-phone() {
-                font-size: $H2-font-size;
+                visibility: hidden;
             }
         }
 
@@ -81,6 +84,7 @@ main {
             }
 
             .list-group {
+                margin-bottom: -2px;
                 @include try-on() {
                     display: flex;
                     flex-direction: row;
@@ -96,23 +100,12 @@ main {
                     letter-spacing: $font-letter-space-200;
                     border-bottom: 1px solid black;
                     outline: none;
-                    z-index: 2;
-
-                    &:hover {
-                        font-size: $H6-font-size;
-
-                        @include bg-phone() {
-                            font-size: $H7-font-size;
-                        }
-
-                        @include sm-phone() {
-                            font-size: $H9-font-size;
-                        }
-                    }
+                    z-index: 2;                    
 
                     @include try-on() {
                         max-width: 205px;
                         width: 100%;
+                        flex: 1;
                         font-size: $H8-font-size;
                         white-space: nowrap;
                         padding: 0;
@@ -124,17 +117,19 @@ main {
                     }
 
                     @include bg-phone() {
-                        font-size: $H10-font-size;
-                        display: flex;
-                        flex-direction: column;
+                        font-size: $H10-font-size;                        
                     }
 
                     @include sm-phone() {
                         font-size: $H11-font-size;
                     }
+                    @include four-fifty() {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
                     &.active {
-                        width: 205px;
+                        max-width: 205px;
                         background-color: $color-White;
                         color: $color-WedgwoodBlue;
                         border-color: $color-SkyBlue;
@@ -291,8 +286,7 @@ main {
                             .data-block2 {
                                 font-size: $H8-font-size;
                                 color: $color-Nav-icon;
-                                border-bottom: 2px solid #76828e;
-                                padding-bottom: 60px;
+                                border-bottom: 2px solid #76828e;                                
 
                                 @include bg-phone() {
                                     font-size: $H9-font-size;
@@ -310,179 +304,155 @@ main {
                                     font-size: $H11-font-size;
                                 }
 
-                                .block2-top {
-                                    .top-img {
-                                        flex: 0 0 23.5%;
+                                // .block2-top {
+                                //     .top-img {
+                                //         flex: 0 0 23.5%;
 
-                                        @include four-fifty() {
-                                            flex: 0 0 33.5%;
-                                        }
+                                //         @include four-fifty() {
+                                //             flex: 0 0 33.5%;
+                                //         }
 
-                                        img {
-                                            max-width: 238px;
-                                            width: 100%;
-                                            max-height: 238px;
-                                            height: 100%;
+                                //         img {
+                                //             max-width: 238px;
+                                //             width: 100%;
+                                //             max-height: 238px;
+                                //             height: 100%;
 
-                                            @include four-fifty() {
-                                                width: 120px;
-                                                height: 120px;
-                                                margin-top: -24px;
-                                            }
-                                        }
-                                    }
+                                //             @include four-fifty() {
+                                //                 width: 120px;
+                                //                 height: 120px;
+                                //                 margin-top: -24px;
+                                //             }
+                                //         }
+                                //     }
 
-                                    .top-title {
-                                        flex: 0 0 46.5%;
-                                        padding-top: 24px;
+                                //     .top-title {
+                                //         flex: 0 0 46.5%;
+                                //         padding-top: 24px;
 
-                                        @include bg-phone() {
-                                            flex: 0 0 40.5%;
-                                        }
+                                //         @include bg-phone() {
+                                //             flex: 0 0 40.5%;
+                                //         }
 
-                                        @include sm-phone() {
-                                            flex: 0 0 34.5%;
-                                        }
+                                //         @include sm-phone() {
+                                //             flex: 0 0 34.5%;
+                                //         }
 
-                                        @include four-fifty() {
-                                            flex: 0 0 66.5%;
-                                            padding-top: 0px;
-                                        }
+                                //         @include four-fifty() {
+                                //             flex: 0 0 66.5%;
+                                //             padding-top: 0px;
+                                //         }
 
-                                        .heading1 {
-                                            @include tablet() {
-                                                display: flex;
-                                                flex-direction: column;
-                                            }
+                                //         .heading1 {
+                                //             @include tablet() {
+                                //                 display: flex;
+                                //                 flex-direction: column;
+                                //             }
 
-                                            .genuine-leather {
-                                                @include tablet() {
-                                                    padding-left: 7px;
-                                                }
-                                            }
+                                //             .genuine-leather {
+                                //                 @include tablet() {
+                                //                     padding-left: 7px;
+                                //                 }
+                                //             }
 
-                                            .fourfifty {
-                                                display: none;
+                                //             .fourfifty {
+                                //                 display: none;
 
-                                                @include four-fifty() {
-                                                    padding-top: 24px;
-                                                    padding-left: 6px;
-                                                    display: flex;
-                                                }
+                                //                 @include four-fifty() {
+                                //                     padding-top: 24px;
+                                //                     padding-left: 6px;
+                                //                     display: flex;
+                                //                 }
 
-                                                .ffz-price {
-                                                    .ffz-delete {
-                                                        text-decoration: line-through;
-                                                    }
-                                                    .ffz-modify {
-                                                        color: #ed701b;
-                                                    }
-                                                }
+                                //                 .ffz-price {
+                                //                     .ffz-delete {
+                                //                         text-decoration: line-through;
+                                //                     }
+                                //                     .ffz-modify {
+                                //                         color: #ed701b;
+                                //                     }
+                                //                 }
 
-                                                .ffz-cart {
-                                                    margin-top: 12px;
-                                                    margin-left: 56px;
-                                                }
+                                //                 .ffz-cart {
+                                //                     margin-top: 12px;
+                                //                     margin-left: 56px;
+                                //                 }
 
-                                                .ffz-can {
-                                                    margin-top: 12px;
-                                                    margin-left: 20px;
-                                                }
-                                            }
-                                        }
-                                    }
+                                //                 .ffz-can {
+                                //                     margin-top: 12px;
+                                //                     margin-left: 20px;
+                                //                 }
+                                //             }
+                                //         }
+                                //     }
 
-                                    .top-price {
-                                        flex: 0 0 9.5%;
+                                //     .top-price {
+                                //         flex: 0 0 9.5%;
 
-                                        @include bg-phone() {
-                                            flex: 0 0 11.5%;
-                                        }
+                                //         @include bg-phone() {
+                                //             flex: 0 0 11.5%;
+                                //         }
 
-                                        @include sm-phone() {
-                                            flex: 0 0 13.5%;
-                                        }
+                                //         @include sm-phone() {
+                                //             flex: 0 0 13.5%;
+                                //         }
 
-                                        @include four-fifty() {
-                                            display: none;
-                                        }
+                                //         @include four-fifty() {
+                                //             display: none;
+                                //         }
 
-                                        .delete-price1 {
-                                            text-decoration: line-through;
-                                        }
+                                //         .delete-price1 {
+                                //             text-decoration: line-through;
+                                //         }
 
-                                        .modify-price1 {
-                                            color: #ed701b;
-                                        }
-                                    }
+                                //         .modify-price1 {
+                                //             color: #ed701b;
+                                //         }
+                                //     }
 
-                                    .top-status {
-                                        flex: 0 0 12%;
+                                //     .top-status {
+                                //         flex: 0 0 12%;
 
-                                        @include bg-phone() {
-                                            flex: 0 0 14%;
-                                        }
+                                //         @include bg-phone() {
+                                //             flex: 0 0 14%;
+                                //         }
 
-                                        @include sm-phone() {
-                                            flex: 0 0 16%;
-                                        }
+                                //         @include sm-phone() {
+                                //             flex: 0 0 16%;
+                                //         }
 
-                                        @include four-fifty() {
-                                            display: none;
-                                        }
+                                //         @include four-fifty() {
+                                //             display: none;
+                                //         }
 
-                                        .status1 {
-                                            @include tablet() {
-                                                display: flex;
-                                                flex-direction: column;
-                                                text-align: center;
-                                            }
+                                        
+                                //     }
 
-                                            .subscribed, .goods-inform {
-                                                @include sm-tablet() {
-                                                    display: none;
-                                                }
-                                            }
+                                //     .top-delete {
+                                //         flex: 0 0 8.5%;
+                                //         cursor: pointer;
 
-                                            img {
-                                                width: 24px;
-                                                height: 24px;
-                                                display: none;
-                                                padding-top: 2px;
+                                //         @include bg-phone() {
+                                //             flex: 0 0 10.5%;
+                                //         }
 
-                                                @include sm-tablet() {
-                                                    display: flex;
-                                                    margin: auto;
-                                                }
-                                            }
-                                        }
-                                    }
+                                //         @include sm-phone() {
+                                //             flex: 0 0 12.5%;
+                                //         }
 
-                                    .top-delete {
-                                        flex: 0 0 8.5%;
-                                        cursor: pointer;
+                                //         @include four-fifty() {
+                                //             display: none;
+                                //         }
 
-                                        @include bg-phone() {
-                                            flex: 0 0 10.5%;
-                                        }
+                                //         img {
+                                //             width: 22px;
+                                //             height: 22px;
+                                //         }
+                                //     }
+                                // }
 
-                                        @include sm-phone() {
-                                            flex: 0 0 12.5%;
-                                        }
-
-                                        @include four-fifty() {
-                                            display: none;
-                                        }
-
-                                        img {
-                                            width: 22px;
-                                            height: 22px;
-                                        }
-                                    }
-                                }
-
-                                .block2-bottom {
-                                    .bottom-img {
+                                .block2-order {
+                                    .order-img {
                                         flex: 0 0 23.5%;
 
                                         @include four-fifty() {
@@ -502,7 +472,7 @@ main {
                                         }
                                     }
 
-                                    .bottom-title {
+                                    .order-title {
                                         flex: 0 0 46.5%;
                                         padding-top: 24px;
 
@@ -561,7 +531,7 @@ main {
                                         }
                                     }
 
-                                    .bottom-price {
+                                    .order-price {
                                         flex: 0 0 9.5%;
 
                                         @include bg-phone() {
@@ -584,9 +554,9 @@ main {
                                             color: #ed701b;
                                         }
                                     }
-
-                                    .bottom-status {
-                                        flex: 0 0 12%;
+                                    .replenishment,.order-status{
+                                        flex: 0 0 12%;                                        
+                                        position: relative;
 
                                         @include bg-phone() {
                                             flex: 0 0 14%;
@@ -599,7 +569,34 @@ main {
                                         @include four-fifty() {
                                             display: none;
                                         }
+                                    }
+                                    .replenishment{
+                                        .status1 {
+                                            @include tablet() {                                                
+                                                flex-direction: column;
+                                                text-align: center;
+                                            }
 
+                                            .subscribed, .goods-inform {
+                                                @include sm-tablet() {
+                                                    display: none;
+                                                }
+                                            }
+
+                                            img {
+                                                width: 24px;
+                                                height: 24px;
+                                                display: none;
+                                                padding-top: 2px;
+
+                                                @include sm-tablet() {
+                                                    display: flex;
+                                                    margin: auto;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .order-status {                                        
                                         .add-shoppingCart {
                                             max-width: 112px;
                                             width: 100%;
@@ -608,12 +605,19 @@ main {
                                             color: $color-Nav-icon;
                                             border: 1px solid $color-Nav-icon;
                                             background-color: $color-White;
+                                            position: relative;
                                             padding: 0;
                                             margin: 0;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
-
+                                            i{
+                                                display: none;
+                                                color: $color-White;
+                                            }
+                                            &.active{
+                                                background: #6ba2f2;
+                                            }
                                             @include sm-tablet() {
                                                 display: none;
                                             }
@@ -622,7 +626,52 @@ main {
                                                 font-weight: bold;
                                                 background-color: $color-MoreButton-hover;
                                                 color: $color-White;
+                                            }                                            
+                                        }
+                                        &.active::after{
+                                            content: " + 已加入購物車";
+                                            position: absolute;
+                                            top: -50px;
+                                            left: 50%;                                            
+                                            width: 130px;
+                                            height: 40px;
+                                            transform: translateX(-50%);
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-size: $H9-font-size;
+                                            background-color: $color-Product-Detail-Circle;
+                                            color: $color-White;
+                                            border-radius: 20px;
+                                            box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);                                                                                        
+                                            animation: cart-fade-in .3s ease-in-out;
+                                        }
+                                        &.active.active2::after{
+                                            content: " + 已加入購物車";                                                                                                                                                                                                                        
+                                            animation: cart-fade-out .3s ease-in-out;
+                                            animation-fill-mode: forwards;
+                                        }
+                                                  
+                                        @keyframes cart-fade-in {
+                                            0%{
+                                                top: -20px;
+                                                opacity: 0.2;
                                             }
+                                            100%{
+                                                top: -50px;
+                                                opacity: 1;
+                                            }
+                                            
+                                        }
+                                        @keyframes cart-fade-out {
+                                            0%{
+                                                top: -50px;
+                                                opacity: 1;
+                                            }
+                                            100%{
+                                                top: -20px;
+                                                opacity:0;
+                                            } 
                                         }
 
                                         img {
@@ -641,7 +690,7 @@ main {
                                         }
                                     }
 
-                                    .bottom-delete {
+                                    .order-delete {
                                         flex: 0 0 8.5%;
                                         cursor: pointer;
 
@@ -656,12 +705,20 @@ main {
                                         @include four-fifty() {
                                             display: none;
                                         }
-
-                                        img {
-                                            width: 24px;
-                                            height: 24px;
-                                        }
+                                        .delete-cart{
+                                            border: none;
+                                            outline: none;
+                                            background: none;
+                                            img {
+                                                width: 24px;
+                                                height: 24px;
+                                            }
+                                        }                                        
                                     }
+                                }
+                                .list-null{
+                                    width: 100%;
+                                    text-align: center;
                                 }
                             }
 

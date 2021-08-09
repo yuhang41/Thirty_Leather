@@ -1,45 +1,49 @@
-let top_img = document.querySelector('.top-img');
-
-let top_title = document.querySelector('.top-title');
-
-let top_price = document.querySelector('.top-price')
-
-let top_status = document.querySelector('.top-status');
-
-let top_delete = document.querySelector('.top-delete');
+let add_shoppingCarts = document.querySelectorAll('.add-shoppingCart');
+let check = document.querySelectorAll('.fa-check');
+let orderBuy = document.querySelectorAll('.order-status')
 
 
-let bottom_img = document.querySelector('.bottom-img');
-
-let bottom_title = document.querySelector('.bottom-title');
-
-let bottom_price = document.querySelector('.bottom-price')
-
-let bottom_status = document.querySelector('.bottom-status');
-
-let bottom_delete = document.querySelector('.bottom-delete');
-
-
-let all_delete = document.querySelector('.all-delete');
-
-let data_block2 = document.querySelector('.data-block2');
-
-top_delete.addEventListener('click', function () {
-    top_img.style.display = 'none'
-    top_title.style.display = 'none'
-    top_price.style.display = 'none'
-    top_status.style.display = 'none'
-    top_delete.style.display = 'none'
+add_shoppingCarts.forEach((shoppingCart,index)=>{
+    shoppingCart.addEventListener('click',function(e){
+        if(eval(shoppingCart.dataset.bool)){
+            shoppingCart.dataset.bool = false;
+            cartClick(index);
+            
+            let promise = new Promise((resolve)=>{
+                window.setTimeout(function(){
+                cartUnclick(index);
+                return resolve();
+                },500)    
+            })
+        
+            promise.then(()=>{
+                window.setTimeout(function(){
+                cartDelete(index);
+                },250)       
+            });
+        }      
+    });
 });
 
-bottom_delete.addEventListener('click', function () {
-    bottom_img.style.display = 'none'
-    bottom_title.style.display = 'none'
-    bottom_price.style.display = 'none'
-    bottom_status.style.display = 'none'
-    bottom_delete.style.display = 'none'
-});
+function cartClick(index){
+    add_shoppingCarts[index].classList.add( 'active' );
+    everyStyle('','block','active',index);
+};
 
-all_delete.addEventListener('click', function () {
-    data_block2.style.display = 'none'
-});
+function cartUnclick(index){  
+    if( orderBuy[index].classList.contains('active')){
+        everyStyle('加入購物車','none','active2',index);
+        add_shoppingCarts[index].classList.remove('active');
+    }
+};
+function cartDelete(index){          
+    orderBuy[index].classList.remove('active');
+    orderBuy[index].classList.remove('active2');    
+    add_shoppingCarts[index].dataset.bool = true;    
+}
+
+function everyStyle(data,display,className,index){
+    add_shoppingCarts[index].firstChild.data = data;
+    check[index].style.display = display ;
+    orderBuy[index].classList.add( className );
+}
