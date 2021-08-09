@@ -737,6 +737,14 @@ main .main-container .chatbot {
   transition: 1s;
 }
 
+@media (max-width: 450px) {
+  main .main-container .chatbot {
+    right: 5px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .chatbot.active .more-button-list {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -825,6 +833,15 @@ main .main-container .more-button-list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+  main .main-container .more-button-list {
+    width: 300px;
+    right: 6px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .more-button-list li {
@@ -960,6 +977,14 @@ main .main-container .more-button-list-item:nth-child(3) .facebook-button {
   cursor: pointer;
 }
 
+@media (max-width: 450px) {
+  main .main-container .more-button-list-item:nth-child(3) .facebook-button {
+    width: 260px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .more-button-list-item:nth-child(3) .facebook-button .facebook-icon {
   width: 30px;
   height: 30px;
@@ -983,6 +1008,14 @@ main .main-container .more-button-list-item:nth-child(3) .facebook-button p {
   margin: 0px;
 }
 
+@media (max-width: 450px) {
+  main .main-container .more-button-list-item:nth-child(3) .facebook-button p {
+    font-size: 15px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .more-button-list-item:nth-child(3) .line-button {
   width: 318px;
   height: 52px;
@@ -998,6 +1031,15 @@ main .main-container .more-button-list-item:nth-child(3) .line-button {
           align-items: center;
 }
 
+@media (max-width: 450px) {
+  main .main-container .more-button-list-item:nth-child(3) .line-button {
+    width: 260px;
+    padding: 0px 18px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .more-button-list-item:nth-child(3) .line-button .line-icon {
   width: 30px;
   height: 30px;
@@ -1006,6 +1048,14 @@ main .main-container .more-button-list-item:nth-child(3) .line-button .line-icon
   text-align: center;
   line-height: 28px;
   margin-right: 45px;
+}
+
+@media (max-width: 450px) {
+  main .main-container .more-button-list-item:nth-child(3) .line-button .line-icon {
+    margin-right: 12px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 main .main-container .more-button-list-item:nth-child(3) .line-button .line-icon span {
@@ -1019,6 +1069,14 @@ main .main-container .more-button-list-item:nth-child(3) .line-button p {
   letter-spacing: 0.8px;
   color: #ffffff;
   margin: 0px;
+}
+
+@media (max-width: 450px) {
+  main .main-container .more-button-list-item:nth-child(3) .line-button p {
+    font-size: 15px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @-webkit-keyframes onePulse {

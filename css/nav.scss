@@ -49,6 +49,13 @@
         transition: 1s;
     }
 }
+// 320
+@mixin iphone {
+    @media(max-width:320px){
+        @content;
+        transition: 1s;
+    }
+}
 //background change
 @mixin background-change{
     position: relative;
@@ -461,6 +468,9 @@ nav{
                 margin: auto;
                 cursor: pointer;
                 padding: 0px;
+                @include iphone(){
+                    background-color: $color-Deep-Blue;
+                }
                               
               .stick {
                 width: 28px;
@@ -476,14 +486,23 @@ nav{
               
               .stick-1.open {
                 animation: stick-1-open .6s ease-out forwards;
+                @include iphone(){
+                    animation: stick-1-open-2 .6s ease-out forwards;
+                }
               }
               
               .stick-2.open {
                 animation: stick-2-open .6s linear forwards;
+                @include iphone(){
+                    animation: stick-2-open-2 .6s ease-out forwards;
+                }
               }
               
               .stick-3.open {
                 animation: stick-3-open .6s linear forwards;
+                @include iphone(){
+                    animation: stick-3-open-2 .6s ease-out forwards;
+                }
               }
               
               @keyframes stick-1-open {
@@ -502,6 +521,20 @@ nav{
                 80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
                 100% {background-color: $color-Deep-Blue; transform: translate(1.5px, -12.5px) rotate(-40deg);}
               }
+              @keyframes stick-1-open-2 {
+                0%   {width: 40px;}
+                40%  {background-color: $color-Border-Line; width: 8px; transform: translate(20px, 0px);}
+                75%, 80%  {width: 8px; transform: translate(4px, -50px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                100% {background-color: $color-Border-Line; width: 4px; transform: translate(10.5px, 19px);}
+              }
+              @keyframes stick-2-open-2 {
+                80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
+                100% {background-color: $color-Border-Line; transform: translate(2px, -0.2px) rotate(40deg);}
+              }
+              @keyframes stick-3-open-2 {
+                80%  {background-color: $color-LightGray; transform: translate(0px, 0px) rotate(0deg);}
+                100% {background-color: $color-Border-Line; transform: translate(1.5px, -12.5px) rotate(-40deg);}
+              }
               
               .stick-1.close {
                 width: 4px; 
@@ -512,11 +545,17 @@ nav{
               .stick-2.close {
                 transform: translate(0px, 0px) rotate(40deg);
                 animation: stick-2-close .6s ease-out forwards;
+                @include iphone(){
+                    animation: stick-2-close-2 .6s ease-out forwards;
+                }
               }
               
               .stick-3.close {
                 transform: translate(0px, -23px) rotate(-40deg);
                 animation: stick-3-close .6s ease-out forwards;
+                @include iphone(){
+                    animation: stick-3-close-2 .6s ease-out forwards;
+                }
               }
               }
               @keyframes stick-1-close {
@@ -536,6 +575,22 @@ nav{
               @keyframes stick-3-close {
                 0%   {background-color: $color-Deep-Blue; width: 28px;}
                 20%  {background-color: $color-Deep-Blue; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
+                40%  {background-color: $color-White;}
+                65%  {transform: translate(0, -93px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                90%  {width: 8px;}
+                100% {width: 28px; transform: translate(0, 0px);}
+              }
+              @keyframes stick-2-close-2 {
+                0%   {background-color: $color-Border-Line; width: 28px;}
+                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, 0px) rotate(40deg);}
+                40%  {background-color: $color-White; width: 0px;}
+                65%  {transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1);}
+                80%  {width: 0px;}
+                100% {width: 28px; transform: translate(0, 0px);}
+              }
+              @keyframes stick-3-close-2 {
+                0%   {background-color: $color-Border-Line; width: 28px;}
+                20%  {background-color: $color-Border-Line; width: 8px; transform: translate(0, -23px) rotate(-40deg);}
                 40%  {background-color: $color-White;}
                 65%  {transform: translate(0, -93px); animation-timing-function: cubic-bezier(0,1,1,1);}
                 90%  {width: 8px;}
