@@ -124,7 +124,7 @@ main .trace-page .trace-lists .list-group .list-group-item {
 }
 
 main .trace-page .trace-lists .list-group .list-group-item.active {
-  max-width: 205px;
+  width: 205px;
   background-color: #ffffff;
   color: #8090a0;
   border-color: #86b2c4;

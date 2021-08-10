@@ -1,17 +1,3 @@
-let AllCommodity = document.querySelector('.AllCommodity');
-let Snowshoe = document.querySelector('.Snowshoe');
-
-function AllCommodityHandler(){
-    AllCommodity.classList.toggle('active');
-}
-function SnowshoeHandler(){
-    Snowshoe.classList.toggle('active');
-}
-AllCommodity.addEventListener('click',AllCommodityHandler);
-Snowshoe.addEventListener('click',SnowshoeHandler);
-
-
-
 let clickables = document.querySelectorAll('.clickable');
 let anim = document.querySelectorAll('.anim');
 clickables.forEach((clickable,index) =>{
@@ -27,11 +13,13 @@ window.onscroll = function(){myFunction()};
 var  screenHeight = screen.height;
 
 let backTopBtn = document.querySelector('.back-top');
+let left_menu = document.querySelector('.commodity-menu');
 let commodityOpt = document.querySelector('.all-commodity');
-function myFunction() {
-  if(window.pageYOffset >= screenHeight/2){
+let left_menu_top = left_menu.offsetTop + 100;
+function myFunction() {  
+  if(window.pageYOffset >= left_menu_top){
     commodityOpt.classList.add("sticky");
-  }else{
+  } else{
     commodityOpt.classList.remove("sticky");
   }
   if (window.pageYOffset >= screenHeight) {

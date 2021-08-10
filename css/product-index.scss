@@ -69,28 +69,34 @@
         // }
     }
     .content {
-       
+        height: 166px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .text {
             padding: 0px 5px;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             p {
                 margin: 0px;
                 &:nth-child(1) {
                     font-size: $H7-font-size;
                     font-weight: lighter;
                     letter-spacing: $font-letter-space-100;
-                    color: $color-IronGray;
-                    margin-bottom: 10px;
+                    color: $color-IronGray;                    
                 }
                 &:nth-child(2) {
                     font-size: $H8-font-size;
                     font-weight: normal;
                     letter-spacing: $font-letter-space-100;
                     color: $color-IronGray;
-                    margin-bottom: 30px;
                 }
             }
         }
         .price {
+            height: 40%;
             span {
                 &:nth-child(1) {
                     font-size: $H9-font-size;
@@ -109,7 +115,7 @@
     a{
         max-width: 200px;
         width: 100%;
-        margin: 30px 0px 10px 0px;
+        margin-bottom: 10px;
         &:hover{
             text-decoration: none;
         }
@@ -265,7 +271,7 @@ main{
             max-width: 375px;
             width: 100%;
             padding-top: 100px;
-            @include background-change();
+            @include background-change();            
             @include sm-tablet(){
                 display: none;
             }
@@ -274,7 +280,7 @@ main{
                 margin: auto;
                 width: 100%;
                 &.sticky{
-                    position: fixed!important;
+                    position: fixed;
                     top: 10px;
                     left:90px;
                     width: 100%;
@@ -299,17 +305,17 @@ main{
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.AllCommodity.active::after{
+                    &.AllCommodity.collapsed::after{
                         content:'\f078';
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.Snowshoe::after{
+                    &.Snowshoe.collapsed::after{
                         content:'\f078';                    
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.Snowshoe.active::after{
+                    &.Snowshoe::after{
                         content:'\f077';
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
@@ -408,8 +414,13 @@ main{
                             }
                         }                    
                     }
-                }                
+                }                             
             }
+            .null-product{
+                width: 100%;
+                text-align: center;
+                padding: 100px 0;
+            }   
             .pagination{
                 width: 100%;
                 display: flex;

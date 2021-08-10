@@ -123,7 +123,7 @@ main .member-page .member-lists .list-group .list-group-item {
 }
 
 main .member-page .member-lists .list-group .list-group-item.active {
-  max-width: 205px;
+  width: 205px;
   background-color: #ffffff;
   color: #8090a0;
   border-color: #86b2c4;

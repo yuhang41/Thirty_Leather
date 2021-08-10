@@ -224,17 +224,17 @@ main{
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.AllCommodity.active::after{
+                    &.AllCommodity.collapsed::after{
                         content:'\f078';
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.Snowshoe::after{
+                    &.Snowshoe.collapsed::after{
                         content:'\f078';                    
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
                     }
-                    &.Snowshoe.active::after{
+                    &.Snowshoe::after{
                         content:'\f077';
                         font-family: "Font Awesome 5 Free";
                         font-weight: 600;
@@ -622,7 +622,10 @@ main{
                                         .color-style{
                                             display: flex;
                                             justify-content: space-between;
-                                            padding-left: 50px;                                            
+                                            padding-left: 50px;
+                                            @include sm-screen(){
+                                                padding-left: 0;
+                                            }
                                             input[type=radio]{
                                                 opacity: 0;
                                                 position: absolute;
@@ -672,6 +675,9 @@ main{
                                             font-weight: $font-Weight-B;
                                             letter-spacing: $font-letter-space-50;
                                             padding-left: 50px;
+                                            @include sm-screen(){
+                                                padding-left: 0;
+                                            }
                                             @include sm-phone(){
                                                 font-size: $H8-font-size;
                                             }
@@ -906,7 +912,8 @@ main{
                                         content: "";
                                         position: absolute;
                                         top:85px;
-                                        left: -23px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
                                         width: 325px;
                                         height: 1px;
                                         background-color: $color-Cart-Border;

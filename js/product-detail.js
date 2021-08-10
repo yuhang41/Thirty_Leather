@@ -114,11 +114,13 @@ function updateQty(element,number){
   var input = qtyArea.querySelector('input');
   var qty = Number(input.value);
   var newQty = qty + number;
-  if(newQty < 1){
+  if(newQty > input.max){
+    input.value = input.max;
+  }else if(newQty < 1){
     input.value = 1;
   }else{
     input.value= newQty;
-}
+  }
 }
 
 //加法計算
