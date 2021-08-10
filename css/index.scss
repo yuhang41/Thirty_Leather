@@ -2195,6 +2195,9 @@ main {
                     height: 0px;
                     position: relative;
                     overflow: hidden;
+                    @include sm-tablet(){
+                        height: 841px;
+                    }
                     &[data-inviewport="scale-in"] {
                         opacity: 0;
                         transition: 1s;
@@ -2202,6 +2205,9 @@ main {
                     &[data-inviewport="scale-in"].is-inViewport {
                         opacity: 1;
                         animation:  photo-fold 1s linear forwards; 
+                        @include sm-tablet(){
+                            animation: none;
+                        }
                     } 
                     @keyframes photo-fold {
                         from{

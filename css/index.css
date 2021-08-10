@@ -3900,6 +3900,14 @@ main .main-container .studio-information .studio-photo .photo {
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  main .main-container .studio-information .studio-photo .photo {
+    height: 841px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
 main .main-container .studio-information .studio-photo .photo[data-inviewport="scale-in"] {
   opacity: 0;
   -webkit-transition: 1s;
@@ -3910,6 +3918,15 @@ main .main-container .studio-information .studio-photo .photo[data-inviewport="s
   opacity: 1;
   -webkit-animation: photo-fold 1s linear forwards;
           animation: photo-fold 1s linear forwards;
+}
+
+@media (max-width: 1024px) {
+  main .main-container .studio-information .studio-photo .photo[data-inviewport="scale-in"].is-inViewport {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @-webkit-keyframes photo-fold {
