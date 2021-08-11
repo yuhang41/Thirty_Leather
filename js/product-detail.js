@@ -139,7 +139,7 @@ minusBtns.forEach(function(minusBtn){
 });
 
 //size-key
-let size_key = document.querySelector('.size-key');
+let size_key = document.querySelector('.size-eu');
 let size_radios = document.querySelectorAll('.size-checkbox');
 size_radios.forEach(radio=>{
   radio.addEventListener('click',()=>{
@@ -156,41 +156,73 @@ let cartText = window.getComputedStyle(orderBuy,'::after');
 let min = true;
 
 putcart.addEventListener('click',function(e){
-  if(min){
-    min = false;
-    cartClick();
-    
-    let promise = new Promise((resolve)=>{
-      window.setTimeout(function(){
-        cartUnclick();
-        return resolve();
-      },500)    
-    })
-
-    promise.then(()=>{
-      window.setTimeout(function(){
-        cartDelete();
-      },250)       
-    });
-  }      
+  if(eval(putcart.dataset.boolin)){
+    if(min){
+      min = false;
+      cartClick();
+      
+      let promise = new Promise((resolve)=>{
+        window.setTimeout(function(){
+          cartUnclick();
+          return resolve();
+        },500)    
+      })
+  
+      promise.then(()=>{
+        window.setTimeout(function(){
+          cartDelete();
+        },250)       
+      });
+    }
+  }else{
+    if(min){
+      min = false;
+      subscription();
+      
+      let promise = new Promise((resolve)=>{
+        window.setTimeout(function(){
+          subscriptionUnclick();
+          return resolve();
+        },500)    
+      })
+  
+      promise.then(()=>{
+        window.setTimeout(function(){
+          subscriptionDelete();
+        },250)       
+      });
+    }
+  }
 });
+function subscription(){
+  everyStyle('','block','#6ba2f2','subscription');
+}
+function subscriptionUnclick(){  
+  if( orderBuy.classList.contains('subscription')){
+    everyStyle('加入購物車','none','unset','subscription2');
+  }  
+};
+function subscriptionDelete(){       
+  AllDelete('subscription','subscription2');
+}
 
 function cartClick(){  
   everyStyle('','block','#6ba2f2','active');
 };
-
 function cartUnclick(){  
   if( orderBuy.className == 'order-buy active'){
     everyStyle('加入購物車','none','unset','active2');
   }  
 };
-function cartDelete(){  
-    console.log('刪除');    
-    orderBuy.classList.remove('active');
-    orderBuy.classList.remove('active2');
-    min = true;
+function cartDelete(){
+  AllDelete('active','active2');    
 }
 
+function AllDelete(class1,class2){
+  orderBuy.classList.remove(class1);
+  orderBuy.classList.remove(class2);
+  min = true;
+}
 function everyStyle(data,display,background,className){
   putcart.firstChild.data = data;
   check.style.display = display ;

@@ -293,6 +293,7 @@ main {
                                             margin-left: 15px;
                                             font-size: $H9-font-size;
                                             width: 230px;
+                                            color: #444444;
                                             @include four-fifty() {
                                                 margin-left: 0px;
                                             }
@@ -375,6 +376,7 @@ main {
                                                     border: 1px solid $color-WedgwoodBlue;
                                                     outline: none;
                                                     padding-left: 4px;
+                                                    color: #444444;
                                                 }
                                             }
                                         }
