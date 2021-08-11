@@ -227,29 +227,29 @@
         opacity: 0.7;
    }
 }
-.navbar{
-    .navbar-collapse{
-        @include sm-tablet(){
-            &{
-                width: 400px;
-            }
-        }
-        @include sm-phone(){
-            &{
-                width: 100vw; 
-            }
-        }
-    }
-    li{
-        &:nth-child(n+5){
-            display: none;
-        }
-        &:nth-child(6){
-            display: block;
-        }
+// .navbar{
+//     .navbar-collapse{
+//         @include sm-tablet(){
+//             &{
+//                 width: 400px;
+//             }
+//         }
+//         @include sm-phone(){
+//             &{
+//                 width: 100vw; 
+//             }
+//         }
+//     }
+//     li{
+//         &:nth-child(n+5){
+//             display: none;
+//         }
+//         &:nth-child(5){
+//             display: block;
+//         }
 
-    }
-}
+//     }
+// }
 #navbar{
     @include background-change();
 }

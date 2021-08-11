@@ -11,34 +11,6 @@
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1024px) {
-  .navbar .navbar-collapse {
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-  .navbar .navbar-collapse {
-    width: 400px;
-  }
-}
-
-@media (max-width: 520px) {
-  .navbar .navbar-collapse {
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-  .navbar .navbar-collapse {
-    width: 100vw;
-  }
-}
-
-.navbar li:nth-child(n+5) {
-  display: none;
-}
-
-.navbar li:nth-child(6) {
-  display: block;
-}
-
 #navbar {
   position: relative;
 }
