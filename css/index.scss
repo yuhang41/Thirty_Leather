@@ -1768,14 +1768,15 @@ main {
                     }
                 }
                 a {
+                    margin: 30px 0px 10px 0px;
+                    text-decoration: none;
                     button{
                         width: 235px;
                         height: 50px;
                         color: $color-IronGray;
                         background-color: unset;
                         border: 2px solid $color-Border-Line;
-                        border-radius: 45px;
-                        margin: 30px 0px 10px 0px;
+                        border-radius: 45px;                        
                         display: flex;
                         justify-content: center;
                         align-items: center;

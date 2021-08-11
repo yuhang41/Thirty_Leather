@@ -2248,6 +2248,8 @@ main{
                                 }
                             }
                             a {
+                                margin: 30px 0px 10px 0px;
+                                text-decoration: none;
                                 button{
                                     cursor: pointer;
                                     width: 250px;
@@ -2256,7 +2258,7 @@ main{
                                     background-color: unset;
                                     border: 2px solid $color-MoreButton;
                                     border-radius: 45px;
-                                    margin: 30px 0px 10px 0px;
+                                    
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
