@@ -56,6 +56,13 @@ body{
         transition: 1s;
     }
 }
+//540
+@mixin banner-change {
+    @media (max-width: 540px) {
+        @content;
+        transition: 1s;
+    }
+}
 // 小手機尺寸
 @mixin sm-phone {
     @media (max-width: 520px) {
@@ -284,6 +291,18 @@ main {
                 @include iphone-5s() {
                     height: 518px;
                     min-height: unset;
+                }
+                &.large-size{
+                    @include banner-change(){
+                        display: none;
+                    }
+                }
+                &.small-size{
+                    display: none;
+                    @include banner-change(){
+                        display: block;
+                        background-position: top;
+                    }
                 }
                 background-size: cover;
                 background-repeat: no-repeat;
