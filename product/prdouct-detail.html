@@ -363,8 +363,13 @@
                                         </div>
                                         <div class="order-size">
                                             <div class="size-title">
-                                                <span>尺寸</span>
-                                                <span class="size-key">0</span>
+                                                <span class="all-size">尺寸</span>
+                                                <span>歐碼:</span>
+                                                <span class="size-eu">0</span>
+                                                <span>美碼:</span>
+                                                <span class="size-us">0</span>
+                                                <span>英碼:</span>
+                                                <span class="size-uk">0</span>
                                             </div>
                                             <div class="size-deatil">
                                                 <div class="small-size">                                           
@@ -399,26 +404,35 @@
                             </div>
                             <div class="order-shipping">
                                 <div class="order-button">
-                                    <div class="order-buy">   
-                                        <button  class="putcart clickable" onclick="M.toast({html: 'I am a toast'})">
+                                    <!-- <div class="order-buy">   
+                                        <button  class="putcart clickable" onclick="M.toast({html: 'I am a toast'}) "data-boolin="true">
                                             加入購物車
                                             <i class="fas fa-check"></i>                                            
                                         </button>
                                         <button class="pre-order">
                                             預購                                            
                                         </button>
-                                        <!-- <div class="buy-cart">
+                                         <div class="buy-cart">
                                             + 已加入購物車
-                                        </div> -->
+                                        </div> 
                                     </div>
                                     <div class="order-amount">
                                         <button type="button" class="btn minus-btn">-</button>
                                         <input type="number" placeholder="2" value="" min="1" max="5">
                                         <button type="button" class="btn plus-btn">+</button>
-                                    </div>
-                                    <!-- <div class="sold-out">
-                                        已售完
                                     </div> -->
+                                    <div class="order-buy">
+                                        <button  class="putcart" data-boolin="false">
+                                            訂閱補貨通知      
+                                            <i class="fas fa-check"></i>                                                                                   
+                                        </button>
+                                        <button class="pre-order">
+                                            預購                                            
+                                        </button>
+                                    </div>
+                                    <div class="sold-out">
+                                        已售完
+                                    </div>
                                 </div>
                                 <div class="order-price">
                                     <p>$4,280</p>

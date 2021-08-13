@@ -613,7 +613,7 @@ main{
                                                     margin-right: 10px;
                                                 }
                                                 &:nth-child(2){
-                                                    font-size: $H11-font-size;
+                                                    font-size: $H10-font-size;
                                                     color: $color-Product-Detail-Title;
                                                     letter-spacing: $font-letter-space-100;
                                                 }
@@ -656,18 +656,21 @@ main{
                                                 align-items: flex-end;
                                             }
                                             span{
-                                                &:nth-child(1){
-                                                    font-size: $H5-font-size;
-                                                    color: $color-Banner-Card;
-                                                    font-weight: $font-Weight-B;
-                                                    letter-spacing: $font-letter-space-50;
-                                                    margin-right: 10px;
-                                                }
-                                                &:nth-child(2){
-                                                    font-size: $H10-font-size;
-                                                    font-weight: $font-Weight-B;
-                                                    color: $color-Product-Detail-Title;
-                                                }
+                                                font-size: $H10-font-size;                                                    
+                                                color: $color-Product-Detail-Title;
+                                                margin-right: 5px;                                                                                                                                                
+                                            }
+                                            .all-size{
+                                                font-size: $H5-font-size;
+                                                color: $color-Banner-Card;
+                                                font-weight: $font-Weight-B;
+                                                letter-spacing: $font-letter-space-50;
+                                                margin-right: 10px;
+                                            }
+                                            .size-eu,.size-us,.size-uk{
+                                                font-size: $H10-font-size;
+                                                font-weight: $font-Weight-B;
+                                                color: $color-Product-Detail-Title;
                                             }
                                         }
                                         .size-deatil{
@@ -761,7 +764,7 @@ main{
                                             display: none;
                                             color: $color-White;
                                         }                    
-                                    }
+                                    }                                    
                                     .pre-order{                                        
                                         width: 70px;
                                         height: 43px;
@@ -776,7 +779,7 @@ main{
                                             margin-right: 20px;
                                         }
                                         
-                                    }                                    
+                                    }                            
                                     &.active::after{
                                         content: " + 已加入購物車";
                                         position: absolute;
@@ -792,19 +795,26 @@ main{
                                         padding: 12px 34px;
                                         animation: cart-fade-in .3s ease-in-out;
                                     }
-                                    &.active.active2::after{
-                                        content: " + 已加入購物車";
+                                    &.active.active2::after{                                        
+                                        animation: cart-fade-out .3s ease-in-out;
+                                        animation-fill-mode: forwards;
+                                    }
+                                    &.subscription::after{
+                                        content: " + 已訂閱補貨通知";
                                         position: absolute;
                                         top: -80px;
                                         left: -50px;
                                         width: 235px;
                                         height: 60px;
-                                        font-size: $H5-font-size;
+                                        font-size: $H6-font-size;
                                         background-color: $color-Product-Detail-Circle;
                                         color: $color-White;
                                         border-radius: 30px;
                                         box-shadow: 0px 17px 23px -19px rgba(0,0,0,0.61);
                                         padding: 12px 34px;
+                                        animation: cart-fade-in .3s ease-in-out;
+                                    }
+                                    &.subscription.subscription2::after{
                                         animation: cart-fade-out .3s ease-in-out;
                                         animation-fill-mode: forwards;
                                     }
@@ -891,8 +901,7 @@ main{
                                         }
                                     }
                                 }
-                                .sold-out{
-                                    width: 100%;
+                                .sold-out{                                    
                                     font-size: $H4-font-size;
                                     color: $color-Deep-Red;
                                 }
@@ -2239,6 +2248,8 @@ main{
                                 }
                             }
                             a {
+                                margin: 30px 0px 10px 0px;
+                                text-decoration: none;
                                 button{
                                     cursor: pointer;
                                     width: 250px;
@@ -2247,7 +2258,7 @@ main{
                                     background-color: unset;
                                     border: 2px solid $color-MoreButton;
                                     border-radius: 45px;
-                                    margin: 30px 0px 10px 0px;
+                                    
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
